@@ -1,9 +1,14 @@
 import type { Business, FeaturedReview, GoogleReview, ReviewTheme } from "@/types/business";
 import type { Locale } from "@/lib/i18n";
+import { t } from "@/lib/i18n-copy";
 
-function formatRating(value?: number) {
+function numberLocale(locale: Locale) {
+  return locale === "de" ? "de-DE" : locale === "en" ? "en-US" : "es-ES";
+}
+
+function formatRating(value: number | undefined, locale: Locale) {
   if (typeof value !== "number") return null;
-  return value.toLocaleString("es-ES", { minimumFractionDigits: 1, maximumFractionDigits: 1 });
+  return value.toLocaleString(numberLocale(locale), { minimumFractionDigits: 1, maximumFractionDigits: 1 });
 }
 
 function stars(value?: number | null) {
@@ -11,53 +16,81 @@ function stars(value?: number | null) {
   return "★".repeat(Math.max(0, Math.min(5, rating))) + "☆".repeat(Math.max(0, 5 - rating));
 }
 
-function prettyKey(key: string) {
-  const labels: Record<string, string> = {
-    ambiente: "Ambiente",
-    servicio: "Servicio",
-    comida: "Comida",
-    comida_bebida: "Comida",
-    ubicacion: "Ubicación",
-    valor_precio: "Precio",
-    descanso: "Descanso",
-    habitaciones: "Habitaciones",
-    trato: "Trato",
-    barcos: "Barcos",
-    reserva: "Reserva",
-    experiencia: "Experiencia",
-    organizacion: "Organización",
-    guia: "Guía",
-    seguridad: "Seguridad",
-    paisaje: "Paisaje",
-    acceso: "Acceso",
-    servicios: "Servicios",
-    tranquilidad: "Tranquilidad"
+function prettyKey(key: string, locale: Locale) {
+  const labels: Record<Locale, Record<string, string>> = {
+    es: {
+      ambiente: "Ambiente",
+      servicio: "Servicio",
+      comida: "Comida",
+      comida_bebida: "Comida",
+      ubicacion: "Ubicación",
+      valor_precio: "Precio",
+      descanso: "Descanso",
+      habitaciones: "Habitaciones",
+      trato: "Trato",
+      barcos: "Barcos",
+      reserva: "Reserva",
+      experiencia: "Experiencia",
+      organizacion: "Organización",
+      guia: "Guía",
+      seguridad: "Seguridad",
+      paisaje: "Paisaje",
+      acceso: "Acceso",
+      servicios: "Servicios",
+      tranquilidad: "Tranquilidad"
+    },
+    en: {
+      ambiente: "Atmosphere",
+      servicio: "Service",
+      comida: "Food",
+      comida_bebida: "Food",
+      ubicacion: "Location",
+      valor_precio: "Value",
+      descanso: "Rest",
+      habitaciones: "Rooms",
+      trato: "Hospitality",
+      barcos: "Boats",
+      reserva: "Booking",
+      experiencia: "Experience",
+      organizacion: "Organization",
+      guia: "Guide",
+      seguridad: "Safety",
+      paisaje: "Scenery",
+      acceso: "Access",
+      servicios: "Services",
+      tranquilidad: "Quiet"
+    },
+    de: {
+      ambiente: "Ambiente",
+      servicio: "Service",
+      comida: "Essen",
+      comida_bebida: "Essen",
+      ubicacion: "Lage",
+      valor_precio: "Preis-Leistung",
+      descanso: "Ruhe",
+      habitaciones: "Zimmer",
+      trato: "Gastfreundschaft",
+      barcos: "Boote",
+      reserva: "Buchung",
+      experiencia: "Erlebnis",
+      organizacion: "Organisation",
+      guia: "Guide",
+      seguridad: "Sicherheit",
+      paisaje: "Landschaft",
+      acceso: "Zugang",
+      servicios: "Services",
+      tranquilidad: "Ruhe"
+    }
   };
 
-  return labels[key] ?? key.replace(/_/g, " ").replace(/^\w/, (letter) => letter.toUpperCase());
+  return labels[locale][key] ?? key.replace(/_/g, " ").replace(/^\w/, (letter) => letter.toUpperCase());
 }
 
 function initial(review: FeaturedReview) {
   return (review.author?.trim().charAt(0) || "M").toUpperCase();
 }
 
-function reviewTextForLocale(review: FeaturedReview, locale: Locale) {
-  const directTranslation = review.translations?.[locale]?.trim();
-  if (directTranslation) return { text: directTranslation, translated: review.lang !== locale };
-
-  if (locale === "es") {
-    const spanishTranslation = review.text_translated?.trim();
-    if (spanishTranslation && review.lang && review.lang !== "es") {
-      return { text: spanishTranslation, translated: true };
-    }
-  }
-
-  return { text: review.text, translated: false };
-}
-
-function ReviewCard({ review, index, locale }: { review: FeaturedReview; index: number; locale: Locale }) {
-  const localized = reviewTextForLocale(review, locale);
-
+function ReviewCard({ review, index }: { review: FeaturedReview; index: number }) {
   return (
     <article className="rv-review">
       <div className="rv-review-top">
@@ -70,8 +103,7 @@ function ReviewCard({ review, index, locale }: { review: FeaturedReview; index: 
         </div>
         <div className="rv-review-stars">{stars(review.rating)}</div>
       </div>
-      <p>{localized.text}</p>
-      {localized.translated && <div className="rv-review-translation">Traducido de Google</div>}
+      <p>{review.text}</p>
       {review.topic && <span className="rv-review-tag">{review.topic}</span>}
     </article>
   );
@@ -98,46 +130,47 @@ function googleReviewsAsFeatured(reviews?: GoogleReview[]): FeaturedReview[] {
     .slice(0, 3);
 }
 
-function sentimentFallbackThemes(sentiment: Business["reviewSentiment"]): ReviewTheme[] {
+function sentimentFallbackThemes(sentiment: Business["reviewSentiment"], locale: Locale): ReviewTheme[] {
   return Object.entries(sentiment ?? {})
     .filter(([, value]) => typeof value === "number" && Number.isFinite(value))
     .sort((a, b) => b[1] - a[1])
     .slice(0, 5)
     .map(([key, value]) => ({
-      label: prettyKey(key),
+      label: prettyKey(key, locale),
       icon: "point",
       mentions: Math.max(1, Math.round(value / 25))
     }));
 }
 
 export function BusinessReviewPanel({ business, locale }: { business: Business; locale: Locale }) {
-  const themes = (business.reviewThemes?.length ? business.reviewThemes : sentimentFallbackThemes(business.reviewSentiment))
+  const copy = t(locale);
+  const themes = (business.reviewThemes?.length ? business.reviewThemes : sentimentFallbackThemes(business.reviewSentiment, locale))
     .filter((theme) => theme.label?.trim())
     .slice(0, 6);
   const hasPros = Boolean(business.reviewPros?.length);
   const displayedReviews = business.featuredReviews?.length ? business.featuredReviews : googleReviewsAsFeatured(business.googleReviews);
   const hasFeaturedReviews = Boolean(displayedReviews.length);
   const hasServices = Boolean(business.services?.length) && !(business.category === "beach" && business.categoryAttributes);
-  const rating = formatRating(business.rating);
+  const rating = formatRating(business.rating, locale);
 
   if (!rating && !themes.length && !hasPros && !hasFeaturedReviews && !hasServices) return null;
 
   return (
-    <section className="rv" aria-label="Valoración y reseñas">
+    <section className="rv" aria-label={copy.business.reviewsSection}>
       {(rating || themes.length > 0) && (
         <div className="rv-block">
-          <div className="rv-sec-title">Valoración y reseñas</div>
+          <div className="rv-sec-title">{copy.business.reviewsSection}</div>
           <div className="rv-rating-hero">
             <div className="rv-rating-big">
               {rating && <div className="num">{rating}</div>}
               <div className="stars">{stars(business.rating)}</div>
               <div className="ct">
-                {typeof business.reviewsCount === "number" ? `${business.reviewsCount.toLocaleString("es-ES")} reseñas en Google` : "Google"}
+                {typeof business.reviewsCount === "number" ? `${business.reviewsCount.toLocaleString(numberLocale(locale))} ${copy.business.reviewsOnGoogle}` : "Google"}
               </div>
             </div>
             {themes.length > 0 && (
               <div className="rv-themes">
-                <div className="rv-themes-title">Lo más repetido en reseñas</div>
+                <div className="rv-themes-title">{copy.business.repeatedInReviews}</div>
                 {themes.map((theme) => (
                   <div className="rv-theme" key={`${theme.label}-${theme.icon ?? "theme"}`}>
                     <span>{theme.label}</span>
@@ -153,7 +186,7 @@ export function BusinessReviewPanel({ business, locale }: { business: Business; 
       {hasPros && (
         <div className="rv-block">
           <div className="rv-pc pros">
-            <div className="rv-pc-title">Lo que más gusta</div>
+            <div className="rv-pc-title">{copy.business.whatPeopleLike}</div>
             {business.reviewPros?.slice(0, 4).map((item) => (
               <div className="rv-pc-item" key={item}><span aria-hidden="true">+</span>{item}</div>
             ))}
@@ -163,13 +196,13 @@ export function BusinessReviewPanel({ business, locale }: { business: Business; 
 
       {hasFeaturedReviews && (
         <div className="rv-block">
-          <div className="rv-sec-title">Reseñas destacadas</div>
+          <div className="rv-sec-title">{copy.business.featuredReviews}</div>
           {displayedReviews.slice(0, 3).map((review, index) => (
-            <ReviewCard key={`${review.author ?? "review"}-${index}`} review={review} index={index} locale={locale} />
+            <ReviewCard key={`${review.author ?? "review"}-${index}`} review={review} index={index} />
           ))}
           {business.googleMapsUrl && (
             <a href={business.googleMapsUrl} target="_blank" rel="noreferrer" className="rv-google-cta">
-              Ver todas las reseñas en Google
+              {copy.business.viewAllGoogleReviews}
             </a>
           )}
         </div>
@@ -177,7 +210,7 @@ export function BusinessReviewPanel({ business, locale }: { business: Business; 
 
       {hasServices && (
         <div className="rv-block">
-          <div className="rv-sec-title">Qué ofrece</div>
+          <div className="rv-sec-title">{copy.business.offers}</div>
           <div className="rv-services">
             {business.services?.slice(0, 10).map((service) => (
               <div className="rv-service" key={`${service.icon}-${service.label}`}>

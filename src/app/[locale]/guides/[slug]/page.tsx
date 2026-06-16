@@ -6,7 +6,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { categoryConfigs, getCategorySlugFromBusiness, siteUrl } from "@/lib/data";
 import { getBusinessById, getGuideBySlug } from "@/lib/repository";
 import { isLocale, type Locale } from "@/lib/i18n";
-import { createArticleSchema, createBreadcrumbSchema, createFAQSchema, createItemListSchema } from "@/lib/schema";
+import { createArticleSchema, createBreadcrumbSchema, createFAQSchema, createSimpleItemListSchema } from "@/lib/schema";
 import { generateSeoMetadata } from "@/lib/seo";
 import { getBusinessPublicName } from "@/lib/business-name-normalizer";
 import type { Business } from "@/types/business";
@@ -84,7 +84,9 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     path: `/${safeLocale}/guides/${slug}`,
     locale: safeLocale,
     type: "article",
-    image: undefined
+    image: undefined,
+    alternateLocales: ["es"],
+    robots: safeLocale === "es" ? undefined : { index: false, follow: true }
   });
 }
 
@@ -104,8 +106,8 @@ export default async function GuideDetailPage({ params }: { params: Promise<{ lo
     .map((id) => businesses.get(id))
     .filter((business): business is Business => Boolean(business));
   const itemList = {
-    title: guide.title,
-    intro: guide.excerpt,
+    name: guide.title,
+    description: guide.excerpt,
     items: recommendedBusinesses.map((business, index) => ({
       position: index + 1,
       name: getBusinessPublicName(business),
@@ -115,8 +117,8 @@ export default async function GuideDetailPage({ params }: { params: Promise<{ lo
     }))
   };
   const jsonLd = [
-    createArticleSchema({ headline: guide.title, description: guide.excerpt, dateModified: guide.updatedAt, image: undefined, author: true }),
-    ...(recommendedBusinesses.length ? [createItemListSchema(itemList as any)] : []),
+    createArticleSchema({ headline: guide.title, description: guide.excerpt, datePublished: guide.updatedAt, dateModified: guide.updatedAt, image: undefined, author: true, inLanguage: safeLocale }),
+    ...(recommendedBusinesses.length ? [createSimpleItemListSchema(itemList)] : []),
     createFAQSchema(guide.faqs),
     createBreadcrumbSchema(breadcrumbs)
   ];

@@ -1,6 +1,5 @@
 ﻿import Link from "next/link";
 import {
-  IconArrowUpRight,
   IconBeach,
   IconBed,
   IconChartBar,
@@ -17,13 +16,18 @@ import {
 import { GuideCard } from "@/components/GuideCard";
 import { RatingBadge } from "@/components/RatingBadge";
 import { categoryConfigs, getCategorySlugFromBusiness, type CategorySlug } from "@/lib/data";
-import { getGuides, getHomepageMiniRankingBusinesses } from "@/lib/repository";
+import { getCategoryCopy, t } from "@/lib/i18n-copy";
+import { getGuides, getHomepageMiniRankingBusinesses, getPublicBusinessStats } from "@/lib/repository";
 import { generateSeoMetadata } from "@/lib/seo";
 import { isLocale, type Locale } from "@/lib/i18n";
 import { getBusinessPublicName } from "@/lib/business-name-normalizer";
 import { methodologyPath } from "@/lib/methodology";
 import { getEditorialImageForCategory, getEditorialImageForGuide } from "@/lib/unsplash";
+import { SearchBox } from "@/components/LiveSearch";
+import { CategoryPillsCarousel } from "@/components/CategoryPillsCarousel";
+import { JsonLd } from "@/components/JsonLd";
 import { siteConfig } from "@/config/site";
+import { siteUrl } from "@/lib/data";
 import type { Business } from "@/types/business";
 
 const categoryIcons: Partial<Record<CategorySlug, typeof IconToolsKitchen2>> = {
@@ -35,23 +39,68 @@ const categoryIcons: Partial<Record<CategorySlug, typeof IconToolsKitchen2>> = {
   beaches: IconBeach
 } as const;
 
-const methodologyItems = [
-  {
-    Icon: IconChartBar,
-    title: "El consenso, no una opinión",
-    text: "Cada posición refleja lo que han valorado cientos o miles de personas reales. No un blog, no publicidad — la experiencia colectiva de quienes han estado allí."
+const methodologyCopy = {
+  es: {
+    link: "Leer metodologia completa ->",
+    items: [
+      {
+        Icon: IconChartBar,
+        title: "El consenso, no una opinion",
+        text: "Cada posicion refleja lo que han valorado cientos o miles de personas reales. No un blog, no publicidad: la experiencia colectiva de quienes han estado alli."
+      },
+      {
+        Icon: IconDiamond,
+        title: "Lo mejor antes de que todo el mundo lo sepa",
+        text: "El Untapped Score detecta negocios con valoracion alta que todavia no estan masificados. Excelentes segun los datos, pero sin cola en la puerta."
+      },
+      {
+        Icon: IconPencil,
+        title: "Guias para planificar",
+        text: "Las guias ayudan a elegir zona, ruta o tipo de experiencia, pero nunca cambian la posicion de ningun negocio en rankings."
+      }
+    ]
   },
-  {
-    Icon: IconDiamond,
-    title: "Lo mejor antes de que todo el mundo lo sepa",
-    text: "El Untapped Score detecta negocios con valoración alta que todavía no están masificados. Excelentes según los datos, pero sin cola en la puerta."
+  en: {
+    link: "Read full methodology ->",
+    items: [
+      {
+        Icon: IconChartBar,
+        title: "Consensus, not one opinion",
+        text: "Each position reflects what hundreds or thousands of real visitors have rated. Not a blog, not advertising: the collective experience of people who have been there."
+      },
+      {
+        Icon: IconDiamond,
+        title: "Great places before everyone knows them",
+        text: "The Untapped Score identifies highly rated places that are not yet overcrowded. Strong according to the data, without being on every list."
+      },
+      {
+        Icon: IconPencil,
+        title: "Context when it helps",
+        text: "Editorial context can help you choose an area, route or type of experience, but it never changes ranking positions."
+      }
+    ]
   },
-  {
-    Icon: IconPencil,
-    title: "Guías para planificar",
-    text: "Las guías ayudan a elegir zona, ruta o tipo de experiencia — pero nunca cambian la posición de ningún negocio en rankings."
+  de: {
+    link: "Vollstaendige Methodik lesen ->",
+    items: [
+      {
+        Icon: IconChartBar,
+        title: "Konsens, keine Einzelmeinung",
+        text: "Jede Position zeigt, was Hunderte oder Tausende echte Besucher bewertet haben. Kein Blog, keine Werbung: die gemeinsame Erfahrung von Menschen, die dort waren."
+      },
+      {
+        Icon: IconDiamond,
+        title: "Starke Orte, bevor alle sie kennen",
+        text: "Der Untapped Score erkennt sehr gut bewertete Orte, die noch nicht ueberlaufen sind. Stark nach Daten, aber nicht auf jeder Liste."
+      },
+      {
+        Icon: IconPencil,
+        title: "Kontext, wenn er hilft",
+        text: "Redaktioneller Kontext hilft bei Gegend, Route oder Erlebnisart, aendert aber nie die Position eines Betriebs im Ranking."
+      }
+    ]
   }
-] as const;
+} as const;
 
 function businessHref(locale: Locale, business: Business) {
   return `/${locale}/${getCategorySlugFromBusiness(business.category)}/${business.slug}`;
@@ -61,69 +110,55 @@ function businessLocation(business: Business) {
   return business.city || business.area || "Mallorca";
 }
 
-function RankingItem({ business, index, locale, highlight = false }: { business: Business; index: number; locale: Locale; highlight?: boolean }) {
-  if (highlight) {
-    return (
-      <Link href={businessHref(locale, business)} className="mb-3 flex min-h-[136px] flex-col justify-between rounded-lg bg-[linear-gradient(135deg,#17324E_0%,#0E5F66_58%,#0E8F72_100%)] p-4 text-white shadow-[0_14px_28px_rgba(14,95,102,0.16)]">
-        <div>
-          <div className="flex items-center justify-between gap-3">
-            <p className="text-[10px] font-bold uppercase tracking-[0.12em] text-[#FFD166]">#1 ahora</p>
-            <IconArrowUpRight size={16} stroke={2} />
-          </div>
-          <h3 className="mt-2 line-clamp-2 text-xl font-black leading-tight">{getBusinessPublicName(business)}</h3>
-        </div>
-        <div className="mt-3 flex flex-wrap items-center gap-2">
-          <RatingBadge rating={business.rating} reviewsCount={business.reviewsCount} compact />
-          <span className="inline-flex items-center gap-1 text-[11px] text-white/75">
-            <IconMapPin size={13} stroke={1.8} />
-            {businessLocation(business)}
-          </span>
-        </div>
-      </Link>
-    );
-  }
+function numberLocale(locale: Locale) {
+  return locale === "de" ? "de-DE" : locale === "en" ? "en-US" : "es-ES";
+}
 
+function formatIntegerMetric(value: number, locale: Locale) {
+  return value.toLocaleString(numberLocale(locale));
+}
+
+function formatMillionMetric(value: number, locale: Locale) {
+  if (value < 1_000_000) return formatIntegerMetric(value, locale);
+  return `${(value / 1_000_000).toLocaleString(numberLocale(locale), { maximumFractionDigits: 1 })}M+`;
+}
+
+function RankingItem({ business, index, locale }: { business: Business; index: number; locale: Locale }) {
   return (
-    <Link href={businessHref(locale, business)} className="grid min-h-[66px] grid-cols-[2rem_1fr] items-center gap-3 rounded-md px-2 py-3 hover:bg-[#FFF8EC] sm:grid-cols-[2rem_1fr_auto]">
-      <span className="text-xl font-black leading-none text-borderline">#{index + 1}</span>
-      <span className="min-w-0">
-        <span className="block truncate text-sm font-bold text-ink">{getBusinessPublicName(business)}</span>
-        <span className="mt-1 flex items-center gap-1 text-[11px] text-sage">
-          <IconMapPin size={13} stroke={1.8} />
+    <Link href={businessHref(locale, business)} className="flex items-center gap-3 rounded-md px-2 py-3 hover:bg-[#FFF8EC]">
+      <span className="w-5 shrink-0 text-center text-xs font-black text-borderline">#{index + 1}</span>
+      <span className="min-w-0 flex-1">
+        <span className="block truncate text-sm font-semibold text-ink">{getBusinessPublicName(business)}</span>
+        <span className="mt-0.5 flex items-center gap-1 text-[11px] text-sage">
+          <IconMapPin size={12} stroke={1.8} />
           <span className="truncate">{businessLocation(business)}</span>
         </span>
       </span>
-      <span className="col-start-2 sm:col-start-auto">
-        <RatingBadge rating={business.rating} reviewsCount={business.reviewsCount} compact />
-      </span>
+      <RatingBadge rating={business.rating} reviewsCount={business.reviewsCount} compact />
     </Link>
   );
 }
 
 function CategoryRankingCard({ category, businesses, locale }: { category: CategorySlug; businesses: Business[]; locale: Locale }) {
   const Icon = categoryIcons[category] ?? IconChartBar;
-  const top = businesses[0];
-  const label = categoryConfigs[category].label;
+  const label = getCategoryCopy(category, locale).label;
 
   return (
-    <section className="flex h-full min-h-[420px] flex-col rounded-lg border border-borderline bg-white p-5 shadow-[0_16px_40px_rgba(27,46,75,0.04)]">
-      <div className="mb-5 flex min-h-[86px] items-start justify-between gap-4">
-        <div className="min-w-0">
-          <div className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-[#F0FDF4] text-[#0E8F72]">
-            <Icon size={20} stroke={1.8} />
+    <section className="flex h-full flex-col rounded-lg border-t-2 border-t-[#0E8F72] bg-white p-5 shadow-[0_16px_40px_rgba(27,46,75,0.08)]">
+      <div className="mb-3 flex items-center justify-between gap-4">
+        <div className="flex items-center gap-3">
+          <div className="inline-flex h-8 w-8 items-center justify-center rounded-md bg-[#F0FDF4] text-[#0E8F72]">
+            <Icon size={16} stroke={1.8} />
           </div>
-          <h2 className="mt-3 line-clamp-1 text-2xl font-black leading-tight text-ink">{label}</h2>
+          <h2 className="text-lg font-black leading-tight text-ink">{label}</h2>
         </div>
-        <Link href={`/${locale}/top/${category}`} className="shrink-0 rounded-md border border-borderline px-3 py-2 text-[10px] font-bold uppercase tracking-[0.1em] text-ink hover:border-[#0E8F72] hover:text-[#0E8F72]" aria-label={`Ver ranking de ${label}`}>
-          Ver ranking
+        <Link href={`/${locale}/rankings?category=${category}`} className="shrink-0 text-[10px] font-bold uppercase tracking-[0.1em] text-sage hover:text-[#0E8F72]" aria-label={`Ver ranking de ${label}`}>
+          Ranking →
         </Link>
       </div>
-
-      {top && <RankingItem business={top} index={0} locale={locale} highlight />}
-
-      <div className="mt-auto divide-y divide-borderline">
-        {businesses.slice(1, 4).map((business, index) => (
-          <RankingItem key={business.id} business={business} index={index + 1} locale={locale} />
+      <div className="divide-y divide-borderline">
+        {businesses.map((business, index) => (
+          <RankingItem key={business.id} business={business} index={index} locale={locale} />
         ))}
       </div>
     </section>
@@ -133,9 +168,10 @@ function CategoryRankingCard({ category, businesses, locale }: { category: Categ
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const safeLocale = isLocale(locale) ? locale : "es";
+  const copy = t(safeLocale);
   return generateSeoMetadata({
-    title: `${siteConfig.name} | La guía verificada de Mallorca`,
-    description: "Restaurantes, hoteles, beach clubs, barcos, actividades y playas en Mallorca verificados con datos reales de Google y selección propia.",
+    title: copy.home.metaTitle,
+    description: copy.home.metaDescription,
     path: `/${safeLocale}`,
     locale: safeLocale
   });
@@ -144,15 +180,18 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const safeLocale = (isLocale(locale) ? locale : "es") as Locale;
-  const [latestGuides, restaurantsPalma, hotels, beachClubs, boats, activities, beaches, heroImage] = await Promise.all([
+  const copy = t(safeLocale);
+  const methodology = methodologyCopy[safeLocale];
+  const [latestGuides, restaurantsPalma, hotels, beachClubs, boats, activities, beaches, heroImage, stats] = await Promise.all([
     getGuides(safeLocale, 4),
-    getHomepageMiniRankingBusinesses("restaurants", 4, "Palma"),
-    getHomepageMiniRankingBusinesses("hotels", 4),
-    getHomepageMiniRankingBusinesses("beach-clubs", 4),
-    getHomepageMiniRankingBusinesses("boats", 4),
-    getHomepageMiniRankingBusinesses("activities", 4),
-    getHomepageMiniRankingBusinesses("beaches", 4),
-    getEditorialImageForCategory("beach")
+    getHomepageMiniRankingBusinesses("restaurants", 5, "Palma", 200),
+    getHomepageMiniRankingBusinesses("hotels", 5, undefined, 100),
+    getHomepageMiniRankingBusinesses("beach-clubs", 5, undefined, 100),
+    getHomepageMiniRankingBusinesses("boats", 5, "Palma", 50),
+    getHomepageMiniRankingBusinesses("activities", 5, undefined, 200),
+    getHomepageMiniRankingBusinesses("beaches", 5, undefined, 1000),
+    getEditorialImageForCategory("beach"),
+    getPublicBusinessStats()
   ]);
   const guideImages = await Promise.all(latestGuides.map((guide) => (guide.heroImageUrl ? Promise.resolve(null) : getEditorialImageForGuide(guide.title))));
 
@@ -167,7 +206,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
 
   return (
     <main className="bg-[#FFFDF7]">
-      <section className="relative overflow-hidden px-4 pb-12 pt-14 text-white sm:px-6 lg:px-8">
+      <section className="relative z-20 overflow-visible px-4 pb-12 pt-14 text-white sm:px-6 lg:px-8">
         {heroImage?.imageUrl ? (
           <>
             <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${heroImage.imageUrl})` }} />
@@ -180,29 +219,30 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           <div className="max-w-4xl">
             <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.08em] text-[#FFD166]">
               <IconShieldCheck size={15} stroke={2} />
-              Mallorca · Actualizado a diario · Sin posiciones de pago
+              {copy.home.eyebrow}
             </div>
             <h1 className="font-display text-balance text-4xl font-black leading-[1.05] text-white sm:text-5xl lg:text-6xl">
-              Encuentra los mejores negocios de Mallorca
+              {copy.home.title}
             </h1>
             <p className="mt-5 max-w-2xl text-base leading-8 text-white/80">
-              Rankings basados en el consenso de miles de reseñas reales de Google. No la opinión de nadie en concreto — lo que reflejan es la experiencia colectiva de quienes han estado allí. Sin publicidad, sin posiciones de pago.
+              {copy.home.intro}
             </p>
-            <div className="mt-7 flex flex-wrap gap-3">
+            <SearchBox locale={safeLocale} variant="hero" className="mt-7 max-w-lg" />
+            <div className="mt-4 flex flex-wrap gap-3">
               <Link href={`/${safeLocale}/rankings`} className="inline-flex min-h-12 items-center justify-center rounded-md bg-coral px-6 text-[11px] font-bold uppercase tracking-[0.1em] text-white transition-all duration-150 hover:bg-coral/90">
-                Explorar rankings
+                {copy.home.exploreRankings}
               </Link>
               <Link href={`/${safeLocale}/guides`} className="inline-flex min-h-12 items-center justify-center rounded-md border-2 border-white/60 px-6 text-[11px] font-bold uppercase tracking-[0.1em] text-white transition-all duration-150 hover:border-white hover:bg-white hover:text-ink">
-                Ver guías
+                {copy.home.viewGuides}
               </Link>
             </div>
           </div>
 
           <div className="mt-10 grid gap-4 sm:grid-cols-3">
             {[
-              { value: "1.648", label: "negocios verificados" },
-              { value: "1,7M+", label: "reseñas analizadas en Google" },
-              { value: "18", label: "categorías activas" }
+              { value: formatIntegerMetric(stats.publishedBusinesses, safeLocale), label: copy.home.verifiedBusinesses },
+              { value: formatMillionMetric(stats.analyzedReviews, safeLocale), label: copy.home.analyzedReviews },
+              { value: formatIntegerMetric(stats.activeCategories, safeLocale), label: copy.home.activeCategories }
             ].map((stat) => (
               <div key={stat.label} className="rounded-lg border border-white/12 bg-white/10 px-5 py-5 shadow-[0_18px_45px_rgba(0,0,0,0.12)] backdrop-blur">
                 <div className="font-display text-4xl font-black leading-none text-[#FFD166]">{stat.value}</div>
@@ -212,7 +252,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           </div>
 
           <div className="mt-6 flex flex-wrap gap-x-5 gap-y-2 text-[11px] font-bold uppercase tracking-[0.08em] text-white/78">
-            {["Actualizado a diario", "Sin posiciones de pago", "Consenso real, no una opinión", "Metodología pública"].map((item) => (
+            {copy.home.signals.map((item) => (
               <span key={item} className="inline-flex items-center gap-2"><IconCircleCheckFilled size={14} />{item}</span>
             ))}
           </div>
@@ -220,25 +260,15 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
       </section>
 
       <section className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-        <div className="flex items-center gap-2 overflow-x-auto pb-1 [&::-webkit-scrollbar]:hidden">
-          {(Object.entries(categoryConfigs) as [CategorySlug, (typeof categoryConfigs)[CategorySlug]][]).map(([slug, config]) => (
-            <Link
-              key={slug}
-              href={`/${safeLocale}/rankings?category=${slug}`}
-              className="shrink-0 whitespace-nowrap rounded-full border border-[#E7DED0] bg-white px-4 py-2 text-[11px] font-bold uppercase tracking-[0.08em] text-ink transition-all duration-150 hover:border-ink hover:bg-ink hover:text-white"
-            >
-              {config.label}
-            </Link>
-          ))}
-        </div>
+        <CategoryPillsCarousel locale={safeLocale} />
       </section>
 
       <section className="mx-auto max-w-[1360px] px-4 py-10 sm:px-6 lg:px-8">
         <div className="mb-7 max-w-3xl">
-          <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-[#0E8F72]">Selección verificada</p>
-          <h2 className="font-display mt-2 text-3xl font-black text-ink sm:text-4xl">Los más valorados esta semana</h2>
+          <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-[#0E8F72]">{copy.home.selection}</p>
+          <h2 className="font-display mt-2 text-3xl font-black text-ink sm:text-4xl">{copy.home.bestThisWeek}</h2>
           <p className="mt-3 text-sm leading-7 text-sage">
-            Cada categoría tiene su propio ranking para que no se mezclen hoteles, calas, restaurantes y experiencias que no compiten entre sí.
+            {copy.home.bestThisWeekIntro}
           </p>
         </div>
         <div className="grid items-stretch gap-5 md:grid-cols-2 xl:grid-cols-3">
@@ -250,7 +280,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
 
       <section className="px-4 py-8 sm:px-6 lg:px-8">
         <div className="mx-auto grid max-w-7xl items-stretch gap-5 md:grid-cols-3">
-          {methodologyItems.map(({ Icon, title, text }) => (
+          {methodology.items.map(({ Icon, title, text }) => (
             <div key={title} className="flex h-full min-h-[154px] flex-col rounded-lg border border-[#E7DED0] bg-white/75 p-5 shadow-[0_16px_38px_rgba(27,46,75,0.035)]">
               <Icon size={24} stroke={1.8} className="text-[#0E8F72]" />
               <h2 className="mt-4 text-xl font-bold leading-tight text-ink">{title}</h2>
@@ -260,19 +290,17 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         </div>
         <div className="mx-auto mt-5 max-w-7xl">
           <Link href={methodologyPath(safeLocale)} className="text-[11px] font-bold uppercase tracking-[0.1em] text-ink hover:text-[#0E8F72]">
-            Leer metodología completa →
+            {methodology.link}
           </Link>
         </div>
       </section>
 
-      {latestGuides.length > 0 && (
+      {safeLocale === "es" && latestGuides.length > 0 && (
         <section className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
           <div className="mb-6 pb-3">
-            <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-[#0E8F72]">Guías editoriales</p>
-            <h2 className="font-display mt-2 text-3xl font-black text-ink">Planifica tu viaje</h2>
-            <p className="mt-3 max-w-2xl text-sm leading-7 text-sage">
-              Artículos prácticos para elegir zona, ruta, restaurante, hotel, barco o cala con más contexto antes de reservar.
-            </p>
+            <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-[#0E8F72]">{copy.home.guidesEyebrow}</p>
+            <h2 className="font-display mt-2 text-3xl font-black text-ink">{copy.home.guidesTitle}</h2>
+            <p className="mt-3 max-w-2xl text-sm leading-7 text-sage">{copy.home.guidesIntro}</p>
           </div>
           <div className="grid items-stretch gap-px overflow-hidden rounded-lg border border-[#E7DED0] bg-[#E7DED0] shadow-[0_18px_45px_rgba(27,46,75,0.04)] md:grid-cols-2">
             {latestGuides.map((guide, index) => (
@@ -282,14 +310,28 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         </section>
       )}
 
+      <JsonLd data={[
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          name: siteConfig.name,
+          url: `${siteUrl}/${safeLocale}`,
+          description: siteConfig.description,
+          inLanguage: safeLocale,
+          potentialAction: {
+            "@type": "SearchAction",
+            target: { "@type": "EntryPoint", urlTemplate: `${siteUrl}/${safeLocale}/rankings?q={search_term_string}` },
+            "query-input": "required name=search_term_string"
+          }
+        }
+      ]} />
+
       <section className="px-4 py-12 text-center sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl rounded-lg border border-[#F1D3A2] bg-white/80 px-5 py-10 shadow-[0_18px_45px_rgba(27,46,75,0.04)]">
-          <h2 className="text-3xl font-bold text-ink">¿Tu negocio está en Mallorca Verified?</h2>
-          <p className="mx-auto mt-4 max-w-2xl text-sm leading-7 text-olive">
-            Comprueba cómo aparece en rankings objetivos y qué señales influyen en su visibilidad. Si quieres una ficha más completa, podemos valorar una colaboración para trabajar datos, fotos, servicios, carta o enlaces oficiales.
-          </p>
+          <h2 className="text-3xl font-bold text-ink">{copy.home.businessTitle}</h2>
+          <p className="mx-auto mt-4 max-w-2xl text-sm leading-7 text-olive">{copy.home.businessIntro}</p>
           <Link href={`/${safeLocale}/business`} className="mt-7 inline-flex min-h-12 items-center justify-center rounded-sm bg-[#1B2E4B] px-6 text-[11px] font-bold uppercase tracking-[0.1em] text-white hover:bg-[#0E8F72]">
-            Solicitar propuesta
+            {copy.home.businessCta}
           </Link>
         </div>
       </section>

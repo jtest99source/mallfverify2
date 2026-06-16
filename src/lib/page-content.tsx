@@ -10,8 +10,9 @@ import { BusinessHours } from "@/components/BusinessHours";
 import { JsonLd } from "@/components/JsonLd";
 import { BusinessImage, getBusinessImageUrl } from "@/components/BusinessImage";
 import { categoryConfigs, getCategorySlugFromBusiness, siteUrl, type CategorySlug } from "@/lib/data";
+import { categoryLabelForBusiness, getCategoryCopy, t } from "@/lib/i18n-copy";
 import { getBusinessAreaCategoryPages, getBusinessBySlug, getBusinesses, getBusinessSlugsByCategory, getRelatedBusinesses, getRelatedRankings } from "@/lib/repository";
-import { createBreadcrumbSchema, createFAQSchema, createLocalBusinessSchema } from "@/lib/schema";
+import { createBreadcrumbSchema, createCollectionPageSchema, createFAQSchema, createLocalBusinessSchema } from "@/lib/schema";
 import { generateSeoMetadata } from "@/lib/seo";
 import { isLocale, type Locale } from "@/lib/i18n";
 import { getBusinessPublicName } from "@/lib/business-name-normalizer";
@@ -136,6 +137,10 @@ function categoryLabel(category: Business["category"]) {
   return categoryConfigs[slug].singular;
 }
 
+function localizedCategoryLabel(category: Business["category"], locale: Locale) {
+  return categoryLabelForBusiness(category, locale);
+}
+
 function isUsableImageUrl(url?: string) {
   return Boolean(url && !url.includes("placeholder") && !url.endsWith(".svg"));
 }
@@ -216,7 +221,12 @@ function getDirectionsUrl(business: Business) {
   return business.googleMapsUrl ?? "#";
 }
 
-function AddressBar({ business, location }: { business: Business; location: string }) {
+function numberLocale(locale: Locale) {
+  return locale === "de" ? "de-DE" : locale === "en" ? "en-US" : "es-ES";
+}
+
+function AddressBar({ business, location, locale }: { business: Business; location: string; locale: Locale }) {
+  const copy = t(locale);
   const address = business.address || `${location}, Mallorca`;
   if (!address) return null;
 
@@ -233,7 +243,7 @@ function AddressBar({ business, location }: { business: Business; location: stri
           rel="noreferrer"
           className="shrink-0 text-[10px] font-bold uppercase tracking-[0.06em] text-turquesa underline-offset-4 hover:underline"
         >
-          <span>Cómo llegar</span>
+          <span>{copy.business.howToGetThere}</span>
           <IconExternalLink aria-hidden="true" size={12} stroke={2} className="ml-1 inline-block align-[-2px]" />
         </a>
       </div>
@@ -241,16 +251,17 @@ function AddressBar({ business, location }: { business: Business; location: stri
   );
 }
 
-function QuickScore({ business }: { business: Business }) {
+function QuickScore({ business, locale }: { business: Business; locale: Locale }) {
+  const copy = t(locale);
   if (typeof business.rating !== "number" && typeof business.reviewsCount !== "number") return null;
 
   return (
-    <div className="flex items-center gap-3 rounded-lg border border-[#FFD166]/60 bg-[linear-gradient(135deg,#17324E_0%,#0E5F66_58%,#0E8F72_100%)] p-4 shadow-[0_14px_28px_rgba(14,95,102,0.16)]">
+    <div className="rating-summary flex items-center gap-3 rounded-lg border border-[#FFD166]/60 bg-[linear-gradient(135deg,#17324E_0%,#0E5F66_58%,#0E8F72_100%)] p-4 shadow-[0_14px_28px_rgba(14,95,102,0.16)]">
       {typeof business.rating === "number" && <div className="text-4xl font-black leading-none text-[#FFD166]">{formatRating(business.rating)}</div>}
       <div>
         <div className="text-xs text-[#FFD166]">{renderStars(business.rating)}</div>
         <div className="mt-1 text-[11px] text-white/75">
-          {typeof business.reviewsCount === "number" ? `${business.reviewsCount.toLocaleString("es-ES")} reseñas · Google` : "Google"}
+          {typeof business.reviewsCount === "number" ? `${business.reviewsCount.toLocaleString(numberLocale(locale))} ${copy.business.reviewsOnGoogle}` : "Google"}
         </div>
       </div>
     </div>
@@ -259,10 +270,10 @@ function QuickScore({ business }: { business: Business }) {
 
 export function generateCategoryMetadata(category: CategorySlug, locale: string) {
   const safeLocale = isLocale(locale) ? locale : "es";
-  const config = categoryConfigs[category];
+  const config = getCategoryCopy(category, safeLocale);
   return generateSeoMetadata({
     title: `${config.title} | Mallorca Verified`,
-    description: config.intro,
+    description: config.metaDescription,
     path: `/${safeLocale}/${category}`,
     locale: safeLocale
   });
@@ -272,30 +283,38 @@ export async function generateBusinessMetadata(category: CategorySlug, locale: s
   const safeLocale = isLocale(locale) ? locale : "es";
   const business = await getBusinessBySlug(category, getBusinessSlugAlias(category, slug) ?? slug);
   if (!business) return {};
+  const publicName = getBusinessPublicName(business);
+  const location = business.city || business.area || business.municipality || "Mallorca";
+  const ratingText =
+    typeof business.rating === "number" && typeof business.reviewsCount === "number"
+      ? ` Valoración ${formatRating(business.rating)}/5 con ${business.reviewsCount.toLocaleString("es-ES")} reseñas en Google.`
+      : "";
   return generateSeoMetadata({
     title: business.seo.title,
-    description: business.seo.description,
+    description: `${publicName} - ${localizedCategoryLabel(business.category, safeLocale)} en ${location}, Mallorca.${ratingText} Ficha en Mallorca Verified.`.slice(0, 180),
     path: `/${safeLocale}/${category}/${business.slug}`,
     locale: safeLocale
   });
 }
 
 export async function CategoryPage({ category, locale }: { category: CategorySlug; locale: Locale }) {
-  const config = categoryConfigs[category];
+  const copy = t(locale);
+  const config = getCategoryCopy(category, locale);
+  const rawConfig = categoryConfigs[category];
   const [businesses, relatedRankings, categoryImage] = await Promise.all([
     getBusinesses(category),
     getRelatedRankings(category),
-    getEditorialImageForCategory(config.businessCategory)
+    getEditorialImageForCategory(rawConfig.businessCategory)
   ]);
   const areaPages = (await getBusinessAreaCategoryPages(3)).filter((page) => page.category === category).slice(0, 9);
   const faqs = [
     {
-      question: `¿Cómo se ordenan los ${config.label.toLowerCase()}?`,
-      answer: "Combinamos valoración media, volumen de reseñas y autoridad relativa dentro de la categoría. No vendemos posiciones ni mezclamos negocios de tipos distintos."
+      question: copy.category.faqSort(config.label),
+      answer: copy.category.faqSortAnswer
     },
     {
-      question: "¿La información de cada sitio está actualizada?",
-      answer: "Usamos datos de Google junto con selección editorial propia. Te recomendamos confirmar horarios, precios y reservas directamente con el negocio, especialmente en temporada alta."
+      question: copy.category.faqFresh,
+      answer: copy.category.faqFreshAnswer
     }
   ];
 
@@ -314,13 +333,13 @@ export async function CategoryPage({ category, locale }: { category: CategorySlu
           />
         )}
         <div className="relative mx-auto max-w-7xl">
-          <Breadcrumbs items={[{ label: "Inicio", href: `/${locale}` }, { label: config.label, href: `/${locale}/${category}` }]} />
+          <Breadcrumbs items={[{ label: copy.category.breadcrumbHome, href: `/${locale}` }, { label: config.label, href: `/${locale}/${category}` }]} />
           <div className="mt-6 max-w-3xl">
-            <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-[#0E8F72]">Comparador objetivo</p>
+            <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-[#0E8F72]">{copy.category.comparator}</p>
             <h1 className="mt-3 max-w-2xl text-5xl font-black leading-none text-[#10253D] sm:text-6xl">{config.title}</h1>
             <p className="mt-5 max-w-2xl text-base leading-8 text-[#4B5B4D]">{config.intro}</p>
             <p className="mt-4 max-w-2xl text-sm leading-7 text-[#5F6F61]">
-              Ordenamos negocios del mismo tipo con señales verificables: valoración, reseñas, ubicación y consistencia de la ficha.
+              {copy.category.signalLine}
             </p>
           </div>
         </div>
@@ -330,17 +349,17 @@ export async function CategoryPage({ category, locale }: { category: CategorySlu
         <CategoryFilter businesses={businesses} locale={locale} />
         <section className="mt-12 grid gap-6 lg:grid-cols-[320px_1fr]">
           <div className="rounded-md border border-[#E7DED0] bg-[#FFFDF7] p-6 shadow-[0_16px_42px_rgba(27,46,75,0.06)]">
-            <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-[#0E8F72]">Ranking por categoría</p>
-            <h2 className="mt-2 text-3xl font-black text-[#10253D]">Top {config.label.toLowerCase()} en Mallorca</h2>
+            <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-[#0E8F72]">{copy.category.rankingByCategory}</p>
+            <h2 className="mt-2 text-3xl font-black text-[#10253D]">{copy.category.topInMallorca(config.label)}</h2>
             <p className="mt-4 text-sm leading-7 text-[#4B5B4D]">
-              Una vista directa para comparar los mejor posicionados sin ruido, publicidad ni posiciones compradas.
+              {copy.category.topIntro}
             </p>
-            <Link href={`/${locale}/top/${category}`} className="mt-5 inline-flex rounded-sm bg-[#10253D] px-4 py-3 text-[11px] font-bold uppercase tracking-[0.1em] text-white hover:bg-[#0E8F72]">Ver ranking completo</Link>
+            <Link href={`/${locale}/top/${category}`} className="mt-5 inline-flex rounded-sm bg-[#10253D] px-4 py-3 text-[11px] font-bold uppercase tracking-[0.1em] text-white hover:bg-[#0E8F72]">{copy.category.fullRanking}</Link>
           </div>
           {areaPages.length > 0 && (
             <div className="rounded-md border border-[#E7DED0] bg-[#FFF8EC] p-6">
-              <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-[#0E8F72]">Por zonas</p>
-              <h2 className="mt-2 text-3xl font-black text-[#10253D]">{config.label} por zona</h2>
+              <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-[#0E8F72]">{copy.category.areaEyebrow}</p>
+              <h2 className="mt-2 text-3xl font-black text-[#10253D]">{copy.category.byArea(config.label)}</h2>
               <div className="mt-5 grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
                 {areaPages.map((page) => (
                   <Link key={`${page.areaSlug}-${page.category}`} href={`/${locale}/areas/${page.areaSlug}/${category}`} className="rounded-sm border border-[#E7DED0] bg-[#FFFDF7] p-4 text-sm font-bold text-[#10253D] hover:border-[#0E8F72] hover:bg-white">
@@ -354,8 +373,8 @@ export async function CategoryPage({ category, locale }: { category: CategorySlu
         {relatedRankings.length > 0 && (
           <section className="mt-14 rounded-md border border-[#E7DED0] bg-[#FFFDF7] p-6">
             <div className="mb-5 flex items-end justify-between border-b border-[#E7DED0] pb-3">
-              <h2 className="text-3xl font-bold text-[#10253D]">Rankings relacionados</h2>
-              <Link href={`/${locale}/rankings`} className="text-[11px] font-bold uppercase tracking-[0.1em] text-[#0E8F72]">Ver todos</Link>
+              <h2 className="text-3xl font-bold text-[#10253D]">{copy.category.relatedRankings}</h2>
+              <Link href={`/${locale}/rankings`} className="text-[11px] font-bold uppercase tracking-[0.1em] text-[#0E8F72]">{copy.category.viewAll}</Link>
             </div>
             <div className="grid gap-3 md:grid-cols-3">
               {relatedRankings.map((ranking) => (
@@ -365,26 +384,38 @@ export async function CategoryPage({ category, locale }: { category: CategorySlu
           </section>
         )}
         <FAQ faqs={faqs} />
-        <div className="mt-14"><CTABox /></div>
+        <div className="mt-14"><CTABox locale={locale} /></div>
       </section>
-      <JsonLd data={[createFAQSchema(faqs), createBreadcrumbSchema([{ name: "Inicio", url: `${siteUrl}/${locale}` }, { name: config.label, url: `${siteUrl}/${locale}/${category}` }])]} />
+      <JsonLd
+        data={[
+          createCollectionPageSchema({
+            name: config.title,
+            description: config.intro,
+            url: `${siteUrl}/${locale}/${category}`,
+            inLanguage: locale
+          }),
+          createFAQSchema(faqs),
+          createBreadcrumbSchema([{ name: "Inicio", url: `${siteUrl}/${locale}` }, { name: config.label, url: `${siteUrl}/${locale}/${category}` }])
+        ]}
+      />
     </main>
   );
 }
 
 function BusinessProfileReviewCta({ businessName, locale }: { businessName: string; locale: Locale }) {
+  const copy = t(locale);
   return (
     <section className="mt-8 overflow-hidden rounded-lg border border-[#F1D3A2] bg-[#FFF8EC] p-6 shadow-[0_18px_45px_rgba(27,46,75,0.06)]">
-      <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-[#B86B1D]">¿Representas este negocio?</p>
-      <h2 className="mt-2 text-2xl font-black leading-tight text-ink">Solicita una revisión editorial de la ficha</h2>
+      <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-[#B86B1D]">{copy.business.profileCtaEyebrow}</p>
+      <h2 className="mt-2 text-2xl font-black leading-tight text-ink">{copy.business.profileCtaTitle}</h2>
       <p className="mt-3 text-sm leading-7 text-olive">
-        Puedes aportar datos actualizados, mejores fotos, servicios, carta, condiciones de reserva o información práctica para que la ficha de {businessName} sea más completa.
+        {copy.business.profileCtaText.replace("la ficha", `la ficha de ${businessName}`)}
       </p>
       <p className="mt-3 rounded-md border border-[#BFE8D2] bg-white px-4 py-3 text-xs font-semibold leading-5 text-[#047857]">
-        Las colaboraciones editoriales no modifican ratings, reseñas ni posiciones en rankings.
+        {copy.business.profileCtaNote}
       </p>
       <Link href={`/${locale}/business`} className="mt-5 inline-flex min-h-11 items-center justify-center rounded-sm bg-[#1B2E4B] px-5 text-[11px] font-bold uppercase tracking-[0.1em] text-white shadow-[0_10px_22px_rgba(27,46,75,0.18)] hover:bg-[#0E8F72]">
-        Solicitar revisión
+        {copy.business.profileCtaButton}
       </Link>
     </section>
   );
@@ -400,6 +431,7 @@ export async function BusinessDetailPage({ category, locale, slug }: { category:
   const related = await getRelatedBusinesses(business);
   const publicName = getBusinessPublicName(business);
   const location = business.city || business.area || business.municipality || "Mallorca";
+  const copy = t(locale);
   const faqs = getCombinedFaqs(business, publicName, location);
   const galleryImages = getBusinessGalleryImages(business);
   const heroImage = galleryImages[0] || getBusinessImageUrl(business);
@@ -422,7 +454,7 @@ export async function BusinessDetailPage({ category, locale, slug }: { category:
           <div className="absolute inset-x-0 bottom-0 z-10 px-4 pb-6 sm:px-6 lg:px-8">
             <div className="flex flex-col items-start gap-3 sm:gap-5 lg:flex-row lg:items-end lg:justify-between">
               <div className="max-w-4xl">
-                <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-gold">{categoryLabel(business.category)} · {location}</p>
+                <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-gold">{localizedCategoryLabel(business.category, locale)} · {location}</p>
                 <h1 className="mt-2 text-3xl font-black leading-[0.98] text-paper [text-shadow:_0_2px_12px_rgba(0,0,0,0.55)] sm:text-5xl lg:text-6xl">{publicName}</h1>
               </div>
               <div className="flex w-fit shrink-0 items-stretch gap-2">
@@ -446,7 +478,7 @@ export async function BusinessDetailPage({ category, locale, slug }: { category:
         </div>
       </section>
 
-      <AddressBar business={business} location={location} />
+      <AddressBar business={business} location={location} locale={locale} />
 
       <div className="mx-auto grid max-w-[1200px] items-start gap-8 px-4 py-8 sm:px-6 lg:grid-cols-[minmax(0,1fr)_300px] lg:px-8">
         <article className="min-w-0">
@@ -457,7 +489,7 @@ export async function BusinessDetailPage({ category, locale, slug }: { category:
         <aside className="rounded-md border border-borderline bg-white p-5 shadow-[0_18px_45px_rgba(28,28,24,0.05)]">
           <div className="lg:sticky lg:top-24">
             <section className="border-b border-linen pb-6">
-              <QuickScore business={business} />
+              <QuickScore business={business} locale={locale} />
               {priceValue && (
                 <div className="mt-3 flex items-center justify-between rounded-md border border-borderline bg-paper px-4 py-3">
                   <span className="text-[9px] font-bold uppercase tracking-[0.08em] text-sage">{priceValue.label ? `Precio / ${priceValue.label}` : "Precio"}</span>
@@ -465,8 +497,8 @@ export async function BusinessDetailPage({ category, locale, slug }: { category:
                 </div>
               )}
               <div className="mt-4 grid gap-2">
-                {business.googleMapsUrl && <a href={business.googleMapsUrl} target="_blank" rel="noreferrer" className="rounded-sm bg-ink px-4 py-3 text-center text-[11px] font-bold uppercase tracking-[0.1em] text-paper">Ver en Google Maps</a>}
-                {publicWebsite && <a href={publicWebsite} target="_blank" rel="noreferrer" className="rounded-sm border border-borderline px-4 py-3 text-center text-[11px] font-bold uppercase tracking-[0.1em] text-ink">{getWebsiteLabel(business.websiteType)}</a>}
+                {business.googleMapsUrl && <a href={business.googleMapsUrl} target="_blank" rel="noreferrer" className="rounded-sm bg-ink px-4 py-3 text-center text-[11px] font-bold uppercase tracking-[0.1em] text-paper">{copy.business.googleMaps}</a>}
+                {publicWebsite && <a href={publicWebsite} target="_blank" rel="noreferrer" className="rounded-sm border border-borderline px-4 py-3 text-center text-[11px] font-bold uppercase tracking-[0.1em] text-ink">{business.websiteType === "official_website" ? copy.business.officialWebsite : getWebsiteLabel(business.websiteType)}</a>}
               </div>
             </section>
 
@@ -474,8 +506,8 @@ export async function BusinessDetailPage({ category, locale, slug }: { category:
 
             {(business.address || business.phone) && (
               <section className="border-b border-linen py-6">
-                <p className="mb-3 text-[11px] font-extrabold uppercase tracking-[0.12em] text-ink">Contacto</p>
-                <div className="grid gap-3 text-sm font-medium leading-6 text-ink">
+                <p className="mb-3 text-[11px] font-extrabold uppercase tracking-[0.12em] text-ink">{copy.business.contact}</p>
+                <div className="business-contact-summary grid gap-3 text-sm font-medium leading-6 text-ink">
                   {business.address && (
                     <div className="flex gap-2">
                       <IconMapPin aria-hidden="true" size={15} stroke={2} className="mt-1 shrink-0 text-coral" />
@@ -494,13 +526,13 @@ export async function BusinessDetailPage({ category, locale, slug }: { category:
 
             {related.length > 0 && (
               <section className="pt-6">
-                <p className="mb-3 text-[11px] font-extrabold uppercase tracking-[0.12em] text-ink">También puede encajar</p>
+                <p className="mb-3 text-[11px] font-extrabold uppercase tracking-[0.12em] text-ink">{copy.business.related}</p>
                 <div className="grid gap-3">
                   {related.map((item) => (
                     <Link key={item.id} href={`/${locale}/${getCategorySlugFromBusiness(item.category)}/${item.slug}`} className="grid grid-cols-[54px_1fr] gap-3 hover:bg-paper">
                       <BusinessImage business={item} category={item.category} variant="card" className="min-h-[54px] rounded-sm p-2" />
                       <div className="min-w-0 py-1">
-                        <p className="text-[9px] font-bold uppercase tracking-[0.12em] text-coral">{categoryLabel(item.category)} · {item.area}</p>
+                        <p className="text-[9px] font-bold uppercase tracking-[0.12em] text-coral">{localizedCategoryLabel(item.category, locale)} · {item.area}</p>
                         <p className="mt-1 line-clamp-2 text-base font-bold leading-tight text-ink">{getBusinessPublicName(item)}</p>
                       </div>
                     </Link>
@@ -511,7 +543,7 @@ export async function BusinessDetailPage({ category, locale, slug }: { category:
           </div>
         </aside>
       </div>
-      <JsonLd data={[createLocalBusinessSchema(business), createBreadcrumbSchema(breadcrumbs)]} />
+      <JsonLd data={[createLocalBusinessSchema(business, locale), createBreadcrumbSchema(breadcrumbs)]} />
     </main>
   );
 }

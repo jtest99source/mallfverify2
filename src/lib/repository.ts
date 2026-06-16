@@ -1,7 +1,7 @@
 ﻿import "server-only";
 import { unstable_noStore as noStore } from "next/cache";
 import { validateCategoryAttributes, socialProfilesSchema } from "@/lib/business-attribute-schemas";
-import { getBusinessCategoryFromSlug, getCategorySlugFromBusiness, type CategorySlug } from "@/lib/data";
+import { categoryConfigs, getBusinessCategoryFromSlug, getCategorySlugFromBusiness, type CategorySlug } from "@/lib/data";
 import { createSupabaseServerClient, hasSupabaseConfig } from "@/lib/supabase";
 import { toSlug } from "@/lib/slugs";
 import { siteConfig } from "@/config/site";
@@ -13,6 +13,14 @@ import type { Ranking, RankingCategory } from "@/types/ranking";
 import type { Locale } from "@/lib/i18n";
 
 const publicStatuses: ContentStatus[] = ["published", "premium"];
+const configuredBusinessCategories = new Set<BusinessCategory>(
+  Object.values(categoryConfigs).map((config) => config.businessCategory)
+);
+const fallbackPublicBusinessStats = {
+  publishedBusinesses: 4791,
+  analyzedReviews: 3423114,
+  activeCategories: 14
+};
 const businessListSelect = [
   "id",
   "slug",
@@ -409,6 +417,39 @@ function publicStatusFilter(query: any) {
   return query.in("status", publicStatuses);
 }
 
+export async function getPublicBusinessStats() {
+  noStore();
+  const fallback = emptyWhenUnconfigured(fallbackPublicBusinessStats);
+  if (fallback) return fallback;
+
+  const supabase = createSupabaseServerClient();
+  let publishedBusinesses = 0;
+  let analyzedReviews = 0;
+  const activeCategories = new Set<BusinessCategory>();
+  const pageSize = 1000;
+
+  for (let from = 0; ; from += pageSize) {
+    const { data, error } = await publicStatusFilter(supabase.from("businesses").select("category,reviews_count")).range(from, from + pageSize - 1);
+    if (error) throw error;
+    const rows = (data ?? []) as Pick<BusinessRow, "category" | "reviews_count">[];
+
+    for (const row of rows) {
+      if (!configuredBusinessCategories.has(row.category)) continue;
+      publishedBusinesses += 1;
+      analyzedReviews += row.reviews_count ?? 0;
+      activeCategories.add(row.category);
+    }
+
+    if (rows.length < pageSize) break;
+  }
+
+  return {
+    publishedBusinesses,
+    analyzedReviews,
+    activeCategories: activeCategories.size
+  };
+}
+
 export async function getBusinesses(category: CategorySlug): Promise<Business[]> {
   noStore();
   const fallback = emptyWhenUnconfigured<Business[]>([]);
@@ -494,7 +535,7 @@ function ratioScore(row: Pick<BusinessRow, "rating" | "reviews_count">) {
   return (row.rating ?? 0) * Math.log((row.reviews_count ?? 0) + 1);
 }
 
-export async function getHomepageMiniRankingBusinesses(category: CategorySlug, limit = 5, area?: string): Promise<Business[]> {
+export async function getHomepageMiniRankingBusinesses(category: CategorySlug, limit = 5, area?: string, minReviews?: number): Promise<Business[]> {
   noStore();
   const fallback = emptyWhenUnconfigured<Business[]>([]);
   if (fallback) return fallback;
@@ -513,6 +554,7 @@ export async function getHomepageMiniRankingBusinesses(category: CategorySlug, l
   );
 
   if (area) query = query.or(`city.ilike.%${area}%,area.ilike.%${area}%`);
+  if (minReviews) query = query.gte("reviews_count", minReviews);
 
   const { data, error } = await query;
   if (error) throw error;

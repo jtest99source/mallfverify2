@@ -10,15 +10,22 @@ type SeoInput = {
   locale: Locale;
   type?: "website" | "article";
   image?: string;
+  alternateLocales?: readonly Locale[];
+  robots?: Metadata["robots"];
 };
 
-export function generateSeoMetadata({ title, description, path, locale, type = "website", image }: SeoInput): Metadata {
+export function generateSeoMetadata({ title, description, path, locale, type = "website", image, alternateLocales = locales, robots }: SeoInput): Metadata {
   const canonical = `${siteUrl}${path}`;
-  const languages = Object.fromEntries(locales.map((item) => [item, `${siteUrl}${path.replace(`/${locale}`, `/${item}`)}`]));
+  const pathWithoutLocale = path.replace(new RegExp(`^/${locale}(?=/|$)`), "");
+  const languages = Object.fromEntries([
+    ...alternateLocales.map((item) => [item, `${siteUrl}/${item}${pathWithoutLocale}`]),
+    ["x-default", `${siteUrl}/es${pathWithoutLocale}`]
+  ]);
 
   return {
     title,
     description,
+    robots,
     alternates: {
       canonical,
       languages

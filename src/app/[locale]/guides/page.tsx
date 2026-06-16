@@ -12,7 +12,9 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     title: "Guías de Mallorca | Mallorca Verified",
     description: "Guías prácticas de Mallorca para elegir zona, restaurante, hotel o actividad con recomendaciones respaldadas por datos verificados de Google.",
     path: `/${safeLocale}/guides`,
-    locale: safeLocale
+    locale: safeLocale,
+    alternateLocales: ["es"],
+    robots: safeLocale === "es" ? undefined : { index: false, follow: true }
   });
 }
 

@@ -129,7 +129,8 @@ async function updateBusiness(formData: FormData) {
 }
 
 export const metadata = {
-  title: "Admin businesses | Mallorca Verified"
+  title: "Admin businesses | Mallorca Verified",
+  robots: { index: false, follow: false }
 };
 
 export default async function AdminBusinessesPage({ searchParams }: { searchParams: Promise<AdminSearchParams> }) {

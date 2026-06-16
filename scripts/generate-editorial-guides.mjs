@@ -97,7 +97,7 @@ async function fetchBusinesses(blogConfig) {
     .select(`
       id, slug, name, category, city, area, rating, reviews_count,
       authority_score, website, review_pros, review_themes,
-      category_attributes, featured_reviews, address
+      category_attributes, featured_reviews, address, primary_image_url
     `)
     .eq('status', 'published')
     .gte('rating', minRating)
@@ -159,8 +159,47 @@ function chunk(arr, size) {
     i % size === 0 ? [...acc, arr.slice(i, i + size)] : acc, [])
 }
 
+// ─── HERO IMAGE RESOLUTION ────────────────────────────────────────────────────
+async function searchUnsplash(query) {
+  const key = process.env.UNSPLASH_ACCESS_KEY
+  if (!key) return null
+  try {
+    const params = new URLSearchParams({ query, per_page: '1', orientation: 'landscape', content_filter: 'high' })
+    const res = await fetch(`https://api.unsplash.com/search/photos?${params}`, {
+      headers: { Authorization: `Client-ID ${key}` }
+    })
+    if (!res.ok) return null
+    const data = await res.json()
+    return data.results?.[0]?.urls?.regular ?? null
+  } catch {
+    return null
+  }
+}
+
+function unsplashQueryForGuide(blogConfig) {
+  const title = blogConfig.titles.es
+  const cleaned = title
+    .replace(/\b202\d\b/g, '')
+    .replace(/—.*/g, '')
+    .replace(/guía (completa|práctica)|los mejores|mejores|mejor|(en|de|para|desde) mallorca|mallorca/gi, '')
+    .replace(/\s+/g, ' ')
+    .trim()
+  return cleaned.length > 6 ? `${cleaned} Mallorca` : 'Mallorca landscape'
+}
+
+async function resolveHeroImage(blogConfig, businesses) {
+  // 1. Use first business image if available
+  for (const b of businesses) {
+    if (b.primary_image_url) return b.primary_image_url
+  }
+  // 2. Fall back to Unsplash
+  const query = unsplashQueryForGuide(blogConfig)
+  console.log(`  Unsplash query: "${query}"`)
+  return searchUnsplash(query)
+}
+
 // ─── GENERATE ONE GUIDE VIA CLAUDE API + WEB SEARCH ───────────────────────────
-async function generateGuide(blogConfig, locale, businesses) {
+async function generateGuide(blogConfig, locale, businesses, heroImageUrl) {
   const localeConfig = LOCALE_CONFIG[locale]
   const title = blogConfig.titles[locale]
   const intent = blogConfig.intent[locale]
@@ -288,7 +327,7 @@ IMPORTANT:
     sections: guideData.sections,
     faqs: guideData.faqs,
     seo: guideData.seo,
-    hero_image_url: null,
+    hero_image_url: heroImageUrl ?? null,
     status: 'published',
     source: 'editorial',
     is_featured: blogConfig.tier === 1,
@@ -345,9 +384,12 @@ async function main() {
       continue
     }
 
+    const heroImageUrl = await resolveHeroImage(blogConfig, businesses)
+    console.log(`  Hero image: ${heroImageUrl ? '✓' : '✗ none'}`)
+
     for (const locale of locales) {
       try {
-        const guide = await generateGuide(blogConfig, locale, businesses)
+        const guide = await generateGuide(blogConfig, locale, businesses, heroImageUrl)
         await upsertGuide(guide)
         successCount++
         await new Promise(r => setTimeout(r, 2000))

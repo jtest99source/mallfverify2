@@ -1,6 +1,7 @@
 import type { Business, BusinessCategory } from "@/types/business";
 import type { ReactNode } from "react";
 import { getBusinessPublicName } from "@/lib/business-name-normalizer";
+import { categoryConfigs, getCategorySlugFromBusiness } from "@/lib/data";
 
 type BusinessImageVariant = "card" | "hero" | "detail";
 
@@ -53,13 +54,16 @@ export function getBusinessImageUrl(business: Business) {
 export function BusinessImage({ business, category, variant, className = "", children }: BusinessImageProps) {
   const imageUrl = getBusinessImageUrl(business);
   const publicName = getBusinessPublicName(business);
+  const categoryLabel = categoryConfigs[getCategorySlugFromBusiness(category)].singular;
+  const location = business.city || business.area || business.municipality || "Mallorca";
+  const imageLabel = `${publicName} - ${categoryLabel} en ${location}, Mallorca`;
   const backgroundImage = imageUrl
     ? `${imageOverlays[variant]}, url(${imageUrl})`
     : abstractBackgrounds[category] ?? abstractBackgrounds.activity;
 
   return (
     <div
-      aria-label={imageUrl ? publicName : `Placeholder editorial ${category}`}
+      aria-label={imageUrl ? imageLabel : `Imagen editorial de ${categoryLabel} en ${location}, Mallorca`}
       className={`editorial-texture flex items-end overflow-hidden bg-sea ${variantClasses[variant]} ${className}`}
       style={{ backgroundImage, backgroundSize: "cover", backgroundPosition: "center" }}
     >

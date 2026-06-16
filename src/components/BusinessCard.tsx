@@ -1,48 +1,89 @@
 import Link from "next/link";
-import { IconArrowUpRight, IconDiamond, IconMapPin } from "@tabler/icons-react";
+import { IconArrowUpRight, IconDiamond, IconMapPin, IconRoad } from "@tabler/icons-react";
 import type { Business } from "@/types/business";
-import { categoryConfigs, getCategorySlugFromBusiness } from "@/lib/data";
+import { getCategorySlugFromBusiness } from "@/lib/data";
 import type { Locale } from "@/lib/i18n";
+import { categoryLabelForBusiness, t } from "@/lib/i18n-copy";
 import { getBusinessPublicName } from "@/lib/business-name-normalizer";
 import { RatingBadge } from "@/components/RatingBadge";
 import { BusinessImage } from "@/components/BusinessImage";
 import { isUntapped } from "@/lib/untapped-score";
 
-function descriptionFor(business: Business) {
+const placeholderDescriptionPattern = /Google Places|datos de Google|importad[oa] desde Google|pendiente de revisi|propuesta pensada para visitantes|perfil encaja|revision editorial|revisión editorial/i;
+
+function realDescriptionFor(business: Business) {
   const text = business.editorialDescription || business.aiDescription || business.shortDescription || business.description;
-  if (text && !/Google Places|importado desde Google|propuesta pensada para visitantes|perfil encaja|revisión editorial/i.test(text)) return text;
-  return "Datos, valoración y reseñas verificadas para comparar antes de decidir.";
+  if (!text || placeholderDescriptionPattern.test(text)) return null;
+  return text;
 }
 
-function priceBadge(business: Business) {
+function locationFor(business: Business) {
+  return business.city || business.area || business.municipality || "Mallorca";
+}
+
+function compactAddress(address?: string) {
+  if (!address) return null;
+  return address
+    .replace(/\s*,?\s*(Illes Balears|Islas Baleares|Balearic Islands|Spain|España)\s*$/i, "")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function priceBadge(business: Business, locale: Locale) {
   const estimate = business.priceEstimate;
   if (!estimate) return null;
 
   const min = estimate.amount_min ?? estimate.range_min ?? estimate.per_person_min ?? null;
   const max = estimate.amount_max ?? estimate.range_max ?? estimate.per_person_max ?? null;
   const currency = estimate.currency === "EUR" || !estimate.currency ? "€" : estimate.currency;
+  const from = locale === "de" ? "Ab" : locale === "en" ? "From" : "Desde";
+  const until = locale === "de" ? "Bis" : locale === "en" ? "Up to" : "Hasta";
 
   if (typeof min === "number" && typeof max === "number") return min === max ? `${min} ${currency}` : `${min}-${max} ${currency}`;
-  if (typeof min === "number") return `Desde ${min} ${currency}`;
-  if (typeof max === "number") return `Hasta ${max} ${currency}`;
+  if (typeof min === "number") return `${from} ${min} ${currency}`;
+  if (typeof max === "number") return `${until} ${max} ${currency}`;
 
   const label = estimate.label?.trim();
   if (label && !/persona|person|por/i.test(label)) return label;
   return null;
 }
 
-function usefulBadges(business: Business) {
-  return [business.city || business.area || business.municipality, priceBadge(business)].filter((item): item is string => Boolean(item?.trim())).slice(0, 2);
+function usefulBadges(business: Business, locale: Locale) {
+  return [locationFor(business), priceBadge(business, locale)].filter((item): item is string => Boolean(item?.trim())).slice(0, 2);
+}
+
+function CardBodyText({ business, locale }: { business: Business; locale: Locale }) {
+  const copy = t(locale);
+  const description = realDescriptionFor(business);
+  if (description) {
+    return <p className="mt-3 line-clamp-3 text-sm leading-6 text-olive">{description}</p>;
+  }
+
+  const address = compactAddress(business.address);
+
+  return (
+    <div className="mt-3 text-sm leading-6 text-olive">
+      {address ? (
+        <p className="flex gap-1.5 leading-6">
+          <IconRoad size={14} stroke={2} className="mt-1 shrink-0 text-[#C4933F]" />
+          <span className="line-clamp-2">{address}</span>
+        </p>
+      ) : (
+        <p className="line-clamp-2">{copy.business.fallbackLine}</p>
+      )}
+    </div>
+  );
 }
 
 export function BusinessCard({ business, locale }: { business: Business; locale: Locale }) {
+  const copy = t(locale);
   const categorySlug = getCategorySlugFromBusiness(business.category);
-  const categoryLabel = categoryConfigs[categorySlug].singular;
+  const categoryLabel = categoryLabelForBusiness(business.category, locale);
   const publicName = getBusinessPublicName(business);
-  const badges = usefulBadges(business);
+  const badges = usefulBadges(business, locale);
 
   return (
-    <article className="group flex h-full min-h-[390px] flex-col overflow-hidden rounded-lg border border-borderline bg-white shadow-sm transition-all duration-150 hover:-translate-y-0.5 hover:border-[#C4933F] hover:shadow-md">
+    <article className="group flex h-full min-h-[360px] flex-col overflow-hidden rounded-lg border border-borderline bg-white shadow-sm transition-all duration-150 hover:-translate-y-0.5 hover:border-[#C4933F] hover:shadow-md">
       <Link href={`/${locale}/${categorySlug}/${business.slug}`} className="flex flex-1 flex-col">
         <BusinessImage business={business} category={business.category} variant="card" className="aspect-[4/3] min-h-0 shrink-0">
           <div className="flex h-full flex-col justify-between">
@@ -59,7 +100,7 @@ export function BusinessCard({ business, locale }: { business: Business; locale:
           </div>
         </BusinessImage>
 
-        <div className="flex flex-1 flex-col p-5">
+        <div className="flex flex-1 flex-col p-5 pb-4">
           <div className="flex flex-wrap items-center justify-between gap-3">
             <p className="text-[10px] font-black uppercase tracking-[0.12em] text-sea">{categoryLabel}</p>
             <RatingBadge rating={business.rating} reviewsCount={business.reviewsCount} compact />
@@ -68,13 +109,13 @@ export function BusinessCard({ business, locale }: { business: Business; locale:
           {isUntapped(business.untappedScore) && (
             <div className="mt-3 inline-flex w-fit items-center gap-1 rounded-full bg-[#FEF3C7] px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.08em] text-[#92400E]">
               <IconDiamond size={12} stroke={2} />
-              Joya oculta
+              {copy.business.hiddenGem}
             </div>
           )}
 
-          <p className="mt-3 line-clamp-3 text-sm leading-6 text-olive">{descriptionFor(business)}</p>
+          <CardBodyText business={business} locale={locale} />
 
-          <div className="mt-auto pt-5">
+          <div className="mt-auto pt-4">
             <div className="flex min-h-[28px] flex-wrap gap-1.5">
               {badges.map((badge) => (
                 <span key={badge} className="rounded-full border border-[#E7DED0] bg-[#FFF8EC] px-2.5 py-1 text-[10px] font-semibold text-olive">
@@ -82,8 +123,8 @@ export function BusinessCard({ business, locale }: { business: Business; locale:
                 </span>
               ))}
             </div>
-            <span className="mt-5 inline-flex items-center gap-1 text-[11px] font-black uppercase tracking-[0.1em] text-[#B86B1D] transition-all duration-150 group-hover:text-[#0E8F72]">
-              Ver datos y reseñas
+            <span className="mt-4 inline-flex items-center gap-1 text-[11px] font-black uppercase tracking-[0.1em] text-[#B86B1D] transition-all duration-150 group-hover:text-[#0E8F72]">
+              {copy.business.viewDataReviews}
               <IconArrowUpRight size={14} stroke={2} />
             </span>
           </div>
