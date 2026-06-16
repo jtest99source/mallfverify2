@@ -348,7 +348,7 @@ export async function CategoryPage({ category, locale }: { category: CategorySlu
   return (
     <main className="bg-[linear-gradient(180deg,#FFF8EC_0%,#FFFDF7_46%,#FFF8EC_100%)]">
       <section
-        className="relative overflow-hidden border-b border-[#E7DED0] bg-[#FFFDF7] px-4 py-10 sm:px-6 lg:px-8"
+        className="relative overflow-hidden border-b border-[#E7DED0] bg-[#FFFDF7] px-4 py-8 sm:px-6 sm:py-10 lg:px-8"
         data-attribution={categoryImage?.attribution}
         data-image-alt={categoryImage?.alt}
       >
@@ -363,9 +363,9 @@ export async function CategoryPage({ category, locale }: { category: CategorySlu
           <Breadcrumbs items={[{ label: copy.category.breadcrumbHome, href: `/${locale}` }, { label: config.label, href: `/${locale}/${category}` }]} />
           <div className="mt-6 max-w-3xl">
             <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-[#0E8F72]">{copy.category.comparator}</p>
-            <h1 className="mt-3 max-w-2xl text-5xl font-black leading-none text-[#10253D] sm:text-6xl">{config.title}</h1>
-            <p className="mt-5 max-w-2xl text-base leading-8 text-[#4B5B4D]">{config.intro}</p>
-            <p className="mt-4 max-w-2xl text-sm leading-7 text-[#5F6F61]">
+            <h1 className="mt-3 max-w-2xl text-3xl font-black leading-[1.05] text-[#10253D] sm:text-6xl">{config.title}</h1>
+            <p className="mt-4 max-w-2xl text-sm leading-6 text-[#4B5B4D] sm:mt-5 sm:text-base sm:leading-8">{config.intro}</p>
+            <p className="mt-3 max-w-2xl text-sm leading-6 text-[#5F6F61] sm:mt-4 sm:leading-7">
               {copy.category.signalLine}
             </p>
           </div>
@@ -432,7 +432,7 @@ export async function CategoryPage({ category, locale }: { category: CategorySlu
 function BusinessProfileReviewCta({ businessName, locale }: { businessName: string; locale: Locale }) {
   const copy = t(locale);
   return (
-    <section className="mt-8 overflow-hidden rounded-lg border border-[#F1D3A2] bg-[#FFF8EC] p-6 shadow-[0_18px_45px_rgba(27,46,75,0.06)]">
+    <section className="mt-8 hidden overflow-hidden rounded-lg border border-[#F1D3A2] bg-[#FFF8EC] p-6 shadow-[0_18px_45px_rgba(27,46,75,0.06)] lg:block">
       <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-[#B86B1D]">{copy.business.profileCtaEyebrow}</p>
       <h2 className="mt-2 text-2xl font-black leading-tight text-ink">{copy.business.profileCtaTitle}</h2>
       <p className="mt-3 text-sm leading-7 text-olive">
@@ -507,13 +507,13 @@ export async function BusinessDetailPage({ category, locale, slug }: { category:
 
       <AddressBar business={business} location={location} locale={locale} />
 
-      <div className="mx-auto grid max-w-[1200px] items-start gap-8 px-4 py-8 sm:px-6 lg:grid-cols-[minmax(0,1fr)_300px] lg:px-8">
+      <div className="mx-auto grid max-w-[1200px] items-start gap-6 px-4 py-6 sm:px-6 sm:py-8 lg:grid-cols-[minmax(0,1fr)_300px] lg:gap-8 lg:px-8">
         <article className="min-w-0">
           <BusinessReviewPanel business={business} locale={locale} />
           <BusinessProfileReviewCta businessName={publicName} locale={locale} />
         </article>
 
-        <aside className="rounded-md border border-borderline bg-white p-5 shadow-[0_18px_45px_rgba(28,28,24,0.05)]">
+        <aside className="hidden rounded-md border border-borderline bg-white p-5 shadow-[0_18px_45px_rgba(28,28,24,0.05)] lg:block">
           <div className="lg:sticky lg:top-24">
             <section className="border-b border-linen pb-6">
               <QuickScore business={business} locale={locale} />

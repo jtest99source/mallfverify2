@@ -468,16 +468,73 @@ body {
 
 @media (max-width: 640px) {
   .rv {
-    padding: 1rem;
+    border-radius: 10px;
+    padding: 0.9rem;
   }
 
-  .rv-rating-hero,
+  .rv-rating-hero {
+    display: block;
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0;
+  }
+
+  .rv-rating-big {
+    display: none;
+  }
+
   .rv-prosCons {
     grid-template-columns: 1fr;
   }
 
-  .rv-rating-big {
-    text-align: left;
+  .rv-sec-title {
+    font-size: 16px;
+    margin-bottom: 0.7rem;
+  }
+
+  .rv-block {
+    margin-bottom: 1.25rem;
+  }
+
+  .rv-themes {
+    gap: 6px;
+  }
+
+  .rv-themes-title {
+    color: #047857;
+  }
+
+  .rv-theme {
+    font-size: 11px;
+    padding: 7px 9px;
+  }
+
+  .rv-pc {
+    padding: 0.9rem;
+  }
+
+  .rv-review {
+    border-left-width: 3px;
+    padding: 0.85rem;
+  }
+
+  .rv-review:nth-of-type(n+3) {
+    display: none;
+  }
+
+  .rv-review p {
+    font-size: 12px;
+    line-height: 1.55;
+  }
+
+  .rv-services {
+    gap: 7px;
+  }
+
+  .rv-service {
+    font-size: 11px;
+    padding: 7px 10px;
   }
 
   .rv-review-top {

@@ -77,7 +77,7 @@ export default async function RankingsPage({
               <h1 className="font-display max-w-4xl text-balance text-3xl font-black leading-[1.05] text-ink sm:text-5xl lg:text-6xl">
                 {copy.rankings.title}
               </h1>
-              <p className="mt-4 max-w-3xl text-sm leading-7 text-olive sm:mt-5">
+              <p className="mt-4 max-w-3xl text-sm leading-6 text-olive sm:mt-5 sm:leading-7">
                 {copy.rankings.intro}
               </p>
             </div>
@@ -119,7 +119,7 @@ export default async function RankingsPage({
           <div className="mb-4 max-w-4xl sm:mb-5">
             <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-[#0E8F72]">{copy.rankings.activeRanking}</p>
             <h2 className="font-display mt-2 text-2xl font-black text-ink sm:text-4xl">{activeConfig.title}</h2>
-            <p className="mt-3 text-sm leading-7 text-sage">{activeConfig.intro}</p>
+            <p className="mt-2 text-sm leading-6 text-sage sm:mt-3 sm:leading-7">{activeConfig.intro}</p>
           </div>
         </div>
       </section>

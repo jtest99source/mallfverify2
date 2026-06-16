@@ -1,4 +1,4 @@
-import type { Business, FeaturedReview, GoogleReview, ReviewTheme } from "@/types/business";
+﻿import type { Business, FeaturedReview, GoogleReview, ReviewTheme } from "@/types/business";
 import type { Locale } from "@/lib/i18n";
 import { t } from "@/lib/i18n-copy";
 
@@ -224,3 +224,4 @@ export function BusinessReviewPanel({ business, locale }: { business: Business; 
     </section>
   );
 }
+

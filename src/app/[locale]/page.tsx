@@ -125,7 +125,7 @@ function formatMillionMetric(value: number, locale: Locale) {
 
 function RankingItem({ business, index, locale }: { business: Business; index: number; locale: Locale }) {
   return (
-    <Link href={businessHref(locale, business)} className="flex items-center gap-3 rounded-md px-2 py-3 hover:bg-[#FFF8EC]">
+    <Link href={businessHref(locale, business)} className="grid min-w-0 grid-cols-[1.6rem_minmax(0,1fr)] gap-x-2 gap-y-2 rounded-md px-2 py-3 hover:bg-[#FFF8EC] sm:flex sm:items-center sm:gap-3">
       <span className="w-5 shrink-0 text-center text-xs font-black text-borderline">#{index + 1}</span>
       <span className="min-w-0 flex-1">
         <span className="block truncate text-sm font-semibold text-ink">{getBusinessPublicName(business)}</span>
@@ -134,7 +134,9 @@ function RankingItem({ business, index, locale }: { business: Business; index: n
           <span className="truncate">{businessLocation(business)}</span>
         </span>
       </span>
-      <RatingBadge rating={business.rating} reviewsCount={business.reviewsCount} locale={locale} compact />
+      <span className="col-start-2 min-w-0 sm:col-auto">
+        <RatingBadge rating={business.rating} reviewsCount={business.reviewsCount} locale={locale} compact />
+      </span>
     </Link>
   );
 }
@@ -146,7 +148,7 @@ function CategoryRankingCard({ category, businesses, locale }: { category: Categ
   const ariaLabel = locale === "es" ? `Ver ranking de ${label}` : locale === "de" ? `Rangliste für ${label} ansehen` : `View ${label} ranking`;
 
   return (
-    <section className="flex h-full flex-col rounded-lg border-t-2 border-t-[#0E8F72] bg-white p-5 shadow-[0_16px_40px_rgba(27,46,75,0.08)]">
+    <section className="flex h-full min-w-0 flex-col rounded-lg border-t-2 border-t-[#0E8F72] bg-white p-4 shadow-[0_16px_40px_rgba(27,46,75,0.08)] sm:p-5">
       <div className="mb-3 flex items-center justify-between gap-4">
         <div className="flex items-center gap-3">
           <div className="inline-flex h-8 w-8 items-center justify-center rounded-md bg-[#F0FDF4] text-[#0E8F72]">
@@ -154,7 +156,7 @@ function CategoryRankingCard({ category, businesses, locale }: { category: Categ
           </div>
           <h2 className="text-lg font-black leading-tight text-ink">{label}</h2>
         </div>
-        <Link href={`/${locale}/rankings?category=${category}`} className="shrink-0 text-[10px] font-bold uppercase tracking-[0.1em] text-sage hover:text-[#0E8F72]" aria-label={ariaLabel}>
+        <Link href={`/${locale}/rankings?category=${category}`} className="shrink-0 text-[9px] font-bold uppercase tracking-[0.08em] text-sage hover:text-[#0E8F72] sm:text-[10px] sm:tracking-[0.1em]" aria-label={ariaLabel}>
           {rankingLabel} →
         </Link>
       </div>
@@ -273,7 +275,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
             {copy.home.bestThisWeekIntro}
           </p>
         </div>
-        <div className="grid items-stretch gap-3 md:grid-cols-2 md:gap-5 xl:grid-cols-3">
+        <div className="grid min-w-0 items-stretch gap-3 md:grid-cols-2 md:gap-5 xl:grid-cols-3">
           {categoryRankings.map((ranking) => (
             <CategoryRankingCard key={ranking.category} category={ranking.category} businesses={ranking.businesses} locale={safeLocale} />
           ))}

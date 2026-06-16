@@ -1,4 +1,4 @@
-import type { Locale } from "@/lib/i18n";
+﻿import type { Locale } from "@/lib/i18n";
 
 function numberLocale(locale: Locale) {
   return locale === "de" ? "de-DE" : locale === "en" ? "en-US" : "es-ES";
@@ -31,10 +31,10 @@ export function RatingBadge({
 
   if (compact) {
     return (
-      <div className="inline-flex items-center gap-1.5 whitespace-nowrap rounded-full border border-[#F1D3A2] bg-[#FFF8EC] px-2 py-1 text-[11px] leading-none text-olive">
+      <div className="inline-flex min-w-0 items-center gap-1.5 rounded-full border border-[#F1D3A2] bg-[#FFF8EC] px-2 py-1 text-[10px] leading-none text-olive sm:whitespace-nowrap sm:text-[11px]">
         {typeof rating === "number" && <span className="font-extrabold text-star">★ {formatRating(rating, locale)}</span>}
         {typeof rating === "number" && typeof reviewsCount === "number" && <span className="text-sage">·</span>}
-        <span>{typeof reviewsCount === "number" ? formatReviews(reviewsCount, locale) : "Google"}</span>
+        <span className="truncate">{typeof reviewsCount === "number" ? formatReviews(reviewsCount, locale) : "Google"}</span>
       </div>
     );
   }
@@ -50,3 +50,4 @@ export function RatingBadge({
     </div>
   );
 }
+
