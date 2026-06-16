@@ -90,14 +90,15 @@ function initial(review: FeaturedReview) {
   return (review.author?.trim().charAt(0) || "M").toUpperCase();
 }
 
-function ReviewCard({ review, index }: { review: FeaturedReview; index: number }) {
+function ReviewCard({ review, index, locale }: { review: FeaturedReview; index: number; locale: Locale }) {
+  const fallbackAuthor = locale === "es" ? "Cliente" : locale === "de" ? "Gast" : "Customer";
   return (
     <article className="rv-review">
       <div className="rv-review-top">
         <div className="rv-review-author">
           <div className={`rv-review-avatar ${index % 2 ? "rv-review-avatar-alt" : ""}`}>{initial(review)}</div>
           <div>
-            <div className="rv-review-name">{review.author || "Cliente"}</div>
+            <div className="rv-review-name">{review.author || fallbackAuthor}</div>
             {review.date && <div className="rv-review-meta">{review.date}</div>}
           </div>
         </div>
@@ -198,7 +199,7 @@ export function BusinessReviewPanel({ business, locale }: { business: Business; 
         <div className="rv-block">
           <div className="rv-sec-title">{copy.business.featuredReviews}</div>
           {displayedReviews.slice(0, 3).map((review, index) => (
-            <ReviewCard key={`${review.author ?? "review"}-${index}`} review={review} index={index} />
+            <ReviewCard key={`${review.author ?? "review"}-${index}`} review={review} index={index} locale={locale} />
           ))}
           {business.googleMapsUrl && (
             <a href={business.googleMapsUrl} target="_blank" rel="noreferrer" className="rv-google-cta">

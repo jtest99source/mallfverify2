@@ -3,13 +3,42 @@ import { notFound } from "next/navigation";
 import { BusinessCard } from "@/components/BusinessCard";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd } from "@/components/JsonLd";
-import { categoryConfigs, isCategorySlug, siteUrl } from "@/lib/data";
+import { isCategorySlug, siteUrl } from "@/lib/data";
 import { isLocale, type Locale } from "@/lib/i18n";
+import { getCategoryCopy, t } from "@/lib/i18n-copy";
 import { getBusinesses, getTopBusinessesByFacet } from "@/lib/repository";
 import { createBreadcrumbSchema, createItemListSchema } from "@/lib/schema";
 import { generateSeoMetadata } from "@/lib/seo";
 import { methodologyPath } from "@/lib/methodology";
 import { facetPath, getFacet, getPopularFacetsForBusinesses } from "@/lib/taxonomy";
+
+const pageCopy = {
+  es: {
+    specificRanking: "Ranking específico",
+    found: (count: string, category: string) => `Hemos encontrado ${count} fichas que encajan con este filtro dentro de ${category}.`,
+    methodologyTitle: "Metodología",
+    methodologyText: "El filtro se deriva de tipos, etiquetas y atributos de cada ficha. El orden final depende de valoración, reseñas y autoridad relativa.",
+    methodologyCta: "Ver metodología"
+  },
+  en: {
+    specificRanking: "Specific ranking",
+    found: (count: string, category: string) => `We found ${count} profiles matching this filter within ${category}.`,
+    methodologyTitle: "Methodology",
+    methodologyText: "The filter is derived from profile types, tags and attributes. Final order depends on rating, reviews and relative authority.",
+    methodologyCta: "View methodology"
+  },
+  de: {
+    specificRanking: "Spezifische Rangliste",
+    found: (count: string, category: string) => `Wir haben ${count} Profile gefunden, die zu diesem Filter innerhalb von ${category} passen.`,
+    methodologyTitle: "Methodik",
+    methodologyText: "Der Filter basiert auf Typen, Tags und Attributen der Profile. Die finale Reihenfolge hängt von Bewertung, Rezensionen und relativer Autorität ab.",
+    methodologyCta: "Methodik ansehen"
+  }
+} as const;
+
+function numberLocale(locale: Locale) {
+  return locale === "de" ? "de-DE" : locale === "en" ? "en-US" : "es-ES";
+}
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string; category: string; facet: string }> }) {
   const { locale, category, facet } = await params;
@@ -40,10 +69,12 @@ export default async function TopFacetPage({ params }: { params: Promise<{ local
   ]);
   if (!businesses.length) notFound();
 
-  const config = categoryConfigs[category];
+  const config = getCategoryCopy(category, safeLocale);
+  const copy = t(safeLocale);
+  const localCopy = pageCopy[safeLocale];
   const relatedFacets = getPopularFacetsForBusinesses(category, allCategoryBusinesses, 3).filter((item) => item.slug !== rankingFacet.slug).slice(0, 8);
   const breadcrumbs = [
-    { name: "Inicio", url: `${siteUrl}/${safeLocale}` },
+    { name: copy.category.breadcrumbHome, url: `${siteUrl}/${safeLocale}` },
     { name: "Rankings", url: `${siteUrl}/${safeLocale}/rankings` },
     { name: config.label, url: `${siteUrl}/${safeLocale}/top/${category}` },
     { name: rankingFacet.label, url: `${siteUrl}/${safeLocale}/top/${category}/${rankingFacet.slug}` }
@@ -55,7 +86,7 @@ export default async function TopFacetPage({ params }: { params: Promise<{ local
         <div className="mx-auto max-w-7xl">
           <Breadcrumbs
             items={[
-              { label: "Inicio", href: `/${safeLocale}` },
+              { label: copy.category.breadcrumbHome, href: `/${safeLocale}` },
               { label: "Rankings", href: `/${safeLocale}/rankings` },
               { label: config.label, href: `/${safeLocale}/top/${category}` },
               { label: rankingFacet.label, href: `/${safeLocale}/top/${category}/${rankingFacet.slug}` }
@@ -63,20 +94,18 @@ export default async function TopFacetPage({ params }: { params: Promise<{ local
           />
           <div className="mt-7 grid gap-8 lg:grid-cols-[1fr_340px] lg:items-end">
             <div className="max-w-4xl">
-              <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-[#0E8F72]">Ranking específico</p>
+              <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-[#0E8F72]">{localCopy.specificRanking}</p>
               <h1 className="mt-3 font-sans text-5xl font-black leading-none text-ink sm:text-6xl">{rankingFacet.title}</h1>
               <p className="mt-5 max-w-2xl text-base leading-8 text-olive">{rankingFacet.intro}</p>
               <p className="mt-3 text-sm leading-7 text-sage">
-                Hemos encontrado {businesses.length.toLocaleString("es-ES")} fichas que encajan con este filtro dentro de {config.label.toLowerCase()}.
+                {localCopy.found(businesses.length.toLocaleString(numberLocale(safeLocale)), config.label.toLowerCase())}
               </p>
             </div>
             <div className="rounded-lg border border-[#F1D3A2] bg-white/80 p-5 shadow-[0_18px_45px_rgba(27,46,75,0.04)]">
-              <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-[#B86B1D]">Metodología</p>
-              <p className="mt-2 text-sm leading-7 text-olive">
-                El filtro se deriva de tipos, etiquetas y atributos de cada ficha. El orden final depende de valoración, reseñas y autoridad relativa.
-              </p>
+              <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-[#B86B1D]">{localCopy.methodologyTitle}</p>
+              <p className="mt-2 text-sm leading-7 text-olive">{localCopy.methodologyText}</p>
               <Link href={methodologyPath(safeLocale)} className="mt-4 inline-flex min-h-11 items-center justify-center rounded-sm bg-ink px-5 text-[11px] font-bold uppercase tracking-[0.1em] text-white hover:bg-[#0E8F72]">
-                Ver metodología
+                {localCopy.methodologyCta}
               </Link>
             </div>
           </div>
@@ -88,7 +117,7 @@ export default async function TopFacetPage({ params }: { params: Promise<{ local
           <div className="flex flex-wrap gap-2">
             {relatedFacets.map((item) => (
               <Link key={item.slug} href={facetPath(safeLocale, category, item.slug)} className="rounded-full border border-[#E7DED0] bg-white px-3 py-2 text-[11px] font-bold uppercase tracking-[0.06em] text-ink hover:border-[#0E8F72] hover:text-[#0E8F72]">
-                {item.label} · {item.count}
+                {item.label} · {item.count.toLocaleString(numberLocale(safeLocale))}
               </Link>
             ))}
           </div>

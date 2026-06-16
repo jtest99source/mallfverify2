@@ -103,7 +103,7 @@ export function BusinessCard({ business, locale }: { business: Business; locale:
         <div className="flex flex-1 flex-col p-5 pb-4">
           <div className="flex flex-wrap items-center justify-between gap-3">
             <p className="text-[10px] font-black uppercase tracking-[0.12em] text-sea">{categoryLabel}</p>
-            <RatingBadge rating={business.rating} reviewsCount={business.reviewsCount} compact />
+            <RatingBadge rating={business.rating} reviewsCount={business.reviewsCount} locale={locale} compact />
           </div>
 
           {isUntapped(business.untappedScore) && (

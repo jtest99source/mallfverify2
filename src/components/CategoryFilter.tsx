@@ -4,26 +4,75 @@ import Link from "next/link";
 import { IconDiamond, IconMessageCircle, IconStarFilled, IconTrendingUp } from "@tabler/icons-react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useMemo } from "react";
-import type { Business } from "@/types/business";
-import type { Locale } from "@/lib/i18n";
 import { BusinessCard } from "@/components/BusinessCard";
-import { getBusinessPublicName } from "@/lib/business-name-normalizer";
-import { RatingBadge } from "@/components/RatingBadge";
-import { getCategorySlugFromBusiness } from "@/lib/data";
 import { BusinessImage } from "@/components/BusinessImage";
+import { RatingBadge } from "@/components/RatingBadge";
+import { getBusinessPublicName } from "@/lib/business-name-normalizer";
+import { getCategorySlugFromBusiness } from "@/lib/data";
+import type { Locale } from "@/lib/i18n";
 import { isUntapped } from "@/lib/untapped-score";
+import type { Business } from "@/types/business";
 
 type SortKey = "ratio" | "rating" | "reviews" | "untapped";
 
 const ALL_AREAS = "all";
 const ALL_TAGS = "all";
 
-const sortOptions: Array<{ key: SortKey; label: string; Icon: typeof IconTrendingUp }> = [
-  { key: "ratio", label: "Recomendado", Icon: IconTrendingUp },
-  { key: "rating", label: "Mejor valoración", Icon: IconStarFilled },
-  { key: "reviews", label: "Más reseñas", Icon: IconMessageCircle },
-  { key: "untapped", label: "Joyas ocultas", Icon: IconDiamond }
-];
+const copy = {
+  es: {
+    orderedBy: "Ordenado por",
+    allAreas: "Todas las zonas",
+    search: "Buscar",
+    searchPlaceholder: "Nombre, zona o estilo",
+    style: "Estilo",
+    allStyles: "Todos los estilos",
+    results: "resultados",
+    bestResult: "Mejor resultado",
+    hiddenGem: "Joya oculta",
+    viewProfile: "Ver ficha",
+    allResults: "Todos los resultados",
+    sort: { ratio: "Recomendado", rating: "Mejor valoración", reviews: "Más reseñas", untapped: "Joyas ocultas" }
+  },
+  en: {
+    orderedBy: "Sorted by",
+    allAreas: "All areas",
+    search: "Search",
+    searchPlaceholder: "Name, area or style",
+    style: "Style",
+    allStyles: "All styles",
+    results: "results",
+    bestResult: "Best result",
+    hiddenGem: "Hidden gem",
+    viewProfile: "View profile",
+    allResults: "All results",
+    sort: { ratio: "Recommended", rating: "Best rating", reviews: "Most reviews", untapped: "Hidden gems" }
+  },
+  de: {
+    orderedBy: "Sortiert nach",
+    allAreas: "Alle Orte",
+    search: "Suche",
+    searchPlaceholder: "Name, Ort oder Stil",
+    style: "Stil",
+    allStyles: "Alle Stile",
+    results: "Ergebnisse",
+    bestResult: "Bestes Ergebnis",
+    hiddenGem: "Geheimtipp",
+    viewProfile: "Profil ansehen",
+    allResults: "Alle Ergebnisse",
+    sort: { ratio: "Empfohlen", rating: "Beste Bewertung", reviews: "Meiste Rezensionen", untapped: "Geheimtipps" }
+  }
+} as const;
+
+const sortIcons: Record<SortKey, typeof IconTrendingUp> = {
+  ratio: IconTrendingUp,
+  rating: IconStarFilled,
+  reviews: IconMessageCircle,
+  untapped: IconDiamond
+};
+
+function numberLocale(locale: Locale) {
+  return locale === "de" ? "de-DE" : locale === "en" ? "en-US" : "es-ES";
+}
 
 function descriptionFor(business: Business) {
   return business.editorialDescription || business.aiDescription || business.shortDescription || business.description;
@@ -72,7 +121,7 @@ function sortBusinesses(businesses: Business[], sort: SortKey) {
   });
 }
 
-function getPopularTags(businesses: Business[]) {
+function getPopularTags(businesses: Business[], locale: Locale) {
   const counts = new Map<string, number>();
   for (const business of businesses) {
     for (const tag of getBusinessTags(business)) counts.set(tag, (counts.get(tag) ?? 0) + 1);
@@ -81,7 +130,7 @@ function getPopularTags(businesses: Business[]) {
   return Array.from(counts.entries())
     .sort((a, b) => {
       if (b[1] !== a[1]) return b[1] - a[1];
-      return a[0].localeCompare(b[0], "es");
+      return a[0].localeCompare(b[0], numberLocale(locale));
     })
     .slice(0, 14)
     .map(([tag]) => tag);
@@ -91,14 +140,18 @@ export function CategoryFilter({ businesses, locale }: { businesses: Business[];
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
+  const c = copy[locale];
 
   const area = searchParams.get("area") || ALL_AREAS;
   const tag = searchParams.get("tag") || ALL_TAGS;
   const query = searchParams.get("q") || "";
   const sort = (searchParams.get("sort") || "ratio") as SortKey;
 
-  const areas = useMemo(() => Array.from(new Set(businesses.map(businessArea).filter(Boolean))).sort((a, b) => a.localeCompare(b, "es")), [businesses]);
-  const tags = useMemo(() => getPopularTags(businesses), [businesses]);
+  const areas = useMemo(
+    () => Array.from(new Set(businesses.map(businessArea).filter(Boolean))).sort((a, b) => a.localeCompare(b, numberLocale(locale))),
+    [businesses, locale]
+  );
+  const tags = useMemo(() => getPopularTags(businesses, locale), [businesses, locale]);
 
   function updateParam(key: string, value: string) {
     const params = new URLSearchParams(searchParams.toString());
@@ -135,9 +188,10 @@ export function CategoryFilter({ businesses, locale }: { businesses: Business[];
     <div>
       <div className="rounded-lg border border-[#E7DED0] bg-white/80 p-4 shadow-[0_18px_45px_rgba(27,46,75,0.035)]">
         <div className="mb-4 flex flex-wrap items-center gap-2">
-          <span className="mr-2 text-[11px] font-bold uppercase tracking-[0.12em] text-sage">Ordenado por</span>
-          {sortOptions.map(({ key, label, Icon }) => {
+          <span className="mr-2 text-[11px] font-bold uppercase tracking-[0.12em] text-sage">{c.orderedBy}</span>
+          {(Object.keys(c.sort) as SortKey[]).map((key) => {
             const active = sort === key;
+            const Icon = sortIcons[key];
             return (
               <button
                 key={key}
@@ -146,7 +200,7 @@ export function CategoryFilter({ businesses, locale }: { businesses: Business[];
                 className={`inline-flex min-h-10 items-center gap-2 rounded-md border px-3 text-[11px] font-bold uppercase tracking-[0.08em] transition ${active ? "border-ink bg-ink text-white" : "border-[#E7DED0] bg-white text-ink hover:border-ink"}`}
               >
                 <Icon size={15} stroke={1.8} />
-                {label}
+                {c.sort[key]}
               </button>
             );
           })}
@@ -162,7 +216,7 @@ export function CategoryFilter({ businesses, locale }: { businesses: Business[];
                 onClick={() => updateParam("area", item)}
                 className={`shrink-0 rounded-full border px-3 py-2 text-[11px] font-semibold ${active ? "border-verified bg-[#F0FDF4] text-verified" : "border-[#E7DED0] bg-white text-olive hover:border-ink hover:text-ink"}`}
               >
-                {item === ALL_AREAS ? "Todas las zonas" : item}
+                {item === ALL_AREAS ? c.allAreas : item}
               </button>
             );
           })}
@@ -170,22 +224,22 @@ export function CategoryFilter({ businesses, locale }: { businesses: Business[];
 
         <div className="grid gap-3 lg:grid-cols-[1.2fr_1fr_auto] lg:items-end">
           <label className="grid gap-1 text-[11px] font-bold uppercase tracking-[0.1em] text-sage">
-            Buscar
+            {c.search}
             <input
               value={query}
               onChange={(event) => updateParam("q", event.target.value)}
-              placeholder="Nombre, zona o estilo"
+              placeholder={c.searchPlaceholder}
               className="border-[#E7DED0] bg-[#FFFDF7] text-sm font-normal normal-case tracking-normal text-ink focus:border-ink focus:ring-ink"
             />
           </label>
           <label className="grid gap-1 text-[11px] font-bold uppercase tracking-[0.1em] text-sage">
-            Estilo
+            {c.style}
             <select value={tag} onChange={(event) => updateParam("tag", event.target.value)} className="border-[#E7DED0] bg-[#FFFDF7] text-sm font-normal normal-case tracking-normal text-ink focus:border-ink focus:ring-ink">
-              <option value={ALL_TAGS}>Todos los estilos</option>
+              <option value={ALL_TAGS}>{c.allStyles}</option>
               {tags.map((item) => <option key={item} value={item}>{item}</option>)}
             </select>
           </label>
-          <span className="text-[11px] font-bold uppercase tracking-[0.1em] text-sage lg:pb-3">{filtered.length.toLocaleString("es-ES")} resultados</span>
+          <span className="text-[11px] font-bold uppercase tracking-[0.1em] text-sage lg:pb-3">{filtered.length.toLocaleString(numberLocale(locale))} {c.results}</span>
         </div>
       </div>
 
@@ -194,11 +248,11 @@ export function CategoryFilter({ businesses, locale }: { businesses: Business[];
           <Link href={`/${locale}/${getCategorySlugFromBusiness(top.category)}/${top.slug}`} className="block">
             <BusinessImage business={top} category={top.category} variant="hero" className="min-h-[280px]">
               <div className="flex flex-wrap gap-2">
-                <span className="bg-coral px-3 py-1 text-[9px] font-bold uppercase tracking-[0.14em] text-white">Mejor resultado</span>
-                {isUntapped(top.untappedScore) && <span className="inline-flex items-center gap-1 bg-[#FEF3C7] px-3 py-1 text-[9px] font-bold uppercase tracking-[0.14em] text-[#92400E]"><IconDiamond size={12} /> Joya oculta</span>}
+                <span className="bg-coral px-3 py-1 text-[9px] font-bold uppercase tracking-[0.14em] text-white">{c.bestResult}</span>
+                {isUntapped(top.untappedScore) && <span className="inline-flex items-center gap-1 bg-[#FEF3C7] px-3 py-1 text-[9px] font-bold uppercase tracking-[0.14em] text-[#92400E]"><IconDiamond size={12} /> {c.hiddenGem}</span>}
               </div>
               <h2 className="mt-4 font-sans text-4xl font-black leading-tight text-white">{getBusinessPublicName(top)}</h2>
-              <div className="mt-3"><RatingBadge rating={top.rating} reviewsCount={top.reviewsCount} compact /></div>
+              <div className="mt-3"><RatingBadge rating={top.rating} reviewsCount={top.reviewsCount} locale={locale} compact /></div>
             </BusinessImage>
           </Link>
           <div className="flex flex-col p-8">
@@ -207,12 +261,12 @@ export function CategoryFilter({ businesses, locale }: { businesses: Business[];
             <div className="mt-5 flex flex-wrap gap-2">
               {getBusinessTags(top).slice(0, 4).map((item) => <span key={item} className="border border-[#E7DED0] bg-[#FFFDF7] px-3 py-1 text-[10px] text-olive">{item}</span>)}
             </div>
-            <Link href={`/${locale}/${getCategorySlugFromBusiness(top.category)}/${top.slug}`} className="mt-6 w-fit rounded-sm bg-ink px-5 py-3 text-[11px] font-bold uppercase tracking-[0.1em] text-white hover:bg-[#0E8F72]">Ver ficha</Link>
+            <Link href={`/${locale}/${getCategorySlugFromBusiness(top.category)}/${top.slug}`} className="mt-6 w-fit rounded-sm bg-ink px-5 py-3 text-[11px] font-bold uppercase tracking-[0.1em] text-white hover:bg-[#0E8F72]">{c.viewProfile}</Link>
           </div>
         </section>
       )}
 
-      <div className="mt-10 pb-3 text-[10px] font-bold uppercase tracking-[0.14em] text-sage">Todos los resultados</div>
+      <div className="mt-10 pb-3 text-[10px] font-bold uppercase tracking-[0.14em] text-sage">{c.allResults}</div>
       <div className="mt-3 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {filtered.map((business) => <BusinessCard key={business.id} business={business} locale={locale} />)}
       </div>

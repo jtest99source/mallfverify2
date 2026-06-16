@@ -169,27 +169,51 @@ function formatRating(rating: number) {
   return rating.toLocaleString("es-ES", { minimumFractionDigits: 1, maximumFractionDigits: 1 });
 }
 
+function formatLocalizedRating(rating: number, locale: Locale) {
+  return rating.toLocaleString(numberLocale(locale), { minimumFractionDigits: 1, maximumFractionDigits: 1 });
+}
+
 function renderStars(rating?: number) {
   if (typeof rating !== "number") return "Google";
   const filled = Math.max(0, Math.min(5, Math.round(rating)));
   return "\u2605".repeat(filled) + "\u2606".repeat(5 - filled);
 }
 
-function priceLabelForUnit(unit?: NonNullable<Business["priceEstimate"]>["unit"] | null) {
-  const labels: Record<string, string> = {
-    person: "",
-    night: "por noche",
-    day: "por d\u00eda",
-    half_day: "por media jornada",
-    charter: "por salida",
-    ticket: "entrada",
-    entry: "entrada"
+function priceLabelForUnit(unit: NonNullable<Business["priceEstimate"]>["unit"] | null | undefined, locale: Locale) {
+  const labels: Record<Locale, Record<string, string>> = {
+    es: {
+      person: "",
+      night: "por noche",
+      day: "por día",
+      half_day: "por media jornada",
+      charter: "por salida",
+      ticket: "entrada",
+      entry: "entrada"
+    },
+    en: {
+      person: "",
+      night: "per night",
+      day: "per day",
+      half_day: "per half day",
+      charter: "per charter",
+      ticket: "ticket",
+      entry: "entry"
+    },
+    de: {
+      person: "",
+      night: "pro Nacht",
+      day: "pro Tag",
+      half_day: "pro Halbtag",
+      charter: "pro Ausfahrt",
+      ticket: "Ticket",
+      entry: "Eintritt"
+    }
   };
 
-  return unit ? labels[unit] ?? null : null;
+  return unit ? labels[locale][unit] ?? null : null;
 }
 
-function formatPriceEstimate(priceEstimate?: Business["priceEstimate"] | null) {
+function formatPriceEstimate(priceEstimate: Business["priceEstimate"] | null | undefined, locale: Locale) {
   if (!priceEstimate) return null;
   const min = priceEstimate.amount_min ?? priceEstimate.range_min ?? priceEstimate.per_person_min ?? null;
   const max = priceEstimate.amount_max ?? priceEstimate.range_max ?? priceEstimate.per_person_max ?? null;
@@ -205,12 +229,14 @@ function formatPriceEstimate(priceEstimate?: Business["priceEstimate"] | null) {
   }
 
   if (!display) return null;
-  const label = priceEstimate.label?.trim() || priceLabelForUnit(priceEstimate.unit) || "";
+  const storedLabel = priceEstimate.label?.trim();
+  const unitLabel = priceLabelForUnit(priceEstimate.unit, locale);
+  const label = locale === "es" ? storedLabel || unitLabel || "" : unitLabel || storedLabel || "";
   return { display, label };
 }
 
-function getBusinessPriceValue(business: Business) {
-  return formatPriceEstimate(business.priceEstimate);
+function getBusinessPriceValue(business: Business, locale: Locale) {
+  return formatPriceEstimate(business.priceEstimate, locale);
 }
 
 function getDirectionsUrl(business: Business) {
@@ -257,7 +283,7 @@ function QuickScore({ business, locale }: { business: Business; locale: Locale }
 
   return (
     <div className="rating-summary flex items-center gap-3 rounded-lg border border-[#FFD166]/60 bg-[linear-gradient(135deg,#17324E_0%,#0E5F66_58%,#0E8F72_100%)] p-4 shadow-[0_14px_28px_rgba(14,95,102,0.16)]">
-      {typeof business.rating === "number" && <div className="text-4xl font-black leading-none text-[#FFD166]">{formatRating(business.rating)}</div>}
+      {typeof business.rating === "number" && <div className="text-4xl font-black leading-none text-[#FFD166]">{formatLocalizedRating(business.rating, locale)}</div>}
       <div>
         <div className="text-xs text-[#FFD166]">{renderStars(business.rating)}</div>
         <div className="mt-1 text-[11px] text-white/75">
@@ -285,13 +311,14 @@ export async function generateBusinessMetadata(category: CategorySlug, locale: s
   if (!business) return {};
   const publicName = getBusinessPublicName(business);
   const location = business.city || business.area || business.municipality || "Mallorca";
+  const copy = t(safeLocale);
   const ratingText =
     typeof business.rating === "number" && typeof business.reviewsCount === "number"
-      ? ` Valoración ${formatRating(business.rating)}/5 con ${business.reviewsCount.toLocaleString("es-ES")} reseñas en Google.`
+      ? ` ${formatLocalizedRating(business.rating, safeLocale)}/5, ${business.reviewsCount.toLocaleString(numberLocale(safeLocale))} ${copy.business.reviewsOnGoogle}.`
       : "";
   return generateSeoMetadata({
     title: business.seo.title,
-    description: `${publicName} - ${localizedCategoryLabel(business.category, safeLocale)} en ${location}, Mallorca.${ratingText} Ficha en Mallorca Verified.`.slice(0, 180),
+    description: `${publicName} - ${localizedCategoryLabel(business.category, safeLocale)}, ${location}, Mallorca.${ratingText} Mallorca Verified.`.slice(0, 180),
     path: `/${safeLocale}/${category}/${business.slug}`,
     locale: safeLocale
   });
@@ -395,7 +422,7 @@ export async function CategoryPage({ category, locale }: { category: CategorySlu
             inLanguage: locale
           }),
           createFAQSchema(faqs),
-          createBreadcrumbSchema([{ name: "Inicio", url: `${siteUrl}/${locale}` }, { name: config.label, url: `${siteUrl}/${locale}/${category}` }])
+          createBreadcrumbSchema([{ name: copy.category.breadcrumbHome, url: `${siteUrl}/${locale}` }, { name: config.label, url: `${siteUrl}/${locale}/${category}` }])
         ]}
       />
     </main>
@@ -435,11 +462,11 @@ export async function BusinessDetailPage({ category, locale, slug }: { category:
   const faqs = getCombinedFaqs(business, publicName, location);
   const galleryImages = getBusinessGalleryImages(business);
   const heroImage = galleryImages[0] || getBusinessImageUrl(business);
-  const priceValue = getBusinessPriceValue(business);
+  const priceValue = getBusinessPriceValue(business, locale);
   const publicWebsite = business.website && !isSocialWebsiteType(business.websiteType) ? business.website : null;
   const breadcrumbs = [
-    { name: "Inicio", url: `${siteUrl}/${locale}` },
-    { name: categoryConfigs[category].label, url: `${siteUrl}/${locale}/${category}` },
+    { name: copy.category.breadcrumbHome, url: `${siteUrl}/${locale}` },
+    { name: getCategoryCopy(category, locale).label, url: `${siteUrl}/${locale}/${category}` },
     { name: publicName, url: `${siteUrl}/${locale}/${category}/${business.slug}` }
   ];
 
@@ -460,9 +487,9 @@ export async function BusinessDetailPage({ category, locale, slug }: { category:
               <div className="flex w-fit shrink-0 items-stretch gap-2">
               {(typeof business.rating === "number" || typeof business.reviewsCount === "number") && (
                 <div className="flex h-[68px] min-w-[104px] shrink-0 flex-col items-center justify-center rounded-md border border-[#FFD166]/70 bg-[#10253D]/95 px-4 py-2.5 text-center shadow-[0_16px_40px_rgba(0,0,0,0.34)]">
-                  {typeof business.rating === "number" && <div className="text-[22px] font-black leading-none text-[#FFD166]">{formatRating(business.rating)}</div>}
+                  {typeof business.rating === "number" && <div className="text-[22px] font-black leading-none text-[#FFD166]">{formatLocalizedRating(business.rating, locale)}</div>}
                   <div className="mt-1 text-[10px] tracking-[-0.08em] text-[#FFD166]">{renderStars(business.rating)}</div>
-                  {typeof business.reviewsCount === "number" && <div className="mt-1 text-[9px] text-white/75">{business.reviewsCount.toLocaleString("es-ES")} reseñas</div>}
+                  {typeof business.reviewsCount === "number" && <div className="mt-1 text-[9px] text-white/75">{business.reviewsCount.toLocaleString(numberLocale(locale))} {copy.business.reviewsOnGoogle.replace(" on Google", "").replace(" auf Google", "").replace(" en Google", "")}</div>}
                 </div>
               )}
               {priceValue && (
@@ -492,7 +519,7 @@ export async function BusinessDetailPage({ category, locale, slug }: { category:
               <QuickScore business={business} locale={locale} />
               {priceValue && (
                 <div className="mt-3 flex items-center justify-between rounded-md border border-borderline bg-paper px-4 py-3">
-                  <span className="text-[9px] font-bold uppercase tracking-[0.08em] text-sage">{priceValue.label ? `Precio / ${priceValue.label}` : "Precio"}</span>
+                  <span className="text-[9px] font-bold uppercase tracking-[0.08em] text-sage">{priceValue.label ? `${copy.business.pricePer} ${priceValue.label}` : copy.business.price}</span>
                   <span className="text-[19px] font-black leading-none text-ink">{priceValue.display}</span>
                 </div>
               )}

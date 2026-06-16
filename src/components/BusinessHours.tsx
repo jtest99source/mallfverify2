@@ -235,11 +235,11 @@ export function BusinessHours({ openingHours, locale = "es" }: { openingHours?: 
   }, [openingHours, locale]);
 
   if (!data) return null;
-  const copy = COPY[data.locale];
+  const c = COPY[data.locale];
 
   return (
     <section className="border-b border-linen py-6">
-      <p className="mb-3 text-[11px] font-extrabold uppercase tracking-[0.12em] text-ink">{copy.title}</p>
+      <p className="mb-3 text-[11px] font-extrabold uppercase tracking-[0.12em] text-ink">{c.title}</p>
       {data.openState && (
         <div className={`open-now ${data.openState.open ? "open" : "closed"}`}>
           <span className="dot" aria-hidden="true" />

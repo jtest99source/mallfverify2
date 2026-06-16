@@ -134,7 +134,7 @@ function RankingItem({ business, index, locale }: { business: Business; index: n
           <span className="truncate">{businessLocation(business)}</span>
         </span>
       </span>
-      <RatingBadge rating={business.rating} reviewsCount={business.reviewsCount} compact />
+      <RatingBadge rating={business.rating} reviewsCount={business.reviewsCount} locale={locale} compact />
     </Link>
   );
 }
@@ -142,6 +142,8 @@ function RankingItem({ business, index, locale }: { business: Business; index: n
 function CategoryRankingCard({ category, businesses, locale }: { category: CategorySlug; businesses: Business[]; locale: Locale }) {
   const Icon = categoryIcons[category] ?? IconChartBar;
   const label = getCategoryCopy(category, locale).label;
+  const rankingLabel = locale === "de" ? "Rangliste" : "Ranking";
+  const ariaLabel = locale === "es" ? `Ver ranking de ${label}` : locale === "de" ? `Rangliste für ${label} ansehen` : `View ${label} ranking`;
 
   return (
     <section className="flex h-full flex-col rounded-lg border-t-2 border-t-[#0E8F72] bg-white p-5 shadow-[0_16px_40px_rgba(27,46,75,0.08)]">
@@ -152,8 +154,8 @@ function CategoryRankingCard({ category, businesses, locale }: { category: Categ
           </div>
           <h2 className="text-lg font-black leading-tight text-ink">{label}</h2>
         </div>
-        <Link href={`/${locale}/rankings?category=${category}`} className="shrink-0 text-[10px] font-bold uppercase tracking-[0.1em] text-sage hover:text-[#0E8F72]" aria-label={`Ver ranking de ${label}`}>
-          Ranking →
+        <Link href={`/${locale}/rankings?category=${category}`} className="shrink-0 text-[10px] font-bold uppercase tracking-[0.1em] text-sage hover:text-[#0E8F72]" aria-label={ariaLabel}>
+          {rankingLabel} →
         </Link>
       </div>
       <div className="divide-y divide-borderline">
