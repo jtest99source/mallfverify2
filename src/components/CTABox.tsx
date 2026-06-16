@@ -3,19 +3,19 @@ import type { Locale } from "@/lib/i18n";
 
 const copy = {
   es: {
-    title: "Tu negocio aparece en Mallorca Verified?",
-    text: "Solicita una propuesta para enriquecer tu ficha con fotos reales, servicios, carta, horarios y descripcion editorial. Una ficha bien trabajada es mas facil de encontrar en Google y de citar en respuestas de ChatGPT, Perplexity o Google AI cuando alguien pregunta por opciones en Mallorca.",
-    note: "Las posiciones en rankings no cambian. Solo enriquecemos la informacion disponible."
+    title: "¿Tu negocio aparece en Mallorca Verified?",
+    text: "Las fichas completas y bien trabajadas aparecen antes en Google y son las que ChatGPT, Perplexity y Google AI citan cuando alguien busca opciones en Mallorca. Escríbenos y lo mejoramos juntos.",
+    note: "Las posiciones en rankings no cambian. Solo enriquecemos la información disponible."
   },
   en: {
     title: "Is your business listed on Mallorca Verified?",
-    text: "Request a proposal to enrich your profile with real photos, services, menus, opening hours and editorial context. A well structured profile is easier to find on Google and easier to cite in ChatGPT, Perplexity or Google AI answers about Mallorca.",
+    text: "Complete, well-structured profiles rank higher on Google and are the ones ChatGPT, Perplexity and Google AI cite when someone searches for options in Mallorca. Get in touch and we'll work on it together.",
     note: "Ranking positions do not change. We only improve the information available."
   },
   de: {
     title: "Ist dein Betrieb auf Mallorca Verified gelistet?",
-    text: "Fordere ein Angebot an, um dein Profil mit echten Fotos, Services, Speisekarten, Oeffnungszeiten und redaktionellem Kontext zu ergaenzen. Ein gut strukturiertes Profil ist bei Google leichter auffindbar und fuer ChatGPT, Perplexity oder Google AI leichter zitierbar.",
-    note: "Ranking-Positionen aendern sich nicht. Wir verbessern nur die verfuegbaren Informationen."
+    text: "Vollständige, gut strukturierte Profile erscheinen weiter oben bei Google und werden von ChatGPT, Perplexity und Google AI zitiert, wenn jemand nach Optionen auf Mallorca sucht. Schreib uns und wir verbessern es gemeinsam.",
+    note: "Ranking-Positionen ändern sich nicht. Wir verbessern nur die vorhandenen Informationen."
   }
 } as const;
 

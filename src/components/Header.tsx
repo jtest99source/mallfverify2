@@ -1,11 +1,11 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useRef, useState } from "react";
 import {
   IconBook2,
   IconChevronDown,
-  IconCircleCheckFilled,
   IconInfoCircle,
   IconMenu2,
   IconSearch,
@@ -20,12 +20,15 @@ import { SearchBox } from "@/components/LiveSearch";
 
 function NavLogo({ locale }: { locale: Locale }) {
   return (
-    <Link href={`/${locale}`} className="inline-flex items-center gap-2 text-[14px] font-black uppercase leading-none tracking-[0.08em] text-ink" aria-label={siteConfig.name}>
-      <IconCircleCheckFilled size={22} className="shrink-0 text-verified" />
-      <span>
-        <span className="block">Mallorca</span>
-        <span className="block">Verified</span>
-      </span>
+    <Link href={`/${locale}`} className="inline-flex shrink-0 items-center" aria-label={siteConfig.name}>
+      <Image
+        src="/brand/mallorca-verified-wordmark-test.png"
+        alt={siteConfig.name}
+        width={1909}
+        height={692}
+        priority
+        className="h-10 w-auto max-w-[132px] object-contain"
+      />
     </Link>
   );
 }

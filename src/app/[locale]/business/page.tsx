@@ -2,93 +2,97 @@ import { CTABox } from "@/components/CTABox";
 import { generateSeoMetadata } from "@/lib/seo";
 import { isLocale, type Locale } from "@/lib/i18n";
 import { getBusinessAreaCategoryPages, getPublicBusinessStats } from "@/lib/repository";
+import { getCategoryCopy } from "@/lib/i18n-copy";
 
 const pageCopy = {
   es: {
     metaTitle: "Para negocios | Mallorca Verified",
-    metaDescription: "Solicita una propuesta para revisar y enriquecer tu ficha en Mallorca Verified.",
+    metaDescription: "Mejora tu visibilidad en Google, ChatGPT y Google AI. Enriquece tu ficha en Mallorca Verified con fotos reales, servicios y contenido editorial.",
     eyebrow: "Para negocios",
-    title: "Mejora la ficha publica de tu negocio",
-    intro: "Mallorca Verified compara negocios con datos y resenas. Si representas un negocio, puedes solicitar una propuesta para completar tu ficha con informacion fiable, fotos y detalles utiles.",
-    contactEyebrow: "Contacto comercial",
-    contactText: "Escribenos para revisar una ficha, aportar material o plantear una colaboracion editorial.",
-    contactCta: "Escribenos ->",
-    subject: "Quiero revisar mi ficha en Mallorca Verified",
+    title: "Sé el primero que aparece cuando alguien busca",
+    intro: "Cada vez más viajeros usan ChatGPT, Perplexity o Google AI para decidir dónde ir en Mallorca. Los negocios con fichas completas son los que estas herramientas citan primero. Trabajamos tu ficha para que estés ahí cuando alguien está decidiendo.",
+    contactEyebrow: "Contacto directo",
+    contactText: "Cuéntanos tu negocio y te explicamos qué podemos mejorar para aumentar tu visibilidad en Google y en los sistemas de IA.",
+    contactCta: "Escríbenos →",
+    subject: "Quiero mejorar mi ficha en Mallorca Verified",
     stats: {
       published: "Fichas publicadas",
-      categories: "Categorias preparadas",
-      reviews: "Resenas analizadas",
-      pages: "Paginas locales"
+      categories: "Categorías",
+      reviews: "Reseñas analizadas",
+      pages: "Páginas locales"
     },
-    workEyebrow: "Que se puede trabajar",
-    workTitle: "Una ficha mas completa, sin tocar los rankings",
-    workIntro: "El objetivo es que la informacion sea clara, verificable y util para quien esta decidiendo. Las valoraciones, resenas y posiciones siguen dependiendo de los datos.",
+    workEyebrow: "Qué se puede mejorar",
+    workTitle: "Más visibilidad, sin cambiar los rankings",
+    workIntro: "Una ficha completa aparece antes en Google y es más fácil de citar para la IA. Trabajamos el contenido para que el negocio esté donde la gente ya está buscando.",
     products: [
-      ["Ficha enriquecida", "Mejores fotos, enlaces correctos, servicios, carta, horarios, reservas y detalles practicos para que la ficha sea mas util."],
-      ["Revision editorial", "Ordenamos la informacion visible y corregimos datos publicos para que el perfil se entienda rapido y no parezca incompleto."],
-      ["Contexto por zona", "Conectamos la ficha con paginas por zona y categoria cuando tiene sentido para el usuario que esta comparando opciones."],
-      ["Colaboracion editorial", "Valoramos cada caso antes de tocar nada: la colaboracion mejora la ficha, no compra valoraciones ni posiciones en rankings."]
+      ["Ficha enriquecida", "Fotos reales, servicios, carta, horarios, reservas y descripción editorial. Todo lo que necesita una ficha para aparecer y convencer."],
+      ["Revisión editorial", "Ordenamos y corregimos la información pública para que el perfil sea claro, completo y transmita confianza."],
+      ["Contexto por zona", "Conectamos la ficha con las páginas por zona y categoría para que aparezca en más búsquedas locales."],
+      ["Posicionamiento en IA", "Estructuramos la información para que ChatGPT, Perplexity y Google AI citen el negocio cuando alguien pregunta por opciones en Mallorca."]
     ],
     localContext: "Contexto local",
-    areaTitle: "Paginas por zona y categoria",
+    areaTitle: "Páginas donde tu negocio puede aparecer",
+    areaNote: "Cada una recibe búsquedas orgánicas de viajeros. Estar bien posicionado aquí multiplica tu visibilidad.",
     profiles: "fichas"
   },
   en: {
     metaTitle: "For businesses | Mallorca Verified",
-    metaDescription: "Request a proposal to review and enrich your business profile on Mallorca Verified.",
+    metaDescription: "Boost your visibility on Google, ChatGPT and Google AI. Enrich your Mallorca Verified profile with real photos, services and editorial content.",
     eyebrow: "For businesses",
-    title: "Improve your public business profile",
-    intro: "Mallorca Verified compares businesses with data and reviews. If you represent a business, you can request a proposal to complete your profile with reliable information, photos and useful details.",
-    contactEyebrow: "Commercial contact",
-    contactText: "Contact us to review a profile, send material or discuss an editorial collaboration.",
-    contactCta: "Contact us ->",
-    subject: "I want to review my Mallorca Verified profile",
+    title: "Be the first one cited when someone searches",
+    intro: "More and more travellers use ChatGPT, Perplexity or Google AI to decide where to go in Mallorca. Businesses with complete profiles are the ones these tools cite first. We work on your profile so you're there when someone is making a decision.",
+    contactEyebrow: "Get in touch",
+    contactText: "Tell us about your business and we'll explain what we can improve to boost your visibility on Google and AI systems.",
+    contactCta: "Get in touch →",
+    subject: "I want to improve my Mallorca Verified profile",
     stats: {
       published: "Published profiles",
-      categories: "Prepared categories",
-      reviews: "Reviews analyzed",
+      categories: "Categories",
+      reviews: "Reviews analysed",
       pages: "Local pages"
     },
     workEyebrow: "What can be improved",
-    workTitle: "A richer profile, without changing rankings",
-    workIntro: "The goal is clear, verifiable and useful information for people who are deciding. Ratings, reviews and positions still depend on data.",
+    workTitle: "More visibility, without changing rankings",
+    workIntro: "A complete profile ranks higher on Google and is easier for AI to cite. We work on the content so your business is where people are already searching.",
     products: [
-      ["Enhanced profile", "Better photos, correct links, services, menus, opening hours, bookings and practical details that make the profile more useful."],
-      ["Editorial review", "We organize visible information and correct public details so the profile is easy to understand and does not feel incomplete."],
-      ["Area context", "We connect the profile with area and category pages when it helps users compare options."],
-      ["Editorial collaboration", "We review each case first: collaboration improves the profile, it does not buy ratings or ranking positions."]
+      ["Enhanced profile", "Real photos, services, menus, opening hours, bookings and editorial description. Everything a profile needs to show up and convert."],
+      ["Editorial review", "We organise and correct public information so the profile is clear, complete and trustworthy."],
+      ["Area context", "We connect the profile with area and category pages to appear in more local searches."],
+      ["AI positioning", "We structure the information so ChatGPT, Perplexity and Google AI cite the business when someone asks for options in Mallorca."]
     ],
     localContext: "Local context",
-    areaTitle: "Pages by area and category",
+    areaTitle: "Pages where your business can appear",
+    areaNote: "Each receives organic searches from travellers. Appearing here multiplies your visibility.",
     profiles: "profiles"
   },
   de: {
-    metaTitle: "Fuer Betriebe | Mallorca Verified",
-    metaDescription: "Fordere ein Angebot an, um dein Profil auf Mallorca Verified zu pruefen und zu ergaenzen.",
-    eyebrow: "Fuer Betriebe",
-    title: "Verbessere das oeffentliche Profil deines Betriebs",
-    intro: "Mallorca Verified vergleicht Betriebe mit Daten und Bewertungen. Wenn du einen Betrieb vertrittst, kannst du ein Angebot anfordern, um dein Profil mit verlaesslichen Informationen, Fotos und nuetzlichen Details zu ergaenzen.",
-    contactEyebrow: "Gewerblicher Kontakt",
-    contactText: "Schreib uns, um ein Profil zu pruefen, Material einzureichen oder eine redaktionelle Zusammenarbeit zu besprechen.",
-    contactCta: "Kontakt aufnehmen ->",
-    subject: "Ich moechte mein Mallorca Verified Profil pruefen",
+    metaTitle: "Für Betriebe | Mallorca Verified",
+    metaDescription: "Steigere deine Sichtbarkeit auf Google, ChatGPT und Google AI. Vervollständige dein Profil auf Mallorca Verified mit echten Fotos, Leistungen und redaktionellen Inhalten.",
+    eyebrow: "Für Betriebe",
+    title: "Sei der Erste, der zitiert wird, wenn jemand sucht",
+    intro: "Immer mehr Reisende nutzen ChatGPT, Perplexity oder Google AI, um zu entscheiden, wohin sie auf Mallorca gehen. Betriebe mit vollständigen Profilen werden von diesen Tools zuerst genannt. Wir arbeiten an deinem Profil, damit du präsent bist, wenn jemand eine Entscheidung trifft.",
+    contactEyebrow: "Kontakt",
+    contactText: "Erzähl uns von deinem Betrieb und wir erklären dir, was wir verbessern können, um deine Sichtbarkeit bei Google und in KI-Systemen zu steigern.",
+    contactCta: "Schreib uns →",
+    subject: "Ich möchte mein Mallorca Verified Profil verbessern",
     stats: {
-      published: "Veroeffentlichte Profile",
-      categories: "Vorbereitete Kategorien",
+      published: "Veröffentlichte Profile",
+      categories: "Kategorien",
       reviews: "Analysierte Bewertungen",
       pages: "Lokale Seiten"
     },
     workEyebrow: "Was verbessert werden kann",
-    workTitle: "Ein vollstaendigeres Profil, ohne Rankings zu veraendern",
-    workIntro: "Ziel sind klare, pruefbare und nuetzliche Informationen fuer Menschen, die gerade vergleichen. Bewertungen, Rezensionen und Positionen haengen weiterhin von den Daten ab.",
+    workTitle: "Mehr Sichtbarkeit, ohne Rankings zu ändern",
+    workIntro: "Ein vollständiges Profil erscheint weiter oben bei Google und ist für KI leichter zitierbar. Wir arbeiten am Inhalt, damit dein Betrieb dort ist, wo die Leute bereits suchen.",
     products: [
-      ["Erweitertes Profil", "Bessere Fotos, korrekte Links, Services, Speisekarten, Oeffnungszeiten, Buchungen und praktische Details."],
-      ["Redaktionelle Pruefung", "Wir ordnen sichtbare Informationen und korrigieren oeffentliche Daten, damit das Profil schnell verstaendlich ist."],
-      ["Kontext nach Gegend", "Wir verbinden das Profil mit Seiten nach Gegend und Kategorie, wenn es Nutzern beim Vergleichen hilft."],
-      ["Redaktionelle Zusammenarbeit", "Wir pruefen jeden Fall zuerst: Zusammenarbeit verbessert das Profil, sie kauft keine Bewertungen oder Ranking-Positionen."]
+      ["Erweitertes Profil", "Echte Fotos, Leistungen, Speisekarten, Öffnungszeiten, Buchungen und redaktionelle Beschreibung. Alles, was ein Profil braucht, um zu erscheinen und zu überzeugen."],
+      ["Redaktionelle Prüfung", "Wir ordnen und korrigieren öffentliche Informationen, damit das Profil klar, vollständig und vertrauenswürdig wirkt."],
+      ["Kontext nach Gegend", "Wir verbinden das Profil mit Seiten nach Gegend und Kategorie, um in mehr lokalen Suchen zu erscheinen."],
+      ["KI-Positionierung", "Wir strukturieren die Informationen so, dass ChatGPT, Perplexity und Google AI den Betrieb nennen, wenn jemand nach Optionen auf Mallorca fragt."]
     ],
     localContext: "Lokaler Kontext",
-    areaTitle: "Seiten nach Gegend und Kategorie",
+    areaTitle: "Seiten, auf denen dein Betrieb erscheinen kann",
+    areaNote: "Jede erhält organische Suchen von Reisenden. Gut positioniert zu sein multipliziert deine Sichtbarkeit.",
     profiles: "Profile"
   }
 } as const;
@@ -178,13 +182,15 @@ export default async function BusinessPage({ params }: { params: Promise<{ local
             <div>
               <p className="text-[11px] font-black uppercase tracking-[0.16em] text-[#0E8F72]">{copy.localContext}</p>
               <h2 className="mt-2 text-3xl font-black text-[#10253D]">{copy.areaTitle}</h2>
+              <p className="mt-1.5 text-sm text-[#5F6F61]">{copy.areaNote}</p>
             </div>
             <a href={`mailto:hola@mallorcaverified.com?subject=${encodeURIComponent(copy.subject)}`} className="rounded-md bg-[#10253D] px-4 py-3 text-[11px] font-black uppercase tracking-[0.1em] text-white transition-all duration-150 hover:bg-[#0E8F72]">{copy.contactCta}</a>
           </div>
           <div className="mt-5 grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
             {areaPages.slice(0, 9).map((page) => (
-              <a key={`${page.areaSlug}-${page.category}`} href={`/${safeLocale}/areas/${page.areaSlug}/${page.category}`} className="rounded-md border border-[#E7DED0] bg-[#FFFDF7] p-4 text-sm font-bold text-[#10253D] transition-all duration-150 hover:border-[#0E8F72] hover:bg-white">
-                {page.count} {copy.profiles}: {page.area}
+              <a key={`${page.areaSlug}-${page.category}`} href={`/${safeLocale}/areas/${page.areaSlug}/${page.category}`} className="rounded-md border border-[#E7DED0] bg-[#FFFDF7] p-4 transition-all duration-150 hover:border-[#0E8F72] hover:bg-white">
+                <p className="text-sm font-bold text-[#10253D]">{getCategoryCopy(page.category, safeLocale).label} · {page.area}</p>
+                <p className="mt-1 text-xs font-semibold text-[#5F6F61]">{page.count} {copy.profiles}</p>
               </a>
             ))}
           </div>
