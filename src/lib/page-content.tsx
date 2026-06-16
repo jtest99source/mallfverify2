@@ -277,6 +277,64 @@ function AddressBar({ business, location, locale }: { business: Business; locati
   );
 }
 
+function MobileBusinessActions({
+  business,
+  publicWebsite,
+  locale
+}: {
+  business: Business;
+  publicWebsite: string | null;
+  locale: Locale;
+}) {
+  const copy = t(locale);
+  const actions = [
+    business.phone
+      ? {
+          href: `tel:${business.phone.replace(/\s+/g, "")}`,
+          label: business.phone,
+          Icon: IconPhone
+        }
+      : null,
+    publicWebsite
+      ? {
+          href: publicWebsite,
+          label: business.websiteType === "official_website" ? copy.business.officialWebsite : getWebsiteLabel(business.websiteType),
+          Icon: IconExternalLink,
+          external: true
+        }
+      : null,
+    business.googleMapsUrl
+      ? {
+          href: business.googleMapsUrl,
+          label: copy.business.googleMaps,
+          Icon: IconMapPin,
+          external: true
+        }
+      : null
+  ].filter((action): action is { href: string; label: string; Icon: typeof IconPhone; external?: boolean } => Boolean(action));
+
+  if (!actions.length) return null;
+
+  return (
+    <section className="bg-paper px-4 pt-3 lg:hidden">
+      <div className="mx-auto flex max-w-[1200px] gap-2 overflow-x-auto pb-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+        {actions.map(({ href, label, Icon, external }) => (
+          <a
+            key={`${href}-${label}`}
+            href={href}
+            target={external ? "_blank" : undefined}
+            rel={external ? "noreferrer" : undefined}
+            className="inline-flex min-h-10 shrink-0 items-center gap-2 rounded-full border border-borderline bg-white px-3 text-[11px] font-bold text-ink shadow-sm"
+          >
+            <Icon aria-hidden="true" size={14} stroke={2} className="text-coral" />
+            <span>{label}</span>
+          </a>
+        ))}
+      </div>
+    </section>
+  );
+}
+
 function QuickScore({ business, locale }: { business: Business; locale: Locale }) {
   const copy = t(locale);
   if (typeof business.rating !== "number" && typeof business.reviewsCount !== "number") return null;
@@ -448,6 +506,22 @@ function BusinessProfileReviewCta({ businessName, locale }: { businessName: stri
   );
 }
 
+function MobileBusinessClaimCta({ businessName, locale }: { businessName: string; locale: Locale }) {
+  const copy = t(locale);
+  return (
+    <section className="mt-6 rounded-lg border border-[#F1D3A2] bg-[#FFF8EC] p-4 lg:hidden">
+      <p className="text-[10px] font-bold uppercase tracking-[0.12em] text-[#B86B1D]">{copy.business.profileCtaEyebrow}</p>
+      <h2 className="mt-2 text-xl font-black leading-tight text-ink">{copy.business.profileCtaTitle}</h2>
+      <p className="mt-2 text-sm leading-6 text-olive">
+        {copy.business.profileCtaText.replace("la ficha", `la ficha de ${businessName}`)}
+      </p>
+      <Link href={`/${locale}/business`} className="mt-4 inline-flex min-h-10 items-center justify-center rounded-sm bg-[#1B2E4B] px-4 text-[11px] font-bold uppercase tracking-[0.1em] text-white">
+        {copy.business.profileCtaButton}
+      </Link>
+    </section>
+  );
+}
+
 export async function BusinessDetailPage({ category, locale, slug }: { category: CategorySlug; locale: Locale; slug: string }) {
   const alias = getBusinessSlugAlias(category, slug);
   if (alias) redirect(`/${locale}/${category}/${alias}`);
@@ -506,11 +580,13 @@ export async function BusinessDetailPage({ category, locale, slug }: { category:
       </section>
 
       <AddressBar business={business} location={location} locale={locale} />
+      <MobileBusinessActions business={business} publicWebsite={publicWebsite} locale={locale} />
 
       <div className="mx-auto grid max-w-[1200px] items-start gap-6 px-4 py-6 sm:px-6 sm:py-8 lg:grid-cols-[minmax(0,1fr)_300px] lg:gap-8 lg:px-8">
         <article className="min-w-0">
           <BusinessReviewPanel business={business} locale={locale} />
           <BusinessProfileReviewCta businessName={publicName} locale={locale} />
+          <MobileBusinessClaimCta businessName={publicName} locale={locale} />
         </article>
 
         <aside className="hidden rounded-md border border-borderline bg-white p-5 shadow-[0_18px_45px_rgba(28,28,24,0.05)] lg:block">
