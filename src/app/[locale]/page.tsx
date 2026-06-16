@@ -125,7 +125,7 @@ function formatMillionMetric(value: number, locale: Locale) {
 
 function RankingItem({ business, index, locale }: { business: Business; index: number; locale: Locale }) {
   return (
-    <Link href={businessHref(locale, business)} className="grid min-w-0 grid-cols-[1.6rem_minmax(0,1fr)] gap-x-2 gap-y-2 rounded-md px-2 py-3 hover:bg-[#FFF8EC] sm:flex sm:items-center sm:gap-3">
+    <Link href={businessHref(locale, business)} className="grid min-w-0 grid-cols-[1.6rem_minmax(0,1fr)] gap-x-2 gap-y-2 rounded-md px-2 py-3 transition-colors duration-150 hover:bg-[#FFF8EC] sm:flex sm:items-center sm:gap-3">
       <span className="w-5 shrink-0 text-center text-xs font-black text-borderline">#{index + 1}</span>
       <span className="min-w-0 flex-1">
         <span className="block truncate text-sm font-semibold text-ink">{getBusinessPublicName(business)}</span>
@@ -148,7 +148,7 @@ function CategoryRankingCard({ category, businesses, locale }: { category: Categ
   const ariaLabel = locale === "es" ? `Ver ranking de ${label}` : locale === "de" ? `Rangliste für ${label} ansehen` : `View ${label} ranking`;
 
   return (
-    <section className="flex h-full min-w-0 flex-col rounded-lg border-t-2 border-t-[#0E8F72] bg-white p-4 shadow-[0_16px_40px_rgba(27,46,75,0.08)] sm:p-5">
+    <section className="group flex h-full min-w-0 flex-col rounded-lg border border-[#E7DED0] border-t-2 border-t-[#0E8F72] bg-white p-4 shadow-[0_18px_45px_rgba(27,46,75,0.08)] transition-all duration-200 hover:-translate-y-1 hover:shadow-[0_26px_70px_rgba(27,46,75,0.14)] sm:p-5">
       <div className="mb-3 flex items-center justify-between gap-4">
         <div className="flex items-center gap-3">
           <div className="inline-flex h-8 w-8 items-center justify-center rounded-md bg-[#F0FDF4] text-[#0E8F72]">
@@ -275,10 +275,15 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
             {copy.home.bestThisWeekIntro}
           </p>
         </div>
-        <div className="grid min-w-0 items-stretch gap-3 md:grid-cols-2 md:gap-5 xl:grid-cols-3">
+        <div className="relative -mx-4 px-4 sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8">
+          <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-12 bg-gradient-to-l from-[#FFFDF7] to-transparent sm:w-20" />
+          <div className="flex snap-x gap-4 overflow-x-auto pb-5 pr-10 [scrollbar-width:none] sm:gap-5 [&::-webkit-scrollbar]:hidden">
           {categoryRankings.map((ranking) => (
-            <CategoryRankingCard key={ranking.category} category={ranking.category} businesses={ranking.businesses} locale={safeLocale} />
+            <div key={ranking.category} className="w-[88vw] max-w-[420px] shrink-0 snap-start sm:w-[420px] lg:w-[440px]">
+              <CategoryRankingCard category={ranking.category} businesses={ranking.businesses} locale={safeLocale} />
+            </div>
           ))}
+          </div>
         </div>
       </section>
 
