@@ -69,6 +69,7 @@ export function Header({ locale }: { locale: Locale }) {
   }
 
   return (
+    <>
     <header className="sticky top-0 z-40 border-b border-[#E7DED0] bg-[#FFFDF7]/95 text-ink backdrop-blur">
       <div className="mx-auto flex max-w-7xl items-center gap-3 px-4 py-2 sm:px-6 lg:px-8">
         <NavLogo locale={locale} />
@@ -156,37 +157,71 @@ export function Header({ locale }: { locale: Locale }) {
         </button>
       </div>
 
-      {mobileOpen && (
-        <div className="border-t border-[#E7DED0] bg-[#FFFDF7] px-4 py-4 shadow-xl lg:hidden">
-          <div className="grid gap-4">
-            {Object.entries(categoryGroups).map(([key, group]) => (
-              <div key={key} className="rounded-lg border border-[#E7DED0] bg-white p-3">
-                <p className="text-[10px] font-black uppercase tracking-[0.12em] text-[#0E8F72]">{group.label}</p>
-                <div className="mt-2 grid grid-cols-2 gap-1">
-                  {group.categories.map((slug) => (
-                    <Link key={slug} href={categoryHref(locale, slug)} onClick={() => setMobileOpen(false)} className="rounded-md py-2 text-sm font-semibold text-ink">
-                      {getCategoryCopy(slug, locale).label}
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            ))}
+    </header>
+
+    {mobileOpen && (
+      <>
+        <div
+          className="fixed inset-0 z-50 bg-black/50 lg:hidden"
+          aria-hidden="true"
+          onClick={() => setMobileOpen(false)}
+        />
+        <div className="fixed inset-y-0 right-0 z-50 flex w-[min(320px,100vw)] flex-col overflow-y-auto bg-[#FFFDF7] shadow-[0_0_50px_rgba(27,46,75,0.25)] lg:hidden">
+          <div className="flex items-center justify-between border-b border-[#E7DED0] px-4 py-3">
+            <span className="text-[10px] font-black uppercase tracking-[0.18em] text-[#0E8F72]">{copy.nav.explore}</span>
+            <button
+              type="button"
+              onClick={() => setMobileOpen(false)}
+              className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-[#E7DED0] bg-white text-ink"
+              aria-label="Cerrar menú"
+            >
+              <IconX size={18} stroke={2} />
+            </button>
           </div>
-          <div className="mt-4 grid gap-2 text-[11px] font-black uppercase tracking-[0.1em]">
-            <Link href={`/${locale}/rankings`} onClick={() => setMobileOpen(false)} className="rounded-md border border-[#E7DED0] bg-white px-3 py-3">Rankings</Link>
-            {locale === "es" && <Link href={`/${locale}/guides`} onClick={() => setMobileOpen(false)} className="rounded-md border border-[#E7DED0] bg-white px-3 py-3">{copy.nav.guides}</Link>}
-            <Link href={methodologyPath(locale)} onClick={() => setMobileOpen(false)} className="rounded-md border border-[#E7DED0] bg-white px-3 py-3">{copy.nav.methodology}</Link>
-            <Link href={`/${locale}/business`} onClick={() => setMobileOpen(false)} className="rounded-md bg-ink px-3 py-3 text-white">{copy.nav.forBusinesses}</Link>
-          </div>
-          <div className="mt-4 flex flex-wrap gap-2 text-[11px]">
-            {locales.map((item) => (
-              <Link key={item} href={`/${item}`} onClick={() => setMobileOpen(false)} className={`border px-2.5 py-1 uppercase tracking-[0.08em] ${item === locale ? "border-ink bg-ink text-white" : "border-[#E7DED0] bg-white text-sage"}`}>
-                {localeLabel(item)}
+          <nav className="border-b border-[#E7DED0] px-3 py-2">
+            <Link href={`/${locale}/rankings`} onClick={() => setMobileOpen(false)} className="flex min-h-[44px] items-center gap-3 rounded-md px-3 text-sm font-bold text-ink hover:bg-[#F4F0E8]">
+              <IconSearch size={15} stroke={1.8} className="shrink-0 text-[#0E8F72]" />
+              Rankings
+            </Link>
+            {locale === "es" && (
+              <Link href={`/${locale}/guides`} onClick={() => setMobileOpen(false)} className="flex min-h-[44px] items-center gap-3 rounded-md px-3 text-sm font-bold text-ink hover:bg-[#F4F0E8]">
+                <IconBook2 size={15} stroke={1.8} className="shrink-0 text-[#0E8F72]" />
+                {copy.nav.guides}
+              </Link>
+            )}
+            <Link href={methodologyPath(locale)} onClick={() => setMobileOpen(false)} className="flex min-h-[44px] items-center gap-3 rounded-md px-3 text-sm font-bold text-ink hover:bg-[#F4F0E8]">
+              <IconInfoCircle size={15} stroke={1.8} className="shrink-0 text-[#0E8F72]" />
+              {copy.nav.methodology}
+            </Link>
+          </nav>
+          <div className="flex-1 overflow-y-auto px-3 py-3">
+            <p className="mb-1 px-3 text-[10px] font-black uppercase tracking-[0.16em] text-sage">{copy.nav.categoriesVerified}</p>
+            {(Object.keys(categoryConfigs) as CategorySlug[]).map((slug) => (
+              <Link
+                key={slug}
+                href={categoryHref(locale, slug)}
+                onClick={() => setMobileOpen(false)}
+                className="flex min-h-[44px] items-center rounded-md px-3 text-sm font-semibold text-ink hover:bg-[#F4F0E8]"
+              >
+                {getCategoryCopy(slug, locale).label}
               </Link>
             ))}
           </div>
+          <div className="border-t border-[#E7DED0] px-4 pb-8 pt-4">
+            <Link href={`/${locale}/business`} onClick={() => setMobileOpen(false)} className="block rounded-md bg-ink px-4 py-3 text-center text-[11px] font-black uppercase tracking-[0.1em] text-white transition-all duration-150 hover:bg-[#0E8F72]">
+              {copy.nav.forBusinesses}
+            </Link>
+            <div className="mt-3 flex gap-2">
+              {locales.map((item) => (
+                <Link key={item} href={`/${item}`} onClick={() => setMobileOpen(false)} className={`rounded-md border px-3 py-2 text-[11px] uppercase tracking-[0.08em] transition-all duration-150 ${item === locale ? "border-ink bg-ink text-white" : "border-[#E7DED0] bg-white text-sage hover:border-ink hover:text-ink"}`}>
+                  {localeLabel(item)}
+                </Link>
+              ))}
+            </div>
+          </div>
         </div>
-      )}
-    </header>
+      </>
+    )}
+    </>
   );
 }

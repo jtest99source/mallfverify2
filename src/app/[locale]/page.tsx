@@ -208,7 +208,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
 
   return (
     <main className="bg-[#FFFDF7]">
-      <section className="relative z-20 overflow-visible px-4 pb-12 pt-14 text-white sm:px-6 lg:px-8">
+      <section className="relative z-20 overflow-visible px-4 pb-8 pt-10 text-white sm:pb-12 sm:pt-14 sm:px-6 lg:px-8">
         {heroImage?.imageUrl ? (
           <>
             <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${heroImage.imageUrl})` }} />
@@ -223,14 +223,14 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
               <IconShieldCheck size={15} stroke={2} />
               {copy.home.eyebrow}
             </div>
-            <h1 className="font-display text-balance text-4xl font-black leading-[1.05] text-white sm:text-5xl lg:text-6xl">
+            <h1 className="font-display text-balance text-3xl font-black leading-[1.05] text-white sm:text-5xl lg:text-6xl">
               {copy.home.title}
             </h1>
             <p className="mt-5 max-w-2xl text-base leading-8 text-white/80">
               {copy.home.intro}
             </p>
-            <SearchBox locale={safeLocale} variant="hero" className="mt-7 max-w-lg" />
-            <div className="mt-4 flex flex-wrap gap-3">
+            <SearchBox locale={safeLocale} variant="hero" className="mt-5 max-w-lg sm:mt-7" />
+            <div className="mt-3 flex flex-wrap gap-3 sm:mt-4">
               <Link href={`/${safeLocale}/rankings`} className="inline-flex min-h-12 items-center justify-center rounded-md bg-coral px-6 text-[11px] font-bold uppercase tracking-[0.1em] text-white transition-all duration-150 hover:bg-coral/90">
                 {copy.home.exploreRankings}
               </Link>
@@ -240,20 +240,20 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
             </div>
           </div>
 
-          <div className="mt-10 grid gap-4 sm:grid-cols-3">
+          <div className="mt-6 grid grid-cols-3 gap-2 sm:mt-10 sm:gap-4">
             {[
               { value: formatIntegerMetric(stats.publishedBusinesses, safeLocale), label: copy.home.verifiedBusinesses },
               { value: formatMillionMetric(stats.analyzedReviews, safeLocale), label: copy.home.analyzedReviews },
               { value: formatIntegerMetric(stats.activeCategories, safeLocale), label: copy.home.activeCategories }
             ].map((stat) => (
-              <div key={stat.label} className="rounded-lg border border-white/12 bg-white/10 px-5 py-5 shadow-[0_18px_45px_rgba(0,0,0,0.12)] backdrop-blur">
-                <div className="font-display text-4xl font-black leading-none text-[#FFD166]">{stat.value}</div>
-                <div className="mt-2 text-[10px] font-bold uppercase tracking-[0.12em] text-white/70">{stat.label}</div>
+              <div key={stat.label} className="rounded-lg border border-white/12 bg-white/10 px-3 py-3 shadow-[0_18px_45px_rgba(0,0,0,0.12)] backdrop-blur sm:px-5 sm:py-5">
+                <div className="font-display text-xl font-black leading-none text-[#FFD166] sm:text-4xl">{stat.value}</div>
+                <div className="mt-1 text-[9px] font-bold uppercase leading-tight tracking-[0.1em] text-white/70 sm:mt-2 sm:text-[10px] sm:tracking-[0.12em]">{stat.label}</div>
               </div>
             ))}
           </div>
 
-          <div className="mt-6 flex flex-wrap gap-x-5 gap-y-2 text-[11px] font-bold uppercase tracking-[0.08em] text-white/78">
+          <div className="mt-4 hidden flex-wrap gap-x-5 gap-y-2 text-[11px] font-bold uppercase tracking-[0.08em] text-white/78 sm:flex">
             {copy.home.signals.map((item) => (
               <span key={item} className="inline-flex items-center gap-2"><IconCircleCheckFilled size={14} />{item}</span>
             ))}
@@ -265,15 +265,15 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         <CategoryPillsCarousel locale={safeLocale} />
       </section>
 
-      <section className="mx-auto max-w-[1360px] px-4 py-10 sm:px-6 lg:px-8">
-        <div className="mb-7 max-w-3xl">
+      <section className="mx-auto max-w-[1360px] px-4 py-6 sm:px-6 sm:py-10 lg:px-8">
+        <div className="mb-5 max-w-3xl sm:mb-7">
           <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-[#0E8F72]">{copy.home.selection}</p>
           <h2 className="font-display mt-2 text-3xl font-black text-ink sm:text-4xl">{copy.home.bestThisWeek}</h2>
           <p className="mt-3 text-sm leading-7 text-sage">
             {copy.home.bestThisWeekIntro}
           </p>
         </div>
-        <div className="grid items-stretch gap-5 md:grid-cols-2 xl:grid-cols-3">
+        <div className="grid items-stretch gap-3 md:grid-cols-2 md:gap-5 xl:grid-cols-3">
           {categoryRankings.map((ranking) => (
             <CategoryRankingCard key={ranking.category} category={ranking.category} businesses={ranking.businesses} locale={safeLocale} />
           ))}
