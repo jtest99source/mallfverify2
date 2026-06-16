@@ -40,7 +40,7 @@ export function CategoryPillsCarousel({ locale }: { locale: Locale }) {
     <div className="relative flex items-center">
       {/* Left arrow */}
       <div
-        className={`absolute left-0 top-0 z-10 flex h-full items-center transition-opacity duration-200 ${showLeft ? "opacity-100" : "pointer-events-none opacity-0"}`}
+        className={`absolute left-0 top-0 z-10 hidden h-full items-center transition-opacity duration-200 sm:flex ${showLeft ? "opacity-100" : "pointer-events-none opacity-0"}`}
       >
         <div className="pointer-events-none absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-[#FFFDF7] via-[#FFFDF7]/80 to-transparent" />
         <button
@@ -57,13 +57,13 @@ export function CategoryPillsCarousel({ locale }: { locale: Locale }) {
       {/* Scroll container */}
       <div
         ref={scrollRef}
-        className="flex w-full items-center gap-2 overflow-x-auto py-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+        className="flex w-full snap-x items-center gap-2 overflow-x-auto py-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
       >
         {(Object.entries(categoryConfigs) as [CategorySlug, (typeof categoryConfigs)[CategorySlug]][]).map(([slug, config]) => (
           <Link
             key={slug}
             href={`/${locale}/rankings?category=${slug}`}
-            className="shrink-0 whitespace-nowrap rounded-full border border-[#E7DED0] bg-white px-4 py-2 text-[11px] font-bold uppercase tracking-[0.08em] text-ink transition-all duration-150 hover:border-ink hover:bg-ink hover:text-white"
+            className="snap-start shrink-0 whitespace-nowrap rounded-full border border-[#E7DED0] bg-white px-4 py-2 text-[11px] font-bold uppercase tracking-[0.08em] text-ink transition-all duration-150 hover:border-ink hover:bg-ink hover:text-white"
           >
             {getCategoryCopy(slug, locale).label}
           </Link>
@@ -74,7 +74,7 @@ export function CategoryPillsCarousel({ locale }: { locale: Locale }) {
 
       {/* Right arrow */}
       <div
-        className={`absolute right-0 top-0 z-10 flex h-full items-center justify-end transition-opacity duration-200 ${showRight ? "opacity-100" : "pointer-events-none opacity-0"}`}
+        className={`absolute right-0 top-0 z-10 hidden h-full items-center justify-end transition-opacity duration-200 sm:flex ${showRight ? "opacity-100" : "pointer-events-none opacity-0"}`}
       >
         <div className="pointer-events-none absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-[#FFFDF7] via-[#FFFDF7]/80 to-transparent" />
         <button

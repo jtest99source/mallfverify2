@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
   IconBook2,
   IconChevronDown,
@@ -27,7 +27,7 @@ function NavLogo({ locale }: { locale: Locale }) {
         width={1909}
         height={692}
         priority
-        className="h-10 w-auto max-w-[132px] object-contain"
+        className="h-9 w-auto max-w-[126px] object-contain sm:h-10 sm:max-w-[132px]"
       />
     </Link>
   );
@@ -67,6 +67,15 @@ export function Header({ locale }: { locale: Locale }) {
     clearExploreCloseTimer();
     setExploreOpen((value) => !value);
   }
+
+  useEffect(() => {
+    if (!mobileOpen) return;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = previousOverflow;
+    };
+  }, [mobileOpen]);
 
   return (
     <>
@@ -160,15 +169,9 @@ export function Header({ locale }: { locale: Locale }) {
     </header>
 
     {mobileOpen && (
-      <>
-        <div
-          className="fixed inset-0 z-50 bg-black/50 lg:hidden"
-          aria-hidden="true"
-          onClick={() => setMobileOpen(false)}
-        />
-        <div className="fixed inset-y-0 right-0 z-50 flex w-[min(320px,100vw)] flex-col overflow-y-auto bg-[#FFFDF7] shadow-[0_0_50px_rgba(27,46,75,0.25)] lg:hidden">
-          <div className="flex items-center justify-between border-b border-[#E7DED0] px-4 py-3">
-            <span className="text-[10px] font-black uppercase tracking-[0.18em] text-[#0E8F72]">{copy.nav.explore}</span>
+        <div className="fixed inset-0 z-50 flex h-dvh flex-col bg-[#FFFDF7] lg:hidden">
+          <div className="flex shrink-0 items-center justify-between border-b border-[#E7DED0] px-4 py-3">
+            <NavLogo locale={locale} />
             <button
               type="button"
               onClick={() => setMobileOpen(false)}
@@ -178,7 +181,11 @@ export function Header({ locale }: { locale: Locale }) {
               <IconX size={18} stroke={2} />
             </button>
           </div>
-          <nav className="border-b border-[#E7DED0] px-3 py-2">
+          <div className="shrink-0 border-b border-[#E7DED0] px-4 py-4">
+            <p className="mb-3 text-[10px] font-black uppercase tracking-[0.18em] text-[#0E8F72]">{copy.nav.explore}</p>
+            <SearchBox locale={locale} variant="nav" />
+          </div>
+          <nav className="shrink-0 border-b border-[#E7DED0] px-4 py-3">
             <Link href={`/${locale}/rankings`} onClick={() => setMobileOpen(false)} className="flex min-h-[44px] items-center gap-3 rounded-md px-3 text-sm font-bold text-ink hover:bg-[#F4F0E8]">
               <IconSearch size={15} stroke={1.8} className="shrink-0 text-[#0E8F72]" />
               Rankings
@@ -194,20 +201,20 @@ export function Header({ locale }: { locale: Locale }) {
               {copy.nav.methodology}
             </Link>
           </nav>
-          <div className="flex-1 overflow-y-auto px-3 py-3">
-            <p className="mb-1 px-3 text-[10px] font-black uppercase tracking-[0.16em] text-sage">{copy.nav.categoriesVerified}</p>
+          <div className="min-h-0 flex-1 overflow-y-auto px-4 py-4">
+            <p className="mb-2 px-3 text-[10px] font-black uppercase tracking-[0.16em] text-sage">{copy.nav.categoriesVerified}</p>
             {(Object.keys(categoryConfigs) as CategorySlug[]).map((slug) => (
               <Link
                 key={slug}
                 href={categoryHref(locale, slug)}
                 onClick={() => setMobileOpen(false)}
-                className="flex min-h-[44px] items-center rounded-md px-3 text-sm font-semibold text-ink hover:bg-[#F4F0E8]"
+                className="flex min-h-[42px] items-center rounded-md px-3 text-sm font-semibold text-ink hover:bg-[#F4F0E8]"
               >
                 {getCategoryCopy(slug, locale).label}
               </Link>
             ))}
           </div>
-          <div className="border-t border-[#E7DED0] px-4 pb-8 pt-4">
+          <div className="shrink-0 border-t border-[#E7DED0] px-4 pb-[max(1rem,env(safe-area-inset-bottom))] pt-4">
             <Link href={`/${locale}/business`} onClick={() => setMobileOpen(false)} className="block rounded-md bg-ink px-4 py-3 text-center text-[11px] font-black uppercase tracking-[0.1em] text-white transition-all duration-150 hover:bg-[#0E8F72]">
               {copy.nav.forBusinesses}
             </Link>
@@ -220,7 +227,6 @@ export function Header({ locale }: { locale: Locale }) {
             </div>
           </div>
         </div>
-      </>
     )}
     </>
   );

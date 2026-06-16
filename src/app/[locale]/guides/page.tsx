@@ -21,17 +21,17 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 export default async function GuidesPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const safeLocale = (isLocale(locale) ? locale : "es") as Locale;
-  const guides = await getGuides(safeLocale, undefined, "generated");
+  const guides = await getGuides(safeLocale);
   const guideImages = await Promise.all(guides.map((guide) => (guide.heroImageUrl ? Promise.resolve(null) : getEditorialImageForGuide(guide.title))));
 
   return (
     <main className="bg-[linear-gradient(180deg,#FFF8EC_0%,#FFFDF7_48%,#FFF8EC_100%)]">
-      <section className="px-4 py-12 sm:px-6 lg:px-8">
+      <section className="px-4 py-9 sm:px-6 sm:py-12 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <div className="max-w-4xl">
             <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-[#0E8F72]">Guías editoriales</p>
-            <h1 className="font-display mt-3 text-5xl font-black leading-none text-ink sm:text-6xl">Guías de Mallorca escritas con datos reales</h1>
-            <p className="mt-5 max-w-2xl text-base leading-8 text-olive">
+            <h1 className="font-display mt-3 text-4xl font-black leading-[1.02] text-ink sm:text-6xl">Guías de Mallorca escritas con datos reales</h1>
+            <p className="mt-5 max-w-2xl text-sm leading-7 text-olive sm:text-base sm:leading-8">
               Artículos prácticos para elegir zona, restaurante, hotel o actividad en Mallorca. Cada recomendación se apoya en fichas verificables y datos de Google.
             </p>
           </div>
@@ -47,9 +47,15 @@ export default async function GuidesPage({ params }: { params: Promise<{ locale:
       </section>
 
       <section className="mx-auto max-w-7xl px-4 pb-14 sm:px-6 lg:px-8">
-        <div className="grid items-stretch gap-px overflow-hidden rounded-lg border border-[#E7DED0] bg-[#E7DED0] shadow-[0_18px_45px_rgba(27,46,75,0.04)] md:grid-cols-2 lg:grid-cols-3">
-          {guides.map((guide, index) => <GuideCard key={guide.id} guide={guide} locale={safeLocale} editorialImage={guideImages[index]} />)}
-        </div>
+        {guides.length > 0 ? (
+          <div className="grid items-stretch gap-px overflow-hidden rounded-lg border border-[#E7DED0] bg-[#E7DED0] shadow-[0_18px_45px_rgba(27,46,75,0.04)] md:grid-cols-2 lg:grid-cols-3">
+            {guides.map((guide, index) => <GuideCard key={guide.id} guide={guide} locale={safeLocale} editorialImage={guideImages[index]} />)}
+          </div>
+        ) : (
+          <div className="rounded-lg border border-[#E7DED0] bg-white/85 p-5 text-sm leading-7 text-olive">
+            Estamos preparando nuevas guías editoriales. Mientras tanto, puedes comparar negocios directamente en los rankings.
+          </div>
+        )}
       </section>
     </main>
   );

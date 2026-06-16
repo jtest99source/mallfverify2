@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { IconDiamond, IconMessageCircle, IconStarFilled, IconTrendingUp } from "@tabler/icons-react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
-import { useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { BusinessCard } from "@/components/BusinessCard";
 import { BusinessImage } from "@/components/BusinessImage";
 import { RatingBadge } from "@/components/RatingBadge";
@@ -17,6 +17,7 @@ type SortKey = "ratio" | "rating" | "reviews" | "untapped";
 
 const ALL_AREAS = "all";
 const ALL_TAGS = "all";
+const PAGE_SIZE = 24;
 
 const copy = {
   es: {
@@ -31,6 +32,10 @@ const copy = {
     hiddenGem: "Joya oculta",
     viewProfile: "Ver ficha",
     allResults: "Todos los resultados",
+    clearFilters: "Limpiar filtros",
+    noResults: "No hay resultados con esos filtros.",
+    loadMore: "Cargar más",
+    showing: (shown: string, total: string) => `Mostrando ${shown} de ${total}`,
     sort: { ratio: "Recomendado", rating: "Mejor valoración", reviews: "Más reseñas", untapped: "Joyas ocultas" }
   },
   en: {
@@ -45,6 +50,10 @@ const copy = {
     hiddenGem: "Hidden gem",
     viewProfile: "View profile",
     allResults: "All results",
+    clearFilters: "Clear filters",
+    noResults: "No results with these filters.",
+    loadMore: "Load more",
+    showing: (shown: string, total: string) => `Showing ${shown} of ${total}`,
     sort: { ratio: "Recommended", rating: "Best rating", reviews: "Most reviews", untapped: "Hidden gems" }
   },
   de: {
@@ -59,6 +68,10 @@ const copy = {
     hiddenGem: "Geheimtipp",
     viewProfile: "Profil ansehen",
     allResults: "Alle Ergebnisse",
+    clearFilters: "Filter zuruecksetzen",
+    noResults: "Keine Ergebnisse mit diesen Filtern.",
+    loadMore: "Mehr laden",
+    showing: (shown: string, total: string) => `${shown} von ${total} angezeigt`,
     sort: { ratio: "Empfohlen", rating: "Beste Bewertung", reviews: "Meiste Rezensionen", untapped: "Geheimtipps" }
   }
 } as const;
@@ -141,6 +154,7 @@ export function CategoryFilter({ businesses, locale }: { businesses: Business[];
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const c = copy[locale];
+  const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
 
   const area = searchParams.get("area") || ALL_AREAS;
   const tag = searchParams.get("tag") || ALL_TAGS;
@@ -165,6 +179,10 @@ export function CategoryFilter({ businesses, locale }: { businesses: Business[];
     router.replace(next ? `${pathname}?${next}` : pathname, { scroll: false });
   }
 
+  function clearFilters() {
+    router.replace(pathname, { scroll: false });
+  }
+
   const filtered = useMemo(() => {
     const normalizedQuery = normalizeText(query.trim());
     const matches = businesses.filter((business) => {
@@ -183,6 +201,14 @@ export function CategoryFilter({ businesses, locale }: { businesses: Business[];
   }, [area, tag, query, sort, businesses]);
 
   const top = filtered[0];
+  const visibleBusinesses = filtered.slice(0, visibleCount);
+  const hasMore = visibleCount < filtered.length;
+  const shownCount = Math.min(visibleCount, filtered.length).toLocaleString(numberLocale(locale));
+  const totalCount = filtered.length.toLocaleString(numberLocale(locale));
+
+  useEffect(() => {
+    setVisibleCount(PAGE_SIZE);
+  }, [area, query, sort, tag]);
 
   return (
     <div>
@@ -267,9 +293,37 @@ export function CategoryFilter({ businesses, locale }: { businesses: Business[];
       )}
 
       <div className="mt-10 pb-3 text-[10px] font-bold uppercase tracking-[0.14em] text-sage">{c.allResults}</div>
-      <div className="mt-3 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-        {filtered.map((business) => <BusinessCard key={business.id} business={business} locale={locale} />)}
-      </div>
+      {filtered.length > 0 ? (
+        <div className="mt-3 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {visibleBusinesses.map((business) => <BusinessCard key={business.id} business={business} locale={locale} />)}
+        </div>
+      ) : (
+        <div className="mt-3 rounded-lg border border-[#E7DED0] bg-white/85 p-5 text-sm text-olive">
+          <p>{c.noResults}</p>
+          <button
+            type="button"
+            onClick={clearFilters}
+            className="mt-4 min-h-10 rounded-md border border-[#E7DED0] bg-white px-4 text-[11px] font-bold uppercase tracking-[0.1em] text-ink transition hover:border-[#0E8F72] hover:text-[#0E8F72]"
+          >
+            {c.clearFilters}
+          </button>
+        </div>
+      )}
+
+      {filtered.length > PAGE_SIZE && (
+        <div className="mt-8 flex flex-col items-center gap-3">
+          <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-sage">{c.showing(shownCount, totalCount)}</p>
+          {hasMore && (
+            <button
+              type="button"
+              onClick={() => setVisibleCount((value) => Math.min(value + PAGE_SIZE, filtered.length))}
+              className="min-h-11 rounded-md border border-[#E7DED0] bg-white px-6 text-[11px] font-bold uppercase tracking-[0.1em] text-ink shadow-sm transition hover:border-[#0E8F72] hover:text-[#0E8F72]"
+            >
+              {c.loadMore}
+            </button>
+          )}
+        </div>
+      )}
     </div>
   );
 }

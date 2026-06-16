@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { BusinessCard } from "@/components/BusinessCard";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd } from "@/components/JsonLd";
+import { LoadMoreBusinessGrid } from "@/components/LoadMoreBusinessGrid";
 import { getCategoryCopy, t } from "@/lib/i18n-copy";
 import { isCategorySlug, siteUrl, type CategorySlug } from "@/lib/data";
 import { isLocale, type Locale } from "@/lib/i18n";
@@ -13,6 +13,10 @@ import { generateSeoMetadata } from "@/lib/seo";
 function titleFor(areaName: string, category: CategorySlug, locale: Locale) {
   const label = getCategoryCopy(category, locale).label;
   return locale === "es" ? `${label} en ${areaName}` : `${label} in ${areaName}`;
+}
+
+function numberLocale(locale: Locale) {
+  return locale === "de" ? "de-DE" : locale === "en" ? "en-US" : "es-ES";
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string; area: string; category: string }> }) {
@@ -62,15 +66,13 @@ export default async function AreaCategoryPage({ params }: { params: Promise<{ l
 
       <section className="mx-auto max-w-7xl px-4 pb-14 sm:px-6 lg:px-8">
         <div className="mb-6 flex flex-wrap items-center justify-between gap-4 rounded-lg border border-[#E7DED0] bg-white/80 p-4 shadow-[0_18px_45px_rgba(27,46,75,0.035)]">
-          <p className="text-sm font-semibold text-olive">{businesses.length.toLocaleString(safeLocale === "de" ? "de-DE" : safeLocale === "en" ? "en-US" : "es-ES")} {copy.filters.results}</p>
+          <p className="text-sm font-semibold text-olive">{businesses.length.toLocaleString(numberLocale(safeLocale))} {copy.filters.results}</p>
           <div className="flex flex-wrap gap-3">
             <Link href={`/${safeLocale}/top/${category}`} className="rounded-sm border border-[#E7DED0] bg-white px-4 py-2 text-[11px] font-bold uppercase tracking-[0.1em] text-ink hover:border-[#0E8F72] hover:text-[#0E8F72]">{copy.category.fullRanking}</Link>
             <a href="mailto:hola@mallorcaverified.com?subject=Business profile on Mallorca Verified" className="rounded-sm bg-ink px-4 py-2 text-[11px] font-bold uppercase tracking-[0.1em] text-white hover:bg-[#0E8F72]">{copy.nav.forBusinesses} →</a>
           </div>
         </div>
-        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-          {businesses.map((business) => <BusinessCard key={business.id} business={business} locale={safeLocale} />)}
-        </div>
+        <LoadMoreBusinessGrid businesses={businesses} locale={safeLocale} />
       </section>
 
       <JsonLd data={[createBreadcrumbSchema(breadcrumbs)]} />

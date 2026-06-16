@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { BusinessCard } from "@/components/BusinessCard";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd } from "@/components/JsonLd";
+import { LoadMoreBusinessGrid } from "@/components/LoadMoreBusinessGrid";
 import { isCategorySlug, siteUrl } from "@/lib/data";
 import { isLocale, type Locale } from "@/lib/i18n";
 import { getCategoryCopy, t } from "@/lib/i18n-copy";
@@ -125,14 +125,7 @@ export default async function TopFacetPage({ params }: { params: Promise<{ local
       )}
 
       <section className="mx-auto max-w-7xl px-4 pb-14 pt-6 sm:px-6 lg:px-8">
-        <ol className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-          {businesses.map((business, index) => (
-            <li key={business.id} className="relative">
-              <div className="absolute left-3 top-3 z-10 rounded-sm bg-ink px-3 py-1 text-xs font-bold text-white">#{index + 1}</div>
-              <BusinessCard business={business} locale={safeLocale} />
-            </li>
-          ))}
-        </ol>
+        <LoadMoreBusinessGrid businesses={businesses} locale={safeLocale} ordered />
       </section>
 
       <JsonLd

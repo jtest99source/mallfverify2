@@ -15,6 +15,25 @@ type FacetWithCount = RankingFacet & { count: number };
 type SortKey = "ratio" | "reviews" | "rating" | "hidden";
 
 const ALL = "all";
+const PAGE_SIZE = 24;
+
+const loadMoreCopy = {
+  es: {
+    loadMore: "Cargar más",
+    clearFilters: "Limpiar filtros",
+    showing: (shown: string, total: string) => `Mostrando ${shown} de ${total}`
+  },
+  en: {
+    loadMore: "Load more",
+    clearFilters: "Clear filters",
+    showing: (shown: string, total: string) => `Showing ${shown} of ${total}`
+  },
+  de: {
+    loadMore: "Mehr laden",
+    clearFilters: "Filter zuruecksetzen",
+    showing: (shown: string, total: string) => `${shown} von ${total} angezeigt`
+  }
+} as const;
 
 function numberLocale(locale: Locale) {
   return locale === "de" ? "de-DE" : locale === "en" ? "en-US" : "es-ES";
@@ -69,6 +88,7 @@ export function TopRankingExplorer({
   const [sort, setSort] = useState<SortKey>((searchParams.get("sort") as SortKey) || "ratio");
   const [facetSlug, setFacetSlug] = useState(searchParams.get("type") ?? ALL);
   const [place, setPlace] = useState(searchParams.get("area") ?? ALL);
+  const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
   const sortOptions: Array<{ value: SortKey; label: string }> = [
     { value: "ratio", label: copy.filters.sort.ratio },
     { value: "rating", label: copy.filters.sort.rating },
@@ -102,6 +122,10 @@ export function TopRankingExplorer({
     router.replace(next ? `${pathname}?${next}` : pathname, { scroll: false });
   }
 
+  function clearFilters() {
+    router.replace(pathname, { scroll: false });
+  }
+
   const filtered = useMemo(() => {
     const normalizedQuery = normalizeText(query.trim());
     const matches = businesses.filter((business) => {
@@ -127,6 +151,15 @@ export function TopRankingExplorer({
 
     return sortBusinesses(matches, sort);
   }, [businesses, place, query, selectedFacet, sort]);
+  const visibleBusinesses = filtered.slice(0, visibleCount);
+  const hasMore = visibleCount < filtered.length;
+  const shownCount = Math.min(visibleCount, filtered.length).toLocaleString(numberLocale(locale));
+  const totalCount = filtered.length.toLocaleString(numberLocale(locale));
+  const loadCopy = loadMoreCopy[locale];
+
+  useEffect(() => {
+    setVisibleCount(PAGE_SIZE);
+  }, [facetSlug, place, query, sort]);
 
   return (
     <section className="mx-auto max-w-7xl px-4 pb-14 sm:px-6 lg:px-8">
@@ -183,7 +216,7 @@ export function TopRankingExplorer({
       </div>
 
       <ol className="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-        {filtered.map((business, index) => (
+        {visibleBusinesses.map((business, index) => (
           <li key={business.id} className="relative h-full">
             <div className="absolute left-3 top-3 z-10 rounded-sm bg-ink px-3 py-1 text-xs font-bold text-white">#{index + 1}</div>
             <BusinessCard business={business} locale={locale} />
@@ -191,9 +224,31 @@ export function TopRankingExplorer({
         ))}
       </ol>
 
+      {filtered.length > PAGE_SIZE && (
+        <div className="mt-8 flex flex-col items-center gap-3">
+          <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-sage">{loadCopy.showing(shownCount, totalCount)}</p>
+          {hasMore && (
+            <button
+              type="button"
+              onClick={() => setVisibleCount((value) => Math.min(value + PAGE_SIZE, filtered.length))}
+              className="min-h-11 rounded-md border border-[#E7DED0] bg-white px-6 text-[11px] font-bold uppercase tracking-[0.1em] text-ink shadow-sm transition hover:border-[#0E8F72] hover:text-[#0E8F72]"
+            >
+              {loadCopy.loadMore}
+            </button>
+          )}
+        </div>
+      )}
+
       {!filtered.length && (
-        <div className="mt-8 rounded-lg border border-[#E7DED0] bg-white/85 p-6 text-sm text-olive">
-          {copy.filters.noResults}
+        <div className="mt-6 rounded-lg border border-[#E7DED0] bg-white/85 p-5 text-sm text-olive sm:mt-8 sm:p-6">
+          <p>{copy.filters.noResults}</p>
+          <button
+            type="button"
+            onClick={clearFilters}
+            className="mt-4 min-h-10 rounded-md border border-[#E7DED0] bg-white px-4 text-[11px] font-bold uppercase tracking-[0.1em] text-ink transition hover:border-[#0E8F72] hover:text-[#0E8F72]"
+          >
+            {loadCopy.clearFilters}
+          </button>
         </div>
       )}
     </section>

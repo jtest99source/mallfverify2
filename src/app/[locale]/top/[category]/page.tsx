@@ -54,22 +54,26 @@ export default async function TopCategoryPage({ params }: { params: Promise<{ lo
 
   return (
     <main className="bg-[linear-gradient(180deg,#FFF8EC_0%,#FFFDF7_48%,#FFF8EC_100%)]">
-      <section className="px-4 py-12 sm:px-6 lg:px-8">
+      <section className="px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <Breadcrumbs items={[{ label: copy.category.breadcrumbHome, href: `/${safeLocale}` }, { label: "Rankings", href: `/${safeLocale}/rankings` }, { label: config.label, href: `/${safeLocale}/top/${category}` }]} />
-          <div className="mt-7 max-w-4xl">
+          <div className="mt-6 max-w-4xl sm:mt-7">
             <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-[#0E8F72]">{copy.category.rankingByCategory}</p>
-            <h1 className="mt-3 font-sans text-5xl font-black leading-none text-ink sm:text-6xl">{title}</h1>
-            <p className="mt-5 max-w-2xl text-base leading-8 text-olive">{copy.category.signalLine}</p>
+            <h1 className="mt-3 font-sans text-3xl font-black leading-[1.05] text-ink sm:text-6xl">{title}</h1>
+            <p className="mt-4 max-w-2xl text-sm leading-7 text-olive sm:mt-5 sm:text-base sm:leading-8">{copy.category.signalLine}</p>
           </div>
 
-          <div className="mt-8">
+          <div className="mt-8 hidden lg:block">
             <BusinessListCTA locale={safeLocale} />
           </div>
         </div>
       </section>
 
       <TopRankingExplorer businesses={businesses} locale={safeLocale} category={category} facets={facets} />
+
+      <section className="mx-auto max-w-7xl px-4 pb-8 sm:px-6 lg:hidden">
+        <BusinessListCTA locale={safeLocale} />
+      </section>
 
       <JsonLd
         data={[
