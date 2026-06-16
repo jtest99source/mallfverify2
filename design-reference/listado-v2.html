@@ -1,0 +1,183 @@
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500&display=swap');
+  .ml * { box-sizing: border-box; margin: 0; padding: 0; }
+  .ml { font-family: 'DM Sans', sans-serif; background: #F2EDE3; color: #1C1C18; }
+  .ml-nav { background: #1C1C18; display: flex; align-items: center; justify-content: space-between; padding: 0 2rem; height: 52px; }
+  .ml-nav-logo { font-family: 'Playfair Display', serif; color: #E8C888; font-size: 16px; letter-spacing: 0.08em; }
+  .ml-nav-links { display: flex; gap: 1.5rem; }
+  .ml-nav-links a { color: #6B7860; font-size: 12px; text-decoration: none; letter-spacing: 0.04em; text-transform: uppercase; }
+  .ml-nav-links a.active { color: #C2813E; }
+
+  .ml-header { background: #fff; border-bottom: 1px solid #C8BFA8; padding: 2rem; }
+  .ml-breadcrumb { font-size: 10px; color: #6B7860; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.7rem; }
+  .ml-breadcrumb span { color: #C2813E; }
+  .ml-header h1 { font-family: 'Playfair Display', serif; font-size: 40px; font-weight: 900; line-height: 1; }
+  .ml-header-sub { color: #4A5440; font-size: 13px; margin-top: 0.5rem; max-width: 480px; line-height: 1.55; }
+  .ml-filters { display: flex; gap: 6px; margin-top: 1.2rem; flex-wrap: wrap; align-items: center; }
+  .ml-filter-select { border: 1px solid #C8BFA8; background: #F2EDE3; font-family: 'DM Sans', sans-serif; font-size: 12px; padding: 6px 10px; color: #2E2B24; cursor: pointer; border-radius: 1px; }
+  .ml-filter-tag { border: 1px solid #C8BFA8; background: #fff; font-size: 10px; padding: 5px 11px; cursor: pointer; color: #4A5440; border-radius: 1px; transition: all 0.15s; }
+  .ml-filter-tag.active { background: #C2813E; border-color: #C2813E; color: #fff; }
+  .ml-count { font-size: 11px; color: #6B7860; margin-left: auto; }
+
+  .ml-body { padding: 0 2rem 3rem; }
+
+  .ml-hero-card { display: grid; grid-template-columns: 1.4fr 1fr; border: 1px solid #C8BFA8; margin-top: 2rem; background: #fff; overflow: hidden; }
+  .ml-hero-img { background: #354030; min-height: 260px; display: flex; align-items: flex-end; padding: 1.8rem; position: relative; overflow: hidden; }
+  .ml-hero-img-tex { position: absolute; top:0;left:0;right:0;bottom:0; background: repeating-linear-gradient(135deg, rgba(46,122,136,0.07) 0, rgba(46,122,136,0.07) 1px, transparent 1px, transparent 22px); }
+  .ml-hero-img-content { position: relative; z-index: 2; }
+  .ml-hero-img-badge { background: #C2813E; color: #fff; font-size: 9px; padding: 3px 10px; letter-spacing: 0.1em; text-transform: uppercase; border-radius: 1px; display: inline-block; margin-bottom: 8px; }
+  .ml-hero-img h2 { font-family: 'Playfair Display', serif; font-size: 30px; color: #F2EDE3; line-height: 1.15; }
+  .ml-hero-img-rating { color: #C2813E; font-size: 14px; margin-top: 6px; }
+  .ml-hero-img-rating em { color: #A8D8E0; font-size: 11px; font-style: normal; margin-left: 6px; }
+  .ml-hero-info { padding: 2rem; display: flex; flex-direction: column; }
+  .ml-hero-zone { font-size: 10px; text-transform: uppercase; letter-spacing: 0.1em; color: #6B7860; margin-bottom: 0.5rem; }
+  .ml-hero-info p { font-size: 13px; color: #4A5440; line-height: 1.65; flex: 1; }
+  .ml-hero-tags { display: flex; gap: 4px; flex-wrap: wrap; margin-top: 0.8rem; }
+  .ml-hero-tags span { background: #F2EDE3; border: 1px solid #C8BFA8; color: #4A5440; font-size: 9px; padding: 3px 9px; border-radius: 1px; }
+  .ml-hero-cta { margin-top: 1.4rem; display: flex; gap: 8px; }
+  .ml-btn-p { background: #1C1C18; color: #F2EDE3; font-family: 'DM Sans', sans-serif; font-size: 10px; padding: 10px 18px; letter-spacing: 0.08em; text-transform: uppercase; border: none; cursor: pointer; border-radius: 1px; }
+  .ml-btn-s { background: none; border: 1px solid #C8BFA8; color: #4A5440; font-family: 'DM Sans', sans-serif; font-size: 10px; padding: 10px 18px; letter-spacing: 0.08em; text-transform: uppercase; cursor: pointer; border-radius: 1px; }
+  .ml-hero-review { border-top: 1px solid #E8E0D0; margin-top: 1.4rem; padding-top: 1rem; }
+  .ml-review-pull { background: #E8EDE0; padding: 0.8rem 1rem; border-left: 3px solid #4A5440; }
+  .ml-review-pull p { font-size: 12px; font-style: italic; color: #354030; line-height: 1.5; }
+  .ml-review-pull-meta { font-size: 9px; color: #6B7860; margin-top: 4px; text-transform: uppercase; letter-spacing: 0.07em; }
+
+  .ml-grid-label { font-size: 10px; text-transform: uppercase; letter-spacing: 0.12em; color: #6B7860; margin-top: 2rem; margin-bottom: 0.8rem; padding-bottom: 0.5rem; border-bottom: 1px solid #C8BFA8; }
+  .ml-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: #C8BFA8; border: 1px solid #C8BFA8; }
+  .ml-card { background: #fff; padding: 0 0 1.2rem; cursor: pointer; transition: background 0.15s; display: flex; flex-direction: column; }
+  .ml-card:hover { background: #F8F4EC; }
+  .ml-card-img { height: 110px; background: #C8BFA8; width: 100%; }
+  .ml-card-body { padding: 1rem 1.2rem 0; flex: 1; display: flex; flex-direction: column; }
+  .ml-card-top { display: flex; justify-content: space-between; align-items: flex-start; }
+  .ml-card-zone { font-size: 9px; text-transform: uppercase; letter-spacing: 0.1em; color: #2E7A88; }
+  .ml-card-score { background: #354030; color: #A8D8E0; font-size: 10px; font-weight: 500; padding: 2px 7px; border-radius: 1px; }
+  .ml-card h3 { font-family: 'Playfair Display', serif; font-size: 16px; margin-top: 3px; line-height: 1.2; }
+  .ml-card-desc { font-size: 11px; color: #4A5440; margin-top: 5px; line-height: 1.55; flex: 1; }
+  .ml-card-tags { display: flex; gap: 3px; flex-wrap: wrap; margin-top: 8px; }
+  .ml-card-tags span { background: #F2EDE3; color: #4A5440; font-size: 9px; padding: 2px 7px; border-radius: 1px; }
+  .ml-card-foot { display: flex; justify-content: space-between; align-items: center; margin-top: 0.8rem; padding: 0.7rem 1.2rem 0; border-top: 1px solid #E8E0D0; }
+  .ml-card-stars { color: #C2813E; font-size: 11px; }
+  .ml-card-count { font-size: 10px; color: #6B7860; }
+
+  .ml-load { text-align: center; margin-top: 2.5rem; }
+  .ml-load button { background: none; border: 1px solid #1C1C18; color: #1C1C18; font-family: 'DM Sans', sans-serif; font-size: 10px; padding: 12px 32px; text-transform: uppercase; letter-spacing: 0.1em; cursor: pointer; border-radius: 1px; }
+</style>
+
+<div class="ml">
+  <nav class="ml-nav">
+    <span class="ml-nav-logo">MALLORCA INSIDER</span>
+    <div class="ml-nav-links">
+      <a href="#" class="active">Restaurantes</a>
+      <a href="#">Hoteles</a><a href="#">Beach clubs</a><a href="#">Barcos</a><a href="#">Guías</a>
+    </div>
+  </nav>
+
+  <div class="ml-header">
+    <div class="ml-breadcrumb">Inicio / <span>Restaurantes</span></div>
+    <h1>Restaurantes<br>en Mallorca</h1>
+    <p class="ml-header-sub">Seleccionados con criterio editorial. Para encontrar el balance justo entre mar, producto local y ambiente.</p>
+    <div class="ml-filters">
+      <select class="ml-filter-select"><option>Todas las zonas</option><option>Palma</option><option>Norte</option><option>Tramuntana</option><option>Sóller</option></select>
+      <select class="ml-filter-select"><option>Tipo de cocina</option><option>Mediterránea</option><option>Japonesa</option><option>Italiana</option></select>
+      <span class="ml-filter-tag active">Todos</span>
+      <span class="ml-filter-tag">Vista al mar</span>
+      <span class="ml-filter-tag">Fine dining</span>
+      <span class="ml-filter-tag">Familiar</span>
+      <span class="ml-count">34 restaurantes</span>
+    </div>
+  </div>
+
+  <div class="ml-body">
+    <div class="ml-hero-card">
+      <div class="ml-hero-img">
+        <div class="ml-hero-img-tex"></div>
+        <div class="ml-hero-img-content">
+          <span class="ml-hero-img-badge">Mallorca · Destacado editorial</span>
+          <h2>Patiki Beach</h2>
+          <div class="ml-hero-img-rating">★★★★★ <em>4.7 · 142 reseñas</em></div>
+        </div>
+      </div>
+      <div class="ml-hero-info">
+        <div class="ml-hero-zone">Port de Sóller · Frente al mar</div>
+        <p>Restaurante con ficha editorial destacada. Perfil ideal para viajeros que buscan una experiencia clara en Mallorca. Reputación pública en niveles editoriales.</p>
+        <div class="ml-hero-tags"><span>mar y arena</span><span>carta variada</span><span>almuerzos</span><span>vistas</span></div>
+        <div class="ml-hero-cta">
+          <button class="ml-btn-p">Ver guía →</button>
+          <button class="ml-btn-s">Google Maps</button>
+        </div>
+        <div class="ml-hero-review">
+          <div class="ml-review-pull">
+            <p>"El servicio fue impecable y la vista al mar es difícil de superar en esta parte de la isla."</p>
+            <div class="ml-review-pull-meta">★★★★★ · Google · hace 2 semanas</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ml-grid-label">Todos los restaurantes — 34 resultados</div>
+    <div class="ml-grid">
+      <div class="ml-card">
+        <div class="ml-card-img"></div>
+        <div class="ml-card-body">
+          <div class="ml-card-top"><span class="ml-card-zone">Palma</span><span class="ml-card-score">9.2</span></div>
+          <h3>Sushi-Taura</h3>
+          <p class="ml-card-desc">Sushi contemporáneo en el corazón de Palma, mesa larga y producto fresco diario.</p>
+          <div class="ml-card-tags"><span>japonesa</span><span>palma centro</span><span>sake</span></div>
+        </div>
+        <div class="ml-card-foot"><span class="ml-card-stars">★★★★☆</span><span class="ml-card-count">89 reseñas</span></div>
+      </div>
+      <div class="ml-card">
+        <div class="ml-card-img"></div>
+        <div class="ml-card-body">
+          <div class="ml-card-top"><span class="ml-card-zone">Alcúdia</span><span class="ml-card-score">8.8</span></div>
+          <h3>Aticeli</h3>
+          <p class="ml-card-desc">Cocina mediterránea con menú cambiante y terraza con jardín. Producto de temporada.</p>
+          <div class="ml-card-tags"><span>mediterránea</span><span>terraza</span></div>
+        </div>
+        <div class="ml-card-foot"><span class="ml-card-stars">★★★★☆</span><span class="ml-card-count">64 reseñas</span></div>
+      </div>
+      <div class="ml-card">
+        <div class="ml-card-img"></div>
+        <div class="ml-card-body">
+          <div class="ml-card-top"><span class="ml-card-zone">Sa Batia</span><span class="ml-card-score">9.5</span></div>
+          <h3>Restaurante Il Paradiso</h3>
+          <p class="ml-card-desc">Clásico italiano con vistas y cocina de mercado. Uno de los más valorados del norte.</p>
+          <div class="ml-card-tags"><span>italiana</span><span>vistas</span><span>familia</span></div>
+        </div>
+        <div class="ml-card-foot"><span class="ml-card-stars">★★★★★</span><span class="ml-card-count">201 reseñas</span></div>
+      </div>
+      <div class="ml-card">
+        <div class="ml-card-img"></div>
+        <div class="ml-card-body">
+          <div class="ml-card-top"><span class="ml-card-zone">Palma</span><span class="ml-card-score">8.4</span></div>
+          <h3>La Tapera</h3>
+          <p class="ml-card-desc">Tapas de autor con raciones generosas y carta de vinos naturales bien curada.</p>
+          <div class="ml-card-tags"><span>tapas</span><span>vino natural</span></div>
+        </div>
+        <div class="ml-card-foot"><span class="ml-card-stars">★★★★☆</span><span class="ml-card-count">118 reseñas</span></div>
+      </div>
+      <div class="ml-card">
+        <div class="ml-card-img"></div>
+        <div class="ml-card-body">
+          <div class="ml-card-top"><span class="ml-card-zone">Palma</span><span class="ml-card-score">8.9</span></div>
+          <h3>Mar de Nudos Mediterranean</h3>
+          <p class="ml-card-desc">Mediterránea con más de 370 reseñas. Opción sólida para producto local de temporada.</p>
+          <div class="ml-card-tags"><span>mediterránea</span><span>local</span><span>cenas</span></div>
+        </div>
+        <div class="ml-card-foot"><span class="ml-card-stars">★★★★☆</span><span class="ml-card-count">371 reseñas</span></div>
+      </div>
+      <div class="ml-card">
+        <div class="ml-card-img"></div>
+        <div class="ml-card-body">
+          <div class="ml-card-top"><span class="ml-card-zone">Palma</span><span class="ml-card-score">9.1</span></div>
+          <h3>Bankai Palma</h3>
+          <p class="ml-card-desc">Japonesa fusión en Palma. Sala íntima, barra japonesa y coctelería asiática de altura.</p>
+          <div class="ml-card-tags"><span>japonesa</span><span>fusión</span><span>cócteles</span></div>
+        </div>
+        <div class="ml-card-foot"><span class="ml-card-stars">★★★★★</span><span class="ml-card-count">93 reseñas</span></div>
+      </div>
+    </div>
+    <div class="ml-load"><button>Cargar más restaurantes (28 restantes)</button></div>
+  </div>
+</div>

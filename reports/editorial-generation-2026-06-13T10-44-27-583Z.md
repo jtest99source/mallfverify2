@@ -1,0 +1,1019 @@
+# Editorial Generation Report
+
+Generated: 2026-06-13T10:44:27.578Z
+Dry run: no
+
+## Totals
+
+- Processed: 1000
+- Skipped: 0
+- Errors: 0
+
+## Processed
+
+- Palma Aquarium (palma-aquarium) - 0 reviews - minimal
+- Iberostar Waves Alcudia Park (iberostar-waves-alcudia-park) - 0 reviews - minimal
+- Mesón Ca´n Pedro, Génova (meson-ca-n-pedro-genova) - 0 reviews - minimal
+- Figueret Restaurant (figueret-restaurant) - 0 reviews - minimal
+- Iberostar Waves Club Cala Barca (iberostar-waves-club-cala-barca) - 0 reviews - minimal
+- Restaurante de Tapas & Paellas Casa Rufino (restaurante-de-tapas-paellas-casa-rufino) - 0 reviews - minimal
+- La Rosa Vermuteria & Colmado (la-rosa-vermuteria-colmado) - 0 reviews - minimal
+- Evasion Authentic (evasion-authentic) - 0 reviews - minimal
+- Iberostar Waves Cala Millor (iberostar-waves-cala-millor) - 0 reviews - minimal
+- Bar Andaluz (bar-andaluz) - 0 reviews - minimal
+- Blau Punta Reina Resort (blau-punta-reina-resort) - 0 reviews - minimal
+- Restaurante la Parada del Mar (restaurante-la-parada-del-mar) - 0 reviews - minimal
+- Club Mac (club-mac) - 0 reviews - minimal
+- Euforia Tapas (euforia-tapas) - 0 reviews - minimal
+- Hotel Hospes Maricel & Spa (hotel-hospes-maricel-spa) - 0 reviews - minimal
+- Cala Figuera (cala-figuera) - 0 reviews - minimal
+- Restaurante Los Arcos (restaurante-los-arcos) - 0 reviews - minimal
+- OMBU Paseo del Borne (ombu-paseo-del-borne) - 0 reviews - minimal
+- Bar España (bar-espana) - 0 reviews - minimal
+- Ca'n Pescador - Port de Pollença (ca-n-pescador-port-de-pollenca) - 0 reviews - minimal
+- Platja de Cala Millor (platja-de-cala-millor) - 0 reviews - minimal
+- Restaurante Casa Julio (restaurante-casa-julio) - 0 reviews - minimal
+- Sa Calobra (sa-calobra-2) - 0 reviews - minimal
+- Café Son Moll (cafe-son-moll) - 0 reviews - minimal
+- Call&Ride Bike Rentals & Tours (call-ride-bike-rentals-tours) - 0 reviews - minimal
+- Born 8 (born-8) - 0 reviews - minimal
+- Ecovinyassa (ecovinyassa) - 0 reviews - minimal
+- DAIKIYA (daikiya) - 0 reviews - minimal
+- Blau Colonia Sant Jordi (blau-colonia-sant-jordi) - 0 reviews - minimal
+- Marineland Mallorca (marineland-mallorca) - 0 reviews - minimal
+- Insotel Cala Mandía Resort & Spa (insotel-cala-mandia-resort-spa) - 0 reviews - minimal
+- Il Chiringo (il-chiringo) - 0 reviews - minimal
+- Ca'n Gavella (ca-n-gavella) - 0 reviews - minimal
+- Torre del Serral dels Falcons (torre-del-serral-dels-falcons) - 0 reviews - minimal
+- MAR Y MAR (mar-y-mar) - 0 reviews - minimal
+- IZAKAYA | High Japanese Cuisine (izakaya-high-japanese-cuisine) - 0 reviews - minimal
+- Noahs Lounge (noahs-lounge) - 0 reviews - minimal
+- La Lonja de Palma (la-lonja-de-palma) - 0 reviews - minimal
+- Puerta del Moll (puerta-del-moll) - 0 reviews - minimal
+- Quince restaurante y cantina (quince-restaurante-y-cantina) - 0 reviews - minimal
+- La Hacienda STEAK HOUSE (la-hacienda-steak-house) - 0 reviews - minimal
+- Rancho Grande Park (rancho-grande-park) - 0 reviews - minimal
+- Bon Vi Restaurant (bon-vi-restaurant) - 0 reviews - minimal
+- Green Garden Aparthotel (green-garden-aparthotel) - 0 reviews - minimal
+- Hipotels Mediterráneo (hipotels-mediterraneo) - 0 reviews - minimal
+- El Patio (el-patio-2) - 0 reviews - minimal
+- Bazaar (bazaar) - 0 reviews - minimal
+- Hípico Cala Rajada-Eddys Reitstall (hipico-cala-rajada-eddys-reitstall) - 0 reviews - minimal
+- Castillo Hotel Son Vida, a Luxury Collection Hotel, Mallorca (castillo-hotel-son-vida-a-luxury-collection-hotel-mallorca) - 0 reviews - minimal
+- RENT YOUR ADVENTURE-Die Wrangler Jeep Safari-Mallorca (rent-your-adventure-die-wrangler-jeep-safari-mallorca) - 0 reviews - minimal
+- La Bodeguilla (la-bodeguilla) - 0 reviews - minimal
+- La Botana (la-botana) - 0 reviews - minimal
+- Grupotel Gran Vista & Spa (grupotel-gran-vista-spa) - 0 reviews - minimal
+- El Fogon7 (el-fogon7) - 0 reviews - minimal
+- Hipotels Hipocampo Playa (hipotels-hipocampo-playa) - 0 reviews - minimal
+- Scratch - Tapas gourmet (scratch-tapas-gourmet) - 0 reviews - minimal
+- El Perrito (el-perrito) - 0 reviews - minimal
+- Restaurante Bistro Mar Port d'Alcúdia (restaurante-bistro-mar-port-d-alcudia) - 0 reviews - minimal
+- JUNGLE PARC MALLORCA Parque forestal de aventuras y tirolinas (jungle-parc-mallorca-parque-forestal-de-aventuras-y-tirolinas) - 0 reviews - minimal
+- FERGUS Club Europa (fergus-club-europa) - 0 reviews - minimal
+- Grupotel Parc Natural & Spa (grupotel-parc-natural-spa) - 0 reviews - minimal
+- Hotel Nixe Palace (hotel-nixe-palace) - 0 reviews - minimal
+- Chalet Siena (chalet-siena) - 0 reviews - minimal
+- MI QUERENCIA KAREN (mi-querencia-karen) - 0 reviews - minimal
+- BISTRO MERCAT (bistro-mercat) - 0 reviews - minimal
+- Tonga Tower Design Hotel & Suites (tonga-tower-design-hotel-suites) - 0 reviews - minimal
+- La Romaguera Restaurant (la-romaguera-restaurant) - 0 reviews - minimal
+- Bar Cervecería Es Pontàs (bar-cerveceria-es-pontas) - 0 reviews - minimal
+- El Ambigú (el-ambigu) - 0 reviews - minimal
+- Kingfisher restaurant (kingfisher-restaurant) - 0 reviews - minimal
+- Caló des Moro (calo-des-moro) - 0 reviews - minimal
+- Hipotels Cala Millor Park (hipotels-cala-millor-park) - 0 reviews - minimal
+- Grupotel Marítimo (grupotel-maritimo) - 0 reviews - minimal
+- Restaurant Lluna 36 (restaurant-lluna-36) - 0 reviews - minimal
+- Valentin Grand Park Suite Hotel (valentin-grand-park-suite-hotel) - 0 reviews - minimal
+- Grupotel Aguait Resort & Spa (grupotel-aguait-resort-spa) - 0 reviews - minimal
+- Don Neko Sushi (don-neko-sushi) - 0 reviews - minimal
+- Cala Gat (cala-gat) - 0 reviews - minimal
+- FORN de Sant Joan (forn-de-sant-joan) - 0 reviews - minimal
+- Restaurant Vinicius (restaurant-vinicius) - 0 reviews - minimal
+- Bar Restaurante TO-DO (bar-restaurante-to-do) - 0 reviews - minimal
+- Restaurante las Tres Palas Grill (restaurante-las-tres-palas-grill) - 0 reviews - minimal
+- No frills Excursions Port Alcudia (no-frills-excursions-port-alcudia) - 0 reviews - minimal
+- Mar y Paz (mar-y-paz) - 0 reviews - minimal
+- Fundación Juan March Palma (fundacion-juan-march-palma) - 0 reviews - minimal
+- Ca'n Pescador - Playa de Muro (ca-n-pescador-playa-de-muro) - 0 reviews - minimal
+- Le Seazon bistro (le-seazon-bistro) - 0 reviews - minimal
+- Ranxo Ses Roques (ranxo-ses-roques) - 0 reviews - minimal
+- Casa Enrique Tapas Bar (casa-enrique-tapas-bar) - 0 reviews - minimal
+- Cala Millor Garden Hotel (cala-millor-garden-hotel) - 0 reviews - minimal
+- Fussio Lounge C B (fussio-lounge-c-b) - 0 reviews - minimal
+- Cassai Ses Salines (cassai-ses-salines) - 0 reviews - minimal
+- Restaurant Miramar (ALCUDIA) (restaurant-miramar-alcudia) - 0 reviews - minimal
+- Hoposa Villaconcha (hoposa-villaconcha) - 0 reviews - minimal
+- BLUESEA Gran Playa (bluesea-gran-playa) - 0 reviews - minimal
+- MLL Mediterranean Bay (mll-mediterranean-bay) - 0 reviews - minimal
+- Japo Santa Catalina Adults Ony +9 (japo-santa-catalina-adults-ony-9) - 0 reviews - minimal
+- Stay Restaurant (stay-restaurant) - 0 reviews - minimal
+- Valentin Reina Paguera (valentin-reina-paguera) - 0 reviews - minimal
+- Pazo do pulpo (pazo-do-pulpo) - 0 reviews - minimal
+- Cucum Beach House (cucum-beach-house) - 0 reviews - minimal
+- CM Castell de Mar (cm-castell-de-mar) - 0 reviews - minimal
+- allsun Hotel Bella Peguera (allsun-hotel-bella-peguera) - 0 reviews - minimal
+- miga de nube (miga-de-nube) - 0 reviews - minimal
+- Hipotels Hipocampo Palace (hipotels-hipocampo-palace) - 0 reviews - minimal
+- El Puerto (el-puerto) - 0 reviews - minimal
+- Globales Janeiro (globales-janeiro) - 0 reviews - minimal
+- El Sabor (el-sabor) - 0 reviews - minimal
+- Restaurante Marc Fosh (restaurante-marc-fosh) - 0 reviews - minimal
+- Sa Granja Cafè - Restaurant (sa-granja-cafe-restaurant) - 0 reviews - minimal
+- Hotel Almudaina (hotel-almudaina) - 0 reviews - minimal
+- Roadhouse (roadhouse) - 0 reviews - minimal
+- Ciao Ciao (ciao-ciao) - 0 reviews - minimal
+- Parc Natural de la Península de Llevant (parc-natural-de-la-peninsula-de-llevant) - 0 reviews - minimal
+- CM Playa del Moro (cm-playa-del-moro) - 0 reviews - minimal
+- ES P'DAL · RESTAURANT (es-p-dal-restaurant) - 0 reviews - minimal
+- Hotel & Apartamentos Vista Park (hotel-apartamentos-vista-park) - 0 reviews - minimal
+- Nirador (nirador) - 0 reviews - minimal
+- La Pinta Bar-Restaurant (la-pinta-bar-restaurant) - 0 reviews - minimal
+- Pippers Restaurant Mediterrani (pippers-restaurant-mediterrani) - 0 reviews - minimal
+- Restaurante-Residencia Son Floriana (restaurante-residencia-son-floriana) - 0 reviews - minimal
+- Sa Cova (sa-cova) - 0 reviews - minimal
+- Platja de Formentor (platja-de-formentor) - 0 reviews - minimal
+- Restaurante Ola del Mar (restaurante-ola-del-mar) - 0 reviews - minimal
+- Tres Llunes (tres-llunes) - 0 reviews - minimal
+- Mar Hotels Playa Mar & Spa (mar-hotels-playa-mar-spa) - 0 reviews - minimal
+- GOJET Andratx Jet Ski Tours (gojet-andratx-jet-ski-tours) - 0 reviews - minimal
+- S'Arenal Portocolom (s-arenal-portocolom) - 0 reviews - minimal
+- Restaurante Ca n'Eduardo (restaurante-ca-n-eduardo) - 0 reviews - minimal
+- allsun Hotel Bahía del Este (allsun-hotel-bahia-del-este) - 0 reviews - minimal
+- Nakar Hotel (nakar-hotel) - 0 reviews - minimal
+- DAICA restaurant & turismo de interior (daica-restaurant-turismo-de-interior) - 0 reviews - minimal
+- El Chiringuito Beach House (el-chiringuito-beach-house) - 0 reviews - minimal
+- La Trapa (la-trapa) - 0 reviews - minimal
+- La Pala Rossa (la-pala-rossa) - 0 reviews - minimal
+- Il chiringo sunset (il-chiringo-sunset) - 0 reviews - minimal
+- O96 (o96) - 0 reviews - minimal
+- Bodega La Rambla (bodega-la-rambla) - 0 reviews - minimal
+- Ca'n Uetam (ca-n-uetam) - 0 reviews - minimal
+- Hotel Son Trobat (hotel-son-trobat) - 0 reviews - minimal
+- Goia (goia) - 0 reviews - minimal
+- La Santa (la-santa) - 0 reviews - minimal
+- La Vista Cala Ratjada (la-vista-cala-ratjada) - 0 reviews - minimal
+- Xiringuito (xiringuito) - 0 reviews - minimal
+- K8 Sushi Arenal (k8-sushi-arenal) - 0 reviews - minimal
+- Dinosaurland (dinosaurland) - 0 reviews - minimal
+- SALVAJE | Sushi Palma (salvaje-sushi-palma) - 0 reviews - minimal
+- Restaurante La Gritta (restaurante-la-gritta) - 0 reviews - minimal
+- Steakhouse Tango (steakhouse-tango) - 0 reviews - minimal
+- Es Verger (es-verger) - 0 reviews - minimal
+- Hotel & Spa S'Entrador Playa (hotel-spa-s-entrador-playa) - 0 reviews - minimal
+- Harajuku Gastro Sushi (harajuku-gastro-sushi) - 0 reviews - minimal
+- Monnaber Nou Finca hotel & Spa (monnaber-nou-finca-hotel-spa) - 0 reviews - minimal
+- Llaüt Beach Bar (llaut-beach-bar) - 0 reviews - minimal
+- Terragust (terragust) - 0 reviews - minimal
+- Restaurante Mombo (restaurante-mombo) - 0 reviews - minimal
+- Ca'n Pintxo Restaurant (ca-n-pintxo-restaurant) - 0 reviews - minimal
+- Sa Ferreria (sa-ferreria) - 0 reviews - minimal
+- Valentin Somni Hotel & Suites (valentin-somni-hotel-suites) - 0 reviews - minimal
+- Hotel Capricho & SPA (hotel-capricho-spa) - 0 reviews - minimal
+- CM Mallorca Palace (cm-mallorca-palace) - 0 reviews - minimal
+- Restaurante en Port D' Alcudia S'OLI VERGE (restaurante-en-port-d-alcudia-s-oli-verge) - 0 reviews - minimal
+- Bondi Beach Magaluf (bondi-beach-magaluf) - 0 reviews - minimal
+- Restaurante 1955 (restaurante-1955) - 0 reviews - minimal
+- Vintasty (vintasty) - 0 reviews - minimal
+- Restaurant Es Pati (restaurant-es-pati) - 0 reviews - minimal
+- Universal Hotel Marqués (universal-hotel-marques) - 0 reviews - minimal
+- Hotel THB Felip (hotel-thb-felip) - 0 reviews - minimal
+- El Galeon Taberna (el-galeon-taberna) - 0 reviews - minimal
+- Sunlife Events Boat Charter Mallorca (sunlife-events-boat-charter-mallorca) - 0 reviews - minimal
+- Protur Naisa Palma Hotel (protur-naisa-palma-hotel) - 0 reviews - minimal
+- Ca'n Llimona (ca-n-llimona) - 0 reviews - minimal
+- Palma Jump (palma-jump) - 0 reviews - minimal
+- Restaurante Bonsol (restaurante-bonsol) - 0 reviews - minimal
+- Cervecería Pedrín (cerveceria-pedrin) - 0 reviews - minimal
+- Salitre Can Picafort (salitre-can-picafort) - 0 reviews - minimal
+- Restaurante Palmitos (restaurante-palmitos) - 0 reviews - minimal
+- Il Gambero (il-gambero) - 0 reviews - minimal
+- Hotel THB Gran Bahía (hotel-thb-gran-bahia) - 0 reviews - minimal
+- Hotel Rural S'Olivaret & Spa (hotel-rural-s-olivaret-spa) - 0 reviews - minimal
+- Chiringuito Cala Anguila (chiringuito-cala-anguila) - 0 reviews - minimal
+- Vibes by Quince Restaurante (vibes-by-quince-restaurante) - 0 reviews - minimal
+- The Beach Bar (the-beach-bar) - 0 reviews - minimal
+- Restaurante Chicos del Mar (restaurante-chicos-del-mar) - 0 reviews - minimal
+- AQUA Restaurant | Paellas & Cocktails en Alcudia (aqua-restaurant-paellas-cocktails-en-alcudia) - 0 reviews - minimal
+- Happy Dream Bar Restaurante (happy-dream-bar-restaurante) - 0 reviews - minimal
+- Restaurante Mirador de la Victoria (restaurante-mirador-de-la-victoria) - 0 reviews - minimal
+- Bodega Ribas (bodega-ribas) - 0 reviews - minimal
+- Leonardo Royal Hotel Mallorca (leonardo-royal-hotel-mallorca) - 0 reviews - minimal
+- Crazy Tours & Rent (crazy-tours-rent) - 0 reviews - minimal
+- Universal Hotel Lido Park & Spa (universal-hotel-lido-park-spa) - 0 reviews - minimal
+- La Casita Bistrot (la-casita-bistrot) - 0 reviews - minimal
+- Take Japanese Restaurant (take-japanese-restaurant) - 0 reviews - minimal
+- 5illes BEACH&SUNSET (PLAYA) (5illes-beach-sunset-playa) - 0 reviews - minimal
+- Hotel Estrella & Coral de Mar Resort & Spa (hotel-estrella-coral-de-mar-resort-spa) - 0 reviews - minimal
+- Restaurante La Cabaña – Puerto de Alcúdia (restaurante-la-cabana-puerto-de-alcudia) - 0 reviews - minimal
+- Restaurante Emilio Innobar - Restaurante cocina de fusión (restaurante-emilio-innobar-restaurante-cocina-de-fusion) - 0 reviews - minimal
+- Lili's | Brunch & Cocktails (lili-s-brunch-cocktails) - 0 reviews - minimal
+- Experimenta Mallorca (experimenta-mallorca) - 0 reviews - minimal
+- Hipotels Said (hipotels-said) - 0 reviews - minimal
+- El Puentecito Mallorca (el-puentecito-mallorca) - 0 reviews - minimal
+- Cafè Inca (cafe-inca) - 0 reviews - minimal
+- Hotel Cala Bona (hotel-cala-bona) - 0 reviews - minimal
+- Sea Me Beach Restaurant Bar (sea-me-beach-restaurant-bar) - 0 reviews - minimal
+- Sóller Center (soller-center) - 0 reviews - minimal
+- Hotel Forn Nou (hotel-forn-nou) - 0 reviews - minimal
+- Botanicactus (botanicactus) - 0 reviews - minimal
+- RESTAURANTE MÓNACO (restaurante-monaco) - 0 reviews - minimal
+- Hotel Creu de Tau Art & Spa (hotel-creu-de-tau-art-spa) - 0 reviews - minimal
+- Hotel THB Guya Playa (hotel-thb-guya-playa) - 0 reviews - minimal
+- Zafiro Can Picafort (zafiro-can-picafort) - 0 reviews - minimal
+- Prinsotel La Pineda Hotel Apartamentos (prinsotel-la-pineda-hotel-apartamentos) - 0 reviews - minimal
+- Can Jano Vermutería (can-jano-vermuteria) - 0 reviews - minimal
+- Grupotel Los Príncipes & Spa (grupotel-los-principes-spa) - 0 reviews - minimal
+- Restaurant Ca'n Salvador (restaurant-ca-n-salvador) - 0 reviews - minimal
+- Grupotel Amapola (grupotel-amapola) - 0 reviews - minimal
+- Grupotel Natura Playa (grupotel-natura-playa) - 0 reviews - minimal
+- Sa Trinxa (sa-trinxa) - 0 reviews - minimal
+- Restaurante las Sirenas (restaurante-las-sirenas) - 0 reviews - minimal
+- Globales Concord Hotel & Spa (globales-concord-hotel-spa) - 0 reviews - minimal
+- Jardín Botánico (jardin-botanico) - 0 reviews - minimal
+- Bodegas Macià Batle (bodegas-macia-batle) - 0 reviews - minimal
+- Restaurant Es Guix (restaurant-es-guix) - 0 reviews - minimal
+- Restaurant Ca'n Boqueta (restaurant-ca-n-boqueta) - 0 reviews - minimal
+- Rancho Bonanza Cala Millor (rancho-bonanza-cala-millor) - 0 reviews - minimal
+- Bananas Son Bauló (bananas-son-baulo) - 0 reviews - minimal
+- Hotel Son Bauló (hotel-son-baulo) - 0 reviews - minimal
+- FERGUS Style Soller Beach (fergus-style-soller-beach) - 0 reviews - minimal
+- Marins Beach Club (marins-beach-club) - 0 reviews - minimal
+- Mar Hotels Playa de Muro Suites (mar-hotels-playa-de-muro-suites) - 0 reviews - minimal
+- Hotel Exagon Park (hotel-exagon-park) - 0 reviews - minimal
+- Restaurante Molí de Sal campos (restaurante-moli-de-sal-campos) - 0 reviews - minimal
+- Portodrach Aparthotel & Suites (portodrach-aparthotel-suites) - 0 reviews - minimal
+- Aparthotel La Pérgola (aparthotel-la-pergola) - 0 reviews - minimal
+- Ses Àncores | Cocina tradicional | Pescado fresco| Paella | Spanisches Restaurant Cala Ratjada | Hafen | Fisch | Tapas | (ses-ancores-cocina-tradicional-pescado-fresco-paella-spanisches-restaurant-cala-ratjada-hafen-fisch-tapas) - 0 reviews - minimal
+- Velero Rafael Verdera (velero-rafael-verdera) - 0 reviews - minimal
+- MAS QUE PIZZA PORTO CRISTO (mas-que-pizza-porto-cristo) - 0 reviews - minimal
+- Hotel Cala d'Or Playa (hotel-cala-d-or-playa) - 0 reviews - minimal
+- Santina Brunch (santina-brunch) - 0 reviews - minimal
+- INNSiDE by Meliá Calviá Beach (innside-by-melia-calvia-beach) - 0 reviews - minimal
+- BQ Delfín Azul Hotel (bq-delfin-azul-hotel) - 0 reviews - minimal
+- Brick Palma (brick-palma) - 0 reviews - minimal
+- Protur Turó Pins Hotel (protur-turo-pins-hotel) - 0 reviews - minimal
+- Playero (playero) - 0 reviews - minimal
+- Welikehotel Marfil Playa (welikehotel-marfil-playa) - 0 reviews - minimal
+- allsun Hotel Orient Beach (allsun-hotel-orient-beach) - 0 reviews - minimal
+- Aparthotel & Hotel Isla de Cabrera (aparthotel-hotel-isla-de-cabrera) - 0 reviews - minimal
+- Petit Hotel Ses Rotges (petit-hotel-ses-rotges) - 0 reviews - minimal
+- Es Modern (es-modern) - 0 reviews - minimal
+- The Helicopter Centre (the-helicopter-centre) - 0 reviews - minimal
+- Cas Comte Suites & Spa (cas-comte-suites-spa) - 0 reviews - minimal
+- Restaurante El Paradiso (restaurante-el-paradiso) - 0 reviews - minimal
+- The Boc Hostels-City (the-boc-hostels-city) - 0 reviews - minimal
+- Can Prunera Sóller, Casa Modernista (can-prunera-soller-casa-modernista) - 0 reviews - minimal
+- Aimia Hotel Port de Sóller (aimia-hotel-port-de-soller) - 0 reviews - minimal
+- Hotel Honucai (hotel-honucai) - 0 reviews - minimal
+- Marui Sushi Bar & Restaurante Japonés (marui-sushi-bar-restaurante-japones) - 0 reviews - minimal
+- Ars Magna Bleisure Hotel **** (ars-magna-bleisure-hotel) - 0 reviews - minimal
+- Food Tours Balearics-Mallorca (food-tours-balearics-mallorca) - 0 reviews - minimal
+- Rancho Bonanza (rancho-bonanza) - 0 reviews - minimal
+- Hotel Joan Miró Museum (hotel-joan-miro-museum) - 0 reviews - minimal
+- BQ Augusta Hotel (bq-augusta-hotel) - 0 reviews - minimal
+- rö nikkei (ro-nikkei) - 0 reviews - minimal
+- Universal Grand León & Spa (universal-grand-leon-spa) - 0 reviews - minimal
+- Hotel Continental Valldemossa (hotel-continental-valldemossa) - 0 reviews - minimal
+- Nivia Born Boutique Hotel (nivia-born-boutique-hotel) - 0 reviews - minimal
+- Hotel Feliz (hotel-feliz) - 0 reviews - minimal
+- Hotel Kyrat Amàrac (hotel-kyrat-amarac) - 0 reviews - minimal
+- Concepció by Nobis (concepcio-by-nobis) - 0 reviews - minimal
+- Restaurante Cas Carreter (restaurante-cas-carreter) - 0 reviews - minimal
+- La Bodeguita (la-bodeguita) - 0 reviews - minimal
+- Bordoy Alcudia Port Suites (Only Adults +16) (bordoy-alcudia-port-suites-only-adults-16) - 0 reviews - minimal
+- SA FOGANYA DE LLUCMAJOR (sa-foganya-de-llucmajor) - 0 reviews - minimal
+- Secrets Mallorca Villamil Resort & Spa (secrets-mallorca-villamil-resort-spa) - 0 reviews - minimal
+- Hotel Colonial (hotel-colonial) - 0 reviews - minimal
+- Kimpton Aysla Mallorca (kimpton-aysla-mallorca) - 0 reviews - minimal
+- La Trastienda Mallorca (la-trastienda-mallorca) - 0 reviews - minimal
+- Forum Boutique hotel & Spa (forum-boutique-hotel-spa) - 0 reviews - minimal
+- Boutique Hotel El Coto (boutique-hotel-el-coto) - 0 reviews - minimal
+- Mestís Restaurant · Santa Catalina (mestis-restaurant-santa-catalina) - 0 reviews - minimal
+- Bar Restaurante Bonaire (bar-restaurante-bonaire) - 0 reviews - minimal
+- allsun Hotel Paguera Park (allsun-hotel-paguera-park) - 0 reviews - minimal
+- Mallorca Diving Adventure (mallorca-diving-adventure) - 0 reviews - minimal
+- Es Petit de Valldemossa (es-petit-de-valldemossa) - 0 reviews - minimal
+- Restaurant Roland (restaurant-roland) - 0 reviews - minimal
+- Hotel Girasol (hotel-girasol) - 0 reviews - minimal
+- Restaurante Paparazzi (restaurante-paparazzi) - 0 reviews - minimal
+- Spacefantasy (spacefantasy) - 0 reviews - minimal
+- Més Aventura (mes-aventura) - 0 reviews - minimal
+- Talaia d'Alcúdia (talaia-d-alcudia) - 0 reviews - minimal
+- Tomir Portals Suites-Adults Only (+16) (tomir-portals-suites-adults-only-16) - 0 reviews - minimal
+- Reserva Park (reserva-park) - 0 reviews - minimal
+- allsun Hotel Cristóbal Colón (allsun-hotel-cristobal-colon) - 0 reviews - minimal
+- H10 Blue Mar Boutique Hotel (h10-blue-mar-boutique-hotel) - 0 reviews - minimal
+- Hotel Can Simoneta (hotel-can-simoneta) - 0 reviews - minimal
+- Jetski on Delivery (jetski-on-delivery) - 0 reviews - minimal
+- Rock and Water Mallorca (rock-and-water-mallorca) - 0 reviews - minimal
+- Bahía Suites Camp de Mar (bahia-suites-camp-de-mar) - 0 reviews - minimal
+- Four Seasons Resort Mallorca at Formentor (four-seasons-resort-mallorca-at-formentor) - 0 reviews - minimal
+- 2 Wheel Tours Palma (2-wheel-tours-palma) - 0 reviews - minimal
+- Nala Brunch & Coffee (nala-brunch-coffee) - 0 reviews - minimal
+- Universal Hotel Aquamarin (universal-hotel-aquamarin) - 0 reviews - minimal
+- Platja Palmira (platja-palmira) - 0 reviews - minimal
+- allsun Hotel Lux de Mar (allsun-hotel-lux-de-mar) - 0 reviews - minimal
+- Grand Hotel Son Net (grand-hotel-son-net) - 0 reviews - minimal
+- Coral Boats Mallorca (coral-boats-mallorca) - 0 reviews - minimal
+- Restaurant La Caracola (restaurant-la-caracola) - 0 reviews - minimal
+- Restaurante UNIK | Pizzeria y Arroceria (restaurante-unik-pizzeria-y-arroceria) - 0 reviews - minimal
+- La Cafetería by La Goleta (la-cafeteria-by-la-goleta) - 0 reviews - minimal
+- Blauxell Mallorca (blauxell-mallorca) - 0 reviews - minimal
+- Sunprime pollensa bay (sunprime-pollensa-bay) - 0 reviews - minimal
+- Ca'n Beneït|Iconic Retreat (ca-n-beneit-iconic-retreat) - 0 reviews - minimal
+- Questquest (questquest) - 0 reviews - minimal
+- Hotel Glòria de Sant Jaume (hotel-gloria-de-sant-jaume) - 0 reviews - minimal
+- Octopus Mallorca (octopus-mallorca) - 0 reviews - minimal
+- Jetfun Speedboat Adventure (jetfun-speedboat-adventure) - 0 reviews - minimal
+- Diving Dragonera (diving-dragonera) - 0 reviews - minimal
+- El Llorenç Parc de la Mar (+16) (el-llorenc-parc-de-la-mar-16) - 0 reviews - minimal
+- Grupotel Montecarlo (grupotel-montecarlo) - 0 reviews - minimal
+- Contrabando Llucmajor (contrabando-llucmajor) - 0 reviews - minimal
+- Boutique Hostal Mistral (boutique-hostal-mistral) - 0 reviews - minimal
+- Los Poetas Andaluces (los-poetas-andaluces) - 0 reviews - minimal
+- Ca s'Hereu Restaurante Cafè (ca-s-hereu-restaurante-cafe) - 0 reviews - minimal
+- Hotel & Restaurant Jardí d'Artà (hotel-restaurant-jardi-d-arta) - 0 reviews - minimal
+- EIX Platja Daurada Hotel & Spa (eix-platja-daurada-hotel-spa) - 0 reviews - minimal
+- Hotel THB Gran Playa (hotel-thb-gran-playa) - 0 reviews - minimal
+- Cabot Pollensa Park Spa (cabot-pollensa-park-spa) - 0 reviews - minimal
+- Grupotel Alcudia Pins (grupotel-alcudia-pins) - 0 reviews - minimal
+- Pomelia Sea Lab Mallorca (pomelia-sea-lab-mallorca) - 0 reviews - minimal
+- Can Canals Finca Hotel & SPA (can-canals-finca-hotel-spa) - 0 reviews - minimal
+- Fantasy Park (fantasy-park) - 0 reviews - minimal
+- Hotel Calatrava (hotel-calatrava) - 0 reviews - minimal
+- Hotel Es Molí (hotel-es-moli) - 0 reviews - minimal
+- Landhotel Can Davero (landhotel-can-davero) - 0 reviews - minimal
+- RESTAURANT CAN TAMANY (restaurant-can-tamany) - 0 reviews - minimal
+- Hotel Es Port (hotel-es-port) - 0 reviews - minimal
+- THB Bamboo Alcudia (thb-bamboo-alcudia) - 0 reviews - minimal
+- Gran Hotel Sóller (gran-hotel-soller) - 0 reviews - minimal
+- Fum Arroceria, Cocina De Autor Angel Fita (fum-arroceria-cocina-de-autor-angel-fita) - 0 reviews - minimal
+- Agroturismo Ses Illes (agroturismo-ses-illes) - 0 reviews - minimal
+- Restaurante La Cubita (restaurante-la-cubita) - 0 reviews - minimal
+- Trendhotel Alcudia (trendhotel-alcudia) - 0 reviews - minimal
+- Can Alomar Hotel (can-alomar-hotel) - 0 reviews - minimal
+- MAREA ITALIANA Grill & Drinks (marea-italiana-grill-drinks) - 0 reviews - minimal
+- Deportes de Agua|Kitesurfing, Windsurfing, Wingfoil, Paddlesurf, Catamaran Center (deportes-de-agua-kitesurfing-windsurfing-wingfoil-paddlesurf-catamaran-center) - 0 reviews - minimal
+- Albatros Diving (albatros-diving) - 0 reviews - minimal
+- Globales Isabel (globales-isabel) - 0 reviews - minimal
+- Bordoy Continental Palma (bordoy-continental-palma) - 0 reviews - minimal
+- Hotel Morito (hotel-morito) - 0 reviews - minimal
+- Kayak Tour Mallorca (kayak-tour-mallorca-2) - 0 reviews - minimal
+- Bodegas Bordoy (bodegas-bordoy) - 0 reviews - minimal
+- ARUX (arux) - 0 reviews - minimal
+- Ses Golondrines (ses-golondrines) - 0 reviews - minimal
+- Allsun Hotel Sumba (allsun-hotel-sumba) - 0 reviews - minimal
+- East Coast Divers Mallorca (east-coast-divers-mallorca) - 0 reviews - minimal
+- Paguera Treff Boutique Hotel (paguera-treff-boutique-hotel) - 0 reviews - minimal
+- Grupotel Mallorca Mar (grupotel-mallorca-mar) - 0 reviews - minimal
+- Bar Playa (bar-playa) - 0 reviews - minimal
+- Restaurante Nevada (restaurante-nevada) - 0 reviews - minimal
+- Mills and Honey Cycling Mallorca (mills-and-honey-cycling-mallorca) - 0 reviews - minimal
+- Hotel Club S'Illot (hotel-club-s-illot) - 0 reviews - minimal
+- Hotel Eden Soller (hotel-eden-soller) - 0 reviews - minimal
+- Bar Can Joan Frau (bar-can-joan-frau) - 0 reviews - minimal
+- Hotel Cort (hotel-cort) - 0 reviews - minimal
+- Don Denís (don-denis) - 0 reviews - minimal
+- Cafeteria Moni (cafeteria-moni) - 0 reviews - minimal
+- The Boc Hostels-Palma (the-boc-hostels-palma) - 0 reviews - minimal
+- Yartan Boutique Hotel (yartan-boutique-hotel) - 0 reviews - minimal
+- PADI-Barracuda Diving Mallorca (padi-barracuda-diving-mallorca) - 0 reviews - minimal
+- Hotel Eden Palma Playa (hotel-eden-palma-playa) - 0 reviews - minimal
+- Jet Ski For Rent Santa Ponsa (Mallorca) (jet-ski-for-rent-santa-ponsa-mallorca) - 0 reviews - minimal
+- Hipotels Hipocampo (hipotels-hipocampo) - 0 reviews - minimal
+- La Bodeguilla casa de comidas Arenal (la-bodeguilla-casa-de-comidas-arenal) - 0 reviews - minimal
+- Smy Portocolom (smy-portocolom) - 0 reviews - minimal
+- Restaurant Can Arabí (restaurant-can-arabi) - 0 reviews - minimal
+- HSM Son Verí (hsm-son-veri) - 0 reviews - minimal
+- Valldemossa Hotel (valldemossa-hotel) - 0 reviews - minimal
+- Nereida Caribia (nereida-caribia) - 0 reviews - minimal
+- NATURE BOAT PORTOCOLOM MALLORCA (nature-boat-portocolom-mallorca) - 0 reviews - minimal
+- La Goleta Hotel de Mar (la-goleta-hotel-de-mar) - 0 reviews - minimal
+- Portals Hills Boutique Hotel Mallorca (portals-hills-boutique-hotel-mallorca) - 0 reviews - minimal
+- Can Cota Suites & Spa-Turismo de interior (can-cota-suites-spa-turismo-de-interior) - 0 reviews - minimal
+- La Finca Son Antem (la-finca-son-antem) - 0 reviews - minimal
+- Hotel Stil Picafort Park (hotel-stil-picafort-park) - 0 reviews - minimal
+- El Guía Hotel & Restaurant (el-guia-hotel-restaurant) - 0 reviews - minimal
+- Grupotel Playa Camp de Mar (grupotel-playa-camp-de-mar) - 0 reviews - minimal
+- Hotel JS Sol de Alcúdia (hotel-js-sol-de-alcudia) - 0 reviews - minimal
+- BQ Paguera Boutique Hotel-ONLY ADULTS (bq-paguera-boutique-hotel-only-adults) - 0 reviews - minimal
+- Mamboo Hotel Cala Ratjada (mamboo-hotel-cala-ratjada) - 0 reviews - minimal
+- Monkey Buggy Garage Cala Millor, Mallorca (monkey-buggy-garage-cala-millor-mallorca) - 0 reviews - minimal
+- BASTIAN CONTRARI (bastian-contrari) - 0 reviews - minimal
+- FINCA BINIAGUAL (finca-biniagual) - 0 reviews - minimal
+- Ca N'Aí (ca-n-ai) - 0 reviews - minimal
+- Hotel Hoposa Pollentia (hotel-hoposa-pollentia) - 0 reviews - minimal
+- Parque de la Mar (parque-de-la-mar) - 0 reviews - minimal
+- Hotel El Vicenç de la Mar (hotel-el-vicenc-de-la-mar) - 0 reviews - minimal
+- BO Hotel Palma (bo-hotel-palma) - 0 reviews - minimal
+- Bistro Noir | Restaurant Cala d'Or (bistro-noir-restaurant-cala-d-or) - 0 reviews - minimal
+- Restaurante del mar (restaurante-del-mar) - 0 reviews - minimal
+- Scuba Mallorca PADI 5 Star IDC (scuba-mallorca-padi-5-star-idc) - 0 reviews - minimal
+- Finca Hotel Rural Es Turó (finca-hotel-rural-es-turo) - 0 reviews - minimal
+- Villa Chiquita Hotel Resort & Spa-Adults Only (+12) (villa-chiquita-hotel-resort-spa-adults-only-12) - 0 reviews - minimal
+- MHOUSE Hotel Palma (mhouse-hotel-palma) - 0 reviews - minimal
+- Tomates Verdes Restaurant, Llucmajor (tomates-verdes-restaurant-llucmajor) - 0 reviews - minimal
+- Villa Columbus restaurant Paguera (villa-columbus-restaurant-paguera) - 0 reviews - minimal
+- APARTHOTEL DUNES PLATJA, S.L (aparthotel-dunes-platja-s-l) - 0 reviews - minimal
+- Ca n'Alexandre-Turismo de Interior (ca-n-alexandre-turismo-de-interior) - 0 reviews - minimal
+- Porta de Mallorca (porta-de-mallorca) - 0 reviews - minimal
+- Sóller Divers (soller-divers) - 0 reviews - minimal
+- Chiringuito sillot (chiringuito-sillot) - 0 reviews - minimal
+- La Vida Peguera Restaurant & Beach Lounge (la-vida-peguera-restaurant-beach-lounge) - 0 reviews - minimal
+- Carrossa Hotel & Spa (carrossa-hotel-spa) - 0 reviews - minimal
+- Universal Hotel Perla (universal-hotel-perla) - 0 reviews - minimal
+- Cala Santanyí Diving Center Mallorca (cala-santanyi-diving-center-mallorca) - 0 reviews - minimal
+- Sa Pedra (sa-pedra) - 0 reviews - minimal
+- Dive Inn Mallorca Tauchschule Tauchbasis für Tauchen Tauchschnupperkurs PADI Open Water (dive-inn-mallorca-tauchschule-tauchbasis-fur-tauchen-tauchschnupperkurs-padi-open-water) - 0 reviews - minimal
+- Sea Side Restaurante (sea-side-restaurante) - 0 reviews - minimal
+- The Sea Club (the-sea-club) - 0 reviews - minimal
+- Palma Suites Hotel Residence (palma-suites-hotel-residence) - 0 reviews - minimal
+- Hipotels Apartamentos Cala Bona (hipotels-apartamentos-cala-bona) - 0 reviews - minimal
+- Rancho Jaume (rancho-jaume) - 0 reviews - minimal
+- Hotel Catalonia del Mar-Adults Only (hotel-catalonia-del-mar-adults-only) - 0 reviews - minimal
+- Alcazar Hotel Soller (alcazar-hotel-soller) - 0 reviews - minimal
+- Hostel Sóller (hostel-soller) - 0 reviews - minimal
+- Fun Quad Mallorca (fun-quad-mallorca) - 0 reviews - minimal
+- Arroceria Casa Aurelio (arroceria-casa-aurelio) - 0 reviews - minimal
+- MOTOURS VIAJES EN MOTO (motours-viajes-en-moto) - 0 reviews - minimal
+- Globales Cala Bona (globales-cala-bona) - 0 reviews - minimal
+- HSM Lago Park (hsm-lago-park) - 0 reviews - minimal
+- RESTAURANTE YUMEE (restaurante-yumee) - 0 reviews - minimal
+- S'Hort de Son Caulelles (s-hort-de-son-caulelles) - 0 reviews - minimal
+- Bar s'Hotel (bar-s-hotel) - 0 reviews - minimal
+- Finca Son Roig Agroturismo (finca-son-roig-agroturismo) - 0 reviews - minimal
+- Restaurante El Pilón (restaurante-el-pilon) - 0 reviews - minimal
+- Monsuau Cala D'Or Hotel-Adults Only (monsuau-cala-d-or-hotel-adults-only) - 0 reviews - minimal
+- Agroturismo Ses Cases de Fetget (agroturismo-ses-cases-de-fetget) - 0 reviews - minimal
+- Petit Caimari (petit-caimari) - 0 reviews - minimal
+- Far des Cap Salines (far-des-cap-salines) - 0 reviews - minimal
+- Mar Balear Dive Center (mar-balear-dive-center) - 0 reviews - minimal
+- Island Tours Mallorca (island-tours-mallorca) - 0 reviews - minimal
+- Tapas Palma Centre (tapas-palma-centre) - 0 reviews - minimal
+- Hotel Moré (hotel-more) - 0 reviews - minimal
+- Can Cera Hotel (can-cera-hotel) - 0 reviews - minimal
+- Hotel Miramar Mallorca (hotel-miramar-mallorca) - 0 reviews - minimal
+- Quad Tour Mallorca (quad-tour-mallorca) - 0 reviews - minimal
+- Hotel Can Mostatxins (hotel-can-mostatxins) - 0 reviews - minimal
+- El Gaucho Asador (el-gaucho-asador) - 0 reviews - minimal
+- BLAU OLE Cala Ratjada (blau-ole-cala-ratjada) - 0 reviews - minimal
+- Meliá South Beach (melia-south-beach) - 0 reviews - minimal
+- Formula Tours Mallorca (formula-tours-mallorca) - 0 reviews - minimal
+- Restaurante Zaranda (restaurante-zaranda) - 0 reviews - minimal
+- Hotel La Concha Soul (hotel-la-concha-soul) - 0 reviews - minimal
+- Chiringuito Cala Marçal (chiringuito-cala-marcal) - 0 reviews - minimal
+- Palma Bicycle Tours (palma-bicycle-tours) - 0 reviews - minimal
+- Soller Plaza (soller-plaza) - 0 reviews - minimal
+- Hotel Bahia (hotel-bahia) - 0 reviews - minimal
+- Hotel Can Serrete (hotel-can-serrete) - 0 reviews - minimal
+- Agroturismo Es Quatre Cantons (agroturismo-es-quatre-cantons) - 0 reviews - minimal
+- Bodegas Angel (bodegas-angel) - 0 reviews - minimal
+- The Sea Club Restaurant & Cocktail Bar (the-sea-club-restaurant-cocktail-bar) - 0 reviews - minimal
+- Finca Sa Tanca (finca-sa-tanca) - 0 reviews - minimal
+- Sail Palma (sail-palma) - 0 reviews - minimal
+- Bodegas José L. Ferrer (bodegas-jose-l-ferrer) - 0 reviews - minimal
+- Caló des Monjo (calo-des-monjo) - 0 reviews - minimal
+- ZOEA Mallorca|Diving, Kayak & Paddleboard (zoea-mallorca-diving-kayak-paddleboard) - 0 reviews - minimal
+- Restaurante Mare Meva Cala Ratjada (restaurante-mare-meva-cala-ratjada) - 0 reviews - minimal
+- Caliuet BaRestaurant (caliuet-barestaurant) - 0 reviews - minimal
+- Celler Sa Vinya (celler-sa-vinya) - 0 reviews - minimal
+- Hotel JS Cape Colom (hotel-js-cape-colom) - 0 reviews - minimal
+- MarSenses Ferrera Blanca Hotel Adults Only (marsenses-ferrera-blanca-hotel-adults-only) - 0 reviews - minimal
+- Cal Reiet Holistic Retreat (cal-reiet-holistic-retreat) - 0 reviews - minimal
+- Tramuntana Adventures Mallorca (tramuntana-adventures-mallorca) - 0 reviews - minimal
+- Hotel Hoposa Bahía (hotel-hoposa-bahia) - 0 reviews - minimal
+- Món d'Aventura Outdoor Shop & Adventure Tours (mon-d-aventura-outdoor-shop-adventure-tours) - 0 reviews - minimal
+- BQ Alcúdia Sun Village (bq-alcudia-sun-village) - 0 reviews - minimal
+- Botanic Restobar (botanic-restobar) - 0 reviews - minimal
+- Zel Mallorca (zel-mallorca) - 0 reviews - minimal
+- KANSŌ Taberna Japonesa (kanso-taberna-japonesa) - 0 reviews - minimal
+- Restaurant Sa Canova (restaurant-sa-canova) - 0 reviews - minimal
+- Globales Don Pedro (globales-don-pedro) - 0 reviews - minimal
+- Angels Boutique-Turismo de interior (angels-boutique-turismo-de-interior) - 0 reviews - minimal
+- Barranc de Biniaraix (barranc-de-biniaraix) - 0 reviews - minimal
+- Calypso Restaurant & Bar (calypso-restaurant-bar) - 0 reviews - minimal
+- Okinawa Japanese (okinawa-japanese) - 0 reviews - minimal
+- Los Dos Caballeros Winery (los-dos-caballeros-winery) - 0 reviews - minimal
+- Hotel Boutique Minister (hotel-boutique-minister) - 0 reviews - minimal
+- Restaurante La Campana (restaurante-la-campana) - 0 reviews - minimal
+- Universal Hotel Cabo Blanco-Adults Only (universal-hotel-cabo-blanco-adults-only) - 0 reviews - minimal
+- El Rinconcito de la Patrona (el-rinconcito-de-la-patrona) - 0 reviews - minimal
+- Parque Natural de la Dragonera (parque-natural-de-la-dragonera) - 0 reviews - minimal
+- SA PEDRISSA (sa-pedrissa) - 0 reviews - minimal
+- ABURI (aburi) - 0 reviews - minimal
+- Palacio Ca Sa Galesa (palacio-ca-sa-galesa) - 0 reviews - minimal
+- Hotel Hoposa Uyal (hotel-hoposa-uyal) - 0 reviews - minimal
+- We Hostel Palma (we-hostel-palma) - 0 reviews - minimal
+- Grupotel Farrutx (grupotel-farrutx) - 0 reviews - minimal
+- Outdoor Adventure Sports (outdoor-adventure-sports) - 0 reviews - minimal
+- S' Olivera (s-olivera) - 0 reviews - minimal
+- Grupotel Picafort Beach (grupotel-picafort-beach) - 0 reviews - minimal
+- Agroturisme Muleta de Ca S'hereu (agroturisme-muleta-de-ca-s-hereu) - 0 reviews - minimal
+- Dive Center Robinson Club (dive-center-robinson-club) - 0 reviews - minimal
+- Torre Playa (torre-playa) - 0 reviews - minimal
+- Playa S' Arenal (playa-s-arenal) - 0 reviews - minimal
+- Suite del Mar (suite-del-mar) - 0 reviews - minimal
+- WATERSPORTS MALLORCA MAGALUF (watersports-mallorca-magaluf) - 0 reviews - minimal
+- Cala Figuera (cala-figuera) - 0 reviews - minimal
+- West Coast Divers Mallorca-PADI Dive Resort, Tauchschule, Centro de Buceo, Diving Centre (west-coast-divers-mallorca-padi-dive-resort-tauchschule-centro-de-buceo-diving-centre) - 0 reviews - minimal
+- Embat Chiringuito Beach (embat-chiringuito-beach) - 0 reviews - minimal
+- Ona Palmira Paguera (ona-palmira-paguera) - 0 reviews - minimal
+- Talayot Hotel by Senator (talayot-hotel-by-senator) - 0 reviews - minimal
+- Antigua Esquina Palma (antigua-esquina-palma) - 0 reviews - minimal
+- Suculenta Port de Sóller (suculenta-port-de-soller) - 0 reviews - minimal
+- Cupido Boutique Hotel (cupido-boutique-hotel) - 0 reviews - minimal
+- PULA SUITES BOUTIQUE RESORT (pula-suites-boutique-resort) - 0 reviews - minimal
+- Grupotel Port d'Alcúdia (grupotel-port-d-alcudia) - 0 reviews - minimal
+- El Niño Surf Center (el-nino-surf-center) - 0 reviews - minimal
+- Es Revellar Art Resort (adults only +16) (es-revellar-art-resort-adults-only-16) - 0 reviews - minimal
+- ZigZag Mallorca (zigzag-mallorca) - 0 reviews - minimal
+- Portomar Apartments (portomar-apartments) - 0 reviews - minimal
+- Hostal Nadal Sóller (hostal-nadal-soller) - 0 reviews - minimal
+- Almazara y Casa de Can Det-Visitas Guiadas (almazara-y-casa-de-can-det-visitas-guiadas) - 0 reviews - minimal
+- Petit Sant Miquel (petit-sant-miquel) - 0 reviews - minimal
+- Ikos Porto Petro (ikos-porto-petro) - 0 reviews - minimal
+- Terra di Vino (terra-di-vino) - 0 reviews - minimal
+- Hotel Can Ferrereta (hotel-can-ferrereta) - 0 reviews - minimal
+- FUN ISLAND Buggy & Quad Tours Sa Coma (fun-island-buggy-quad-tours-sa-coma) - 0 reviews - minimal
+- The Donna Portals (the-donna-portals) - 0 reviews - minimal
+- Cabot Cap de Mar Spa (cabot-cap-de-mar-spa) - 0 reviews - minimal
+- Juz de Yartan Arthotel (juz-de-yartan-arthotel) - 0 reviews - minimal
+- Naturacavallsacova (naturacavallsacova) - 0 reviews - minimal
+- Fassanelli Artà Bike (fassanelli-arta-bike) - 0 reviews - minimal
+- Universal Hotel Bikini (universal-hotel-bikini) - 0 reviews - minimal
+- O7 Alea (o7-alea) - 0 reviews - minimal
+- AUMALLIA HOTEL & SPA (aumallia-hotel-spa) - 0 reviews - minimal
+- Tramuntana Tours (tramuntana-tours) - 0 reviews - minimal
+- Hotel Biniamar (hotel-biniamar) - 0 reviews - minimal
+- Kayak Trip Mallorca (kayak-trip-mallorca) - 0 reviews - minimal
+- HILLS Thai And Sushi (hills-thai-and-sushi) - 0 reviews - minimal
+- Sa Creu Nova (sa-creu-nova) - 0 reviews - minimal
+- La Despensa del Barón (la-despensa-del-baron) - 0 reviews - minimal
+- Sa Cabana (sa-cabana) - 0 reviews - minimal
+- Al Faro Llucmajor (al-faro-llucmajor) - 0 reviews - minimal
+- Pleta de Mar Grand Luxury Hotel by nature, adults only – Preferred Hotels & Resorts (pleta-de-mar-grand-luxury-hotel-by-nature-adults-only-preferred-hotels-resorts) - 0 reviews - minimal
+- Boutique Hotel Petit Montision (boutique-hotel-petit-montision) - 0 reviews - minimal
+- Korhu Restaurante (korhu-restaurante) - 0 reviews - minimal
+- Meliá Cala d'Or Boutique Hotel (melia-cala-d-or-boutique-hotel) - 0 reviews - minimal
+- Sa Cabana Hotel Rural Spa (sa-cabana-hotel-rural-spa) - 0 reviews - minimal
+- Hotel Los Geranios (hotel-los-geranios) - 0 reviews - minimal
+- Reiten Mallorca (reiten-mallorca) - 0 reviews - minimal
+- Nema Boutique Hotel & Spa (nema-boutique-hotel-spa) - 0 reviews - minimal
+- Hotel Gran Fornells Thalasso & Spa (hotel-gran-fornells-thalasso-spa) - 0 reviews - minimal
+- Wine Tasting Mallorca (wine-tasting-mallorca) - 0 reviews - minimal
+- Aventura IB Colonia de Sant Jordi (aventura-ib-colonia-de-sant-jordi) - 0 reviews - minimal
+- Petro Divers: Tauchen auf Mallorca (petro-divers-tauchen-auf-mallorca) - 0 reviews - minimal
+- ORANGE Colom Seaside Apartments (orange-colom-seaside-apartments) - 0 reviews - minimal
+- Restaurante Copacabana (restaurante-copacabana) - 0 reviews - minimal
+- Chez Junior Sóller (chez-junior-soller) - 0 reviews - minimal
+- Es Figueral Nou Hotel (+12) (es-figueral-nou-hotel-12) - 0 reviews - minimal
+- Levante Hotel (levante-hotel) - 0 reviews - minimal
+- Portofino Mallorca (portofino-mallorca) - 0 reviews - minimal
+- Active Alcudia (active-alcudia) - 0 reviews - minimal
+- Son Julia Country House & Spa (son-julia-country-house-spa) - 0 reviews - minimal
+- Belle Marivent Boutique Hotel (belle-marivent-boutique-hotel) - 0 reviews - minimal
+- Barefoot Hotel Mallorca (barefoot-hotel-mallorca) - 0 reviews - minimal
+- Hoposa Costa d’Or (hoposa-costa-d-or) - 0 reviews - minimal
+- Mallorca Rental & Excursions (mallorca-rental-excursions) - 0 reviews - minimal
+- Es Racó d'Artà (es-raco-d-arta) - 0 reviews - minimal
+- Hotel Born Palma (hotel-born-palma) - 0 reviews - minimal
+- Cas Cabo Nou Agroturisme (cas-cabo-nou-agroturisme) - 0 reviews - minimal
+- FINCA CAN GRAU (finca-can-grau) - 0 reviews - minimal
+- Restaurant Sa Parra (restaurant-sa-parra) - 0 reviews - minimal
+- Son Sant Jordi (son-sant-jordi) - 0 reviews - minimal
+- Nobis Hotel Palma (nobis-hotel-palma) - 0 reviews - minimal
+- coHeo (coheo) - 0 reviews - minimal
+- Hotel d'es Puig (hotel-d-es-puig) - 0 reviews - minimal
+- Hotel Mirador (hotel-mirador) - 0 reviews - minimal
+- Otra Mirada Palma. Visitas guiadas en Palma (otra-mirada-palma-visitas-guiadas-en-palma) - 0 reviews - minimal
+- Universal Aparthotel Don Camilo (universal-aparthotel-don-camilo) - 0 reviews - minimal
+- Finca Serena Mallorca, member of Small Luxury Hotels (finca-serena-mallorca-member-of-small-luxury-hotels) - 0 reviews - minimal
+- JS Palma Plaza (js-palma-plaza) - 0 reviews - minimal
+- Hotel Can Quetglas (hotel-can-quetglas) - 0 reviews - minimal
+- Trike Fun Mallorca (trike-fun-mallorca) - 0 reviews - minimal
+- Can Guixe-Turismo de interior (can-guixe-turismo-de-interior) - 0 reviews - minimal
+- Restaurant es Mirador de Son Samà (restaurant-es-mirador-de-son-sama) - 0 reviews - minimal
+- Villa Miel (villa-miel) - 0 reviews - minimal
+- Agroturisme Sa Torre de Santa Eugènia|Finca Hotel Mallorca (agroturisme-sa-torre-de-santa-eugenia-finca-hotel-mallorca) - 0 reviews - minimal
+- Restaurante Es Figueral (restaurante-es-figueral) - 0 reviews - minimal
+- Hotel Mirabó De Valldemossa (hotel-mirabo-de-valldemossa) - 0 reviews - minimal
+- CCA Andratx (cca-andratx) - 0 reviews - minimal
+- Adventurers Mallorca (adventurers-mallorca) - 0 reviews - minimal
+- Hotel Can Abril (hotel-can-abril) - 0 reviews - minimal
+- Tess de Mar - Adults Only (tess-de-mar-adults-only) - 0 reviews - minimal
+- Petit Hotel Hostatgeria La Victoria (petit-hotel-hostatgeria-la-victoria) - 0 reviews - minimal
+- Mallorca Mountains (mallorca-mountains) - 0 reviews - minimal
+- HOTEL CALA MURADA (hotel-cala-murada) - 0 reviews - minimal
+- Mallorca Nature Tours (mallorca-nature-tours) - 0 reviews - minimal
+- Pirates Bay Club Cala Millor (pirates-bay-club-cala-millor) - 0 reviews - minimal
+- Restaurante Acuario (restaurante-acuario) - 0 reviews - minimal
+- Hotel Rural Es Migjorn (hotel-rural-es-migjorn) - 0 reviews - minimal
+- Vela Beach (vela-beach) - 0 reviews - minimal
+- Chiringuito Cala Sa Nau (chiringuito-cala-sa-nau) - 0 reviews - minimal
+- Bladerunner Mallorca (bladerunner-mallorca) - 0 reviews - minimal
+- Alemany Restaurant (alemany-restaurant) - 0 reviews - minimal
+- Sailing Porto Cristo-Malakai (sailing-porto-cristo-malakai) - 0 reviews - minimal
+- Agroturismo Sa Vinya des Convent (agroturismo-sa-vinya-des-convent) - 0 reviews - minimal
+- Sea Adventure (sea-adventure) - 0 reviews - minimal
+- Ca'n Calent (ca-n-calent) - 0 reviews - minimal
+- Ca u Metge Restaurant (ca-u-metge-restaurant) - 0 reviews - minimal
+- Perla Grill&Terrace (perla-grill-terrace) - 0 reviews - minimal
+- Amê Gastrobeach Club (ame-gastrobeach-club) - 0 reviews - minimal
+- Ecocirer, Healthy Stay (ecocirer-healthy-stay) - 0 reviews - minimal
+- Trails we ride-Mtb Tours Mallorca & Pyrenees-Mtb Rental (trails-we-ride-mtb-tours-mallorca-pyrenees-mtb-rental) - 0 reviews - minimal
+- Santa Clara Urban Hotel & Spa (santa-clara-urban-hotel-spa) - 0 reviews - minimal
+- Can Aulí Luxury Retreat (can-auli-luxury-retreat) - 0 reviews - minimal
+- MallorcaFly-Vuelo paramotor y parapente Mallorca (mallorcafly-vuelo-paramotor-y-parapente-mallorca) - 0 reviews - minimal
+- Easy Boat (easy-boat) - 0 reviews - minimal
+- Agroturismo Can Cantó de Marina (agroturismo-can-canto-de-marina) - 0 reviews - minimal
+- Experience Mallorca (experience-mallorca) - 0 reviews - minimal
+- Ses Puntetes (ses-puntetes) - 0 reviews - minimal
+- Restaurante Mestral (restaurante-mestral) - 0 reviews - minimal
+- Il Postino (il-postino) - 0 reviews - minimal
+- BQ Cala Ratjada Hotel (bq-cala-ratjada-hotel) - 0 reviews - minimal
+- Villa Lorenzo (villa-lorenzo) - 0 reviews - minimal
+- Alaró Natura Rural Suites (alaro-natura-rural-suites) - 0 reviews - minimal
+- Explora Mallorca (explora-mallorca) - 0 reviews - minimal
+- Sailing Experience Pollensa (sailing-experience-pollensa) - 0 reviews - minimal
+- Trocadero (trocadero) - 0 reviews - minimal
+- Sol i Vida (Adults Only) Boutique Hotel (sol-i-vida-adults-only-boutique-hotel) - 0 reviews - minimal
+- Mezzo Sailing (mezzo-sailing) - 0 reviews - minimal
+- Ciclos Major Cycling Holidays (ciclos-major-cycling-holidays) - 0 reviews - minimal
+- Llauts Marins (llauts-marins) - 0 reviews - minimal
+- Hotel Zurbarán Palma (hotel-zurbaran-palma) - 0 reviews - minimal
+- Hostal Leo d'Or (hostal-leo-d-or) - 0 reviews - minimal
+- Premier Tours Mallorca (premier-tours-mallorca) - 0 reviews - minimal
+- U Vicenç - Rooftop Restaurant - Only adults +12 (u-vicenc-rooftop-restaurant-only-adults-12) - 0 reviews - minimal
+- Hotel Nou Dalt Muntanya (hotel-nou-dalt-muntanya) - 0 reviews - minimal
+- Sailing Balearic (sailing-balearic) - 0 reviews - minimal
+- Hostal Restaurante Playa (hostal-restaurante-playa) - 0 reviews - minimal
+- Quad Funtours Alcúdia (quad-funtours-alcudia) - 0 reviews - minimal
+- Hotel JS PortoColom Suites (hotel-js-portocolom-suites) - 0 reviews - minimal
+- Tuent Adventure: Buceo, Kayak & Paddle Surf (tuent-adventure-buceo-kayak-paddle-surf) - 0 reviews - minimal
+- Mallorca Horses (mallorca-horses) - 0 reviews - minimal
+- MILTON’S PIZZERIA BRUNCH CAFFE (milton-s-pizzeria-brunch-caffe) - 0 reviews - minimal
+- Restaurante Can Tià Taleca (restaurante-can-tia-taleca) - 0 reviews - minimal
+- Hotel ROC Oberoy Adults Only (hotel-roc-oberoy-adults-only) - 0 reviews - minimal
+- Kayak Tour Mallorca (kayak-tour-mallorca) - 0 reviews - minimal
+- Bahía Azul (bahia-azul) - 0 reviews - minimal
+- Confianza Yachting (confianza-yachting) - 0 reviews - minimal
+- Amayò Mare Trattoria (amayo-mare-trattoria) - 0 reviews - minimal
+- Hotel Apartamentos Cala Santanyí (hotel-apartamentos-cala-santanyi) - 0 reviews - minimal
+- Faro Cantina (faro-cantina) - 0 reviews - minimal
+- Club Nàutic Porto Cristo (club-nautic-porto-cristo) - 0 reviews - minimal
+- Paradise Beach Mallorca (paradise-beach-mallorca) - 0 reviews - minimal
+- ZOEA Mallorca|Scuba Diving Center (zoea-mallorca-scuba-diving-center) - 0 reviews - minimal
+- Aparthotel Ses Fotges (aparthotel-ses-fotges) - 0 reviews - minimal
+- Il Tano Llucmajor (il-tano-llucmajor) - 0 reviews - minimal
+- Hotel Can Moragues (hotel-can-moragues) - 0 reviews - minimal
+- Hotel Playas Paguera (hotel-playas-paguera) - 0 reviews - minimal
+- Hotel Kyrat Amàrac Suites (hotel-kyrat-amarac-suites) - 0 reviews - minimal
+- Welikehotel Fénix (Arenal, Mallorca) (welikehotel-fenix-arenal-mallorca) - 0 reviews - minimal
+- Pure Salt Port de Sóller (pure-salt-port-de-soller) - 0 reviews - minimal
+- Hotel Rosella by Intelier (hotel-rosella-by-intelier) - 0 reviews - minimal
+- Bistro Calle Cruz 20 (bistro-calle-cruz-20) - 0 reviews - minimal
+- Restaurante Can Tasco (restaurante-can-tasco) - 0 reviews - minimal
+- Wind Pirates watersports center (wind-pirates-watersports-center) - 0 reviews - minimal
+- Color Horse Ranch Mallorca (color-horse-ranch-mallorca) - 0 reviews - minimal
+- Petit Hotel Es Figueral (petit-hotel-es-figueral) - 0 reviews - minimal
+- Celler Ramanyà (celler-ramanya) - 0 reviews - minimal
+- Hotel Son Cosmet (hotel-son-cosmet) - 0 reviews - minimal
+- Ca Sa Padrina Petit Hotel (ca-sa-padrina-petit-hotel) - 0 reviews - minimal
+- Dive & Fun Font de Sa cala (dive-fun-font-de-sa-cala) - 0 reviews - minimal
+- SAN LORENZO (san-lorenzo) - 0 reviews - minimal
+- American steak&ribhouse Hoek Van Holland (american-steak-ribhouse-hoek-van-holland) - 0 reviews - minimal
+- Magic Mallorca (magic-mallorca) - 0 reviews - minimal
+- Sa Vall Valldemossa.Turismo de Interior (sa-vall-valldemossa-turismo-de-interior) - 0 reviews - minimal
+- Hotel Salino Port Soller Adults Only (hotel-salino-port-soller-adults-only) - 0 reviews - minimal
+- Keida enjoy Mallorca S.L (keida-enjoy-mallorca-s-l) - 0 reviews - minimal
+- Sea.Bar.Is Port de Pollença (sea-bar-is-port-de-pollenca) - 0 reviews - minimal
+- Villaverde Deià (villaverde-deia) - 0 reviews - minimal
+- Hotel Son Bunyola Villas (hotel-son-bunyola-villas) - 0 reviews - minimal
+- SólleRooms (sollerooms) - 0 reviews - minimal
+- Bodega Vinyes I Vins Ca Sa Padrina (bodega-vinyes-i-vins-ca-sa-padrina) - 0 reviews - minimal
+- Malika de Mallorca (malika-de-mallorca) - 0 reviews - minimal
+- Sails Up Mallorca (sails-up-mallorca) - 0 reviews - minimal
+- Portocolom Adventure Trips (portocolom-adventure-trips) - 0 reviews - minimal
+- Hostal Catalina Vera (hostal-catalina-vera) - 0 reviews - minimal
+- Aventura Mallorca Karakorum Adventure (aventura-mallorca-karakorum-adventure) - 0 reviews - minimal
+- Excursions La Mallorca (excursions-la-mallorca) - 0 reviews - minimal
+- Sauló by Puro (saulo-by-puro) - 0 reviews - minimal
+- Quad Tours Cala Millor (quad-tours-cala-millor) - 0 reviews - minimal
+- Sa Roqueta Jet Ski (sa-roqueta-jet-ski) - 0 reviews - minimal
+- Holls Boat Charter (holls-boat-charter) - 0 reviews - minimal
+- Be Live Adults Only La Cala Boutique (be-live-adults-only-la-cala-boutique) - 0 reviews - minimal
+- Alcanada Golf Hotel (alcanada-golf-hotel) - 0 reviews - minimal
+- MartiniBoats24 Mallorca (martiniboats24-mallorca) - 0 reviews - minimal
+- Hotel Santanyi Port (hotel-santanyi-port) - 0 reviews - minimal
+- Tacande Portals (tacande-portals) - 0 reviews - minimal
+- Restaurant Pizzeria Volvér (restaurant-pizzeria-volver) - 0 reviews - minimal
+- Ristorante SU DI NOI (ristorante-su-di-noi) - 0 reviews - minimal
+- Bodega Santa Catarina (bodega-santa-catarina) - 0 reviews - minimal
+- BQ Sarah Hotel-SOLO ADULTOS (bq-sarah-hotel-solo-adultos) - 0 reviews - minimal
+- Hotel Rural Sa Galera (hotel-rural-sa-galera) - 0 reviews - minimal
+- Playa Cala Blanca (playa-cala-blanca) - 0 reviews - minimal
+- Ca's Papà Sweet Hotel Valldemossa (ca-s-papa-sweet-hotel-valldemossa) - 0 reviews - minimal
+- Rancho Cala Mesquida (rancho-cala-mesquida) - 0 reviews - minimal
+- MALLORCAINBLUE CHARTER (mallorcainblue-charter) - 0 reviews - minimal
+- CM Charter / Sailme Mallorca (cm-charter-sailme-mallorca) - 0 reviews - minimal
+- Agroturisme Ca'n Gaià (agroturisme-ca-n-gaia) - 0 reviews - minimal
+- Hotel Capri (hotel-capri) - 0 reviews - minimal
+- Cala Murta (cala-murta) - 0 reviews - minimal
+- Levante Cafe-Bistro (levante-cafe-bistro) - 0 reviews - minimal
+- Hotel Bell Port (hotel-bell-port) - 0 reviews - minimal
+- Corb Marí Sea Experience (corb-mari-sea-experience) - 0 reviews - minimal
+- Hotel Can Tem (hotel-can-tem) - 0 reviews - minimal
+- Pensión Bellavista (pension-bellavista) - 0 reviews - minimal
+- Rondaia Boutique Vineyard Stay – Mallorca, Tramuntana (rondaia-boutique-vineyard-stay-mallorca-tramuntana) - 0 reviews - minimal
+- Hotel Sis Pins (hotel-sis-pins) - 0 reviews - minimal
+- Can Pep d'es Plà (can-pep-d-es-pla) - 0 reviews - minimal
+- Ca's Xorc Luxury Retreat (ca-s-xorc-luxury-retreat) - 0 reviews - minimal
+- Restaurante La Terraza (restaurante-la-terraza) - 0 reviews - minimal
+- Bellevue Belsana (bellevue-belsana) - 0 reviews - minimal
+- SecretPointMallorca Kayak (secretpointmallorca-kayak) - 0 reviews - minimal
+- GOJET Port Pollensa JET SKI Tours (gojet-port-pollensa-jet-ski-tours) - 0 reviews - minimal
+- Finca Son Cladera (finca-son-cladera) - 0 reviews - minimal
+- Hotel Voramar Mallorca (hotel-voramar-mallorca) - 0 reviews - minimal
+- sunbonoo.com-Das Original (sunbonoo-com-das-original) - 0 reviews - minimal
+- Brunxito - Brunch & Bistro (brunxito-brunch-bistro) - 0 reviews - minimal
+- CAPRICE EXPERIENCE|MALLORCA BOAT TOURS (caprice-experience-mallorca-boat-tours) - 0 reviews - minimal
+- Agroturismo S´Hort de Can Carrió AG/226| Best-Rated (agroturismo-s-hort-de-can-carrio-ag-226-best-rated) - 0 reviews - minimal
+- The Sunset Sea Club-Adults only (the-sunset-sea-club-adults-only) - 0 reviews - minimal
+- S'Arenal beach (s-arenal-beach) - 0 reviews - minimal
+- Finca Sestelrica (finca-sestelrica) - 0 reviews - minimal
+- Hotel d'Or (hotel-d-or) - 0 reviews - minimal
+- Bikini Island & Mountain Hotel Es Trenc (bikini-island-mountain-hotel-es-trenc) - 0 reviews - minimal
+- Cala Mosques (cala-mosques) - 0 reviews - minimal
+- Puerto Pollensa Boat Trips – Lanchas La Gaviota (puerto-pollensa-boat-trips-lanchas-la-gaviota) - 0 reviews - minimal
+- Palacio Municipal de Deportes de Andratx (palacio-municipal-de-deportes-de-andratx) - 0 reviews - minimal
+- Restaurante Miramar (restaurante-miramar) - 0 reviews - minimal
+- Sa Font de Sa Cala (sa-font-de-sa-cala) - 0 reviews - minimal
+- BOATLAND CALA D’OR (boatland-cala-d-or) - 0 reviews - minimal
+- Faro Beach (faro-beach) - 0 reviews - minimal
+- Boutique Hotel Ca'n Bonico (boutique-hotel-ca-n-bonico) - 0 reviews - minimal
+- The Coconut Shack (the-coconut-shack) - 0 reviews - minimal
+- Hotel Sant Jaume (hotel-sant-jaume) - 0 reviews - minimal
+- Happy PARK (happy-park) - 0 reviews - minimal
+- Blend brunch café de especialidad. (blend-brunch-cafe-de-especialidad) - 0 reviews - minimal
+- One Jetski Cala D’Or (one-jetski-cala-d-or) - 0 reviews - minimal
+- SON BERNADINET (son-bernadinet) - 0 reviews - minimal
+- Platja Formentor (platja-formentor) - 0 reviews - minimal
+- Nalai Sushi (nalai-sushi) - 0 reviews - minimal
+- Aethos Mallorca (aethos-mallorca) - 0 reviews - minimal
+- Hotel Can Riera by CheelHotels (hotel-can-riera-by-cheelhotels) - 0 reviews - minimal
+- Quina Brasa (quina-brasa) - 0 reviews - minimal
+- Sailing Charter "Navegando Sin Rumbo" (sailing-charter-navegando-sin-rumbo) - 0 reviews - minimal
+- Celler Tianna Negre (celler-tianna-negre) - 0 reviews - minimal
+- Rancho Grande Mallorca (rancho-grande-mallorca) - 0 reviews - minimal
+- Clarify Restaurante (clarify-restaurante) - 0 reviews - minimal
+- Sa Frontera (sa-frontera) - 0 reviews - minimal
+- LIFE & SEA PUERTO COLONIA (life-sea-puerto-colonia) - 0 reviews - minimal
+- Excursiones Mallorca GuruWalk (excursiones-mallorca-guruwalk) - 0 reviews - minimal
+- Playa de Cala Barques (playa-de-cala-barques) - 0 reviews - minimal
+- Eolo Affiliated by FERGUS (eolo-affiliated-by-fergus) - 0 reviews - minimal
+- Alquimia calaratjada (alquimia-calaratjada) - 0 reviews - minimal
+- Outbound Mallorca (outbound-mallorca) - 0 reviews - minimal
+- Playa Pollença (playa-pollenca) - 0 reviews - minimal
+- Hotel Gran Sol Mallorca (hotel-gran-sol-mallorca) - 0 reviews - minimal
+- Platja Es Caragol (platja-es-caragol) - 0 reviews - minimal
+- RNA Club House (rna-club-house) - 0 reviews - minimal
+- Platja d'es Carbó (platja-d-es-carbo) - 0 reviews - minimal
+- Hotel Restaurante Cupidor (hotel-restaurante-cupidor) - 0 reviews - minimal
+- U Plaça (u-placa) - 0 reviews - minimal
+- Cala S'Amarador (cala-s-amarador) - 0 reviews - minimal
+- Lobster Club (lobster-club) - 0 reviews - minimal
+- Hotel Desbrull (hotel-desbrull) - 0 reviews - minimal
+- Virrey Finca Hotel (virrey-finca-hotel) - 0 reviews - minimal
+- Cycling Holiday Tours Mallorca (cycling-holiday-tours-mallorca) - 0 reviews - minimal
+- Mon Boutique Hotel (mon-boutique-hotel) - 0 reviews - minimal
+- Playas del Rey (playas-del-rey) - 0 reviews - minimal
+- Little Tapas Place (little-tapas-place) - 0 reviews - minimal
+- El Chiringuito de Crestatx (el-chiringuito-de-crestatx) - 0 reviews - minimal
+- Hotel Rocamar (hotel-rocamar) - 0 reviews - minimal
+- Fincahotel Los Naranjos (fincahotel-los-naranjos) - 0 reviews - minimal
+- Club hípico Granja Es Pi (club-hipico-granja-es-pi) - 0 reviews - minimal
+- Monkey Can Picafort Jet Ski Tours (monkey-can-picafort-jet-ski-tours) - 0 reviews - minimal
+- Blue Sea Charter Cala d'Or (blue-sea-charter-cala-d-or) - 0 reviews - minimal
+- Elysium Eco Boat Experience (elysium-eco-boat-experience) - 0 reviews - minimal
+- Son Mercadal (son-mercadal) - 0 reviews - minimal
+- Cala Bóquer (cala-boquer) - 0 reviews - minimal
+- Mallorca Premium Tours (mallorca-premium-tours) - 0 reviews - minimal
+- Saltytours - Boat Charter Tour (saltytours-boat-charter-tour) - 0 reviews - minimal
+- Hotel Ankaa-Adults Only (hotel-ankaa-adults-only) - 0 reviews - minimal
+- GREENTOURS PALMA (greentours-palma) - 0 reviews - minimal
+- Palma Beach (palma-beach) - 0 reviews - minimal
+- Sóller Tennis Club (soller-tennis-club) - 0 reviews - minimal
+- Cafetería Granja Ses Voltes (cafeteria-granja-ses-voltes) - 0 reviews - minimal
+- Hotel Ilusion Moreyo (hotel-ilusion-moreyo) - 0 reviews - minimal
+- Balneario 6|Alcúdia Beach Bar (balneario-6-alcudia-beach-bar) - 0 reviews - minimal
+- La Moraleja The Quiet Hotel-Adults Only (la-moraleja-the-quiet-hotel-adults-only) - 0 reviews - minimal
+- Hotel Villa Singala (hotel-villa-singala) - 0 reviews - minimal
+- Platja Estanys (platja-estanys) - 0 reviews - minimal
+- Starfish Diving Mallorca (starfish-diving-mallorca) - 0 reviews - minimal
+- Contro Corrente Beach Club (contro-corrente-beach-club) - 0 reviews - minimal
+- Ca'n Novell (ca-n-novell) - 0 reviews - minimal
+- Finca Can Carro (finca-can-carro) - 0 reviews - minimal
+- Logis Hotel Segles (logis-hotel-segles) - 0 reviews - minimal
+- Petit Hotel Alaró (petit-hotel-alaro) - 0 reviews - minimal
+- Cala Marmols (cala-marmols) - 0 reviews - minimal
+- Finca Es Torrent (finca-es-torrent) - 0 reviews - minimal
+- Agroturismo Son Viscos (agroturismo-son-viscos) - 0 reviews - minimal
+- Idilico Beach House (idilico-beach-house) - 0 reviews - minimal
+- NKV EXCURSIONS (nkv-excursions) - 0 reviews - minimal
+- El Patio Restaurante (el-patio-restaurante) - 0 reviews - minimal
+- Restaurant Azul de Mar (restaurant-azul-de-mar) - 0 reviews - minimal
+- Restaurant Ca´n Bella-vista (restaurant-ca-n-bella-vista) - 0 reviews - minimal
+- Fontsanta Hotel Thermal Spa & Wellness – Preferred Hotels & Resorts (fontsanta-hotel-thermal-spa-wellness-preferred-hotels-resorts) - 0 reviews - minimal
+- Buggy Mallorca (buggy-mallorca) - 0 reviews - minimal
+- Pierino beach (pierino-beach) - 0 reviews - minimal
+- La Vila Hotel (la-vila-hotel) - 0 reviews - minimal
+- Cabot Hobby Club Apartments (cabot-hobby-club-apartments) - 0 reviews - minimal
+- Hotel JS Can Picafort (hotel-js-can-picafort) - 0 reviews - minimal
+- Apartaments Niu D'Aus (apartaments-niu-d-aus) - 0 reviews - minimal
+- Zhero Hotel Mallorca (zhero-hotel-mallorca) - 0 reviews - minimal
+- Mallorca d’Or Charter Boats (mallorca-d-or-charter-boats) - 0 reviews - minimal
+- Platja d'Alcudia (platja-d-alcudia-2) - 0 reviews - minimal
+- Quad Touren Mallorca by Sebastian Zeilhofer (quad-touren-mallorca-by-sebastian-zeilhofer) - 0 reviews - minimal
+- Sailing Trips Mallorca (sailing-trips-mallorca) - 0 reviews - minimal
+- Vins Nadal (vins-nadal) - 0 reviews - minimal
+- SMILE BOAT RENTAL (smile-boat-rental) - 0 reviews - minimal
+- Cala Petita (cala-petita) - 0 reviews - minimal
+- Mallorca Travel Tours. Guía oficial. Tours y visitas privadas (mallorca-travel-tours-guia-oficial-tours-y-visitas-privadas) - 0 reviews - minimal
+- Força de Sóller-Gym & Strength Training (forca-de-soller-gym-strength-training) - 0 reviews - minimal
+- Ca's Brau (ca-s-brau) - 0 reviews - minimal
+- EasyCharter.es (easycharter-es) - 0 reviews - minimal
+- Sea Riders (sea-riders) - 0 reviews - minimal
+- Bodega Resident (bodega-resident) - 0 reviews - minimal
+- Excursion Boat Es Port (excursion-boat-es-port) - 0 reviews - minimal
+- ROBINSON BOAT MALLORCA (robinson-boat-mallorca) - 0 reviews - minimal
+- Azur Beach Club (azur-beach-club) - 0 reviews - minimal
+- Western Horse Trails Mallorca (western-horse-trails-mallorca) - 0 reviews - minimal
+- GOJET Alcudia QUAD Tours (gojet-alcudia-quad-tours) - 0 reviews - minimal
+- Puig de Maria (puig-de-maria) - 0 reviews - minimal
+- Solo | Santa Catalina (solo-santa-catalina) - 0 reviews - minimal
+- Agroturisme Subies (agroturisme-subies) - 0 reviews - minimal
+- Atlantis Charters boats (atlantis-charters-boats) - 0 reviews - minimal
+- Son Corb Boutique Hotel (son-corb-boutique-hotel) - 0 reviews - minimal
+- tent Arenal (tent-arenal) - 0 reviews - minimal
+- Thommy's Quads (thommy-s-quads) - 0 reviews - minimal
+- Coll de Sa Gramola (coll-de-sa-gramola) - 0 reviews - minimal
+- Finca Sa Cova Vella (finca-sa-cova-vella) - 0 reviews - minimal
+- Piraguas Mix Meeting Point Kayaks y Paddle Surf (piraguas-mix-meeting-point-kayaks-y-paddle-surf) - 0 reviews - minimal
+- Hoposa Hotel Panorama (hoposa-hotel-panorama) - 0 reviews - minimal
+- No Frills Excursions (no-frills-excursions-2) - 0 reviews - minimal
+- NEMO MALLORCA CHARTER CALA D´OR (nemo-mallorca-charter-cala-d-or) - 0 reviews - minimal
+- Hotel Coral Ballermann 6 (hotel-coral-ballermann-6) - 0 reviews - minimal
+- Limit Beach (limit-beach) - 0 reviews - minimal
+- Playa Son Moll (playa-son-moll) - 0 reviews - minimal
+- Bestboats Yachtcharter (bestboats-yachtcharter) - 0 reviews - minimal
+- Cas Ferrer Nou Hotelet (cas-ferrer-nou-hotelet) - 0 reviews - minimal
+- Can Xim (can-xim) - 0 reviews - minimal
+- La Balada del Agua del Mar (la-balada-del-agua-del-mar) - 0 reviews - minimal
+- Can Fressa Turismo de interior (can-fressa-turismo-de-interior) - 0 reviews - minimal
+- Ses Païsses (ses-paisses) - 0 reviews - minimal
+- Torre Picada (torre-picada) - 0 reviews - minimal
+- FERGUS Style Palma Beach (fergus-style-palma-beach) - 0 reviews - minimal
+- Bar Restaurant Can Murto (bar-restaurant-can-murto) - 0 reviews - minimal
+- Agroturisme Son Pons (agroturisme-son-pons) - 0 reviews - minimal
+- Mar de Gost by SanRemo (mar-de-gost-by-sanremo) - 0 reviews - minimal
+- Boat Trip Mallorca with Cata Simo (boat-trip-mallorca-with-cata-simo) - 0 reviews - minimal
+- RESTAURANTE BELLAVISTA PUERTO POLLENSA (restaurante-bellavista-puerto-pollensa) - 0 reviews - minimal
+- HOTEL FINCA SON GENER (hotel-finca-son-gener) - 0 reviews - minimal
+- Restaurant Torre Playa – Seafront Restaurant in Port de Pollença (restaurant-torre-playa-seafront-restaurant-in-port-de-pollenca) - 0 reviews - minimal
+- Nautic Adventure (nautic-adventure) - 0 reviews - minimal
+- Entre Pisco y Nazca (entre-pisco-y-nazca) - 0 reviews - minimal
+- Pont natural d'Es Caló Blanc (pont-natural-d-es-calo-blanc) - 0 reviews - minimal
+- Playa de Aucanada (playa-de-aucanada) - 0 reviews - minimal
+- Mar Calma Hotel (mar-calma-hotel) - 0 reviews - minimal
+- La Vermutería cala dor (la-vermuteria-cala-dor) - 0 reviews - minimal
+- Central María Turismo de interior (central-maria-turismo-de-interior) - 0 reviews - minimal
+- Agroturisme Son Lladó, Agroturismo (agroturisme-son-llado-agroturismo) - 0 reviews - minimal
+- Dream Beach Rental Mallorca - Alquiler barcos (dream-beach-rental-mallorca-alquiler-barcos) - 0 reviews - minimal
+- Amena Mar (amena-mar) - 0 reviews - minimal
+- Agroturismo Finca Dalt Murada (agroturismo-finca-dalt-murada) - 0 reviews - minimal
+- Duplicat Artà-Gràfiques Artà (duplicat-arta-grafiques-arta) - 0 reviews - minimal
+- MallorcaFly-Vuelo parapente Alcúdia (mallorcafly-vuelo-parapente-alcudia) - 0 reviews - minimal
+- STAND UP PADDLE SURF-MIA BAHIA I-Cala D'or (stand-up-paddle-surf-mia-bahia-i-cala-d-or) - 0 reviews - minimal
+- Prima Boats (prima-boats) - 0 reviews - minimal
+- The English Walking Guide (the-english-walking-guide) - 0 reviews - minimal
+- Forty Two Boats Mallorca & Ibiza (forty-two-boats-mallorca-ibiza) - 0 reviews - minimal
+- Mediterranean bike 360º cycling tours (mediterranean-bike-360-cycling-tours) - 0 reviews - minimal
+- Mallorca Culinary Tours (mallorca-culinary-tours) - 0 reviews - minimal
+- Lurion Mallorca|Exclusive experiences and activities (lurion-mallorca-exclusive-experiences-and-activities) - 0 reviews - minimal
+- MOONTEN Boutique Stay (moonten-boutique-stay) - 0 reviews - minimal
+- NORTH COAST ADVENTURE (north-coast-adventure) - 0 reviews - minimal
+- CHARTER MARINE (charter-marine) - 0 reviews - minimal
+- Hostal Miramar (hostal-miramar) - 0 reviews - minimal
+- Rancho Alegria Jay's Horses Mallorca (rancho-alegria-jay-s-horses-mallorca) - 0 reviews - minimal
+- Pollentia Charter – Alquiler de barco en Mallorca (pollentia-charter-alquiler-de-barco-en-mallorca) - 0 reviews - minimal
+- Sa Pletassa (sa-pletassa) - 0 reviews - minimal
+- Toymaster (toymaster) - 0 reviews - minimal
+- Jardins del Convent (jardins-del-convent) - 0 reviews - minimal
+- Finca Son Sala (finca-son-sala) - 0 reviews - minimal
+- Alcudia Beach (alcudia-beach) - 0 reviews - minimal
+- Playa de Cala Clara (playa-de-cala-clara) - 0 reviews - minimal
+- Sailing Boat Trips Portocolom - Meltemi | Caribia (sailing-boat-trips-portocolom-meltemi-caribia) - 0 reviews - minimal
+- Sóller SUP (soller-sup) - 0 reviews - minimal
+- CALA Estany d'en Mas (cala-estany-d-en-mas) - 0 reviews - minimal
+- Aloha Vibes (aloha-vibes) - 0 reviews - minimal
+- Platja des Dolç (platja-des-dolc) - 0 reviews - minimal
+- FUN ISLAND Bike & Car Rental Cala Millor (fun-island-bike-car-rental-cala-millor) - 0 reviews - minimal
+- Can Vidal Boutique Rooms (can-vidal-boutique-rooms) - 0 reviews - minimal
+- Hotel Antares (hotel-antares) - 0 reviews - minimal
+- Playa del Portitxolet (playa-del-portitxolet) - 0 reviews - minimal
+- Lemon Lounge Bar (lemon-lounge-bar) - 0 reviews - minimal
+- SASTRE HERMANOS (sastre-hermanos) - 0 reviews - minimal
+- Hadley´s Club Mallorca (hadley-s-club-mallorca) - 0 reviews - minimal
+- Aparthotel Marina Drach (aparthotel-marina-drach) - 0 reviews - minimal
+- Star Boat - Motorboat & Yacht Charter (star-boat-motorboat-yacht-charter) - 0 reviews - minimal
+- unic, turisme d'interior (unic-turisme-d-interior) - 0 reviews - minimal
+- Contraviento (contraviento) - 0 reviews - minimal
+- Mallorca Wine Tours (mallorca-wine-tours) - 0 reviews - minimal
+- Boat Formentor (boat-formentor) - 0 reviews - minimal
+- Mallorca Blue Sea (mallorca-blue-sea) - 0 reviews - minimal
+- AQUA Beach Club (aqua-beach-club) - 0 reviews - minimal
+- Onmood Cala Ratjada (onmood-cala-ratjada) - 0 reviews - minimal
+- HC Bike Tours Cycling Services (hc-bike-tours-cycling-services) - 0 reviews - minimal
+- S'Hotelet de Santanyí (s-hotelet-de-santanyi) - 0 reviews - minimal
+- Illetas Beach (illetas-beach) - 0 reviews - minimal
+- coco's sandwicheria (coco-s-sandwicheria) - 0 reviews - minimal
+- Mallorca Cycling Holidays (mallorca-cycling-holidays) - 0 reviews - minimal
+- Real Yacht Charter (real-yacht-charter) - 0 reviews - minimal
+- Yates Mallorca Charter (yates-mallorca-charter) - 0 reviews - minimal
+- Vela Charter Balear (vela-charter-balear) - 0 reviews - minimal
+- El Faro Charter (el-faro-charter) - 0 reviews - minimal
+- Ca'n Puig de Sòller (ca-n-puig-de-soller) - 0 reviews - minimal
+- GOJET Excursions (gojet-excursions) - 0 reviews - minimal
+- Playa de Cala Vinyes (playa-de-cala-vinyes) - 0 reviews - minimal
+- Wandern Mallorca/Wander Jürgen Mallorca (wandern-mallorca-wander-jurgen-mallorca) - 0 reviews - minimal
+- HOTEL BINI (hotel-bini) - 0 reviews - minimal
+- Calvario Plaza Hotel (calvario-plaza-hotel) - 0 reviews - minimal
+- Mallorca Charter Experience (mallorca-charter-experience) - 0 reviews - minimal
+- La Cala Boat Tours (la-cala-boat-tours) - 0 reviews - minimal
+- Ca Na Rita|Platja de Muro (ca-na-rita-platja-de-muro) - 0 reviews - minimal
+- Residencial suites Valldemossa (residencial-suites-valldemossa) - 0 reviews - minimal
+- Blue Coast Charter (blue-coast-charter) - 0 reviews - minimal
+- Bluewater Hotel (bluewater-hotel) - 0 reviews - minimal
+- Playa De Los Pinos (playa-de-los-pinos) - 0 reviews - minimal
+- Cala Llamp (cala-llamp) - 0 reviews - minimal
+- The Lodge Mallorca, member of Small Luxury Hotels (the-lodge-mallorca-member-of-small-luxury-hotels) - 0 reviews - minimal
+- Cala Figuera (cala-figuera) - 0 reviews - minimal
+- Alcudia bay Boat Rentals (alcudia-bay-boat-rentals) - 0 reviews - minimal
+- Cala Estreta (cala-estreta) - 0 reviews - minimal
+- Es Brot (es-brot) - 0 reviews - minimal
+- Cala Ratjada Boats (Misael Morate) (cala-ratjada-boats-misael-morate) - 0 reviews - minimal
+- SB ARENAL (sb-arenal) - 0 reviews - minimal
+- SeaTime Mallorca (seatime-mallorca-alquiler-barcos-mallorca) - 0 reviews - minimal
+- Llaüts Mar i Cel (llauts-mar-i-cel) - 0 reviews - minimal
+- SAILING DAYS (sailing-days) - 0 reviews - minimal
+- Finca Can Sec (finca-can-sec) - 0 reviews - minimal
+- Quad-Mallorca (quad-mallorca) - 0 reviews - minimal
+- Playa de Palma (playa-de-palma) - 0 reviews - minimal
+- Puig Tomir (puig-tomir) - 0 reviews - minimal
+- Sa Franquesa Vella (sa-franquesa-vella) - 0 reviews - minimal
+- Beach Club & Restaurante Kaafu (beach-club-restaurante-kaafu) - 0 reviews - minimal
+- Mallorca from the Sky-Vuelos Alcudia (mallorca-from-the-sky-vuelos-alcudia) - 0 reviews - minimal
+- Tirant Boat Tours (tirant-boat-tours) - 0 reviews - minimal
+- Perbacco (perbacco) - 0 reviews - minimal
+- Sa Cova Baixa (sa-cova-baixa) - 0 reviews - minimal
+- Calita Santa Ponça (calita-santa-ponca) - 0 reviews - minimal
+- Ocean Dreams Charter Mallorca (ocean-dreams-charter-mallorca) - 0 reviews - minimal
+- Arenal de Sa Ràpita (arenal-de-sa-rapita) - 0 reviews - minimal
+- Valle de Boquer (valle-de-boquer) - 0 reviews - minimal
+- Ocolia Beach Club (ocolia-beach-club) - 0 reviews - minimal
+- Palma Boats (palma-boats) - 0 reviews - minimal
+- Repic Apartments Soller (repic-apartments-soller) - 0 reviews - minimal
+- Lavendel Mallorca Apartments (lavendel-mallorca-apartments) - 0 reviews - minimal
+- Buggy Tours Paguera (buggy-tours-paguera) - 0 reviews - minimal
+- Hotel Juma (hotel-juma) - 0 reviews - minimal
+- XtremeMallorca Adventure Activities|Climb|Hikke|Water Sports (xtrememallorca-adventure-activities-climb-hikke-water-sports) - 0 reviews - minimal
+- Mallorsea (mallorsea) - 0 reviews - minimal
+- Platja de Ses Illetes (platja-de-ses-illetes) - 0 reviews - minimal
+- Restaurante Fontsanta (restaurante-fontsanta) - 0 reviews - minimal
+- Playa Roca de Camp de Mar (playa-roca-de-camp-de-mar) - 0 reviews - minimal
+- Hotel JS Sol de Can Picafort (hotel-js-sol-de-can-picafort) - 0 reviews - minimal
+- Cala d'Egos (cala-d-egos) - 0 reviews - minimal
+- Món Aventura Kayak Rental (mon-aventura-kayak-rental) - 0 reviews - minimal
+- Cap de Ses Salines (cap-de-ses-salines) - 0 reviews - minimal
+- terraza y sabor (terraza-y-sabor) - 0 reviews - minimal
+- El Pino Torrador Grill (Portocristo) (el-pino-torrador-grill-portocristo) - 0 reviews - minimal
+- Restaurant Beach Club (restaurant-beach-club) - 0 reviews - minimal
+- Hostal Oasis d'Or (hostal-oasis-d-or) - 0 reviews - minimal
+- Yachts & Sailing Mallorca|Yacht Charter & Alquiler de Yates (yachts-sailing-mallorca-yacht-charter-alquiler-de-yates) - 0 reviews - minimal
+- Pacific charters mallorca (pacific-charters-mallorca) - 0 reviews - minimal
+- Rental Boats and Private Tours with captain|Charter no license and license (rental-boats-and-private-tours-with-captain-charter-no-license-and-license) - 0 reviews - minimal
+- Sa Calma Boats: Ferry Andratx-Dragonera-Sant Elm (sa-calma-boats-ferry-andratx-dragonera-sant-elm) - 0 reviews - minimal
+- MIG I MIG SA CANTINA CLUB NÀUTIC PORTO CRISTO (mig-i-mig-sa-cantina-club-nautic-porto-cristo) - 0 reviews - minimal
+- BOATLAND PORTOCOLOM (boatland-portocolom) - 0 reviews - minimal
+- Colonia Boat Charter (colonia-boat-charter) - 0 reviews - minimal
+- Finca Son Vivot-Agroturismo (finca-son-vivot-agroturismo) - 0 reviews - minimal
+- Denominación de Origen Vino Binissalem (denominacion-de-origen-vino-binissalem) - 0 reviews - minimal
+- Easyboats|Mallorca Yacht Charter, Sales, Management & Refit (easyboats-mallorca-yacht-charter-sales-management-refit) - 0 reviews - minimal
+
+## Skipped
+
+
+## Errors
+

@@ -1,0 +1,560 @@
+# Editorial Generation Report
+
+Generated: 2026-06-10T14:42:50.688Z
+Dry run: no
+
+## Totals
+
+- Processed: 509
+- Skipped: 0
+- Errors: 4
+
+## Processed
+
+- Catedral-Basílica de Santa María de Mallorca (catedral-basilica-de-santa-maria-de-mallorca) - 5 reviews - openai
+- Cuevas del Drach (cuevas-del-drach) - 5 reviews - openai
+- Castillo de Bellver (castillo-de-bellver) - 5 reviews - openai
+- Barca Samba (barca-samba) - 5 reviews - openai
+- Iberostar Waves Playa de Muro (iberostar-waves-playa-de-muro) - 5 reviews - openai
+- Cuevas de Artà (cuevas-de-arta) - 5 reviews - openai
+- Parque Natural de Mondragó (parque-natural-de-mondrago) - 5 reviews - openai
+- GOJET Alcudia JET SKI tours (gojet-alcudia-jet-ski-tours) - 5 reviews - openai
+- Alcudia Garden Aparthotel (alcudia-garden-aparthotel) - 5 reviews - openai
+- Iberostar Selection Playa de Muro Village (iberostar-selection-playa-de-muro-village) - 5 reviews - openai
+- Puerto de Alcúdia (puerto-de-alcudia) - 5 reviews - openai
+- Cuevas Dels Hams (cuevas-dels-hams) - 5 reviews - openai
+- GoFurgo.tours-Paddlesurf y snorkel en las mejores calas de Baleares (gofurgo-tours-paddlesurf-y-snorkel-en-las-mejores-calas-de-baleares) - 5 reviews - openai
+- Mallorquad, Mallor'quad, Majorque quad (mallorquad-mallor-quad-majorque-quad) - 5 reviews - openai
+- Restaurant Celler Ca'n Costa Alcúdia (restaurant-celler-ca-n-costa-alcudia) - 5 reviews - openai
+- Playa Santa Ponsa (playa-santa-ponsa) - 5 reviews - openai
+- JET SKI MALLORCA-RIDE EXPERIENCES (jet-ski-mallorca-ride-experiences) - 5 reviews - openai
+- JETSKI VICE MALLORCA🌴 RENTAL & TOURS CALA D‘OR (jetski-vice-mallorca-rental-tours-cala-d-or-jetski-vermietung-ohne-fuhrerschein) - 5 reviews - openai
+- La nueva burguesa (la-nueva-burguesa) - 5 reviews - openai
+- Bombay Beach Indian Restaurant (bombay-beach-indian-restaurant) - 5 reviews - openai
+- Restaurante Illeta (restaurante-illeta) - 5 reviews - openai
+- Basico Gastrobar|Alcudia Restaurant (basico-gastrobar-alcudia-restaurant) - 5 reviews - openai
+- NOU CALA BLAVA|Mallorca restaurant (nou-cala-blava-mallorca-restaurant) - 5 reviews - openai
+- Basico Steak House|Alcudia Restaurant (basico-steak-house-alcudia-restaurant) - 5 reviews - openai
+- Alua Boccaccio (alua-boccaccio) - 5 reviews - openai
+- Azuca-Urban Bistro (azuca-urban-bistro) - 5 reviews - openai
+- Krishna Curry Bar Santa Catalina (krishna-curry-bar-santa-catalina) - 5 reviews - openai
+- Restaurante Tabana (restaurante-tabana) - 5 reviews - openai
+- Celler La Parra (celler-la-parra) - 5 reviews - openai
+- NU Mallorca (nu-mallorca) - 5 reviews - openai
+- La Malvasia (la-malvasia) - 5 reviews - openai
+- MONKEY ON TOURS|Cala Millor, Mallorca (monkey-on-tours-cala-millor-mallorca) - 5 reviews - openai
+- Ca'n Punyetes (ca-n-punyetes) - 5 reviews - openai
+- Savage Beach Club (savage-beach-club) - 5 reviews - openai
+- KAIZEN Restaurante (kaizen-restaurante) - 5 reviews - openai
+- FERVOR Palma (fervor-palma) - 5 reviews - openai
+- Chilli Jetski Mallorca-Puerto Portals (chilli-jetski-mallorca-puerto-portals) - 5 reviews - openai
+- Mallorca Free Tour (mallorca-free-tour) - 5 reviews - openai
+- Los Patos Restaurant (los-patos-restaurant) - 5 reviews - openai
+- Norway Dive Mallorca-PADI 5 Star IDC Scuba Diving Center (norway-dive-mallorca-padi-5-star-idc-scuba-diving-center) - 5 reviews - openai
+- Quad Tour Mallorca by Quads-Minibikes.com (quad-tour-mallorca-by-quads-minibikes-com) - 5 reviews - openai
+- CityXperience (cityxperience) - 5 reviews - openai
+- Restaurante del Sol (restaurante-del-sol) - 5 reviews - openai
+- Iberostar Waves Ciudad Blanca (iberostar-waves-ciudad-blanca) - 5 reviews - openai
+- Al Faro Beach (al-faro-beach) - 5 reviews - openai
+- Playa de Palmanova (playa-de-palmanova) - 5 reviews - openai
+- Cala Agulla (cala-agulla) - 5 reviews - openai
+- Coves de Campanet (coves-de-campanet) - 5 reviews - openai
+- Negre Restaurant (negre-restaurant) - 5 reviews - openai
+- Caramelo Palma Beach (caramelo-palma-beach) - 5 reviews - openai
+- Ponderosa Beach (ponderosa-beach) - 5 reviews - openai
+- Alua Gran Camp de Mar (alua-gran-camp-de-mar) - 5 reviews - openai
+- MALLORCA PAINTBALL|Warriors Lloseta (mallorca-paintball-warriors-lloseta) - 5 reviews - openai
+- AluaSoul Mallorca Resort (Adults Only) (aluasoul-mallorca-resort-adults-only) - 5 reviews - openai
+- Kalypsotuttifrutti (kalypsotuttifrutti) - 5 reviews - openai
+- Hotel Vibra Beverly Playa (hotel-vibra-beverly-playa) - 5 reviews - openai
+- Andana-Restaurante Palma (andana-restaurante-palma) - 5 reviews - openai
+- The Challenge Mallorca (the-challenge-mallorca) - 5 reviews - openai
+- El Camino (el-camino) - 5 reviews - openai
+- BLUESEA Club Marthas (bluesea-club-marthas) - 5 reviews - openai
+- Seaclub Alcudia (seaclub-alcudia) - 5 reviews - openai
+- Meliá Palma Marina (melia-palma-marina) - 5 reviews - openai
+- Elba Sunset Mallorca Thalasso Spa (elba-sunset-mallorca-thalasso-spa) - 5 reviews - openai
+- Mhares Sea Club (mhares-sea-club) - 5 reviews - openai
+- Parque Natural de la Albufera de Mallorca (parque-natural-de-la-albufera-de-mallorca) - 5 reviews - openai
+- MarSenses Puerto Pollensa Hotel & Spa (marsenses-puerto-pollensa-hotel-spa) - 5 reviews - openai
+- Restaurant Manique (restaurant-manique) - 5 reviews - openai
+- Duke Restaurant (duke-restaurant) - 5 reviews - openai
+- Alcudia (alcudia) - 5 reviews - openai
+- Skualo Porto Cristo (skualo-porto-cristo) - 5 reviews - openai
+- Bikkini Beach-Playa de Palma (bikkini-beach-playa-de-palma) - 5 reviews - openai
+- Cala Mesquida (cala-mesquida) - 5 reviews - openai
+- Buggy 4 Fun (buggy-4-fun) - 5 reviews - openai
+- Can Matevet Restaurant (can-matevet-restaurant) - 5 reviews - openai
+- Breogán Cocina Gallega (breogan-cocina-gallega) - 5 reviews - openai
+- RIDE EXPERIENCES-Jet ski Cala d'or (ride-experiences-jet-ski-cala-d-or) - 5 reviews - openai
+- Toque de Queda (toque-de-queda) - 5 reviews - openai
+- Adrian Quetglas Restaurant (adrian-quetglas-restaurant) - 5 reviews - openai
+- Alma Beach & Cocktail Bar-SteakHouse-Thin & Crispy Pizza (alma-beach-cocktail-bar-steakhouse-thin-crispy-pizza) - 5 reviews - openai
+- DINS Santi Taura (dins-santi-taura) - 5 reviews - openai
+- Milano Beach (milano-beach) - 5 reviews - openai
+- Balneario Illetas-Beach Club (balneario-illetas-beach-club) - 5 reviews - openai
+- Playa Esperanza Resort (playa-esperanza-resort) - 5 reviews - openai
+- Banana Club Mallorca-Alcudia (banana-club-mallorca-alcudia) - 5 reviews - openai
+- Restaurant MANACOR (restaurant-manacor) - 5 reviews - openai
+- Diving & Adventure Mallorca (diving-adventure-mallorca) - 5 reviews - openai
+- Mallorca (mallorca) - 5 reviews - openai
+- Playa de Porto Cristo (playa-de-porto-cristo) - 5 reviews - openai
+- BG Hotel Caballero (bg-hotel-caballero) - 5 reviews - openai
+- Hotel Cap Rocat (hotel-cap-rocat) - 5 reviews - openai
+- La Tapera (la-tapera) - 5 reviews - openai
+- Barbuda Beach Mallorca (barbuda-beach-mallorca) - 5 reviews - openai
+- Restaurant Toque (restaurant-toque) - 5 reviews - openai
+- Salines des Trenc (salines-des-trenc) - 5 reviews - openai
+- Restaurante Bodega Ca'n Pantina (restaurante-bodega-ca-n-pantina) - 5 reviews - openai
+- Marina Beach Mallorca (marina-beach-mallorca) - 5 reviews - openai
+- Osteria El Patio (osteria-el-patio) - 5 reviews - openai
+- Vandal Palma (vandal-palma-2) - 5 reviews - openai
+- Pura Vida Sailing Mallorca S.L. Boat Charter in Port Andratx. Andratx (pura-vida-sailing-mallorca-s-l-boat-charter-in-port-andratx-andratx) - 5 reviews - openai
+- Origen tapas concept l Restaurante de tapas Palma (origen-tapas-concept-l-restaurante-de-tapas-palma) - 5 reviews - openai
+- Como en Casa (como-en-casa) - 5 reviews - openai
+- The Crow's Nest Palma (the-crow-s-nest-palma) - 5 reviews - openai
+- allsun Hotel Eden Playa (allsun-hotel-eden-playa) - 5 reviews - openai
+- Meliá Palma Bay (melia-palma-bay) - 5 reviews - openai
+- Hotel Saratoga (hotel-saratoga) - 5 reviews - openai
+- La Rosa Restaurant & Cocktailbar (la-rosa-restaurant-cocktailbar) - 5 reviews - openai
+- Captain Boleor (captain-boleor) - 5 reviews - openai
+- Lume&Co Restaurante en Mallorca (lume-co-restaurante-en-mallorca) - 5 reviews - openai
+- Mallorca Bootcharter (mallorca-bootcharter) - 5 reviews - openai
+- FERGUS Style Palmanova (fergus-style-palmanova) - 5 reviews - openai
+- Big Blue Diving (big-blue-diving) - 5 reviews - openai
+- LILA PORTALS (lila-portals) - 5 reviews - openai
+- Ca Na Marcè (ca-na-marce) - 5 reviews - openai
+- Platja de Cala Major (platja-de-cala-major) - 5 reviews - openai
+- Robinson Club Cala Serena (robinson-club-cala-serena) - 5 reviews - openai
+- Alcudiajets (alcudiajets) - 5 reviews - openai
+- Hotel Basilica (hotel-basilica) - 5 reviews - openai
+- Anssia Gastrobeach Club Palma (anssia-gastrobeach-club-palma) - 5 reviews - openai
+- La Vieja de Jonay Hernandez (la-vieja-de-jonay-hernandez) - 5 reviews - openai
+- La Lonja Marina Charter (la-lonja-marina-charter) - 5 reviews - openai
+- Sunwing Alcúdia Beach (sunwing-alcudia-beach) - 5 reviews - openai
+- Fera Palma Restaurant (fera-palma-restaurant) - 5 reviews - openai
+- Prinsotel La Dorada (prinsotel-la-dorada) - 5 reviews - openai
+- Purobeach Palma-Beach Club (purobeach-palma-beach-club) - 5 reviews - openai
+- Calvia Beach House (calvia-beach-house) - 5 reviews - openai
+- THE BLACK PIG (the-black-pig) - 5 reviews - openai
+- Diferent|Restaurant Cala d'Or (diferent-restaurant-cala-d-or) - 5 reviews - openai
+- Restaurant Can Trompe (restaurant-can-trompe) - 5 reviews - openai
+- Steigenberger Golf & Spa Resort Camp de Mar (steigenberger-golf-spa-resort-camp-de-mar) - 5 reviews - openai
+- Playa S'Amarador (playa-s-amarador) - 5 reviews - openai
+- Grá Irish Gastropub (gra-irish-gastropub) - 5 reviews - openai
+- Hotel Rei del Mediterrani Palace-Adults Only (hotel-rei-del-mediterrani-palace-adults-only) - 5 reviews - openai
+- Sa Foganya (sa-foganya) - 5 reviews - openai
+- Jetxperience (jetxperience) - 5 reviews - openai
+- Sa Gavina Beach Club (sa-gavina-beach-club) - 5 reviews - openai
+- Suro Bistro (suro-bistro) - 5 reviews - openai
+- Merlet Alcúdia tapas (merlet-alcudia-tapas) - 5 reviews - openai
+- Trike & Quad Shop Peguera (trike-quad-shop-peguera) - 5 reviews - openai
+- Mama’s Santa Catalina (mama-s-santa-catalina) - 5 reviews - openai
+- Barceló Ponent Beach (barcelo-ponent-beach) - 5 reviews - openai
+- La Loba Restaurant (la-loba-restaurant) - 5 reviews - openai
+- Inturotel Cala Esmeralda (inturotel-cala-esmeralda) - 5 reviews - openai
+- Hotel Bonanza Palace Playa & Spa (hotel-bonanza-palace-playa-spa) - 5 reviews - openai
+- Tapas Palma Santa Catalina (tapas-palma-santa-catalina) - 5 reviews - openai
+- Isla Mallorca & Spa (isla-mallorca-spa) - 5 reviews - openai
+- boat-4-you.de: / El Arenal / (boat-4-you-de-bootsvermietung-el-arenal-ohne-fuhrerschein) - 5 reviews - openai
+- Jumeirah Mallorca (jumeirah-mallorca) - 5 reviews - openai
+- Vent de Tramuntana (vent-de-tramuntana) - 5 reviews - openai
+- Adventure Tours Mallorca (adventure-tours-mallorca) - 5 reviews - openai
+- Platja de Muro (platja-de-muro) - 5 reviews - openai
+- Heaven Mallorca Charter (heaven-mallorca-charter) - 5 reviews - openai
+- Restaurant Can March (restaurant-can-march) - 5 reviews - openai
+- MiM Mallorca member of Meliá Collection (mim-mallorca-member-of-melia-collection) - 5 reviews - openai
+- NUSA DUA BEACH CLUB (nusa-dua-beach-club) - 5 reviews - openai
+- Buggy-4-Fun Can Picafort (buggy-4-fun-can-picafort) - 5 reviews - openai
+- Zafiro Palace Alcudia (zafiro-palace-alcudia) - 5 reviews - openai
+- Cap Vermell Grand Hotel (cap-vermell-grand-hotel) - 5 reviews - openai
+- Flavours of india (flavours-of-india) - 5 reviews - openai
+- Tramuntana Diving & Adventure (tramuntana-diving-adventure) - 5 reviews - openai
+- Lindner Hotel Mallorca Portals Nous (lindner-hotel-mallorca-portals-nous) - 5 reviews - openai
+- FERGUS Club Font de Sa Cala Beach (fergus-club-font-de-sa-cala-beach) - 5 reviews - openai
+- Mallorca Muntanya (mallorca-muntanya) - 5 reviews - openai
+- My Sea Experience|Alcudia Boat Trips (my-sea-experience-alcudia-boat-trips) - 5 reviews - openai
+- Restaurante Las Velas (restaurante-las-velas) - 5 reviews - openai
+- Arenal Boat Charter (arenal-boat-charter) - 5 reviews - openai
+- La Trencadora (la-trencadora) - 0 reviews - minimal
+- Restaurante Beach Club (restaurante-beach-club) - 5 reviews - openai
+- Siso Beach (siso-beach) - 5 reviews - openai
+- MDS My Diving School (mds-my-diving-school) - 5 reviews - openai
+- Hotel Cala Fornells (hotel-cala-fornells) - 5 reviews - openai
+- La Casa De Las Flores (la-casa-de-las-flores) - 5 reviews - openai
+- Anima e Farina (anima-e-farina) - 5 reviews - openai
+- Meliá Calviá Beach (melia-calvia-beach) - 5 reviews - openai
+- UM Beach House Mallorca (um-beach-house-mallorca) - 5 reviews - openai
+- Beach Club Gran Folies (beach-club-gran-folies) - 5 reviews - openai
+- Vita Bel Sailing Tours & Sunset Dinner Cruises (vita-bel-sailing-tours-sunset-dinner-cruises) - 5 reviews - openai
+- Hotel Illa d´Or (hotel-illa-d-or) - 5 reviews - openai
+- Chrimalù (chrimalu) - 5 reviews - openai
+- Bikini Island & Mountain Hotel Port de Sóller (bikini-island-mountain-hotel-port-de-soller) - 5 reviews - openai
+- Universal Hotel Romántica (universal-hotel-romantica) - 5 reviews - openai
+- Iberostar Selection Es Trenc (iberostar-selection-es-trenc) - 5 reviews - openai
+- Bocana Paellas Cocktails & Grill Restaurant Cala d'Or (bocana-paellas-cocktails-grill-restaurant-cala-d-or) - 5 reviews - openai
+- BQ Belvedere Hotel (bq-belvedere-hotel) - 5 reviews - openai
+- Mallorca Events & Adventures (mallorca-events-adventures) - 5 reviews - openai
+- Hotel Don Antonio (hotel-don-antonio) - 5 reviews - openai
+- Restaurante Roland Garros-Rafa Nadal Academy (restaurante-roland-garros-rafa-nadal-academy) - 5 reviews - openai
+- The St. Regis Mardavall Mallorca Resort (the-st-regis-mardavall-mallorca-resort) - 5 reviews - openai
+- Cala Mondragó (cala-mondrago-2) - 5 reviews - openai
+- OLIU Restaurante (oliu-restaurante) - 5 reviews - openai
+- Mon Port Hotel & Spa (mon-port-hotel-spa) - 5 reviews - openai
+- La Residencia, A Belmond Hotel, Mallorca (la-residencia-a-belmond-hotel-mallorca) - 5 reviews - openai
+- Nikki Beach Mallorca (nikki-beach-mallorca-2) - 5 reviews - openai
+- Restaurant Anoa Santanyí (restaurant-anoa-santanyi) - 5 reviews - openai
+- Alcudia Bay Boat Rental (alcudia-bay-boat-rental) - 5 reviews - openai
+- Mar de Nudos Mediterranean & Japanese cuisine (mar-de-nudos-mediterranean-japanese-cuisine) - 5 reviews - openai
+- Hotel Esplendido (hotel-esplendido) - 5 reviews - openai
+- TirolinasGo Mallorca (tirolinasgo-mallorca) - 5 reviews - openai
+- Platja des Coll Baix (platja-des-coll-baix) - 5 reviews - openai
+- Restaurant Celler Ca´n Ripoll (restaurant-celler-ca-n-ripoll) - 5 reviews - openai
+- EAST26 Restaurant (east26-restaurant) - 5 reviews - openai
+- Sun Beach Santa Ponça (sun-beach-santa-ponca) - 5 reviews - openai
+- Hotel Florida Magaluf (hotel-florida-magaluf) - 5 reviews - openai
+- Restaurant Celler El Molí (restaurant-celler-el-moli) - 5 reviews - openai
+- Náutica SR Mallorca|Alquiler de barcos, excursiones y formación (nautica-sr-mallorca-alquiler-de-barcos-excursiones-y-formacion) - 5 reviews - openai
+- Portixol Restaurante (portixol-restaurante) - 5 reviews - openai
+- COCOA Restaurant / cocktails (cocoa-restaurant-cocktails) - 5 reviews - openai
+- Nola (nola) - 5 reviews - openai
+- Sa Taverna des Port Alcúdia (sa-taverna-des-port-alcudia) - 5 reviews - openai
+- Leonardo Boutique Hotel Mallorca Port Portals-Adults Only (leonardo-boutique-hotel-mallorca-port-portals-adults-only) - 5 reviews - openai
+- Bendito Gusto (bendito-gusto) - 5 reviews - openai
+- Bahía de Alcudia Hotel & Spa (bahia-de-alcudia-hotel-spa) - 5 reviews - openai
+- Son Alegre (son-alegre) - 5 reviews - openai
+- Hotel Bordoy Alcudia Bay (hotel-bordoy-alcudia-bay) - 5 reviews - openai
+- Es Trenc (es-trenc) - 5 reviews - openai
+- Valentin Playa de Muro (valentin-playa-de-muro) - 5 reviews - openai
+- Hotel JS Alcudi-Mar (hotel-js-alcudi-mar) - 5 reviews - openai
+- Spot Mallorca (spot-mallorca) - 5 reviews - openai
+- Restaurante HPC Portocolom (restaurante-hpc-portocolom) - 5 reviews - openai
+- Restaurante Ran de Mar (restaurante-ran-de-mar) - 5 reviews - openai
+- Playa de Cala Pi (playa-de-cala-pi-2) - 5 reviews - openai
+- Smart Boats Mallorca|Alquiler de barcos y yates (smart-boats-mallorca-alquiler-de-barcos-y-yates) - 5 reviews - openai
+- No frills Excursions (no-frills-excursions) - 5 reviews - openai
+- Eques Petit Resort (eques-petit-resort) - 5 reviews - openai
+- Cala des Mago (cala-des-mago) - 5 reviews - openai
+- Vista-Mediterranean Restaurant Puerto Pollensa (vista-mediterranean-restaurant-puerto-pollensa) - 5 reviews - openai
+- Pedro's (pedro-s) - 5 reviews - openai
+- LIFE & SEA MALLORCA, S.L (life-sea-mallorca-s-l) - 5 reviews - openai
+- Purobeach Illetas-Beach Club (purobeach-illetas-beach-club) - 5 reviews - openai
+- BQ Ca'n Picafort Hotel (bq-ca-n-picafort-hotel) - 5 reviews - openai
+- Petita Grill House & Chiringuito (petita-grill-house-chiringuito) - 5 reviews - openai
+- Sea Safari Mallorca (sea-safari-mallorca) - 5 reviews - openai
+- Hotel JS Palma Stay (hotel-js-palma-stay) - 5 reviews - openai
+- PALMA JETSKI (palma-jetski) - 5 reviews - openai
+- BlueBayCharter (bluebaycharter) - 5 reviews - openai
+- Berganta Beach Club|Platja de Muro (berganta-beach-club-platja-de-muro) - 5 reviews - openai
+- Ciudad romana de Pollentia (ciudad-romana-de-pollentia) - 5 reviews - openai
+- Osteria Pane & Olio (osteria-pane-olio) - 5 reviews - openai
+- Lago Garden Hotel & Spa (lago-garden-hotel-spa) - 5 reviews - openai
+- JetXperience (jetxperience) - 5 reviews - openai
+- Rancho Chico (rancho-chico) - 5 reviews - openai
+- El Patio (el-patio) - 5 reviews - openai
+- Hotel Bendinat (hotel-bendinat) - 5 reviews - openai
+- 17 Restaurant & Bar (17-restaurant-bar) - 5 reviews - openai
+- Hotel Sallés Marina Portals (hotel-salles-marina-portals) - 5 reviews - openai
+- Alua Suites Las Rocas (alua-suites-las-rocas) - 5 reviews - openai
+- Cala Gran (cala-gran) - 5 reviews - openai
+- Posada Terra Santa (posada-terra-santa) - 5 reviews - openai
+- Hotel De Mar Gran Meliá (hotel-de-mar-gran-melia) - 5 reviews - openai
+- Viu Aventura Mallorca|Coasteering-Canyoning-Trekking Adventure (viu-aventura-mallorca-coasteering-canyoning-trekking-adventure) - 5 reviews - openai
+- Quest Heroes (quest-heroes) - 5 reviews - openai
+- Sarena de Muro Resort Mallorca, part of Destination by Hyatt (sarena-de-muro-resort-mallorca-part-of-destination-by-hyatt) - 5 reviews - openai
+- Hotel Cala d'Or (hotel-cala-d-or) - 5 reviews - openai
+- Zafiro Palace Andratx (zafiro-palace-andratx) - 5 reviews - openai
+- Ca n'Ignasi (ca-n-ignasi) - 5 reviews - openai
+- Grupotel Rocador (grupotel-rocador) - 5 reviews - openai
+- INNSiDE by Meliá Wave Calviá (innside-by-melia-wave-calvia) - 5 reviews - openai
+- Bar Mingo (bar-mingo) - 5 reviews - openai
+- Castell Son Claret-Leading Hotels of the World Mallorca (castell-son-claret-leading-hotels-of-the-world-mallorca) - 5 reviews - openai
+- Uep buggy tours Mallorca (uep-buggy-tours-mallorca) - 5 reviews - openai
+- Hilton Mallorca Galatzo (hilton-mallorca-galatzo) - 5 reviews - openai
+- Mallorca On Jet Ski (mallorca-on-jet-ski) - 5 reviews - openai
+- Beso Beach Mallorca (beso-beach-mallorca) - 5 reviews - openai
+- FABRICK food & more (fabrick-food-more) - 5 reviews - openai
+- Restaurante Il Paradiso (restaurante-il-paradiso) - 5 reviews - openai
+- Calma y Caos Restaurant (calma-y-caos-restaurant) - 5 reviews - openai
+- LÕA contemporary restaurant, wine & cocktails (loa-contemporary-restaurant-wine-cocktails) - 5 reviews - openai
+- Palma Diving. 10 years of teaching, 30 years of experience, 5 star padi dive center (palma-diving-10-years-of-teaching-30-years-of-experience-5-star-padi-dive-center) - 5 reviews - openai
+- RedstarTours Excursiones (redstartours-excursiones) - 5 reviews - openai
+- Cala Petita (cala-petita) - 5 reviews - openai
+- Sail in freedom (sail-in-freedom) - 5 reviews - openai
+- Stellar Boats (stellar-boats) - 5 reviews - openai
+- Playa de Santanyí (playa-de-santanyi) - 5 reviews - openai
+- Eco Island Adventure (eco-island-adventure) - 5 reviews - openai
+- Llauts Alejandra's Boat Trips Mallorca (llauts-alejandra-s-boat-trips-mallorca) - 5 reviews - openai
+- Bootsverleih boat rental Selecto charter (bootsverleih-boat-rental-selecto-charter) - 5 reviews - openai
+- Doble A Beach Club (doble-a-beach-club) - 5 reviews - openai
+- Q11 restaurant pollença (q11-restaurant-pollenca) - 5 reviews - openai
+- Quad Tours Mallorca-Magaluf (quad-tours-mallorca-magaluf) - 5 reviews - openai
+- Sea U charter (sea-u-charter) - 5 reviews - openai
+- Vela Mayorca-Boat tours (vela-mayorca-boat-tours) - 5 reviews - openai
+- Placeta Garden (placeta-garden) - 5 reviews - openai
+- La Braseria Pollença (la-braseria-pollenca) - 5 reviews - openai
+- Joan Marc Restaurant (joan-marc-restaurant) - 5 reviews - openai
+- Sa Portassa (sa-portassa) - 5 reviews - openai
+- Bar Esperanza (bar-esperanza) - 5 reviews - openai
+- Alchemy Restaurante (alchemy-restaurante) - 5 reviews - openai
+- Buscando el Norte Santa Catalina (buscando-el-norte-santa-catalina) - 5 reviews - openai
+- Asador MAYPE (asador-maype) - 5 reviews - openai
+- Restaurant Ca n'Olesa (restaurant-ca-n-olesa) - 5 reviews - openai
+- Restaurante Marisol (restaurante-marisol) - 5 reviews - openai
+- Playa de Cala Serena (playa-de-cala-serena) - 5 reviews - openai
+- Mr. Xiao (mr-xiao) - 5 reviews - openai
+- Alize Boats • Alquiler de barcos • Boat Rental (alize-boats-alquiler-de-barcos-boat-rental) - 5 reviews - openai
+- Restaurant Puig de Santa Magdalena (restaurant-puig-de-santa-magdalena) - 5 reviews - openai
+- DÔME (dome) - 5 reviews - openai
+- Ocean Charter Mallorca (ocean-charter-mallorca) - 5 reviews - openai
+- Bistro Esencia (bistro-esencia) - 5 reviews - openai
+- La Placeta-Pollença (la-placeta-pollenca) - 5 reviews - openai
+- Restaurante Yüma (restaurante-yuma) - 5 reviews - openai
+- Yaya´s (yaya-s) - 5 reviews - openai
+- ES TRENC NAUTIC alquiler de embarcaciones (es-trenc-nautic-alquiler-de-embarcaciones) - 5 reviews - openai
+- La Font del Gall-Restaurant Pollensa (la-font-del-gall-restaurant-pollensa) - 5 reviews - openai
+- Sea Mallorca-Boat rental (sea-mallorca-boat-rental) - 5 reviews - openai
+- Vayu Charters Sailing Charter in Port Andratx Mallorca (vayu-charters-sailing-charter-in-port-andratx-mallorca) - 5 reviews - openai
+- Sa Calobra (sa-calobra) - 5 reviews - openai
+- Restaurant Trespais Port de Andratx (restaurant-trespais-port-de-andratx) - 5 reviews - openai
+- Restaurante Il Giardino (restaurante-il-giardino) - 5 reviews - openai
+- Can 1907 Restaurant-Restaurante mediterráneo Pollença (can-1907-restaurant-restaurante-mediterraneo-pollenca) - 5 reviews - openai
+- Sumailla Restaurant (sumailla-restaurant) - 5 reviews - openai
+- Poseidón Chárter Mallorca (poseidon-charter-mallorca) - 5 reviews - openai
+- Restaurant Laudat (restaurant-laudat) - 5 reviews - openai
+- Restaurante Viva (restaurante-viva) - 5 reviews - openai
+- Boats Rental Mallorca (boats-rental-mallorca) - 5 reviews - openai
+- Restaurante El Coche (restaurante-el-coche) - 5 reviews - openai
+- Restaurant Sa Romana (restaurant-sa-romana) - 5 reviews - openai
+- Bluebnc (bluebnc-yacht-charter-mallorca-by-azul-prive) - 5 reviews - openai
+- La Universal Port d´Andratx (la-universal-port-d-andratx) - 5 reviews - openai
+- Exclusivesail (exclusivesail) - 5 reviews - openai
+- FACTORIA (factoria) - 5 reviews - openai
+- La Gourmeda (la-gourmeda) - 5 reviews - openai
+- NATUR Inca|Healthy food Mallorca (natur-inca-healthy-food-mallorca) - 5 reviews - openai
+- Imperi Charter (imperi-charter) - 5 reviews - openai
+- La Traviesa Inca (la-traviesa-inca) - 5 reviews - openai
+- DLOLA club (dlola-club) - 5 reviews - openai
+- Café val (cafe-val) - 5 reviews - openai
+- El Chaval Beach Club (el-chaval-beach-club) - 5 reviews - openai
+- Cala Deià (cala-deia-2) - 5 reviews - openai
+- Restaurante Sa Sípia|Beach Club Alcúdia (restaurante-sa-sipia-beach-club-alcudia) - 5 reviews - openai
+- Marea Sun Charter SL (marea-sun-charter-sl) - 5 reviews - openai
+- Playa de Cala Pi (playa-de-cala-pi) - 5 reviews - openai
+- Mirabona (mirabona) - 5 reviews - openai
+- Can Gelat (can-gelat) - 5 reviews - openai
+- Bankai Palma (bankai-palma) - 5 reviews - openai
+- Ecc (ecc-yacht-charter-mallorca) - 5 reviews - openai
+- Llauts, Andratx Boats Charter (llauts-andratx-boats-charter) - 5 reviews - openai
+- Cala domingos (cala-domingos) - 5 reviews - openai
+- Playa de Illetes (playa-de-illetes) - 5 reviews - openai
+- Beach Bar paraiso (beach-bar-paraiso) - 5 reviews - openai
+- Sa Llotja Cala d’Or (sa-llotja-cala-d-or) - 5 reviews - openai
+- Restaurant Celler Can Lau (restaurant-celler-can-lau) - 5 reviews - openai
+- Port Petit (port-petit) - 5 reviews - openai
+- Salicornia (salicornia) - 5 reviews - openai
+- Platja del Port de Pollença (platja-del-port-de-pollenca) - 5 reviews - openai
+- Rapita Charter-Lloguer d’embarcacions (rapita-charter-lloguer-d-embarcacions) - 5 reviews - openai
+- es refugi · foc, copa i taula (es-refugi-foc-copa-i-taula) - 5 reviews - openai
+- Oceans Calviá Beach (oceans-calvia-beach) - 5 reviews - openai
+- Platja d'Alcúdia (platja-d-alcudia) - 5 reviews - openai
+- Naizur-Yacht Charter in Mallorca (naizur-yacht-charter-in-mallorca) - 5 reviews - openai
+- Restaurant Molí de Son Rafal (restaurant-moli-de-son-rafal) - 5 reviews - openai
+- MAKAO (makao) - 5 reviews - openai
+- Restaurante La Fonda de l’Aigua (restaurante-la-fonda-de-l-aigua) - 5 reviews - openai
+- DAYLA-Vins i Tapes (dayla-vins-i-tapes) - 5 reviews - openai
+- Restaurante Balco De Cabrera (restaurante-balco-de-cabrera) - 5 reviews - openai
+- Cala Formentor (cala-formentor) - 5 reviews - openai
+- MEDITERRÁNEA (mediterranea) - 5 reviews - openai
+- S'Illot (s-illot) - 5 reviews - openai
+- Mistral Nautic Boat Rental (mistral-nautic-boat-rental) - 5 reviews - openai
+- Port Sóller (port-soller) - 5 reviews - openai
+- Restaurante Canyamel (restaurante-canyamel) - 5 reviews - openai
+- Playa del mago (playa-del-mago) - 5 reviews - openai
+- On Charter (on-charter-alquiler-barcos-palma-mallorca) - 5 reviews - openai
+- MaksyBoats Boat Hire (maksyboats-boat-hire) - 5 reviews - openai
+- Rodaboats (rodaboats) - 5 reviews - openai
+- Retroway (retroway) - 5 reviews - openai
+- Es Cantonet (es-cantonet) - 5 reviews - openai
+- Bon Foc (bon-foc) - 5 reviews - openai
+- Andrews Charter (andrews-charter) - 5 reviews - openai
+- Restaurant Es Molí (restaurant-es-moli) - 5 reviews - openai
+- Es Princep Rooftop Restaurant & Bar (es-princep-rooftop-restaurant-bar) - 5 reviews - openai
+- Mamacona Cocina Peruana (mamacona-cocina-peruana) - 5 reviews - openai
+- Alcudia Beach Apartments (alcudia-beach-apartments) - 5 reviews - openai
+- Es Racó (es-raco) - 5 reviews - openai
+- Bon Charter (bon-charter) - 5 reviews - openai
+- Mallorca Boat Ride (mallorca-boat-ride) - 5 reviews - openai
+- Santa Restaurant|Restaurante Steakhouse (santa-restaurant-restaurante-steakhouse) - 5 reviews - openai
+- QUADRAT Restaurant & Garden (quadrat-restaurant-garden) - 5 reviews - openai
+- Playa de Cala Ferrera (playa-de-cala-ferrera) - 5 reviews - openai
+- Cala Egos (cala-egos) - 5 reviews - openai
+- Pollensa Restaurante Grill Mares (pollensa-restaurante-grill-mares) - 5 reviews - openai
+- Restaurante My Way puerto de andratx (restaurante-my-way-puerto-de-andratx) - 5 reviews - openai
+- Can Gusti (can-gusti) - 5 reviews - openai
+- Blue Moments (blue-moments) - 5 reviews - openai
+- Cala Gran Beach Club (cala-gran-beach-club) - 5 reviews - openai
+- D'OR BOATS (d-or-boats) - 5 reviews - openai
+- Top Boat Charter Mallorca (top-boat-charter-mallorca) - 5 reviews - openai
+- Restaurante La Fontanella (restaurante-la-fontanella) - 5 reviews - openai
+- Cala Murada (cala-murada) - 5 reviews - openai
+- Ses Aspes (ses-aspes) - 5 reviews - openai
+- Cala Tuent (cala-tuent-2) - 5 reviews - openai
+- Es Racó de sa Ràpita (es-raco-de-sa-rapita) - 5 reviews - openai
+- Restaurante Es Vinyet (restaurante-es-vinyet) - 5 reviews - openai
+- Restaurant s'Amarador (restaurant-s-amarador) - 5 reviews - openai
+- Platja de S'Illot (platja-de-s-illot) - 5 reviews - openai
+- Playa de San Telmo (playa-de-san-telmo) - 5 reviews - openai
+- KARISMA BEACH CLUB PALMA (karisma-beach-club-palma) - 5 reviews - openai
+- Royal Chárters Mallorca (royal-charters-mallorca) - 5 reviews - openai
+- The Charter Yard (the-charter-yard) - 5 reviews - openai
+- Casa Ton (casa-ton) - 5 reviews - openai
+- Kimera The Klub (kimera-the-klub) - 5 reviews - openai
+- RESTAURANTE SA FONDA (restaurante-sa-fonda) - 5 reviews - openai
+- BM Charters (bm-charters) - 5 reviews - openai
+- Brisa 1968 (brisa-1968) - 5 reviews - openai
+- Platja de cans-Pollença (platja-de-cans-pollenca) - 5 reviews - openai
+- Übeck (ubeck) - 5 reviews - openai
+- Infineat (infineat) - 5 reviews - openai
+- MANIA (mania) - 5 reviews - openai
+- Playa de Palmanova (Es Carregador) (playa-de-palmanova-es-carregador) - 5 reviews - openai
+- Santina Harbour Club|Puerto Portals (santina-harbour-club-puerto-portals) - 5 reviews - openai
+- ORIGEN (origen) - 5 reviews - openai
+- Xhaman Beach Club (xhaman-beach-club) - 5 reviews - openai
+- Cala Esmeralda (cala-esmeralda) - 5 reviews - openai
+- Egos Restaurant & Beach club (egos-restaurant-beach-club) - 5 reviews - openai
+- OCRE Restaurant & Bar-Can Ferrereta (ocre-restaurant-bar-can-ferrereta) - 5 reviews - openai
+- Nautical Experiences (nautical-experiences) - 5 reviews - openai
+- Sparkling Boats Mallorca (sparkling-boats-mallorca) - 5 reviews - openai
+- Ja Nedam Boat Experience (alquiler-barcos-palma-mallorca-ja-nedam-boat-experience-boat-rental-palma-mallorca) - 5 reviews - openai
+- Cala Petita (cala-petita-2) - 5 reviews - openai
+- Sóller Playa (soller-playa) - 5 reviews - openai
+- Aloha Charter Boat (aloha-charter-boat) - 5 reviews - openai
+- Fusion Mediterranean Grill (fusion-mediterranean-grill) - 5 reviews - openai
+- Camp de Mar Beach (camp-de-mar-beach) - 5 reviews - openai
+- Rico Mediterraneo (rico-mediterraneo) - 5 reviews - openai
+- Purobeach Resort Santa Ponsa (purobeach-resort-santa-ponsa) - 5 reviews - openai
+- Caló des Borgit (calo-des-borgit) - 5 reviews - openai
+- House of Sunset (house-of-sunset) - 5 reviews - openai
+- Excursiones en Barco (excursiones-en-barco) - 5 reviews - openai
+- Katamaran Charter Ocean Angels (katamaran-charter-ocean-angels) - 5 reviews - openai
+- Ses Covetes Beach (ses-covetes-beach) - 5 reviews - openai
+- Caló d'es Pou (calo-d-es-pou) - 5 reviews - openai
+- Restaurante Can Canals (restaurante-can-canals) - 5 reviews - openai
+- Mallorca Global Charter (mallorca-global-charter) - 5 reviews - openai
+- GOJET Private Boat Trips & Charter (gojet-private-boat-trips-charter) - 5 reviews - openai
+- Es Pou Beach-bar (es-pou-beach-bar) - 5 reviews - openai
+- Maria Maria (maria-maria) - 5 reviews - openai
+- El Rincón (el-rincon) - 5 reviews - openai
+- Premier Cruises (premier-cruises) - 5 reviews - openai
+- Urban bites (urban-bites) - 5 reviews - openai
+- Roots Beach Magaluf (roots-beach-magaluf) - 5 reviews - openai
+- NÁUTICA COLONIA (nautica-colonia) - 5 reviews - openai
+- Romantic Sailing Mallorca (romantic-sailing-mallorca) - 5 reviews - openai
+- Brisa Marina Charter (brisa-marina-charter) - 5 reviews - openai
+- BalearBlue (balearblue) - 5 reviews - openai
+- Umami Fresh Bistro (umami-fresh-bistro) - 5 reviews - openai
+- Mallorca Boat Hire (mallorca-boat-hire-2) - 5 reviews - openai
+- MALLORQUINO (mallorquino) - 5 reviews - openai
+- Marina Balear Yachtcharter-Port Adriano-Mallorca (marina-balear-yachtcharter-port-adriano-mallorca) - 5 reviews - openai
+- Zatara Mar-Yacht Charter-PuraVida (zatara-mar-yacht-charter-puravida) - 5 reviews - openai
+- Restaurante Cantonet (restaurante-cantonet) - 5 reviews - openai
+- Teddy boat (teddy-boat) - 5 reviews - openai
+- Can Trobat (can-trobat) - 5 reviews - openai
+- Sampa Manacor (sampa-manacor) - 5 reviews - openai
+- Boats Charter Cala D'or (boats-charter-cala-d-or) - 5 reviews - openai
+- Carlo Mar Charter. Puerto De Andratx. Mallorca (carlo-mar-charter-puerto-de-andratx-mallorca) - 5 reviews - openai
+- Restaurant Cal Reiet's Table (restaurant-cal-reiet-s-table) - 5 reviews - openai
+- La Maestranza (la-maestranza) - 5 reviews - openai
+- Arraz Boat (arraz-boat-alquiler-de-barcos-sin-licencia) - 5 reviews - openai
+- Navigare Yachting • Palma De Mallorca (navigare-yachting-palma-de-mallorca) - 5 reviews - openai
+- Rico Boats (rico-boats) - 5 reviews - openai
+- La Nouvelle Famille (la-nouvelle-famille) - 5 reviews - openai
+- Balearics Boat Charters S.L Puerto Portals (balearics-boat-charters-s-l-puerto-portals) - 5 reviews - openai
+- Cru Restaurant (cru-restaurant) - 5 reviews - openai
+- Garden del Mar (garden-del-mar) - 5 reviews - openai
+- Restaurant calvari Hills (restaurant-calvari-hills) - 5 reviews - openai
+- No11 (no11) - 5 reviews - openai
+- Perú Mikhuna (peru-mikhuna) - 5 reviews - openai
+- El Ultimo Paraíso Can Senae (el-ultimo-paraiso-can-senae) - 5 reviews - openai
+- Delhi Haveli (delhi-haveli) - 5 reviews - openai
+- El sabor de pancho (el-sabor-de-pancho) - 5 reviews - openai
+- Nom Nom Sa Rapita (nom-nom-sa-rapita) - 5 reviews - openai
+- Sa Forca (sa-forca) - 5 reviews - openai
+- Bàcora Restaurant (bacora-restaurant) - 5 reviews - openai
+- CELLER TONET (celler-tonet) - 5 reviews - openai
+- Abraxas Restaurante (abraxas-restaurante) - 5 reviews - openai
+- MASTER RAMEN (master-ramen) - 5 reviews - openai
+- Litoral (litoral) - 5 reviews - openai
+- Restaurante Mediterráneo Essence (restaurante-mediterraneo-essence) - 5 reviews - openai
+- Vandal Palma (vandal-palma) - 0 reviews - minimal
+- Sail Trip Mallorca (sail-trip-mallorca) - 5 reviews - openai
+- Sant Francesc Hotel Singular (sant-francesc-palma) - 5 reviews - openai
+- Son Brull (son-brull-pollenca) - 5 reviews - openai
+- Illeta (illeta-camp-de-mar) - 0 reviews - minimal
+- Belmond La Residencia (belmond-la-residencia-deia) - 0 reviews - minimal
+- Cala Varques (cala-varques) - 5 reviews - openai
+- Cala Mondragó (cala-mondrago) - 0 reviews - minimal
+- Cap Rocat (cap-rocat) - 0 reviews - minimal
+- Purobeach Palma (purobeach-palma) - 0 reviews - minimal
+- Miceli (miceli-selva) - 5 reviews - openai
+- El Camino (el-camino-palma) - 0 reviews - minimal
+- De Tokio a Lima (de-tokio-a-lima-palma) - 5 reviews - openai
+- Alcudia Sea Explorer (alcudia-sea-explorer) - 5 reviews - openai
+- Ca Na Toneta (ca-na-toneta-caimari) - 5 reviews - openai
+- Santi Taura (santi-taura-palma) - 0 reviews - minimal
+- Gran Folies (gran-folies-cala-llamp) - 0 reviews - minimal
+- Nikki Beach Mallorca (nikki-beach-mallorca) - 0 reviews - minimal
+- Paseo a Cala Deià (sendero-cala-deia) - 0 reviews - minimal
+- Cala Tuent (cala-tuent) - 0 reviews - minimal
+- Balneario Illetas (balneario-illetas) - 0 reviews - minimal
+- Cala Deià (cala-deia) - 0 reviews - minimal
+- Mallorca Boat Hire (mallorca-boat-hire) - 0 reviews - minimal
+- Bodega Barahona Casa Manolo (bodega-barahona-casa-manolo-ses-salines) - 5 reviews - openai
+- Patiki Beach (patiki-beach-soller) - 5 reviews - openai
+- Can Bordoy Grand House & Garden (can-bordoy-palma) - 5 reviews - openai
+- Playa de Muro (playa-de-muro) - 0 reviews - minimal
+- Mirador de Sa Foradada (mirador-sa-foradada) - 5 reviews - openai
+- Nama Deià (nama-deia) - 5 reviews - openai
+- Click Mallorca Boats (click-mallorca-boats) - 5 reviews - openai
+- Bodegas de Binissalem (bodegas-binissalem) - 5 reviews - openai
+- Mercado de Santa Catalina (mercado-santa-catalina) - 5 reviews - openai
+- Tren de Sóller (tren-soller) - 5 reviews - openai
+
+## Skipped
+
+
+## Errors
+
+- Hotel Marina & Wellness Spa (hotel-marina-wellness-spa) - [
+  {
+    "code": "too_big",
+    "maximum": 420,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at most 420 character(s)",
+    "path": [
+      "featured_reviews",
+      0,
+      "text"
+    ]
+  }
+]
+- Acqua Life Dive Center (acqua-life-dive-center) - OpenAI API 403: 
+- Platja Cala Mendia (platja-cala-mendia) - [
+  {
+    "code": "too_big",
+    "maximum": 420,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at most 420 character(s)",
+    "path": [
+      "featured_reviews",
+      2,
+      "text"
+    ]
+  }
+]
+- NENI Mallorca Es Trenc (neni-mallorca-es-trenc) - fetch failed

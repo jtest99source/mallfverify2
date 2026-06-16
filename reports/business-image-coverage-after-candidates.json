@@ -1,0 +1,1017 @@
+{
+  "generated_at": "2026-06-08T18:28:37.346Z",
+  "totals": {
+    "total_businesses_published_premium": 515,
+    "with_primary_image_url": 52,
+    "without_primary_image_url": 463,
+    "with_image_candidate_urls": 143,
+    "without_image_candidate_urls": 372
+  },
+  "comparison": {
+    "previous_with_candidates": 52,
+    "current_with_candidates": 143,
+    "new_businesses_with_candidates": 91,
+    "previous_candidate_coverage_percent": 10.1,
+    "current_candidate_coverage_percent": 27.77,
+    "coverage_increment_percent": 17.67
+  },
+  "by_category": [
+    {
+      "category": "activity",
+      "total": 55,
+      "with_candidates": 29,
+      "without_candidates": 26,
+      "coverage_percent": 52.73
+    },
+    {
+      "category": "beach",
+      "total": 50,
+      "with_candidates": 3,
+      "without_candidates": 47,
+      "coverage_percent": 6
+    },
+    {
+      "category": "beach-club",
+      "total": 40,
+      "with_candidates": 13,
+      "without_candidates": 27,
+      "coverage_percent": 32.5
+    },
+    {
+      "category": "boat-rental",
+      "total": 80,
+      "with_candidates": 11,
+      "without_candidates": 69,
+      "coverage_percent": 13.75
+    },
+    {
+      "category": "hotel",
+      "total": 80,
+      "with_candidates": 35,
+      "without_candidates": 45,
+      "coverage_percent": 43.75
+    },
+    {
+      "category": "restaurant",
+      "total": 210,
+      "with_candidates": 52,
+      "without_candidates": 158,
+      "coverage_percent": 24.76
+    }
+  ],
+  "top_50_without_image_without_candidates": [
+    {
+      "id": "google-ChIJLyGfBqJWlhIROjoZ9Sw1X0I",
+      "display_name": "Parque Natural de Mondragó",
+      "category": "beach",
+      "status": "published",
+      "area": "Mallorca",
+      "authority_score": 188.1025,
+      "reviews_count": 16036,
+      "rating": 4.7,
+      "website_type": "official_website",
+      "website": "http://ca.balearsnatura.com/parque_natural/parque-natural-de-mondrago/"
+    },
+    {
+      "id": "google-ChIJ-fKoK2aSlxIRSpaNEKLJog4",
+      "display_name": "La nueva burguesa",
+      "category": "restaurant",
+      "status": "published",
+      "area": "Palma",
+      "authority_score": 179.202,
+      "reviews_count": 2570,
+      "rating": 4.8,
+      "website_type": "instagram",
+      "website": "https://www.instagram.com/lanuevaburguesa/?hl=es"
+    },
+    {
+      "id": "google-ChIJbzL98FXFlxIR1BgDiYbQzJ0",
+      "display_name": "CityXperience",
+      "category": "activity",
+      "status": "published",
+      "area": "Mallorca",
+      "authority_score": 175.8839,
+      "reviews_count": 2208,
+      "rating": 4.7,
+      "website_type": "official_website",
+      "website": "http://www.cityxperience.com/"
+    },
+    {
+      "id": "google-ChIJR2DsiL2XlxIRJRALVxIch0M",
+      "display_name": "Al Faro Beach",
+      "category": "restaurant",
+      "status": "published",
+      "area": "Palma",
+      "authority_score": 175.5103,
+      "reviews_count": 2115,
+      "rating": 4.7,
+      "website_type": "official_website",
+      "website": "https://www.alfarobeach.com/"
+    },
+    {
+      "id": "google-ChIJnTb4qcEslhIRVnzEaghSeUc",
+      "display_name": "Seaclub Alcudia",
+      "category": "hotel",
+      "status": "published",
+      "area": "Port d'Alcúdia",
+      "authority_score": 173.2257,
+      "reviews_count": 2577,
+      "rating": 4.5,
+      "website_type": "official_website",
+      "website": "https://www.seaclub.com/en?origin=gmb&affiliate=gmb&utm_source=google&utm_medium=organic&utm_campaign=GoogleMyBusiness"
+    },
+    {
+      "id": "google-ChIJ1XTDZEEtlhIRR158QmEYwyo",
+      "display_name": "Parque Natural de la Albufera de Mallorca",
+      "category": "activity",
+      "status": "published",
+      "area": "Mallorca",
+      "authority_score": 172.8188,
+      "reviews_count": 3096,
+      "rating": 4.4,
+      "website_type": "official_website",
+      "website": "https://salbufera.com/"
+    },
+    {
+      "id": "google-ChIJMVUvjewslhIR6Hv9ctd6FII",
+      "display_name": "Alcudia",
+      "category": "beach",
+      "status": "published",
+      "area": "Alcúdia",
+      "authority_score": 172.4541,
+      "reviews_count": 3331,
+      "rating": 4.6,
+      "website_type": "official_website",
+      "website": "http://platja-dalcudia.business.site/"
+    },
+    {
+      "id": "google-ChIJu5ZTFsIXlhIRMASt5qzdC5M",
+      "display_name": "Cala Mesquida",
+      "category": "beach",
+      "status": "published",
+      "area": "Capdepera",
+      "authority_score": 172.2812,
+      "reviews_count": 10328,
+      "rating": 4.6,
+      "website_type": null,
+      "website": null
+    },
+    {
+      "id": "google-ChIJZQR3W1qSlxIRj_emwVMZFmE",
+      "display_name": "Toque de Queda",
+      "category": "restaurant",
+      "status": "published",
+      "area": "Palma",
+      "authority_score": 171.9535,
+      "reviews_count": 1404,
+      "rating": 4.7,
+      "website_type": "facebook",
+      "website": "https://www.facebook.com/toquedequedamallorca/"
+    },
+    {
+      "id": "google-ChIJKcEGZna4lxIRwOzSAv-b67c",
+      "display_name": "Mallorca",
+      "category": "activity",
+      "status": "published",
+      "area": "Mallorca",
+      "authority_score": 171.0442,
+      "reviews_count": 8957,
+      "rating": 4.6,
+      "website_type": null,
+      "website": null
+    },
+    {
+      "id": "google-ChIJe7eCC8NHlhIRtBcOApEPBKk",
+      "display_name": "Playa de Porto Cristo",
+      "category": "beach",
+      "status": "published",
+      "area": "Porto Cristo",
+      "authority_score": 171.0423,
+      "reviews_count": 11274,
+      "rating": 4.5,
+      "website_type": null,
+      "website": null
+    },
+    {
+      "id": "google-ChIJScWee06WlxIRiRCT_3F9Z58",
+      "display_name": "Marina Beach Mallorca",
+      "category": "beach-club",
+      "status": "published",
+      "area": "Mallorca",
+      "authority_score": 170.6259,
+      "reviews_count": 2405,
+      "rating": 4.4,
+      "website_type": "official_website",
+      "website": "https://marinabeachmallorca.com/"
+    },
+    {
+      "id": "google-ChIJ34knZeaXlxIR7CudzkEVCt4",
+      "display_name": "La Rosa Restaurant & Cocktailbar",
+      "category": "restaurant",
+      "status": "published",
+      "area": "Palma",
+      "authority_score": 170.0539,
+      "reviews_count": 1128,
+      "rating": 4.7,
+      "website_type": "instagram",
+      "website": "https://www.instagram.com/la.rosa.restaurant/?hl=es"
+    },
+    {
+      "id": "google-ChIJ0b11p--NlxIRQVDPqFkZHtA",
+      "display_name": "Platja de Cala Major",
+      "category": "beach",
+      "status": "published",
+      "area": "Palma",
+      "authority_score": 169.8558,
+      "reviews_count": 12381,
+      "rating": 4.4,
+      "website_type": null,
+      "website": null
+    },
+    {
+      "id": "google-ChIJaU3Gga9WlhIRZiHV-GeueI0",
+      "display_name": "Playa S'Amarador",
+      "category": "beach",
+      "status": "published",
+      "area": "Mallorca",
+      "authority_score": 168.9235,
+      "reviews_count": 1570,
+      "rating": 4.5,
+      "website_type": "official_website",
+      "website": "http://ca.balearsnatura.com/parque_natural/parque-natural-de-mondrago/"
+    },
+    {
+      "id": "google-ChIJSSq-qKaplxIRvzHv5wbANGg",
+      "display_name": "Sa Foganya",
+      "category": "restaurant",
+      "status": "published",
+      "area": "Colonia de Sant Jordi",
+      "authority_score": 168.8419,
+      "reviews_count": 779,
+      "rating": 4.8,
+      "website_type": "instagram",
+      "website": "https://www.instagram.com/restaurant_safoganya"
+    },
+    {
+      "id": "google-ChIJL6zTUeotlhIRDjEK1CxFFDk",
+      "display_name": "Merlet Alcúdia tapas",
+      "category": "restaurant",
+      "status": "published",
+      "area": "Alcúdia",
+      "authority_score": 168.5384,
+      "reviews_count": 1891,
+      "rating": 4.9,
+      "website_type": null,
+      "website": null
+    },
+    {
+      "id": "google-ChIJ-5LQwFEhmBIRAMuAJQYMgt4",
+      "display_name": "Vent de Tramuntana",
+      "category": "restaurant",
+      "status": "published",
+      "area": "Port d'Andratx",
+      "authority_score": 167.7403,
+      "reviews_count": 864,
+      "rating": 4.7,
+      "website_type": "facebook",
+      "website": "https://m.facebook.com/pages/Vent-De-Tramontana-Restaurant/204731776214575"
+    },
+    {
+      "id": "google-ChIJubjzdB8tlhIRSDf8v7sB_tQ",
+      "display_name": "Platja de Muro",
+      "category": "beach",
+      "status": "published",
+      "area": "Playa de Muro",
+      "authority_score": 167.6951,
+      "reviews_count": 4838,
+      "rating": 4.7,
+      "website_type": null,
+      "website": null
+    },
+    {
+      "id": "google-ChIJj_f9YfwhmBIRZnoO9T5sIhw",
+      "display_name": "Flavours of india",
+      "category": "restaurant",
+      "status": "published",
+      "area": "Port d'Andratx",
+      "authority_score": 167.253,
+      "reviews_count": 515,
+      "rating": 4.9,
+      "website_type": "facebook",
+      "website": "http://www.facebook.com/profile.php?id=100089067411351"
+    },
+    {
+      "id": "google-ChIJ2fYJu3iOlxIRXn85xTUnCWA",
+      "display_name": "Lindner Hotel Mallorca Portals Nous",
+      "category": "hotel",
+      "status": "published",
+      "area": "Puerto Portals",
+      "authority_score": 167.2232,
+      "reviews_count": 814,
+      "rating": 4.7,
+      "website_type": "official_website",
+      "website": "https://www.hyatt.com/en-US/hotel/spain/lindner-hotel-mallorca-portals-nous/pmijc?src=corp_lclb_google_seo_pmijc&utm_source=google&utm_medium=organic&utm_campaign=lmr"
+    },
+    {
+      "id": "google-ChIJBX-qzf6XlxIRsFlJqStBBCI",
+      "display_name": "Arenal Boat Charter",
+      "category": "boat-rental",
+      "status": "published",
+      "area": "Mallorca",
+      "authority_score": 166.9446,
+      "reviews_count": 497,
+      "rating": 4.9,
+      "website_type": "official_website",
+      "website": "http://www.arenalboatcharter.com/"
+    },
+    {
+      "id": "google-ChIJz-9Q0x_UlxIREOaPv1L0YKQ",
+      "display_name": "La Trencadora",
+      "category": "restaurant",
+      "status": "published",
+      "area": "Pollenca",
+      "authority_score": 166.8754,
+      "reviews_count": 1240,
+      "rating": 4.5,
+      "website_type": "official_website",
+      "website": "https://www.canva.com/design/DAGhJv3u9aE/_aQbIhHfT_3dxH8mvfJJPw/edit?utm_content=DAGhJv3u9aE&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
+    },
+    {
+      "id": "google-ChIJIVM1_FEnmBIR6j-fKfNSRR4",
+      "display_name": "Restaurante Beach Club",
+      "category": "beach-club",
+      "status": "published",
+      "area": "Peguera",
+      "authority_score": 166.8625,
+      "reviews_count": 1559,
+      "rating": 4.4,
+      "website_type": "official_website",
+      "website": "http://www.beach-club-paguera.com/"
+    },
+    {
+      "id": "google-ChIJlWF0ClSJlxIRZ-_UUaSTkrg",
+      "display_name": "Siso Beach",
+      "category": "beach-club",
+      "status": "published",
+      "area": "Calvia",
+      "authority_score": 166.7975,
+      "reviews_count": 2453,
+      "rating": 4.2,
+      "website_type": "official_website",
+      "website": "http://www.sisobeachmallorca.com/"
+    },
+    {
+      "id": "google-ChIJ6-omzZVQlhIR-JUGO_fpf2g",
+      "display_name": "MDS My Diving School",
+      "category": "activity",
+      "status": "published",
+      "area": "Mallorca",
+      "authority_score": 166.7506,
+      "reviews_count": 486,
+      "rating": 4.9,
+      "website_type": "official_website",
+      "website": "https://mds-mallorca.com/"
+    },
+    {
+      "id": "google-ChIJ94ehrzknmBIRn64SS1wFS1o",
+      "display_name": "Hotel Cala Fornells",
+      "category": "hotel",
+      "status": "published",
+      "area": "Peguera",
+      "authority_score": 166.7485,
+      "reviews_count": 1222,
+      "rating": 4.5,
+      "website_type": "official_website",
+      "website": "https://www.calafornells.com/"
+    },
+    {
+      "id": "google-ChIJ80Fh951RlhIR2vb9ndOWvmA",
+      "display_name": "La Casa De Las Flores",
+      "category": "restaurant",
+      "status": "published",
+      "area": "Cala d'Or",
+      "authority_score": 166.6495,
+      "reviews_count": 605,
+      "rating": 4.8,
+      "website_type": "official_website",
+      "website": "https://lacasadelasflorescalador.com/"
+    },
+    {
+      "id": "google-ChIJl-bweQDXlxIRYGvd9GqVt9E",
+      "display_name": "Anima e Farina",
+      "category": "restaurant",
+      "status": "published",
+      "area": "Alcúdia",
+      "authority_score": 166.6067,
+      "reviews_count": 478,
+      "rating": 4.9,
+      "website_type": "official_website",
+      "website": "http://www.animaefarina.com/"
+    },
+    {
+      "id": "google-ChIJM3AEd1CTlxIRyYhsmMWvU4g",
+      "display_name": "Meliá Calviá Beach",
+      "category": "hotel",
+      "status": "published",
+      "area": "Calvia",
+      "authority_score": 166.5933,
+      "reviews_count": 1903,
+      "rating": 4.3,
+      "website_type": "official_website",
+      "website": "https://www.melia.com/en/hotels/spain/majorca/melia-calvia-beach?utm_campaign=google&utm_content=0702&utm_medium=organic&utm_source=directories"
+    },
+    {
+      "id": "google-ChIJc6oSDXCPlxIREXwt4mtnSvQ",
+      "display_name": "UM Beach House Mallorca",
+      "category": "beach-club",
+      "status": "published",
+      "area": "Puerto Portals",
+      "authority_score": 166.5623,
+      "reviews_count": 1506,
+      "rating": 4.4,
+      "website_type": "official_website",
+      "website": "https://umbeachhouse.com/es/um-beach-house-portals/"
+    },
+    {
+      "id": "google-ChIJNZ_PjqUmmBIRUcbKeHIy20c",
+      "display_name": "Beach Club Gran Folies",
+      "category": "restaurant",
+      "status": "published",
+      "area": "Port d'Andratx",
+      "authority_score": 166.5607,
+      "reviews_count": 2387,
+      "rating": 4.2,
+      "website_type": "official_website",
+      "website": "https://beachclubgranfolies.com/"
+    },
+    {
+      "id": "google-ChIJcUbX99lQlhIRyTxLmoSrqVQ",
+      "display_name": "Vita Bel Sailing Tours & Sunset Dinner Cruises",
+      "category": "boat-rental",
+      "status": "published",
+      "area": "Cala d'Or",
+      "authority_score": 166.4972,
+      "reviews_count": 472,
+      "rating": 4.9,
+      "website_type": "official_website",
+      "website": "https://www.vita-bel.com/"
+    },
+    {
+      "id": "google-ChIJq-zgbzLVlxIR_vhsuWEKRQg",
+      "display_name": "Hotel Illa d´Or",
+      "category": "hotel",
+      "status": "published",
+      "area": "Pollenca",
+      "authority_score": 166.489,
+      "reviews_count": 1186,
+      "rating": 4.5,
+      "website_type": "official_website",
+      "website": "https://www.hotelillador.com/?wcd=brand&utm_source=google&utm_medium=mybusiness&utm_campaign=boton"
+    },
+    {
+      "id": "google-ChIJPUplVNpQlhIRUBJ8Ot56hfI",
+      "display_name": "Chrimalù",
+      "category": "restaurant",
+      "status": "published",
+      "area": "Santanyi",
+      "authority_score": 166.4548,
+      "reviews_count": 745,
+      "rating": 4.7,
+      "website_type": "instagram",
+      "website": "https://www.instagram.com/chrimalu.calador/"
+    },
+    {
+      "id": "google-ChIJL3kE4OPllxIR9XsIVS3EDDw",
+      "display_name": "Bikini Island & Mountain Hotel Port de Sóller",
+      "category": "hotel",
+      "status": "published",
+      "area": "Port de Sóller",
+      "authority_score": 166.2284,
+      "reviews_count": 914,
+      "rating": 4.6,
+      "website_type": "official_website",
+      "website": "https://www.bikini-hotels.com/mallorca-hotels/port-de-soller/"
+    },
+    {
+      "id": "google-ChIJ--_FEqiplxIRXAf3lgaZDUk",
+      "display_name": "Universal Hotel Romántica",
+      "category": "hotel",
+      "status": "published",
+      "area": "Colonia de Sant Jordi",
+      "authority_score": 166.2034,
+      "reviews_count": 1445,
+      "rating": 4.4,
+      "website_type": "official_website",
+      "website": "https://www.universalbeachhotels.com/hoteles/universal-hotel-romantica?utm_source=google&utm_medium=organic&utm_campaign=GMB&utm_content=universalhotelromantica"
+    },
+    {
+      "id": "google-ChIJQZzORa-plxIRmIqYWceyKKg",
+      "display_name": "Iberostar Selection Es Trenc",
+      "category": "hotel",
+      "status": "published",
+      "area": "Colonia de Sant Jordi",
+      "authority_score": 166.144,
+      "reviews_count": 1807,
+      "rating": 4.3,
+      "website_type": "official_website",
+      "website": "https://www.iberostar.com/eu/hotels/majorca/iberostar-selection-es-trenc/?utm_source=gmb&utm_medium=organic&utm_campaign=IBSVOL_EMEA_SEOLOC_GMB_NA_EN_ESP_BAL_PMI_EST_PULL_NA_NA_NA_NA_NA"
+    },
+    {
+      "id": "google-ChIJyVX3AxdRlhIRRijRS8O0ROU",
+      "display_name": "Bocana Paellas Cocktails & Grill Restaurant Cala d'Or",
+      "category": "restaurant",
+      "status": "published",
+      "area": "Cala d'Or",
+      "authority_score": 166.1104,
+      "reviews_count": 716,
+      "rating": 4.7,
+      "website_type": "official_website",
+      "website": "https://www.bocanacalador.com/en/?utm_source=gmb&utm_medium=organic&utm_campaign=bocana"
+    },
+    {
+      "id": "google-ChIJ57pw1OmNlxIR3Snn7hPB678",
+      "display_name": "BQ Belvedere Hotel",
+      "category": "hotel",
+      "status": "published",
+      "area": "Mallorca",
+      "authority_score": 166.103,
+      "reviews_count": 2851,
+      "rating": 4.1,
+      "website_type": "official_website",
+      "website": "https://www.bqhoteles.com/es/hoteles/mallorca/bq-belvedere/?partner=6218&utm_source=google&utm_medium=gmb&utm_campaign=web_link"
+    },
+    {
+      "id": "google-ChIJNXhQ3E-ZlxIRStqxI0UqahY",
+      "display_name": "Mallorca Events & Adventures",
+      "category": "activity",
+      "status": "published",
+      "area": "Mallorca",
+      "authority_score": 166.029,
+      "reviews_count": 355,
+      "rating": 5,
+      "website_type": "official_website",
+      "website": "https://www.mallorcaadventures.com/"
+    },
+    {
+      "id": "google-ChIJWRmDrTUnmBIR2IEEAddrmtI",
+      "display_name": "Hotel Don Antonio",
+      "category": "hotel",
+      "status": "published",
+      "area": "Calvia",
+      "authority_score": 166.0268,
+      "reviews_count": 893,
+      "rating": 4.6,
+      "website_type": "official_website",
+      "website": "https://www.bordoyhotels.com/es/hotel-don-antonio/hotel?utm_source=google&utm_medium=organic&utm_campaign=GMB&utm_content=Bordoy_Antonio"
+    },
+    {
+      "id": "google-ChIJf21QPMRJlhIRpGs8rFmu6E4",
+      "display_name": "Restaurante Roland Garros-Rafa Nadal Academy",
+      "category": "restaurant",
+      "status": "published",
+      "area": "Manacor",
+      "authority_score": 165.9947,
+      "reviews_count": 561,
+      "rating": 4.8,
+      "website_type": "official_website",
+      "website": "https://www.rafanadalclub.com/restaurantes/roland-garros"
+    },
+    {
+      "id": "google-ChIJCzytnZ-OlxIR6a7hRZcIr94",
+      "display_name": "The St. Regis Mardavall Mallorca Resort",
+      "category": "hotel",
+      "status": "published",
+      "area": "Mallorca",
+      "authority_score": 165.978,
+      "reviews_count": 888,
+      "rating": 4.6,
+      "website_type": "official_website",
+      "website": "https://www.marriott.com/en-us/hotels/pmixr-the-st-regis-mardavall-mallorca-resort/overview/?scid=f2ae0541-1279-4f24-b197-a979c79310b0"
+    },
+    {
+      "id": "google-ChIJg0Av669WlhIRYN7EK7W8L2Q",
+      "display_name": "Cala Mondragó",
+      "category": "beach",
+      "status": "published",
+      "area": "Mallorca",
+      "authority_score": 165.8605,
+      "reviews_count": 4931,
+      "rating": 4.6,
+      "website_type": null,
+      "website": null
+    },
+    {
+      "id": "google-ChIJH8QWVz8hmBIRFQitk4pH9Ro",
+      "display_name": "OLIU Restaurante",
+      "category": "restaurant",
+      "status": "published",
+      "area": "Andratx",
+      "authority_score": 165.8501,
+      "reviews_count": 875,
+      "rating": 4.6,
+      "website_type": "official_website",
+      "website": "http://www.oliu.es/"
+    },
+    {
+      "id": "google-ChIJp0pu_VUhmBIRvHipw3OHPiU",
+      "display_name": "Mon Port Hotel & Spa",
+      "category": "hotel",
+      "status": "published",
+      "area": "Port d'Andratx",
+      "authority_score": 165.7011,
+      "reviews_count": 683,
+      "rating": 4.7,
+      "website_type": "official_website",
+      "website": "https://www.hotelmonport.com/en?utm_source=gmb&utm_medium=organic&partner=7229"
+    },
+    {
+      "id": "google-ChIJ9birlq3vlxIR_a16RBx3yOQ",
+      "display_name": "La Residencia, A Belmond Hotel, Mallorca",
+      "category": "hotel",
+      "status": "published",
+      "area": "Deia",
+      "authority_score": 165.69,
+      "reviews_count": 859,
+      "rating": 4.6,
+      "website_type": "official_website",
+      "website": "https://www.belmond.com/hotels/europe/mallorca/deia/belmond-la-residencia/?utm_source=local_search&utm_medium=link&utm_campaign=google_business"
+    },
+    {
+      "id": "google-ChIJDy2pKCmJlxIRXe1vTFRdqnM",
+      "display_name": "Nikki Beach Mallorca",
+      "category": "beach-club",
+      "status": "published",
+      "area": "Calvia",
+      "authority_score": 165.681,
+      "reviews_count": 2157,
+      "rating": 4.2,
+      "website_type": "official_website",
+      "website": "https://nikkibeach.com/mallorca/"
+    },
+    {
+      "id": "google-ChIJHaMik5pUlhIRHvMaplGycv8",
+      "display_name": "Restaurant Anoa Santanyí",
+      "category": "restaurant",
+      "status": "published",
+      "area": "Santanyi",
+      "authority_score": 165.4303,
+      "reviews_count": 662,
+      "rating": 4.7,
+      "website_type": "official_website",
+      "website": "https://anoa-santanyi.com/es"
+    }
+  ],
+  "top_50_recent_candidates": [
+    {
+      "display_name": "Catedral-Basílica de Santa María de Mallorca",
+      "category": "activity",
+      "candidate_count": 8,
+      "extraction_method": "srcset, img",
+      "confidence": "medium"
+    },
+    {
+      "display_name": "Castillo de Bellver",
+      "category": "activity",
+      "candidate_count": 1,
+      "extraction_method": "img",
+      "confidence": "low"
+    },
+    {
+      "display_name": "Iberostar Waves Playa de Muro",
+      "category": "hotel",
+      "candidate_count": 8,
+      "extraction_method": "meta, srcset, background",
+      "confidence": "high, medium"
+    },
+    {
+      "display_name": "Cuevas de Artà",
+      "category": "activity",
+      "candidate_count": 7,
+      "extraction_method": "img",
+      "confidence": "low"
+    },
+    {
+      "display_name": "Iberostar Selection Playa de Muro Village",
+      "category": "hotel",
+      "candidate_count": 8,
+      "extraction_method": "meta, srcset, background",
+      "confidence": "high, medium"
+    },
+    {
+      "display_name": "Puerto de Alcúdia",
+      "category": "activity",
+      "candidate_count": 8,
+      "extraction_method": "img",
+      "confidence": "medium, low"
+    },
+    {
+      "display_name": "Restaurant Celler Ca'n Costa Alcúdia",
+      "category": "restaurant",
+      "candidate_count": 8,
+      "extraction_method": "img",
+      "confidence": "low"
+    },
+    {
+      "display_name": "JETSKI VICE MALLORCA🌴 RENTAL & TOURS CALA D‘OR",
+      "category": "activity",
+      "candidate_count": 8,
+      "extraction_method": "srcset, background",
+      "confidence": "medium"
+    },
+    {
+      "display_name": "Bombay Beach Indian Restaurant",
+      "category": "restaurant",
+      "candidate_count": 7,
+      "extraction_method": "background, img",
+      "confidence": "medium, low"
+    },
+    {
+      "display_name": "NOU CALA BLAVA|Mallorca restaurant",
+      "category": "restaurant",
+      "candidate_count": 8,
+      "extraction_method": "srcset",
+      "confidence": "medium"
+    },
+    {
+      "display_name": "Alua Boccaccio",
+      "category": "hotel",
+      "candidate_count": 8,
+      "extraction_method": "srcset",
+      "confidence": "medium"
+    },
+    {
+      "display_name": "Celler La Parra",
+      "category": "restaurant",
+      "candidate_count": 8,
+      "extraction_method": "meta, img",
+      "confidence": "high, medium"
+    },
+    {
+      "display_name": "La Malvasia",
+      "category": "restaurant",
+      "candidate_count": 2,
+      "extraction_method": "srcset",
+      "confidence": "medium"
+    },
+    {
+      "display_name": "FERVOR Palma",
+      "category": "restaurant",
+      "candidate_count": 8,
+      "extraction_method": "img",
+      "confidence": "low"
+    },
+    {
+      "display_name": "Los Patos Restaurant",
+      "category": "restaurant",
+      "candidate_count": 8,
+      "extraction_method": "srcset, background",
+      "confidence": "medium, low"
+    },
+    {
+      "display_name": "Restaurante del Sol",
+      "category": "restaurant",
+      "candidate_count": 8,
+      "extraction_method": "srcset, img",
+      "confidence": "medium"
+    },
+    {
+      "display_name": "Iberostar Waves Ciudad Blanca",
+      "category": "hotel",
+      "candidate_count": 8,
+      "extraction_method": "meta, srcset, background",
+      "confidence": "high, medium"
+    },
+    {
+      "display_name": "Cala Agulla",
+      "category": "beach",
+      "candidate_count": 9,
+      "extraction_method": "meta, background, img",
+      "confidence": "high, medium, low"
+    },
+    {
+      "display_name": "Coves de Campanet",
+      "category": "activity",
+      "candidate_count": 8,
+      "extraction_method": "background",
+      "confidence": "medium"
+    },
+    {
+      "display_name": "Caramelo Palma Beach",
+      "category": "hotel",
+      "candidate_count": 8,
+      "extraction_method": "img",
+      "confidence": "medium"
+    },
+    {
+      "display_name": "Alua Gran Camp de Mar",
+      "category": "hotel",
+      "candidate_count": 8,
+      "extraction_method": "srcset",
+      "confidence": "medium"
+    },
+    {
+      "display_name": "AluaSoul Mallorca Resort (Adults Only)",
+      "category": "hotel",
+      "candidate_count": 8,
+      "extraction_method": "srcset",
+      "confidence": "medium"
+    },
+    {
+      "display_name": "Kalypsotuttifrutti",
+      "category": "restaurant",
+      "candidate_count": 8,
+      "extraction_method": "img, background",
+      "confidence": "medium, low"
+    },
+    {
+      "display_name": "Hotel Vibra Beverly Playa",
+      "category": "hotel",
+      "candidate_count": 8,
+      "extraction_method": "meta, img, background",
+      "confidence": "high, medium, low"
+    },
+    {
+      "display_name": "Andana-Restaurante Palma",
+      "category": "restaurant",
+      "candidate_count": 8,
+      "extraction_method": "srcset, img, background",
+      "confidence": "medium"
+    },
+    {
+      "display_name": "El Camino",
+      "category": "restaurant",
+      "candidate_count": 8,
+      "extraction_method": "img",
+      "confidence": "medium, low"
+    },
+    {
+      "display_name": "Meliá Palma Marina",
+      "category": "hotel",
+      "candidate_count": 8,
+      "extraction_method": "img",
+      "confidence": "low"
+    },
+    {
+      "display_name": "Elba Sunset Mallorca Thalasso Spa",
+      "category": "hotel",
+      "candidate_count": 8,
+      "extraction_method": "img",
+      "confidence": "low"
+    },
+    {
+      "display_name": "Mhares Sea Club",
+      "category": "beach-club",
+      "candidate_count": 8,
+      "extraction_method": "srcset",
+      "confidence": "medium"
+    },
+    {
+      "display_name": "Adrian Quetglas Restaurant",
+      "category": "restaurant",
+      "candidate_count": 8,
+      "extraction_method": "srcset, img",
+      "confidence": "low"
+    },
+    {
+      "display_name": "DINS Santi Taura",
+      "category": "restaurant",
+      "candidate_count": 1,
+      "extraction_method": "background",
+      "confidence": "medium"
+    },
+    {
+      "display_name": "Balneario Illetas-Beach Club",
+      "category": "beach-club",
+      "candidate_count": 8,
+      "extraction_method": "srcset, img",
+      "confidence": "medium"
+    },
+    {
+      "display_name": "Restaurant MANACOR",
+      "category": "restaurant",
+      "candidate_count": 8,
+      "extraction_method": "srcset, background",
+      "confidence": "medium"
+    },
+    {
+      "display_name": "BG Hotel Caballero",
+      "category": "hotel",
+      "candidate_count": 8,
+      "extraction_method": "img",
+      "confidence": "low"
+    },
+    {
+      "display_name": "La Tapera",
+      "category": "restaurant",
+      "candidate_count": 2,
+      "extraction_method": "img",
+      "confidence": "low"
+    },
+    {
+      "display_name": "Salines des Trenc",
+      "category": "activity",
+      "candidate_count": 8,
+      "extraction_method": "img",
+      "confidence": "low"
+    },
+    {
+      "display_name": "Restaurante Bodega Ca'n Pantina",
+      "category": "restaurant",
+      "candidate_count": 8,
+      "extraction_method": "img, srcset",
+      "confidence": "medium, low"
+    },
+    {
+      "display_name": "Osteria El Patio",
+      "category": "restaurant",
+      "candidate_count": 2,
+      "extraction_method": "background, img",
+      "confidence": "medium, low"
+    },
+    {
+      "display_name": "Vandal Palma",
+      "category": "restaurant",
+      "candidate_count": 8,
+      "extraction_method": "srcset, img, background",
+      "confidence": "medium, low"
+    },
+    {
+      "display_name": "Como en Casa",
+      "category": "restaurant",
+      "candidate_count": 8,
+      "extraction_method": "srcset, img",
+      "confidence": "medium"
+    },
+    {
+      "display_name": "Meliá Palma Bay",
+      "category": "hotel",
+      "candidate_count": 8,
+      "extraction_method": "img",
+      "confidence": "low"
+    },
+    {
+      "display_name": "Captain Boleor",
+      "category": "boat-rental",
+      "candidate_count": 8,
+      "extraction_method": "meta, img",
+      "confidence": "high, low"
+    },
+    {
+      "display_name": "Lume&Co Restaurante en Mallorca",
+      "category": "restaurant",
+      "candidate_count": 8,
+      "extraction_method": "meta, img",
+      "confidence": "high, medium"
+    },
+    {
+      "display_name": "Mallorca Bootcharter",
+      "category": "boat-rental",
+      "candidate_count": 8,
+      "extraction_method": "meta, img, srcset",
+      "confidence": "high, medium, low"
+    },
+    {
+      "display_name": "FERGUS Style Palmanova",
+      "category": "hotel",
+      "candidate_count": 2,
+      "extraction_method": "meta, img",
+      "confidence": "high, medium"
+    },
+    {
+      "display_name": "Big Blue Diving",
+      "category": "activity",
+      "candidate_count": 8,
+      "extraction_method": "meta, srcset, img",
+      "confidence": "high, medium"
+    },
+    {
+      "display_name": "LILA PORTALS",
+      "category": "beach-club",
+      "candidate_count": 8,
+      "extraction_method": "srcset, img",
+      "confidence": "medium, low"
+    },
+    {
+      "display_name": "Ca Na Marcè",
+      "category": "restaurant",
+      "candidate_count": 8,
+      "extraction_method": "meta, srcset",
+      "confidence": "high, medium"
+    },
+    {
+      "display_name": "Robinson Club Cala Serena",
+      "category": "hotel",
+      "candidate_count": 8,
+      "extraction_method": "meta, img",
+      "confidence": "high, low"
+    },
+    {
+      "display_name": "Alcudiajets",
+      "category": "activity",
+      "candidate_count": 3,
+      "extraction_method": "img",
+      "confidence": "medium"
+    }
+  ],
+  "recommendation": "S? merece la pena ejecutar una asignaci?n autom?tica controlada, pero solo para candidatas high/medium de official_website y revisando despu?s las top entidades. Aun as?, conviene seguir mejorando el extractor para webs bloqueadas y categor?as con baja cobertura."
+}

@@ -1,0 +1,867 @@
+{
+  "generated_at": "2026-06-08T19:58:26.224Z",
+  "totals": {
+    "total_priority_businesses": 107,
+    "with_image": 107,
+    "without_image": 0,
+    "coverage_percent": 100
+  },
+  "businesses": [
+    {
+      "display_name": "Catedral-Basílica de Santa María de Mallorca",
+      "category": "activity",
+      "authority_score": 205.2539,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "https://catedraldemallorca.org/wp-content/uploads/2026/06/Ministrils-Corpus-Christi-5-web-980x653.jpg.webp",
+      "website": "https://www.catedraldemallorca.org/es/"
+    },
+    {
+      "display_name": "Cuevas del Drach",
+      "category": "activity",
+      "authority_score": 197.6141,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "https://www.cuevasdeldrach.com/images/home/cuevas-drach-2.jpg",
+      "website": "https://www.cuevasdeldrach.com/?utm_medium=google&utm_source=ficha_negocio&utm_campaign=ficha_negocio_google&utm_content=boton_enlace_web"
+    },
+    {
+      "display_name": "Castillo de Bellver",
+      "category": "activity",
+      "authority_score": 193.3305,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "https://lh3.googleusercontent.com/place-photos/AJRVUZPr34ebfyCsyrLTblzmh4pRdA2wg6FYA3n6SbQls6jCbydQNvoC20KaYidVDTANZEYVH7mrvzXjYIcuremfUBZzE0jbukZLUMFDebWkL0cMyCAeUVy4-ffxsUIDTjfvReAIJnt0Qm6YxDpXv08=s4800-w1600",
+      "website": "https://castelldebellver.palma.es/"
+    },
+    {
+      "display_name": "Barca Samba",
+      "category": "boat-rental",
+      "authority_score": 189.7896,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "https://www.barcasamba.com/wp-content/uploads/2023/03/barca_samba_barco_en_la_bahia.jpg",
+      "website": "http://www.barcasamba.com/"
+    },
+    {
+      "display_name": "Iberostar Waves Playa de Muro",
+      "category": "hotel",
+      "authority_score": 189.0215,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "https://apiimg.iberostar.com/uploads/image/24837/crops/16:9/1920/image.jpeg",
+      "website": "https://www.iberostar.com/en/hotels/majorca/iberostar-waves-playa-de-muro/?utm_source=gmb&utm_medium=organic&utm_campaign=IBSVOL_EMEA_SEOLOC_GMB_NA_EN_ESP_BAL_PMI_MUR_PULL_NA_NA_NA_NA_NA"
+    },
+    {
+      "display_name": "Cuevas de Artà",
+      "category": "activity",
+      "authority_score": 188.7301,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "https://lh3.googleusercontent.com/place-photos/AJRVUZNsGP-HBHcZQXAVxF2-IyweVBegIdNWWr4_fkolhkSRbRQD551o3y09KYGH8uJ7nUOnA9Vkv3bApwCjg15CQQI2XbgDDaxi8ZT89_cMVVRu4iucTbQBWjdWTC-ewdnPhPh6Nlwt_vrWnMthgg=s4800-w1600",
+      "website": "http://www.cuevasdearta.com/"
+    },
+    {
+      "display_name": "Parque Natural de Mondragó",
+      "category": "beach",
+      "authority_score": 188.1025,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "https://lh3.googleusercontent.com/place-photos/AJRVUZOvpoYwWS1dsvF-3Nj5U3pgKpJ-zLk_91QfZQ8h7LJmMpSlC1nX__fPK7tPvdslEgrqJhrisTgutNcyDb8OWXYx2rEoxKtUzrxSpG5XIP82un6Fgp3ovGOFVFxku7cYrY0OZMrVe85X8eJ_zg=s4800-w1600",
+      "website": "http://ca.balearsnatura.com/parque_natural/parque-natural-de-mondrago/"
+    },
+    {
+      "display_name": "GOJET Alcudia JET SKI tours",
+      "category": "boat-rental",
+      "authority_score": 185.2747,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "https://gojetmallorca.com/wp-content/uploads/sites/8309/2026/02/Untitled-design.png?w=700&h=700&zoom=2",
+      "website": "https://gojetmallorca.com/"
+    },
+    {
+      "display_name": "Alcudia Garden Aparthotel",
+      "category": "hotel",
+      "authority_score": 184.8263,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "https://static-resources-elementor.mirai.com/wp-content/uploads/sites/1392/Hero_Alcudia_mb.webp",
+      "website": "https://www.gardenhotels.com/en/alcudia-garden-aparthotel/?utm_source=google&utm_medium=organic&utm_campaign=GMB&utm_content=Alcudia_Apart"
+    },
+    {
+      "display_name": "Iberostar Selection Playa de Muro Village",
+      "category": "hotel",
+      "authority_score": 182.828,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "https://apiimg.iberostar.com/uploads/image/38105/crops/16:9/1920/image.jpeg",
+      "website": "https://www.iberostar.com/en/hotels/majorca/iberostar-selection-playa-de-muro-village/?utm_source=gmb&utm_medium=organic&utm_campaign=IBSVOL_EMEA_SEOLOC_GMB_NA_EN_ESP_BAL_PMI_PMV_PULL_NA_NA_NA_NA_NA"
+    },
+    {
+      "display_name": "Puerto de Alcúdia",
+      "category": "activity",
+      "authority_score": 182.3917,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "https://www.portsdebalears.com/sites/default/files/alc%20002.jpg",
+      "website": "https://www.portsdebalears.com/ca/alcudia"
+    },
+    {
+      "display_name": "Cuevas Dels Hams",
+      "category": "activity",
+      "authority_score": 182.1958,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "https://cuevasdelshams.com/wp-content/uploads/elementor/thumbs/cueva-redonda-1-pr2qnq0ntkrhv1g5e50turfs9y771c72d5oetu8lv0.jpg",
+      "website": "https://cuevasdelshams.com/"
+    },
+    {
+      "display_name": "GoFurgo.tours-Paddlesurf y snorkel en las mejores calas de Baleares",
+      "category": "activity",
+      "authority_score": 181.9466,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "https://gofurgo.tours/og-default.jpg",
+      "website": "https://www.gofurgo.tours/"
+    },
+    {
+      "display_name": "Mallorquad, Mallor'quad, Majorque quad",
+      "category": "activity",
+      "authority_score": 181.931,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "https://mallorquad.com/wp-content/uploads/2023/11/Mallorquad-randonnee-quad-majorque-002-1.webp",
+      "website": "http://www.mallorquad.com/"
+    },
+    {
+      "display_name": "Restaurant Celler Ca'n Costa Alcúdia",
+      "category": "restaurant",
+      "authority_score": 180.8803,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "https://www.cancostaalcudia.com/assets/imgs/gallery01.jpg",
+      "website": "http://www.cancostaalcudia.com/"
+    },
+    {
+      "display_name": "Playa Santa Ponsa",
+      "category": "beach",
+      "authority_score": 180.7715,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "https://visitcalvia.org/wp-content/uploads/2020/04/calvia-04.jpg",
+      "website": "http://www.visitcalvia.com/"
+    },
+    {
+      "display_name": "JET SKI MALLORCA-RIDE EXPERIENCES",
+      "category": "activity",
+      "authority_score": 179.501,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "https://ride-experiences.com/wp-content/uploads/2022/06/RWR7431-Modifier-1.jpg",
+      "website": "http://www.ride-experiences.com/"
+    },
+    {
+      "display_name": "JETSKI VICE MALLORCA🌴 RENTAL & TOURS CALA D‘OR",
+      "category": "activity",
+      "authority_score": 179.2544,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "https://cdn1.site-media.eu/images/976/6017309/JetskiVerhuurCalaDorMallorcaJetskiVice_DSC3085bea.jpg",
+      "website": "http://www.jetskivice.com/"
+    },
+    {
+      "display_name": "La nueva burguesa",
+      "category": "restaurant",
+      "authority_score": 179.202,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "https://lh3.googleusercontent.com/place-photos/AJRVUZNHwdjeN04rLDFDzyj1qCKCi1hmxu6BPqDeCASNCIdr4wDgACgxIcyHwJQrIff7m51JEu-Fq4NajGT9sPRGblkTe_sOWcMXQhPhnwwimeLvdUQnVY1rdSib6BTbhGwNb2LBE3Ha6FtzMlgm_Q=s4800-w1600",
+      "website": "https://www.instagram.com/lanuevaburguesa/?hl=es"
+    },
+    {
+      "display_name": "Bombay Beach Indian Restaurant",
+      "category": "restaurant",
+      "authority_score": 178.7156,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "https://le-de.cdn-website.com/c91f3a386ce54ccdabdc05dfc18cc6c0/dms3rep/multi/opt/bombay-beach-indian-restaurant-banner-inicio-1920w.jpg",
+      "website": "https://www.bombaybeachindianrestaurant.com/"
+    },
+    {
+      "display_name": "Restaurante Illeta",
+      "category": "restaurant",
+      "authority_score": 178.6982,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "https://illeta.com/og-image.jpeg",
+      "website": "http://www.illeta.com/"
+    },
+    {
+      "display_name": "Basico Gastrobar|Alcudia Restaurant",
+      "category": "restaurant",
+      "authority_score": 178.646,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "https://basicogastrobar.com/wp-content/uploads/2025/03/Captura-de-pantalla-2025-03-10-a-las-15.01.07.png",
+      "website": "https://basicogastrobar.com/"
+    },
+    {
+      "display_name": "NOU CALA BLAVA|Mallorca restaurant",
+      "category": "restaurant",
+      "authority_score": 178.2659,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "https://noucalablava.com/wp-content/uploads/2026/03/Nou-Cala-blava-20-2-scaled-e1773827930705.jpg",
+      "website": "http://noucalablava.com/"
+    },
+    {
+      "display_name": "Basico Steak House|Alcudia Restaurant",
+      "category": "restaurant",
+      "authority_score": 178.215,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "https://basicosteakhouse.com/wp-content/uploads/2025/04/cropped-Captura-de-pantalla-2025-04-28-a-las-11.03.15.png",
+      "website": "https://basicosteakhouse.com/"
+    },
+    {
+      "display_name": "Alua Boccaccio",
+      "category": "hotel",
+      "authority_score": 177.9613,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "https://alg.widen.net/img/alg/ji4atgxzhd/2140px@1x/SEIIM-EXT-Rooftop-Pool-Sunset-2A-CB.webp?q=80",
+      "website": "https://www.hyattinclusivecollection.com/en/resorts-hotels/alua-hotels/mallorca/boccaccio/?utm_source=google&utm_medium=organic&utm_campaign=GoogleMyBusiness&partner=5152&utm_content=boccaccio&tc_alt=105928"
+    },
+    {
+      "display_name": "Azuca-Urban Bistro",
+      "category": "restaurant",
+      "authority_score": 177.9164,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "https://azuca.es/og-image.png",
+      "website": "https://azuca.es/"
+    },
+    {
+      "display_name": "Krishna Curry Bar Santa Catalina",
+      "category": "restaurant",
+      "authority_score": 177.7358,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "https://krishnasantacatalina.com/null",
+      "website": "http://krishnasantacatalina.com/"
+    },
+    {
+      "display_name": "Restaurante Tabana",
+      "category": "restaurant",
+      "authority_score": 177.6245,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "https://cdn.prod.website-files.com/68a84b1e1cd0a7f3bd7c8f76/68a8af37e369c9f45dd2de4e_open%20graph%20tabana.webp",
+      "website": "https://tabana.es/es"
+    },
+    {
+      "display_name": "Celler La Parra",
+      "category": "restaurant",
+      "authority_score": 177.5629,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "https://cellerlaparra.com/wp-content/uploads/LAPARRA-1.jpg",
+      "website": "https://www.cellerlaparra.com/"
+    },
+    {
+      "display_name": "NU Mallorca",
+      "category": "restaurant",
+      "authority_score": 177.4484,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "https://numallorca.com/wp-content/uploads/2025/07/nu-social.webp",
+      "website": "https://numallorca.com/"
+    },
+    {
+      "display_name": "La Malvasia",
+      "category": "restaurant",
+      "authority_score": 177.336,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "https://lamalvasiamallorca.com/wp-content/uploads/2026/03/La-Malvasia-Placa-del-Mercat.png",
+      "website": "https://lamalvasiamallorca.com/"
+    },
+    {
+      "display_name": "MONKEY ON TOURS|Cala Millor, Mallorca",
+      "category": "activity",
+      "authority_score": 176.8805,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "https://monkeyjetski.com/wp-content/uploads/2023/03/Monkey-Jetski-Mallorca-Jetski-112ss.jpg",
+      "website": "https://monkeyjetski.com/jetski-mallorca/jetski-tours-cala-millor-cala-bona/"
+    },
+    {
+      "display_name": "Ca'n Punyetes",
+      "category": "restaurant",
+      "authority_score": 176.6753,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "https://vip-restaurant.vamtam.com/wp-content/uploads/2016/06/gourmet-photo-5.jpg",
+      "website": "https://canpunyetesrestaurante.com/"
+    },
+    {
+      "display_name": "Savage Beach Club",
+      "category": "restaurant",
+      "authority_score": 176.6475,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "https://lirp.cdn-website.com/bda0ff7e/dms3rep/multi/opt/IMG_6537+2-cebf19d4-1920w.jpeg",
+      "website": "https://www.savage-beachclub.com/"
+    },
+    {
+      "display_name": "KAIZEN Restaurante",
+      "category": "restaurant",
+      "authority_score": 176.6312,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "https://kaizenrestaurante.com/wp-content/uploads/2022/04/k_logo.png",
+      "website": "https://kaizenrestaurante.com/"
+    },
+    {
+      "display_name": "FERVOR Palma",
+      "category": "restaurant",
+      "authority_score": 176.251,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "https://grupocardon.com/wp-content/uploads/2021/11/hero2.jpg",
+      "website": "https://grupocardon.com/restaurantes/fervor/"
+    },
+    {
+      "display_name": "Chilli Jetski Mallorca-Puerto Portals",
+      "category": "boat-rental",
+      "authority_score": 176.2253,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "https://chillijetski.com/assets/img/hero-aerial.jpg",
+      "website": "https://chillijetski.com/"
+    },
+    {
+      "display_name": "Mallorca Free Tour",
+      "category": "activity",
+      "authority_score": 176.131,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "https://static.tacdn.com/img2/travelers_choice/widgets/tchotel_2025_L.png",
+      "website": "https://www.mallorcafreetour.com/"
+    },
+    {
+      "display_name": "Los Patos Restaurant",
+      "category": "restaurant",
+      "authority_score": 176.1243,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "https://www.lospatosrestaurant.com/wp-content/uploads/2020/11/01_LosPatos_Julio2020-127-scaled.jpg",
+      "website": "http://www.lospatosrestaurant.com/"
+    },
+    {
+      "display_name": "Norway Dive Mallorca-PADI 5 Star IDC Scuba Diving Center",
+      "category": "activity",
+      "authority_score": 176.0462,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "https://www.norwaydive.com/wp-content/uploads/2025/03/Screenshot-2025-03-30-093619-1024x576.png",
+      "website": "https://www.norwaydive.com/"
+    },
+    {
+      "display_name": "Quad Tour Mallorca by Quads-Minibikes.com",
+      "category": "activity",
+      "authority_score": 175.925,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "https://cdn-quad-minibikes.b-cdn.net/wp-content/uploads/2025/04/quad-minibiks-banner.jpg",
+      "website": "http://www.quads-minibikes.com/"
+    },
+    {
+      "display_name": "CityXperience",
+      "category": "activity",
+      "authority_score": 175.8839,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "https://lh3.googleusercontent.com/place-photos/AJRVUZOpJOdYjAKtXT4piY_Ig_FuW1-NsVVwZE7qjFEM2gNt1cLQVz4vVcv1_dj8b4rUyhFFOn6jq-rUmiQExd6tGfFeyUuyQp7lJgEc-TyJk3KbZ4a57VF0KmQx8GpZpsVcEQ-_KhgehpTcJfKC-9DaXj8Y=s4800-w1600",
+      "website": "http://www.cityxperience.com/"
+    },
+    {
+      "display_name": "Restaurante del Sol",
+      "category": "restaurant",
+      "authority_score": 175.7858,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "http://www.delsol-mallorca.com/wp-content/uploads/2024/01/267e2928-e858-4d2c-ba44-607a42e683aa.jpeg",
+      "website": "http://delsol-mallorca.com/"
+    },
+    {
+      "display_name": "Iberostar Waves Ciudad Blanca",
+      "category": "hotel",
+      "authority_score": 175.6594,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "https://apiimg.iberostar.com/uploads/image/18440/crops/16:9/1920/image.jpeg",
+      "website": "https://www.iberostar.com/en/hotels/majorca/iberostar-waves-ciudad-blanca/?utm_source=gmb&utm_medium=organic&utm_campaign=IBSVOL_EMEA_SEOLOC_GMB_NA_EN_ESP_BAL_PMI_BLA_PULL_NA_NA_NA_NA_NA"
+    },
+    {
+      "display_name": "Al Faro Beach",
+      "category": "restaurant",
+      "authority_score": 175.5103,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "https://lh3.googleusercontent.com/place-photos/AJRVUZOeFxQVki7t_E7iE5xSNVkYDbH7diE2jsZQqNcrMZsZEhUkqn-SnCh3AGSPUIu2RlcNVYJVWgPpxfdm17U18v-eKt2VWA5qFYWN_KGXbIe0YsPrw1N9KzNpoSaKh9d-Au5JNaLkwTu9YLFwyL9QbNgtLQ=s4800-w1600",
+      "website": "https://www.alfarobeach.com/"
+    },
+    {
+      "display_name": "Playa de Palmanova",
+      "category": "beach",
+      "authority_score": 175.2377,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "https://cdm0lfbn.cloudimg.io/v7/_images_base_/image_uploader/photos/44/original/palma-nova-mallorca-palma-nova-951.jpg?ua=1767168725&p=og%3Aimage&wat=1&wat_url=https%3A%2F%2Fwww.seemallorca.com%2Fsites%2Fmal%2Fimg%2Fwatermark.png&wat_gravity=southeast&wat_pad=16&wat_scale=50",
+      "website": "https://www.seemallorca.com/beaches/palma-nova-beach-palma-nova-660995"
+    },
+    {
+      "display_name": "Cala Agulla",
+      "category": "beach",
+      "authority_score": 175.1236,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "https://www.illesbalears.travel/images/banner-ITS-05.webp",
+      "website": "http://www.illesbalears.travel/wwwib/index.html"
+    },
+    {
+      "display_name": "Coves de Campanet",
+      "category": "activity",
+      "authority_score": 175.0976,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "https://www.covesdecampanet.com/assets/images/menu/menu1.jpg",
+      "website": "http://www.covesdecampanet.com/"
+    },
+    {
+      "display_name": "Negre Restaurant",
+      "category": "restaurant",
+      "authority_score": 174.7541,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "https://negrerestaurant.com/wp-content/themes/Avada/assets/images/logo.png",
+      "website": "https://negrerestaurant.com/"
+    },
+    {
+      "display_name": "Caramelo Palma Beach",
+      "category": "hotel",
+      "authority_score": 174.7385,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "https://www.caramelohotels.com/media/uploads/cms/cooks-club-palma-beach-piscina-aerea.jpg?q=pr:sharp/rs:fill/w:900/h:450/f:jpg",
+      "website": "https://www.caramelohotels.com/en/hotels/caramelo-palma-beach-in-palma/?utm_source=google&utm_medium=organic&utm_campaign=GoogleMyBusiness&partner=12986"
+    },
+    {
+      "display_name": "Ponderosa Beach",
+      "category": "beach-club",
+      "authority_score": 174.6632,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "https://www.ponderosabeach.com/wp-content/uploads/ponderosa-beach-paellas-mallorca-logo-white.png",
+      "website": "https://www.ponderosabeach.com/"
+    },
+    {
+      "display_name": "Alua Gran Camp de Mar",
+      "category": "hotel",
+      "authority_score": 174.6048,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "https://alg.widen.net/img/alg/ji4atgxzhd/2140px@1x/SEIIM-EXT-Rooftop-Pool-Sunset-2A-CB.webp?q=80",
+      "website": "https://www.hyattinclusivecollection.com/en/resorts-hotels/alua-hotels/mallorca/gran-camp-de-mar/?utm_source=google&utm_medium=organic&utm_campaign=GoogleMyBusiness&partner=5152&utm_content=grancampdemar&tc_alt=105978"
+    },
+    {
+      "display_name": "MALLORCA PAINTBALL|Warriors Lloseta",
+      "category": "activity",
+      "authority_score": 174.5108,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "https://mallorcapaintball.com/wp-content/uploads/2025/03/mallorca-paintball-diversion-ocio-hero.jpg",
+      "website": "https://www.mallorcapaintball.com/"
+    },
+    {
+      "display_name": "AluaSoul Mallorca Resort (Adults Only)",
+      "category": "hotel",
+      "authority_score": 174.3522,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "https://alg.widen.net/img/alg/ji4atgxzhd/2140px@1x/SEIIM-EXT-Rooftop-Pool-Sunset-2A-CB.webp?q=80",
+      "website": "https://www.hyattinclusivecollection.com/en/resorts-hotels/alua-hotels/majorca/mallorca-resort-adults-only/?utm_source=google&utm_medium=organic&utm_campaign=GoogleMyBusiness&partner=5152&utm_content=aluasoulmallorca&tc_alt=105990"
+    },
+    {
+      "display_name": "Kalypsotuttifrutti",
+      "category": "restaurant",
+      "authority_score": 174.1358,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "https://kalypsotuttifrutti.com/images/palmtree2.jpg",
+      "website": "http://kalypsotuttifrutti.com/"
+    },
+    {
+      "display_name": "Hotel Vibra Beverly Playa",
+      "category": "hotel",
+      "authority_score": 173.8846,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "https://images2.neobookings.com/cms/vibrahotels.com/section/vibra-beverly-playa-hotel/pics/vibra-beverly-playa-hotel-njjr1sz2ozzkd6r.jpeg?width=1920&height=720&aspect_ratio=2.6667:1&quality=",
+      "website": "https://www.vibrahotels.com/mallorca/paguera-calvia/hotel-vibra-beverly-playa?utm_source=google&utm_medium=gmb&utm_campaign=listing&utm_content=HPGR"
+    },
+    {
+      "display_name": "Andana-Restaurante Palma",
+      "category": "restaurant",
+      "authority_score": 173.8642,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "https://andanapalma.es/wp-content/uploads/2023/06/PHOTO-2023-05-17-22-08-461.jpg",
+      "website": "http://www.andanapalma.es/?utm_source=google-my-business"
+    },
+    {
+      "display_name": "The Challenge Mallorca",
+      "category": "activity",
+      "authority_score": 173.5551,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "https://thechallengemallorca.com/wp-content/uploads/sites/8452/2026/03/opengraph-img.png?w=700&h=700&zoom=2",
+      "website": "https://www.thechallengemallorca.com/"
+    },
+    {
+      "display_name": "El Camino",
+      "category": "restaurant",
+      "authority_score": 173.4727,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "https://www.elcaminopalma.es/public/img/paginas/el-camino/portada-el-camino-2.jpg",
+      "website": "http://www.elcaminopalma.es/"
+    },
+    {
+      "display_name": "BLUESEA Club Marthas",
+      "category": "hotel",
+      "authority_score": 173.2768,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "https://www.blueseahotels.com/content/thumbs/2048_/content/imgsxml/galerias/panel_heroHotel/1/marthasentradaretocada42048x1152-33ba5563eae07250db2423efef42d1f5.jpg",
+      "website": "https://www.blueseahotels.com/hoteles/destinos/mallorca/cala-dor/bluesea-club-marthas?utm_source=mybusiness&utm_medium=organic&utm_campaign=GMB&utm_content=BLUESEAClubMarthas"
+    },
+    {
+      "display_name": "Seaclub Alcudia",
+      "category": "hotel",
+      "authority_score": 173.2257,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "https://lh3.googleusercontent.com/place-photos/AJRVUZN0cbdWt--a1Ux0EPugKEYC43ydCoUAxTJLYhWGlHy60Ooh1GHtSU6zOBtr02RF4CDUxyq3tWKe6DpxzbCDeL3NpRSON_uVUJTg3dOAZs3t5d19K888BSqZqbGckVZZ45CZwMOnrBnC_vTH_X5rYEtrBQ=s4800-w1600",
+      "website": "https://www.seaclub.com/en?origin=gmb&affiliate=gmb&utm_source=google&utm_medium=organic&utm_campaign=GoogleMyBusiness"
+    },
+    {
+      "display_name": "Meliá Palma Marina",
+      "category": "hotel",
+      "authority_score": 173.2002,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "https://dam.melia.com/melia/accounts/f8/4000018/projects/127/assets/e2/76817/cee6a0739dda623b4bdfabc71555bae9-1643204473.jpg?im=RegionOfInterestCrop=(11,15),regionOfInterest=(1476.5,984.5)",
+      "website": "https://www.melia.com/en/hotels/spain/majorca/melia-palma-marina?utm_campaign=google&utm_content=0738&utm_medium=organic&utm_source=directories"
+    },
+    {
+      "display_name": "Elba Sunset Mallorca Thalasso Spa",
+      "category": "hotel",
+      "authority_score": 173.1716,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "https://www.hoteleselba.com/cms/sites/default/files/styles/hotel_slider/public/media/image/2025-09/25-carrusel-desktop-sunset_1.jpg?itok=pI1u7GPK",
+      "website": "https://www.hoteleselba.com/es/hotel/elba-sunset-mallorca?utm_source=GHF&utm_medium=homeG&utm_campaign=SUNSET_GHF"
+    },
+    {
+      "display_name": "Mhares Sea Club",
+      "category": "beach-club",
+      "authority_score": 173.1355,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "https://mharesseaclub.com/wp-content/uploads/2025/07/web-mhares-galeria-2-.jpg",
+      "website": "http://www.mharesseaclub.com/"
+    },
+    {
+      "display_name": "Parque Natural de la Albufera de Mallorca",
+      "category": "activity",
+      "authority_score": 172.8188,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "https://lh3.googleusercontent.com/place-photos/AJRVUZN5denYOFMhZsjl3QlUBzdqk8rY-AAwUQiyW6xMWgKkpeNWSh9Wu2LTK6dNTGamR20ZjhrB5Rqm2cFh5RTzyT4za0oraOz01G2BtoMa9aZWpHXE6k3Be6ClKYtSDKp3-ljcF0wS0cBPL56HDw=s4800-w1600",
+      "website": "https://salbufera.com/"
+    },
+    {
+      "display_name": "MarSenses Puerto Pollensa Hotel & Spa",
+      "category": "hotel",
+      "authority_score": 172.7058,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "https://www.marsenses.com/dam/jcr:577f89a1-afe5-452e-8c5f-3b59e1a30647/instalaciones-pool4-marsenses-puerto-pollensa-hotel-spa.webp",
+      "website": "https://www.marsenses.com/hoteles/marsenses-puerto-pollensa-hotel-spa?utm_source=GBP_PP&utm_medium=BOTON_PP_GBP&utm_campaign=GBP"
+    },
+    {
+      "display_name": "Restaurant Manique",
+      "category": "restaurant",
+      "authority_score": 172.6844,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "https://manique.restaurant/og-image.jpg",
+      "website": "https://manique.restaurant/"
+    },
+    {
+      "display_name": "Duke Restaurant",
+      "category": "restaurant",
+      "authority_score": 172.6025,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "http://static1.squarespace.com/static/55ecbe6de4b0be5bebcde4fd/t/5dfb80107894511787afdc75/1576763410684/The+Duke+logo.jpg?format=1500w",
+      "website": "http://www.dukepalma.com/"
+    },
+    {
+      "display_name": "Alcudia",
+      "category": "beach",
+      "authority_score": 172.4541,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "https://lh3.googleusercontent.com/place-photos/AJRVUZNg-ohAsR6Nuh0kc9IBE8HDauIzLm4HyahrzLY5riioD4VtCDxzMUOsLoOSTyU8dC9IGLwMDqzVgQ35eJTkn9TFd6-WANJxJX8KuUUeALSF3L71hemlQUtgo6QZRzLmUgyG_cp9jtAi-2ows0w=s4800-w1600",
+      "website": "http://platja-dalcudia.business.site/"
+    },
+    {
+      "display_name": "Skualo Porto Cristo",
+      "category": "activity",
+      "authority_score": 172.4441,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "https://www.skualo.com/og-image.png",
+      "website": "https://skualo.com/"
+    },
+    {
+      "display_name": "Bikkini Beach-Playa de Palma",
+      "category": "beach-club",
+      "authority_score": 172.3314,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "https://enjoygroup.es/wp-content/uploads/2020/04/bikkini-beach-124.jpg",
+      "website": "https://enjoygroup.es/bikkini-beach"
+    },
+    {
+      "display_name": "Cala Mesquida",
+      "category": "beach",
+      "authority_score": 172.2812,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "https://lh3.googleusercontent.com/place-photos/AJRVUZPWcp0bH9h6uq3YCEEBvuL1h3hEjrQJ_CT_bevF6gI-A0skuKOU09ddnppSErfsN_t_dDlx8s73FE0fVb-LtOyWMzueeTeaUvXatFWlV1embNAP8yrdWnt7y7VtnJ_8a_f3MVdw1DfeTpLyFaE=s4800-w1600",
+      "website": null
+    },
+    {
+      "display_name": "Buggy 4 Fun",
+      "category": "activity",
+      "authority_score": 172.2441,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "https://cdn.prod.website-files.com/693abf12c146e0d39ae1c0bc/69d4dc14f39a66ec39bf9772_Buggy4Fun%20Banner.jpg",
+      "website": "https://www.buggy4fun-calamillor-mallorca.com/"
+    },
+    {
+      "display_name": "Can Matevet Restaurant",
+      "category": "restaurant",
+      "authority_score": 172.1587,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "https://canmatevet.com/wp-content/uploads/2025/06/Can-Matevet_98.jpg",
+      "website": "https://canmatevet.com/"
+    },
+    {
+      "display_name": "Breogán Cocina Gallega",
+      "category": "restaurant",
+      "authority_score": 172.1426,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "https://breogancocinagallega.es/wp-content/uploads/2024/08/Breogan_Cocina_Gallega_Mallorca_Palma.jpg",
+      "website": "http://breogancocinagallega.es/"
+    },
+    {
+      "display_name": "RIDE EXPERIENCES-Jet ski Cala d'or",
+      "category": "activity",
+      "authority_score": 171.9884,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "https://ride-experiences.com/wp-content/uploads/2022/06/RWR7431-Modifier-1.jpg",
+      "website": "https://ride-experiences.com/"
+    },
+    {
+      "display_name": "Toque de Queda",
+      "category": "restaurant",
+      "authority_score": 171.9535,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "https://lh3.googleusercontent.com/place-photos/AJRVUZMrmOmpB2-qFh682WG3uo16RyGHthQ9LWHMqLLvrXUUm3ttp748P_ETboQ389Xgt7vNpgZ2D4-SNgH5PszFD3WrIGGjBZlZ1DFJZSChLzEQrly9Y2UinSMmyeexGXAK0uKQk-ClNo2WTJVcohE=s4800-w1600",
+      "website": "https://www.facebook.com/toquedequedamallorca/"
+    },
+    {
+      "display_name": "Adrian Quetglas Restaurant",
+      "category": "restaurant",
+      "authority_score": 171.7307,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "https://adrianquetglas.es/wp-content/uploads/2026/03/adrian-quetglas-awards-2026.jpg",
+      "website": "http://www.adrianquetglas.es/"
+    },
+    {
+      "display_name": "Alma Beach & Cocktail Bar-SteakHouse-Thin & Crispy Pizza",
+      "category": "beach-club",
+      "authority_score": 171.7185,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "https://restaurantempatheia.com/backoffice/images/153-empatheia-01.jpg",
+      "website": "https://www.almasantaponsa.com/"
+    },
+    {
+      "display_name": "DINS Santi Taura",
+      "category": "restaurant",
+      "authority_score": 171.4897,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "http://grupsantitaura.com/backoffice/images/163-dins870x870final.jpg",
+      "website": "http://www.dinssantitaura.com/"
+    },
+    {
+      "display_name": "Milano Beach",
+      "category": "beach-club",
+      "authority_score": 171.3487,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "https://www.milanobeach.es/wp-content/uploads/2026/04/9P1A0951-scaled-1.jpg",
+      "website": "http://www.milanobeach.es/"
+    },
+    {
+      "display_name": "Balneario Illetas-Beach Club",
+      "category": "beach-club",
+      "authority_score": 171.3228,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "https://balnearioilletas.com/wp-content/uploads/2019/06/balneario-illetas-beach-club-mallorca-gallery-2.jpg",
+      "website": "http://www.balnearioilletas.com/"
+    },
+    {
+      "display_name": "Playa Esperanza Resort",
+      "category": "hotel",
+      "authority_score": 171.2827,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "https://www.playaesperanzaresort.com/dms/monoHotel-PlayaEsperanza/fotos/Resort/resort-5-playa-esperanza-resort/document/resort-5-playa-esperanza-resort.jpg",
+      "website": "https://www.playaesperanzaresort.com/?utm_source=google&utm_medium=organic&utm_campaign=GMB&utm_content=PlayaEsperanzaResort"
+    },
+    {
+      "display_name": "Banana Club Mallorca-Alcudia",
+      "category": "beach-club",
+      "authority_score": 171.1815,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "https://www.bananaclub.es/og-banana-club.jpg",
+      "website": "https://www.bananaclub.es/"
+    },
+    {
+      "display_name": "Restaurant MANACOR",
+      "category": "restaurant",
+      "authority_score": 171.0731,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "https://restaurantmanacor.com/wp-content/uploads/2024/03/Manacor_restaurant_flames.jpg",
+      "website": "https://restaurantmanacor.com/"
+    },
+    {
+      "display_name": "Diving & Adventure Mallorca",
+      "category": "activity",
+      "authority_score": 171.052,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "https://divingandadventure.com/wp-content/uploads/2021/08/Tauchen-auf-Mallorca2-1400x1050-1.jpg",
+      "website": "https://www.divingandadventure.com/"
+    },
+    {
+      "display_name": "Mallorca",
+      "category": "activity",
+      "authority_score": 171.0442,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "https://lh3.googleusercontent.com/place-photos/AJRVUZNBbA8iNws_HINgh9Pjajd_0T_zHuOH0vhgM4qFuZWpl82FAnY7ZO1cgocsC3Dh8MMTRdz3pXCaK_hQJClvLm17J2yDlInx_QG204d7Xw8F0f8XR27axwUHm1qifu1KKkPCfAqo7Xdi0EWCT5E=s4800-w1600",
+      "website": null
+    },
+    {
+      "display_name": "Playa de Porto Cristo",
+      "category": "beach",
+      "authority_score": 171.0423,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "https://lh3.googleusercontent.com/place-photos/AJRVUZM6wkoMpu7_ciuzkgGkt0zckKc10EGvEC8j67OWfDjGUcSxbwX_zIbSCBTuLIoWgS9aPQ3L8yWiJnt7p_YHjTF3_XoUdcdfePxypgHf2tIuJdI3EQeLZ4A9WfeS5f4jR2Ke4UZTvyxZCwEE5R4pmJyNWw=s4800-w1600",
+      "website": null
+    },
+    {
+      "display_name": "BG Hotel Caballero",
+      "category": "hotel",
+      "authority_score": 171.0047,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "https://cdn2.paraty.es/bg-corporativa/images/4c6623bacdba3f0=s300-c",
+      "website": "https://www.bghotels.com/bg-caballero.html?utm_medium=organic&utm_source=google&utm_campaign=google-my-business&utm_term=google-local&utm_id=bg-caballero"
+    },
+    {
+      "display_name": "Hotel Cap Rocat",
+      "category": "hotel",
+      "authority_score": 170.966,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "https://caprocat.com/wp-content/uploads/2019/04/caprocat_entrada-principal_MEDIA.jpg",
+      "website": "https://caprocat.com/?utm_source=google&utm_medium=organic&utm_campaign=gmb_profile&utm_content=website"
+    },
+    {
+      "display_name": "La Tapera",
+      "category": "restaurant",
+      "authority_score": 170.8775,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "https://lh3.googleusercontent.com/place-photos/AJRVUZN7kAxg9-ZExhBZwFXvH6AvIIGxYENdfyTnjiGoyNrZ6zVt_Zp4D27WiNhLngbRtw7HY6b7Lr_LUULYunMKHaw8wZoA0OQHT-OqOf_FyLdRAixeB6tvMKlsl_MiAXy_SmpY1LZAy89fc2eWd3I=s4800-w1600",
+      "website": "https://www.covermanager.com/reservation/module_restaurant/restaurante-la-tapera/spanish?source=INSTAGRAM"
+    },
+    {
+      "display_name": "Barbuda Beach Mallorca",
+      "category": "beach-club",
+      "authority_score": 170.8178,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "https://barbudabeachmallorca.com/wp-content/uploads/2022/11/arthurleblanc-45-scaled.jpg",
+      "website": "http://barbudabeachmallorca.com/"
+    },
+    {
+      "display_name": "Restaurant Toque",
+      "category": "restaurant",
+      "authority_score": 170.7981,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "http://static1.squarespace.com/static/638ef86464399516e8ec393c/t/638f6ac8b154250a533796b1/1670343368399/Toque_logo_2.png?format=1500w",
+      "website": "http://www.restaurante-toque.com/"
+    },
+    {
+      "display_name": "Salines des Trenc",
+      "category": "activity",
+      "authority_score": 170.7829,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "https://www.salinasdestrenc.com/images/visites%20guiades/3.jpg",
+      "website": "http://www.salinasdestrenc.com/"
+    },
+    {
+      "display_name": "Restaurante Bodega Ca'n Pantina",
+      "category": "restaurant",
+      "authority_score": 170.6312,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "https://canpantina.com/wp-content/uploads/2025/02/canpantina-restaurante-1184x789-1.jpg",
+      "website": "http://canpantina.com/"
+    },
+    {
+      "display_name": "Marina Beach Mallorca",
+      "category": "beach-club",
+      "authority_score": 170.6259,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "https://lh3.googleusercontent.com/place-photos/AJRVUZNZmAktMmKA0XiSzku8nNnLzZ1f16oZdfEeI8k8tEYAsQuKSBmRPh9ZN8V_sxQIJBDcRlYK-VYe96FH_xkSHHL32E-DpHK2yUdfvRm1rLXxD6VqfSlBYkdDwhyQxdau_eSW5scSjL0atQrb2g=s4800-w1600",
+      "website": "https://marinabeachmallorca.com/"
+    },
+    {
+      "display_name": "Osteria El Patio",
+      "category": "restaurant",
+      "authority_score": 170.4368,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "https://usercontent.one/wp/www.osteriaelpatio.com/wp-content/uploads/2019/06/home_osteria_el_patio_alcudia_mallorca_web.jpg",
+      "website": "http://www.osteriaelpatio.com/"
+    },
+    {
+      "display_name": "Vandal Palma",
+      "category": "restaurant",
+      "authority_score": 170.4345,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "https://www.vandalpalma.com/wp-content/uploads/2020/05/ambiente1-min-scaled.jpg",
+      "website": "http://www.vandalpalma.com/?utm_source=google&utm_medium=organic&utm_campaign=gmb"
+    },
+    {
+      "display_name": "Pura Vida Sailing Mallorca S.L. Boat Charter in Port Andratx. Andratx",
+      "category": "boat-rental",
+      "authority_score": 170.358,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "https://static.wixstatic.com/media/622774_47648d27a8854d798dd176580e0c7db9~mv2.jpg/v1/fill/w_2500,h_1406,al_c/622774_47648d27a8854d798dd176580e0c7db9~mv2.jpg",
+      "website": "http://www.puravidasailingmallorca.com/"
+    },
+    {
+      "display_name": "Origen tapas concept l Restaurante de tapas Palma",
+      "category": "restaurant",
+      "authority_score": 170.3414,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "https://origenpalma.com/wp-content/uploads/2025/02/cropped-origen-favicon.jpg",
+      "website": "https://origenpalma.com/?utm_source=gmb&utm_medium=organic&utm_campaign=gmb_website"
+    },
+    {
+      "display_name": "Como en Casa",
+      "category": "restaurant",
+      "authority_score": 170.304,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "https://restaurantcomoencasa.com/wp-content/uploads/2021/04/bg-slider-1.jpg",
+      "website": "http://restaurantcomoencasa.com/"
+    },
+    {
+      "display_name": "The Crow's Nest Palma",
+      "category": "restaurant",
+      "authority_score": 170.2758,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "https://static.wixstatic.com/media/cb0bc7_7531732d696a462eba291a55d3bd170f%7Emv2.png/v1/fit/w_2500,h_1330,al_c/cb0bc7_7531732d696a462eba291a55d3bd170f%7Emv2.png",
+      "website": "http://www.thecrowsnestpalma.com/"
+    },
+    {
+      "display_name": "allsun Hotel Eden Playa",
+      "category": "hotel",
+      "authority_score": 170.2585,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "https://images.alltours.de/hotels/415x311/PMI305112.jpg",
+      "website": "https://www.alltours.de/hotels/allsun-hotel-eden-playa-mallorca-pmi305.html"
+    },
+    {
+      "display_name": "Meliá Palma Bay",
+      "category": "hotel",
+      "authority_score": 170.224,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "https://dam.melia.com/melia/accounts/f8/4000018/projects/127/assets/a7/31466/92dec2738d3c28118cbf466a322cc76e-1600700085.jpg?im=RegionOfInterestCrop=(15,9),regionOfInterest=(1476.5,985.5)",
+      "website": "https://www.melia.com/en/hotels/spain/majorca/melia-palma-bay?utm_campaign=google&utm_content=0783&utm_medium=organic&utm_source=directories"
+    },
+    {
+      "display_name": "Hotel Saratoga",
+      "category": "hotel",
+      "authority_score": 170.0745,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "https://www.hotelsaratoga.com/dms/monoHotel-Hotel-Saratoga/galeria/hotel/hotel-saratoga-palma-mallorca-3.jpg",
+      "website": "https://www.hotelsaratoga.com/?utm_source=google&utm_medium=organic&utm_campaign=GMB&utm_content=HotelSaratoga"
+    },
+    {
+      "display_name": "La Rosa Restaurant & Cocktailbar",
+      "category": "restaurant",
+      "authority_score": 170.0539,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "https://lh3.googleusercontent.com/place-photos/AJRVUZOCZCwl7elsYGf_MmrXcmBNhqo4IBuyLeeRKPVh4CzQkgJrBd2kVEKNZ3JpgKYdPmZjHG6pJNHdz2xB1hRdtqGIqFVOHtUKOsvBfQVtpp1Xb3CN8X_uPVbkY41Y92vFQcRQl857EZug3EoQKKVVCnSaEg=s4800-w1600",
+      "website": "https://www.instagram.com/la.rosa.restaurant/?hl=es"
+    },
+    {
+      "display_name": "Captain Boleor",
+      "category": "boat-rental",
+      "authority_score": 170.0374,
+      "image_status": "candidate_assigned",
+      "primary_image_url": "https://boleor.com/img_web/captain-boleor_W.webp",
+      "website": "https://boleor.com/"
+    }
+  ]
+}

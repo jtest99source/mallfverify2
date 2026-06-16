@@ -1,0 +1,259 @@
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500&display=swap');
+  .mi * { box-sizing: border-box; margin: 0; padding: 0; }
+  .mi { font-family: 'DM Sans', sans-serif; background: #F2EDE3; color: #1C1C18; }
+  .mi-nav { background: #1C1C18; display: flex; align-items: center; justify-content: space-between; padding: 0 2rem; height: 52px; }
+  .mi-nav-logo { font-family: 'Playfair Display', serif; color: #E8C888; font-size: 16px; letter-spacing: 0.08em; }
+  .mi-nav-links { display: flex; gap: 1.5rem; }
+  .mi-nav-links a { color: #6B7860; font-size: 12px; text-decoration: none; letter-spacing: 0.04em; text-transform: uppercase; transition: color 0.15s; }
+  .mi-nav-links a:hover { color: #C2813E; }
+  .mi-nav-cta { background: #C2813E; color: #fff; font-size: 11px; padding: 6px 14px; border-radius: 1px; letter-spacing: 0.06em; text-transform: uppercase; cursor: pointer; border: none; font-family: 'DM Sans', sans-serif; }
+
+  .mi-hero { background: #354030; padding: 5rem 2rem 4rem; position: relative; overflow: hidden; display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: end; }
+  .mi-hero-geo { position: absolute; top: 0; right: 0; width: 50%; height: 100%; background: #2E2B24; clip-path: polygon(12% 0, 100% 0, 100% 100%, 0% 100%); }
+  .mi-hero-geo2 { position: absolute; top: 0; right: 0; width: 50%; height: 100%; clip-path: polygon(12% 0, 100% 0, 100% 100%, 0% 100%); background: repeating-linear-gradient(135deg, rgba(46,122,136,0.08) 0, rgba(46,122,136,0.08) 1px, transparent 1px, transparent 24px); }
+  .mi-hero-tag { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #C2813E; margin-bottom: 1.2rem; position: relative; z-index: 2; }
+  .mi-hero-h1 { font-family: 'Playfair Display', serif; font-size: 56px; line-height: 1.02; color: #F2EDE3; font-weight: 900; position: relative; z-index: 2; }
+  .mi-hero-h1 em { color: #C2813E; font-style: normal; }
+  .mi-hero-sub { color: #6B7860; font-size: 14px; margin-top: 1rem; line-height: 1.65; position: relative; z-index: 2; max-width: 360px; }
+  .mi-hero-search { display: flex; margin-top: 2rem; position: relative; z-index: 2; }
+  .mi-hero-search input { flex: 1; background: rgba(242,237,227,0.07); border: 1px solid rgba(242,237,227,0.15); color: #F2EDE3; padding: 13px 18px; font-family: 'DM Sans', sans-serif; font-size: 14px; outline: none; border-right: none; border-radius: 1px 0 0 1px; }
+  .mi-hero-search input::placeholder { color: #4A5440; }
+  .mi-hero-search button { background: #C2813E; color: #fff; border: none; padding: 0 22px; font-family: 'DM Sans', sans-serif; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; cursor: pointer; border-radius: 0 1px 1px 0; }
+  .mi-hero-cats { display: flex; gap: 6px; margin-top: 1.2rem; flex-wrap: wrap; position: relative; z-index: 2; }
+  .mi-hero-cats span { border: 1px solid rgba(107,120,96,0.5); color: #6B7860; font-size: 10px; padding: 4px 11px; border-radius: 1px; letter-spacing: 0.04em; cursor: pointer; transition: all 0.15s; }
+  .mi-hero-cats span:hover { border-color: #C2813E; color: #C2813E; }
+  .mi-hero-right { position: relative; z-index: 2; display: flex; flex-direction: column; gap: 12px; }
+  .mi-hero-stat { border-left: 2px solid #2E7A88; padding-left: 14px; }
+  .mi-hero-stat-num { font-family: 'Playfair Display', serif; font-size: 36px; font-weight: 900; color: #F2EDE3; line-height: 1; }
+  .mi-hero-stat-label { font-size: 11px; color: #4A5440; text-transform: uppercase; letter-spacing: 0.08em; margin-top: 2px; }
+  .mi-hero-divider { width: 1px; height: 24px; background: #4A5440; margin: 0 0 0 2px; }
+
+  .mi-section { padding: 2.5rem 2rem; }
+  .mi-section-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 1.8rem; border-bottom: 1px solid #C8BFA8; padding-bottom: 0.7rem; }
+  .mi-section-title { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 700; }
+  .mi-section-link { font-size: 11px; color: #2E7A88; text-decoration: none; letter-spacing: 0.06em; text-transform: uppercase; }
+
+  .mi-feat-grid { display: grid; grid-template-columns: 1.55fr 1fr 1fr; gap: 2px; background: #C8BFA8; }
+  .mi-feat-main { background: #354030; padding: 2.5rem; display: flex; flex-direction: column; justify-content: flex-end; min-height: 340px; position: relative; overflow: hidden; cursor: pointer; }
+  .mi-feat-main-tex { position: absolute; top:0;left:0;right:0;bottom:0; background: repeating-linear-gradient(135deg, rgba(46,122,136,0.06) 0, rgba(46,122,136,0.06) 1px, transparent 1px, transparent 22px); }
+  .mi-feat-main-badge { background: #C2813E; color: #fff; font-size: 9px; padding: 3px 10px; letter-spacing: 0.12em; text-transform: uppercase; width: fit-content; margin-bottom: 0.8rem; border-radius: 1px; position: relative; z-index: 2; }
+  .mi-feat-main h2 { font-family: 'Playfair Display', serif; font-size: 28px; color: #F2EDE3; line-height: 1.15; position: relative; z-index: 2; }
+  .mi-feat-main-meta { color: #6B7860; font-size: 11px; margin-top: 6px; position: relative; z-index: 2; }
+  .mi-feat-main-stars { color: #C2813E; font-size: 13px; margin-top: 6px; position: relative; z-index: 2; }
+  .mi-feat-main-stars em { color: #A8D8E0; font-style: normal; font-size: 11px; margin-left: 6px; }
+  .mi-feat-side-col { display: flex; flex-direction: column; gap: 2px; }
+  .mi-feat-side { background: #F2EDE3; padding: 1.2rem; display: flex; flex-direction: column; justify-content: flex-end; cursor: pointer; transition: background 0.15s; flex: 1; }
+  .mi-feat-side:hover { background: #E8E0D0; }
+  .mi-feat-side-img { flex: 1; background: #C8BFA8; margin: -1.2rem -1.2rem 1rem; min-height: 90px; }
+  .mi-feat-side-cat { font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: #2E7A88; margin-bottom: 3px; }
+  .mi-feat-side h3 { font-family: 'Playfair Display', serif; font-size: 15px; line-height: 1.2; }
+  .mi-feat-side-tags { display: flex; gap: 3px; margin-top: 6px; flex-wrap: wrap; }
+  .mi-feat-side-tags span { background: #E8E0D0; color: #4A5440; font-size: 9px; padding: 2px 7px; border-radius: 1px; }
+
+  .mi-ranks { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; background: #C8BFA8; margin-top: 2px; }
+  .mi-rank { background: #F2EDE3; padding: 1.2rem 1.4rem; display: flex; align-items: center; gap: 1rem; cursor: pointer; transition: background 0.15s; }
+  .mi-rank:hover { background: #E8E0D0; }
+  .mi-rank-num { font-family: 'Playfair Display', serif; font-size: 44px; font-weight: 900; color: #C8BFA8; line-height: 1; min-width: 48px; }
+  .mi-rank-info { flex: 1; }
+  .mi-rank-cat { font-size: 9px; text-transform: uppercase; letter-spacing: 0.1em; color: #2E7A88; }
+  .mi-rank-name { font-family: 'Playfair Display', serif; font-size: 15px; margin-top: 2px; color: #1C1C18; }
+  .mi-rank-bar-wrap { display: flex; align-items: center; gap: 6px; margin-top: 5px; }
+  .mi-rank-bar { flex: 1; height: 3px; background: #C8BFA8; border-radius: 1px; overflow: hidden; }
+  .mi-rank-fill { height: 100%; background: #C2813E; border-radius: 1px; }
+  .mi-rank-n { font-size: 10px; color: #6B7860; }
+
+  .mi-guides { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; background: #C8BFA8; }
+  .mi-guide { background: #fff; padding: 1.6rem; cursor: pointer; transition: background 0.15s; }
+  .mi-guide:hover { background: #F8F4EC; }
+  .mi-guide-cat { font-size: 9px; text-transform: uppercase; letter-spacing: 0.12em; color: #C2813E; border-left: 2px solid #C2813E; padding-left: 8px; margin-bottom: 0.7rem; }
+  .mi-guide h3 { font-family: 'Playfair Display', serif; font-size: 19px; line-height: 1.25; color: #1C1C18; }
+  .mi-guide p { color: #4A5440; font-size: 12px; margin-top: 5px; line-height: 1.6; }
+  .mi-guide-foot { display: flex; justify-content: space-between; align-items: center; margin-top: 1rem; padding-top: 0.8rem; border-top: 1px solid #E8E0D0; }
+  .mi-guide-foot span { font-size: 10px; color: #6B7860; text-transform: uppercase; letter-spacing: 0.06em; }
+  .mi-guide-foot em { color: #2E7A88; font-style: normal; font-size: 14px; }
+
+  .mi-cta-strip { background: #2E2B24; padding: 3rem 2rem; display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 2rem; }
+  .mi-cta-strip h2 { font-family: 'Playfair Display', serif; font-size: 28px; color: #F2EDE3; }
+  .mi-cta-strip p { color: #4A5440; font-size: 13px; margin-top: 4px; }
+  .mi-cta-strip button { background: #C2813E; color: #fff; border: none; padding: 13px 28px; font-family: 'DM Sans', sans-serif; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; cursor: pointer; border-radius: 1px; white-space: nowrap; }
+
+  .mi-footer { background: #1C1C18; padding: 1.8rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+  .mi-footer-logo { font-family: 'Playfair Display', serif; color: #E8C888; font-size: 14px; letter-spacing: 0.06em; }
+  .mi-footer-links { display: flex; gap: 1.4rem; }
+  .mi-footer-links a { color: #4A5440; font-size: 10px; text-decoration: none; text-transform: uppercase; letter-spacing: 0.08em; }
+</style>
+
+<div class="mi">
+  <nav class="mi-nav">
+    <span class="mi-nav-logo">MALLORCA INSIDER</span>
+    <div class="mi-nav-links">
+      <a href="#">Restaurantes</a>
+      <a href="#">Hoteles</a>
+      <a href="#">Beach clubs</a>
+      <a href="#">Barcos</a>
+      <a href="#">Guías</a>
+    </div>
+    <button class="mi-nav-cta">Añadir negocio</button>
+  </nav>
+
+  <div class="mi-hero">
+    <div class="mi-hero-geo"></div>
+    <div class="mi-hero-geo2"></div>
+    <div>
+      <div class="mi-hero-tag">Mallorca Verified · Guía editorial</div>
+      <h1 class="mi-hero-h1">La guía<br><em>definitiva</em><br>de Mallorca</h1>
+      <p class="mi-hero-sub">Restaurantes, hoteles, beach clubs y barcos seleccionados con criterio editorial. Sin publicidad.</p>
+      <div class="mi-hero-search">
+        <input type="text" placeholder="Buscar restaurante, hotel, zona...">
+        <button>Buscar</button>
+      </div>
+      <div class="mi-hero-cats">
+        <span>Palma</span><span>Norte</span><span>Tramuntana</span><span>Sur</span><span>Andratx</span><span>Sóller</span>
+      </div>
+    </div>
+    <div class="mi-hero-right">
+      <div class="mi-hero-stat">
+        <div class="mi-hero-stat-num">340+</div>
+        <div class="mi-hero-stat-label">Negocios analizados</div>
+      </div>
+      <div class="mi-hero-divider"></div>
+      <div class="mi-hero-stat">
+        <div class="mi-hero-stat-num">48k</div>
+        <div class="mi-hero-stat-label">Reseñas procesadas</div>
+      </div>
+      <div class="mi-hero-divider"></div>
+      <div class="mi-hero-stat">
+        <div class="mi-hero-stat-num">6</div>
+        <div class="mi-hero-stat-label">Categorías editoriales</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mi-section">
+    <div class="mi-section-header">
+      <span class="mi-section-title">Sitios con criterio</span>
+      <a href="#" class="mi-section-link">Ver todos →</a>
+    </div>
+    <div class="mi-feat-grid">
+      <div class="mi-feat-main">
+        <div class="mi-feat-main-tex"></div>
+        <span class="mi-feat-main-badge">Beach club · Destacado editorial</span>
+        <h2>Balneario Illetas–Beach Club</h2>
+        <div class="mi-feat-main-meta">Calvià · Google verificado · 318 reseñas</div>
+        <div class="mi-feat-main-stars">★★★★★ <em>4.6 puntuación media</em></div>
+      </div>
+      <div class="mi-feat-side-col">
+        <div class="mi-feat-side">
+          <div class="mi-feat-side-img"></div>
+          <div class="mi-feat-side-cat">Hotel · Palma</div>
+          <h3>Hotel Can Cera</h3>
+          <div class="mi-feat-side-tags"><span>boutique</span><span>centro</span></div>
+        </div>
+        <div class="mi-feat-side">
+          <div class="mi-feat-side-img"></div>
+          <div class="mi-feat-side-cat">Restaurante · Sóller</div>
+          <h3>La Rosa Restaurant</h3>
+          <div class="mi-feat-side-tags"><span>vistas</span><span>coctelería</span></div>
+        </div>
+      </div>
+      <div class="mi-feat-side-col">
+        <div class="mi-feat-side">
+          <div class="mi-feat-side-img"></div>
+          <div class="mi-feat-side-cat">Beach club · Palma</div>
+          <h3>Bikkini Beach Palma</h3>
+          <div class="mi-feat-side-tags"><span>sunset</span><span>beach</span></div>
+        </div>
+        <div class="mi-feat-side">
+          <div class="mi-feat-side-img"></div>
+          <div class="mi-feat-side-cat">Barco · Andratx</div>
+          <h3>Charter Sa Dragonera</h3>
+          <div class="mi-feat-side-tags"><span>velero</span><span>privado</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="mi-ranks">
+      <div class="mi-rank">
+        <div class="mi-rank-num">01</div>
+        <div class="mi-rank-info">
+          <div class="mi-rank-cat">Beach clubs · Mallorca</div>
+          <div class="mi-rank-name">Top beach clubs 2025</div>
+          <div class="mi-rank-bar-wrap"><div class="mi-rank-bar"><div class="mi-rank-fill" style="width:92%"></div></div><span class="mi-rank-n">12 sitios</span></div>
+        </div>
+      </div>
+      <div class="mi-rank">
+        <div class="mi-rank-num">02</div>
+        <div class="mi-rank-info">
+          <div class="mi-rank-cat">Hoteles · Mallorca</div>
+          <div class="mi-rank-name">Top hotels 2025</div>
+          <div class="mi-rank-bar-wrap"><div class="mi-rank-bar"><div class="mi-rank-fill" style="width:85%"></div></div><span class="mi-rank-n">9 sitios</span></div>
+        </div>
+      </div>
+      <div class="mi-rank">
+        <div class="mi-rank-num">03</div>
+        <div class="mi-rank-info">
+          <div class="mi-rank-cat">Restaurantes · Palma</div>
+          <div class="mi-rank-name">Top restaurantes Palma</div>
+          <div class="mi-rank-bar-wrap"><div class="mi-rank-bar"><div class="mi-rank-fill" style="width:78%"></div></div><span class="mi-rank-n">15 sitios</span></div>
+        </div>
+      </div>
+      <div class="mi-rank">
+        <div class="mi-rank-num">04</div>
+        <div class="mi-rank-info">
+          <div class="mi-rank-cat">Barcos · Mallorca</div>
+          <div class="mi-rank-name">Guía alquiler de barcos</div>
+          <div class="mi-rank-bar-wrap"><div class="mi-rank-bar"><div class="mi-rank-fill" style="width:70%"></div></div><span class="mi-rank-n">8 empresas</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mi-section" style="background:#fff; padding-top:2rem; padding-bottom:2rem;">
+    <div class="mi-section-header">
+      <span class="mi-section-title">Últimas guías</span>
+      <a href="#" class="mi-section-link">Ver todas →</a>
+    </div>
+    <div class="mi-guides">
+      <div class="mi-guide">
+        <div class="mi-guide-cat">Hoteles</div>
+        <h3>Cómo alojarse en Mallorca según tu tipo de viaje</h3>
+        <p>Palma, Tramuntana, todo incluido... cada perfil tiene su Mallorca perfecta.</p>
+        <div class="mi-guide-foot"><span>8 min lectura</span><em>→</em></div>
+      </div>
+      <div class="mi-guide">
+        <div class="mi-guide-cat">Barcos</div>
+        <h3>Guía básica para alquilar un barco en Mallorca</h3>
+        <p>Licencia, costes, rutas y proveedores. Todo antes de zarpar.</p>
+        <div class="mi-guide-foot"><span>6 min lectura</span><em>→</em></div>
+      </div>
+      <div class="mi-guide">
+        <div class="mi-guide-cat">Restaurantes</div>
+        <h3>Dónde cenar en Mallorca en 3 días</h3>
+        <p>El itinerario gastronómico perfecto si tienes poco tiempo y muchas ganas.</p>
+        <div class="mi-guide-foot"><span>5 min lectura</span><em>→</em></div>
+      </div>
+      <div class="mi-guide">
+        <div class="mi-guide-cat">Beach clubs</div>
+        <h3>Beach clubs con entrada libre en Mallorca</h3>
+        <p>Sin reserva, sin mínimos. Los mejores beach clubs sin plan previo.</p>
+        <div class="mi-guide-foot"><span>4 min lectura</span><em>→</em></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mi-cta-strip">
+    <div>
+      <h2>¿Tienes un negocio en Mallorca?</h2>
+      <p>Solicita tu ficha editorial y aumenta tu visibilidad en buscadores e IA.</p>
+    </div>
+    <button>Solicitar inclusión</button>
+  </div>
+
+  <footer class="mi-footer">
+    <span class="mi-footer-logo">MALLORCA INSIDER</span>
+    <div class="mi-footer-links">
+      <a href="#">Restaurantes</a><a href="#">Hoteles</a><a href="#">Beach clubs</a><a href="#">Barcos</a><a href="#">Guías</a>
+    </div>
+  </footer>
+</div>

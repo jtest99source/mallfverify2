@@ -1,0 +1,1020 @@
+# Editorial Generation Report
+
+Generated: 2026-06-15T14:59:53.207Z
+Dry run: yes
+
+## Totals
+
+- Processed: 0
+- Skipped: 1000
+- Errors: 0
+- Stopped early: no
+
+## Processed
+
+
+## Skipped
+
+- Mercat de l'Olivar (mercat-de-l-olivar) - dry-run selected
+- Restaurante Es Cruce (restaurante-es-cruce) - dry-run selected
+- Contratiempo (contratiempo) - dry-run selected
+- VIMA Rent a Car Mallorca Airport (vima-rent-a-car-mallorca-airport) - dry-run selected
+- Che!!! Asador argentino (CC Fan Mallorca) Local 1-10A (che-asador-argentino-cc-fan-mallorca-local-1-10a) - dry-run selected
+- Bierkönig (bierkonig) - dry-run selected
+- Ca'n Joan de s'Aigo (ca-n-joan-de-s-aigo-cafe) - dry-run selected
+- Pirates Adventure (pirates-adventure) - dry-run selected
+- Iberostar Waves Cala Domingos (iberostar-waves-cala-domingos) - dry-run selected
+- Iberostar Selection Llaut Palma (iberostar-selection-llaut-palma) - dry-run selected
+- SA FARINERA (sa-farinera) - dry-run selected
+- Iberostar Selection Jardín del Sol Suites (iberostar-selection-jardin-del-sol-suites) - dry-run selected
+- Organic, Restaurant Ecológico, Portocolom, Mallorca (organic-restaurant-ecologico-portocolom-mallorca) - dry-run selected
+- Klüg Burgers (klug-burgers-2) - dry-run selected
+- Artello Gelato (artello-gelato) - dry-run selected
+- ClickRent Mallorca Aeropuerto | Alquiler de Coches, Furgonetas, Campers y Motos (clickrent-mallorca-aeropuerto-alquiler-de-coches-furgonetas-campers-y-motos) - dry-run selected
+- Playa Garden Selection Hotel & Spa (playa-garden-selection-hotel-spa) - dry-run selected
+- Clínica Londres | Cirurgia i Medicina Estètica (clinica-londres-cirurgia-i-medicina-estetica) - dry-run selected
+- Raimundo Burger (raimundo-burger) - dry-run selected
+- Burger Doze (burger-doze) - dry-run selected
+- Iberostar Selection Playa de Palma (iberostar-selection-playa-de-palma) - dry-run selected
+- Murada Medieval de Alcúdia (murada-medieval-de-alcudia) - dry-run selected
+- CALYPSO - Cala Major (calypso-cala-major) - dry-run selected
+- Hard Rock Cafe Mallorca (hard-rock-cafe-mallorca) - dry-run selected
+- Paso Obligado | Hamburguesas en Alcudia (paso-obligado-hamburguesas-en-alcudia) - dry-run selected
+- Hiper Rent A Car S A (hiper-rent-a-car-s-a) - dry-run selected
+- Realidad Virtual Another World Mallorca (realidad-virtual-another-world-mallorca) - dry-run selected
+- Ca'n Joan de S'aigo (ca-n-joan-de-s-aigo-restaurant) - dry-run selected
+- Il Pizzettaro Mallorca cala d'or (il-pizzettaro-mallorca-cala-d-or) - dry-run selected
+- Hotel MySeaHouse Flamingo (hotel-myseahouse-flamingo) - dry-run selected
+- Restaurant Cal Dimoni (restaurant-cal-dimoni) - dry-run selected
+- Ca'n Torrat (ca-n-torrat) - dry-run selected
+- Rent&Enjoy ( Alcudia )-Vespa,Scooter & Motorbike Rental (rent-enjoy-alcudia-vespa-scooter-motorbike-rental) - dry-run selected
+- Autos Mallorca (autos-mallorca) - dry-run selected
+- Il Tano Portals Nous Restaurante y Pizzeria (il-tano-portals-nous-restaurante-y-pizzeria) - dry-run selected
+- Jaipur Tandoori - Restaurante Indio Palma (jaipur-tandoori-restaurante-indio-palma) - dry-run selected
+- Es Taller Valldemossa (es-taller-valldemossa) - dry-run selected
+- Smith's Cafe-Bar-Restaurant (smith-s-cafe-bar-restaurant) - dry-run selected
+- Aubamar Palma Resort (aubamar-palma-resort) - dry-run selected
+- Badal Corner (badal-corner) - dry-run selected
+- H10 Casa del Mar (h10-casa-del-mar) - dry-run selected
+- Grand Siena - Restaurant & Cocktail Bar (grand-siena-restaurant-cocktail-bar) - dry-run selected
+- Cines Ocimax (cines-ocimax) - dry-run selected
+- UDON Fan (udon-fan) - dry-run selected
+- SIXT Alquiler de Coches - Palma de Mallorca Aeropuerto (PMI) (sixt-alquiler-de-coches-palma-de-mallorca-aeropuerto-pmi) - dry-run selected
+- Plaça de sa Feixina (placa-de-sa-feixina) - dry-run selected
+- Auditorium de Palma de Mallorca (auditorium-de-palma-de-mallorca) - dry-run selected
+- Plan B Tapas Grill Burgers (plan-b-tapas-grill-burgers) - dry-run selected
+- Katmandu Park (katmandu-park) - dry-run selected
+- QuitaPenas Valldemossa (quitapenas-valldemossa) - dry-run selected
+- Rivareno Gelateria (rivareno-gelateria) - dry-run selected
+- Dito - Breakfast Cafeteria Sa Coma (dito-breakfast-cafeteria-sa-coma) - dry-run selected
+- L’Informal Tacos (l-informal-tacos) - dry-run selected
+- Mirador de Es Colomer (mirador-de-es-colomer) - dry-run selected
+- Restaurante Ca'n Tango | Restaurante Playas de Muro (restaurante-ca-n-tango-restaurante-playas-de-muro) - dry-run selected
+- Voramar 57 Pizzería (voramar-57-pizzeria) - dry-run selected
+- Quinta Avenida- Restaurante Japonés (quinta-avenida-restaurante-japones) - dry-run selected
+- Vintage Motors (Es Baluard) | Alquiler motos (vintage-motors-es-baluard-alquiler-motos) - dry-run selected
+- Ses Oliveres (ses-oliveres) - dry-run selected
+- Atalaya de Albercutx (atalaya-de-albercutx) - dry-run selected
+- Sa Ximbomba (sa-ximbomba) - dry-run selected
+- Klüg Burgers (klug-burgers) - dry-run selected
+- Castell de sa Punta de n'Amer (castell-de-sa-punta-de-n-amer) - dry-run selected
+- Profit Club (profit-club) - dry-run selected
+- Chucca (chucca) - dry-run selected
+- Hotel Santuari de Cura (hotel-santuari-de-cura) - dry-run selected
+- Indian Fusion (indian-fusion) - dry-run selected
+- Steak House Carabela | Alcudia Restaurant (steak-house-carabela-alcudia-restaurant) - dry-run selected
+- Restaurante & Bar Marcelo´s (restaurante-bar-marcelo-s) - dry-run selected
+- Bar Café Coto (bar-cafe-coto) - dry-run selected
+- Muddy's Wood Fired Grill (muddy-s-wood-fired-grill) - dry-run selected
+- Restaurante Safrà21 (Safrà Paellas Ciudad Jardín) (restaurante-safra21-safra-paellas-ciudad-jardin) - dry-run selected
+- Ocimax (ocimax) - dry-run selected
+- Mercader del Mar (mercader-del-mar) - dry-run selected
+- Gringos Bingo (gringos-bingo) - dry-run selected
+- Lievito Pizzeria (lievito-pizzeria) - dry-run selected
+- Blackbeard´s Beach Bar & Grill (blackbeard-s-beach-bar-grill) - dry-run selected
+- Orient Shisha Lounge (orient-shisha-lounge) - dry-run selected
+- Krishná Port Portals - Indian Restaurant (krishna-port-portals-indian-restaurant) - dry-run selected
+- NAP (nap) - dry-run selected
+- Casa Gallega Avenidas (casa-gallega-avenidas) - dry-run selected
+- Brunchit (brunchit) - dry-run selected
+- Goiko (goiko) - dry-run selected
+- Bosch Rent A Car S.L. (bosch-rent-a-car-s-l) - dry-run selected
+- Santa Chiara Pizza Napoletana Contemporanea (santa-chiara-pizza-napoletana-contemporanea) - dry-run selected
+- Cel Blau BURGERS & STREET FOOD - Playa de Palma (cel-blau-burgers-street-food-playa-de-palma) - dry-run selected
+- Café Ca'n Toni Restaurant (cafe-ca-n-toni-restaurant) - dry-run selected
+- Rodizio Churrascaria Ipanema Na Brasa (rodizio-churrascaria-ipanema-na-brasa) - dry-run selected
+- Il Postino(INCA) (il-postino-inca) - dry-run selected
+- L'Epicerie Bakery & Specialty Coffee (l-epicerie-bakery-specialty-coffee) - dry-run selected
+- Tapearte Sillot (tapearte-sillot) - dry-run selected
+- Hotel Paradiso Garden (hotel-paradiso-garden) - dry-run selected
+- Don Vito Cucina Italiana (don-vito-cucina-italiana) - dry-run selected
+- Isaan Thai Cuisine (isaan-thai-cuisine) - dry-run selected
+- Las Muns (las-muns) - dry-run selected
+- Restaurante Asador BOLIXE Cocina Esencial (restaurante-asador-bolixe-cocina-esencial) - dry-run selected
+- Golf Fantasia (golf-fantasia) - dry-run selected
+- Casa Jacinto (casa-jacinto) - dry-run selected
+- Peluquería Can Picafort Apolonia (peluqueria-can-picafort-apolonia) - dry-run selected
+- Vintage Motors (Marina) | Alquiler de motos (vintage-motors-marina-alquiler-de-motos) - dry-run selected
+- Bar s’Hostal (bar-s-hostal) - dry-run selected
+- Raimundo Blanquerna (raimundo-blanquerna) - dry-run selected
+- Primo Taquería (primo-taqueria) - dry-run selected
+- La Mujer De Verde - Bon Lloc - Restaurante vegano (la-mujer-de-verde-bon-lloc-restaurante-vegano) - dry-run selected
+- Urban Sushi Palma Restaurante — Santa Catalina (urban-sushi-palma-restaurante-santa-catalina) - dry-run selected
+- Groenk Bistro & Grill Fornalutx (groenk-bistro-grill-fornalutx) - dry-run selected
+- Santa Chiara Raimundo Pizza Napoletana Contemporanea (santa-chiara-raimundo-pizza-napoletana-contemporanea) - dry-run selected
+- MarSenses Rosa del Mar Hotel & Spa (marsenses-rosa-del-mar-hotel-spa) - dry-run selected
+- Grupotel Playa de Palma Suites & Spa (grupotel-playa-de-palma-suites-spa) - dry-run selected
+- Temple Natura Café Garden (temple-natura-cafe-garden) - dry-run selected
+- El Baúl Restaurant (el-baul-restaurant) - dry-run selected
+- Mallorca Thai Massage (mallorca-thai-massage) - dry-run selected
+- Pizzería Ca'n Pelut (pizzeria-ca-n-pelut) - dry-run selected
+- Restaurante Casa Maruka (restaurante-casa-maruka) - dry-run selected
+- L'Artista Pizzeria Napoletana (l-artista-pizzeria-napoletana) - dry-run selected
+- Ca'n Joan de s'Aigo (ca-n-joan-de-s-aigo-bakery) - dry-run selected
+- SMILING FEET (smiling-feet) - dry-run selected
+- Dakota Tex Mex-Las Gaviotas (dakota-tex-mex-las-gaviotas) - dry-run selected
+- Dakota Tex Mex-Playa de Muro (dakota-tex-mex-playa-de-muro) - dry-run selected
+- Madras - Indian Restaurant Palma (madras-indian-restaurant-palma) - dry-run selected
+- BOCALTO Palma (bocalto-palma) - dry-run selected
+- Berganti Bikes Mallorca (berganti-bikes-mallorca) - dry-run selected
+- Hotel Astoria Playa Adults Only (hotel-astoria-playa-adults-only) - dry-run selected
+- Restaurant Pizzeria Celler Sa Sini (restaurant-pizzeria-celler-sa-sini) - dry-run selected
+- Avocado Mallorca | Brunch & Lunch | Coffee & Juice in Cala Major (avocado-mallorca-brunch-lunch-coffee-juice-in-cala-major) - dry-run selected
+- DELI Pastelería (deli-pasteleria) - dry-run selected
+- Rent a Car Autos Custodia - Peguera (Mallorca) (rent-a-car-autos-custodia-peguera-mallorca) - dry-run selected
+- The Olive Tree Palmanova (the-olive-tree-palmanova) - dry-run selected
+- Restaurante Fins Tapas & Coctkails (restaurante-fins-tapas-coctkails) - dry-run selected
+- VIVA Blue & Spa (viva-blue-spa) - dry-run selected
+- Il Tano SANTA CATALINA (il-tano-santa-catalina) - dry-run selected
+- Restaurante Buscando El Norte (restaurante-buscando-el-norte) - dry-run selected
+- Arlequin Restaurant & Cocktail Bar (arlequin-restaurant-cocktail-bar) - dry-run selected
+- Mistral Coffee Banc (mistral-coffee-banc) - dry-run selected
+- Delicias Doña Blanca - INCA (delicias-dona-blanca-inca) - dry-run selected
+- CHE GELATS! Avda. Argentina - Palma (che-gelats-avda-argentina-palma) - dry-run selected
+- Cala Sa Nau (cala-sa-nau) - dry-run selected
+- Es Baluard Museo de Arte Contemporáneo de Palma (es-baluard-museo-de-arte-contemporaneo-de-palma) - dry-run selected
+- Faro de Formentor (faro-de-formentor) - dry-run selected
+- Moltabarra (moltabarra) - dry-run selected
+- Restaurante Rhein (restaurante-rhein) - dry-run selected
+- Vintage Motors (Port Alcudia) | Alquiler de motos (vintage-motors-port-alcudia-alquiler-de-motos) - dry-run selected
+- Petit Figueret Premium Burger Can Picafort (petit-figueret-premium-burger-can-picafort) - dry-run selected
+- Cafè Palmanova (cafe-palmanova) - dry-run selected
+- The Sea Hotel by Grupotel (the-sea-hotel-by-grupotel) - dry-run selected
+- Wine & Food Restaurant (wine-food-restaurant) - dry-run selected
+- Agra Tandoori Indian Restaurant (agra-tandoori-indian-restaurant) - dry-run selected
+- Tapas Bar Alaska (tapas-bar-alaska) - dry-run selected
+- Arrosseria Sa Cranca (arrosseria-sa-cranca) - dry-run selected
+- Marivent - Darbar Tandoori Indian Restaurant (marivent-darbar-tandoori-indian-restaurant) - dry-run selected
+- La placita tapas restaurante andaluz (la-placita-tapas-restaurante-andaluz) - dry-run selected
+- Beach House Port Sóller (beach-house-port-soller) - dry-run selected
+- Ensaimadas Ángel (ensaimadas-angel) - dry-run selected
+- Shamrock Palma (shamrock-palma) - dry-run selected
+- Moov rent a car (moov-rent-a-car) - dry-run selected
+- Las Olas - Santa Ponça (las-olas-santa-ponca) - dry-run selected
+- Top Auto Balear (top-auto-balear-2) - dry-run selected
+- PortBlue Club Pollentia Resort & Spa (portblue-club-pollentia-resort-spa) - dry-run selected
+- VIVA Cala Mesquida Resort & Spa (viva-cala-mesquida-resort-spa) - dry-run selected
+- Restaurant Asador Foc i Caliu (restaurant-asador-foc-i-caliu) - dry-run selected
+- El Castillo Del Bosque (el-castillo-del-bosque) - dry-run selected
+- Namaste Indian Restaurant (namaste-indian-restaurant) - dry-run selected
+- Pirates Reloaded (pirates-reloaded) - dry-run selected
+- Ramen Otaku (ramen-otaku) - dry-run selected
+- Tres Leñas (tres-lenas) - dry-run selected
+- Max Garden Restaurant (max-garden-restaurant) - dry-run selected
+- Basílica de San Miguel (basilica-de-san-miguel) - dry-run selected
+- Terra Mia (terra-mia) - dry-run selected
+- Restaurant Es 4 Vents (restaurant-es-4-vents) - dry-run selected
+- Infinito Pizzeria Napoletana Alternativa (infinito-pizzeria-napoletana-alternativa) - dry-run selected
+- Montys Cafe (montys-cafe) - dry-run selected
+- Rafa Nadal Residence (rafa-nadal-residence) - dry-run selected
+- Bar Dia (bar-dia) - dry-run selected
+- Restaurante Pura Vida Mallorca (restaurante-pura-vida-mallorca) - dry-run selected
+- Fit Club Mallorca (fit-club-mallorca) - dry-run selected
+- Tomeu Caldentey Cuiner (tomeu-caldentey-cuiner) - dry-run selected
+- Madre Santa Pizza - Pasta & Tiramisú (madre-santa-pizza-pasta-tiramisu) - dry-run selected
+- Bar Cabrera (bar-cabrera-restaurant) - dry-run selected
+- Donna Vegana (donna-vegana) - dry-run selected
+- VIMA Rent a Car (vima-rent-a-car) - dry-run selected
+- Puerto de Andratx (puerto-de-andratx) - dry-run selected
+- Apartamentos Vistasol (apartamentos-vistasol) - dry-run selected
+- Sonnen Bäckerei (sonnen-backerei) - dry-run selected
+- Hotel Best Delta (hotel-best-delta) - dry-run selected
+- Rent ZOOM (rent-zoom) - dry-run selected
+- Paco's Restaurant (paco-s-restaurant) - dry-run selected
+- Can Salom Restaurant - Boutique (can-salom-restaurant-boutique) - dry-run selected
+- Restaurante Sa Punta Mallorca (restaurante-sa-punta-mallorca) - dry-run selected
+- Vermutería La Dolores Palma (vermuteria-la-dolores-palma) - dry-run selected
+- Taylor's Bebidas (taylor-s-bebidas) - dry-run selected
+- Kàrting Ca'n Picafort (karting-ca-n-picafort) - dry-run selected
+- Taj Indian Restaurant & Bar (taj-indian-restaurant-bar) - dry-run selected
+- The Grillhouse (the-grillhouse) - dry-run selected
+- 𝙈𝙖𝙧 𝘾𝙖𝙡𝙖 𝙀𝙨𝙩𝙖𝙣𝙘𝙞𝙖 () - dry-run selected
+- Café Bar Es Vaixell (cafe-bar-es-vaixell) - dry-run selected
+- COMAREA TAPAS & DRINKS (comarea-tapas-drinks) - dry-run selected
+- La Bottega di Michele (la-bottega-di-michele) - dry-run selected
+- BAR CASA MISS (bar-casa-miss) - dry-run selected
+- Sweet Paradise Mallorca (Softeis) (sweet-paradise-mallorca-softeis) - dry-run selected
+- Restaurante La Payesita (restaurante-la-payesita) - dry-run selected
+- Restaurant Can Josep (restaurant-can-josep) - dry-run selected
+- Bar Restaurante Carrion II (bar-restaurante-carrion-ii) - dry-run selected
+- Abbaco Natural Food & Sushi (abbaco-natural-food-sushi) - dry-run selected
+- Groenk Bistro & Grill Deiá (groenk-bistro-grill-deia) - dry-run selected
+- Celler Pagès (celler-pages) - dry-run selected
+- Paco's Rent A Bike (paco-s-rent-a-bike) - dry-run selected
+- Gran Cafe 1919 - Port de Pollença (gran-cafe-1919-port-de-pollenca) - dry-run selected
+- Amayó Trattoria Pizzeria (amayo-trattoria-pizzeria) - dry-run selected
+- Atomic Garden (atomic-garden) - dry-run selected
+- RIKITO (rikito) - dry-run selected
+- Hotel Es Princep (hotel-es-princep) - dry-run selected
+- Bella Verde - Restaurante Vegano en Puerto de Pollença, Mallorca (bella-verde-restaurante-vegano-en-puerto-de-pollenca-mallorca) - dry-run selected
+- Bar Mavi (bar-mavi) - dry-run selected
+- Sabor a India (sabor-a-india) - dry-run selected
+- Balm Restaurant (balm-restaurant) - dry-run selected
+- Tapas y Más (tapas-y-mas) - dry-run selected
+- Linos Grand Café (linos-grand-cafe) - dry-run selected
+- Brassclub (brassclub) - dry-run selected
+- Grupotel Acapulco Playa (grupotel-acapulco-playa) - dry-run selected
+- Maura - Cafe & Bar (maura-cafe-bar) - dry-run selected
+- Restaurante Es Port de Valldemossa (restaurante-es-port-de-valldemossa) - dry-run selected
+- Flip Flop Bar (flip-flop-bar) - dry-run selected
+- Bar Ábaco (bar-abaco) - dry-run selected
+- GUSTAR Restaurante (gustar-restaurante) - dry-run selected
+- S'Àngel (s-angel) - dry-run selected
+- Restaurante Ambra (restaurante-ambra) - dry-run selected
+- SUSHI N1 (sushi-n1) - dry-run selected
+- Mallorca Bike Hire (mallorca-bike-hire) - dry-run selected
+- Bella italia (bella-italia) - dry-run selected
+- Xólotl | Restaurante Mexicano (xolotl-restaurante-mexicano) - dry-run selected
+- Garden Saladina (garden-saladina) - dry-run selected
+- Cala del Moro (cala-del-moro) - dry-run selected
+- Ca'n Manolo Palma (ca-n-manolo-palma) - dry-run selected
+- FEDERAL Brunch y Café de Especialidad - Palma (federal-brunch-y-cafe-de-especialidad-palma) - dry-run selected
+- GPRO Valparaíso Palace and Spa (gpro-valparaiso-palace-and-spa) - dry-run selected
+- Palma Bay Vespa Rental - Moto scooter hire in Palma de Mallorca island (palma-bay-vespa-rental-moto-scooter-hire-in-palma-de-mallorca-island) - dry-run selected
+- Mundo Pirata Mallorca (mundo-pirata-mallorca) - dry-run selected
+- EL YUCATECO PELANÁ (el-yucateco-pelana) - dry-run selected
+- Taj Mahal Curry House (taj-mahal-curry-house) - dry-run selected
+- Tandoori Night (tandoori-night) - dry-run selected
+- Hotel Riu Bravo (hotel-riu-bravo) - dry-run selected
+- Randemar Restaurant (randemar-restaurant) - dry-run selected
+- Sentido Fido Punta del Mar Hotel & Spa (sentido-fido-punta-del-mar-hotel-spa) - dry-run selected
+- SANTÉ | Vegan & Veggie Restaurant (sante-vegan-veggie-restaurant) - dry-run selected
+- Café Robinson's House Paguera (cafe-robinson-s-house-paguera) - dry-run selected
+- Alubia plant power (alubia-plant-power) - dry-run selected
+- NENI Mallorca (neni-mallorca) - dry-run selected
+- Taste of india palmanova (taste-of-india-palmanova) - dry-run selected
+- El Rinconcito del Norte (el-rinconcito-del-norte) - dry-run selected
+- Restaurante La Posada Valldemossa (restaurante-la-posada-valldemossa) - dry-run selected
+- UDON Ocimax (udon-ocimax) - dry-run selected
+- Moltak * The Windmill Kitchen * Cooking Class Mallorca (moltak-the-windmill-kitchen-cooking-class-mallorca) - dry-run selected
+- Dulce de Leche (dulce-de-leche) - dry-run selected
+- La Pergola (la-pergola) - dry-run selected
+- Sea food La Vista Bar and Kitchen (sea-food-la-vista-bar-and-kitchen) - dry-run selected
+- LocoWheels Mallorca Scooter, Motorcycle Rental & Tour (locowheels-mallorca-scooter-motorcycle-rental-tour) - dry-run selected
+- Restaurante.grill hnos jimenez (restaurante-grill-hnos-jimenez) - dry-run selected
+- Ca n'Ela Vegan Restaurant (ca-n-ela-vegan-restaurant) - dry-run selected
+- Restaurante SUMAQ (restaurante-sumaq) - dry-run selected
+- Atlantis (atlantis) - dry-run selected
+- Restaurant Estragon (restaurant-estragon) - dry-run selected
+- Mallorca Services (mallorca-services) - dry-run selected
+- Palacio Municipal de Deportes Son Moix - IME (palacio-municipal-de-deportes-son-moix-ime) - dry-run selected
+- Le Carac - Brunch, Coffee & Cake (le-carac-brunch-coffee-cake) - dry-run selected
+- Buco Burger (buco-burger) - dry-run selected
+- After Landing Cocktail Art (after-landing-cocktail-art) - dry-run selected
+- Restaurante El Fogón de Saby (restaurante-el-fogon-de-saby) - dry-run selected
+- Surry Hills | Coffee & Brunch Palma (surry-hills-coffee-brunch-palma) - dry-run selected
+- Iroko Mallorca (iroko-mallorca) - dry-run selected
+- AluaSun Continental Park Hotel & Apartments (aluasun-continental-park-hotel-apartments) - dry-run selected
+- Pizza Stellata (pizza-stellata) - dry-run selected
+- Mirador de Ses Barques (mirador-de-ses-barques) - dry-run selected
+- Zen Lounge Bar and Grill (zen-lounge-bar-and-grill) - dry-run selected
+- Autos Lagoon (autos-lagoon) - dry-run selected
+- El Aquanauta (el-aquanauta) - dry-run selected
+- Bonito Restaurant & Cocktail Bar (bonito-restaurant-cocktail-bar) - dry-run selected
+- 5 Oceanos (5-oceanos) - dry-run selected
+- Barceló Illetas Albatros-Adults Only (barcelo-illetas-albatros-adults-only) - dry-run selected
+- Bon Thai Cala Mayor (bon-thai-cala-mayor) - dry-run selected
+- Hogan's Live Music, Sports Bar & Restaurant (hogan-s-live-music-sports-bar-restaurant) - dry-run selected
+- MAI MAI Surf Bar (mai-mai-surf-bar) - dry-run selected
+- Arrosseria Nimo's (arrosseria-nimo-s) - dry-run selected
+- Wasabi Palma - Restaurante sushi japonés (wasabi-palma-restaurante-sushi-japones) - dry-run selected
+- Restaurante Sa Bodega d'es Port (restaurante-sa-bodega-d-es-port) - dry-run selected
+- Tobogán Food & Cocktails-Waterslide-Bike Café (tobogan-food-cocktails-waterslide-bike-cafe) - dry-run selected
+- Finca14 (finca14) - dry-run selected
+- S'acústicafè (s-acusticafe) - dry-run selected
+- Porxada de Sa Torre (porxada-de-sa-torre) - dry-run selected
+- No 31 RESTAURANT (no-31-restaurant) - dry-run selected
+- Zafiro Tropic (zafiro-tropic) - dry-run selected
+- Pizzería Los Dos Hermanos - Palma (pizzeria-los-dos-hermanos-palma) - dry-run selected
+- sa Roqueta wine & food (sa-roqueta-wine-food) - dry-run selected
+- Restaurante Sa Tafona de Caimari (restaurante-sa-tafona-de-caimari) - dry-run selected
+- Protur Biomar Sensatori Resort (protur-biomar-sensatori-resort) - dry-run selected
+- ROIG Mobility & Experiences_Cala d'Or (roig-mobility-experiences-cala-d-or) - dry-run selected
+- Sol Katmandu Park & Resort (sol-katmandu-park-resort) - dry-run selected
+- Cafè Es Pes de sa Palla (cafe-es-pes-de-sa-palla) - dry-run selected
+- Bar Espanya (bar-espanya) - dry-run selected
+- Polideportivo Municipal Hermanos Escalas (polideportivo-municipal-hermanos-escalas) - dry-run selected
+- Marriott's Club Son Antem (marriott-s-club-son-antem) - dry-run selected
+- Las Gaviotas Suites Hotel (las-gaviotas-suites-hotel) - dry-run selected
+- Zero Latency Mallorca (zero-latency-mallorca) - dry-run selected
+- Protur Safari Park Aparthotel (protur-safari-park-aparthotel) - dry-run selected
+- BAR RESTAURANTE BON BAR (bar-restaurante-bon-bar) - dry-run selected
+- Alua Calvia (alua-calvia) - dry-run selected
+- Capri bar & restaurant (capri-bar-restaurant) - dry-run selected
+- Hammam Al Ándalus Balnearios Palma (hammam-al-andalus-balnearios-palma) - dry-run selected
+- Lola - Cocktail Bar & Drinks | Cala d’Or (lola-cocktail-bar-drinks-cala-d-or) - dry-run selected
+- Rent&Enjoy ( Can Picafort ) - Motorbike,Vespa & Scooter Rental (rent-enjoy-can-picafort-motorbike-vespa-scooter-rental) - dry-run selected
+- Rent A Scooter & Bike Cristóbal - Cala Ratjada (rent-a-scooter-bike-cristobal-cala-ratjada) - dry-run selected
+- Imperial Bar & Tapas (imperial-bar-tapas) - dry-run selected
+- Hotel Cappuccino-Palma (hotel-cappuccino-palma) - dry-run selected
+- Can Benet by Don Pedro (can-benet-by-don-pedro) - dry-run selected
+- Mínim Gastrobar Portocolom (minim-gastrobar-portocolom) - dry-run selected
+- Panaderia Pons (panaderia-pons) - dry-run selected
+- Dinamics (dinamics) - dry-run selected
+- Signature Coffee Restaurant (signature-coffee-restaurant) - dry-run selected
+- Miss Sushi Mallorca (miss-sushi-mallorca) - dry-run selected
+- Fonts Ufanes (fonts-ufanes) - dry-run selected
+- 7 MACHOS (7-machos) - dry-run selected
+- La Casita Del Mar (la-casita-del-mar) - dry-run selected
+- Finnegan's Live Music Irish Pub (finnegan-s-live-music-irish-pub) - dry-run selected
+- Thai Beach Street Food (thai-beach-street-food) - dry-run selected
+- Bocoi Portocolom (bocoi-portocolom) - dry-run selected
+- Nus de sa Corbata (nus-de-sa-corbata) - dry-run selected
+- UDON Palma (udon-palma) - dry-run selected
+- BG HOTEL JAVA MALLORCA (bg-hotel-java-mallorca) - dry-run selected
+- Can Mel (can-mel) - dry-run selected
+- Restaurante Florida Palmanova (restaurante-florida-palmanova) - dry-run selected
+- Hotel Catalonia Majórica (hotel-catalonia-majorica) - dry-run selected
+- Vinito vermuteria & winebar (vinito-vermuteria-winebar) - dry-run selected
+- Buddha's eye Indian resturante (buddha-s-eye-indian-resturante) - dry-run selected
+- Mom & Mom - Tartas personalizadas Palma (mom-mom-tartas-personalizadas-palma) - dry-run selected
+- Jonny's Dhaba Indian Restaurant (jonny-s-dhaba-indian-restaurant) - dry-run selected
+- Noti Specialty Coffee Shop (noti-specialty-coffee-shop) - dry-run selected
+- Life Cars (life-cars) - dry-run selected
+- Pure Salt Port Adriano (pure-salt-port-adriano) - dry-run selected
+- TAPAS & PIZZERÍA BEACH (tapas-pizzeria-beach) - dry-run selected
+- Mallorquin-Bikes SL (mallorquin-bikes-sl) - dry-run selected
+- Valls Rent a Car & Scooter MALLORCA (valls-rent-a-car-scooter-mallorca) - dry-run selected
+- The Booo Palma | Hamburguesas y Parque Infantil (the-booo-palma-hamburguesas-y-parque-infantil) - dry-run selected
+- Restaurante Café L´Orient (restaurante-cafe-l-orient) - dry-run selected
+- VIVA Cala Mesquida Suites & Spa Adults only 16+ (viva-cala-mesquida-suites-spa-adults-only-16) - dry-run selected
+- La Mar Dolça (la-mar-dolca) - dry-run selected
+- Sanuk Mallorca (sanuk-mallorca) - dry-run selected
+- Fornet de la Soca (Antic Forn des Teatre) (fornet-de-la-soca-antic-forn-des-teatre) - dry-run selected
+- Shama Mallorca (shama-mallorca) - dry-run selected
+- Gelateria Ca'n Miquel (gelateria-ca-n-miquel) - dry-run selected
+- Restaurante Son Tomàs (restaurante-son-tomas) - dry-run selected
+- Cala Marçal Beach (cala-marcal-beach) - dry-run selected
+- Gelateria San Remo (gelateria-san-remo) - dry-run selected
+- Bar Café Sa Picada Sóller (bar-cafe-sa-picada-soller) - dry-run selected
+- FERGUS Club Palmanova Park (fergus-club-palmanova-park) - dry-run selected
+- Sa Ruta Verda (sa-ruta-verda) - dry-run selected
+- Bike Island Mallorca (bike-island-mallorca) - dry-run selected
+- Pabisa Sofía (pabisa-sofia) - dry-run selected
+- Bossa Nova (bossa-nova) - dry-run selected
+- Kho Thai (kho-thai) - dry-run selected
+- Hotel Son Antem (hotel-son-antem) - dry-run selected
+- El perrito - Coffe & Brunch | Sa Feixina (el-perrito-coffe-brunch-sa-feixina) - dry-run selected
+- Sexto sentido olivar (sexto-sentido-olivar) - dry-run selected
+- Restaurante-Pizzeria Bonanza (restaurante-pizzeria-bonanza) - dry-run selected
+- Las Brasas Steakhouse - Carnes Premium (las-brasas-steakhouse-carnes-premium) - dry-run selected
+- Restaurant Son Terrassa (restaurant-son-terrassa) - dry-run selected
+- IL Postino (Pto de Alcúdia) (il-postino-pto-de-alcudia) - dry-run selected
+- FORUSPA SL (foruspa-sl) - dry-run selected
+- PIANO BAR (piano-bar) - dry-run selected
+- Restaurant L'Arcada Cala Figuera (restaurant-l-arcada-cala-figuera) - dry-run selected
+- La Terraza (la-terraza) - dry-run selected
+- Zafiro Palmanova (zafiro-palmanova) - dry-run selected
+- Protur Playa Cala Millor Hotel (protur-playa-cala-millor-hotel) - dry-run selected
+- Hotel Victoria Gran Meliá (hotel-victoria-gran-melia) - dry-run selected
+- Ópera Marítim l Restaurante italiano Mallorca (opera-maritim-l-restaurante-italiano-mallorca) - dry-run selected
+- CANELA Y AZUCAR PALMA BEACH, SL (canela-y-azucar-palma-beach-sl) - dry-run selected
+- Mission: Escape (mission-escape) - dry-run selected
+- Hotel Son Caliu Spa Oasis (hotel-son-caliu-spa-oasis) - dry-run selected
+- Il Tano - Santa Ponça (il-tano-santa-ponca) - dry-run selected
+- OLIVA Aesthetic & Hair Clinic | Clínica Estética y Capilar Mallorca (oliva-aesthetic-hair-clinic-clinica-estetica-y-capilar-mallorca) - dry-run selected
+- MOMENTS Café (moments-cafe) - dry-run selected
+- MegaSport Centre (megasport-centre) - dry-run selected
+- Bar Restaurante La Mallorquina (bar-restaurante-la-mallorquina) - dry-run selected
+- Bugs Buggy Mallorca Adventure S.L (bugs-buggy-mallorca-adventure-s-l) - dry-run selected
+- Es Gremi (es-gremi) - dry-run selected
+- Cafetería Neptuno (cafeteria-neptuno) - dry-run selected
+- Triple Restaurant (triple-restaurant) - dry-run selected
+- Batx (batx) - dry-run selected
+- Restaurant Ses Torres (restaurant-ses-torres) - dry-run selected
+- Inturotel Esmeralda Park (inturotel-esmeralda-park) - dry-run selected
+- Es Cós restaurant (es-cos-restaurant) - dry-run selected
+- Sa mexicana (Son Bauló) (sa-mexicana-son-baulo) - dry-run selected
+- Thai Pan (thai-pan) - dry-run selected
+- Restaurante Es Muntant | Cocina Mallorquina y Carne a la brasa (restaurante-es-muntant-cocina-mallorquina-y-carne-a-la-brasa) - dry-run selected
+- Cremola gelato Italiano (cremola-gelato-italiano) - dry-run selected
+- Globales Santa Lucía (globales-santa-lucia) - dry-run selected
+- Turtle Beach Palmanova (turtle-beach-palmanova) - dry-run selected
+- Son Moll Sentits Hotel & Spa (son-moll-sentits-hotel-spa) - dry-run selected
+- Hotel Riu Playa Park (hotel-riu-playa-park) - dry-run selected
+- BACAN - Specialty coffee & brunch (bacan-specialty-coffee-brunch) - dry-run selected
+- Levita Cafe (levita-cafe) - dry-run selected
+- Hotel Negresco (hotel-negresco) - dry-run selected
+- BonaOna Surf School & Bar (bonaona-surf-school-bar) - dry-run selected
+- Rent a Car Blue Palma (rent-a-car-blue-palma) - dry-run selected
+- AYA Seahotel (aya-seahotel) - dry-run selected
+- Celler de Randa (celler-de-randa) - dry-run selected
+- Ramen Shifu (ramen-shifu) - dry-run selected
+- Little Brunch Mallorca - Playa de Palma (little-brunch-mallorca-playa-de-palma) - dry-run selected
+- Club de Mar-Mallorca (club-de-mar-mallorca) - dry-run selected
+- Sa Font Fresca - Esencia Mediterranea (sa-font-fresca-esencia-mediterranea) - dry-run selected
+- PITA CLUB Arxiduc (pita-club-arxiduc) - dry-run selected
+- X Etapas | Tapas gamberras (x-etapas-tapas-gamberras) - dry-run selected
+- Hotel Hostal Cuba (hotel-hostal-cuba) - dry-run selected
+- El Peñón 1957 (el-penon-1957) - dry-run selected
+- Quina Creu Tapas Restaurante (quina-creu-tapas-restaurante) - dry-run selected
+- Sa Fortalesa (sa-fortalesa) - dry-run selected
+- SUP Center Cala Ratjada-Delivery and starting point. It is not a physical shop. Book in advance (sup-center-cala-ratjada-delivery-and-starting-point-it-is-not-a-physical-shop-book-in-advance) - dry-run selected
+- S'Espiga new concept (s-espiga-new-concept) - dry-run selected
+- Trasto Burger (trasto-burger) - dry-run selected
+- Restaurant Calzone (restaurant-calzone) - dry-run selected
+- Coconar 17 Lounge & Cocktails Bar (coconar-17-lounge-cocktails-bar) - dry-run selected
+- Ca N'Antuna (ca-n-antuna) - dry-run selected
+- Bar Molino (bar-molino) - dry-run selected
+- Zafiro Mallorca (zafiro-mallorca) - dry-run selected
+- Pizzería Piccolo (pizzeria-piccolo) - dry-run selected
+- Fika Farina coffee and bakery (fika-farina-coffee-and-bakery) - dry-run selected
+- Protur Floriana Resort Aparthotel (protur-floriana-resort-aparthotel) - dry-run selected
+- Protur Sa Coma Playa Hotel & Spa (protur-sa-coma-playa-hotel-spa) - dry-run selected
+- Bar Chiringo (bar-chiringo) - dry-run selected
+- La Paloma (la-paloma) - dry-run selected
+- Guarango Smash Burgers and Beer (guarango-smash-burgers-and-beer) - dry-run selected
+- CIOÈ By Giuseppe (cioe-by-giuseppe) - dry-run selected
+- Beachclub Sa Cova (beachclub-sa-cova) - dry-run selected
+- Quentin’S Saloon (quentin-s-saloon) - dry-run selected
+- Hotel THB Sa Coma Platja (hotel-thb-sa-coma-platja) - dry-run selected
+- Suping Mallorca S.L. ( paddel surf) (suping-mallorca-s-l-paddel-surf) - dry-run selected
+- Blue Sea Rent (blue-sea-rent) - dry-run selected
+- Terry's Car Hire (terry-s-car-hire) - dry-run selected
+- Fusion19 Restaurant (fusion19-restaurant) - dry-run selected
+- Hotel Bella Playa & Spa (hotel-bella-playa-spa) - dry-run selected
+- Arume Sake Bar, Restaurante Japones en Palma (arume-sake-bar-restaurante-japones-en-palma) - dry-run selected
+- La Caña (la-cana) - dry-run selected
+- Giovanni L. Gelato Deluxe (giovanni-l-gelato-deluxe) - dry-run selected
+- Magaluf Activities Center (magaluf-activities-center) - dry-run selected
+- Quemado Pizzeria Napoletana (quemado-pizzeria-napoletana) - dry-run selected
+- Bar Rafael (bar-rafael) - dry-run selected
+- Turpial Cocktail Bar - Santa Catalina (turpial-cocktail-bar-santa-catalina) - dry-run selected
+- LA MOVIDA Café Concierto (la-movida-cafe-concierto) - dry-run selected
+- MEDISANS | Dra. Marta Serna | Medicina y Cirugía Estética (medisans-dra-marta-serna-medicina-y-cirugia-estetica) - dry-run selected
+- EASY-MOOV (easy-moov) - dry-run selected
+- Nuad Mallorca (nuad-mallorca) - dry-run selected
+- Es Caló Surf School & Drinks (es-calo-surf-school-drinks) - dry-run selected
+- Hotel Riu Concordia (hotel-riu-concordia) - dry-run selected
+- Beewi Paseo Mallorca (beewi-paseo-mallorca) - dry-run selected
+- Pilates Plus by Silvia Guidi de Knappe (pilates-plus-by-silvia-guidi-de-knappe) - dry-run selected
+- Mallorca-Riders (mallorca-riders) - dry-run selected
+- Cafeteria zur Krone (cafeteria-zur-krone) - dry-run selected
+- Vermuteria Bar Mercat (vermuteria-bar-mercat) - dry-run selected
+- EASY RIDER MALLORCA - MOTO CUSTOM & SCOOTER RENT (easy-rider-mallorca-moto-custom-scooter-rent) - dry-run selected
+- Rosevelvet Eatery (rosevelvet-eatery) - dry-run selected
+- BG HOTEL PAMPLONA (bg-hotel-pamplona) - dry-run selected
+- Autos Bonsai (autos-bonsai) - dry-run selected
+- The Blue Bar (the-blue-bar) - dry-run selected
+- OASIS CATAMARAN (oasis-catamaran) - dry-run selected
+- Restaurante Casa Fernando (restaurante-casa-fernando) - dry-run selected
+- VIVA Golf Adults Only 18+ (viva-golf-adults-only-18) - dry-run selected
+- Zafiro Palace Palmanova (zafiro-palace-palmanova) - dry-run selected
+- Santagloria Coffee & Bakery (santagloria-coffee-bakery-2) - dry-run selected
+- Mextial Taco Bar (mextial-taco-bar) - dry-run selected
+- Café Verde (cafe-verde) - dry-run selected
+- Mama Carmen´s (mama-carmen-s) - dry-run selected
+- La Poblana (la-poblana) - dry-run selected
+- Sa Paella Restaurante & Take Away (sa-paella-restaurante-take-away) - dry-run selected
+- Sabor Mallorca | Comida para llevar en Palma (sabor-mallorca-comida-para-llevar-en-palma) - dry-run selected
+- LoDivino (lodivino) - dry-run selected
+- Madre Pizza - Pasta & Tiramisú (madre-pizza-pasta-tiramisu) - dry-run selected
+- Ritma Mallorca (ritma-mallorca) - dry-run selected
+- Mar Azul Pur Estil Hotel & Spa (mar-azul-pur-estil-hotel-spa) - dry-run selected
+- Café Chill Out La Playa (cafe-chill-out-la-playa) - dry-run selected
+- Ama tapas y comida (ama-tapas-y-comida) - dry-run selected
+- The Library STFU (the-library-stfu) - dry-run selected
+- Bahia Principe Sunlight Coral Playa (bahia-principe-sunlight-coral-playa) - dry-run selected
+- Bugambilia Street PalmaNova (bugambilia-street-palmanova) - dry-run selected
+- Origin Palmanova Rooftop (origin-palmanova-rooftop) - dry-run selected
+- Restaurant Sa Farinera de S'Horta (restaurant-sa-farinera-de-s-horta) - dry-run selected
+- INNSiDE by Meliá Alcudia (innside-by-melia-alcudia) - dry-run selected
+- Faro de Cabo Gros (faro-de-cabo-gros) - dry-run selected
+- Agabar Cocktail Bar (agabar-cocktail-bar) - dry-run selected
+- Parque Natural de s'Albufera (parque-natural-de-s-albufera) - dry-run selected
+- Greengo Palma | Specialty Coffee & Brunch (greengo-palma-specialty-coffee-brunch) - dry-run selected
+- Mallorca Scooter (mallorca-scooter) - dry-run selected
+- Deli - Santa Maria (deli-santa-maria) - dry-run selected
+- Autos Balears (autos-balears) - dry-run selected
+- Tangopan Pastelería Argentina (tangopan-pasteleria-argentina) - dry-run selected
+- Motorworld Mallorca (motorworld-mallorca) - dry-run selected
+- Restaurante Humo - Carnes y Pescados a la Brasa (restaurante-humo-carnes-y-pescados-a-la-brasa) - dry-run selected
+- VIBE Magaluf Excursions & Events (vibe-magaluf-excursions-events) - dry-run selected
+- CHILATE (chilate) - dry-run selected
+- Restaurant Can Tronca (restaurant-can-tronca) - dry-run selected
+- Enjoy Club (enjoy-club) - dry-run selected
+- Umai Café | coffee shop and brunch (umai-cafe-coffee-shop-and-brunch) - dry-run selected
+- Punto de Información - Mallorca Fashion Outlet (punto-de-informacion-mallorca-fashion-outlet) - dry-run selected
+- Punto de Información - Mallorca Fashion Outlet (punto-de-informacion-mallorca-fashion-outlet) - dry-run selected
+- Lidl (lidl) - dry-run selected
+- NATUR Palma | Healthy food Mallorca (natur-palma-healthy-food-mallorca) - dry-run selected
+- Restaurant Es Molí Sant Elm (restaurant-es-moli-sant-elm) - dry-run selected
+- La Casita (la-casita) - dry-run selected
+- Diamonds Beach (diamonds-beach) - dry-run selected
+- Need a car Rosslind (need-a-car-rosslind) - dry-run selected
+- Restaurante TIVOLI STEAKHOUSE & TERRACE (restaurante-tivoli-steakhouse-terrace) - dry-run selected
+- Celler Ca’n Carrossa (celler-ca-n-carrossa) - dry-run selected
+- Restaurant Can Capó (restaurant-can-capo) - dry-run selected
+- Mesón La Rueda (meson-la-rueda) - dry-run selected
+- Modulo Star Cocinas (modulo-star-cocinas) - dry-run selected
+- Restaurant Ca'n Gallet (restaurant-ca-n-gallet) - dry-run selected
+- Ansab Rent A Car S.L. (ansab-rent-a-car-s-l) - dry-run selected
+- Ecco Mi Pizza (ecco-mi-pizza) - dry-run selected
+- La Taverna (la-taverna) - dry-run selected
+- Vermoutique (vermoutique) - dry-run selected
+- Agromart Campos (agromart-campos) - dry-run selected
+- Mullys Bar (mullys-bar) - dry-run selected
+- Globales Palmanova Palace (globales-palmanova-palace) - dry-run selected
+- Bike Point Mallorca (bike-point-mallorca) - dry-run selected
+- Palma Riders - Alquiler de motos y scooters en Palma de Mallorca y aeropuerto (palma-riders-alquiler-de-motos-y-scooters-en-palma-de-mallorca-y-aeropuerto) - dry-run selected
+- Lungomare (lungomare) - dry-run selected
+- HORNO SANTO CRISTO (Sóller) (horno-santo-cristo-soller) - dry-run selected
+- Indian House Restaurant (indian-house-restaurant) - dry-run selected
+- Hotel Playa Golf-Adults Only +16 (hotel-playa-golf-adults-only-16) - dry-run selected
+- Tiki Beach Mallorca (tiki-beach-mallorca) - dry-run selected
+- Wheels Sport Alcudia (wheels-sport-alcudia) - dry-run selected
+- Rapha Mallorca (rapha-mallorca) - dry-run selected
+- Protur Alicia Hotel (protur-alicia-hotel) - dry-run selected
+- Churchills Art y Tapas (churchills-art-y-tapas) - dry-run selected
+- Bar Cubano (bar-cubano) - dry-run selected
+- Lunita Beach (lunita-beach) - dry-run selected
+- Chameli's Café & Restaurant (chameli-s-cafe-restaurant) - dry-run selected
+- S´Hort de Cartoixa (s-hort-de-cartoixa) - dry-run selected
+- 7 pecados palma (7-pecados-palma) - dry-run selected
+- padthaiwok Mallorca - Paseo Marítimo (padthaiwok-mallorca-paseo-maritimo) - dry-run selected
+- LAB Cocktail Bar & Academy (lab-cocktail-bar-academy) - dry-run selected
+- BALUS BAR | GRILL | LOUNGE (balus-bar-grill-lounge) - dry-run selected
+- Cafè s'Illot (cafe-s-illot) - dry-run selected
+- Naan Street Food (naan-street-food) - dry-run selected
+- EROSKI CALA RATJADA (eroski-cala-ratjada) - dry-run selected
+- Natas D'Ouro (natas-d-ouro) - dry-run selected
+- Bianco e Rosso (bianco-e-rosso) - dry-run selected
+- Schwarzwald Cafè (schwarzwald-cafe) - dry-run selected
+- Blai (blai) - dry-run selected
+- Mirador de Ricardo Roca (mirador-de-ricardo-roca) - dry-run selected
+- Restaurant Molí d'en Pau (restaurant-moli-d-en-pau) - dry-run selected
+- HM Jaime III (hm-jaime-iii) - dry-run selected
+- Bodega Ca'n Rigo (bodega-ca-n-rigo) - dry-run selected
+- Motocity CALA D'OR Rent (motocity-cala-d-or-rent) - dry-run selected
+- Ciclos Mora Rent a bike Specialized/Scott/Trek/Bianchi/Bergamont (ciclos-mora-rent-a-bike-specialized-scott-trek-bianchi-bergamont) - dry-run selected
+- Sabores de Sandra VEGAN Restaurant (sabores-de-sandra-vegan-restaurant) - dry-run selected
+- 5illes EAT&DRINK - AVENIDA PRINCIPAL (5illes-eat-drink-avenida-principal) - dry-run selected
+- Hotel Bordoy Cosmopolitan (hotel-bordoy-cosmopolitan) - dry-run selected
+- Piscinas Municipales de Son Hugo (piscinas-municipales-de-son-hugo) - dry-run selected
+- Sandro Restaurante (sandro-restaurante) - dry-run selected
+- Tequetarta (tequetarta) - dry-run selected
+- Café Mozart - Santa Ponsa (cafe-mozart-santa-ponsa) - dry-run selected
+- El Marino Portixol Restaurante (el-marino-portixol-restaurante) - dry-run selected
+- Forn Sant Francesc (forn-sant-francesc) - dry-run selected
+- Das 12. Jahrhundert (das-12-jahrhundert) - dry-run selected
+- Cafe & Sal (cafe-sal) - dry-run selected
+- Infineathai (infineathai) - dry-run selected
+- Hotel Ivory Playa (hotel-ivory-playa) - dry-run selected
+- allsun Hotel Pil·larí Playa (allsun-hotel-pil-lari-playa) - dry-run selected
+- Pasta Pasta (pasta-pasta) - dry-run selected
+- Mallorca Wellness SPA-Gran Playa de Palma (mallorca-wellness-spa-gran-playa-de-palma) - dry-run selected
+- Margarita d'Carmen (margarita-d-carmen) - dry-run selected
+- Urban Sushi Palma Restaurante - Es Rafal Vell (urban-sushi-palma-restaurante-es-rafal-vell) - dry-run selected
+- MOMA RENT A CAR bikes tickets tours excursions boats jetski quads catamaran (moma-rent-a-car-bikes-tickets-tours-excursions-boats-jetski-quads-catamaran) - dry-run selected
+- Dos Pins Grill & Restaurant- Paellas & tapas y Dos Pins Petit (dos-pins-grill-restaurant-paellas-tapas-y-dos-pins-petit) - dry-run selected
+- OMBU Santa Catalina (ombu-santa-catalina) - dry-run selected
+- Sa Caseta (sa-caseta) - dry-run selected
+- Petit Figueret Premium Burger Port d'Alcúdia (petit-figueret-premium-burger-port-d-alcudia) - dry-run selected
+- Es Raor (es-raor) - dry-run selected
+- Restaurant Pizzeria Bella Sineu (restaurant-pizzeria-bella-sineu) - dry-run selected
+- Molí Nou (moli-nou) - dry-run selected
+- Hotel Bon Sol Resort & Spa (hotel-bon-sol-resort-spa) - dry-run selected
+- Café Macondo (cafe-macondo) - dry-run selected
+- Es pati (es-pati) - dry-run selected
+- Protur Bonaire Aparthotel (protur-bonaire-aparthotel) - dry-run selected
+- Tabatha Clínica Estética y Medicina Integral (tabatha-clinica-estetica-y-medicina-integral) - dry-run selected
+- Brooklyn Fitboxing Palma centro (brooklyn-fitboxing-palma-centro) - dry-run selected
+- H2O Scuba Academy S.L.-Diving School (h2o-scuba-academy-s-l-diving-school) - dry-run selected
+- The Wine Side | Restaurante de producto en Palma de Mallorca (the-wine-side-restaurante-de-producto-en-palma-de-mallorca) - dry-run selected
+- Hotel Costa Azul (hotel-costa-azul) - dry-run selected
+- Coppola Bistro (coppola-bistro) - dry-run selected
+- Restaurante Taste of India (restaurante-taste-of-india) - dry-run selected
+- Sa Bassa Rotja Ecoturisme (sa-bassa-rotja-ecoturisme) - dry-run selected
+- Bar Nicolás (bar-nicolas) - dry-run selected
+- Hotel Araxa (hotel-araxa) - dry-run selected
+- Espai Food Lovers (espai-food-lovers) - dry-run selected
+- Mouna | Restaurante vegetariano y ecológico en Palma (mouna-restaurante-vegetariano-y-ecologico-en-palma) - dry-run selected
+- Hotel Paraíso de Alcúdia (hotel-paraiso-de-alcudia) - dry-run selected
+- IL Postino (PALMA - General Riera) (il-postino-palma-general-riera) - dry-run selected
+- Restaurante y Pizzería La Fuente (restaurante-y-pizzeria-la-fuente) - dry-run selected
+- Protur Palmeras Playa Hotel (protur-palmeras-playa-hotel) - dry-run selected
+- tent Palmanova (tent-palmanova) - dry-run selected
+- MarChica Palma (marchica-palma) - dry-run selected
+- Arabay Flagship Store Palma (arabay-flagship-store-palma) - dry-run selected
+- SĀNTAL - Palma (santal-palma) - dry-run selected
+- Sa Cuina d'en Marc (sa-cuina-d-en-marc) - dry-run selected
+- Rent A Car Sol Y Mar (rent-a-car-sol-y-mar) - dry-run selected
+- Malgache Restaurante (malgache-restaurante) - dry-run selected
+- Dubai Dates Gym (dubai-dates-gym) - dry-run selected
+- PastaAmi (pastaami) - dry-run selected
+- Paco Cars (paco-cars) - dry-run selected
+- Restaurante Can Gafet (restaurante-can-gafet) - dry-run selected
+- Trattoria Battiato (trattoria-battiato) - dry-run selected
+- Karisma Shisha Lounge (karisma-shisha-lounge) - dry-run selected
+- Physiotherapist Mallorca - Ramón Romero | Mobile Massage & Rehabilitation (physiotherapist-mallorca-ramon-romero-mobile-massage-rehabilitation) - dry-run selected
+- Son Penya Adults Only Petit Hotel & Spa (son-penya-adults-only-petit-hotel-spa) - dry-run selected
+- VI&DA | Brunch | Speciality Coffee in Palma (vi-da-brunch-speciality-coffee-in-palma) - dry-run selected
+- Petit Cafè Frozen Yogurt (petit-cafe-frozen-yogurt) - dry-run selected
+- Le Gourmand (le-gourmand) - dry-run selected
+- Forn de Barri (forn-de-barri) - dry-run selected
+- GOfitter by Pablo Delgado (gofitter-by-pablo-delgado) - dry-run selected
+- Protur Vista Badía Aparthotel (protur-vista-badia-aparthotel) - dry-run selected
+- PADDLE SURF CALA RAJADA-MALLORCA (paddle-surf-cala-rajada-mallorca) - dry-run selected
+- Sant Jaume Design Hotel (sant-jaume-design-hotel) - dry-run selected
+- Antic Forn De Maysa (antic-forn-de-maysa) - dry-run selected
+- Pacific Bay Mallorca (pacific-bay-mallorca) - dry-run selected
+- Refugi Tossals Verds (refugi-tossals-verds) - dry-run selected
+- Es Mirall (es-mirall) - dry-run selected
+- Bonavida Apartments-Palms (bonavida-apartments-palms) - dry-run selected
+- DEIÀ HOLISTIC (deia-holistic) - dry-run selected
+- Reverence Mare (reverence-mare) - dry-run selected
+- ¡ HAVE FUN ! " Kids cars rental " (have-fun-kids-cars-rental) - dry-run selected
+- Gigi's Piccolo Ristorante (gigi-s-piccolo-ristorante) - dry-run selected
+- Café Candela Café y más (cafe-candela-cafe-y-mas) - dry-run selected
+- Espiritu libre (espiritu-libre) - dry-run selected
+- Leo's Grill Portals (leo-s-grill-portals) - dry-run selected
+- AHIMSA COFFEE & SLOW FOOD (ahimsa-coffee-slow-food) - dry-run selected
+- Voramar Cala Santanyí (voramar-cala-santanyi) - dry-run selected
+- Restaurante Sa Tanqueta de Randa - Gastronomia Local (restaurante-sa-tanqueta-de-randa-gastronomia-local) - dry-run selected
+- Berner Bikes Mallorca (berner-bikes-mallorca) - dry-run selected
+- Janina Showkitchen (janina-showkitchen) - dry-run selected
+- Puerta 13 (puerta-13) - dry-run selected
+- Bestial Smash Burgers (bestial-smash-burgers) - dry-run selected
+- Hostal Doris-Adults Only (hostal-doris-adults-only) - dry-run selected
+- La Infame (la-infame) - dry-run selected
+- VIVO! (vivo) - dry-run selected
+- El Patio de Gloria (el-patio-de-gloria) - dry-run selected
+- Malloria Alcudia (malloria-alcudia) - dry-run selected
+- GOLD MASSAGE • Professional Massage Mallorca (only with appointment) (gold-massage-professional-massage-mallorca-only-with-appointment) - dry-run selected
+- Marina Bay Palma (marina-bay-palma) - dry-run selected
+- Salzburger Stubn (salzburger-stubn) - dry-run selected
+- Taqueria Manataco (taqueria-manataco) - dry-run selected
+- Panadería S'Estació (panaderia-s-estacio) - dry-run selected
+- Pirates Village (pirates-village) - dry-run selected
+- ESPAI DE SALUT IRIS ISABELLA• Holistic Therapy • Reflexology • Reiki • Acupuncture • Biodescodificación • Constellations (espai-de-salut-iris-isabella-holistic-therapy-reflexology-reiki-acupuncture-biodescodificacion-constellations) - dry-run selected
+- CrossFit Portixol (crossfit-portixol) - dry-run selected
+- Grano A Grano - Arrocería (grano-a-grano-arroceria) - dry-run selected
+- Ynaira Hotel & Spa (ynaira-hotel-spa) - dry-run selected
+- HOTTO | Coffee & Brunch Palma (hotto-coffee-brunch-palma) - dry-run selected
+- Vermutería San Jaime (vermuteria-san-jaime) - dry-run selected
+- La Molienda Bisbe (la-molienda-bisbe) - dry-run selected
+- Tropical Paradise/to take away (tropical-paradise-to-take-away) - dry-run selected
+- OHHO Burger (ohho-burger) - dry-run selected
+- Torre des Verger (torre-des-verger) - dry-run selected
+- Restaurant Sa Barca (restaurant-sa-barca) - dry-run selected
+- ALMA Centro de Masajes (alma-centro-de-masajes) - dry-run selected
+- Top Auto Balear (top-auto-balear) - dry-run selected
+- Canyamel Park Hotel & Spa (canyamel-park-hotel-spa) - dry-run selected
+- Can Lliro (can-lliro) - dry-run selected
+- Hotel Vibra Palma Cactus (hotel-vibra-palma-cactus) - dry-run selected
+- Club del Sol Resort & Spa (club-del-sol-resort-spa) - dry-run selected
+- RESTAURANTE NACARAT (restaurante-nacarat) - dry-run selected
+- Restaurante Ca n'Oms (restaurante-ca-n-oms) - dry-run selected
+- Arroceria Sa Goleta (arroceria-sa-goleta) - dry-run selected
+- Gelacious: Restaurant Palmanova, Brunch, Cocktail Bar (gelacious-restaurant-palmanova-brunch-cocktail-bar) - dry-run selected
+- Cafe Lisboa (cafe-lisboa) - dry-run selected
+- Catalina Bike Rental (catalina-bike-rental) - dry-run selected
+- Tirano Street Food - Restaurant (tirano-street-food-restaurant) - dry-run selected
+- Cafetería Ca Les Monges (cafeteria-ca-les-monges) - dry-run selected
+- Coquetier Cocktail Club (coquetier-cocktail-club) - dry-run selected
+- LLUIS PEREZ PASTISSER (lluis-perez-pastisser) - dry-run selected
+- Spring Cycling Mallorca (spring-cycling-mallorca) - dry-run selected
+- Arte Pizza (arte-pizza) - dry-run selected
+- microcost Rent a Car alcudia and can picafort (rent a scooter in alcudia) (microcost-rent-a-car-alcudia-and-can-picafort-rent-a-scooter-in-alcudia) - dry-run selected
+- Mallorca Rent A Car en Can Pastilla (mallorca-rent-a-car-en-can-pastilla) - dry-run selected
+- La Cuadra del Maño (la-cuadra-del-mano) - dry-run selected
+- Marina del Port de Sóller (marina-del-port-de-soller) - dry-run selected
+- Restaurante FONOLL GRILL (restaurante-fonoll-grill) - dry-run selected
+- Tempo Fitness (tempo-fitness) - dry-run selected
+- Hatsukokoro (hatsukokoro) - dry-run selected
+- Pizzeria Sa Cova (pizzeria-sa-cova) - dry-run selected
+- Pruna Gelateria Artesana (pruna-gelateria-artesana) - dry-run selected
+- Alberto Pranno Quiromasaje Profesional (alberto-pranno-quiromasaje-profesional) - dry-run selected
+- Sa Font Bierbrunnen (sa-font-bierbrunnen) - dry-run selected
+- Hollister Bash Saloon (hollister-bash-saloon) - dry-run selected
+- Il Capriccio (il-capriccio) - dry-run selected
+- Clínica Mesomedic - Medicina Estética en Mallorca (clinica-mesomedic-medicina-estetica-en-mallorca) - dry-run selected
+- Can Goran restaurante (can-goran-restaurante) - dry-run selected
+- FIT.IT.WOMAN PILATES (fit-it-woman-pilates) - dry-run selected
+- ONEILLS (oneills) - dry-run selected
+- Mango Thai (mango-thai) - dry-run selected
+- Hotel Na Taconera Sport & Relax (hotel-na-taconera-sport-relax) - dry-run selected
+- La Cocina - Tapas restaurante y bar Sineu (la-cocina-tapas-restaurante-y-bar-sineu) - dry-run selected
+- Irongym Arenal (irongym-arenal) - dry-run selected
+- El Barito (el-barito) - dry-run selected
+- Mosaic Café (mosaic-cafe) - dry-run selected
+- Playa de Magaluf (playa-de-magaluf) - dry-run selected
+- Azul Cars (azul-cars) - dry-run selected
+- Transfer Puerto Alcudia - Mallorca (transfer-puerto-alcudia-mallorca) - dry-run selected
+- Açai San Mallorca (acai-san-mallorca) - dry-run selected
+- Restaurante Tierra del Fuego (restaurante-tierra-del-fuego) - dry-run selected
+- Catando Burger (catando-burger) - dry-run selected
+- Indian Tandoori Nights Restaurant cala bona (indian-tandoori-nights-restaurant-cala-bona) - dry-run selected
+- Palma Bread - home of the cinnamon bun (palma-bread-home-of-the-cinnamon-bun) - dry-run selected
+- Mesón D&D (meson-d-d) - dry-run selected
+- Planas Salud | Medicina estética (planas-salud-medicina-estetica) - dry-run selected
+- Hotel Timor (hotel-timor) - dry-run selected
+- Restaurante Botanic (restaurante-botanic) - dry-run selected
+- FLOR los Almendros Hotel (flor-los-almendros-hotel) - dry-run selected
+- Mallorca Wellness SPA - Mediterraneo Hotel (mallorca-wellness-spa-mediterraneo-hotel) - dry-run selected
+- Restaurante Playa Cala Murada (restaurante-playa-cala-murada) - dry-run selected
+- La Previa (la-previa) - dry-run selected
+- Forn Can Rafel (forn-can-rafel) - dry-run selected
+- Mimetics (mimetics) - dry-run selected
+- Hotel Serrano Palace (hotel-serrano-palace) - dry-run selected
+- Suquía Café Bistró (suquia-cafe-bistro) - dry-run selected
+- Mira Palmanova (mira-palmanova) - dry-run selected
+- FERGUS Style Tobago (fergus-style-tobago) - dry-run selected
+- Palma Padel (palma-padel) - dry-run selected
+- Hotel Rural Es Riquers (hotel-rural-es-riquers) - dry-run selected
+- Mallorca Wellness SPA - Eurotel Punta Rotja (mallorca-wellness-spa-eurotel-punta-rotja) - dry-run selected
+- Ginbo Cocktail Bar (ginbo-cocktail-bar) - dry-run selected
+- Hotel Bella Colina (hotel-bella-colina) - dry-run selected
+- Bar El Pincho (bar-el-pincho) - dry-run selected
+- Brusca Brewpub (brusca-brewpub) - dry-run selected
+- La Guarida | Restaurante de brasa palma (la-guarida-restaurante-de-brasa-palma) - dry-run selected
+- Rent a car Allcars (rent-a-car-allcars) - dry-run selected
+- Mia & Victoria pastisseria (mia-victoria-pastisseria) - dry-run selected
+- Puerto de Valldemossa (puerto-de-valldemossa) - dry-run selected
+- Finca Treurer EVOO - Olivenöl Mallorca (finca-treurer-evoo-olivenol-mallorca) - dry-run selected
+- Selvatge Restaurante (selvatge-restaurante) - dry-run selected
+- Son Borguny (son-borguny) - dry-run selected
+- Angels-Bolero (angels-bolero) - dry-run selected
+- Cooltra Mallorca (Palmanova) | Alquiler de motos por días y meses en Mallorca (cooltra-mallorca-palmanova-alquiler-de-motos-por-dias-y-meses-en-mallorca) - dry-run selected
+- Café Des Teix (cafe-des-teix) - dry-run selected
+- La Casa del Ramen (la-casa-del-ramen) - dry-run selected
+- Petit Palace Hotel Tres (petit-palace-hotel-tres) - dry-run selected
+- Yara Portals (yara-portals) - dry-run selected
+- Restaurant Es Turó (restaurant-es-turo) - dry-run selected
+- NOU PALMERAS GRILL LOUNGE (nou-palmeras-grill-lounge) - dry-run selected
+- Zoëtry Mallorca (zoetry-mallorca) - dry-run selected
+- TIERRA DE FUEGOS (tierra-de-fuegos) - dry-run selected
+- Navarros Restaurante (navarros-restaurante) - dry-run selected
+- Mano's Place - Magaluf, Illes Balears (mano-s-place-magaluf-illes-balears) - dry-run selected
+- Es Badulake (es-badulake) - dry-run selected
+- Finca Binibona Parc Natural (finca-binibona-parc-natural) - dry-run selected
+- Barracuda (barracuda) - dry-run selected
+- Bar Blau Portocolom (bar-blau-portocolom) - dry-run selected
+- Restaurante BUEN NORTE (restaurante-buen-norte) - dry-run selected
+- IRON CLUB BODYBUILDING (iron-club-bodybuilding) - dry-run selected
+- Mirador de s'Entreforc (mirador-de-s-entreforc) - dry-run selected
+- Bar des Tren (bar-des-tren) - dry-run selected
+- Miquel Oliver Vinyes i Bodegues (miquel-oliver-vinyes-i-bodegues) - dry-run selected
+- Principal Son Amoixa (principal-son-amoixa) - dry-run selected
+- PLANT SHACK Santa Catalina (plant-shack-santa-catalina) - dry-run selected
+- Tambucho Bar (tambucho-bar) - dry-run selected
+- Restaurante Jardín Bistró|Alcúdia, Mallorca (restaurante-jardin-bistro-alcudia-mallorca) - dry-run selected
+- Es Baluard Restaurante & Lounge (es-baluard-restaurante-lounge) - dry-run selected
+- El Chingón Cantina Tex-Mex (el-chingon-cantina-tex-mex) - dry-run selected
+- Ca'n Molinas - Forn i Pastisseria (ca-n-molinas-forn-i-pastisseria) - dry-run selected
+- Tako-San (tako-san) - dry-run selected
+- Pizzeria Victoria Palma (pizzeria-victoria-palma) - dry-run selected
+- OTRA (otra) - dry-run selected
+- CAFÉSPHÈRE Specialty Coffee (cafesphere-specialty-coffee) - dry-run selected
+- Nom Nom Craft Bakery (nom-nom-craft-bakery) - dry-run selected
+- allsun Hotel Illot Park (allsun-hotel-illot-park) - dry-run selected
+- Pits Boxengasse (pits-boxengasse) - dry-run selected
+- Ca'n Butxaca, Gelats artesans 1929 (ca-n-butxaca-gelats-artesans-1929) - dry-run selected
+- Restaurante Napule Mallorca (restaurante-napule-mallorca) - dry-run selected
+- Reflex Disco Bar & Restaurant (reflex-disco-bar-restaurant) - dry-run selected
+- Ona Cala Pi (ona-cala-pi) - dry-run selected
+- CampusEsport (campusesport) - dry-run selected
+- Can Pep Sineu (can-pep-sineu) - dry-run selected
+- Restaurante Pizzería Es Port (restaurante-pizzeria-es-port) - dry-run selected
+- Gibson Bar (gibson-bar) - dry-run selected
+- Bluemarine (bluemarine) - dry-run selected
+- HSM Sándalo Beach (hsm-sandalo-beach) - dry-run selected
+- Grupotel Nilo & Spa (grupotel-nilo-spa) - dry-run selected
+- Voro (voro) - dry-run selected
+- Hiper Rent A Car (hiper-rent-a-car-4) - dry-run selected
+- Foracorda (foracorda) - dry-run selected
+- EIX Alcudia Hotel (eix-alcudia-hotel) - dry-run selected
+- Hiper Rent a Car (hiper-rent-a-car) - dry-run selected
+- Ventuno Bar Italiano (ventuno-bar-italiano) - dry-run selected
+- Hotel Melbeach & Spa (hotel-melbeach-spa) - dry-run selected
+- Spa Maison CODAGE - Mallorca (spa-maison-codage-mallorca) - dry-run selected
+- KALE REAL FOOD restaurante (kale-real-food-restaurante) - dry-run selected
+- Villa Vegana (villa-vegana) - dry-run selected
+- Rent a Car Salesca (rent-a-car-salesca-2) - dry-run selected
+- Hotel Atolon & Kaafu Beach Club (hotel-atolon-kaafu-beach-club) - dry-run selected
+- Diablito Palmanova ( Food and Music) (diablito-palmanova-food-and-music) - dry-run selected
+- Cooltra Mallorca (Playa de Palma) | Alquiler de motos por días y meses en Mallorca (cooltra-mallorca-playa-de-palma-alquiler-de-motos-por-dias-y-meses-en-mallorca) - dry-run selected
+- Cafe Can Moix (cafe-can-moix) - dry-run selected
+- Cafè Sa Fonda (cafe-sa-fonda) - dry-run selected
+- Hipotels Coma Gran (hipotels-coma-gran) - dry-run selected
+- Café 22 (cafe-22) - dry-run selected
+- Sofia Alcudia Beach (sofia-alcudia-beach) - dry-run selected
+- Mar Hotels Paguera & Spa (mar-hotels-paguera-spa) - dry-run selected
+- Palma Sport & Tennis Club (palma-sport-tennis-club) - dry-run selected
+- Finca Ca´s Sant (finca-ca-s-sant) - dry-run selected
+- Latitude bar (latitude-bar) - dry-run selected
+- Marisquería LA GALLEGA (marisqueria-la-gallega) - dry-run selected
+- Sa Jugueteria (sa-jugueteria) - dry-run selected
+- Gimnasio Gym Tonic Palma (gimnasio-gym-tonic-palma) - dry-run selected
+- The Bakery (the-bakery) - dry-run selected
+- Panadería Cafetería Son Campos (panaderia-cafeteria-son-campos) - dry-run selected
+- DKMotos Rental - Alquiler de Motos en Mallorca (dkmotos-rental-alquiler-de-motos-en-mallorca) - dry-run selected
+- Mirador Es Pontàs (mirador-es-pontas) - dry-run selected
+- Xolomulato (xolomulato) - dry-run selected
+- Ca Na Sissy - Café & Brunch (ca-na-sissy-cafe-brunch) - dry-run selected
+- Es Bauló Petit Hotel (es-baulo-petit-hotel) - dry-run selected
+- Viding Marratxí (viding-marratxi) - dry-run selected
+- Quincho Mallorca (quincho-mallorca) - dry-run selected
+- 6th Sense (6th-sense) - dry-run selected
+- Estudio Aequus 1: RGM Training más que Pilates en Mallorca (estudio-aequus-1-rgm-training-mas-que-pilates-en-mallorca) - dry-run selected
+- Mallorca Kiteboarding. VDWS Approved Center (mallorca-kiteboarding-vdws-approved-center) - dry-run selected
+- Mallorca Llaut Experience (mallorca-llaut-experience) - dry-run selected
+- Ca'n Sito Bar Mallorquin (ca-n-sito-bar-mallorquin) - dry-run selected
+- Restaurante Vista Mar (restaurante-vista-mar) - dry-run selected
+- Bodegues Castell Miquel (bodegues-castell-miquel) - dry-run selected
+- Restaurante Maca de Castro - Mallorca (restaurante-maca-de-castro-mallorca) - dry-run selected
+- Órale Wey - Taqueria Mexicana (orale-wey-taqueria-mexicana) - dry-run selected
+- Mistral Coffee House (mistral-coffee-house) - dry-run selected
+- Petit Hotel Algaida (petit-hotel-algaida) - dry-run selected
+- The Royal Thai Spa - Thai Massage Peguera - Massage in Peguera (the-royal-thai-spa-thai-massage-peguera-massage-in-peguera) - dry-run selected
+- HSM Atlantic Park (hsm-atlantic-park) - dry-run selected
+- Restaurante La Fragua (restaurante-la-fragua) - dry-run selected
+- ES CUCURUTXO Portocolom (es-cucurutxo-portocolom) - dry-run selected
+- Universal Hotel Castell Royal (universal-hotel-castell-royal) - dry-run selected
+- SONMO (sonmo) - dry-run selected
+- Hostal Dragonera (hostal-dragonera) - dry-run selected
+- Essentia by Julia (essentia-by-julia) - dry-run selected
+- Palms restaurant by the beach (palms-restaurant-by-the-beach) - dry-run selected
+- Panorámica hacia Cap Formentor (panoramica-hacia-cap-formentor) - dry-run selected
+- Enterprise Rent-A-Car (enterprise-rent-a-car) - dry-run selected
+- La Molienda Arxiduc (la-molienda-arxiduc) - dry-run selected
+- Steak Me - Steakhouse Playa de Palma (steak-me-steakhouse-playa-de-palma) - dry-run selected
+- Cala Morlanda (cala-morlanda) - dry-run selected
+- StreetBurger & Co. (streetburger-co) - dry-run selected
+- Terra Restaurant & Cocktail Bar (terra-restaurant-cocktail-bar) - dry-run selected
+- Dos Cocineros Mallorca (dos-cocineros-mallorca) - dry-run selected
+- Freedom Wellness Club (freedom-wellness-club) - dry-run selected
+- HOTEL CORAZON (hotel-corazon) - dry-run selected
+- Mesón Can Paco (meson-can-paco) - dry-run selected
+- Llaut San Francisco (llaut-san-francisco) - dry-run selected
+- Restaurante Kai | Rooftop Santa Ponsa (restaurante-kai-rooftop-santa-ponsa) - dry-run selected
+- Cloud 9 (cloud-9) - dry-run selected
+- Restaurant S'Albufera (restaurant-s-albufera) - dry-run selected
+- Terrae (terrae) - dry-run selected
+- Restaurant Cafè Pablo (restaurant-cafe-pablo) - dry-run selected
+- Protur Cars (protur-cars) - dry-run selected
+- Iceberg La Llonja (iceberg-la-llonja) - dry-run selected
+- Little Jarana | Wine Bar Palma de Mallorca (little-jarana-wine-bar-palma-de-mallorca) - dry-run selected
+- COSMOS GARDEN MALLORCA-MAGALUF (cosmos-garden-mallorca-magaluf) - dry-run selected
+- Ramen Shifu (ramen-shifu-2) - dry-run selected
+- RESTAURANTE DIVI VINOTECA (restaurante-divi-vinoteca) - dry-run selected
+- Corel·la Café (corel-la-cafe) - dry-run selected
+- Sa Cova Banyalbufar (sa-cova-banyalbufar) - dry-run selected
+- OLULA CAFÉ (olula-cafe) - dry-run selected
+- Pirates Can Picafort (pirates-can-picafort) - dry-run selected
+- YOSOY - Kitchen & Cocktails (yosoy-kitchen-cocktails) - dry-run selected
+- Pizza Piola (pizza-piola) - dry-run selected
+- Kurt Rent A Car (kurt-rent-a-car) - dry-run selected
+- esRocodrom Rocódromo (esrocodrom-rocodromo) - dry-run selected
+- Pins Padel Club (pins-padel-club) - dry-run selected
+- SCUBANEO Diving & Instructor Training Center (scubaneo-diving-instructor-training-center) - dry-run selected
+- El Josemari Hostel (el-josemari-hostel) - dry-run selected
+- Terra Restaurante Italiano Pizzería (terra-restaurante-italiano-pizzeria) - dry-run selected
+- Batec Restaurant (batec-restaurant) - dry-run selected
+- Alma Mia Pizzeria Restaurante (alma-mia-pizzeria-restaurante) - dry-run selected
+- Vespa Rental Alcudia| Vespa Lovers (vespa-rental-alcudia-vespa-lovers) - dry-run selected
+- SMILING FEET FISH SPA CALA BONA (smiling-feet-fish-spa-cala-bona) - dry-run selected
+- BLANCA TERRA celler i vinya (blanca-terra-celler-i-vinya) - dry-run selected
+- Ten Mallorca (ten-mallorca) - dry-run selected
+- Fatbusters Mallorca (fatbusters-mallorca) - dry-run selected
+- Restaurante Caballito de Mar (restaurante-caballito-de-mar) - dry-run selected
+- Tramuntbike Mallorca (tramuntbike-mallorca) - dry-run selected
+- THE KING'S HEAD (the-king-s-head) - dry-run selected
+- Parc arqueològic Puig de sa Morisca (parc-arqueologic-puig-de-sa-morisca) - dry-run selected
+- Janet Johns (janet-johns) - dry-run selected
+- Hiper Rent A Car (hiper-rent-a-car-5) - dry-run selected
+- Bodega del Sol (bodega-del-sol) - dry-run selected
+- Kart Magaluf (kart-magaluf) - dry-run selected
+- Boski (boski) - dry-run selected
+- Urvashi Yoga Estudio (urvashi-yoga-estudio) - dry-run selected
+- Könige der Nacht (konige-der-nacht) - dry-run selected
+- New Hackafe (new-hackafe) - dry-run selected
+- R2 Lago Playa Park (r2-lago-playa-park) - dry-run selected
+- Europcar Mallorca Cala Millor (europcar-mallorca-cala-millor) - dry-run selected
+- Protur Bonamar Hotel (protur-bonamar-hotel) - dry-run selected
+- Mitj & Mitj Bar (mitj-mitj-bar) - dry-run selected
+- Sant Elm Beach, Restaurant (sant-elm-beach-restaurant) - dry-run selected
+- The Island Wellness (the-island-wellness) - dry-run selected
+- Let's meet Mallorca (let-s-meet-mallorca) - dry-run selected
+- Somnis Pool (somnis-pool) - dry-run selected
+- Cala Conills (cala-conills) - dry-run selected
+- Pizzeria Mamma Mia! (pizzeria-mamma-mia) - dry-run selected
+- Buenos Aires Restaurant (buenos-aires-restaurant) - dry-run selected
+- Hotel ROC Illetas & SPA (hotel-roc-illetas-spa) - dry-run selected
+- Wellness Santa Catalina (wellness-santa-catalina) - dry-run selected
+- LAROTI Micropanadería & Obrador Abierto (laroti-micropanaderia-obrador-abierto) - dry-run selected
+- Club Momentum - Tennis & Padel (club-momentum-tennis-padel) - dry-run selected
+- Kaotikobar (kaotikobar) - dry-run selected
+- Sa Ronda Restaurante (sa-ronda-restaurante) - dry-run selected
+- Fortuna Port d´Andratx (fortuna-port-d-andratx) - dry-run selected
+- Maná & Maná (mana-mana) - dry-run selected
+- Café Drac (cafe-drac) - dry-run selected
+- Café la Lonja (cafe-la-lonja) - dry-run selected
+- Bleecker santa ponça (bleecker-santa-ponca) - dry-run selected
+- Gelateria La Romana (gelateria-la-romana) - dry-run selected
+- Restaurante Pizzería Plaça Vuit (restaurante-pizzeria-placa-vuit) - dry-run selected
+- Vive Estética Mallorca (vive-estetica-mallorca) - dry-run selected
+- proSecCo PORTIXOL (prosecco-portixol) - dry-run selected
+- Seashore Boats (seashore-boats) - dry-run selected
+- SMILING FEET CALA RATJADA (smiling-feet-cala-ratjada) - dry-run selected
+- Maleva Mallorca (maleva-mallorca) - dry-run selected
+- Cafe del Parc (cafe-del-parc) - dry-run selected
+- George's (george-s) - dry-run selected
+- LA MESA CON LIVE HEALTHY (la-mesa-con-live-healthy) - dry-run selected
+- Skybar Restaurant at Hotel Almudaina (skybar-restaurant-at-hotel-almudaina) - dry-run selected
+- Universal Hotel Laguna (universal-hotel-laguna) - dry-run selected
+- Casa Patrón | Restaurante Mexicano (casa-patron-restaurante-mexicano) - dry-run selected
+- Es forn cafè (es-forn-cafe) - dry-run selected
+- NANO bicycles 2 - Bike Rental Palma (nano-bicycles-2-bike-rental-palma) - dry-run selected
+- Ca'n Picafort Palace (ca-n-picafort-palace) - dry-run selected
+- Pax Gastrobar (pax-gastrobar) - dry-run selected
+- La Oliva Pastelería Artesanal (la-oliva-pasteleria-artesanal) - dry-run selected
+- Almare (almare) - dry-run selected
+- Mesón El Rincón de Cai (meson-el-rincon-de-cai) - dry-run selected
+- Bombon Boss (bombon-boss) - dry-run selected
+- Bodega Ferrà (bodega-ferra) - dry-run selected
+- La Magrana Bistró (la-magrana-bistro) - dry-run selected
+- Horitzo café (horitzo-cafe) - dry-run selected
+- ClickRent Cala Mandia | Alquiler de Coches y Furgonetas (clickrent-cala-mandia-alquiler-de-coches-y-furgonetas) - dry-run selected
+- Masaje Mallorca - Terapias Naturales Mallorca - MENTNATURE (masaje-mallorca-terapias-naturales-mallorca-mentnature) - dry-run selected
+- Sa Creperia Sa Bassa (sa-creperia-sa-bassa) - dry-run selected
+- MOO MOO’S STEAK HOUSE (moo-moo-s-steak-house) - dry-run selected
+- Restaurante Kutz (restaurante-kutz) - dry-run selected
+- Bar y Restaurante Estarellas (bar-y-restaurante-estarellas) - dry-run selected
+- La Malquerida Palma (la-malquerida-palma) - dry-run selected
+- KENSHO MASSAGE (kensho-massage) - dry-run selected
+- Asador Carmen (asador-carmen) - dry-run selected
+- El Viejo Vizcacha (el-viejo-vizcacha) - dry-run selected
+- Chang Thai Traditional Thai Massage (chang-thai-traditional-thai-massage) - dry-run selected
+- Choice Training Club (choice-training-club) - dry-run selected
+- Bar Michel ( el terreno , Palma , pa amb olí , tapas ,cocktail , restaurante , bar , ambiente , música ,hamburguesas) (bar-michel-el-terreno-palma-pa-amb-oli-tapas-cocktail-restaurante-bar-ambiente-musica-hamburguesas) - dry-run selected
+- Sebastian (sebastian) - dry-run selected
+- Hong Thai (hong-thai) - dry-run selected
+- Hotel Obelisco (hotel-obelisco) - dry-run selected
+- Restaurant Antic Grill Bunyola (restaurant-antic-grill-bunyola) - dry-run selected
+- E Cosi Brases (e-cosi-brases) - dry-run selected
+- Centro de tecnificación deportiva Islas Baleares (centro-de-tecnificacion-deportiva-islas-baleares) - dry-run selected
+- Restaurante Andreu Genestra (restaurante-andreu-genestra) - dry-run selected
+- Sa Cova Bar i Tapes Santanyí (sa-cova-bar-i-tapes-santanyi) - dry-run selected
+- Spoon Restaurante (spoon-restaurante) - dry-run selected
+- Indian Tandoori Restaurant Sher E Punjab (indian-tandoori-restaurant-sher-e-punjab) - dry-run selected
+- Finest Sport - Centro de Entrenamiento y Nutrición (finest-sport-centro-de-entrenamiento-y-nutricion) - dry-run selected
+- Rooftop Sky Saratoga (rooftop-sky-saratoga) - dry-run selected
+- Es Molí des Bon Profit (es-moli-des-bon-profit) - dry-run selected
+- Restaurante CA'N Paco (restaurante-ca-n-paco) - dry-run selected
+- Übeck Restaurant Palma (ubeck-restaurant-palma) - dry-run selected
+- Fina Bar (fina-bar) - dry-run selected
+- Soda Pop caffe (soda-pop-caffe) - dry-run selected
+- La Casa De Dan (la-casa-de-dan) - dry-run selected
+- Padel Factory Son Castelló (padel-factory-son-castello) - dry-run selected
+- Pausa Café & bistró (pausa-cafe-bistro) - dry-run selected
+- Rent a Car Autos Custodia - Camp de Mar (Mallorca) (rent-a-car-autos-custodia-camp-de-mar-mallorca) - dry-run selected
+- Bogarts Bar (bogarts-bar) - dry-run selected
+- Pastisseries Pomar (pastisseries-pomar) - dry-run selected
+- Eco Catamaran E-sea Mallorca Experience (eco-catamaran-e-sea-mallorca-experience) - dry-run selected
+- Ocean Fitness Cala Rajada (ocean-fitness-cala-rajada) - dry-run selected
+- MuMa by Canpica (muma-by-canpica) - dry-run selected
+- Hotel Cases de Son Barbassa (hotel-cases-de-son-barbassa) - dry-run selected
+- Huerto del Rey (huerto-del-rey) - dry-run selected
+- Tapas Bar restaurante Can Gori (tapas-bar-restaurante-can-gori) - dry-run selected
+- Apartamentos Holiday Center Santa Ponsa (apartamentos-holiday-center-santa-ponsa) - dry-run selected
+- Buga Ramen Palma (buga-ramen-palma) - dry-run selected
+- BULLDOG GRILL burger&rooster (bulldog-grill-burger-rooster) - dry-run selected
+- Can Miraet (can-miraet) - dry-run selected
+- Smolin Adventure (smolin-adventure) - dry-run selected
+- Cafè Riutort (cafe-riutort) - dry-run selected
+- Globales Palmanova (globales-palmanova) - dry-run selected
+- Julio Crepes, Pancake & ice cream (julio-crepes-pancake-ice-cream) - dry-run selected
+- Restaurant S'Arco-Iris (restaurant-s-arco-iris) - dry-run selected
+- Hotel Gracia (hotel-gracia) - dry-run selected
+- el cruce (el-cruce) - dry-run selected
+- Rolling (rolling) - dry-run selected
+- Eurostars Marivent (eurostars-marivent) - dry-run selected
+- Hotel Palladium (hotel-palladium) - dry-run selected
+- M4 Fitness Studio (m4-fitness-studio) - dry-run selected
+- NANO Bicycles (nano-bicycles) - dry-run selected
+- Cardamom city (cardamom-city) - dry-run selected
+- Restaurante Stop (restaurante-stop) - dry-run selected
+
+## Errors
+

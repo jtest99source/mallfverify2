@@ -1,0 +1,25 @@
+alter type business_category add value if not exists 'bar';
+alter type business_category add value if not exists 'cafe';
+alter type business_category add value if not exists 'bakery';
+alter type business_category add value if not exists 'rent-a-car';
+alter type business_category add value if not exists 'car-dealer';
+alter type business_category add value if not exists 'spa';
+alter type business_category add value if not exists 'gym';
+alter type business_category add value if not exists 'market';
+alter type business_category add value if not exists 'local-shop';
+alter type business_category add value if not exists 'museum';
+alter type business_category add value if not exists 'route';
+alter type business_category add value if not exists 'excursion';
+
+alter type ranking_category add value if not exists 'bars';
+alter type ranking_category add value if not exists 'cafes';
+alter type ranking_category add value if not exists 'bakeries';
+alter type ranking_category add value if not exists 'rent-a-car';
+alter type ranking_category add value if not exists 'car-dealers';
+alter type ranking_category add value if not exists 'spas';
+alter type ranking_category add value if not exists 'gyms';
+alter type ranking_category add value if not exists 'markets';
+alter type ranking_category add value if not exists 'local-shops';
+alter type ranking_category add value if not exists 'museums';
+alter type ranking_category add value if not exists 'routes';
+alter type ranking_category add value if not exists 'excursions';

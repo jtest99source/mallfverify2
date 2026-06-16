@@ -1,0 +1,1016 @@
+# Editorial Generation Report
+
+Generated: 2026-06-13T12:30:28.325Z
+Dry run: yes
+
+## Totals
+
+- Processed: 0
+- Skipped: 996
+- Errors: 0
+- Stopped early: no
+
+## Processed
+
+
+## Skipped
+
+- La Bodeguilla (la-bodeguilla) - dry-run selected
+- Grupotel Gran Vista & Spa (grupotel-gran-vista-spa) - dry-run selected
+- Hipotels Hipocampo Playa (hipotels-hipocampo-playa) - dry-run selected
+- Scratch - Tapas gourmet (scratch-tapas-gourmet) - dry-run selected
+- El Perrito (el-perrito) - dry-run selected
+- Restaurante Bistro Mar Port d'Alcúdia (restaurante-bistro-mar-port-d-alcudia) - dry-run selected
+- JUNGLE PARC MALLORCA Parque forestal de aventuras y tirolinas (jungle-parc-mallorca-parque-forestal-de-aventuras-y-tirolinas) - dry-run selected
+- FERGUS Club Europa (fergus-club-europa) - dry-run selected
+- Grupotel Parc Natural & Spa (grupotel-parc-natural-spa) - dry-run selected
+- Hotel Nixe Palace (hotel-nixe-palace) - dry-run selected
+- Chalet Siena (chalet-siena) - dry-run selected
+- MI QUERENCIA KAREN (mi-querencia-karen) - dry-run selected
+- BISTRO MERCAT (bistro-mercat) - dry-run selected
+- Tonga Tower Design Hotel & Suites (tonga-tower-design-hotel-suites) - dry-run selected
+- La Romaguera Restaurant (la-romaguera-restaurant) - dry-run selected
+- Bar Cervecería Es Pontàs (bar-cerveceria-es-pontas) - dry-run selected
+- El Ambigú (el-ambigu) - dry-run selected
+- Kingfisher restaurant (kingfisher-restaurant) - dry-run selected
+- Caló des Moro (calo-des-moro) - dry-run selected
+- Hipotels Cala Millor Park (hipotels-cala-millor-park) - dry-run selected
+- Grupotel Marítimo (grupotel-maritimo) - dry-run selected
+- Restaurant Lluna 36 (restaurant-lluna-36) - dry-run selected
+- Valentin Grand Park Suite Hotel (valentin-grand-park-suite-hotel) - dry-run selected
+- Grupotel Aguait Resort & Spa (grupotel-aguait-resort-spa) - dry-run selected
+- Don Neko Sushi (don-neko-sushi) - dry-run selected
+- Cala Gat (cala-gat) - dry-run selected
+- FORN de Sant Joan (forn-de-sant-joan) - dry-run selected
+- Restaurant Vinicius (restaurant-vinicius) - dry-run selected
+- Bar Restaurante TO-DO (bar-restaurante-to-do) - dry-run selected
+- Restaurante las Tres Palas Grill (restaurante-las-tres-palas-grill) - dry-run selected
+- No frills Excursions Port Alcudia (no-frills-excursions-port-alcudia) - dry-run selected
+- Mar y Paz (mar-y-paz) - dry-run selected
+- Fundación Juan March Palma (fundacion-juan-march-palma) - dry-run selected
+- Ca'n Pescador - Playa de Muro (ca-n-pescador-playa-de-muro) - dry-run selected
+- Le Seazon bistro (le-seazon-bistro) - dry-run selected
+- Ranxo Ses Roques (ranxo-ses-roques) - dry-run selected
+- Casa Enrique Tapas Bar (casa-enrique-tapas-bar) - dry-run selected
+- Cala Millor Garden Hotel (cala-millor-garden-hotel) - dry-run selected
+- Fussio Lounge C B (fussio-lounge-c-b) - dry-run selected
+- Cassai Ses Salines (cassai-ses-salines) - dry-run selected
+- Restaurant Miramar (ALCUDIA) (restaurant-miramar-alcudia) - dry-run selected
+- Hoposa Villaconcha (hoposa-villaconcha) - dry-run selected
+- BLUESEA Gran Playa (bluesea-gran-playa) - dry-run selected
+- MLL Mediterranean Bay (mll-mediterranean-bay) - dry-run selected
+- Japo Santa Catalina Adults Ony +9 (japo-santa-catalina-adults-ony-9) - dry-run selected
+- Stay Restaurant (stay-restaurant) - dry-run selected
+- Valentin Reina Paguera (valentin-reina-paguera) - dry-run selected
+- Pazo do pulpo (pazo-do-pulpo) - dry-run selected
+- Cucum Beach House (cucum-beach-house) - dry-run selected
+- CM Castell de Mar (cm-castell-de-mar) - dry-run selected
+- allsun Hotel Bella Peguera (allsun-hotel-bella-peguera) - dry-run selected
+- miga de nube (miga-de-nube) - dry-run selected
+- Hipotels Hipocampo Palace (hipotels-hipocampo-palace) - dry-run selected
+- El Puerto (el-puerto) - dry-run selected
+- Globales Janeiro (globales-janeiro) - dry-run selected
+- El Sabor (el-sabor) - dry-run selected
+- Restaurante Marc Fosh (restaurante-marc-fosh) - dry-run selected
+- Sa Granja Cafè - Restaurant (sa-granja-cafe-restaurant) - dry-run selected
+- Hotel Almudaina (hotel-almudaina) - dry-run selected
+- Roadhouse (roadhouse) - dry-run selected
+- Ciao Ciao (ciao-ciao) - dry-run selected
+- Parc Natural de la Península de Llevant (parc-natural-de-la-peninsula-de-llevant) - dry-run selected
+- CM Playa del Moro (cm-playa-del-moro) - dry-run selected
+- ES P'DAL · RESTAURANT (es-p-dal-restaurant) - dry-run selected
+- Hotel & Apartamentos Vista Park (hotel-apartamentos-vista-park) - dry-run selected
+- Nirador (nirador) - dry-run selected
+- La Pinta Bar-Restaurant (la-pinta-bar-restaurant) - dry-run selected
+- Pippers Restaurant Mediterrani (pippers-restaurant-mediterrani) - dry-run selected
+- Restaurante-Residencia Son Floriana (restaurante-residencia-son-floriana) - dry-run selected
+- Sa Cova (sa-cova) - dry-run selected
+- Platja de Formentor (platja-de-formentor) - dry-run selected
+- Restaurante Ola del Mar (restaurante-ola-del-mar) - dry-run selected
+- Tres Llunes (tres-llunes) - dry-run selected
+- Mar Hotels Playa Mar & Spa (mar-hotels-playa-mar-spa) - dry-run selected
+- GOJET Andratx Jet Ski Tours (gojet-andratx-jet-ski-tours) - dry-run selected
+- S'Arenal Portocolom (s-arenal-portocolom) - dry-run selected
+- Restaurante Ca n'Eduardo (restaurante-ca-n-eduardo) - dry-run selected
+- allsun Hotel Bahía del Este (allsun-hotel-bahia-del-este) - dry-run selected
+- Nakar Hotel (nakar-hotel) - dry-run selected
+- DAICA restaurant & turismo de interior (daica-restaurant-turismo-de-interior) - dry-run selected
+- El Chiringuito Beach House (el-chiringuito-beach-house) - dry-run selected
+- La Trapa (la-trapa) - dry-run selected
+- La Pala Rossa (la-pala-rossa) - dry-run selected
+- Il chiringo sunset (il-chiringo-sunset) - dry-run selected
+- O96 (o96) - dry-run selected
+- Bodega La Rambla (bodega-la-rambla) - dry-run selected
+- Ca'n Uetam (ca-n-uetam) - dry-run selected
+- Hotel Son Trobat (hotel-son-trobat) - dry-run selected
+- Goia (goia) - dry-run selected
+- La Santa (la-santa) - dry-run selected
+- La Vista Cala Ratjada (la-vista-cala-ratjada) - dry-run selected
+- Xiringuito (xiringuito) - dry-run selected
+- K8 Sushi Arenal (k8-sushi-arenal) - dry-run selected
+- Dinosaurland (dinosaurland) - dry-run selected
+- SALVAJE | Sushi Palma (salvaje-sushi-palma) - dry-run selected
+- Restaurante La Gritta (restaurante-la-gritta) - dry-run selected
+- Steakhouse Tango (steakhouse-tango) - dry-run selected
+- Es Verger (es-verger) - dry-run selected
+- Hotel & Spa S'Entrador Playa (hotel-spa-s-entrador-playa) - dry-run selected
+- Harajuku Gastro Sushi (harajuku-gastro-sushi) - dry-run selected
+- Monnaber Nou Finca hotel & Spa (monnaber-nou-finca-hotel-spa) - dry-run selected
+- Llaüt Beach Bar (llaut-beach-bar) - dry-run selected
+- Terragust (terragust) - dry-run selected
+- Restaurante Mombo (restaurante-mombo) - dry-run selected
+- Ca'n Pintxo Restaurant (ca-n-pintxo-restaurant) - dry-run selected
+- Sa Ferreria (sa-ferreria) - dry-run selected
+- Valentin Somni Hotel & Suites (valentin-somni-hotel-suites) - dry-run selected
+- Hotel Capricho & SPA (hotel-capricho-spa) - dry-run selected
+- CM Mallorca Palace (cm-mallorca-palace) - dry-run selected
+- Restaurante en Port D' Alcudia S'OLI VERGE (restaurante-en-port-d-alcudia-s-oli-verge) - dry-run selected
+- Bondi Beach Magaluf (bondi-beach-magaluf) - dry-run selected
+- Restaurante 1955 (restaurante-1955) - dry-run selected
+- Vintasty (vintasty) - dry-run selected
+- Restaurant Es Pati (restaurant-es-pati) - dry-run selected
+- Universal Hotel Marqués (universal-hotel-marques) - dry-run selected
+- Hotel THB Felip (hotel-thb-felip) - dry-run selected
+- El Galeon Taberna (el-galeon-taberna) - dry-run selected
+- Sunlife Events Boat Charter Mallorca (sunlife-events-boat-charter-mallorca) - dry-run selected
+- Protur Naisa Palma Hotel (protur-naisa-palma-hotel) - dry-run selected
+- Ca'n Llimona (ca-n-llimona) - dry-run selected
+- Palma Jump (palma-jump) - dry-run selected
+- Restaurante Bonsol (restaurante-bonsol) - dry-run selected
+- Cervecería Pedrín (cerveceria-pedrin) - dry-run selected
+- Salitre Can Picafort (salitre-can-picafort) - dry-run selected
+- Restaurante Palmitos (restaurante-palmitos) - dry-run selected
+- Il Gambero (il-gambero) - dry-run selected
+- Hotel THB Gran Bahía (hotel-thb-gran-bahia) - dry-run selected
+- Hotel Rural S'Olivaret & Spa (hotel-rural-s-olivaret-spa) - dry-run selected
+- Chiringuito Cala Anguila (chiringuito-cala-anguila) - dry-run selected
+- Vibes by Quince Restaurante (vibes-by-quince-restaurante) - dry-run selected
+- The Beach Bar (the-beach-bar) - dry-run selected
+- Restaurante Chicos del Mar (restaurante-chicos-del-mar) - dry-run selected
+- AQUA Restaurant | Paellas & Cocktails en Alcudia (aqua-restaurant-paellas-cocktails-en-alcudia) - dry-run selected
+- Happy Dream Bar Restaurante (happy-dream-bar-restaurante) - dry-run selected
+- Restaurante Mirador de la Victoria (restaurante-mirador-de-la-victoria) - dry-run selected
+- Bodega Ribas (bodega-ribas) - dry-run selected
+- Leonardo Royal Hotel Mallorca (leonardo-royal-hotel-mallorca) - dry-run selected
+- Crazy Tours & Rent (crazy-tours-rent) - dry-run selected
+- Universal Hotel Lido Park & Spa (universal-hotel-lido-park-spa) - dry-run selected
+- La Casita Bistrot (la-casita-bistrot) - dry-run selected
+- Take Japanese Restaurant (take-japanese-restaurant) - dry-run selected
+- 5illes BEACH&SUNSET (PLAYA) (5illes-beach-sunset-playa) - dry-run selected
+- Hotel Estrella & Coral de Mar Resort & Spa (hotel-estrella-coral-de-mar-resort-spa) - dry-run selected
+- Restaurante La Cabaña – Puerto de Alcúdia (restaurante-la-cabana-puerto-de-alcudia) - dry-run selected
+- Restaurante Emilio Innobar - Restaurante cocina de fusión (restaurante-emilio-innobar-restaurante-cocina-de-fusion) - dry-run selected
+- Lili's | Brunch & Cocktails (lili-s-brunch-cocktails) - dry-run selected
+- Experimenta Mallorca (experimenta-mallorca) - dry-run selected
+- Hipotels Said (hipotels-said) - dry-run selected
+- El Puentecito Mallorca (el-puentecito-mallorca) - dry-run selected
+- Cafè Inca (cafe-inca) - dry-run selected
+- Hotel Cala Bona (hotel-cala-bona) - dry-run selected
+- Sea Me Beach Restaurant Bar (sea-me-beach-restaurant-bar) - dry-run selected
+- Sóller Center (soller-center) - dry-run selected
+- Hotel Forn Nou (hotel-forn-nou) - dry-run selected
+- Botanicactus (botanicactus) - dry-run selected
+- RESTAURANTE MÓNACO (restaurante-monaco) - dry-run selected
+- Hotel Creu de Tau Art & Spa (hotel-creu-de-tau-art-spa) - dry-run selected
+- Hotel THB Guya Playa (hotel-thb-guya-playa) - dry-run selected
+- Zafiro Can Picafort (zafiro-can-picafort) - dry-run selected
+- Prinsotel La Pineda Hotel Apartamentos (prinsotel-la-pineda-hotel-apartamentos) - dry-run selected
+- Can Jano Vermutería (can-jano-vermuteria) - dry-run selected
+- Grupotel Los Príncipes & Spa (grupotel-los-principes-spa) - dry-run selected
+- Restaurant Ca'n Salvador (restaurant-ca-n-salvador) - dry-run selected
+- Grupotel Amapola (grupotel-amapola) - dry-run selected
+- Grupotel Natura Playa (grupotel-natura-playa) - dry-run selected
+- Sa Trinxa (sa-trinxa) - dry-run selected
+- Restaurante las Sirenas (restaurante-las-sirenas) - dry-run selected
+- Globales Concord Hotel & Spa (globales-concord-hotel-spa) - dry-run selected
+- Jardín Botánico (jardin-botanico) - dry-run selected
+- Bodegas Macià Batle (bodegas-macia-batle) - dry-run selected
+- Restaurant Es Guix (restaurant-es-guix) - dry-run selected
+- Restaurant Ca'n Boqueta (restaurant-ca-n-boqueta) - dry-run selected
+- Rancho Bonanza Cala Millor (rancho-bonanza-cala-millor) - dry-run selected
+- Bananas Son Bauló (bananas-son-baulo) - dry-run selected
+- Hotel Son Bauló (hotel-son-baulo) - dry-run selected
+- FERGUS Style Soller Beach (fergus-style-soller-beach) - dry-run selected
+- Marins Beach Club (marins-beach-club) - dry-run selected
+- Mar Hotels Playa de Muro Suites (mar-hotels-playa-de-muro-suites) - dry-run selected
+- Hotel Exagon Park (hotel-exagon-park) - dry-run selected
+- Restaurante Molí de Sal campos (restaurante-moli-de-sal-campos) - dry-run selected
+- Portodrach Aparthotel & Suites (portodrach-aparthotel-suites) - dry-run selected
+- Aparthotel La Pérgola (aparthotel-la-pergola) - dry-run selected
+- Ses Àncores | Cocina tradicional | Pescado fresco| Paella | Spanisches Restaurant Cala Ratjada | Hafen | Fisch | Tapas | (ses-ancores-cocina-tradicional-pescado-fresco-paella-spanisches-restaurant-cala-ratjada-hafen-fisch-tapas) - dry-run selected
+- Velero Rafael Verdera (velero-rafael-verdera) - dry-run selected
+- MAS QUE PIZZA PORTO CRISTO (mas-que-pizza-porto-cristo) - dry-run selected
+- Hotel Cala d'Or Playa (hotel-cala-d-or-playa) - dry-run selected
+- Santina Brunch (santina-brunch) - dry-run selected
+- INNSiDE by Meliá Calviá Beach (innside-by-melia-calvia-beach) - dry-run selected
+- BQ Delfín Azul Hotel (bq-delfin-azul-hotel) - dry-run selected
+- Brick Palma (brick-palma) - dry-run selected
+- Protur Turó Pins Hotel (protur-turo-pins-hotel) - dry-run selected
+- Playero (playero) - dry-run selected
+- Welikehotel Marfil Playa (welikehotel-marfil-playa) - dry-run selected
+- allsun Hotel Orient Beach (allsun-hotel-orient-beach) - dry-run selected
+- Aparthotel & Hotel Isla de Cabrera (aparthotel-hotel-isla-de-cabrera) - dry-run selected
+- Petit Hotel Ses Rotges (petit-hotel-ses-rotges) - dry-run selected
+- Es Modern (es-modern) - dry-run selected
+- The Helicopter Centre (the-helicopter-centre) - dry-run selected
+- Cas Comte Suites & Spa (cas-comte-suites-spa) - dry-run selected
+- Restaurante El Paradiso (restaurante-el-paradiso) - dry-run selected
+- The Boc Hostels-City (the-boc-hostels-city) - dry-run selected
+- Can Prunera Sóller, Casa Modernista (can-prunera-soller-casa-modernista) - dry-run selected
+- Aimia Hotel Port de Sóller (aimia-hotel-port-de-soller) - dry-run selected
+- Hotel Honucai (hotel-honucai) - dry-run selected
+- Marui Sushi Bar & Restaurante Japonés (marui-sushi-bar-restaurante-japones) - dry-run selected
+- Ars Magna Bleisure Hotel **** (ars-magna-bleisure-hotel) - dry-run selected
+- Food Tours Balearics-Mallorca (food-tours-balearics-mallorca) - dry-run selected
+- Rancho Bonanza (rancho-bonanza) - dry-run selected
+- Hotel Joan Miró Museum (hotel-joan-miro-museum) - dry-run selected
+- BQ Augusta Hotel (bq-augusta-hotel) - dry-run selected
+- rö nikkei (ro-nikkei) - dry-run selected
+- Universal Grand León & Spa (universal-grand-leon-spa) - dry-run selected
+- Hotel Continental Valldemossa (hotel-continental-valldemossa) - dry-run selected
+- Nivia Born Boutique Hotel (nivia-born-boutique-hotel) - dry-run selected
+- Hotel Feliz (hotel-feliz) - dry-run selected
+- Hotel Kyrat Amàrac (hotel-kyrat-amarac) - dry-run selected
+- Concepció by Nobis (concepcio-by-nobis) - dry-run selected
+- Restaurante Cas Carreter (restaurante-cas-carreter) - dry-run selected
+- La Bodeguita (la-bodeguita) - dry-run selected
+- Bordoy Alcudia Port Suites (Only Adults +16) (bordoy-alcudia-port-suites-only-adults-16) - dry-run selected
+- SA FOGANYA DE LLUCMAJOR (sa-foganya-de-llucmajor) - dry-run selected
+- Secrets Mallorca Villamil Resort & Spa (secrets-mallorca-villamil-resort-spa) - dry-run selected
+- Hotel Colonial (hotel-colonial) - dry-run selected
+- Kimpton Aysla Mallorca (kimpton-aysla-mallorca) - dry-run selected
+- La Trastienda Mallorca (la-trastienda-mallorca) - dry-run selected
+- Forum Boutique hotel & Spa (forum-boutique-hotel-spa) - dry-run selected
+- Boutique Hotel El Coto (boutique-hotel-el-coto) - dry-run selected
+- Mestís Restaurant · Santa Catalina (mestis-restaurant-santa-catalina) - dry-run selected
+- Bar Restaurante Bonaire (bar-restaurante-bonaire) - dry-run selected
+- allsun Hotel Paguera Park (allsun-hotel-paguera-park) - dry-run selected
+- Mallorca Diving Adventure (mallorca-diving-adventure) - dry-run selected
+- Es Petit de Valldemossa (es-petit-de-valldemossa) - dry-run selected
+- Restaurant Roland (restaurant-roland) - dry-run selected
+- Hotel Girasol (hotel-girasol) - dry-run selected
+- Restaurante Paparazzi (restaurante-paparazzi) - dry-run selected
+- Spacefantasy (spacefantasy) - dry-run selected
+- Més Aventura (mes-aventura) - dry-run selected
+- Talaia d'Alcúdia (talaia-d-alcudia) - dry-run selected
+- Tomir Portals Suites-Adults Only (+16) (tomir-portals-suites-adults-only-16) - dry-run selected
+- Reserva Park (reserva-park) - dry-run selected
+- allsun Hotel Cristóbal Colón (allsun-hotel-cristobal-colon) - dry-run selected
+- H10 Blue Mar Boutique Hotel (h10-blue-mar-boutique-hotel) - dry-run selected
+- Hotel Can Simoneta (hotel-can-simoneta) - dry-run selected
+- Jetski on Delivery (jetski-on-delivery) - dry-run selected
+- Rock and Water Mallorca (rock-and-water-mallorca) - dry-run selected
+- Bahía Suites Camp de Mar (bahia-suites-camp-de-mar) - dry-run selected
+- Four Seasons Resort Mallorca at Formentor (four-seasons-resort-mallorca-at-formentor) - dry-run selected
+- 2 Wheel Tours Palma (2-wheel-tours-palma) - dry-run selected
+- Nala Brunch & Coffee (nala-brunch-coffee) - dry-run selected
+- Universal Hotel Aquamarin (universal-hotel-aquamarin) - dry-run selected
+- Platja Palmira (platja-palmira) - dry-run selected
+- allsun Hotel Lux de Mar (allsun-hotel-lux-de-mar) - dry-run selected
+- Grand Hotel Son Net (grand-hotel-son-net) - dry-run selected
+- Coral Boats Mallorca (coral-boats-mallorca) - dry-run selected
+- Restaurant La Caracola (restaurant-la-caracola) - dry-run selected
+- Restaurante UNIK | Pizzeria y Arroceria (restaurante-unik-pizzeria-y-arroceria) - dry-run selected
+- La Cafetería by La Goleta (la-cafeteria-by-la-goleta) - dry-run selected
+- Blauxell Mallorca (blauxell-mallorca) - dry-run selected
+- Sunprime pollensa bay (sunprime-pollensa-bay) - dry-run selected
+- Ca'n Beneït|Iconic Retreat (ca-n-beneit-iconic-retreat) - dry-run selected
+- Questquest (questquest) - dry-run selected
+- Hotel Glòria de Sant Jaume (hotel-gloria-de-sant-jaume) - dry-run selected
+- Octopus Mallorca (octopus-mallorca) - dry-run selected
+- Jetfun Speedboat Adventure (jetfun-speedboat-adventure) - dry-run selected
+- Diving Dragonera (diving-dragonera) - dry-run selected
+- El Llorenç Parc de la Mar (+16) (el-llorenc-parc-de-la-mar-16) - dry-run selected
+- Grupotel Montecarlo (grupotel-montecarlo) - dry-run selected
+- Contrabando Llucmajor (contrabando-llucmajor) - dry-run selected
+- Boutique Hostal Mistral (boutique-hostal-mistral) - dry-run selected
+- Los Poetas Andaluces (los-poetas-andaluces) - dry-run selected
+- Ca s'Hereu Restaurante Cafè (ca-s-hereu-restaurante-cafe) - dry-run selected
+- Hotel & Restaurant Jardí d'Artà (hotel-restaurant-jardi-d-arta) - dry-run selected
+- EIX Platja Daurada Hotel & Spa (eix-platja-daurada-hotel-spa) - dry-run selected
+- Hotel THB Gran Playa (hotel-thb-gran-playa) - dry-run selected
+- Cabot Pollensa Park Spa (cabot-pollensa-park-spa) - dry-run selected
+- Grupotel Alcudia Pins (grupotel-alcudia-pins) - dry-run selected
+- Pomelia Sea Lab Mallorca (pomelia-sea-lab-mallorca) - dry-run selected
+- Can Canals Finca Hotel & SPA (can-canals-finca-hotel-spa) - dry-run selected
+- Fantasy Park (fantasy-park) - dry-run selected
+- Hotel Calatrava (hotel-calatrava) - dry-run selected
+- Hotel Es Molí (hotel-es-moli) - dry-run selected
+- Landhotel Can Davero (landhotel-can-davero) - dry-run selected
+- RESTAURANT CAN TAMANY (restaurant-can-tamany) - dry-run selected
+- Hotel Es Port (hotel-es-port) - dry-run selected
+- THB Bamboo Alcudia (thb-bamboo-alcudia) - dry-run selected
+- Gran Hotel Sóller (gran-hotel-soller) - dry-run selected
+- Fum Arroceria, Cocina De Autor Angel Fita (fum-arroceria-cocina-de-autor-angel-fita) - dry-run selected
+- Agroturismo Ses Illes (agroturismo-ses-illes) - dry-run selected
+- Restaurante La Cubita (restaurante-la-cubita) - dry-run selected
+- Trendhotel Alcudia (trendhotel-alcudia) - dry-run selected
+- Can Alomar Hotel (can-alomar-hotel) - dry-run selected
+- MAREA ITALIANA Grill & Drinks (marea-italiana-grill-drinks) - dry-run selected
+- Deportes de Agua|Kitesurfing, Windsurfing, Wingfoil, Paddlesurf, Catamaran Center (deportes-de-agua-kitesurfing-windsurfing-wingfoil-paddlesurf-catamaran-center) - dry-run selected
+- Albatros Diving (albatros-diving) - dry-run selected
+- Globales Isabel (globales-isabel) - dry-run selected
+- Bordoy Continental Palma (bordoy-continental-palma) - dry-run selected
+- Hotel Morito (hotel-morito) - dry-run selected
+- Kayak Tour Mallorca (kayak-tour-mallorca-2) - dry-run selected
+- Bodegas Bordoy (bodegas-bordoy) - dry-run selected
+- ARUX (arux) - dry-run selected
+- Ses Golondrines (ses-golondrines) - dry-run selected
+- Allsun Hotel Sumba (allsun-hotel-sumba) - dry-run selected
+- East Coast Divers Mallorca (east-coast-divers-mallorca) - dry-run selected
+- Paguera Treff Boutique Hotel (paguera-treff-boutique-hotel) - dry-run selected
+- Grupotel Mallorca Mar (grupotel-mallorca-mar) - dry-run selected
+- Bar Playa (bar-playa) - dry-run selected
+- Restaurante Nevada (restaurante-nevada) - dry-run selected
+- Mills and Honey Cycling Mallorca (mills-and-honey-cycling-mallorca) - dry-run selected
+- Hotel Club S'Illot (hotel-club-s-illot) - dry-run selected
+- Hotel Eden Soller (hotel-eden-soller) - dry-run selected
+- Bar Can Joan Frau (bar-can-joan-frau) - dry-run selected
+- Hotel Cort (hotel-cort) - dry-run selected
+- Don Denís (don-denis) - dry-run selected
+- Cafeteria Moni (cafeteria-moni) - dry-run selected
+- The Boc Hostels-Palma (the-boc-hostels-palma) - dry-run selected
+- Yartan Boutique Hotel (yartan-boutique-hotel) - dry-run selected
+- PADI-Barracuda Diving Mallorca (padi-barracuda-diving-mallorca) - dry-run selected
+- Hotel Eden Palma Playa (hotel-eden-palma-playa) - dry-run selected
+- Jet Ski For Rent Santa Ponsa (Mallorca) (jet-ski-for-rent-santa-ponsa-mallorca) - dry-run selected
+- Hipotels Hipocampo (hipotels-hipocampo) - dry-run selected
+- La Bodeguilla casa de comidas Arenal (la-bodeguilla-casa-de-comidas-arenal) - dry-run selected
+- Smy Portocolom (smy-portocolom) - dry-run selected
+- Restaurant Can Arabí (restaurant-can-arabi) - dry-run selected
+- HSM Son Verí (hsm-son-veri) - dry-run selected
+- Valldemossa Hotel (valldemossa-hotel) - dry-run selected
+- Nereida Caribia (nereida-caribia) - dry-run selected
+- NATURE BOAT PORTOCOLOM MALLORCA (nature-boat-portocolom-mallorca) - dry-run selected
+- La Goleta Hotel de Mar (la-goleta-hotel-de-mar) - dry-run selected
+- Portals Hills Boutique Hotel Mallorca (portals-hills-boutique-hotel-mallorca) - dry-run selected
+- Can Cota Suites & Spa-Turismo de interior (can-cota-suites-spa-turismo-de-interior) - dry-run selected
+- La Finca Son Antem (la-finca-son-antem) - dry-run selected
+- Hotel Stil Picafort Park (hotel-stil-picafort-park) - dry-run selected
+- El Guía Hotel & Restaurant (el-guia-hotel-restaurant) - dry-run selected
+- Grupotel Playa Camp de Mar (grupotel-playa-camp-de-mar) - dry-run selected
+- Hotel JS Sol de Alcúdia (hotel-js-sol-de-alcudia) - dry-run selected
+- BQ Paguera Boutique Hotel-ONLY ADULTS (bq-paguera-boutique-hotel-only-adults) - dry-run selected
+- Monkey Buggy Garage Cala Millor, Mallorca (monkey-buggy-garage-cala-millor-mallorca) - dry-run selected
+- Mamboo Hotel Cala Ratjada (mamboo-hotel-cala-ratjada) - dry-run selected
+- BASTIAN CONTRARI (bastian-contrari) - dry-run selected
+- FINCA BINIAGUAL (finca-biniagual) - dry-run selected
+- Ca N'Aí (ca-n-ai) - dry-run selected
+- Hotel Hoposa Pollentia (hotel-hoposa-pollentia) - dry-run selected
+- Parque de la Mar (parque-de-la-mar) - dry-run selected
+- Hotel El Vicenç de la Mar (hotel-el-vicenc-de-la-mar) - dry-run selected
+- BO Hotel Palma (bo-hotel-palma) - dry-run selected
+- Bistro Noir | Restaurant Cala d'Or (bistro-noir-restaurant-cala-d-or) - dry-run selected
+- Restaurante del mar (restaurante-del-mar) - dry-run selected
+- Scuba Mallorca PADI 5 Star IDC (scuba-mallorca-padi-5-star-idc) - dry-run selected
+- Finca Hotel Rural Es Turó (finca-hotel-rural-es-turo) - dry-run selected
+- Villa Chiquita Hotel Resort & Spa-Adults Only (+12) (villa-chiquita-hotel-resort-spa-adults-only-12) - dry-run selected
+- MHOUSE Hotel Palma (mhouse-hotel-palma) - dry-run selected
+- Tomates Verdes Restaurant, Llucmajor (tomates-verdes-restaurant-llucmajor) - dry-run selected
+- Villa Columbus restaurant Paguera (villa-columbus-restaurant-paguera) - dry-run selected
+- APARTHOTEL DUNES PLATJA, S.L (aparthotel-dunes-platja-s-l) - dry-run selected
+- Ca n'Alexandre-Turismo de Interior (ca-n-alexandre-turismo-de-interior) - dry-run selected
+- Porta de Mallorca (porta-de-mallorca) - dry-run selected
+- Sóller Divers (soller-divers) - dry-run selected
+- Chiringuito sillot (chiringuito-sillot) - dry-run selected
+- La Vida Peguera Restaurant & Beach Lounge (la-vida-peguera-restaurant-beach-lounge) - dry-run selected
+- Carrossa Hotel & Spa (carrossa-hotel-spa) - dry-run selected
+- Universal Hotel Perla (universal-hotel-perla) - dry-run selected
+- Cala Santanyí Diving Center Mallorca (cala-santanyi-diving-center-mallorca) - dry-run selected
+- Sa Pedra (sa-pedra) - dry-run selected
+- Dive Inn Mallorca Tauchschule Tauchbasis für Tauchen Tauchschnupperkurs PADI Open Water (dive-inn-mallorca-tauchschule-tauchbasis-fur-tauchen-tauchschnupperkurs-padi-open-water) - dry-run selected
+- Sea Side Restaurante (sea-side-restaurante) - dry-run selected
+- Palma Suites Hotel Residence (palma-suites-hotel-residence) - dry-run selected
+- The Sea Club (the-sea-club) - dry-run selected
+- Hipotels Apartamentos Cala Bona (hipotels-apartamentos-cala-bona) - dry-run selected
+- Rancho Jaume (rancho-jaume) - dry-run selected
+- Hotel Catalonia del Mar-Adults Only (hotel-catalonia-del-mar-adults-only) - dry-run selected
+- Alcazar Hotel Soller (alcazar-hotel-soller) - dry-run selected
+- Hostel Sóller (hostel-soller) - dry-run selected
+- Fun Quad Mallorca (fun-quad-mallorca) - dry-run selected
+- Arroceria Casa Aurelio (arroceria-casa-aurelio) - dry-run selected
+- MOTOURS VIAJES EN MOTO (motours-viajes-en-moto) - dry-run selected
+- Globales Cala Bona (globales-cala-bona) - dry-run selected
+- HSM Lago Park (hsm-lago-park) - dry-run selected
+- RESTAURANTE YUMEE (restaurante-yumee) - dry-run selected
+- S'Hort de Son Caulelles (s-hort-de-son-caulelles) - dry-run selected
+- Bar s'Hotel (bar-s-hotel) - dry-run selected
+- Finca Son Roig Agroturismo (finca-son-roig-agroturismo) - dry-run selected
+- Restaurante El Pilón (restaurante-el-pilon) - dry-run selected
+- Monsuau Cala D'Or Hotel-Adults Only (monsuau-cala-d-or-hotel-adults-only) - dry-run selected
+- Agroturismo Ses Cases de Fetget (agroturismo-ses-cases-de-fetget) - dry-run selected
+- Petit Caimari (petit-caimari) - dry-run selected
+- Far des Cap Salines (far-des-cap-salines) - dry-run selected
+- Mar Balear Dive Center (mar-balear-dive-center) - dry-run selected
+- Island Tours Mallorca (island-tours-mallorca) - dry-run selected
+- Tapas Palma Centre (tapas-palma-centre) - dry-run selected
+- Hotel Moré (hotel-more) - dry-run selected
+- Can Cera Hotel (can-cera-hotel) - dry-run selected
+- Hotel Miramar Mallorca (hotel-miramar-mallorca) - dry-run selected
+- Quad Tour Mallorca (quad-tour-mallorca) - dry-run selected
+- Hotel Can Mostatxins (hotel-can-mostatxins) - dry-run selected
+- El Gaucho Asador (el-gaucho-asador) - dry-run selected
+- BLAU OLE Cala Ratjada (blau-ole-cala-ratjada) - dry-run selected
+- Meliá South Beach (melia-south-beach) - dry-run selected
+- Formula Tours Mallorca (formula-tours-mallorca) - dry-run selected
+- Restaurante Zaranda (restaurante-zaranda) - dry-run selected
+- Hotel La Concha Soul (hotel-la-concha-soul) - dry-run selected
+- Chiringuito Cala Marçal (chiringuito-cala-marcal) - dry-run selected
+- Palma Bicycle Tours (palma-bicycle-tours) - dry-run selected
+- Soller Plaza (soller-plaza) - dry-run selected
+- Hotel Bahia (hotel-bahia) - dry-run selected
+- Hotel Can Serrete (hotel-can-serrete) - dry-run selected
+- Agroturismo Es Quatre Cantons (agroturismo-es-quatre-cantons) - dry-run selected
+- Bodegas Angel (bodegas-angel) - dry-run selected
+- The Sea Club Restaurant & Cocktail Bar (the-sea-club-restaurant-cocktail-bar) - dry-run selected
+- Finca Sa Tanca (finca-sa-tanca) - dry-run selected
+- Sail Palma (sail-palma) - dry-run selected
+- Bodegas José L. Ferrer (bodegas-jose-l-ferrer) - dry-run selected
+- Caló des Monjo (calo-des-monjo) - dry-run selected
+- ZOEA Mallorca|Diving, Kayak & Paddleboard (zoea-mallorca-diving-kayak-paddleboard) - dry-run selected
+- Restaurante Mare Meva Cala Ratjada (restaurante-mare-meva-cala-ratjada) - dry-run selected
+- Caliuet BaRestaurant (caliuet-barestaurant) - dry-run selected
+- Celler Sa Vinya (celler-sa-vinya) - dry-run selected
+- Hotel JS Cape Colom (hotel-js-cape-colom) - dry-run selected
+- Cal Reiet Holistic Retreat (cal-reiet-holistic-retreat) - dry-run selected
+- MarSenses Ferrera Blanca Hotel Adults Only (marsenses-ferrera-blanca-hotel-adults-only) - dry-run selected
+- Tramuntana Adventures Mallorca (tramuntana-adventures-mallorca) - dry-run selected
+- Hotel Hoposa Bahía (hotel-hoposa-bahia) - dry-run selected
+- Món d'Aventura Outdoor Shop & Adventure Tours (mon-d-aventura-outdoor-shop-adventure-tours) - dry-run selected
+- BQ Alcúdia Sun Village (bq-alcudia-sun-village) - dry-run selected
+- Botanic Restobar (botanic-restobar) - dry-run selected
+- Zel Mallorca (zel-mallorca) - dry-run selected
+- KANSŌ Taberna Japonesa (kanso-taberna-japonesa) - dry-run selected
+- Restaurant Sa Canova (restaurant-sa-canova) - dry-run selected
+- Globales Don Pedro (globales-don-pedro) - dry-run selected
+- Angels Boutique-Turismo de interior (angels-boutique-turismo-de-interior) - dry-run selected
+- Barranc de Biniaraix (barranc-de-biniaraix) - dry-run selected
+- Calypso Restaurant & Bar (calypso-restaurant-bar) - dry-run selected
+- Okinawa Japanese (okinawa-japanese) - dry-run selected
+- Los Dos Caballeros Winery (los-dos-caballeros-winery) - dry-run selected
+- Hotel Boutique Minister (hotel-boutique-minister) - dry-run selected
+- Restaurante La Campana (restaurante-la-campana) - dry-run selected
+- Universal Hotel Cabo Blanco-Adults Only (universal-hotel-cabo-blanco-adults-only) - dry-run selected
+- El Rinconcito de la Patrona (el-rinconcito-de-la-patrona) - dry-run selected
+- Parque Natural de la Dragonera (parque-natural-de-la-dragonera) - dry-run selected
+- SA PEDRISSA (sa-pedrissa) - dry-run selected
+- ABURI (aburi) - dry-run selected
+- Palacio Ca Sa Galesa (palacio-ca-sa-galesa) - dry-run selected
+- Hotel Hoposa Uyal (hotel-hoposa-uyal) - dry-run selected
+- We Hostel Palma (we-hostel-palma) - dry-run selected
+- Grupotel Farrutx (grupotel-farrutx) - dry-run selected
+- Outdoor Adventure Sports (outdoor-adventure-sports) - dry-run selected
+- S' Olivera (s-olivera) - dry-run selected
+- Grupotel Picafort Beach (grupotel-picafort-beach) - dry-run selected
+- Agroturisme Muleta de Ca S'hereu (agroturisme-muleta-de-ca-s-hereu) - dry-run selected
+- Dive Center Robinson Club (dive-center-robinson-club) - dry-run selected
+- Torre Playa (torre-playa) - dry-run selected
+- Playa S' Arenal (playa-s-arenal) - dry-run selected
+- Suite del Mar (suite-del-mar) - dry-run selected
+- WATERSPORTS MALLORCA MAGALUF (watersports-mallorca-magaluf) - dry-run selected
+- Cala Figuera (cala-figuera) - dry-run selected
+- West Coast Divers Mallorca-PADI Dive Resort, Tauchschule, Centro de Buceo, Diving Centre (west-coast-divers-mallorca-padi-dive-resort-tauchschule-centro-de-buceo-diving-centre) - dry-run selected
+- Embat Chiringuito Beach (embat-chiringuito-beach) - dry-run selected
+- Ona Palmira Paguera (ona-palmira-paguera) - dry-run selected
+- Talayot Hotel by Senator (talayot-hotel-by-senator) - dry-run selected
+- Antigua Esquina Palma (antigua-esquina-palma) - dry-run selected
+- Suculenta Port de Sóller (suculenta-port-de-soller) - dry-run selected
+- Cupido Boutique Hotel (cupido-boutique-hotel) - dry-run selected
+- PULA SUITES BOUTIQUE RESORT (pula-suites-boutique-resort) - dry-run selected
+- Grupotel Port d'Alcúdia (grupotel-port-d-alcudia) - dry-run selected
+- El Niño Surf Center (el-nino-surf-center) - dry-run selected
+- Es Revellar Art Resort (adults only +16) (es-revellar-art-resort-adults-only-16) - dry-run selected
+- ZigZag Mallorca (zigzag-mallorca) - dry-run selected
+- Portomar Apartments (portomar-apartments) - dry-run selected
+- Hostal Nadal Sóller (hostal-nadal-soller) - dry-run selected
+- Almazara y Casa de Can Det-Visitas Guiadas (almazara-y-casa-de-can-det-visitas-guiadas) - dry-run selected
+- Petit Sant Miquel (petit-sant-miquel) - dry-run selected
+- Ikos Porto Petro (ikos-porto-petro) - dry-run selected
+- Terra di Vino (terra-di-vino) - dry-run selected
+- Hotel Can Ferrereta (hotel-can-ferrereta) - dry-run selected
+- FUN ISLAND Buggy & Quad Tours Sa Coma (fun-island-buggy-quad-tours-sa-coma) - dry-run selected
+- The Donna Portals (the-donna-portals) - dry-run selected
+- Cabot Cap de Mar Spa (cabot-cap-de-mar-spa) - dry-run selected
+- Juz de Yartan Arthotel (juz-de-yartan-arthotel) - dry-run selected
+- Naturacavallsacova (naturacavallsacova) - dry-run selected
+- Fassanelli Artà Bike (fassanelli-arta-bike) - dry-run selected
+- Universal Hotel Bikini (universal-hotel-bikini) - dry-run selected
+- O7 Alea (o7-alea) - dry-run selected
+- AUMALLIA HOTEL & SPA (aumallia-hotel-spa) - dry-run selected
+- Tramuntana Tours (tramuntana-tours) - dry-run selected
+- Hotel Biniamar (hotel-biniamar) - dry-run selected
+- Kayak Trip Mallorca (kayak-trip-mallorca) - dry-run selected
+- HILLS Thai And Sushi (hills-thai-and-sushi) - dry-run selected
+- Sa Creu Nova (sa-creu-nova) - dry-run selected
+- La Despensa del Barón (la-despensa-del-baron) - dry-run selected
+- Sa Cabana (sa-cabana) - dry-run selected
+- Al Faro Llucmajor (al-faro-llucmajor) - dry-run selected
+- Pleta de Mar Grand Luxury Hotel by nature, adults only – Preferred Hotels & Resorts (pleta-de-mar-grand-luxury-hotel-by-nature-adults-only-preferred-hotels-resorts) - dry-run selected
+- Boutique Hotel Petit Montision (boutique-hotel-petit-montision) - dry-run selected
+- Korhu Restaurante (korhu-restaurante) - dry-run selected
+- Meliá Cala d'Or Boutique Hotel (melia-cala-d-or-boutique-hotel) - dry-run selected
+- Sa Cabana Hotel Rural Spa (sa-cabana-hotel-rural-spa) - dry-run selected
+- Hotel Los Geranios (hotel-los-geranios) - dry-run selected
+- Reiten Mallorca (reiten-mallorca) - dry-run selected
+- Nema Boutique Hotel & Spa (nema-boutique-hotel-spa) - dry-run selected
+- Hotel Gran Fornells Thalasso & Spa (hotel-gran-fornells-thalasso-spa) - dry-run selected
+- Wine Tasting Mallorca (wine-tasting-mallorca) - dry-run selected
+- Aventura IB Colonia de Sant Jordi (aventura-ib-colonia-de-sant-jordi) - dry-run selected
+- Petro Divers: Tauchen auf Mallorca (petro-divers-tauchen-auf-mallorca) - dry-run selected
+- ORANGE Colom Seaside Apartments (orange-colom-seaside-apartments) - dry-run selected
+- Chez Junior Sóller (chez-junior-soller) - dry-run selected
+- Restaurante Copacabana (restaurante-copacabana) - dry-run selected
+- Es Figueral Nou Hotel (+12) (es-figueral-nou-hotel-12) - dry-run selected
+- Levante Hotel (levante-hotel) - dry-run selected
+- Portofino Mallorca (portofino-mallorca) - dry-run selected
+- Active Alcudia (active-alcudia) - dry-run selected
+- Son Julia Country House & Spa (son-julia-country-house-spa) - dry-run selected
+- Belle Marivent Boutique Hotel (belle-marivent-boutique-hotel) - dry-run selected
+- Barefoot Hotel Mallorca (barefoot-hotel-mallorca) - dry-run selected
+- Hoposa Costa d’Or (hoposa-costa-d-or) - dry-run selected
+- Mallorca Rental & Excursions (mallorca-rental-excursions) - dry-run selected
+- Es Racó d'Artà (es-raco-d-arta) - dry-run selected
+- Hotel Born Palma (hotel-born-palma) - dry-run selected
+- FINCA CAN GRAU (finca-can-grau) - dry-run selected
+- Cas Cabo Nou Agroturisme (cas-cabo-nou-agroturisme) - dry-run selected
+- Restaurant Sa Parra (restaurant-sa-parra) - dry-run selected
+- Son Sant Jordi (son-sant-jordi) - dry-run selected
+- Nobis Hotel Palma (nobis-hotel-palma) - dry-run selected
+- coHeo (coheo) - dry-run selected
+- Hotel d'es Puig (hotel-d-es-puig) - dry-run selected
+- Hotel Mirador (hotel-mirador) - dry-run selected
+- Otra Mirada Palma. Visitas guiadas en Palma (otra-mirada-palma-visitas-guiadas-en-palma) - dry-run selected
+- Universal Aparthotel Don Camilo (universal-aparthotel-don-camilo) - dry-run selected
+- Finca Serena Mallorca, member of Small Luxury Hotels (finca-serena-mallorca-member-of-small-luxury-hotels) - dry-run selected
+- JS Palma Plaza (js-palma-plaza) - dry-run selected
+- Hotel Can Quetglas (hotel-can-quetglas) - dry-run selected
+- Trike Fun Mallorca (trike-fun-mallorca) - dry-run selected
+- Can Guixe-Turismo de interior (can-guixe-turismo-de-interior) - dry-run selected
+- Restaurant es Mirador de Son Samà (restaurant-es-mirador-de-son-sama) - dry-run selected
+- Villa Miel (villa-miel) - dry-run selected
+- Agroturisme Sa Torre de Santa Eugènia|Finca Hotel Mallorca (agroturisme-sa-torre-de-santa-eugenia-finca-hotel-mallorca) - dry-run selected
+- Restaurante Es Figueral (restaurante-es-figueral) - dry-run selected
+- Hotel Mirabó De Valldemossa (hotel-mirabo-de-valldemossa) - dry-run selected
+- CCA Andratx (cca-andratx) - dry-run selected
+- Adventurers Mallorca (adventurers-mallorca) - dry-run selected
+- Hotel Can Abril (hotel-can-abril) - dry-run selected
+- Petit Hotel Hostatgeria La Victoria (petit-hotel-hostatgeria-la-victoria) - dry-run selected
+- Tess de Mar - Adults Only (tess-de-mar-adults-only) - dry-run selected
+- Mallorca Mountains (mallorca-mountains) - dry-run selected
+- HOTEL CALA MURADA (hotel-cala-murada) - dry-run selected
+- Mallorca Nature Tours (mallorca-nature-tours) - dry-run selected
+- Pirates Bay Club Cala Millor (pirates-bay-club-cala-millor) - dry-run selected
+- Restaurante Acuario (restaurante-acuario) - dry-run selected
+- Hotel Rural Es Migjorn (hotel-rural-es-migjorn) - dry-run selected
+- Vela Beach (vela-beach) - dry-run selected
+- Chiringuito Cala Sa Nau (chiringuito-cala-sa-nau) - dry-run selected
+- Bladerunner Mallorca (bladerunner-mallorca) - dry-run selected
+- Alemany Restaurant (alemany-restaurant) - dry-run selected
+- Sailing Porto Cristo-Malakai (sailing-porto-cristo-malakai) - dry-run selected
+- Agroturismo Sa Vinya des Convent (agroturismo-sa-vinya-des-convent) - dry-run selected
+- Sea Adventure (sea-adventure) - dry-run selected
+- Ca'n Calent (ca-n-calent) - dry-run selected
+- Ca u Metge Restaurant (ca-u-metge-restaurant) - dry-run selected
+- Perla Grill&Terrace (perla-grill-terrace) - dry-run selected
+- Amê Gastrobeach Club (ame-gastrobeach-club) - dry-run selected
+- Ecocirer, Healthy Stay (ecocirer-healthy-stay) - dry-run selected
+- Trails we ride-Mtb Tours Mallorca & Pyrenees-Mtb Rental (trails-we-ride-mtb-tours-mallorca-pyrenees-mtb-rental) - dry-run selected
+- Santa Clara Urban Hotel & Spa (santa-clara-urban-hotel-spa) - dry-run selected
+- Can Aulí Luxury Retreat (can-auli-luxury-retreat) - dry-run selected
+- MallorcaFly-Vuelo paramotor y parapente Mallorca (mallorcafly-vuelo-paramotor-y-parapente-mallorca) - dry-run selected
+- Easy Boat (easy-boat) - dry-run selected
+- Agroturismo Can Cantó de Marina (agroturismo-can-canto-de-marina) - dry-run selected
+- Experience Mallorca (experience-mallorca) - dry-run selected
+- Ses Puntetes (ses-puntetes) - dry-run selected
+- Restaurante Mestral (restaurante-mestral) - dry-run selected
+- Il Postino (il-postino) - dry-run selected
+- BQ Cala Ratjada Hotel (bq-cala-ratjada-hotel) - dry-run selected
+- Villa Lorenzo (villa-lorenzo) - dry-run selected
+- Alaró Natura Rural Suites (alaro-natura-rural-suites) - dry-run selected
+- Sailing Experience Pollensa (sailing-experience-pollensa) - dry-run selected
+- Explora Mallorca (explora-mallorca) - dry-run selected
+- Sol i Vida (Adults Only) Boutique Hotel (sol-i-vida-adults-only-boutique-hotel) - dry-run selected
+- Trocadero (trocadero) - dry-run selected
+- Mezzo Sailing (mezzo-sailing) - dry-run selected
+- Ciclos Major Cycling Holidays (ciclos-major-cycling-holidays) - dry-run selected
+- Llauts Marins (llauts-marins) - dry-run selected
+- Hotel Zurbarán Palma (hotel-zurbaran-palma) - dry-run selected
+- Hostal Leo d'Or (hostal-leo-d-or) - dry-run selected
+- Premier Tours Mallorca (premier-tours-mallorca) - dry-run selected
+- U Vicenç - Rooftop Restaurant - Only adults +12 (u-vicenc-rooftop-restaurant-only-adults-12) - dry-run selected
+- Hotel Nou Dalt Muntanya (hotel-nou-dalt-muntanya) - dry-run selected
+- Sailing Balearic (sailing-balearic) - dry-run selected
+- Hostal Restaurante Playa (hostal-restaurante-playa) - dry-run selected
+- Quad Funtours Alcúdia (quad-funtours-alcudia) - dry-run selected
+- Hotel JS PortoColom Suites (hotel-js-portocolom-suites) - dry-run selected
+- Tuent Adventure: Buceo, Kayak & Paddle Surf (tuent-adventure-buceo-kayak-paddle-surf) - dry-run selected
+- Mallorca Horses (mallorca-horses) - dry-run selected
+- MILTON’S PIZZERIA BRUNCH CAFFE (milton-s-pizzeria-brunch-caffe) - dry-run selected
+- Restaurante Can Tià Taleca (restaurante-can-tia-taleca) - dry-run selected
+- Hotel ROC Oberoy Adults Only (hotel-roc-oberoy-adults-only) - dry-run selected
+- Kayak Tour Mallorca (kayak-tour-mallorca) - dry-run selected
+- Bahía Azul (bahia-azul) - dry-run selected
+- Confianza Yachting (confianza-yachting) - dry-run selected
+- Amayò Mare Trattoria (amayo-mare-trattoria) - dry-run selected
+- Hotel Apartamentos Cala Santanyí (hotel-apartamentos-cala-santanyi) - dry-run selected
+- Faro Cantina (faro-cantina) - dry-run selected
+- Club Nàutic Porto Cristo (club-nautic-porto-cristo) - dry-run selected
+- Paradise Beach Mallorca (paradise-beach-mallorca) - dry-run selected
+- ZOEA Mallorca|Scuba Diving Center (zoea-mallorca-scuba-diving-center) - dry-run selected
+- Aparthotel Ses Fotges (aparthotel-ses-fotges) - dry-run selected
+- Il Tano Llucmajor (il-tano-llucmajor) - dry-run selected
+- Hotel Can Moragues (hotel-can-moragues) - dry-run selected
+- Hotel Playas Paguera (hotel-playas-paguera) - dry-run selected
+- Hotel Kyrat Amàrac Suites (hotel-kyrat-amarac-suites) - dry-run selected
+- Welikehotel Fénix (Arenal, Mallorca) (welikehotel-fenix-arenal-mallorca) - dry-run selected
+- Pure Salt Port de Sóller (pure-salt-port-de-soller) - dry-run selected
+- Hotel Rosella by Intelier (hotel-rosella-by-intelier) - dry-run selected
+- Bistro Calle Cruz 20 (bistro-calle-cruz-20) - dry-run selected
+- Restaurante Can Tasco (restaurante-can-tasco) - dry-run selected
+- Wind Pirates watersports center (wind-pirates-watersports-center) - dry-run selected
+- Color Horse Ranch Mallorca (color-horse-ranch-mallorca) - dry-run selected
+- Petit Hotel Es Figueral (petit-hotel-es-figueral) - dry-run selected
+- Celler Ramanyà (celler-ramanya) - dry-run selected
+- Hotel Son Cosmet (hotel-son-cosmet) - dry-run selected
+- Ca Sa Padrina Petit Hotel (ca-sa-padrina-petit-hotel) - dry-run selected
+- Dive & Fun Font de Sa cala (dive-fun-font-de-sa-cala) - dry-run selected
+- SAN LORENZO (san-lorenzo) - dry-run selected
+- American steak&ribhouse Hoek Van Holland (american-steak-ribhouse-hoek-van-holland) - dry-run selected
+- Magic Mallorca (magic-mallorca) - dry-run selected
+- Sa Vall Valldemossa.Turismo de Interior (sa-vall-valldemossa-turismo-de-interior) - dry-run selected
+- Hotel Salino Port Soller Adults Only (hotel-salino-port-soller-adults-only) - dry-run selected
+- Keida enjoy Mallorca S.L (keida-enjoy-mallorca-s-l) - dry-run selected
+- Sea.Bar.Is Port de Pollença (sea-bar-is-port-de-pollenca) - dry-run selected
+- Villaverde Deià (villaverde-deia) - dry-run selected
+- SólleRooms (sollerooms) - dry-run selected
+- Hotel Son Bunyola Villas (hotel-son-bunyola-villas) - dry-run selected
+- Bodega Vinyes I Vins Ca Sa Padrina (bodega-vinyes-i-vins-ca-sa-padrina) - dry-run selected
+- Malika de Mallorca (malika-de-mallorca) - dry-run selected
+- Sails Up Mallorca (sails-up-mallorca) - dry-run selected
+- Portocolom Adventure Trips (portocolom-adventure-trips) - dry-run selected
+- Hostal Catalina Vera (hostal-catalina-vera) - dry-run selected
+- Aventura Mallorca Karakorum Adventure (aventura-mallorca-karakorum-adventure) - dry-run selected
+- Excursions La Mallorca (excursions-la-mallorca) - dry-run selected
+- Sauló by Puro (saulo-by-puro) - dry-run selected
+- Quad Tours Cala Millor (quad-tours-cala-millor) - dry-run selected
+- Sa Roqueta Jet Ski (sa-roqueta-jet-ski) - dry-run selected
+- Holls Boat Charter (holls-boat-charter) - dry-run selected
+- Be Live Adults Only La Cala Boutique (be-live-adults-only-la-cala-boutique) - dry-run selected
+- Alcanada Golf Hotel (alcanada-golf-hotel) - dry-run selected
+- MartiniBoats24 Mallorca (martiniboats24-mallorca) - dry-run selected
+- Hotel Santanyi Port (hotel-santanyi-port) - dry-run selected
+- Tacande Portals (tacande-portals) - dry-run selected
+- Restaurant Pizzeria Volvér (restaurant-pizzeria-volver) - dry-run selected
+- Bodega Santa Catarina (bodega-santa-catarina) - dry-run selected
+- Ristorante SU DI NOI (ristorante-su-di-noi) - dry-run selected
+- BQ Sarah Hotel-SOLO ADULTOS (bq-sarah-hotel-solo-adultos) - dry-run selected
+- Hotel Rural Sa Galera (hotel-rural-sa-galera) - dry-run selected
+- Playa Cala Blanca (playa-cala-blanca) - dry-run selected
+- Rancho Cala Mesquida (rancho-cala-mesquida) - dry-run selected
+- Ca's Papà Sweet Hotel Valldemossa (ca-s-papa-sweet-hotel-valldemossa) - dry-run selected
+- MALLORCAINBLUE CHARTER (mallorcainblue-charter) - dry-run selected
+- CM Charter / Sailme Mallorca (cm-charter-sailme-mallorca) - dry-run selected
+- Agroturisme Ca'n Gaià (agroturisme-ca-n-gaia) - dry-run selected
+- Hotel Capri (hotel-capri) - dry-run selected
+- Cala Murta (cala-murta) - dry-run selected
+- Levante Cafe-Bistro (levante-cafe-bistro) - dry-run selected
+- Hotel Bell Port (hotel-bell-port) - dry-run selected
+- Corb Marí Sea Experience (corb-mari-sea-experience) - dry-run selected
+- Hotel Can Tem (hotel-can-tem) - dry-run selected
+- Pensión Bellavista (pension-bellavista) - dry-run selected
+- Rondaia Boutique Vineyard Stay – Mallorca, Tramuntana (rondaia-boutique-vineyard-stay-mallorca-tramuntana) - dry-run selected
+- Hotel Sis Pins (hotel-sis-pins) - dry-run selected
+- Can Pep d'es Plà (can-pep-d-es-pla) - dry-run selected
+- Ca's Xorc Luxury Retreat (ca-s-xorc-luxury-retreat) - dry-run selected
+- Restaurante La Terraza (restaurante-la-terraza) - dry-run selected
+- GOJET Port Pollensa JET SKI Tours (gojet-port-pollensa-jet-ski-tours) - dry-run selected
+- SecretPointMallorca Kayak (secretpointmallorca-kayak) - dry-run selected
+- Bellevue Belsana (bellevue-belsana) - dry-run selected
+- Finca Son Cladera (finca-son-cladera) - dry-run selected
+- Hotel Voramar Mallorca (hotel-voramar-mallorca) - dry-run selected
+- sunbonoo.com-Das Original (sunbonoo-com-das-original) - dry-run selected
+- Brunxito - Brunch & Bistro (brunxito-brunch-bistro) - dry-run selected
+- CAPRICE EXPERIENCE|MALLORCA BOAT TOURS (caprice-experience-mallorca-boat-tours) - dry-run selected
+- Agroturismo S´Hort de Can Carrió AG/226| Best-Rated (agroturismo-s-hort-de-can-carrio-ag-226-best-rated) - dry-run selected
+- The Sunset Sea Club-Adults only (the-sunset-sea-club-adults-only) - dry-run selected
+- S'Arenal beach (s-arenal-beach) - dry-run selected
+- Finca Sestelrica (finca-sestelrica) - dry-run selected
+- Hotel d'Or (hotel-d-or) - dry-run selected
+- Bikini Island & Mountain Hotel Es Trenc (bikini-island-mountain-hotel-es-trenc) - dry-run selected
+- Cala Mosques (cala-mosques) - dry-run selected
+- Puerto Pollensa Boat Trips – Lanchas La Gaviota (puerto-pollensa-boat-trips-lanchas-la-gaviota) - dry-run selected
+- Palacio Municipal de Deportes de Andratx (palacio-municipal-de-deportes-de-andratx) - dry-run selected
+- Restaurante Miramar (restaurante-miramar) - dry-run selected
+- Sa Font de Sa Cala (sa-font-de-sa-cala) - dry-run selected
+- BOATLAND CALA D’OR (boatland-cala-d-or) - dry-run selected
+- Faro Beach (faro-beach) - dry-run selected
+- Boutique Hotel Ca'n Bonico (boutique-hotel-ca-n-bonico) - dry-run selected
+- The Coconut Shack (the-coconut-shack) - dry-run selected
+- Hotel Sant Jaume (hotel-sant-jaume) - dry-run selected
+- Happy PARK (happy-park) - dry-run selected
+- Blend brunch café de especialidad. (blend-brunch-cafe-de-especialidad) - dry-run selected
+- One Jetski Cala D’Or (one-jetski-cala-d-or) - dry-run selected
+- SON BERNADINET (son-bernadinet) - dry-run selected
+- Platja Formentor (platja-formentor) - dry-run selected
+- Nalai Sushi (nalai-sushi) - dry-run selected
+- Aethos Mallorca (aethos-mallorca) - dry-run selected
+- Hotel Can Riera by CheelHotels (hotel-can-riera-by-cheelhotels) - dry-run selected
+- Quina Brasa (quina-brasa) - dry-run selected
+- Sailing Charter "Navegando Sin Rumbo" (sailing-charter-navegando-sin-rumbo) - dry-run selected
+- Celler Tianna Negre (celler-tianna-negre) - dry-run selected
+- Rancho Grande Mallorca (rancho-grande-mallorca) - dry-run selected
+- Clarify Restaurante (clarify-restaurante) - dry-run selected
+- Sa Frontera (sa-frontera) - dry-run selected
+- LIFE & SEA PUERTO COLONIA (life-sea-puerto-colonia) - dry-run selected
+- Excursiones Mallorca GuruWalk (excursiones-mallorca-guruwalk) - dry-run selected
+- Playa de Cala Barques (playa-de-cala-barques) - dry-run selected
+- Eolo Affiliated by FERGUS (eolo-affiliated-by-fergus) - dry-run selected
+- Alquimia calaratjada (alquimia-calaratjada) - dry-run selected
+- Outbound Mallorca (outbound-mallorca) - dry-run selected
+- Playa Pollença (playa-pollenca) - dry-run selected
+- Hotel Gran Sol Mallorca (hotel-gran-sol-mallorca) - dry-run selected
+- Platja Es Caragol (platja-es-caragol) - dry-run selected
+- RNA Club House (rna-club-house) - dry-run selected
+- Platja d'es Carbó (platja-d-es-carbo) - dry-run selected
+- Hotel Restaurante Cupidor (hotel-restaurante-cupidor) - dry-run selected
+- U Plaça (u-placa) - dry-run selected
+- Cala S'Amarador (cala-s-amarador) - dry-run selected
+- Lobster Club (lobster-club) - dry-run selected
+- Hotel Desbrull (hotel-desbrull) - dry-run selected
+- Virrey Finca Hotel (virrey-finca-hotel) - dry-run selected
+- Cycling Holiday Tours Mallorca (cycling-holiday-tours-mallorca) - dry-run selected
+- Mon Boutique Hotel (mon-boutique-hotel) - dry-run selected
+- Playas del Rey (playas-del-rey) - dry-run selected
+- Little Tapas Place (little-tapas-place) - dry-run selected
+- El Chiringuito de Crestatx (el-chiringuito-de-crestatx) - dry-run selected
+- Hotel Rocamar (hotel-rocamar) - dry-run selected
+- Club hípico Granja Es Pi (club-hipico-granja-es-pi) - dry-run selected
+- Fincahotel Los Naranjos (fincahotel-los-naranjos) - dry-run selected
+- Monkey Can Picafort Jet Ski Tours (monkey-can-picafort-jet-ski-tours) - dry-run selected
+- Blue Sea Charter Cala d'Or (blue-sea-charter-cala-d-or) - dry-run selected
+- Elysium Eco Boat Experience (elysium-eco-boat-experience) - dry-run selected
+- Son Mercadal (son-mercadal) - dry-run selected
+- Cala Bóquer (cala-boquer) - dry-run selected
+- Saltytours - Boat Charter Tour (saltytours-boat-charter-tour) - dry-run selected
+- Mallorca Premium Tours (mallorca-premium-tours) - dry-run selected
+- Hotel Ankaa-Adults Only (hotel-ankaa-adults-only) - dry-run selected
+- GREENTOURS PALMA (greentours-palma) - dry-run selected
+- Palma Beach (palma-beach) - dry-run selected
+- Sóller Tennis Club (soller-tennis-club) - dry-run selected
+- Cafetería Granja Ses Voltes (cafeteria-granja-ses-voltes) - dry-run selected
+- Hotel Ilusion Moreyo (hotel-ilusion-moreyo) - dry-run selected
+- La Moraleja The Quiet Hotel-Adults Only (la-moraleja-the-quiet-hotel-adults-only) - dry-run selected
+- Balneario 6|Alcúdia Beach Bar (balneario-6-alcudia-beach-bar) - dry-run selected
+- Hotel Villa Singala (hotel-villa-singala) - dry-run selected
+- Platja Estanys (platja-estanys) - dry-run selected
+- Starfish Diving Mallorca (starfish-diving-mallorca) - dry-run selected
+- Contro Corrente Beach Club (contro-corrente-beach-club) - dry-run selected
+- Ca'n Novell (ca-n-novell) - dry-run selected
+- Finca Can Carro (finca-can-carro) - dry-run selected
+- Logis Hotel Segles (logis-hotel-segles) - dry-run selected
+- Petit Hotel Alaró (petit-hotel-alaro) - dry-run selected
+- Cala Marmols (cala-marmols) - dry-run selected
+- Finca Es Torrent (finca-es-torrent) - dry-run selected
+- Agroturismo Son Viscos (agroturismo-son-viscos) - dry-run selected
+- Idilico Beach House (idilico-beach-house) - dry-run selected
+- NKV EXCURSIONS (nkv-excursions) - dry-run selected
+- El Patio Restaurante (el-patio-restaurante) - dry-run selected
+- Restaurant Azul de Mar (restaurant-azul-de-mar) - dry-run selected
+- Restaurant Ca´n Bella-vista (restaurant-ca-n-bella-vista) - dry-run selected
+- Fontsanta Hotel Thermal Spa & Wellness – Preferred Hotels & Resorts (fontsanta-hotel-thermal-spa-wellness-preferred-hotels-resorts) - dry-run selected
+- Buggy Mallorca (buggy-mallorca) - dry-run selected
+- Pierino beach (pierino-beach) - dry-run selected
+- La Vila Hotel (la-vila-hotel) - dry-run selected
+- Cabot Hobby Club Apartments (cabot-hobby-club-apartments) - dry-run selected
+- Hotel JS Can Picafort (hotel-js-can-picafort) - dry-run selected
+- Apartaments Niu D'Aus (apartaments-niu-d-aus) - dry-run selected
+- Zhero Hotel Mallorca (zhero-hotel-mallorca) - dry-run selected
+- Mallorca d’Or Charter Boats (mallorca-d-or-charter-boats) - dry-run selected
+- Platja d'Alcudia (platja-d-alcudia-2) - dry-run selected
+- Quad Touren Mallorca by Sebastian Zeilhofer (quad-touren-mallorca-by-sebastian-zeilhofer) - dry-run selected
+- Sailing Trips Mallorca (sailing-trips-mallorca) - dry-run selected
+- Vins Nadal (vins-nadal) - dry-run selected
+- SMILE BOAT RENTAL (smile-boat-rental) - dry-run selected
+- Cala Petita (cala-petita) - dry-run selected
+- Mallorca Travel Tours. Guía oficial. Tours y visitas privadas (mallorca-travel-tours-guia-oficial-tours-y-visitas-privadas) - dry-run selected
+- Força de Sóller-Gym & Strength Training (forca-de-soller-gym-strength-training) - dry-run selected
+- Ca's Brau (ca-s-brau) - dry-run selected
+- EasyCharter.es (easycharter-es) - dry-run selected
+- Sea Riders (sea-riders) - dry-run selected
+- Bodega Resident (bodega-resident) - dry-run selected
+- Excursion Boat Es Port (excursion-boat-es-port) - dry-run selected
+- ROBINSON BOAT MALLORCA (robinson-boat-mallorca) - dry-run selected
+- Azur Beach Club (azur-beach-club) - dry-run selected
+- Western Horse Trails Mallorca (western-horse-trails-mallorca) - dry-run selected
+- GOJET Alcudia QUAD Tours (gojet-alcudia-quad-tours) - dry-run selected
+- Puig de Maria (puig-de-maria) - dry-run selected
+- Solo | Santa Catalina (solo-santa-catalina) - dry-run selected
+- Atlantis Charters boats (atlantis-charters-boats) - dry-run selected
+- Agroturisme Subies (agroturisme-subies) - dry-run selected
+- Son Corb Boutique Hotel (son-corb-boutique-hotel) - dry-run selected
+- tent Arenal (tent-arenal) - dry-run selected
+- Thommy's Quads (thommy-s-quads) - dry-run selected
+- Coll de Sa Gramola (coll-de-sa-gramola) - dry-run selected
+- Piraguas Mix Meeting Point Kayaks y Paddle Surf (piraguas-mix-meeting-point-kayaks-y-paddle-surf) - dry-run selected
+- Finca Sa Cova Vella (finca-sa-cova-vella) - dry-run selected
+- Hoposa Hotel Panorama (hoposa-hotel-panorama) - dry-run selected
+- No Frills Excursions (no-frills-excursions-2) - dry-run selected
+- NEMO MALLORCA CHARTER CALA D´OR (nemo-mallorca-charter-cala-d-or) - dry-run selected
+- Hotel Coral Ballermann 6 (hotel-coral-ballermann-6) - dry-run selected
+- Limit Beach (limit-beach) - dry-run selected
+- Playa Son Moll (playa-son-moll) - dry-run selected
+- Bestboats Yachtcharter (bestboats-yachtcharter) - dry-run selected
+- Cas Ferrer Nou Hotelet (cas-ferrer-nou-hotelet) - dry-run selected
+- Can Xim (can-xim) - dry-run selected
+- La Balada del Agua del Mar (la-balada-del-agua-del-mar) - dry-run selected
+- Can Fressa Turismo de interior (can-fressa-turismo-de-interior) - dry-run selected
+- Ses Païsses (ses-paisses) - dry-run selected
+- Torre Picada (torre-picada) - dry-run selected
+- FERGUS Style Palma Beach (fergus-style-palma-beach) - dry-run selected
+- Bar Restaurant Can Murto (bar-restaurant-can-murto) - dry-run selected
+- Agroturisme Son Pons (agroturisme-son-pons) - dry-run selected
+- Mar de Gost by SanRemo (mar-de-gost-by-sanremo) - dry-run selected
+- Boat Trip Mallorca with Cata Simo (boat-trip-mallorca-with-cata-simo) - dry-run selected
+- RESTAURANTE BELLAVISTA PUERTO POLLENSA (restaurante-bellavista-puerto-pollensa) - dry-run selected
+- HOTEL FINCA SON GENER (hotel-finca-son-gener) - dry-run selected
+- Restaurant Torre Playa – Seafront Restaurant in Port de Pollença (restaurant-torre-playa-seafront-restaurant-in-port-de-pollenca) - dry-run selected
+- Entre Pisco y Nazca (entre-pisco-y-nazca) - dry-run selected
+- Nautic Adventure (nautic-adventure) - dry-run selected
+- Pont natural d'Es Caló Blanc (pont-natural-d-es-calo-blanc) - dry-run selected
+- Playa de Aucanada (playa-de-aucanada) - dry-run selected
+- Mar Calma Hotel (mar-calma-hotel) - dry-run selected
+- La Vermutería cala dor (la-vermuteria-cala-dor) - dry-run selected
+- Central María Turismo de interior (central-maria-turismo-de-interior) - dry-run selected
+- Agroturisme Son Lladó, Agroturismo (agroturisme-son-llado-agroturismo) - dry-run selected
+- Dream Beach Rental Mallorca - Alquiler barcos (dream-beach-rental-mallorca-alquiler-barcos) - dry-run selected
+- Amena Mar (amena-mar) - dry-run selected
+- Agroturismo Finca Dalt Murada (agroturismo-finca-dalt-murada) - dry-run selected
+- Duplicat Artà-Gràfiques Artà (duplicat-arta-grafiques-arta) - dry-run selected
+- MallorcaFly-Vuelo parapente Alcúdia (mallorcafly-vuelo-parapente-alcudia) - dry-run selected
+- STAND UP PADDLE SURF-MIA BAHIA I-Cala D'or (stand-up-paddle-surf-mia-bahia-i-cala-d-or) - dry-run selected
+- Mallorca Culinary Tours (mallorca-culinary-tours) - dry-run selected
+- Mediterranean bike 360º cycling tours (mediterranean-bike-360-cycling-tours) - dry-run selected
+- Lurion Mallorca|Exclusive experiences and activities (lurion-mallorca-exclusive-experiences-and-activities) - dry-run selected
+- The English Walking Guide (the-english-walking-guide) - dry-run selected
+- Prima Boats (prima-boats) - dry-run selected
+- Forty Two Boats Mallorca & Ibiza (forty-two-boats-mallorca-ibiza) - dry-run selected
+- NORTH COAST ADVENTURE (north-coast-adventure) - dry-run selected
+- MOONTEN Boutique Stay (moonten-boutique-stay) - dry-run selected
+- CHARTER MARINE (charter-marine) - dry-run selected
+- Hostal Miramar (hostal-miramar) - dry-run selected
+- Rancho Alegria Jay's Horses Mallorca (rancho-alegria-jay-s-horses-mallorca) - dry-run selected
+- Pollentia Charter – Alquiler de barco en Mallorca (pollentia-charter-alquiler-de-barco-en-mallorca) - dry-run selected
+- Toymaster (toymaster) - dry-run selected
+- Sa Pletassa (sa-pletassa) - dry-run selected
+- Jardins del Convent (jardins-del-convent) - dry-run selected
+- Finca Son Sala (finca-son-sala) - dry-run selected
+- Alcudia Beach (alcudia-beach) - dry-run selected
+- Playa de Cala Clara (playa-de-cala-clara) - dry-run selected
+- Sailing Boat Trips Portocolom - Meltemi | Caribia (sailing-boat-trips-portocolom-meltemi-caribia) - dry-run selected
+- Sóller SUP (soller-sup) - dry-run selected
+- CALA Estany d'en Mas (cala-estany-d-en-mas) - dry-run selected
+- Aloha Vibes (aloha-vibes) - dry-run selected
+- Platja des Dolç (platja-des-dolc) - dry-run selected
+- FUN ISLAND Bike & Car Rental Cala Millor (fun-island-bike-car-rental-cala-millor) - dry-run selected
+- Can Vidal Boutique Rooms (can-vidal-boutique-rooms) - dry-run selected
+- Hotel Antares (hotel-antares) - dry-run selected
+- Playa del Portitxolet (playa-del-portitxolet) - dry-run selected
+- Lemon Lounge Bar (lemon-lounge-bar) - dry-run selected
+- SASTRE HERMANOS (sastre-hermanos) - dry-run selected
+- Hadley´s Club Mallorca (hadley-s-club-mallorca) - dry-run selected
+- Aparthotel Marina Drach (aparthotel-marina-drach) - dry-run selected
+- Star Boat - Motorboat & Yacht Charter (star-boat-motorboat-yacht-charter) - dry-run selected
+- unic, turisme d'interior (unic-turisme-d-interior) - dry-run selected
+- Contraviento (contraviento) - dry-run selected
+- Mallorca Wine Tours (mallorca-wine-tours) - dry-run selected
+- Boat Formentor (boat-formentor) - dry-run selected
+- Mallorca Blue Sea (mallorca-blue-sea) - dry-run selected
+- AQUA Beach Club (aqua-beach-club) - dry-run selected
+- Onmood Cala Ratjada (onmood-cala-ratjada) - dry-run selected
+- S'Hotelet de Santanyí (s-hotelet-de-santanyi) - dry-run selected
+- HC Bike Tours Cycling Services (hc-bike-tours-cycling-services) - dry-run selected
+- Illetas Beach (illetas-beach) - dry-run selected
+- coco's sandwicheria (coco-s-sandwicheria) - dry-run selected
+- Mallorca Cycling Holidays (mallorca-cycling-holidays) - dry-run selected
+- Real Yacht Charter (real-yacht-charter) - dry-run selected
+- Vela Charter Balear (vela-charter-balear) - dry-run selected
+- Yates Mallorca Charter (yates-mallorca-charter) - dry-run selected
+- El Faro Charter (el-faro-charter) - dry-run selected
+- Ca'n Puig de Sòller (ca-n-puig-de-soller) - dry-run selected
+- GOJET Excursions (gojet-excursions) - dry-run selected
+- Playa de Cala Vinyes (playa-de-cala-vinyes) - dry-run selected
+- Wandern Mallorca/Wander Jürgen Mallorca (wandern-mallorca-wander-jurgen-mallorca) - dry-run selected
+- HOTEL BINI (hotel-bini) - dry-run selected
+- Calvario Plaza Hotel (calvario-plaza-hotel) - dry-run selected
+- Mallorca Charter Experience (mallorca-charter-experience) - dry-run selected
+- La Cala Boat Tours (la-cala-boat-tours) - dry-run selected
+- Ca Na Rita|Platja de Muro (ca-na-rita-platja-de-muro) - dry-run selected
+- Residencial suites Valldemossa (residencial-suites-valldemossa) - dry-run selected
+- Blue Coast Charter (blue-coast-charter) - dry-run selected
+- Bluewater Hotel (bluewater-hotel) - dry-run selected
+- Playa De Los Pinos (playa-de-los-pinos) - dry-run selected
+- Cala Llamp (cala-llamp) - dry-run selected
+- The Lodge Mallorca, member of Small Luxury Hotels (the-lodge-mallorca-member-of-small-luxury-hotels) - dry-run selected
+- Cala Figuera (cala-figuera) - dry-run selected
+- Alcudia bay Boat Rentals (alcudia-bay-boat-rentals) - dry-run selected
+- Cala Estreta (cala-estreta) - dry-run selected
+- Es Brot (es-brot) - dry-run selected
+- Cala Ratjada Boats (Misael Morate) (cala-ratjada-boats-misael-morate) - dry-run selected
+- SB ARENAL (sb-arenal) - dry-run selected
+- Llaüts Mar i Cel (llauts-mar-i-cel) - dry-run selected
+- SAILING DAYS (sailing-days) - dry-run selected
+- SeaTime Mallorca (seatime-mallorca-alquiler-barcos-mallorca) - dry-run selected
+- Quad-Mallorca (quad-mallorca) - dry-run selected
+- Finca Can Sec (finca-can-sec) - dry-run selected
+- Playa de Palma (playa-de-palma) - dry-run selected
+- Puig Tomir (puig-tomir) - dry-run selected
+- Sa Franquesa Vella (sa-franquesa-vella) - dry-run selected
+- Beach Club & Restaurante Kaafu (beach-club-restaurante-kaafu) - dry-run selected
+- Mallorca from the Sky-Vuelos Alcudia (mallorca-from-the-sky-vuelos-alcudia) - dry-run selected
+- Tirant Boat Tours (tirant-boat-tours) - dry-run selected
+- Perbacco (perbacco) - dry-run selected
+- Sa Cova Baixa (sa-cova-baixa) - dry-run selected
+- Calita Santa Ponça (calita-santa-ponca) - dry-run selected
+- Ocean Dreams Charter Mallorca (ocean-dreams-charter-mallorca) - dry-run selected
+- Arenal de Sa Ràpita (arenal-de-sa-rapita) - dry-run selected
+- Valle de Boquer (valle-de-boquer) - dry-run selected
+- Ocolia Beach Club (ocolia-beach-club) - dry-run selected
+- Repic Apartments Soller (repic-apartments-soller) - dry-run selected
+- Palma Boats (palma-boats) - dry-run selected
+- Buggy Tours Paguera (buggy-tours-paguera) - dry-run selected
+- Hotel Juma (hotel-juma) - dry-run selected
+- XtremeMallorca Adventure Activities|Climb|Hikke|Water Sports (xtrememallorca-adventure-activities-climb-hikke-water-sports) - dry-run selected
+- Mallorsea (mallorsea) - dry-run selected
+- Platja de Ses Illetes (platja-de-ses-illetes) - dry-run selected
+- Restaurante Fontsanta (restaurante-fontsanta) - dry-run selected
+- Playa Roca de Camp de Mar (playa-roca-de-camp-de-mar) - dry-run selected
+- Hotel JS Sol de Can Picafort (hotel-js-sol-de-can-picafort) - dry-run selected
+- Cala d'Egos (cala-d-egos) - dry-run selected
+- Món Aventura Kayak Rental (mon-aventura-kayak-rental) - dry-run selected
+- Cap de Ses Salines (cap-de-ses-salines) - dry-run selected
+- terraza y sabor (terraza-y-sabor) - dry-run selected
+- El Pino Torrador Grill (Portocristo) (el-pino-torrador-grill-portocristo) - dry-run selected
+- Restaurant Beach Club (restaurant-beach-club) - dry-run selected
+- Hostal Oasis d'Or (hostal-oasis-d-or) - dry-run selected
+- Pacific charters mallorca (pacific-charters-mallorca) - dry-run selected
+- Sa Calma Boats: Ferry Andratx-Dragonera-Sant Elm (sa-calma-boats-ferry-andratx-dragonera-sant-elm) - dry-run selected
+- Rental Boats and Private Tours with captain|Charter no license and license (rental-boats-and-private-tours-with-captain-charter-no-license-and-license) - dry-run selected
+- MIG I MIG SA CANTINA CLUB NÀUTIC PORTO CRISTO (mig-i-mig-sa-cantina-club-nautic-porto-cristo) - dry-run selected
+- BOATLAND PORTOCOLOM (boatland-portocolom) - dry-run selected
+- Colonia Boat Charter (colonia-boat-charter) - dry-run selected
+- Finca Son Vivot-Agroturismo (finca-son-vivot-agroturismo) - dry-run selected
+- Denominación de Origen Vino Binissalem (denominacion-de-origen-vino-binissalem) - dry-run selected
+- Easyboats|Mallorca Yacht Charter, Sales, Management & Refit (easyboats-mallorca-yacht-charter-sales-management-refit) - dry-run selected
+- Platja de Cala Conills (platja-de-cala-conills) - dry-run selected
+- Online Charter - Yachtcharter auf Mallorca für Gruppen, Events und Incentives (online-charter-yachtcharter-auf-mallorca-fur-gruppen-events-und-incentives) - dry-run selected
+- MASTER RAMEN (Camí de la Vileta) (master-ramen-cami-de-la-vileta) - dry-run selected
+- Chiringuito Cala Vinyes (chiringuito-cala-vinyes) - dry-run selected
+- restaurante caliu parrilla grill (restaurante-caliu-parrilla-grill) - dry-run selected
+- Cala Vella (cala-vella) - dry-run selected
+- Rancho La Romana (rancho-la-romana) - dry-run selected
+- Sa Somera (sa-somera) - dry-run selected
+- Cala S'Algar (cala-s-algar) - dry-run selected
+- Oltre Pizzeria & Cocktail bar (oltre-pizzeria-cocktail-bar) - dry-run selected
+- El Paso Cantina Tex Mex (el-paso-cantina-tex-mex) - dry-run selected
+- DreamBeachRentalMallorca Port de Pollenca (dreambeachrentalmallorca-port-de-pollenca) - dry-run selected
+- INIMI Santanyí - Restaurant (inimi-santanyi-restaurant) - dry-run selected
+- Beach Club y Cocktail Bar La Pedrisa (beach-club-y-cocktail-bar-la-pedrisa) - dry-run selected
+- Boliche Boats (boliche-boats) - dry-run selected
+- Charters Llevant (charters-llevant) - dry-run selected
+- Rancho Cala Mandia (rancho-cala-mandia) - dry-run selected
+- Caló Fort (calo-fort) - dry-run selected
+- Apartamentos Azul Playa (apartamentos-azul-playa) - dry-run selected
+- Platja de Cala Galiota (platja-de-cala-galiota) - dry-run selected
+- Exe Portals Nous (exe-portals-nous) - dry-run selected
+- Playas de Paguera (playas-de-paguera) - dry-run selected
+- Hotel Hoposa Daina (hotel-hoposa-daina) - dry-run selected
+- Villa Es Velar (villa-es-velar) - dry-run selected
+- TheBlueIguana Barcos Charter (theblueiguana-barcos-charter) - dry-run selected
+- UM Chambao (um-chambao) - dry-run selected
+- Alcudia Horses (alcudia-horses) - dry-run selected
+- Hostal San Francisco (hostal-san-francisco) - dry-run selected
+- Cala Blanca (cala-blanca) - dry-run selected
+- Sa Pedruscada (sa-pedruscada) - dry-run selected
+- Platja den Repic (platja-den-repic) - dry-run selected
+- Walk Tuk Mallorca (walk-tuk-mallorca) - dry-run selected
+- La Roca (la-roca) - dry-run selected
+- Sedy Boats. Alquiler de lanchas. Alquiler de barcos (sedy-boats-alquiler-de-lanchas-alquiler-de-barcos-sin-licencia) - dry-run selected
+- Punta de sa Galera (punta-de-sa-galera) - dry-run selected
+- Cala Bota (cala-bota) - dry-run selected
+- Fun And Secrets-Cala Millor (fun-and-secrets-cala-millor) - dry-run selected
+- Aparcamiento (aparcamiento) - dry-run selected
+- Central Fun Park (central-fun-park) - dry-run selected
+- Chiringuito de camp de mar (chiringuito-de-camp-de-mar) - dry-run selected
+- Platja d’es Coto (platja-d-es-coto) - dry-run selected
+- Parque De La Coma (parque-de-la-coma) - dry-run selected
+- El Pas Vermell (el-pas-vermell) - dry-run selected
+- Cala de na Llòbriga (cala-de-na-llobriga) - dry-run selected
+- Top Beach (top-beach) - dry-run selected
+- Capalina (capalina) - dry-run selected
+- Platja de Can Curt (platja-de-can-curt) - dry-run selected
+- Bolzano Beach Club (bolzano-beach-club) - dry-run selected
+- Parque infantil de Peguera (parque-infantil-de-peguera) - dry-run selected
+- BOOK ME BOATS (book-me-boats) - dry-run selected
+
+## Errors
+

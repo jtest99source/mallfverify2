@@ -1,0 +1,215 @@
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500&display=swap');
+  .md * { box-sizing: border-box; margin: 0; padding: 0; }
+  .md { font-family: 'DM Sans', sans-serif; background: #F2EDE3; color: #1C1C18; }
+  .md-nav { background: #1C1C18; display: flex; align-items: center; justify-content: space-between; padding: 0 2rem; height: 52px; }
+  .md-nav-logo { font-family: 'Playfair Display', serif; color: #E8C888; font-size: 16px; letter-spacing: 0.08em; }
+  .md-nav-links { display: flex; gap: 1.5rem; }
+  .md-nav-links a { color: #6B7860; font-size: 12px; text-decoration: none; letter-spacing: 0.04em; text-transform: uppercase; }
+
+  .md-hero { background: #354030; padding: 3rem 2rem 2.5rem; position: relative; overflow: hidden; display: grid; grid-template-columns: 1fr auto; align-items: end; gap: 2rem; }
+  .md-hero-tex { position: absolute; top:0;left:0;right:0;bottom:0; background: repeating-linear-gradient(135deg, rgba(46,122,136,0.07) 0, rgba(46,122,136,0.07) 1px, transparent 1px, transparent 22px); }
+  .md-breadcrumb { font-size: 10px; color: #4A5440; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.9rem; position: relative; z-index: 2; }
+  .md-breadcrumb span { color: #C2813E; }
+  .md-hero h1 { font-family: 'Playfair Display', serif; font-size: 50px; font-weight: 900; color: #F2EDE3; line-height: 1; position: relative; z-index: 2; }
+  .md-hero-sub { color: #6B7860; font-size: 13px; margin-top: 5px; position: relative; z-index: 2; }
+  .md-hero-meta { display: flex; gap: 1.5rem; margin-top: 1.2rem; position: relative; z-index: 2; }
+  .md-hero-meta-item { border-left: 1px solid #4A5440; padding-left: 10px; }
+  .md-hero-meta-lbl { font-size: 9px; text-transform: uppercase; letter-spacing: 0.1em; color: #4A5440; }
+  .md-hero-meta-val { font-size: 13px; color: #F2EDE3; margin-top: 1px; }
+  .md-hero-tags { display: flex; gap: 5px; margin-top: 1rem; position: relative; z-index: 2; }
+  .md-hero-tags span { border: 1px solid rgba(107,120,96,0.5); color: #6B7860; font-size: 10px; padding: 3px 10px; border-radius: 1px; }
+  .md-hero-score { text-align: right; position: relative; z-index: 2; }
+  .md-hero-score .big { font-family: 'Playfair Display', serif; font-size: 68px; font-weight: 900; color: #C2813E; line-height: 1; }
+  .md-hero-score .stars { color: #C2813E; font-size: 15px; }
+  .md-hero-score .ct { color: #4A5440; font-size: 11px; margin-top: 2px; }
+
+  .md-layout { display: grid; grid-template-columns: 1fr 272px; }
+  .md-main { padding: 2rem; }
+  .md-aside { background: #fff; border-left: 1px solid #C8BFA8; padding: 1.5rem; }
+
+  .md-sec { margin-bottom: 2.2rem; }
+  .md-sec-title { font-family: 'Playfair Display', serif; font-size: 21px; margin-bottom: 1.1rem; padding-bottom: 0.5rem; border-bottom: 2px solid #C8BFA8; }
+
+  .md-ideal { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
+  .md-ideal-pill { background: #fff; border: 1px solid #C8BFA8; padding: 0.9rem 0.8rem; text-align: center; }
+  .md-ideal-pill i { font-size: 20px; color: #354030; display: block; margin-bottom: 5px; }
+  .md-ideal-pill span { font-size: 11px; color: #4A5440; }
+
+  .md-expect-box { background: #fff; border: 1px solid #C8BFA8; padding: 1.4rem; }
+  .md-expect-box p { font-size: 13px; line-height: 1.7; color: #2E2B24; }
+  .md-expect-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin-top: 1rem; }
+  .md-expect-item { background: #E8EDE0; padding: 0.8rem 1rem; border-left: 3px solid #4A5440; }
+  .md-expect-item-lbl { font-size: 9px; text-transform: uppercase; letter-spacing: 0.1em; color: #6B7860; }
+  .md-expect-item-val { font-size: 12px; color: #1C1C18; margin-top: 2px; }
+
+  .md-dist { display: flex; flex-direction: column; gap: 5px; margin-bottom: 1.4rem; }
+  .md-dist-row { display: flex; align-items: center; gap: 8px; }
+  .md-dist-lbl { font-size: 11px; color: #6B7860; width: 22px; text-align: right; }
+  .md-dist-bar { flex: 1; height: 5px; background: #E8E0D0; border-radius: 1px; overflow: hidden; }
+  .md-dist-fill { height: 100%; background: #C2813E; border-radius: 1px; }
+  .md-dist-n { font-size: 10px; color: #6B7860; width: 26px; }
+
+  .md-review { background: #fff; border: 1px solid #C8BFA8; padding: 1.1rem 1.4rem; margin-bottom: 6px; }
+  .md-review-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 7px; }
+  .md-review-stars { color: #C2813E; font-size: 13px; }
+  .md-review-badge { background: #E8E0D0; font-size: 9px; padding: 2px 6px; border-radius: 1px; text-transform: uppercase; letter-spacing: 0.08em; color: #4A5440; }
+  .md-review-date { font-size: 10px; color: #6B7860; text-transform: uppercase; letter-spacing: 0.06em; }
+  .md-review p { font-size: 12px; line-height: 1.6; color: #2E2B24; font-style: italic; }
+
+  .md-faq-wrap { border: 1px solid #C8BFA8; background: #fff; overflow: hidden; }
+  .md-faq-item { border-bottom: 1px solid #E8E0D0; }
+  .md-faq-item:last-child { border-bottom: none; }
+  .md-faq-q { padding: 0.9rem 1.4rem; font-size: 13px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; }
+  .md-faq-q span { color: #2E7A88; font-size: 16px; line-height: 1; }
+  .md-faq-a { padding: 0 1.4rem 0.9rem; font-size: 12px; color: #4A5440; line-height: 1.6; }
+
+  .md-aside-sec { margin-bottom: 1.4rem; padding-bottom: 1.4rem; border-bottom: 1px solid #E8E0D0; }
+  .md-aside-sec:last-child { border-bottom: none; margin-bottom: 0; }
+  .md-aside-lbl { font-size: 9px; text-transform: uppercase; letter-spacing: 0.12em; color: #6B7860; margin-bottom: 0.7rem; }
+  .md-score-block { display: flex; align-items: center; gap: 10px; background: #F2EDE3; border: 1px solid #C8BFA8; padding: 0.9rem; margin-bottom: 8px; }
+  .md-score-block-num { font-family: 'Playfair Display', serif; font-size: 34px; font-weight: 900; color: #C2813E; line-height: 1; }
+  .md-score-block-stars { color: #C2813E; font-size: 12px; }
+  .md-score-block-ct { font-size: 10px; color: #6B7860; }
+  .md-aside-btn { width: 100%; background: #1C1C18; color: #F2EDE3; border: none; font-family: 'DM Sans', sans-serif; font-size: 10px; padding: 10px; text-transform: uppercase; letter-spacing: 0.08em; cursor: pointer; border-radius: 1px; margin-bottom: 5px; }
+  .md-aside-btn.out { background: none; border: 1px solid #C8BFA8; color: #1C1C18; }
+  .md-map-ph { height: 130px; background: linear-gradient(135deg, #354030 0%, #2E2B24 100%); display: flex; align-items: center; justify-content: center; margin-bottom: 7px; }
+  .md-map-ph span { color: #4A5440; font-size: 11px; letter-spacing: 0.07em; text-transform: uppercase; }
+  .md-aside-table { width: 100%; font-size: 11px; border-collapse: collapse; }
+  .md-aside-table td { padding: 4px 0; }
+  .md-aside-table td:first-child { color: #6B7860; }
+  .md-aside-table td:last-child { text-align: right; color: #1C1C18; }
+  .md-aside-table td.accent { color: #2E7A88; }
+  .md-related { display: flex; flex-direction: column; gap: 5px; }
+  .md-related-item { background: #F2EDE3; border: 1px solid #C8BFA8; padding: 0.7rem 0.9rem; cursor: pointer; transition: background 0.15s; }
+  .md-related-item:hover { background: #E8E0D0; }
+  .md-related-cat { font-size: 9px; color: #2E7A88; text-transform: uppercase; letter-spacing: 0.08em; }
+  .md-related-name { font-family: 'Playfair Display', serif; font-size: 13px; margin-top: 1px; }
+</style>
+
+<div class="md">
+  <nav class="md-nav">
+    <span class="md-nav-logo">MALLORCA INSIDER</span>
+    <div class="md-nav-links">
+      <a href="#">Restaurantes</a><a href="#">Hoteles</a><a href="#">Beach clubs</a><a href="#">Barcos</a>
+    </div>
+  </nav>
+
+  <div class="md-hero">
+    <div class="md-hero-tex"></div>
+    <div>
+      <div class="md-breadcrumb">Restaurantes / <span>Patiki Beach</span></div>
+      <h1>Patiki Beach</h1>
+      <div class="md-hero-sub">Restaurante · Port de Sóller, Mallorca</div>
+      <div class="md-hero-meta">
+        <div class="md-hero-meta-item"><div class="md-hero-meta-lbl">Zona</div><div class="md-hero-meta-val">Port de Sóller</div></div>
+        <div class="md-hero-meta-item"><div class="md-hero-meta-lbl">Tipo</div><div class="md-hero-meta-val">Frente al mar</div></div>
+        <div class="md-hero-meta-item"><div class="md-hero-meta-lbl">Google</div><div class="md-hero-meta-val">Verificado</div></div>
+      </div>
+      <div class="md-hero-tags"><span>mar y arena</span><span>almuerzos</span><span>vistas</span><span>carta variada</span></div>
+    </div>
+    <div class="md-hero-score">
+      <div class="big">4.7</div>
+      <div class="stars">★★★★★</div>
+      <div class="ct">142 reseñas · Google</div>
+    </div>
+  </div>
+
+  <div class="md-layout">
+    <div class="md-main">
+      <div class="md-sec">
+        <div class="md-sec-title">Ideal para</div>
+        <div class="md-ideal">
+          <div class="md-ideal-pill"><i class="ti ti-droplet" aria-hidden="true"></i><span>Mar y playa</span></div>
+          <div class="md-ideal-pill"><i class="ti ti-users" aria-hidden="true"></i><span>Familias</span></div>
+          <div class="md-ideal-pill"><i class="ti ti-sun" aria-hidden="true"></i><span>Almuerzos</span></div>
+        </div>
+      </div>
+
+      <div class="md-sec">
+        <div class="md-sec-title">Qué esperar</div>
+        <div class="md-expect-box">
+          <p>Patiki Beach se presenta como restaurante en Mallorca, con una ficha pensada para viajeros que buscan una experiencia clara en la isla. Su reputación pública toca niveles editoriales: si tiene web, vale para confirmar condiciones; si no, conviene revisar Google Maps antes de sacar reserva.</p>
+          <div class="md-expect-grid">
+            <div class="md-expect-item"><div class="md-expect-item-lbl">Ambiente</div><div class="md-expect-item-val">Relajado, frente al mar</div></div>
+            <div class="md-expect-item"><div class="md-expect-item-lbl">Precio medio</div><div class="md-expect-item-val">25–45€ por persona</div></div>
+            <div class="md-expect-item"><div class="md-expect-item-lbl">Reserva</div><div class="md-expect-item-val">Recomendada en verano</div></div>
+            <div class="md-expect-item"><div class="md-expect-item-lbl">Aparcamiento</div><div class="md-expect-item-val">Zona azul cercana</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="md-sec">
+        <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:1rem; padding-bottom:0.5rem; border-bottom:2px solid #C8BFA8;">
+          <span class="md-sec-title" style="margin:0; border:none; padding:0;">Resumen de reseñas</span>
+          <span style="font-size:10px; color:#2E7A88; text-transform:uppercase; letter-spacing:0.07em;">142 reseñas →</span>
+        </div>
+        <div class="md-dist">
+          <div class="md-dist-row"><span class="md-dist-lbl">5★</span><div class="md-dist-bar"><div class="md-dist-fill" style="width:78%"></div></div><span class="md-dist-n">110</span></div>
+          <div class="md-dist-row"><span class="md-dist-lbl">4★</span><div class="md-dist-bar"><div class="md-dist-fill" style="width:15%"></div></div><span class="md-dist-n">21</span></div>
+          <div class="md-dist-row"><span class="md-dist-lbl">3★</span><div class="md-dist-bar"><div class="md-dist-fill" style="width:4%"></div></div><span class="md-dist-n">6</span></div>
+          <div class="md-dist-row"><span class="md-dist-lbl">2★</span><div class="md-dist-bar"><div class="md-dist-fill" style="width:2%"></div></div><span class="md-dist-n">3</span></div>
+          <div class="md-dist-row"><span class="md-dist-lbl">1★</span><div class="md-dist-bar"><div class="md-dist-fill" style="width:1%"></div></div><span class="md-dist-n">2</span></div>
+        </div>
+        <div class="md-review">
+          <div class="md-review-top">
+            <div style="display:flex;gap:6px;align-items:center;"><span class="md-review-stars">★★★★★</span><span class="md-review-badge">Google</span></div>
+            <span class="md-review-date">hace 2 semanas</span>
+          </div>
+          <p>"El servicio fue impecable y la vista al mar es simplemente difícil de superar en esta parte de la isla."</p>
+        </div>
+        <div class="md-review">
+          <div class="md-review-top">
+            <div style="display:flex;gap:6px;align-items:center;"><span class="md-review-stars">★★★★☆</span><span class="md-review-badge">Google</span></div>
+            <span class="md-review-date">hace 1 mes</span>
+          </div>
+          <p>"Muy buena cocina mediterránea, la merluza estaba perfecta. Un poco de espera para mesa pero mereció la pena."</p>
+        </div>
+      </div>
+
+      <div class="md-sec">
+        <div class="md-sec-title">Preguntas frecuentes</div>
+        <div class="md-faq-wrap">
+          <div class="md-faq-item"><div class="md-faq-q">¿Qué tipo de negocio es Patiki Beach?<span>+</span></div><div class="md-faq-a">Restaurante frente al mar en Port de Sóller, especializado en cocina mediterránea con producto local.</div></div>
+          <div class="md-faq-item"><div class="md-faq-q">¿La ficha está verificada editorialmente?<span>+</span></div><div class="md-faq-a">Sí, revisada y enriquecida con datos editoriales más allá del perfil de Google.</div></div>
+          <div class="md-faq-item"><div class="md-faq-q">¿Qué debo confirmar antes de visitarlos?<span>+</span></div><div class="md-faq-a">Recomendamos confirmar horario en temporada alta y disponibilidad para grupos.</div></div>
+          <div class="md-faq-item"><div class="md-faq-q">¿Es apto para ir en pareja?<span>+</span></div><div class="md-faq-a">Sí, especialmente para almuerzos tranquilos con vistas al mar y ambiente relajado.</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="md-aside">
+      <div class="md-aside-sec">
+        <div class="md-score-block">
+          <div class="md-score-block-num">4.7</div>
+          <div><div class="md-score-block-stars">★★★★★</div><div class="md-score-block-ct">142 reseñas · Google</div></div>
+        </div>
+        <button class="md-aside-btn">Ver en Google Maps</button>
+        <button class="md-aside-btn out">Visitar web</button>
+      </div>
+      <div class="md-aside-sec">
+        <div class="md-aside-lbl">Ubicación</div>
+        <div class="md-map-ph"><span>Mapa · Port de Sóller</span></div>
+        <div style="font-size:12px; color:#4A5440;">Port de Sóller, Mallorca</div>
+      </div>
+      <div class="md-aside-sec">
+        <div class="md-aside-lbl">Ficha rápida</div>
+        <table class="md-aside-table">
+          <tr><td>Zona</td><td>Sóller</td></tr>
+          <tr><td>Tipo</td><td>Restaurante</td></tr>
+          <tr><td>Reseñas</td><td class="accent">142 · ★ 4.7</td></tr>
+          <tr><td>Google</td><td>Verificado</td></tr>
+        </table>
+      </div>
+      <div class="md-aside-sec">
+        <div class="md-aside-lbl">También puede encajar</div>
+        <div class="md-related">
+          <div class="md-related-item"><div class="md-related-cat">Restaurante · Sóller</div><div class="md-related-name">Assona Portals</div></div>
+          <div class="md-related-item"><div class="md-related-cat">Restaurante · Tramuntana</div><div class="md-related-name">Mirador de Sa Foradada</div></div>
+          <div class="md-related-item"><div class="md-related-cat">Beach club · Calvià</div><div class="md-related-name">Balneario Illetas</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

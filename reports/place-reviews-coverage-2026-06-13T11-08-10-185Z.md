@@ -1,0 +1,575 @@
+# Place Reviews Coverage
+
+Generated: 2026-06-13T11:08:10.181Z
+Dry run: yes
+
+## Run
+
+- Selected: 1000
+- Processed: 0
+- Updated: 0
+- Failures: 0
+
+## Coverage by category
+
+| Category | Total | With reviews | Avg reviews |
+|---|---:|---:|---:|
+| activity | 154 | 54 | 1.75 |
+| beach | 74 | 46 | 3.11 |
+| beach-club | 54 | 35 | 3.24 |
+| boat-rental | 115 | 78 | 3.39 |
+| hotel | 215 | 78 | 1.81 |
+| restaurant | 388 | 205 | 2.64 |
+
+## Review distribution
+
+- 0 reviews: 504
+- 1-2 reviews: 0
+- 3-4 reviews: 0
+- 5 reviews: 496
+
+## Businesses without reviews after attempt
+
+- Iberostar Waves Cala Millor (iberostar-waves-cala-millor) - hotel
+- Iberostar Waves Alcudia Park (iberostar-waves-alcudia-park) - hotel
+- Iberostar Waves Club Cala Barca (iberostar-waves-club-cala-barca) - hotel
+- FERGUS Style Palma Beach (fergus-style-palma-beach) - hotel
+- Restaurante de Tapas & Paellas Casa Rufino (restaurante-de-tapas-paellas-casa-rufino) - restaurant
+- Evasion Authentic (evasion-authentic) - activity
+- Club Mac (club-mac) - hotel
+- Blau Punta Reina Resort (blau-punta-reina-resort) - hotel
+- S'Hort de Son Caulelles (s-hort-de-son-caulelles) - hotel
+- Hotel Hospes Maricel & Spa (hotel-hospes-maricel-spa) - hotel
+- Nema Boutique Hotel & Spa (nema-boutique-hotel-spa) - hotel
+- Ca'n Pescador - Port de Pollença (ca-n-pescador-port-de-pollenca) - restaurant
+- Restaurante Fontsanta (restaurante-fontsanta) - restaurant
+- Sa Calobra (sa-calobra-2) - beach
+- Blau Colonia Sant Jordi (blau-colonia-sant-jordi) - hotel
+- Marineland Mallorca (marineland-mallorca) - activity
+- MAR Y MAR (mar-y-mar) - restaurant
+- La Hacienda STEAK HOUSE (la-hacienda-steak-house) - restaurant
+- Green Garden Aparthotel (green-garden-aparthotel) - hotel
+- Rancho Grande Park (rancho-grande-park) - activity
+- Atlantis Charters boats (atlantis-charters-boats) - boat-rental
+- Hipotels Mediterráneo (hipotels-mediterraneo) - hotel
+- Thalassa Philosophy (thalassa-philosophy) - boat-rental
+- Castillo Hotel Son Vida, a Luxury Collection Hotel, Mallorca (castillo-hotel-son-vida-a-luxury-collection-hotel-mallorca) - hotel
+- Tirant Boat Tours (tirant-boat-tours) - boat-rental
+- BOOK ME BOATS (book-me-boats) - boat-rental
+- El Fogon7 (el-fogon7) - restaurant
+- Hipotels Hipocampo Playa (hipotels-hipocampo-playa) - hotel
+- Cala Figuera (cala-figuera) - boat-rental
+- JUNGLE PARC MALLORCA Parque forestal de aventuras y tirolinas (jungle-parc-mallorca-parque-forestal-de-aventuras-y-tirolinas) - activity
+- Llaüts Mar i Cel (llauts-mar-i-cel) - boat-rental
+- FERGUS Club Europa (fergus-club-europa) - hotel
+- BISTRO MERCAT (bistro-mercat) - restaurant
+- Mestral Charter S.L. (mestral-charter-s-l) - boat-rental
+- Bar Cervecería Es Pontàs (bar-cerveceria-es-pontas) - restaurant
+- Sailing Boat Trips Portocolom - Meltemi | Caribia (sailing-boat-trips-portocolom-meltemi-caribia) - boat-rental
+- Hipotels Cala Millor Park (hipotels-cala-millor-park) - hotel
+- Valentin Grand Park Suite Hotel (valentin-grand-park-suite-hotel) - hotel
+- Na Pesqueta Charters (na-pesqueta-charters) - boat-rental
+- Grupotel Aguait Resort & Spa (grupotel-aguait-resort-spa) - hotel
+- Restaurante las Tres Palas Grill (restaurante-las-tres-palas-grill) - restaurant
+- Fundación Juan March Palma (fundacion-juan-march-palma) - activity
+- Casa Enrique Tapas Bar (casa-enrique-tapas-bar) - restaurant
+- Fussio Lounge C B (fussio-lounge-c-b) - restaurant
+- Cassai Ses Salines (cassai-ses-salines) - beach
+- MIG I MIG SA CANTINA CLUB NÀUTIC PORTO CRISTO (mig-i-mig-sa-cantina-club-nautic-porto-cristo) - restaurant
+- Hoposa Villaconcha (hoposa-villaconcha) - hotel
+- MLL Mediterranean Bay (mll-mediterranean-bay) - hotel
+- Valentin Reina Paguera (valentin-reina-paguera) - hotel
+- CM Castell de Mar (cm-castell-de-mar) - hotel
+- miga de nube (miga-de-nube) - restaurant
+- allsun Hotel Bella Peguera (allsun-hotel-bella-peguera) - hotel
+- S'Arenal Portocolom (s-arenal-portocolom) - beach-club
+- Petit Caimari (petit-caimari) - hotel
+- El Sabor (el-sabor) - restaurant
+- Globales Janeiro (globales-janeiro) - hotel
+- Balneario 8 (balneario-8) - beach-club
+- Mar Hotels Playa Mar & Spa (mar-hotels-playa-mar-spa) - hotel
+- Bar Playa (bar-playa) - beach-club
+- Restaurante-Residencia Son Floriana (restaurante-residencia-son-floriana) - hotel
+- GOJET Andratx Jet Ski Tours (gojet-andratx-jet-ski-tours) - activity
+- Nakar Hotel (nakar-hotel) - hotel
+- El Chiringuito Beach House (el-chiringuito-beach-house) - beach-club
+- La Pala Rossa (la-pala-rossa) - restaurant
+- Il Chiringo (il-chiringo) - beach-club
+- O96 (o96) - restaurant
+- Hotel Son Trobat (hotel-son-trobat) - hotel
+- La Santa (la-santa) - restaurant
+- Coral Boats Mallorca (coral-boats-mallorca) - boat-rental
+- La Vista Cala Ratjada (la-vista-cala-ratjada) - restaurant
+- No frills Excursions Port Alcudia (no-frills-excursions-port-alcudia) - activity
+- Xiringuito (xiringuito) - restaurant
+- Ecovinyassa (ecovinyassa) - activity
+- Steakhouse Tango (steakhouse-tango) - restaurant
+- Hotel & Spa S'Entrador Playa (hotel-spa-s-entrador-playa) - hotel
+- Puerta del Moll (puerta-del-moll) - activity
+- Terragust (terragust) - restaurant
+- Ca'n Pintxo Restaurant (ca-n-pintxo-restaurant) - restaurant
+- Sa Ferreria (sa-ferreria) - restaurant
+- CM Mallorca Palace (cm-mallorca-palace) - hotel
+- Valentin Somni Hotel & Suites (valentin-somni-hotel-suites) - hotel
+- Vintasty (vintasty) - restaurant
+- Bondi Beach Magaluf (bondi-beach-magaluf) - beach-club
+- Sunlife Events Boat Charter Mallorca (sunlife-events-boat-charter-mallorca) - boat-rental
+- Protur Naisa Palma Hotel (protur-naisa-palma-hotel) - hotel
+- Hotel THB Felip (hotel-thb-felip) - hotel
+- Dinosaurland (dinosaurland) - activity
+- Palma Jump (palma-jump) - activity
+- Hotel Rural S'Olivaret & Spa (hotel-rural-s-olivaret-spa) - hotel
+- The Beach Bar (the-beach-bar) - beach-club
+- Chiringuito Cala Anguila (chiringuito-cala-anguila) - beach-club
+- Torre del Serral dels Falcons (torre-del-serral-dels-falcons) - activity
+- Island Tours Mallorca (island-tours-mallorca) - activity
+- RENT YOUR ADVENTURE-Die Wrangler Jeep Safari-Mallorca (rent-your-adventure-die-wrangler-jeep-safari-mallorca) - activity
+- Leonardo Royal Hotel Mallorca (leonardo-royal-hotel-mallorca) - hotel
+- Crazy Tours & Rent (crazy-tours-rent) - activity
+- Parc Natural de la Península de Llevant (parc-natural-de-la-peninsula-de-llevant) - activity
+- Cala Estreta (cala-estreta) - activity
+- Restaurante Marc Fosh (restaurante-marc-fosh) - restaurant
+- Excursiones y Actividades en Mallorca|Runaway Experiences (excursiones-y-actividades-en-mallorca-runaway-experiences) - activity
+- Hotel Forn Nou (hotel-forn-nou) - hotel
+- Polideportivo Municipal de Peguera (polideportivo-municipal-de-peguera) - activity
+- Hotel THB Guya Playa (hotel-thb-guya-playa) - hotel
+- Can Jano Vermutería (can-jano-vermuteria) - restaurant
+- Bodegas Angel (bodegas-angel) - activity
+- Jardín Botánico (jardin-botanico) - activity
+- Grupotel Amapola (grupotel-amapola) - hotel
+- Sa Trinxa (sa-trinxa) - beach
+- Marins Beach Club (marins-beach-club) - hotel
+- Aparthotel La Pérgola (aparthotel-la-pergola) - hotel
+- MAS QUE PIZZA PORTO CRISTO (mas-que-pizza-porto-cristo) - restaurant
+- Velero Rafael Verdera (velero-rafael-verdera) - boat-rental
+- Formula Tours Mallorca (formula-tours-mallorca) - activity
+- BQ Delfín Azul Hotel (bq-delfin-azul-hotel) - hotel
+- Hotel Cala d'Or Playa (hotel-cala-d-or-playa) - hotel
+- Playero (playero) - beach-club
+- Brick Palma (brick-palma) - hotel
+- Hotel Honucai (hotel-honucai) - hotel
+- Food Tours Balearics-Mallorca (food-tours-balearics-mallorca) - activity
+- rö nikkei (ro-nikkei) - restaurant
+- Universal Grand León & Spa (universal-grand-leon-spa) - hotel
+- Mar Balear Dive Center (mar-balear-dive-center) - activity
+- Concepció by Nobis (concepcio-by-nobis) - hotel
+- Nivia Born Boutique Hotel (nivia-born-boutique-hotel) - hotel
+- Sail Palma (sail-palma) - boat-rental
+- Hotel Colonial (hotel-colonial) - hotel
+- Forum Boutique hotel & Spa (forum-boutique-hotel-spa) - hotel
+- Es Petit de Valldemossa (es-petit-de-valldemossa) - hotel
+- Mallorca Diving Adventure (mallorca-diving-adventure) - activity
+- Hotel Can Simoneta (hotel-can-simoneta) - hotel
+- Tomir Portals Suites-Adults Only (+16) (tomir-portals-suites-adults-only-16) - hotel
+- Més Aventura (mes-aventura) - activity
+- Rock and Water Mallorca (rock-and-water-mallorca) - activity
+- Mallorca Wine Tours (mallorca-wine-tours) - activity
+- Celler Tianna Negre (celler-tianna-negre) - activity
+- Universal Hotel Aquamarin (universal-hotel-aquamarin) - hotel
+- Platja Palmira (platja-palmira) - activity
+- Bodega Santa Catarina (bodega-santa-catarina) - activity
+- Restaurant La Caracola (restaurant-la-caracola) - restaurant
+- Ca'n Beneït|Iconic Retreat (ca-n-beneit-iconic-retreat) - hotel
+- La Trencadora (la-trencadora) - restaurant
+- Blauxell Mallorca (blauxell-mallorca) - boat-rental
+- Tramuntana Adventures Mallorca (tramuntana-adventures-mallorca) - activity
+- Octopus Mallorca (octopus-mallorca) - activity
+- Contrabando Llucmajor (contrabando-llucmajor) - restaurant
+- Hotel & Restaurant Jardí d'Artà (hotel-restaurant-jardi-d-arta) - hotel
+- Boutique Hostal Mistral (boutique-hostal-mistral) - hotel
+- Mallorca Cycle Shuttle (mallorca-cycle-shuttle) - activity
+- Celler Sa Vinya (celler-sa-vinya) - restaurant
+- Can Canals Finca Hotel & SPA (can-canals-finca-hotel-spa) - hotel
+- Hotel Es Port (hotel-es-port) - hotel
+- Playa de Muro (playa-de-muro) - beach
+- Agroturismo Ses Illes (agroturismo-ses-illes) - hotel
+- Rancho Bonanza (rancho-bonanza) - activity
+- Hípico Cala Rajada-Eddys Reitstall (hipico-cala-rajada-eddys-reitstall) - activity
+- Restaurante La Cubita (restaurante-la-cubita) - restaurant
+- Albatros Diving (albatros-diving) - activity
+- Restaurante Nevada (restaurante-nevada) - restaurant
+- Grupotel Mallorca Mar (grupotel-mallorca-mar) - hotel
+- Hotel Club S'Illot (hotel-club-s-illot) - hotel
+- Hotel Cort (hotel-cort) - hotel
+- PADI-Barracuda Diving Mallorca (padi-barracuda-diving-mallorca) - activity
+- La Goleta Hotel de Mar (la-goleta-hotel-de-mar) - hotel
+- Can Cota Suites & Spa-Turismo de interior (can-cota-suites-spa-turismo-de-interior) - hotel
+- Nereida Caribia (nereida-caribia) - boat-rental
+- Platja Formentor (platja-formentor) - beach
+- Monkey Buggy Garage Cala Millor, Mallorca (monkey-buggy-garage-cala-millor-mallorca) - activity
+- La Finca Son Antem (la-finca-son-antem) - restaurant
+- Scuba Mallorca PADI 5 Star IDC (scuba-mallorca-padi-5-star-idc) - activity
+- Ca N'Aí (ca-n-ai) - hotel
+- Finca Hotel Rural Es Turó (finca-hotel-rural-es-turo) - hotel
+- MHOUSE Hotel Palma (mhouse-hotel-palma) - hotel
+- Platja de Formentor (platja-de-formentor) - beach
+- Tomates Verdes Restaurant, Llucmajor (tomates-verdes-restaurant-llucmajor) - restaurant
+- Porta de Mallorca (porta-de-mallorca) - activity
+- Rancho Jaume (rancho-jaume) - activity
+- Platja de Cala Millor (platja-de-cala-millor) - activity
+- Alcazar Hotel Soller (alcazar-hotel-soller) - hotel
+- Hotel Catalonia del Mar-Adults Only (hotel-catalonia-del-mar-adults-only) - hotel
+- Finca Son Roig Agroturismo (finca-son-roig-agroturismo) - hotel
+- Cala Gat (cala-gat) - beach
+- Hotel JS Cape Colom (hotel-js-cape-colom) - hotel
+- Cal Reiet Holistic Retreat (cal-reiet-holistic-retreat) - hotel
+- Cala de na Llòbriga (cala-de-na-llobriga) - beach
+- Món d'Aventura Outdoor Shop & Adventure Tours (mon-d-aventura-outdoor-shop-adventure-tours) - activity
+- Parque Natural de la Dragonera (parque-natural-de-la-dragonera) - activity
+- Caló des Moro (calo-des-moro) - beach
+- Agroturisme Muleta de Ca S'hereu (agroturisme-muleta-de-ca-s-hereu) - hotel
+- Suite del Mar (suite-del-mar) - boat-rental
+- Cala Figuera (cala-figuera) - beach
+- Embat Chiringuito Beach (embat-chiringuito-beach) - beach-club
+- Ikos Porto Petro (ikos-porto-petro) - hotel
+- Es Revellar Art Resort (adults only +16) (es-revellar-art-resort-adults-only-16) - hotel
+- Far des Cap Salines (far-des-cap-salines) - beach
+- Terra di Vino (terra-di-vino) - restaurant
+- Fassanelli Artà Bike (fassanelli-arta-bike) - activity
+- Kayak Trip Mallorca (kayak-trip-mallorca) - activity
+- FUN ISLAND Buggy & Quad Tours Sa Coma (fun-island-buggy-quad-tours-sa-coma) - activity
+- Ses Roquetes (ses-roquetes) - beach
+- Sa Creu Nova (sa-creu-nova) - hotel
+- Botanicactus (botanicactus) - beach
+- Mallorca Rental & Excursions (mallorca-rental-excursions) - activity
+- Cala Llamp (cala-llamp) - beach-club
+- Ca u Metge Restaurant (ca-u-metge-restaurant) - restaurant
+- Pirates Bay Club Cala Millor (pirates-bay-club-cala-millor) - beach-club
+- Sailing Porto Cristo-Malakai (sailing-porto-cristo-malakai) - boat-rental
+- Platja den Repic (platja-den-repic) - beach
+- Perla Grill&Terrace (perla-grill-terrace) - restaurant
+- Sailing Experience Pollensa (sailing-experience-pollensa) - boat-rental
+- Hotel Zurbarán Palma (hotel-zurbaran-palma) - hotel
+- Llauts Marins (llauts-marins) - boat-rental
+- Sailing Balearic (sailing-balearic) - boat-rental
+- Bahía Azul (bahia-azul) - hotel
+- Confianza Yachting (confianza-yachting) - boat-rental
+- Bistro Calle Cruz 20 (bistro-calle-cruz-20) - restaurant
+- Keida enjoy Mallorca S.L (keida-enjoy-mallorca-s-l) - activity
+- MartiniBoats24 Mallorca (martiniboats24-mallorca) - boat-rental
+- Holls Boat Charter (holls-boat-charter) - boat-rental
+- CM Charter / Sailme Mallorca (cm-charter-sailme-mallorca) - boat-rental
+- MALLORCAINBLUE CHARTER (mallorcainblue-charter) - boat-rental
+- Corb Marí Sea Experience (corb-mari-sea-experience) - boat-rental
+- Restaurante La Terraza (restaurante-la-terraza) - restaurant
+- S'Arenal beach (s-arenal-beach) - beach
+- Puerto Pollensa Boat Trips – Lanchas La Gaviota (puerto-pollensa-boat-trips-lanchas-la-gaviota) - activity
+- BOATLAND CALA D’OR (boatland-cala-d-or) - boat-rental
+- Restaurante Miramar (restaurante-miramar) - restaurant
+- Sailing Charter "Navegando Sin Rumbo" (sailing-charter-navegando-sin-rumbo) - boat-rental
+- Rancho Grande Mallorca (rancho-grande-mallorca) - activity
+- Alquimia calaratjada (alquimia-calaratjada) - restaurant
+- Platja Es Caragol (platja-es-caragol) - beach
+- Platja d'es Carbó (platja-d-es-carbo) - beach
+- Cala Tuent (cala-tuent) - beach
+- Cala S'Amarador (cala-s-amarador) - beach
+- Mallorca Premium Tours (mallorca-premium-tours) - activity
+- Club hípico Granja Es Pi (club-hipico-granja-es-pi) - activity
+- Sóller Tennis Club (soller-tennis-club) - activity
+- Platja Estanys (platja-estanys) - beach
+- Finca Es Torrent (finca-es-torrent) - hotel
+- Cala Marmols (cala-marmols) - beach
+- Buggy Mallorca (buggy-mallorca) - activity
+- Restaurant Azul de Mar (restaurant-azul-de-mar) - restaurant
+- Vins Nadal (vins-nadal) - activity
+- ROBINSON BOAT MALLORCA (robinson-boat-mallorca) - activity
+- Cala Petita (cala-petita) - beach
+- Azur Beach Club (azur-beach-club) - beach-club
+- Piraguas Mix Meeting Point Kayaks y Paddle Surf (piraguas-mix-meeting-point-kayaks-y-paddle-surf) - activity
+- Western Horse Trails Mallorca (western-horse-trails-mallorca) - activity
+- Bar Restaurant Can Murto (bar-restaurant-can-murto) - restaurant
+- CHARTER MARINE (charter-marine) - boat-rental
+- Mediterranean bike 360º cycling tours (mediterranean-bike-360-cycling-tours) - activity
+- Rancho Alegria Jay's Horses Mallorca (rancho-alegria-jay-s-horses-mallorca) - activity
+- Hotel Antares (hotel-antares) - hotel
+- El Faro Charter (el-faro-charter) - boat-rental
+- Star Boat - Motorboat & Yacht Charter (star-boat-motorboat-yacht-charter) - boat-rental
+- Playa de Cala Vinyes (playa-de-cala-vinyes) - beach
+- Mallorca Charter Experience (mallorca-charter-experience) - boat-rental
+- La Cala Boat Tours (la-cala-boat-tours) - boat-rental
+- Blue Coast Charter (blue-coast-charter) - boat-rental
+- Playa de Palma (playa-de-palma) - beach
+- Hoposa Costa d’Or (hoposa-costa-d-or) - hotel
+- Sa Cova Baixa (sa-cova-baixa) - beach
+- Restaurante Casa Julio (restaurante-casa-julio) - restaurant
+- OMBU Paseo del Borne (ombu-paseo-del-borne) - restaurant
+- Lili's | Brunch & Cocktails (lili-s-brunch-cocktails) - restaurant
+- Nala Brunch & Coffee (nala-brunch-coffee) - restaurant
+- La Trastienda Mallorca (la-trastienda-mallorca) - restaurant
+- Restaurante El Pilón (restaurante-el-pilon) - restaurant
+- Restaurante Emilio Innobar - Restaurante cocina de fusión (restaurante-emilio-innobar-restaurante-cocina-de-fusion) - restaurant
+- La Bodeguilla (la-bodeguilla) - restaurant
+- Scratch - Tapas gourmet (scratch-tapas-gourmet) - restaurant
+- La Rosa Vermuteria & Colmado (la-rosa-vermuteria-colmado) - restaurant
+- Bodega La Rambla (bodega-la-rambla) - restaurant
+- La Botana (la-botana) - restaurant
+- El Ambigú (el-ambigu) - restaurant
+- Bar España (bar-espana) - restaurant
+- Restaurant Ca´n Bella-vista (restaurant-ca-n-bella-vista) - restaurant
+- La Cafetería by La Goleta (la-cafeteria-by-la-goleta) - restaurant
+- AQUA Restaurant | Paellas & Cocktails en Alcudia (aqua-restaurant-paellas-cocktails-en-alcudia) - restaurant
+- Restaurante Bistro Mar Port d'Alcúdia (restaurante-bistro-mar-port-d-alcudia) - restaurant
+- La Romaguera Restaurant (la-romaguera-restaurant) - restaurant
+- Bon Vi Restaurant (bon-vi-restaurant) - restaurant
+- Ca'n Llimona (ca-n-llimona) - restaurant
+- Sa Granja Cafè - Restaurant (sa-granja-cafe-restaurant) - restaurant
+- Kingfisher restaurant (kingfisher-restaurant) - restaurant
+- Sa Frontera (sa-frontera) - restaurant
+- Suculenta Port de Sóller (suculenta-port-de-soller) - restaurant
+- Restaurante Cas Carreter (restaurante-cas-carreter) - restaurant
+- Restaurante UNIK | Pizzeria y Arroceria (restaurante-unik-pizzeria-y-arroceria) - restaurant
+- Restaurante Palmitos (restaurante-palmitos) - restaurant
+- Llaüt Beach Bar (llaut-beach-bar) - restaurant
+- Monkey Can Picafort Jet Ski Tours (monkey-can-picafort-jet-ski-tours) - activity
+- U Vicenç - Rooftop Restaurant - Only adults +12 (u-vicenc-rooftop-restaurant-only-adults-12) - restaurant
+- Hotel Coral Ballermann 6 (hotel-coral-ballermann-6) - hotel
+- U Plaça (u-placa) - restaurant
+- Wine Tasting Mallorca (wine-tasting-mallorca) - activity
+- Restaurante la Parada del Mar (restaurante-la-parada-del-mar) - restaurant
+- El Puerto (el-puerto) - restaurant
+- Ca'n Novell (ca-n-novell) - activity
+- Ca'n Gavella (ca-n-gavella) - restaurant
+- Ca'n Pescador - Playa de Muro (ca-n-pescador-playa-de-muro) - restaurant
+- Central María Turismo de interior (central-maria-turismo-de-interior) - hotel
+- RESTAURANTE MÓNACO (restaurante-monaco) - restaurant
+- Mar y Paz (mar-y-paz) - restaurant
+- Salitre Can Picafort (salitre-can-picafort) - restaurant
+- Restaurant Vinicius (restaurant-vinicius) - restaurant
+- Bodegas Bordoy (bodegas-bordoy) - activity
+- Mar de Gost by SanRemo (mar-de-gost-by-sanremo) - restaurant
+- Don Denís (don-denis) - restaurant
+- Restaurante Acuario (restaurante-acuario) - restaurant
+- Café Son Moll (cafe-son-moll) - restaurant
+- Mallorca Nature Tours (mallorca-nature-tours) - activity
+- Restaurante Los Arcos (restaurante-los-arcos) - restaurant
+- Sa Cabana (sa-cabana) - activity
+- Grupotel Farrutx (grupotel-farrutx) - hotel
+- Le Seazon bistro (le-seazon-bistro) - restaurant
+- Cucum Beach House (cucum-beach-house) - restaurant
+- Restaurante del mar (restaurante-del-mar) - restaurant
+- La Casita Bistrot (la-casita-bistrot) - restaurant
+- Ecocirer, Healthy Stay (ecocirer-healthy-stay) - hotel
+- Ses Àncores | Cocina tradicional | Pescado fresco| Paella | Spanisches Restaurant Cala Ratjada | Hafen | Fisch | Tapas | (ses-ancores-cocina-tradicional-pescado-fresco-paella-spanisches-restaurant-cala-ratjada-hafen-fisch-tapas) - restaurant
+- Ses Golondrines (ses-golondrines) - restaurant
+- Sauló by Puro (saulo-by-puro) - hotel
+- Restaurante Can Tasco (restaurante-can-tasco) - restaurant
+- Quince restaurante y cantina (quince-restaurante-y-cantina) - restaurant
+- Vibes by Quince Restaurante (vibes-by-quince-restaurante) - restaurant
+- Sa Cova (sa-cova) - restaurant
+- Restaurant Roland (restaurant-roland) - restaurant
+- Sa Pedra (sa-pedra) - restaurant
+- MI QUERENCIA KAREN (mi-querencia-karen) - restaurant
+- ARUX (arux) - restaurant
+- Stay Restaurant (stay-restaurant) - restaurant
+- Los Dos Caballeros Winery (los-dos-caballeros-winery) - activity
+- Bar Restaurante TO-DO (bar-restaurante-to-do) - restaurant
+- La Vermutería cala dor (la-vermuteria-cala-dor) - restaurant
+- Restaurante Paparazzi (restaurante-paparazzi) - restaurant
+- Levante Cafe-Bistro (levante-cafe-bistro) - restaurant
+- Restaurante Es Figueral (restaurante-es-figueral) - restaurant
+- Cafetería Granja Ses Voltes (cafeteria-granja-ses-voltes) - restaurant
+- coco's sandwicheria (coco-s-sandwicheria) - restaurant
+- La Vida Peguera Restaurant & Beach Lounge (la-vida-peguera-restaurant-beach-lounge) - restaurant
+- ONYX (onyx) - restaurant
+- Nirador (nirador) - restaurant
+- Bodega Ribas (bodega-ribas) - activity
+- Restaurante Chicos del Mar (restaurante-chicos-del-mar) - restaurant
+- Restaurante La Gritta (restaurante-la-gritta) - restaurant
+- El Galeon Taberna (el-galeon-taberna) - restaurant
+- Blend brunch café de especialidad. (blend-brunch-cafe-de-especialidad) - restaurant
+- Restaurante las Sirenas (restaurante-las-sirenas) - restaurant
+- Bar Andaluz (bar-andaluz) - restaurant
+- Chalet Siena (chalet-siena) - restaurant
+- Restaurante 1955 (restaurante-1955) - restaurant
+- El Patio (el-patio-2) - restaurant
+- Euforia Tapas (euforia-tapas) - restaurant
+- Restaurante Mare Meva Cala Ratjada (restaurante-mare-meva-cala-ratjada) - restaurant
+- Contraviento (contraviento) - restaurant
+- American steak&ribhouse Hoek Van Holland (american-steak-ribhouse-hoek-van-holland) - restaurant
+- Al Faro Llucmajor (al-faro-llucmajor) - restaurant
+- Restaurante Can Tià Taleca (restaurante-can-tia-taleca) - restaurant
+- Bodega Resident (bodega-resident) - activity
+- Il Gambero (il-gambero) - restaurant
+- Bodega Vinyes I Vins Ca Sa Padrina (bodega-vinyes-i-vins-ca-sa-padrina) - activity
+- Playa de Aucanada (playa-de-aucanada) - beach
+- La Bodeguita (la-bodeguita) - restaurant
+- ES P'DAL · RESTAURANT (es-p-dal-restaurant) - restaurant
+- BLAU OLE Cala Ratjada (blau-ole-cala-ratjada) - restaurant
+- Can Pep d'es Plà (can-pep-d-es-pla) - restaurant
+- S' Olivera (s-olivera) - restaurant
+- Restaurant Can Arabí (restaurant-can-arabi) - restaurant
+- Il Postino (il-postino) - restaurant
+- Perbacco (perbacco) - restaurant
+- Gomila Palma Apartments (gomila-palma-apartments) - hotel
+- Landhotel Can Davero (landhotel-can-davero) - restaurant
+- Calvario Plaza Hotel (calvario-plaza-hotel) - hotel
+- Figueret Restaurant (figueret-restaurant) - restaurant
+- Restaurante Mirador de la Victoria (restaurante-mirador-de-la-victoria) - restaurant
+- Restaurante Ca n'Eduardo (restaurante-ca-n-eduardo) - restaurant
+- Happy Dream Bar Restaurante (happy-dream-bar-restaurante) - restaurant
+- Restaurant Miramar (ALCUDIA) (restaurant-miramar-alcudia) - restaurant
+- Bar Restaurante Bonaire (bar-restaurante-bonaire) - restaurant
+- Restaurante Bonsol (restaurante-bonsol) - restaurant
+- Restaurante Ola del Mar (restaurante-ola-del-mar) - restaurant
+- DAICA restaurant & turismo de interior (daica-restaurant-turismo-de-interior) - restaurant
+- El Puentecito Mallorca (el-puentecito-mallorca) - restaurant
+- FINCA BINIAGUAL (finca-biniagual) - activity
+- Hotel Mirador (hotel-mirador) - hotel
+- Mesón Ca´n Pedro, Génova (meson-ca-n-pedro-genova) - restaurant
+- Es Verger (es-verger) - restaurant
+- Denominación de Origen Vino Binissalem (denominacion-de-origen-vino-binissalem) - activity
+- Little Tapas Place (little-tapas-place) - restaurant
+- Restaurant Es Pati (restaurant-es-pati) - restaurant
+- We Hostel Palma (we-hostel-palma) - hotel
+- Harajuku Gastro Sushi (harajuku-gastro-sushi) - restaurant
+- The Boc Hostels-City (the-boc-hostels-city) - hotel
+- KANSŌ Taberna Japonesa (kanso-taberna-japonesa) - restaurant
+- Bodegas Macià Batle (bodegas-macia-batle) - activity
+- K8 Sushi Arenal (k8-sushi-arenal) - restaurant
+- Portofino Mallorca (portofino-mallorca) - hotel
+- Restaurant Es Guix (restaurant-es-guix) - restaurant
+- Puig Tomir (puig-tomir) - activity
+- IZAKAYA | High Japanese Cuisine (izakaya-high-japanese-cuisine) - restaurant
+- Tramuntana Tours (tramuntana-tours) - activity
+- Cycling Holiday Tours Mallorca (cycling-holiday-tours-mallorca) - activity
+- The Boc Hostels-Palma (the-boc-hostels-palma) - hotel
+- Mills and Honey Cycling Mallorca (mills-and-honey-cycling-mallorca) - activity
+- Hotel Born Palma (hotel-born-palma) - hotel
+- DAIKIYA (daikiya) - restaurant
+- Ca n'Alexandre-Turismo de Interior (ca-n-alexandre-turismo-de-interior) - hotel
+- Mallorca Cycling Holidays (mallorca-cycling-holidays) - activity
+- Palma Suites Hotel Residence (palma-suites-hotel-residence) - hotel
+- Hotel Can Quetglas (hotel-can-quetglas) - hotel
+- Tess de Mar - Adults Only (tess-de-mar-adults-only) - restaurant
+- BO Hotel Palma (bo-hotel-palma) - hotel
+- Ciclos Major Cycling Holidays (ciclos-major-cycling-holidays) - activity
+- Palacio Ca Sa Galesa (palacio-ca-sa-galesa) - hotel
+- Hotel Glòria de Sant Jaume (hotel-gloria-de-sant-jaume) - hotel
+- Palma Bicycle Tours (palma-bicycle-tours) - activity
+- Be Live Adults Only La Cala Boutique (be-live-adults-only-la-cala-boutique) - hotel
+- FERGUS Style Soller Beach (fergus-style-soller-beach) - hotel
+- SportActive Luxury Cycling-5-Star Guided Luxury Cycling Holidays Mallorca (sportactive-luxury-cycling-5-star-guided-luxury-cycling-holidays-mallorca) - activity
+- Sóller Center (soller-center) - hotel
+- El Guía Hotel & Restaurant (el-guia-hotel-restaurant) - hotel
+- SólleRooms (sollerooms) - hotel
+- Hotel Continental Valldemossa (hotel-continental-valldemossa) - hotel
+- Ca'n Uetam (ca-n-uetam) - hotel
+- Residencial suites Valldemossa (residencial-suites-valldemossa) - hotel
+- Trails we ride-Mtb Tours Mallorca & Pyrenees-Mtb Rental (trails-we-ride-mtb-tours-mallorca-pyrenees-mtb-rental) - activity
+- Call&Ride Bike Rentals & Tours (call-ride-bike-rentals-tours) - activity
+- Okinawa Japanese (okinawa-japanese) - restaurant
+- Mon Boutique Hotel (mon-boutique-hotel) - hotel
+- Mar Calma Hotel (mar-calma-hotel) - hotel
+- HC Bike Tours Cycling Services (hc-bike-tours-cycling-services) - activity
+- Hotel Hoposa Bahía (hotel-hoposa-bahia) - hotel
+- Japo Santa Catalina Adults Ony +9 (japo-santa-catalina-adults-ony-9) - restaurant
+- Pleta de Mar Grand Luxury Hotel by nature, adults only – Preferred Hotels & Resorts (pleta-de-mar-grand-luxury-hotel-by-nature-adults-only-preferred-hotels-resorts) - hotel
+- Hotel El Vicenç de la Mar (hotel-el-vicenc-de-la-mar) - hotel
+- Hotel Hoposa Uyal (hotel-hoposa-uyal) - hotel
+- Grand Hotel Son Net (grand-hotel-son-net) - hotel
+- Hotel Hoposa Daina (hotel-hoposa-daina) - hotel
+- Hotel Villa Singala (hotel-villa-singala) - hotel
+- Cabot Hobby Club Apartments (cabot-hobby-club-apartments) - hotel
+- Bazaar (bazaar) - restaurant
+- Take Japanese Restaurant (take-japanese-restaurant) - restaurant
+- FORN de Sant Joan (forn-de-sant-joan) - restaurant
+- Grupotel Marítimo (grupotel-maritimo) - hotel
+- Marui Sushi Bar & Restaurante Japonés (marui-sushi-bar-restaurante-japones) - restaurant
+- RESTAURANTE YUMEE (restaurante-yumee) - restaurant
+- SAILING DAYS (sailing-days) - activity
+- Pomelia Sea Lab Mallorca (pomelia-sea-lab-mallorca) - restaurant
+- Grupotel Gran Vista & Spa (grupotel-gran-vista-spa) - hotel
+- sunbonoo.com-Das Original (sunbonoo-com-das-original) - activity
+- Tonga Tower Design Hotel & Suites (tonga-tower-design-hotel-suites) - hotel
+- Ca's Brau (ca-s-brau) - restaurant
+- Hotel Son Bauló (hotel-son-baulo) - hotel
+- Hotel THB Gran Playa (hotel-thb-gran-playa) - hotel
+- Hipotels Hipocampo Palace (hipotels-hipocampo-palace) - hotel
+- Cala Millor Garden Hotel (cala-millor-garden-hotel) - hotel
+- Globales Isabel (globales-isabel) - hotel
+- Hotel d'Or (hotel-d-or) - hotel
+- allsun Hotel Cristóbal Colón (allsun-hotel-cristobal-colon) - hotel
+- HSM Son Verí (hsm-son-veri) - hotel
+- Monnaber Nou Finca hotel & Spa (monnaber-nou-finca-hotel-spa) - hotel
+- Petit Hotel Alaró (petit-hotel-alaro) - hotel
+- Don Neko Sushi (don-neko-sushi) - restaurant
+- El Perrito (el-perrito) - restaurant
+- Cafeteria Moni (cafeteria-moni) - restaurant
+- Petit Hotel Hostatgeria La Victoria (petit-hotel-hostatgeria-la-victoria) - hotel
+- Mestís Restaurant · Santa Catalina (mestis-restaurant-santa-catalina) - restaurant
+- SMILE BOAT RENTAL (smile-boat-rental) - boat-rental
+- Mallorca d’Or Charter Boats (mallorca-d-or-charter-boats) - boat-rental
+- Solo | Santa Catalina (solo-santa-catalina) - restaurant
+- Nalai Sushi (nalai-sushi) - restaurant
+- Bar Can Joan Frau (bar-can-joan-frau) - restaurant
+- SALVAJE | Sushi Palma (salvaje-sushi-palma) - restaurant
+- Ranxo Ses Roques (ranxo-ses-roques) - activity
+- Naturacavallsacova (naturacavallsacova) - activity
+- Zel Mallorca (zel-mallorca) - hotel
+- Santina Brunch (santina-brunch) - restaurant
+- Born 8 (born-8) - restaurant
+- Hotel Eden Palma Playa (hotel-eden-palma-playa) - hotel
+- Ocolia Beach Club (ocolia-beach-club) - beach-club
+- Mallorca Horses (mallorca-horses) - activity
+- The Sunset Sea Club-Adults only (the-sunset-sea-club-adults-only) - beach-club
+- Palma Aquarium (palma-aquarium) - activity
+- XtremeMallorca Adventure Activities|Climb|Hikke|Water Sports (xtrememallorca-adventure-activities-climb-hikke-water-sports) - activity
+- Parque De La Coma (parque-de-la-coma) - activity
+- STAND UP PADDLE SURF-MIA BAHIA I-Cala D'or (stand-up-paddle-surf-mia-bahia-i-cala-d-or) - activity
+- Fun And Secrets-Cala Millor (fun-and-secrets-cala-millor) - activity
+- FUN ISLAND Bike & Car Rental Cala Millor (fun-island-bike-car-rental-cala-millor) - activity
+- Parc Porto Cristo (parc-porto-cristo) - activity
+- Reserva Park (reserva-park) - activity
+
+## Businesses without google_place_id
+
+- Vandal Palma (vandal-palma) - restaurant
+- Cala Mondragó (cala-mondrago) - beach
+- El Camino (el-camino-palma) - restaurant
+- Belmond La Residencia (belmond-la-residencia-deia) - hotel
+- Gran Folies (gran-folies-cala-llamp) - beach-club
+- Nikki Beach Mallorca (nikki-beach-mallorca) - beach-club
+- Mallorca Boat Hire (mallorca-boat-hire) - boat-rental
+- Purobeach Palma (purobeach-palma) - beach-club
+- Paseo a Cala Deià (sendero-cala-deia) - activity
+- Santi Taura (santi-taura-palma) - restaurant
+- Cap Rocat (cap-rocat) - hotel
+- Illeta (illeta-camp-de-mar) - restaurant
+- Balneario Illetas (balneario-illetas) - beach-club
+- Cala Deià (cala-deia) - beach
+
+## Failures
+
+
+## Preview
+
+- Palma Aquarium (palma-aquarium) - activity: 0 reviews, 0 photos, 0 facts
+- Iberostar Waves Alcudia Park (iberostar-waves-alcudia-park) - hotel: 0 reviews, 0 photos, 0 facts
+- Mesón Ca´n Pedro, Génova (meson-ca-n-pedro-genova) - restaurant: 0 reviews, 0 photos, 0 facts
+- Figueret Restaurant (figueret-restaurant) - restaurant: 0 reviews, 0 photos, 0 facts
+- Iberostar Waves Club Cala Barca (iberostar-waves-club-cala-barca) - hotel: 0 reviews, 0 photos, 0 facts
+- Restaurante de Tapas & Paellas Casa Rufino (restaurante-de-tapas-paellas-casa-rufino) - restaurant: 0 reviews, 0 photos, 0 facts
+- La Rosa Vermuteria & Colmado (la-rosa-vermuteria-colmado) - restaurant: 0 reviews, 0 photos, 0 facts
+- Evasion Authentic (evasion-authentic) - activity: 0 reviews, 0 photos, 0 facts
+- Iberostar Waves Cala Millor (iberostar-waves-cala-millor) - hotel: 0 reviews, 0 photos, 0 facts
+- Bar Andaluz (bar-andaluz) - restaurant: 0 reviews, 0 photos, 0 facts
+- Blau Punta Reina Resort (blau-punta-reina-resort) - hotel: 0 reviews, 0 photos, 0 facts
+- Restaurante la Parada del Mar (restaurante-la-parada-del-mar) - restaurant: 0 reviews, 0 photos, 0 facts
+- Club Mac (club-mac) - hotel: 0 reviews, 0 photos, 0 facts
+- Euforia Tapas (euforia-tapas) - restaurant: 0 reviews, 0 photos, 0 facts
+- Hotel Hospes Maricel & Spa (hotel-hospes-maricel-spa) - hotel: 0 reviews, 0 photos, 0 facts
+- Cala Figuera (cala-figuera) - boat-rental: 0 reviews, 0 photos, 0 facts
+- Restaurante Los Arcos (restaurante-los-arcos) - restaurant: 0 reviews, 0 photos, 0 facts
+- OMBU Paseo del Borne (ombu-paseo-del-borne) - restaurant: 0 reviews, 0 photos, 0 facts
+- Bar España (bar-espana) - restaurant: 0 reviews, 0 photos, 0 facts
+- Ca'n Pescador - Port de Pollença (ca-n-pescador-port-de-pollenca) - restaurant: 0 reviews, 0 photos, 0 facts
+- Platja de Cala Millor (platja-de-cala-millor) - activity: 0 reviews, 0 photos, 0 facts
+- Restaurante Casa Julio (restaurante-casa-julio) - restaurant: 0 reviews, 0 photos, 0 facts
+- Sa Calobra (sa-calobra-2) - beach: 0 reviews, 0 photos, 0 facts
+- Café Son Moll (cafe-son-moll) - restaurant: 0 reviews, 0 photos, 0 facts
+- Call&Ride Bike Rentals & Tours (call-ride-bike-rentals-tours) - activity: 0 reviews, 0 photos, 0 facts
+- Born 8 (born-8) - restaurant: 0 reviews, 0 photos, 0 facts
+- Ecovinyassa (ecovinyassa) - activity: 0 reviews, 0 photos, 0 facts
+- DAIKIYA (daikiya) - restaurant: 0 reviews, 0 photos, 0 facts
+- Blau Colonia Sant Jordi (blau-colonia-sant-jordi) - hotel: 0 reviews, 0 photos, 0 facts
+- Marineland Mallorca (marineland-mallorca) - activity: 0 reviews, 0 photos, 0 facts

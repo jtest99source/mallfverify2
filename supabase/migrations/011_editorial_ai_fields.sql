@@ -1,0 +1,9 @@
+alter table businesses add column if not exists review_sentiment jsonb;
+alter table businesses add column if not exists review_themes jsonb;
+alter table businesses add column if not exists review_pros jsonb;
+alter table businesses add column if not exists review_cons jsonb;
+alter table businesses add column if not exists services jsonb;
+alter table businesses add column if not exists price_estimate jsonb;
+alter table businesses add column if not exists featured_reviews jsonb;
+alter table businesses add column if not exists editorial_generated_at timestamptz;
+alter table businesses add column if not exists editorial_source text;

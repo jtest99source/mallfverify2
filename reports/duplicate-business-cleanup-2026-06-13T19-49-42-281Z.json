@@ -1,0 +1,187 @@
+{
+  "generated": "2026-06-13T19:49:42.283Z",
+  "results": [
+    {
+      "from": "vandal-palma",
+      "to": "vandal-palma-2",
+      "category": "restaurant",
+      "updated": 1,
+      "row": {
+        "slug": "vandal-palma",
+        "status": "draft",
+        "category": "restaurant",
+        "display_name": "Vandal Palma",
+        "name": "Vandal Palma"
+      }
+    },
+    {
+      "from": "cala-mondrago",
+      "to": "cala-mondrago-2",
+      "category": "beach",
+      "updated": 1,
+      "row": {
+        "slug": "cala-mondrago",
+        "status": "draft",
+        "category": "beach",
+        "display_name": "Cala Mondragó",
+        "name": "Cala Mondragó"
+      }
+    },
+    {
+      "from": "nikki-beach-mallorca",
+      "to": "nikki-beach-mallorca-2",
+      "category": "beach-club",
+      "updated": 1,
+      "row": {
+        "slug": "nikki-beach-mallorca",
+        "status": "draft",
+        "category": "beach-club",
+        "display_name": "Nikki Beach Mallorca",
+        "name": "Nikki Beach Mallorca"
+      }
+    },
+    {
+      "from": "mallorca-boat-hire",
+      "to": "mallorca-boat-hire-2",
+      "category": "boat-rental",
+      "updated": 1,
+      "row": {
+        "slug": "mallorca-boat-hire",
+        "status": "draft",
+        "category": "boat-rental",
+        "display_name": "Mallorca Boat Hire",
+        "name": "Mallorca Boat Hire"
+      }
+    },
+    {
+      "from": "sa-calobra",
+      "to": "sa-calobra-2",
+      "category": "beach",
+      "updated": 1,
+      "row": {
+        "slug": "sa-calobra",
+        "status": "draft",
+        "category": "beach",
+        "display_name": "Sa Calobra",
+        "name": "Sa Calobra"
+      }
+    },
+    {
+      "from": "playa-de-cala-serena-2",
+      "to": "playa-de-cala-serena",
+      "category": "beach",
+      "updated": 1,
+      "row": {
+        "slug": "playa-de-cala-serena-2",
+        "status": "draft",
+        "category": "beach",
+        "display_name": "Playa de Cala Serena",
+        "name": "Playa de Cala Serena"
+      }
+    },
+    {
+      "from": "cala-petita",
+      "to": "cala-petita-2",
+      "category": "beach",
+      "updated": 1,
+      "row": {
+        "slug": "cala-petita",
+        "status": "draft",
+        "category": "beach",
+        "display_name": "Cala Petita",
+        "name": "Cala Petita"
+      }
+    },
+    {
+      "from": "cala-tuent",
+      "to": "cala-tuent-2",
+      "category": "beach",
+      "updated": 1,
+      "row": {
+        "slug": "cala-tuent",
+        "status": "draft",
+        "category": "beach",
+        "display_name": "Cala Tuent",
+        "name": "Cala Tuent"
+      }
+    },
+    {
+      "from": "playa-de-cala-pi",
+      "to": "playa-de-cala-pi-2",
+      "category": "beach",
+      "updated": 1,
+      "row": {
+        "slug": "playa-de-cala-pi",
+        "status": "draft",
+        "category": "beach",
+        "display_name": "Playa de Cala Pi",
+        "name": "Playa de Cala Pi"
+      }
+    },
+    {
+      "from": "cala-deia",
+      "to": "cala-deia-2",
+      "category": "beach",
+      "updated": 1,
+      "row": {
+        "slug": "cala-deia",
+        "status": "draft",
+        "category": "beach",
+        "display_name": "Cala Deià",
+        "name": "Cala Deià"
+      }
+    },
+    {
+      "from": "el-patio",
+      "to": "el-patio-2",
+      "category": "restaurant",
+      "updated": 1,
+      "row": {
+        "slug": "el-patio",
+        "status": "draft",
+        "category": "restaurant",
+        "display_name": "El Patio",
+        "name": "El Patio"
+      }
+    },
+    {
+      "from": "platja-d-alcudia-2",
+      "to": "platja-d-alcudia",
+      "category": "beach",
+      "updated": 1,
+      "row": {
+        "slug": "platja-d-alcudia-2",
+        "status": "draft",
+        "category": "beach",
+        "display_name": "Platja d'Alcudia",
+        "name": "Platja d'Alcudia"
+      }
+    },
+    {
+      "from": "no-frills-excursions-2",
+      "to": "no-frills-excursions",
+      "category": "activity",
+      "updated": 1,
+      "row": {
+        "slug": "no-frills-excursions-2",
+        "status": "draft",
+        "category": "activity",
+        "display_name": "No Frills Excursions",
+        "name": "No Frills Excursions"
+      }
+    },
+    {
+      "from": "kayak-tour-mallorca",
+      "to": "kayak-tour-mallorca-2",
+      "category": "activity",
+      "updated": 1,
+      "row": {
+        "slug": "kayak-tour-mallorca",
+        "status": "draft",
+        "category": "activity",
+        "display_name": "Kayak Tour Mallorca",
+        "name": "Kayak Tour Mallorca"
+      }
+    }
+  ]
+}
