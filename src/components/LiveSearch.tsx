@@ -197,7 +197,7 @@ export function SearchBox({ locale, variant = "navbar", className = "" }: Search
   const showDropdown = open && normalize(query).length >= 2;
   const inputClass = isHero
     ? "h-14 w-full rounded-md border border-borderline bg-white px-12 text-base text-ink shadow-soft outline-none placeholder:text-sage focus:border-coral"
-    : "h-9 w-[170px] rounded-full border border-borderline bg-linen px-9 text-[12px] text-ink outline-none placeholder:text-sage transition-all duration-200 focus:w-[280px] focus:border-ink focus:bg-white";
+    : "h-9 w-[220px] rounded-full border border-borderline bg-linen px-9 text-[12px] text-ink outline-none placeholder:text-sage transition-all duration-200 focus:w-[300px] focus:border-ink focus:bg-white";
 
   return (
     <div ref={wrapperRef} className={`relative z-[90] ${className}`}>
