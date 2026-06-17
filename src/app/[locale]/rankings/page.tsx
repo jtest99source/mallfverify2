@@ -66,7 +66,7 @@ export default async function RankingsPage({
 
   return (
     <main className="bg-[linear-gradient(180deg,#FFF8EC_0%,#FFFDF7_46%,#FFF8EC_100%)]">
-      <section className="px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
+      <section className="px-4 pt-4 pb-3 sm:px-6 sm:py-12 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-6 lg:grid-cols-[1fr_360px] lg:items-end">
             <div>
@@ -77,7 +77,7 @@ export default async function RankingsPage({
               <h1 className="font-display max-w-4xl text-balance text-3xl font-black leading-[1.05] text-ink sm:text-5xl lg:text-6xl">
                 {copy.rankings.title}
               </h1>
-              <p className="mt-4 max-w-3xl text-sm leading-6 text-olive sm:mt-5 sm:leading-7">
+              <p className="mt-4 hidden max-w-3xl text-sm leading-6 text-olive sm:mt-5 sm:block sm:leading-7">
                 {copy.rankings.intro}
               </p>
             </div>
@@ -116,10 +116,10 @@ export default async function RankingsPage({
 
       <section className="px-4 pb-2 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
-          <div className="mb-4 max-w-4xl sm:mb-5">
+          <div className="mb-3 max-w-4xl sm:mb-5">
             <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-[#0E8F72]">{copy.rankings.activeRanking}</p>
             <h2 className="font-display mt-2 text-2xl font-black text-ink sm:text-4xl">{activeConfig.title}</h2>
-            <p className="mt-2 text-sm leading-6 text-sage sm:mt-3 sm:leading-7">{activeConfig.intro}</p>
+            <p className="mt-2 hidden text-sm leading-6 text-sage sm:mt-3 sm:block sm:leading-7">{activeConfig.intro}</p>
           </div>
         </div>
       </section>

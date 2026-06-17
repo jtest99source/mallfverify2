@@ -172,43 +172,72 @@ export function TopRankingExplorer({
           className="h-12 w-full rounded-lg border border-[#E7DED0] bg-white pl-11 pr-4 text-sm text-ink shadow-sm focus:border-[#0E8F72] focus:outline-none focus:ring-1 focus:ring-[#0E8F72]"
         />
       </div>
-      <div className="rounded-lg border border-[#E7DED0] bg-white/85 p-4 shadow-[0_18px_45px_rgba(27,46,75,0.035)]">
+      {/* Mobile filters: sort chips + compact 2-col dropdowns */}
+      <div className="sm:hidden">
+        <div className="flex gap-2 overflow-x-auto pb-1 [&::-webkit-scrollbar]:hidden">
+          {sortOptions.map((option) => (
+            <button
+              key={option.value}
+              type="button"
+              onClick={() => updateParam("sort", option.value)}
+              className={`shrink-0 rounded-full px-3.5 py-2 text-[11px] font-bold uppercase tracking-[0.06em] transition-colors ${
+                sort === option.value
+                  ? "bg-ink text-white"
+                  : "border border-[#E7DED0] bg-white text-ink"
+              }`}
+            >
+              {option.label}
+            </button>
+          ))}
+        </div>
+        <div className="mt-2 grid grid-cols-2 gap-2">
+          <select value={facetSlug} onChange={(event) => updateParam("type", event.target.value)} className="h-10 rounded-md border border-[#E7DED0] bg-[#FFFDF7] px-2 text-xs text-ink focus:border-[#0E8F72] focus:ring-[#0E8F72]">
+            <option value={ALL}>{copy.filters.type}: {copy.filters.all}</option>
+            {facets.map((facet) => (
+              <option key={facet.slug} value={facet.slug}>{facet.label} ({facet.count})</option>
+            ))}
+          </select>
+          <select value={place} onChange={(event) => updateParam("area", event.target.value)} className="h-10 rounded-md border border-[#E7DED0] bg-[#FFFDF7] px-2 text-xs text-ink focus:border-[#0E8F72] focus:ring-[#0E8F72]">
+            <option value={ALL}>{copy.filters.place}: {copy.filters.allPlaces}</option>
+            {places.map((item) => (
+              <option key={item} value={item}>{item}</option>
+            ))}
+          </select>
+        </div>
+        <p className="mt-2 text-[11px] font-bold uppercase tracking-[0.1em] text-sage">
+          {filtered.length.toLocaleString(numberLocale(locale))} {copy.filters.results}
+        </p>
+      </div>
+
+      {/* Desktop filters: existing 3-col grid */}
+      <div className="hidden rounded-lg border border-[#E7DED0] bg-white/85 p-4 shadow-[0_18px_45px_rgba(27,46,75,0.035)] sm:block">
         <div className="grid gap-3 sm:grid-cols-[1fr_1fr_1fr_auto] sm:items-end">
           <label className="grid gap-1 text-[10px] font-bold uppercase tracking-[0.12em] text-sage">
             {copy.filters.sortBy}
             <select value={sort} onChange={(event) => updateParam("sort", event.target.value)} className="h-11 rounded-sm border-[#E7DED0] bg-[#FFFDF7] text-sm font-normal normal-case tracking-normal text-ink focus:border-[#0E8F72] focus:ring-[#0E8F72]">
               {sortOptions.map((option) => (
-                <option key={option.value} value={option.value}>
-                  {option.label}
-                </option>
+                <option key={option.value} value={option.value}>{option.label}</option>
               ))}
             </select>
           </label>
-
           <label className="grid gap-1 text-[10px] font-bold uppercase tracking-[0.12em] text-sage">
             {copy.filters.type}
             <select value={facetSlug} onChange={(event) => updateParam("type", event.target.value)} className="h-11 rounded-sm border-[#E7DED0] bg-[#FFFDF7] text-sm font-normal normal-case tracking-normal text-ink focus:border-[#0E8F72] focus:ring-[#0E8F72]">
               <option value={ALL}>{copy.filters.all}</option>
               {facets.map((facet) => (
-                <option key={facet.slug} value={facet.slug}>
-                  {facet.label} ({facet.count})
-                </option>
+                <option key={facet.slug} value={facet.slug}>{facet.label} ({facet.count})</option>
               ))}
             </select>
           </label>
-
           <label className="grid gap-1 text-[10px] font-bold uppercase tracking-[0.12em] text-sage">
             {copy.filters.place}
             <select value={place} onChange={(event) => updateParam("area", event.target.value)} className="h-11 rounded-sm border-[#E7DED0] bg-[#FFFDF7] text-sm font-normal normal-case tracking-normal text-ink focus:border-[#0E8F72] focus:ring-[#0E8F72]">
               <option value={ALL}>{copy.filters.allPlaces}</option>
               {places.map((item) => (
-                <option key={item} value={item}>
-                  {item}
-                </option>
+                <option key={item} value={item}>{item}</option>
               ))}
             </select>
           </label>
-
           <div className="text-[11px] font-bold uppercase tracking-[0.1em] text-sage sm:pb-3">
             {filtered.length.toLocaleString(numberLocale(locale))} {copy.filters.results}
           </div>

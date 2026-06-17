@@ -45,7 +45,7 @@ export const uiCopy = {
     rankings: {
       metaTitle: "Rankings objetivos de Mallorca | Mallorca Verified",
       metaDescription: "Rankings de Mallorca para comparar restaurantes, hoteles, playas, barcos y planes con datos reales de Google, contexto útil y sin publicidad.",
-      eyebrow: "Actualizado a diario · Sin posiciones de pago · Consenso de reseñas verificadas",
+      eyebrow: "Sin publicidad · Sin posiciones de pago",
       title: "Busca lo mejor de Mallorca sin perderte entre listas.",
       intro: "Elige una categoría, filtra por zona o tipo de plan y compara con calma. Usamos reseñas reales de Google y señales públicas para que sea más fácil decidir dónde comer, dormir, reservar o pasar el día.",
       activeRanking: "Ranking activo",
@@ -155,7 +155,7 @@ export const uiCopy = {
     rankings: {
       metaTitle: "Objective Mallorca rankings | Mallorca Verified",
       metaDescription: "Compare Mallorca restaurants, hotels, beaches, boats and things to do with real Google data, useful context and no paid placements.",
-      eyebrow: "Updated daily · No paid placements · Verified review consensus",
+      eyebrow: "No ads · No paid placements",
       title: "Find the best of Mallorca without the noise.",
       intro: "Pick a category, filter by area or vibe, and browse at your own pace. We use real Google reviews and public signals to make it easier to decide where to eat, sleep, book or spend the day.",
       activeRanking: "Active ranking",
@@ -265,7 +265,7 @@ export const uiCopy = {
     rankings: {
       metaTitle: "Objektive Mallorca-Rankings | Mallorca Verified",
       metaDescription: "Vergleiche Restaurants, Hotels, Strände, Boote und Aktivitäten auf Mallorca mit echten Google-Daten, hilfreichem Kontext und ohne bezahlte Platzierungen.",
-      eyebrow: "Täglich aktualisiert · Keine bezahlten Platzierungen · Verifizierter Bewertungskonsens",
+      eyebrow: "Keine Werbung · Keine bezahlten Platzierungen",
       title: "Das Beste auf Mallorca finden — ohne den Überblick zu verlieren.",
       intro: "Wähle eine Kategorie, filtere nach Ort oder Stimmung und schau dich in Ruhe um. Echte Google-Bewertungen und öffentliche Daten helfen dir zu entscheiden, wo du essen, schlafen, buchen oder den Tag verbringen möchtest.",
       activeRanking: "Aktives Ranking",
