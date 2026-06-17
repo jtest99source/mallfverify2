@@ -8,8 +8,7 @@ export async function POST(request: Request) {
     const { businessName, email, message, page } = await request.json();
 
     await resend.emails.send({
-      // After verifying mallorcaverified.com on Resend, change to: noreply@mallorcaverified.com
-      from: "Mallorca Verified <onboarding@resend.dev>",
+      from: "Mallorca Verified <noreply@mallorcaverified.com>",
       to: "hola@mallorcaverified.com",
       ...(email ? { replyTo: email } : {}),
       subject: `Lead negocio: ${businessName || "(sin nombre)"}`,
