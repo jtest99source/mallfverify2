@@ -9,7 +9,7 @@ const pageCopy = {
     metaTitle: "Para negocios | Mallorca Verified",
     metaDescription: "Mejora tu visibilidad en Google, ChatGPT y Google AI. Enriquece tu ficha en Mallorca Verified con fotos reales, servicios y contenido editorial.",
     eyebrow: "Para negocios",
-    title: "Sé el primero que aparece cuando alguien busca",
+    title: "Sé el primero que citan cuando alguien busca",
     intro: "Cada vez más viajeros usan ChatGPT, Perplexity o Google AI para decidir dónde ir en Mallorca. Los negocios con fichas completas son los que estas herramientas citan primero. Trabajamos tu ficha para que estés ahí cuando alguien está decidiendo.",
     contactEyebrow: "Contacto directo",
     contactText: "Cuéntanos tu negocio y te explicamos qué podemos mejorar para aumentar tu visibilidad en Google y en los sistemas de IA.",

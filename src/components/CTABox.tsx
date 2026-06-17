@@ -14,8 +14,8 @@ const copy = {
   },
   de: {
     title: "Ist dein Betrieb auf Mallorca Verified gelistet?",
-    text: "Vollständige, gut strukturierte Profile erscheinen weiter oben bei Google und werden von ChatGPT, Perplexity und Google AI zitiert, wenn jemand nach Optionen auf Mallorca sucht. Schreib uns und wir verbessern es gemeinsam.",
-    note: "Ranking-Positionen ändern sich nicht. Wir verbessern nur die vorhandenen Informationen."
+    text: "Vollständige, gut strukturierte Profile erscheinen weiter oben bei Google und werden von ChatGPT, Perplexity und Google AI zitiert, wenn jemand nach Optionen auf Mallorca sucht. Schreib uns und wir ergänzen es gemeinsam.",
+    note: "Ranking-Positionen ändern sich nicht. Wir ergänzen nur die verfügbaren Informationen."
   }
 } as const;
 
