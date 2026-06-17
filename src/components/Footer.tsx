@@ -34,7 +34,7 @@ export function Footer({ locale }: { locale: Locale }) {
             <p className="mb-3 text-[10px] font-black uppercase tracking-[0.14em] text-[#FFD166] sm:mb-4">{copy.footer.site}</p>
             <div className="grid gap-2 text-[12px] font-medium text-white/65 sm:gap-2.5">
               <Link href={`/${locale}/rankings`} className="hover:text-white">Rankings</Link>
-              {locale === "es" && <Link href={`/${locale}/guides`} className="hover:text-white">{copy.nav.guides}</Link>}
+              {locale !== "de" && <Link href={`/${locale}/guides`} className="hover:text-white">{copy.nav.guides}</Link>}
               <Link href={methodologyPath(locale)} className="hover:text-white">{copy.nav.methodology}</Link>
               <Link href={`/${locale}/business`} className="hover:text-white">{copy.nav.forBusinesses}</Link>
               <Link href={`/${locale}/privacy`} className="hover:text-white">{copy.footer.privacy}</Link>

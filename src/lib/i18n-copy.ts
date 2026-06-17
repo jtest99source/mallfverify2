@@ -59,6 +59,19 @@ export const uiCopy = {
       guidesIntro: "Las guías son listas escritas para planes concretos: dónde ir según la zona, el momento del viaje, el presupuesto o lo que te apetece hacer.",
       viewGuides: "Ver guías"
     },
+    guides: {
+      eyebrow: "Guías editoriales",
+      title: "Guías de Mallorca escritas con datos reales",
+      description: "Artículos prácticos para elegir zona, restaurante, hotel o actividad en Mallorca. Cada recomendación se apoya en fichas verificables y datos de Google.",
+      viewRankings: "Ver rankings",
+      goHome: "Ir a inicio",
+      empty: "Estamos preparando nuevas guías editoriales. Mientras tanto, puedes comparar negocios directamente en los rankings.",
+      updatedLabel: "Actualizado",
+      recommended: "Recomendados",
+      viewProfile: "Ver ficha completa →",
+      reviews: "reseñas",
+      breadcrumbGuides: "Guías"
+    },
     footer: {
       description: "Rankings independientes de Mallorca basados en el consenso de miles de reseñas verificadas. La posición no se compra. Si hay contenido patrocinado en alguna parte del site, siempre está etiquetado.",
       contact: "Contacto",
@@ -169,6 +182,19 @@ export const uiCopy = {
       guidesIntro: "Guides are written for specific plans: where to go based on the area, time of year, budget or what you're in the mood for.",
       viewGuides: "View guides"
     },
+    guides: {
+      eyebrow: "Editorial guides",
+      title: "Mallorca guides written with real data",
+      description: "Practical articles to help you choose an area, restaurant, hotel or activity in Mallorca. Every recommendation is backed by verifiable profiles and real Google data.",
+      viewRankings: "View rankings",
+      goHome: "Back to home",
+      empty: "We're working on new editorial guides. In the meantime, you can compare businesses directly in the rankings.",
+      updatedLabel: "Updated",
+      recommended: "Recommended",
+      viewProfile: "View full profile →",
+      reviews: "reviews",
+      breadcrumbGuides: "Guides"
+    },
     footer: {
       description: "Independent Mallorca rankings based on the consensus of thousands of verified reviews. Positions cannot be bought. Sponsored content, if any, is always clearly labelled.",
       contact: "Contact",
@@ -278,6 +304,19 @@ export const uiCopy = {
       guidesTitle: "Mehr als nur ein Ranking",
       guidesIntro: "Unsere Guides sind für konkrete Pläne geschrieben: wohin je nach Gegend, Reisezeit, Budget oder Lust.",
       viewGuides: "Guides ansehen"
+    },
+    guides: {
+      eyebrow: "Redaktionelle Guides",
+      title: "Mallorca-Guides mit echten Daten",
+      description: "Praktische Artikel zur Auswahl von Gegend, Restaurant, Hotel oder Aktivität auf Mallorca. Jede Empfehlung basiert auf überprüfbaren Profilen und echten Google-Daten.",
+      viewRankings: "Rankings ansehen",
+      goHome: "Zur Startseite",
+      empty: "Wir arbeiten an neuen redaktionellen Guides. In der Zwischenzeit kannst du Betriebe direkt in den Rankings vergleichen.",
+      updatedLabel: "Aktualisiert",
+      recommended: "Empfohlen",
+      viewProfile: "Vollständiges Profil ansehen →",
+      reviews: "Bewertungen",
+      breadcrumbGuides: "Guides"
     },
     footer: {
       description: "Unabhängige Mallorca-Rankings auf Basis des Konsenses tausender verifizierter Bewertungen. Positionen können nicht gekauft werden. Gesponserte Inhalte werden immer klar gekennzeichnet.",
