@@ -3,6 +3,7 @@ import {
   IconBeach,
   IconBed,
   IconChartBar,
+  IconChevronRight,
   IconCircleCheckFilled,
   IconDiamond,
   IconMapPin,
@@ -277,6 +278,9 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         </div>
         <div className="relative -mx-4 px-4 sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8">
           <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-12 bg-gradient-to-l from-[#FFFDF7] to-transparent sm:w-20" />
+          <div className="pointer-events-none absolute right-3 top-1/2 z-20 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-[#E7DED0] bg-white/95 text-ink shadow-[0_12px_28px_rgba(27,46,75,0.16)] md:hidden">
+            <IconChevronRight size={20} stroke={2.4} />
+          </div>
           <div className="flex snap-x gap-4 overflow-x-auto pb-5 pr-10 [scrollbar-width:none] sm:gap-5 [&::-webkit-scrollbar]:hidden">
           {categoryRankings.map((ranking) => (
             <div key={ranking.category} className="w-[88vw] max-w-[420px] shrink-0 snap-start sm:w-[420px] lg:w-[440px]">

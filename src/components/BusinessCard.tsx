@@ -29,6 +29,32 @@ function compactAddress(address?: string) {
     .trim();
 }
 
+function formatCurrencyAmount(value: number) {
+  return Number.isInteger(value) ? `${value}` : value.toFixed(2).replace(/\.?0+$/, "");
+}
+
+function orientativeRangeFromExactPrice(value: number) {
+  const midpoint = Math.max(5, Math.round(value / 5) * 5);
+  const spread = midpoint <= 30 ? 5 : midpoint <= 80 ? 10 : 20;
+  return {
+    min: Math.max(0, midpoint - spread),
+    max: midpoint + spread
+  };
+}
+
+function formatOrientativePrice(min: number, max: number, currency: string) {
+  return `${formatCurrencyAmount(min)}-${formatCurrencyAmount(max)} ${currency}`;
+}
+
+function orientativeRangeFromPriceLabel(label: string) {
+  const match = label.match(/(\d+(?:[.,]\d+)?)\s*(€|EUR)?/i);
+  if (!match) return null;
+  const value = Number(match[1].replace(",", "."));
+  if (!Number.isFinite(value)) return null;
+  const range = orientativeRangeFromExactPrice(value);
+  return formatOrientativePrice(range.min, range.max, match[2] ?? "€");
+}
+
 function priceBadge(business: Business, locale: Locale) {
   const estimate = business.priceEstimate;
   if (!estimate) return null;
@@ -39,12 +65,18 @@ function priceBadge(business: Business, locale: Locale) {
   const from = locale === "de" ? "Ab" : locale === "en" ? "From" : "Desde";
   const until = locale === "de" ? "Bis" : locale === "en" ? "Up to" : "Hasta";
 
-  if (typeof min === "number" && typeof max === "number") return min === max ? `${min} ${currency}` : `${min}-${max} ${currency}`;
-  if (typeof min === "number") return `${from} ${min} ${currency}`;
-  if (typeof max === "number") return `${until} ${max} ${currency}`;
+  if (typeof min === "number" && typeof max === "number") {
+    if (min === max) {
+      const range = orientativeRangeFromExactPrice(min);
+      return formatOrientativePrice(range.min, range.max, currency);
+    }
+    return formatOrientativePrice(min, max, currency);
+  }
+  if (typeof min === "number") return `${from} ${formatCurrencyAmount(Math.round(min / 5) * 5)} ${currency}`;
+  if (typeof max === "number") return `${until} ${formatCurrencyAmount(Math.round(max / 5) * 5)} ${currency}`;
 
   const label = estimate.label?.trim();
-  if (label && !/persona|person|por/i.test(label)) return label;
+  if (label && !/persona|person|por/i.test(label)) return orientativeRangeFromPriceLabel(label) ?? label;
   return null;
 }
 
