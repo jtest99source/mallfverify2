@@ -1,5 +1,10 @@
 import type { FAQ as FAQType } from "@/types/business";
 
+function renderAnswer(text: string) {
+  const parts = text.split(/\*\*(.+?)\*\*/g);
+  return parts.map((part, i) => (i % 2 === 1 ? <strong key={i}>{part}</strong> : part));
+}
+
 export function FAQ({ faqs }: { faqs: FAQType[] }) {
   if (!faqs.length) return null;
   return (
@@ -12,7 +17,7 @@ export function FAQ({ faqs }: { faqs: FAQType[] }) {
               {faq.question}
               <span className="text-lg text-coral">+</span>
             </summary>
-            <p className="px-5 pb-5 text-sm leading-7 text-olive">{faq.answer}</p>
+            <p className="px-5 pb-5 text-sm leading-7 text-olive">{renderAnswer(faq.answer)}</p>
           </details>
         ))}
       </div>

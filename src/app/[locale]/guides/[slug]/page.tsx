@@ -38,11 +38,21 @@ function renderBody(text: string) {
   return text.split(/\n\n+/).map((para, i) => {
     const parts = para.split(/\*\*(.+?)\*\*/g);
     return (
-      <p key={i} className="mt-4 text-base leading-8 text-ink/75">
+      <p key={i} className="mt-4 text-base leading-7 text-ink/75">
         {parts.map((part, j) => j % 2 === 1 ? <strong key={j}>{part}</strong> : part)}
       </p>
     );
   });
+}
+
+function formatDate(dateStr: string, locale: Locale): string {
+  try {
+    const date = new Date(dateStr + "T00:00:00");
+    const nloc = locale === "de" ? "de-DE" : locale === "en" ? "en-GB" : "es-ES";
+    return date.toLocaleDateString(nloc, { day: "numeric", month: "long", year: "numeric" });
+  } catch {
+    return dateStr;
+  }
 }
 
 function businessHref(locale: Locale, business: Business) {
@@ -125,13 +135,13 @@ export default async function GuideDetailPage({ params }: { params: Promise<{ lo
 
   return (
     <main className="bg-[linear-gradient(180deg,#FFF8EC_0%,#FFFDF7_46%,#FFF8EC_100%)]">
-      <article className="mx-auto max-w-4xl px-4 pt-12 pb-10 sm:px-6 lg:px-8">
+      <article className="mx-auto max-w-4xl px-4 pb-10 pt-8 sm:px-6 sm:pt-12 lg:px-8">
         <Breadcrumbs items={[{ label: "Inicio", href: `/${safeLocale}` }, { label: "Guías", href: `/${safeLocale}/guides` }, { label: guide.title, href: `/${safeLocale}/guides/${guide.slug}` }]} />
-        <p className="mt-8 text-sm font-semibold uppercase tracking-[0.2em] text-[#0E8F72]">Actualizado {guide.updatedAt}</p>
-        <h1 className="mt-3 font-sans text-5xl font-black text-[#10253D]">{guide.title}</h1>
-        <p className="mt-5 max-w-3xl text-xl leading-8 text-[#4B5B4D]">{guide.intro}</p>
+        <p className="mt-6 text-[11px] font-semibold uppercase tracking-[0.2em] text-[#0E8F72]">Actualizado {formatDate(guide.updatedAt, safeLocale)}</p>
+        <h1 className="mt-3 font-sans text-3xl font-black text-[#10253D] sm:text-5xl">{guide.title}</h1>
+        <p className="mt-4 max-w-3xl text-base leading-7 text-[#4B5B4D] sm:text-xl sm:leading-8">{guide.intro}</p>
 
-        <div className="mt-8 rounded-md border border-[#E7DED0] border-l-4 border-l-[#B86B1D] bg-[#FFFDF7] px-6 py-5 text-lg leading-8 text-[#4B5B4D] shadow-[0_14px_34px_rgba(27,46,75,0.04)]">
+        <div className="mt-6 rounded-md border border-[#E7DED0] border-l-4 border-l-[#B86B1D] bg-[#FFFDF7] px-5 py-4 text-base leading-7 text-[#4B5B4D] shadow-[0_14px_34px_rgba(27,46,75,0.04)] sm:mt-8 sm:px-6 sm:py-5 sm:text-lg sm:leading-8">
           {guide.excerpt}
         </div>
 
@@ -143,7 +153,7 @@ export default async function GuideDetailPage({ params }: { params: Promise<{ lo
 
             return (
               <section key={section.heading} className="border-b border-borderline pb-10 last:border-b-0">
-                <h2 className="font-sans text-3xl font-semibold leading-tight">{section.heading}</h2>
+                <h2 className="font-sans text-2xl font-semibold leading-tight sm:text-3xl">{section.heading}</h2>
                 {renderBody(section.body)}
                 {section.best_for?.length ? (
                   <div className="mt-5 flex flex-wrap gap-2">
