@@ -8,6 +8,7 @@ import { getBusinessById, getGuideBySlug } from "@/lib/repository";
 import { isLocale, type Locale } from "@/lib/i18n";
 import { createArticleSchema, createBreadcrumbSchema, createFAQSchema, createSimpleItemListSchema } from "@/lib/schema";
 import { generateSeoMetadata } from "@/lib/seo";
+import { t } from "@/lib/i18n-copy";
 import { getBusinessPublicName } from "@/lib/business-name-normalizer";
 import type { Business } from "@/types/business";
 import type { Guide } from "@/types/guide";
@@ -88,13 +89,14 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const safeLocale = isLocale(locale) ? locale : "es";
   const guide = await getGuideBySlug(slug, safeLocale);
   if (!guide) return {};
+  const image = guide.heroImageUrl || (await firstGuideBusinessImage(guide));
   return generateSeoMetadata({
     title: guide.seo.title,
     description: guide.excerpt,
     path: `/${safeLocale}/guides/${slug}`,
     locale: safeLocale,
     type: "article",
-    image: undefined,
+    image,
     alternateLocales: ["es"],
     robots: safeLocale === "es" ? undefined : { index: false, follow: true }
   });
@@ -107,9 +109,11 @@ export default async function GuideDetailPage({ params }: { params: Promise<{ lo
   if (!guide) notFound();
 
   const businesses = await guideBusinesses(guide);
+  const guideImage = guide.heroImageUrl || (await firstGuideBusinessImage(guide));
+  const copy = t(safeLocale);
   const breadcrumbs = [
-    { name: "Inicio", url: `${siteUrl}/${safeLocale}` },
-    { name: "Guías", url: `${siteUrl}/${safeLocale}/guides` },
+    { name: copy.category.breadcrumbHome, url: `${siteUrl}/${safeLocale}` },
+    { name: copy.nav.guides, url: `${siteUrl}/${safeLocale}/guides` },
     { name: guide.title, url: `${siteUrl}/${safeLocale}/guides/${guide.slug}` }
   ];
   const recommendedBusinesses = sectionBusinessIds(guide)
@@ -127,7 +131,7 @@ export default async function GuideDetailPage({ params }: { params: Promise<{ lo
     }))
   };
   const jsonLd = [
-    createArticleSchema({ headline: guide.title, description: guide.excerpt, datePublished: guide.updatedAt, dateModified: guide.updatedAt, image: undefined, author: true, inLanguage: safeLocale }),
+    createArticleSchema({ headline: guide.title, description: guide.excerpt, datePublished: guide.updatedAt, dateModified: guide.updatedAt, image: guideImage, author: true, inLanguage: safeLocale }),
     ...(recommendedBusinesses.length ? [createSimpleItemListSchema(itemList)] : []),
     createFAQSchema(guide.faqs),
     createBreadcrumbSchema(breadcrumbs)
@@ -136,7 +140,7 @@ export default async function GuideDetailPage({ params }: { params: Promise<{ lo
   return (
     <main className="bg-[linear-gradient(180deg,#FFF8EC_0%,#FFFDF7_46%,#FFF8EC_100%)]">
       <article className="mx-auto max-w-4xl px-4 pb-10 pt-8 sm:px-6 sm:pt-12 lg:px-8">
-        <Breadcrumbs items={[{ label: "Inicio", href: `/${safeLocale}` }, { label: "Guías", href: `/${safeLocale}/guides` }, { label: guide.title, href: `/${safeLocale}/guides/${guide.slug}` }]} />
+        <Breadcrumbs items={[{ label: copy.category.breadcrumbHome, href: `/${safeLocale}` }, { label: copy.nav.guides, href: `/${safeLocale}/guides` }, { label: guide.title, href: `/${safeLocale}/guides/${guide.slug}` }]} />
         <p className="mt-6 text-[11px] font-semibold uppercase tracking-[0.2em] text-[#0E8F72]">Actualizado {formatDate(guide.updatedAt, safeLocale)}</p>
         <h1 className="mt-3 font-sans text-3xl font-black text-[#10253D] sm:text-5xl">{guide.title}</h1>
         <p className="mt-4 max-w-3xl text-base leading-7 text-[#4B5B4D] sm:text-xl sm:leading-8">{guide.intro}</p>

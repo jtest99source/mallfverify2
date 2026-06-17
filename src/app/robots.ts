@@ -11,7 +11,11 @@ export default function robots(): MetadataRoute.Robots {
       { userAgent: "PerplexityBot", allow: "/" },
       { userAgent: "Amazonbot", allow: "/" },
       { userAgent: "anthropic-ai", allow: "/" },
-      { userAgent: "cohere-ai", allow: "/" }
+      { userAgent: "cohere-ai", allow: "/" },
+      { userAgent: "CCBot", allow: "/" },
+      { userAgent: "Diffbot", allow: "/" },
+      { userAgent: "Bytespider", allow: "/" },
+      { userAgent: "Google-Extended", allow: "/" }
     ],
     sitemap: `${siteUrl}/sitemap.xml`
   };

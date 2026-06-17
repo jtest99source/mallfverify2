@@ -1,4 +1,3 @@
-import { unstable_noStore as noStore } from "next/cache";
 import { createSupabaseServerClient, hasSupabaseConfig } from "@/lib/supabase";
 import type { BusinessCategory } from "@/types/business";
 import type { RankingCategory } from "@/types/ranking";
@@ -173,7 +172,6 @@ export async function searchUnsplashPhotos(query: string, limit = 1) {
 }
 
 export async function getEditorialImage(imageKey: string): Promise<EditorialImage | null> {
-  noStore();
   if (!hasSupabaseConfig()) return null;
 
   const supabase = createSupabaseServerClient();
@@ -228,3 +226,4 @@ export function editorialImageKeysForCategory(category: BusinessCategory) {
     fallback: fallbackImageKeys[category]
   };
 }
+

@@ -77,35 +77,87 @@ function isGenericFaq(faq: FAQType) {
   ].some((phrase) => text.includes(phrase));
 }
 
-function getCombinedFaqs(business: Business, publicName: string, location: string) {
+function getCombinedFaqs(business: Business, publicName: string, location: string, locale: Locale) {
   const seen = new Set<string>();
   const combined: FAQType[] = [];
   const editorialFaqs = [...(business.faqAuto ?? []), ...business.faqs];
-  const generated: FAQType[] = [
-    {
-      question: `¿Dónde está ${publicName}?`,
-      answer: business.address ? `${publicName} está en ${business.address}.` : `${publicName} está en la zona de ${location}, Mallorca.`
-    },
-    {
-      question: `¿Qué tipo de sitio es ${publicName}?`,
-      answer: `${publicName} aparece en Mallorca Verified dentro de ${categoryLabel(business.category)}.`
-    }
-  ];
+  const localizedCategory = localizedCategoryLabel(business.category, locale);
+  const generated: FAQType[] =
+    locale === "en"
+      ? [
+          {
+            question: `Where is ${publicName}?`,
+            answer: business.address ? `${publicName} is at ${business.address}.` : `${publicName} is in the ${location} area of Mallorca.`
+          },
+          {
+            question: `What type of place is ${publicName}?`,
+            answer: `${publicName} is listed on Mallorca Verified as a ${localizedCategory.toLowerCase()}.`
+          }
+        ]
+      : locale === "de"
+        ? [
+            {
+              question: `Wo befindet sich ${publicName}?`,
+              answer: business.address ? `${publicName} befindet sich hier: ${business.address}.` : `${publicName} liegt in der Gegend ${location} auf Mallorca.`
+            },
+            {
+              question: `Was für ein Ort ist ${publicName}?`,
+              answer: `${publicName} ist bei Mallorca Verified als ${localizedCategory} gelistet.`
+            }
+          ]
+        : [
+            {
+              question: `¿Dónde está ${publicName}?`,
+              answer: business.address ? `${publicName} está en ${business.address}.` : `${publicName} está en la zona de ${location}, Mallorca.`
+            },
+            {
+              question: `¿Qué tipo de sitio es ${publicName}?`,
+              answer: `${publicName} aparece en Mallorca Verified dentro de ${localizedCategory}.`
+            }
+          ];
 
   if (typeof business.rating === "number" && typeof business.reviewsCount === "number") {
-    generated.push({
-      question: `¿Qué valoración tiene ${publicName}?`,
-      answer: `${publicName} tiene una valoración de ${formatRating(business.rating)}/5 en Google, basada en ${business.reviewsCount.toLocaleString("es-ES")} reseñas.`
-    });
+    generated.push(
+      locale === "en"
+        ? {
+            question: `What rating does ${publicName} have?`,
+            answer: `${publicName} has a ${formatLocalizedRating(business.rating, locale)}/5 rating on Google, based on ${business.reviewsCount.toLocaleString(numberLocale(locale))} reviews.`
+          }
+        : locale === "de"
+          ? {
+              question: `Welche Bewertung hat ${publicName}?`,
+              answer: `${publicName} hat eine Bewertung von ${formatLocalizedRating(business.rating, locale)}/5 auf Google, basierend auf ${business.reviewsCount.toLocaleString(numberLocale(locale))} Rezensionen.`
+            }
+          : {
+              question: `¿Qué valoración tiene ${publicName}?`,
+              answer: `${publicName} tiene una valoración de ${formatRating(business.rating)}/5 en Google, basada en ${business.reviewsCount.toLocaleString("es-ES")} reseñas.`
+            }
+    );
   }
 
   if (business.website || business.googleMapsUrl) {
-    generated.push({
-      question: `¿Cómo puedo consultar horarios o reservar en ${publicName}?`,
-      answer: business.website
-        ? "La forma más fiable es consultar la web oficial antes de ir, especialmente para horarios, reservas y disponibilidad."
-        : "La forma más fiable es revisar su ficha de Google Maps antes de ir, especialmente para horarios y disponibilidad."
-    });
+    generated.push(
+      locale === "en"
+        ? {
+            question: `How can I check hours or book at ${publicName}?`,
+            answer: business.website
+              ? "The safest option is to check the official website before visiting, especially for opening hours, bookings and availability."
+              : "The safest option is to check its Google Maps listing before visiting, especially for opening hours and availability."
+          }
+        : locale === "de"
+          ? {
+              question: `Wie kann ich Öffnungszeiten prüfen oder bei ${publicName} reservieren?`,
+              answer: business.website
+                ? "Am zuverlässigsten ist die offizielle Website, besonders für Öffnungszeiten, Reservierungen und Verfügbarkeit."
+                : "Am zuverlässigsten ist der Google-Maps-Eintrag, besonders für Öffnungszeiten und Verfügbarkeit."
+            }
+          : {
+              question: `¿Cómo puedo consultar horarios o reservar en ${publicName}?`,
+              answer: business.website
+                ? "La forma más fiable es consultar la web oficial antes de ir, especialmente para horarios, reservas y disponibilidad."
+                : "La forma más fiable es revisar su ficha de Google Maps antes de ir, especialmente para horarios y disponibilidad."
+            }
+    );
   }
 
   for (const faq of [...editorialFaqs, ...(editorialFaqs.length >= 3 ? [] : generated)]) {
@@ -269,6 +321,12 @@ function numberLocale(locale: Locale) {
   return locale === "de" ? "de-DE" : locale === "en" ? "en-US" : "es-ES";
 }
 
+function truncateMetaDescription(text: string, limit = 160) {
+  if (text.length <= limit) return text;
+  const cut = text.lastIndexOf(" ", limit);
+  return `${text.slice(0, cut > 120 ? cut : limit).trim()}...`;
+}
+
 function AddressBar({ business, location, locale }: { business: Business; location: string; locale: Locale }) {
   const copy = t(locale);
   const address = business.address || `${location}, Mallorca`;
@@ -398,9 +456,10 @@ export async function generateBusinessMetadata(category: CategorySlug, locale: s
       : "";
   return generateSeoMetadata({
     title: business.seo.title,
-    description: `${publicName} - ${localizedCategoryLabel(business.category, safeLocale)}, ${location}, Mallorca.${ratingText} Mallorca Verified.`.slice(0, 180),
+    description: truncateMetaDescription(`${publicName} - ${localizedCategoryLabel(business.category, safeLocale)}, ${location}, Mallorca.${ratingText} Mallorca Verified.`),
     path: `/${safeLocale}/${category}/${business.slug}`,
-    locale: safeLocale
+    locale: safeLocale,
+    image: business.primaryImageUrl || business.galleryImageUrls?.[0] || business.image
   });
 }
 
@@ -555,7 +614,7 @@ export async function BusinessDetailPage({ category, locale, slug }: { category:
   const publicName = getBusinessPublicName(business);
   const location = business.city || business.area || business.municipality || "Mallorca";
   const copy = t(locale);
-  const faqs = getCombinedFaqs(business, publicName, location);
+  const faqs = getCombinedFaqs(business, publicName, location, locale);
   const galleryImages = getBusinessGalleryImages(business);
   const heroImage = galleryImages[0] || getBusinessImageUrl(business);
   const priceValue = getBusinessPriceValue(business, locale);

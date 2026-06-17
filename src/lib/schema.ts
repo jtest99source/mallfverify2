@@ -4,6 +4,103 @@ import { getCategorySlugFromBusiness, siteUrl } from "@/lib/data";
 import { getBusinessPublicName } from "@/lib/business-name-normalizer";
 import { siteConfig } from "@/config/site";
 
+function formatPriceRange(business: Business) {
+  const price = business.priceEstimate;
+  const currency = price?.currency === "EUR" || !price?.currency ? "€" : price.currency;
+  const min = price?.amount_min ?? price?.range_min ?? price?.per_person_min ?? null;
+  const max = price?.amount_max ?? price?.range_max ?? price?.per_person_max ?? null;
+
+  if (typeof min === "number" && typeof max === "number") return `${min}-${max} ${currency}`;
+  if (typeof min === "number") return `from ${min} ${currency}`;
+  if (typeof max === "number") return `up to ${max} ${currency}`;
+  return business.priceLevel;
+}
+
+const schemaDayByName: Record<string, string> = {
+  sunday: "Sunday",
+  domingo: "Sunday",
+  sonntag: "Sunday",
+  monday: "Monday",
+  lunes: "Monday",
+  montag: "Monday",
+  tuesday: "Tuesday",
+  martes: "Tuesday",
+  dienstag: "Tuesday",
+  wednesday: "Wednesday",
+  miercoles: "Wednesday",
+  mittwoch: "Wednesday",
+  thursday: "Thursday",
+  jueves: "Thursday",
+  donnerstag: "Thursday",
+  friday: "Friday",
+  viernes: "Friday",
+  freitag: "Friday",
+  saturday: "Saturday",
+  sabado: "Saturday",
+  samstag: "Saturday"
+};
+
+function normalizeSchemaDay(value: string) {
+  return value
+    .trim()
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "");
+}
+
+function toSchemaTime(value: string) {
+  const trimmed = value.trim().replace(/\s+/g, " ");
+  const twelveHour = trimmed.match(/^(\d{1,2})(?::(\d{2}))?\s*(AM|PM)$/i);
+  if (twelveHour) {
+    let hours = Number(twelveHour[1]);
+    const minutes = Number(twelveHour[2] ?? 0);
+    const period = twelveHour[3].toUpperCase();
+    if (period === "AM" && hours === 12) hours = 0;
+    if (period === "PM" && hours !== 12) hours += 12;
+    return `${hours.toString().padStart(2, "0")}:${minutes.toString().padStart(2, "0")}`;
+  }
+
+  const twentyFourHour = trimmed.match(/^(\d{1,2})(?::(\d{2}))?$/);
+  if (!twentyFourHour) return null;
+  const hours = Number(twentyFourHour[1]);
+  const minutes = Number(twentyFourHour[2] ?? 0);
+  if (hours < 0 || hours > 24 || minutes < 0 || minutes > 59) return null;
+  return `${Math.min(hours, 23).toString().padStart(2, "0")}:${minutes.toString().padStart(2, "0")}`;
+}
+
+function openingHoursSpecification(openingHours?: string) {
+  if (!openingHours?.trim()) return undefined;
+
+  const specs = openingHours
+    .split(/\n+/)
+    .map((line) => line.trim())
+    .filter(Boolean)
+    .flatMap((line) => {
+      const separator = line.indexOf(":");
+      if (separator === -1) return [];
+      const day = schemaDayByName[normalizeSchemaDay(line.slice(0, separator))];
+      const time = line.slice(separator + 1).trim();
+      if (!day || /closed|cerrado|geschlossen/i.test(time)) return [];
+      if (/open\s*24\s*hours|24\s*hours|abierto\s*24\s*h(?:oras)?|24\s*h|24\/7/i.test(time)) {
+        return [{ "@type": "OpeningHoursSpecification", dayOfWeek: day, opens: "00:00", closes: "23:59" }];
+      }
+
+      return time
+        .split(",")
+        .map((part) => part.trim())
+        .map((part) => {
+          const [opensRaw, closesRaw] = part.split(/\s*[-–]\s*/);
+          const opens = toSchemaTime(opensRaw ?? "");
+          const closes = toSchemaTime(closesRaw ?? "");
+          if (!opens || !closes) return null;
+          return { "@type": "OpeningHoursSpecification", dayOfWeek: day, opens, closes };
+        })
+        .filter(Boolean);
+    });
+
+  return specs.length ? specs : undefined;
+}
+
 export function createLocalBusinessSchema(business: Business, locale = "es") {
   const typeByCategory: Partial<Record<BusinessCategory, string>> = {
     restaurant: "Restaurant",
@@ -11,25 +108,42 @@ export function createLocalBusinessSchema(business: Business, locale = "es") {
     "beach-club": "LocalBusiness",
     "boat-rental": "SportsActivityLocation",
     activity: "TouristAttraction",
-    beach: "Beach"
+    beach: "Beach",
+    bar: "BarOrPub",
+    cafe: "CafeOrCoffeeShop",
+    bakery: "Bakery",
+    "rent-a-car": "AutoRental",
+    spa: "HealthAndBeautyBusiness",
+    gym: "ExerciseGym",
+    museum: "Museum",
+    route: "TouristAttraction",
+    excursion: "TouristTrip",
+    market: "Store",
+    "local-shop": "Store",
+    "car-dealer": "AutoDealer"
   };
 
   const image = business.primaryImageUrl || business.galleryImageUrls?.[0] || business.image;
   const url = `${siteUrl}/${locale}/${getCategorySlugFromBusiness(business.category)}/${business.slug}`;
   const publicWebsite = ["instagram", "facebook", "tiktok", "linktree"].includes(business.websiteType ?? "") ? null : business.website;
+  const priceRange = formatPriceRange(business);
 
   return {
     "@context": "https://schema.org",
     "@type": typeByCategory[business.category] ?? "LocalBusiness",
+    "@id": `${url}#business`,
     name: getBusinessPublicName(business),
-    description: business.shortDescription,
+    description: business.editorialDescription || business.aiDescription || business.shortDescription || business.description,
     url,
     image,
     address: business.address,
     telephone: business.phone,
+    priceRange,
+    hasMap: business.googleMapsUrl,
     sameAs: publicWebsite ? [publicWebsite] : [],
     areaServed: business.area,
     inLanguage: locale,
+    openingHoursSpecification: openingHoursSpecification(business.openingHours),
     speakable: {
       "@type": "SpeakableSpecification",
       cssSelector: ["h1", ".rating-summary", ".business-contact-summary"]
@@ -155,17 +269,19 @@ export function createArticleSchema({
     dateModified,
     inLanguage,
     image,
-    author: author ? createOrganizationSchema() : undefined,
-    publisher: createOrganizationSchema()
+    author: createOrganizationSchema(false),
+    publisher: createOrganizationSchema(false)
   };
 }
 
-export function createOrganizationSchema() {
+export function createOrganizationSchema(withContext = true) {
   return {
-    "@context": "https://schema.org",
+    ...(withContext ? { "@context": "https://schema.org" } : {}),
     "@type": "Organization",
+    "@id": `${siteConfig.url}/#organization`,
     name: siteConfig.name,
     url: siteConfig.url,
+    logo: `${siteConfig.url}/brand/mallorca-verified-logo-ai-transparent.png`,
     description: siteConfig.organizationDescription,
     sameAs: [] as string[]
   };

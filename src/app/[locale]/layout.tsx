@@ -3,7 +3,7 @@ import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { isLocale, type Locale } from "@/lib/i18n";
 
-export const dynamic = "force-dynamic";
+export const revalidate = 3600;
 
 export default async function LocaleLayout({ children, params }: { children: React.ReactNode; params: Promise<{ locale: string }> }) {
   const { locale } = await params;

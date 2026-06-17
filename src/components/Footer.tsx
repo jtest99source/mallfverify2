@@ -25,7 +25,7 @@ export function Footer({ locale }: { locale: Locale }) {
             <p className="mb-3 text-[10px] font-black uppercase tracking-[0.14em] text-[#FFD166] sm:mb-4">{copy.footer.categories}</p>
             <div className="grid gap-2 text-[12px] font-medium text-white/65 sm:gap-2.5">
               {footerCategories.map((slug) => (
-                <Link key={slug} href={`/${locale}/rankings?category=${slug}`} className="hover:text-white">{getCategoryCopy(slug, locale).label}</Link>
+                <Link key={slug} href={`/${locale}/top/${slug}`} className="hover:text-white">{getCategoryCopy(slug, locale).label}</Link>
               ))}
               <Link href={`/${locale}/rankings`} className="mt-1 font-bold text-[#FFD166]/80 hover:text-[#FFD166]">{copy.footer.allCategories} →</Link>
             </div>

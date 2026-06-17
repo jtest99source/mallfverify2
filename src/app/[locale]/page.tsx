@@ -157,7 +157,7 @@ function CategoryRankingCard({ category, businesses, locale }: { category: Categ
           </div>
           <h2 className="text-lg font-black leading-tight text-ink">{label}</h2>
         </div>
-        <Link href={`/${locale}/rankings?category=${category}`} className="shrink-0 text-[9px] font-bold uppercase tracking-[0.08em] text-sage hover:text-[#0E8F72] sm:text-[10px] sm:tracking-[0.1em]" aria-label={ariaLabel}>
+        <Link href={`/${locale}/top/${category}`} className="shrink-0 text-[9px] font-bold uppercase tracking-[0.08em] text-sage hover:text-[#0E8F72] sm:text-[10px] sm:tracking-[0.1em]" aria-label={ariaLabel}>
           {rankingLabel} →
         </Link>
       </div>
@@ -328,7 +328,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           "@context": "https://schema.org",
           "@type": "WebSite",
           name: siteConfig.name,
-          url: `${siteUrl}/${safeLocale}`,
+          url: siteUrl,
           description: siteConfig.description,
           inLanguage: safeLocale,
           potentialAction: {

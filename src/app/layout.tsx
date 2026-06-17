@@ -15,6 +15,19 @@ export const metadata: Metadata = {
     template: "%s"
   },
   description: siteConfig.description,
+  openGraph: {
+    title: siteConfig.name,
+    description: siteConfig.description,
+    url: siteConfig.url,
+    siteName: siteConfig.name,
+    images: [{ url: `${siteConfig.url}/brand/mallorca-verified-logo-ai-concept.png`, width: 1200, height: 630, alt: siteConfig.name }]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: siteConfig.name,
+    description: siteConfig.description,
+    images: [`${siteConfig.url}/brand/mallorca-verified-logo-ai-concept.png`]
+  },
   other: {
     "ai:entity_name": siteConfig.name,
     "ai:entity_type": "EditorialGuide",
@@ -30,9 +43,12 @@ export const metadata: Metadata = {
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
+  "@id": `${siteConfig.url}/#organization`,
   name: siteConfig.name,
   url: siteConfig.url,
+  logo: `${siteConfig.url}/brand/mallorca-verified-logo-ai-transparent.png`,
   description: siteConfig.organizationDescription,
+  sameAs: [],
   contactPoint: { "@type": "ContactPoint", email: siteConfig.contactEmail, contactType: "customer support" }
 };
 

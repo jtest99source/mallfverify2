@@ -62,7 +62,7 @@ export function CategoryPillsCarousel({ locale }: { locale: Locale }) {
         {(Object.entries(categoryConfigs) as [CategorySlug, (typeof categoryConfigs)[CategorySlug]][]).map(([slug, config]) => (
           <Link
             key={slug}
-            href={`/${locale}/rankings?category=${slug}`}
+            href={`/${locale}/top/${slug}`}
             className="snap-start shrink-0 whitespace-nowrap rounded-full border border-[#E7DED0] bg-white px-4 py-2 text-[11px] font-bold uppercase tracking-[0.08em] text-ink transition-all duration-150 hover:border-ink hover:bg-ink hover:text-white"
           >
             {getCategoryCopy(slug, locale).label}

@@ -3,6 +3,8 @@ import { locales, type Locale } from "@/lib/i18n";
 import { siteUrl } from "@/lib/data";
 import { siteConfig } from "@/config/site";
 
+const defaultOgImage = `${siteUrl}/brand/mallorca-verified-logo-ai-concept.png`;
+
 type SeoInput = {
   title: string;
   description: string;
@@ -17,6 +19,7 @@ type SeoInput = {
 export function generateSeoMetadata({ title, description, path, locale, type = "website", image, alternateLocales = locales, robots }: SeoInput): Metadata {
   const canonical = `${siteUrl}${path}`;
   const pathWithoutLocale = path.replace(new RegExp(`^/${locale}(?=/|$)`), "");
+  const ogImage = image || defaultOgImage;
   const languages = Object.fromEntries([
     ...alternateLocales.map((item) => [item, `${siteUrl}/${item}${pathWithoutLocale}`]),
     ["x-default", `${siteUrl}/es${pathWithoutLocale}`]
@@ -37,13 +40,13 @@ export function generateSeoMetadata({ title, description, path, locale, type = "
       siteName: siteConfig.name,
       locale,
       type,
-      images: image ? [{ url: image }] : undefined
+      images: [{ url: ogImage, width: 1200, height: 630, alt: title }]
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
-      images: image ? [image] : undefined
+      images: [ogImage]
     }
   };
 }

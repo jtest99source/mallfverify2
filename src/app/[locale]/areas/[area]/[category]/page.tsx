@@ -47,8 +47,8 @@ export default async function AreaCategoryPage({ params }: { params: Promise<{ l
   const title = titleFor(areaName, category, safeLocale);
   const breadcrumbs = [
     { name: copy.category.breadcrumbHome, url: `${siteUrl}/${safeLocale}` },
-    { name: areaName, url: `${siteUrl}/${safeLocale}/areas/${area}/${category}` },
-    { name: config.label, url: `${siteUrl}/${safeLocale}/areas/${area}/${category}` }
+    { name: config.label, url: `${siteUrl}/${safeLocale}/top/${category}` },
+    { name: areaName, url: `${siteUrl}/${safeLocale}/areas/${area}/${category}` }
   ];
 
   return (

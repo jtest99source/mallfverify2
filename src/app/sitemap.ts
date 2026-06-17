@@ -4,28 +4,32 @@ import { locales } from "@/lib/i18n";
 import { methodologyPath } from "@/lib/methodology";
 import { getBusinessAreaCategoryPages, getSitemapEntities } from "@/lib/repository";
 
+export const revalidate = 3600;
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const now = new Date();
   const { businesses, rankings, guides } = await getSitemapEntities();
   const areaPages = await getBusinessAreaCategoryPages(3);
   const urls: MetadataRoute.Sitemap = [];
   for (const locale of locales) {
-    urls.push({ url: `${siteUrl}/${locale}`, lastModified: now });
-    urls.push({ url: `${siteUrl}/${locale}/business`, lastModified: now });
-    urls.push({ url: `${siteUrl}/${locale}/privacy`, lastModified: now });
-    urls.push({ url: `${siteUrl}/${locale}/cookies`, lastModified: now });
-    urls.push({ url: `${siteUrl}/${locale}/rankings`, lastModified: now });
-    if (locale === "es") urls.push({ url: `${siteUrl}/${locale}/guides`, lastModified: now });
-    urls.push({ url: `${siteUrl}${methodologyPath(locale)}`, lastModified: now });
+    urls.push({ url: `${siteUrl}/${locale}`, lastModified: now, changeFrequency: "daily", priority: 1 });
+    urls.push({ url: `${siteUrl}/${locale}/business`, lastModified: now, changeFrequency: "monthly", priority: 0.6 });
+    urls.push({ url: `${siteUrl}/${locale}/privacy`, lastModified: now, changeFrequency: "yearly", priority: 0.2 });
+    urls.push({ url: `${siteUrl}/${locale}/cookies`, lastModified: now, changeFrequency: "yearly", priority: 0.2 });
+    urls.push({ url: `${siteUrl}/${locale}/rankings`, lastModified: now, changeFrequency: "daily", priority: 0.9 });
+    if (locale === "es") urls.push({ url: `${siteUrl}/${locale}/guides`, lastModified: now, changeFrequency: "weekly", priority: 0.7 });
+    urls.push({ url: `${siteUrl}${methodologyPath(locale)}`, lastModified: now, changeFrequency: "monthly", priority: 0.8 });
     for (const category of Object.keys(categoryConfigs)) {
-      urls.push({ url: `${siteUrl}/${locale}/${category}`, lastModified: now });
-      urls.push({ url: `${siteUrl}/${locale}/top/${category}`, lastModified: now });
+      urls.push({ url: `${siteUrl}/${locale}/${category}`, lastModified: now, changeFrequency: "daily", priority: 0.85 });
+      urls.push({ url: `${siteUrl}/${locale}/top/${category}`, lastModified: now, changeFrequency: "daily", priority: 0.85 });
     }
-    for (const page of areaPages) urls.push({ url: `${siteUrl}/${locale}/areas/${page.areaSlug}/${page.category}`, lastModified: now });
-    for (const business of businesses) urls.push({ url: `${siteUrl}/${locale}/${getCategorySlugFromBusiness(business.category)}/${business.slug}`, lastModified: new Date(business.updatedAt) });
-    for (const ranking of rankings) urls.push({ url: `${siteUrl}/${locale}/rankings/${ranking.slug}`, lastModified: new Date(ranking.updatedAt) });
+    for (const page of areaPages) urls.push({ url: `${siteUrl}/${locale}/areas/${page.areaSlug}/${page.category}`, lastModified: now, changeFrequency: "weekly", priority: 0.75 });
+    for (const business of businesses) urls.push({ url: `${siteUrl}/${locale}/${getCategorySlugFromBusiness(business.category)}/${business.slug}`, lastModified: new Date(business.updatedAt), changeFrequency: "weekly", priority: 0.7 });
+    for (const ranking of rankings.filter((ranking) => ranking.locale === locale)) {
+      urls.push({ url: `${siteUrl}/${locale}/rankings/${ranking.slug}`, lastModified: new Date(ranking.updatedAt), changeFrequency: "weekly", priority: 0.75 });
+    }
     if (locale === "es") {
-      for (const guide of guides) urls.push({ url: `${siteUrl}/${locale}/guides/${guide.slug}`, lastModified: new Date(guide.updatedAt) });
+      for (const guide of guides) urls.push({ url: `${siteUrl}/${locale}/guides/${guide.slug}`, lastModified: new Date(guide.updatedAt), changeFrequency: "monthly", priority: 0.65 });
     }
   }
   return urls;

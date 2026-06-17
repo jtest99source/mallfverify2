@@ -1,5 +1,4 @@
-﻿import "server-only";
-import { unstable_noStore as noStore } from "next/cache";
+import "server-only";
 import { validateCategoryAttributes, socialProfilesSchema } from "@/lib/business-attribute-schemas";
 import { categoryConfigs, getBusinessCategoryFromSlug, getCategorySlugFromBusiness, type CategorySlug } from "@/lib/data";
 import { createSupabaseServerClient, hasSupabaseConfig } from "@/lib/supabase";
@@ -418,7 +417,6 @@ function publicStatusFilter(query: any) {
 }
 
 export async function getPublicBusinessStats() {
-  noStore();
   const fallback = emptyWhenUnconfigured(fallbackPublicBusinessStats);
   if (fallback) return fallback;
 
@@ -451,7 +449,6 @@ export async function getPublicBusinessStats() {
 }
 
 export async function getBusinesses(category: CategorySlug): Promise<Business[]> {
-  noStore();
   const fallback = emptyWhenUnconfigured<Business[]>([]);
   if (fallback) return fallback;
 
@@ -536,7 +533,6 @@ function ratioScore(row: Pick<BusinessRow, "rating" | "reviews_count">) {
 }
 
 export async function getHomepageMiniRankingBusinesses(category: CategorySlug, limit = 5, area?: string, minReviews?: number): Promise<Business[]> {
-  noStore();
   const fallback = emptyWhenUnconfigured<Business[]>([]);
   if (fallback) return fallback;
 
@@ -570,7 +566,6 @@ export async function getHomepageMiniRankingBusinesses(category: CategorySlug, l
 }
 
 export async function getBusinessesForFacetScan(category: CategorySlug): Promise<Business[]> {
-  noStore();
   const fallback = emptyWhenUnconfigured<Business[]>([]);
   if (fallback) return fallback;
 
@@ -597,13 +592,11 @@ function sortByAuthority(businesses: Business[]) {
 }
 
 export async function getTopBusinessesByCategory(category: CategorySlug, limit = 40): Promise<Business[]> {
-  noStore();
   const businesses = await getBusinesses(category);
   return sortByAuthority(businesses).slice(0, limit);
 }
 
 export async function getTopBusinessesByFacet(category: CategorySlug, facetSlug: string, limit = 40): Promise<Business[]> {
-  noStore();
   const facet = getFacet(category, facetSlug);
   if (!facet) return [];
   const businesses = await getBusinesses(category);
@@ -611,7 +604,6 @@ export async function getTopBusinessesByFacet(category: CategorySlug, facetSlug:
 }
 
 export async function getBusinessesByAreaAndCategory(areaSlug: string, category: CategorySlug): Promise<{ areaName: string; businesses: Business[] }> {
-  noStore();
   const businesses = await getBusinesses(category);
   const matching = businesses.filter((business) => {
     const area = business.city || business.area || "Mallorca";
@@ -625,7 +617,6 @@ export async function getBusinessesByAreaAndCategory(areaSlug: string, category:
 }
 
 export async function getBusinessAreaCategoryPages(minBusinesses = 3): Promise<Array<{ area: string; areaSlug: string; category: CategorySlug; count: number }>> {
-  noStore();
   const fallback = emptyWhenUnconfigured<Array<{ area: string; areaSlug: string; category: CategorySlug; count: number }>>([]);
   if (fallback) return fallback;
 
@@ -650,7 +641,6 @@ export async function getBusinessAreaCategoryPages(minBusinesses = 3): Promise<A
 }
 
 export async function getFeaturedBusinesses(limit = 6): Promise<Business[]> {
-  noStore();
   const fallback = emptyWhenUnconfigured<Business[]>([]);
   if (fallback) return fallback;
 
@@ -663,7 +653,6 @@ export async function getFeaturedBusinesses(limit = 6): Promise<Business[]> {
 }
 
 export async function getBusinessBySlug(category: CategorySlug, slug: string): Promise<Business | undefined> {
-  noStore();
   const fallback = emptyWhenUnconfigured<undefined>(undefined);
   if (fallback === undefined && !hasSupabaseConfig()) return undefined;
 
@@ -676,7 +665,6 @@ export async function getBusinessBySlug(category: CategorySlug, slug: string): P
 }
 
 export async function getBusinessById(id: string): Promise<Business | undefined> {
-  noStore();
   const fallback = emptyWhenUnconfigured<undefined>(undefined);
   if (fallback === undefined && !hasSupabaseConfig()) return undefined;
 
@@ -687,7 +675,6 @@ export async function getBusinessById(id: string): Promise<Business | undefined>
 }
 
 export async function getRelatedBusinesses(business: Business, limit = 3): Promise<Business[]> {
-  noStore();
   const fallback = emptyWhenUnconfigured<Business[]>([]);
   if (fallback) return fallback;
 
@@ -706,7 +693,6 @@ export async function getRelatedBusinesses(business: Business, limit = 3): Promi
 }
 
 export async function getBusinessSlugsByCategory(category: CategorySlug): Promise<{ slug: string }[]> {
-  noStore();
   const fallback = emptyWhenUnconfigured<{ slug: string }[]>([]);
   if (fallback) return fallback;
 
@@ -717,7 +703,6 @@ export async function getBusinessSlugsByCategory(category: CategorySlug): Promis
 }
 
 export async function getRankings(locale?: Locale, limit?: number): Promise<Ranking[]> {
-  noStore();
   const fallback = emptyWhenUnconfigured<Ranking[]>([]);
   if (fallback) return fallback;
 
@@ -737,7 +722,6 @@ export async function getRankings(locale?: Locale, limit?: number): Promise<Rank
 }
 
 export async function getRankingBySlug(slug: string, locale: Locale): Promise<Ranking | undefined> {
-  noStore();
   const fallback = emptyWhenUnconfigured<undefined>(undefined);
   if (fallback === undefined && !hasSupabaseConfig()) return undefined;
 
@@ -748,7 +732,6 @@ export async function getRankingBySlug(slug: string, locale: Locale): Promise<Ra
 }
 
 export async function getRelatedRankings(category: CategorySlug | RankingCategory, limit = 3): Promise<Ranking[]> {
-  noStore();
   const fallback = emptyWhenUnconfigured<Ranking[]>([]);
   if (fallback) return fallback;
 
@@ -759,7 +742,6 @@ export async function getRelatedRankings(category: CategorySlug | RankingCategor
 }
 
 export async function getRankingSlugs(): Promise<{ slug: string }[]> {
-  noStore();
   const fallback = emptyWhenUnconfigured<{ slug: string }[]>([]);
   if (fallback) return fallback;
 
@@ -770,7 +752,6 @@ export async function getRankingSlugs(): Promise<{ slug: string }[]> {
 }
 
 export async function getGuides(locale?: Locale, limit?: number, excludeSource?: string): Promise<Guide[]> {
-  noStore();
   const fallback = emptyWhenUnconfigured<Guide[]>([]);
   if (fallback) return fallback;
 
@@ -785,7 +766,6 @@ export async function getGuides(locale?: Locale, limit?: number, excludeSource?:
 }
 
 export async function getGuideBySlug(slug: string, locale: Locale): Promise<Guide | undefined> {
-  noStore();
   const fallback = emptyWhenUnconfigured<undefined>(undefined);
   if (fallback === undefined && !hasSupabaseConfig()) return undefined;
 
@@ -796,7 +776,6 @@ export async function getGuideBySlug(slug: string, locale: Locale): Promise<Guid
 }
 
 export async function getGuideSlugs(): Promise<{ slug: string }[]> {
-  noStore();
   const fallback = emptyWhenUnconfigured<{ slug: string }[]>([]);
   if (fallback) return fallback;
 
@@ -807,15 +786,18 @@ export async function getGuideSlugs(): Promise<{ slug: string }[]> {
 }
 
 export async function getSitemapEntities() {
-  noStore();
-  const fallback = emptyWhenUnconfigured<{ businesses: Business[]; rankings: Ranking[]; guides: Guide[] }>({ businesses: [], rankings: [], guides: [] });
+  const fallback = emptyWhenUnconfigured<{
+    businesses: Array<{ slug: string; category: BusinessCategory; updatedAt: string }>;
+    rankings: Array<{ slug: string; locale: Locale; updatedAt: string }>;
+    guides: Array<{ slug: string; updatedAt: string }>;
+  }>({ businesses: [], rankings: [], guides: [] });
   if (fallback) return fallback;
 
   const supabase = createSupabaseServerClient();
   const [businessesResult, rankingsResult, guidesResult] = await Promise.all([
-    publicStatusFilter(supabase.from("businesses").select("*")),
-    publicStatusFilter(supabase.from("rankings").select("*, ranking_items(*)")),
-    publicStatusFilter(supabase.from("guides").select("*"))
+    publicStatusFilter(supabase.from("businesses").select("slug,category,updated_at")),
+    publicStatusFilter(supabase.from("rankings").select("slug,locale,updated_at")),
+    publicStatusFilter(supabase.from("guides").select("slug,updated_at"))
   ]);
 
   if (businessesResult.error) throw businessesResult.error;
@@ -823,8 +805,20 @@ export async function getSitemapEntities() {
   if (guidesResult.error) throw guidesResult.error;
 
   return {
-    businesses: mapBusinesses(businessesResult.data as BusinessRow[]),
-    rankings: (rankingsResult.data as RankingRow[]).map(mapRanking),
-    guides: (guidesResult.data as GuideRow[]).map(mapGuide)
+    businesses: ((businessesResult.data ?? []) as Array<{ slug: string; category: BusinessCategory; updated_at: string }>).map((row) => ({
+      slug: row.slug,
+      category: row.category,
+      updatedAt: row.updated_at
+    })),
+    rankings: ((rankingsResult.data ?? []) as Array<{ slug: string; locale: Locale; updated_at: string }>).map((row) => ({
+      slug: row.slug,
+      locale: row.locale,
+      updatedAt: row.updated_at
+    })),
+    guides: ((guidesResult.data ?? []) as Array<{ slug: string; updated_at: string }>).map((row) => ({
+      slug: row.slug,
+      updatedAt: row.updated_at
+    }))
   };
 }
+

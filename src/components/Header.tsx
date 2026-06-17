@@ -34,7 +34,7 @@ function NavLogo({ locale }: { locale: Locale }) {
 }
 
 function categoryHref(locale: Locale, slug: CategorySlug) {
-  return `/${locale}/rankings?category=${slug}`;
+  return `/${locale}/top/${slug}`;
 }
 
 export function Header({ locale }: { locale: Locale }) {
