@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { CTABox } from "@/components/CTABox";
 import { generateSeoMetadata } from "@/lib/seo";
 import { isLocale, type Locale } from "@/lib/i18n";
@@ -146,7 +147,7 @@ export default async function BusinessPage({ params }: { params: Promise<{ local
           <div className="rounded-lg border border-[#E7DED0] bg-[#FFFDF7] p-6 shadow-[0_18px_45px_rgba(27,46,75,0.06)]">
             <p className="text-[10px] font-black uppercase tracking-[0.14em] text-[#B86B1D]">{copy.contactEyebrow}</p>
             <p className="mt-4 text-sm leading-7 text-[#4B5B4D]">{copy.contactText}</p>
-            <a href={`mailto:hola@mallorcaverified.com?subject=${encodeURIComponent(copy.subject)}`} className="mt-6 block rounded-md bg-[#10253D] px-5 py-4 text-center text-[11px] font-black uppercase tracking-[0.1em] text-white transition-all duration-150 hover:bg-[#0E8F72]">{copy.contactCta}</a>
+            <Link href={`/${safeLocale}/contact`} className="mt-6 block rounded-md bg-[#10253D] px-5 py-4 text-center text-[11px] font-black uppercase tracking-[0.1em] text-white transition-all duration-150 hover:bg-[#0E8F72]">{copy.contactCta}</Link>
           </div>
         </div>
       </section>
@@ -184,7 +185,7 @@ export default async function BusinessPage({ params }: { params: Promise<{ local
               <h2 className="mt-2 text-3xl font-black text-[#10253D]">{copy.areaTitle}</h2>
               <p className="mt-1.5 text-sm text-[#5F6F61]">{copy.areaNote}</p>
             </div>
-            <a href={`mailto:hola@mallorcaverified.com?subject=${encodeURIComponent(copy.subject)}`} className="rounded-md bg-[#10253D] px-4 py-3 text-[11px] font-black uppercase tracking-[0.1em] text-white transition-all duration-150 hover:bg-[#0E8F72]">{copy.contactCta}</a>
+            <Link href={`/${safeLocale}/contact`} className="rounded-md bg-[#10253D] px-4 py-3 text-[11px] font-black uppercase tracking-[0.1em] text-white transition-all duration-150 hover:bg-[#0E8F72]">{copy.contactCta}</Link>
           </div>
           <div className="mt-5 grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
             {areaPages.slice(0, 9).map((page) => (
