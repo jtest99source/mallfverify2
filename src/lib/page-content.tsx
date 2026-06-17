@@ -213,6 +213,19 @@ function priceLabelForUnit(unit: NonNullable<Business["priceEstimate"]>["unit"] 
   return unit ? labels[locale][unit] ?? null : null;
 }
 
+function formatCurrencyAmount(value: number) {
+  return Number.isInteger(value) ? `${value}` : value.toFixed(2).replace(/\.?0+$/, "");
+}
+
+function orientativeRangeFromExactPrice(value: number) {
+  const midpoint = Math.max(5, Math.round(value / 5) * 5);
+  const spread = midpoint <= 30 ? 5 : midpoint <= 80 ? 10 : 20;
+  return {
+    min: Math.max(0, midpoint - spread),
+    max: midpoint + spread
+  };
+}
+
 function formatPriceEstimate(priceEstimate: Business["priceEstimate"] | null | undefined, locale: Locale) {
   if (!priceEstimate) return null;
   const min = priceEstimate.amount_min ?? priceEstimate.range_min ?? priceEstimate.per_person_min ?? null;
@@ -221,11 +234,16 @@ function formatPriceEstimate(priceEstimate: Business["priceEstimate"] | null | u
 
   let display: string | null = null;
   if (typeof min === "number" && typeof max === "number") {
-    display = min === max ? `${min} ${currency}` : `${min}\u2013${max} ${currency}`;
+    if (min === max) {
+      const range = orientativeRangeFromExactPrice(min);
+      display = `${formatCurrencyAmount(range.min)}\u2013${formatCurrencyAmount(range.max)} ${currency}`;
+    } else {
+      display = `${formatCurrencyAmount(min)}\u2013${formatCurrencyAmount(max)} ${currency}`;
+    }
   } else if (typeof min === "number") {
-    display = `${min} ${currency}`;
+    display = `${formatCurrencyAmount(Math.round(min / 5) * 5)} ${currency}`;
   } else if (typeof max === "number") {
-    display = `${max} ${currency}`;
+    display = `${formatCurrencyAmount(Math.round(max / 5) * 5)} ${currency}`;
   }
 
   if (!display) return null;
@@ -261,7 +279,8 @@ function AddressBar({ business, location, locale }: { business: Business; locati
       <div className="mx-auto flex max-w-[1200px] flex-col items-start gap-2 border border-t-0 border-borderline bg-white px-4 py-3 sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:px-8">
         <div className="flex items-center gap-2 text-xs leading-5 text-sea">
           <IconMapPin aria-hidden="true" size={14} stroke={2} className="shrink-0 text-coral" />
-          <span>{address}</span>
+          <span className="sm:hidden">{location}, Mallorca</span>
+          <span className="hidden sm:inline">{address}</span>
         </div>
         <a
           href={getDirectionsUrl(business)}
@@ -317,19 +336,22 @@ function MobileBusinessActions({
 
   return (
     <section className="bg-paper px-4 pt-3 lg:hidden">
-      <div className="mx-auto flex max-w-[1200px] gap-2 overflow-x-auto pb-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-        {actions.map(({ href, label, Icon, external }) => (
-          <a
-            key={`${href}-${label}`}
-            href={href}
-            target={external ? "_blank" : undefined}
-            rel={external ? "noreferrer" : undefined}
-            className="inline-flex min-h-10 shrink-0 items-center gap-2 rounded-full border border-borderline bg-white px-3 text-[11px] font-bold text-ink shadow-sm"
-          >
-            <Icon aria-hidden="true" size={14} stroke={2} className="text-coral" />
-            <span>{label}</span>
-          </a>
-        ))}
+      <div className="relative mx-auto max-w-[1200px]">
+        <div className="flex gap-2 overflow-x-auto pb-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+          {actions.map(({ href, label, Icon, external }) => (
+            <a
+              key={`${href}-${label}`}
+              href={href}
+              target={external ? "_blank" : undefined}
+              rel={external ? "noreferrer" : undefined}
+              className="inline-flex min-h-10 shrink-0 items-center gap-2 rounded-full border border-borderline bg-white px-3 text-[11px] font-bold text-ink shadow-sm"
+            >
+              <Icon aria-hidden="true" size={14} stroke={2} className="text-coral" />
+              <span>{label}</span>
+            </a>
+          ))}
+        </div>
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-10 bg-gradient-to-l from-paper to-transparent" />
       </div>
     </section>
   );
@@ -581,6 +603,13 @@ export async function BusinessDetailPage({ category, locale, slug }: { category:
 
       <AddressBar business={business} location={location} locale={locale} />
       <MobileBusinessActions business={business} publicWebsite={publicWebsite} locale={locale} />
+      {business.openingHours && business.category !== "boat-rental" && (
+        <div className="border-t border-borderline bg-white px-4 lg:hidden">
+          <div className="mx-auto max-w-[1200px]">
+            <BusinessHours openingHours={business.openingHours} locale={locale} />
+          </div>
+        </div>
+      )}
 
       <div className="mx-auto grid max-w-[1200px] items-start gap-6 px-4 py-6 sm:px-6 sm:py-8 lg:grid-cols-[minmax(0,1fr)_300px] lg:gap-8 lg:px-8">
         <article className="min-w-0">
