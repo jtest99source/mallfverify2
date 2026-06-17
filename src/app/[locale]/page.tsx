@@ -41,22 +41,22 @@ const categoryIcons: Partial<Record<CategorySlug, typeof IconToolsKitchen2>> = {
 
 const methodologyCopy = {
   es: {
-    link: "Leer metodologia completa ->",
+    link: "Leer metodología completa →",
     items: [
       {
         Icon: IconChartBar,
-        title: "El consenso, no una opinion",
-        text: "Cada posicion refleja lo que han valorado cientos o miles de personas reales. No un blog, no publicidad: la experiencia colectiva de quienes han estado alli."
+        title: "El consenso, no una opinión",
+        text: "Cada posición refleja lo que han valorado cientos o miles de personas reales. No un blog, no publicidad: la experiencia colectiva de quienes han estado allí."
       },
       {
         Icon: IconDiamond,
         title: "Lo mejor antes de que todo el mundo lo sepa",
-        text: "El Untapped Score detecta negocios con valoracion alta que todavia no estan masificados. Excelentes segun los datos, pero sin cola en la puerta."
+        text: "El Untapped Score detecta negocios con valoración alta que todavía no están masificados. Excelentes según los datos, pero sin cola en la puerta."
       },
       {
         Icon: IconPencil,
-        title: "Guias para planificar",
-        text: "Las guias ayudan a elegir zona, ruta o tipo de experiencia, pero nunca cambian la posicion de ningun negocio en rankings."
+        title: "Guías para planificar",
+        text: "Las guías ayudan a elegir zona, ruta o tipo de experiencia, pero nunca cambian la posición de ningún negocio en rankings."
       }
     ]
   },
@@ -81,7 +81,7 @@ const methodologyCopy = {
     ]
   },
   de: {
-    link: "Vollstaendige Methodik lesen ->",
+    link: "Vollständige Methodik lesen →",
     items: [
       {
         Icon: IconChartBar,
@@ -91,12 +91,12 @@ const methodologyCopy = {
       {
         Icon: IconDiamond,
         title: "Starke Orte, bevor alle sie kennen",
-        text: "Der Untapped Score erkennt sehr gut bewertete Orte, die noch nicht ueberlaufen sind. Stark nach Daten, aber nicht auf jeder Liste."
+        text: "Der Untapped Score erkennt sehr gut bewertete Orte, die noch nicht überlaufen sind. Stark nach Daten, aber nicht auf jeder Liste."
       },
       {
         Icon: IconPencil,
         title: "Kontext, wenn er hilft",
-        text: "Redaktioneller Kontext hilft bei Gegend, Route oder Erlebnisart, aendert aber nie die Position eines Betriebs im Ranking."
+        text: "Redaktioneller Kontext hilft bei Gegend, Route oder Erlebnisart, ändert aber nie die Position eines Betriebs im Ranking."
       }
     ]
   }

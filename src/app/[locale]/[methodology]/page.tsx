@@ -13,43 +13,43 @@ import { createBreadcrumbSchema, createFAQSchema } from "@/lib/schema";
 
 const copy = {
   es: {
-    metaTitle: "Metodologia de rankings | Mallorca Verified",
-    metaDescription: "Como Mallorca Verified clasifica negocios de Mallorca con datos reales de Google, resenas, Untapped Score y criterio editorial independiente.",
+    metaTitle: "Metodología de rankings | Mallorca Verified",
+    metaDescription: "Cómo Mallorca Verified clasifica negocios de Mallorca con datos reales de Google, reseñas, Untapped Score y criterio editorial independiente.",
     home: "Inicio",
-    label: "Metodologia",
+    label: "Metodología",
     badge: "Rankings independientes",
-    title: "Como evaluamos los negocios de Mallorca",
-    intro: "Comparamos negocios con resenas reales de Google, senales publicas y una metodologia clara. La posicion en rankings no se compra.",
+    title: "Cómo evaluamos los negocios de Mallorca",
+    intro: "Comparamos negocios con reseñas reales de Google, señales públicas y una metodología clara. La posición en rankings no se compra.",
     businessEyebrow: "Para negocios",
     businessTitle: "Mejora la ficha, no el ranking",
-    businessText: "Una colaboracion puede completar fotos, servicios, carta, horarios y datos utiles. No modifica valoraciones, resenas ni posiciones.",
-    businessCta: "Escribenos ->",
-    whyTitle: "Por que existe esta guia",
-    whyText: "Muchas recomendaciones mezclan publicidad, invitaciones y opinion personal. Mallorca Verified separa los rankings objetivos del contenido editorial para que el usuario entienda por que aparece cada sitio.",
-    factorsTitle: "Como construimos los rankings",
-    factorsIntro: "Cada categoria se compara por separado. Restaurantes compiten con restaurantes, hoteles con hoteles y barcos con barcos.",
+    businessText: "Una colaboración puede completar fotos, servicios, carta, horarios y datos útiles. No modifica valoraciones, reseñas ni posiciones.",
+    businessCta: "Escríbenos →",
+    whyTitle: "Por qué existe esta guía",
+    whyText: "Muchas recomendaciones mezclan publicidad, invitaciones y opinión personal. Mallorca Verified separa los rankings objetivos del contenido editorial para que el usuario entienda por qué aparece cada sitio.",
+    factorsTitle: "Cómo construimos los rankings",
+    factorsIntro: "Cada categoría se compara por separado. Restaurantes compiten con restaurantes, hoteles con hoteles y barcos con barcos.",
     factors: [
-      ["Factor 1", "Valoracion media", "La nota que los clientes han dado en Google. Una valoracion alta es una senal fuerte, pero por si sola no basta."],
-      ["Factor 2", "Volumen de resenas", "No pesa igual un 4,9 con 8 resenas que un 4,7 con cientos de opiniones. El volumen ayuda a distinguir senales solidas."],
-      ["Factor 3", "Untapped Score", "Senal propia para detectar negocios excelentes que todavia no estan masificados dentro de su categoria."]
+      ["Factor 1", "Valoración media", "La nota que los clientes han dado en Google. Una valoración alta es una señal fuerte, pero por sí sola no basta."],
+      ["Factor 2", "Volumen de reseñas", "No pesa igual un 4,9 con 8 reseñas que un 4,7 con cientos de opiniones. El volumen ayuda a distinguir señales sólidas."],
+      ["Factor 3", "Untapped Score", "Señal propia para detectar negocios excelentes que todavía no están masificados dentro de su categoría."]
     ],
     neverTitle: "Lo que nunca hacemos",
     never: [
-      ["Pagar para subir", "La posicion depende de datos publicos. Si hay contenido patrocinado, estara etiquetado."],
-      ["Inventar experiencias", "Las fichas parten de resenas, datos publicos y enlaces verificables."],
-      ["Ocultar por razones comerciales", "Si un negocio tiene buenas metricas, puede aparecer aunque no tenga relacion comercial con nosotros."]
+      ["Pagar para subir", "La posición depende de datos públicos. Si hay contenido patrocinado, estará etiquetado."],
+      ["Inventar experiencias", "Las fichas parten de reseñas, datos públicos y enlaces verificables."],
+      ["Ocultar por razones comerciales", "Si un negocio tiene buenas métricas, puede aparecer aunque no tenga relación comercial con nosotros."]
     ],
-    dataTitle: "De donde vienen los datos",
-    dataText: "Usamos datos publicos de Google y los estructuramos para comparar valoracion, volumen de resenas, categoria, zona y consistencia del perfil.",
+    dataTitle: "De dónde vienen los datos",
+    dataText: "Usamos datos públicos de Google y los estructuramos para comparar valoración, volumen de reseñas, categoría, zona y consistencia del perfil.",
     published: "negocios publicados",
-    reviews: "resenas verificadas",
-    categories: "categorias activas",
+    reviews: "reseñas verificadas",
+    categories: "categorías activas",
     faqTitle: "Preguntas frecuentes",
     faqs: [
-      ["Puede un negocio pagar para aparecer?", "Aparecer en rankings objetivos depende de los datos disponibles. Una colaboracion puede mejorar la ficha, pero no compra posicion."],
-      ["Cada cuanto se actualizan los datos?", "Los datos se actualizan periodicamente. Si un negocio mejora sus senales publicas, puede subir en futuros ciclos."],
-      ["Por que Google como fuente?", "Google Maps tiene el mayor volumen de resenas publicas para negocios locales en Mallorca y permite comparar categorias con una base amplia."],
-      ["Mallorca Verified sirve para ChatGPT o Google AI?", "Si. La estructura, metodologia y datos verificables ayudan a que el sitio sea una fuente clara para sistemas de respuesta generativa."]
+      ["¿Puede un negocio pagar para aparecer?", "Aparecer en rankings objetivos depende de los datos disponibles. Una colaboración puede mejorar la ficha, pero no compra posición."],
+      ["¿Cada cuánto se actualizan los datos?", "Los datos se actualizan periódicamente. Si un negocio mejora sus señales públicas, puede subir en futuros ciclos."],
+      ["¿Por qué Google como fuente?", "Google Maps tiene el mayor volumen de reseñas públicas para negocios locales en Mallorca y permite comparar categorías con una base amplia."],
+      ["¿Mallorca Verified sirve para ChatGPT o Google AI?", "Sí. La estructura, metodología y datos verificables ayudan a que el sitio sea una fuente clara para sistemas de respuesta generativa."]
     ]
   },
   en: {

@@ -9,10 +9,10 @@ const copy = {
     defaultBusiness: "negocio",
     businessName: "Nombre del negocio",
     email: "Tu email",
-    message: "Que necesitas? (opcional)",
+    message: "¿Qué necesitas? (opcional)",
     defaultMessage: `Quiero revisar o mejorar mi ficha en ${siteConfig.name}.`,
-    pageViewed: "Pagina vista",
-    submit: "Escribenos ->"
+    pageViewed: "Página vista",
+    submit: "Escríbenos →"
   },
   en: {
     defaultBusiness: "business",
@@ -28,7 +28,7 @@ const copy = {
     businessName: "Name des Betriebs",
     email: "Deine E-Mail",
     message: "Was brauchst du? (optional)",
-    defaultMessage: `Ich moechte mein Profil auf ${siteConfig.name} pruefen oder verbessern.`,
+    defaultMessage: `Ich möchte mein Profil auf ${siteConfig.name} prüfen oder verbessern.`,
     pageViewed: "Gesehene Seite",
     submit: "Kontakt aufnehmen ->"
   }

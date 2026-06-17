@@ -140,7 +140,7 @@ export default async function BusinessPage({ params }: { params: Promise<{ local
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1fr_360px] lg:items-end">
           <div>
             <p className="text-[11px] font-black uppercase tracking-[0.18em] text-[#0E8F72]">{copy.eyebrow}</p>
-            <h1 className="mt-4 max-w-4xl text-5xl font-black leading-none text-[#10253D] sm:text-7xl">{copy.title}</h1>
+            <h1 className="mt-4 max-w-4xl text-4xl font-black leading-[0.96] text-[#10253D] sm:text-5xl lg:text-7xl">{copy.title}</h1>
             <p className="mt-6 max-w-2xl text-base leading-8 text-[#4B5B4D]">{copy.intro}</p>
           </div>
           <div className="rounded-lg border border-[#E7DED0] bg-[#FFFDF7] p-6 shadow-[0_18px_45px_rgba(27,46,75,0.06)]">
@@ -152,7 +152,7 @@ export default async function BusinessPage({ params }: { params: Promise<{ local
       </section>
 
       <section className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
-        <div className="grid gap-3 md:grid-cols-4">
+        <div className="grid grid-cols-2 gap-3 md:grid-cols-4">
           {stats.map((item) => (
             <div key={item.label} className="rounded-lg border border-[#E7DED0] bg-[#FFFDF7] p-6 shadow-sm">
               <p className="text-4xl font-black text-[#10253D]">{item.value}</p>

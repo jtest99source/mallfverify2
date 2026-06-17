@@ -23,7 +23,7 @@ export const uiCopy = {
     home: {
       metaTitle: "Mallorca Verified | La guía verificada de Mallorca",
       metaDescription: "Restaurantes, hoteles, beach clubs, barcos, actividades y playas en Mallorca verificados con datos reales de Google y selección propia.",
-      eyebrow: "Mallorca · Actualizado a diario · Sin posiciones de pago",
+      eyebrow: "Sin publicidad · Sin posiciones de pago",
       title: "Encuentra los mejores negocios de Mallorca",
       intro: "Encuentra los mejores sitios de Mallorca según miles de viajeros reales. Sin publicidad, sin posiciones de pago — solo lo que funciona de verdad.",
       exploreRankings: "Explorar rankings",
@@ -133,7 +133,7 @@ export const uiCopy = {
     home: {
       metaTitle: "Mallorca Verified | The verified guide to Mallorca",
       metaDescription: "Restaurants, hotels, beach clubs, boats, activities and beaches in Mallorca verified with real Google data and editorial checks.",
-      eyebrow: "Mallorca · Updated daily · No paid placements",
+      eyebrow: "No ads · No paid placements",
       title: "Find the best places in Mallorca",
       intro: "Find the best places in Mallorca based on thousands of real traveller reviews. No ads, no paid placements — just what actually works.",
       exploreRankings: "Explore rankings",
@@ -243,7 +243,7 @@ export const uiCopy = {
     home: {
       metaTitle: "Mallorca Verified | Der verifizierte Guide für Mallorca",
       metaDescription: "Restaurants, Hotels, Beachclubs, Boote, Aktivitäten und Strände auf Mallorca, geprüft mit echten Google-Daten und redaktioneller Auswahl.",
-      eyebrow: "Mallorca · Täglich aktualisiert · Keine bezahlten Platzierungen",
+      eyebrow: "Keine Werbung · Keine bezahlten Platzierungen",
       title: "Die besten Orte auf Mallorca — einfach gefunden",
       intro: "Finde die besten Orte auf Mallorca, bewertet von tausenden echten Reisenden. Ohne Werbung, ohne gekaufte Positionen — nur das, was wirklich funktioniert.",
       exploreRankings: "Rankings entdecken",
