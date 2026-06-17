@@ -5,7 +5,7 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(request: Request) {
   try {
-    const { businessName, contactName, email, message, page } = await request.json();
+    const { businessName, contactName, email, website, message, page } = await request.json();
 
     await resend.emails.send({
       from: "Mallorca Verified <noreply@mallorcaverified.com>",
@@ -16,6 +16,7 @@ export async function POST(request: Request) {
         `Negocio: ${businessName || "—"}`,
         contactName ? `Contacto: ${contactName}` : "",
         `Email: ${email || "—"}`,
+        website ? `Web: ${website}` : "",
         `Página: ${page || "—"}`,
         message ? `\nMensaje: ${message}` : "",
       ]

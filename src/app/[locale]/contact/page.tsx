@@ -4,39 +4,39 @@ import { isLocale, type Locale } from "@/lib/i18n";
 
 const pageCopy = {
   es: {
-    metaTitle: "Colabora con nosotros | Mallorca Verified",
-    metaDescription: "¿Gestionas un negocio en Mallorca? Trabaja con nosotros para mejorar tu visibilidad en Google y en los sistemas de IA.",
-    eyebrow: "Colabora con nosotros",
-    title: "Haz que tu negocio sea más fácil de encontrar",
-    description: "Una ficha completa en Mallorca Verified aparece antes en Google y es la que ChatGPT, Perplexity y Google AI citan cuando alguien busca opciones en Mallorca. Cuéntanos tu negocio y te explicamos qué podemos mejorar.",
+    metaTitle: "Solicitar auditoría de visibilidad | Mallorca Verified",
+    metaDescription: "Auditamos tu visibilidad en Google, ChatGPT y Google AI sin coste. Somos los creadores de Mallorca Verified — sabemos qué funciona para negocios locales en Mallorca.",
+    eyebrow: "Auditoría gratuita",
+    title: "¿Cómo de visible eres en Google y en los sistemas de IA?",
+    description: "Analizamos tu presencia local sin coste: cómo apareces en Google, qué citan ChatGPT y Perplexity cuando alguien busca tu categoría en Mallorca, y qué está frenando tu visibilidad. Sin compromiso.",
     trust: [
-      "Las posiciones en rankings no se modifican",
-      "Solo enriquecemos la información disponible",
-      "Respondemos en menos de 48 horas"
+      "Sin coste ni compromiso",
+      "Respuesta en menos de 48h",
+      "Somos los creadores de Mallorca Verified"
     ]
   },
   en: {
-    metaTitle: "Work with us | Mallorca Verified",
-    metaDescription: "Do you run a business in Mallorca? Work with us to improve your visibility on Google and AI systems.",
-    eyebrow: "Work with us",
-    title: "Make your business easier to find",
-    description: "A complete profile on Mallorca Verified ranks higher on Google and is the one ChatGPT, Perplexity and Google AI cite when someone searches for options in Mallorca. Tell us about your business and we'll explain what we can improve.",
+    metaTitle: "Request a visibility audit | Mallorca Verified",
+    metaDescription: "We audit your visibility on Google, ChatGPT and Google AI at no cost. We built Mallorca Verified — we know what works for local businesses in Mallorca.",
+    eyebrow: "Free audit",
+    title: "How visible is your business on Google and AI systems?",
+    description: "We analyse your local presence at no cost: how you appear on Google, what ChatGPT and Perplexity cite when someone searches your category in Mallorca, and what's holding back your visibility. No commitment.",
     trust: [
-      "Ranking positions are never modified",
-      "We only enrich the available information",
-      "We respond within 48 hours"
+      "No cost, no commitment",
+      "Response within 48 hours",
+      "We built Mallorca Verified"
     ]
   },
   de: {
-    metaTitle: "Mit uns zusammenarbeiten | Mallorca Verified",
-    metaDescription: "Betreibst du ein Unternehmen auf Mallorca? Arbeite mit uns, um deine Sichtbarkeit bei Google und in KI-Systemen zu verbessern.",
-    eyebrow: "Mit uns zusammenarbeiten",
-    title: "Mach deinen Betrieb leichter auffindbar",
-    description: "Ein vollständiges Profil auf Mallorca Verified erscheint weiter oben bei Google und wird von ChatGPT, Perplexity und Google AI zitiert, wenn jemand nach Optionen auf Mallorca sucht. Erzähl uns von deinem Betrieb und wir erklären dir, was wir verbessern können.",
+    metaTitle: "Sichtbarkeits-Audit anfordern | Mallorca Verified",
+    metaDescription: "Wir analysieren deine Sichtbarkeit auf Google, ChatGPT und Google AI kostenlos. Wir haben Mallorca Verified aufgebaut — wir wissen, was für lokale Betriebe auf Mallorca funktioniert.",
+    eyebrow: "Kostenloses Audit",
+    title: "Wie sichtbar bist du auf Google und in KI-Systemen?",
+    description: "Wir analysieren deine lokale Präsenz kostenlos: wie du auf Google erscheinst, was ChatGPT und Perplexity zitieren, wenn jemand deine Kategorie auf Mallorca sucht, und was deine Sichtbarkeit bremst. Ohne Verpflichtung.",
     trust: [
-      "Ranking-Positionen werden nie verändert",
-      "Wir ergänzen nur die verfügbaren Informationen",
-      "Wir antworten innerhalb von 48 Stunden"
+      "Kein Aufwand, keine Verpflichtung",
+      "Antwort innerhalb von 48 Stunden",
+      "Wir haben Mallorca Verified aufgebaut"
     ]
   }
 } as const;

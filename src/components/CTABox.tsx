@@ -3,22 +3,22 @@ import type { Locale } from "@/lib/i18n";
 
 const copy = {
   es: {
-    title: "¿Tu negocio aparece en Mallorca Verified?",
-    text: "Las fichas completas y bien trabajadas aparecen antes en Google y son las que ChatGPT, Perplexity y Google AI citan cuando alguien busca opciones en Mallorca.",
-    note: "Las posiciones en rankings no cambian. Solo enriquecemos la información disponible.",
-    cta: "Colabora con nosotros →"
+    title: "¿Cuándo buscan tu categoría en Mallorca, apareces tú?",
+    text: "Auditamos tu visibilidad en Google y en ChatGPT, Perplexity y Google AI de forma gratuita. Somos los creadores de Mallorca Verified — sabemos qué funciona.",
+    note: "Sin coste ni compromiso. Solo una conversación.",
+    cta: "Solicitar auditoría gratuita →"
   },
   en: {
-    title: "Is your business listed on Mallorca Verified?",
-    text: "Complete, well-structured profiles rank higher on Google and are the ones ChatGPT, Perplexity and Google AI cite when someone searches for options in Mallorca.",
-    note: "Ranking positions do not change. We only enrich the available information.",
-    cta: "Work with us →"
+    title: "When someone searches your category in Mallorca, do you show up?",
+    text: "We audit your visibility on Google and on ChatGPT, Perplexity and Google AI for free. We built Mallorca Verified — we know what works.",
+    note: "No cost, no commitment. Just a conversation.",
+    cta: "Request a free audit →"
   },
   de: {
-    title: "Ist dein Betrieb auf Mallorca Verified gelistet?",
-    text: "Vollständige, gut strukturierte Profile erscheinen weiter oben bei Google und werden von ChatGPT, Perplexity und Google AI zitiert, wenn jemand nach Optionen auf Mallorca sucht.",
-    note: "Ranking-Positionen ändern sich nicht. Wir ergänzen nur die verfügbaren Informationen.",
-    cta: "Mit uns zusammenarbeiten →"
+    title: "Wenn jemand deine Kategorie auf Mallorca sucht — erscheinst du?",
+    text: "Wir analysieren deine Sichtbarkeit auf Google und bei ChatGPT, Perplexity und Google AI kostenlos. Wir haben Mallorca Verified aufgebaut — wir wissen, was funktioniert.",
+    note: "Kein Aufwand, keine Verpflichtung. Nur ein Gespräch.",
+    cta: "Kostenloses Audit anfordern →"
   }
 } as const;
 
