@@ -5,7 +5,7 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(request: Request) {
   try {
-    const { businessName, area, email, page } = await request.json();
+    const { businessName, area, link, email, notes, page } = await request.json();
 
     if (!businessName?.trim()) {
       return NextResponse.json({ ok: false, error: "businessName required" }, { status: 400 });
@@ -19,9 +19,11 @@ export async function POST(request: Request) {
       text: [
         `Negocio sugerido: ${businessName}`,
         `Zona: ${area || "—"}`,
+        `Link: ${link || "—"}`,
         `Email contacto: ${email || "—"}`,
-        `Página: ${page || "—"}`,
-      ].join("\n"),
+        notes ? `\nNotas: ${notes}` : "",
+        `\nPágina: ${page || "—"}`,
+      ].filter(Boolean).join("\n"),
     });
 
     return NextResponse.json({ ok: true });
