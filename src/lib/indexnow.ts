@@ -1,5 +1,5 @@
-const INDEXNOW_KEY = "ac537f7eaf28a657d36d3a04ae1919e0";
-const SITE_URL = "https://mallorcaverified.com";
+const INDEXNOW_KEY = "23af42b5d954480b9e13878f5a908988";
+const SITE_URL = "https://www.mallorcaverified.com";
 
 export async function submitToIndexNow(urls: string[]): Promise<void> {
   if (!urls.length) return;

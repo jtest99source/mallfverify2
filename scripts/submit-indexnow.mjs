@@ -4,8 +4,8 @@
 
 import { existsSync, readFileSync } from 'node:fs'
 
-const INDEXNOW_KEY = 'ac537f7eaf28a657d36d3a04ae1919e0'
-const SITE_URL = 'https://mallorcaverified.com'
+const INDEXNOW_KEY = '23af42b5d954480b9e13878f5a908988'
+const SITE_URL = 'https://www.mallorcaverified.com'
 const LOCALES = ['es', 'en', 'de']
 const GUIDE_LOCALES = ['es', 'en']
 
@@ -86,29 +86,41 @@ async function main() {
   const urlList = [...urls]
   console.log(`Submitting ${urlList.length} URLs to IndexNow...`)
 
-  // Send in chunks of 100
-  let sent = 0
-  for (let i = 0; i < urlList.length; i += 100) {
-    const chunk = urlList.slice(i, i + 100)
-    const res = await fetch('https://api.indexnow.org/indexnow', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json; charset=utf-8' },
-      body: JSON.stringify({
-        host: 'mallorcaverified.com',
-        key: INDEXNOW_KEY,
-        keyLocation: `${SITE_URL}/${INDEXNOW_KEY}.txt`,
-        urlList: chunk
-      })
-    })
-    if (res.ok || res.status === 202) {
-      sent += chunk.length
-      console.log(`  ✓ Chunk ${Math.ceil(i / 100) + 1}: ${chunk.length} URLs (HTTP ${res.status})`)
-    } else {
-      console.error(`  ✗ Chunk ${Math.ceil(i / 100) + 1}: HTTP ${res.status}`)
-    }
-  }
+  const payload = (chunk) => JSON.stringify({
+    host: 'www.mallorcaverified.com',
+    key: INDEXNOW_KEY,
+    keyLocation: `${SITE_URL}/${INDEXNOW_KEY}.txt`,
+    urlList: chunk
+  })
 
-  console.log(`\nDone! ${sent}/${urlList.length} URLs submitted.`)
+  // Yandex endpoint (works without BWM verification)
+  // Bing endpoint (api.indexnow.org) requires IndexNow key registered in Bing Webmaster Tools
+  const ENDPOINTS = [
+    { name: 'Yandex', url: 'https://yandex.com/indexnow' },
+    { name: 'Bing',   url: 'https://api.indexnow.org/indexnow' },
+  ]
+
+  for (const endpoint of ENDPOINTS) {
+    console.log(`\nSubmitting to ${endpoint.name}...`)
+    let sent = 0
+    for (let i = 0; i < urlList.length; i += 100) {
+      const chunk = urlList.slice(i, i + 100)
+      const res = await fetch(endpoint.url, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json; charset=utf-8' },
+        body: payload(chunk)
+      })
+      if (res.ok || res.status === 202) {
+        sent += chunk.length
+        console.log(`  ✓ Chunk ${Math.ceil(i / 100) + 1}: ${chunk.length} URLs (HTTP ${res.status})`)
+      } else {
+        const body = await res.text().catch(() => '')
+        console.error(`  ✗ Chunk ${Math.ceil(i / 100) + 1}: HTTP ${res.status} ${body.slice(0, 120)}`)
+        break
+      }
+    }
+    console.log(`  → ${sent}/${urlList.length} URLs accepted by ${endpoint.name}`)
+  }
 }
 
 main().catch(console.error)
