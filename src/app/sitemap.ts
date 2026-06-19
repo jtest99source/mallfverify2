@@ -17,7 +17,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     urls.push({ url: `${siteUrl}/${locale}/privacy`, lastModified: now, changeFrequency: "yearly", priority: 0.2 });
     urls.push({ url: `${siteUrl}/${locale}/cookies`, lastModified: now, changeFrequency: "yearly", priority: 0.2 });
     urls.push({ url: `${siteUrl}/${locale}/rankings`, lastModified: now, changeFrequency: "daily", priority: 0.9 });
-    if (locale === "es") urls.push({ url: `${siteUrl}/${locale}/guides`, lastModified: now, changeFrequency: "weekly", priority: 0.7 });
+    if (locale === "es" || locale === "en") urls.push({ url: `${siteUrl}/${locale}/guides`, lastModified: now, changeFrequency: "weekly", priority: 0.7 });
     urls.push({ url: `${siteUrl}${methodologyPath(locale)}`, lastModified: now, changeFrequency: "monthly", priority: 0.8 });
     for (const category of Object.keys(categoryConfigs)) {
       urls.push({ url: `${siteUrl}/${locale}/${category}`, lastModified: now, changeFrequency: "daily", priority: 0.85 });
@@ -28,8 +28,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     for (const ranking of rankings.filter((ranking) => ranking.locale === locale)) {
       urls.push({ url: `${siteUrl}/${locale}/rankings/${ranking.slug}`, lastModified: new Date(ranking.updatedAt), changeFrequency: "weekly", priority: 0.75 });
     }
-    if (locale === "es") {
-      for (const guide of guides) urls.push({ url: `${siteUrl}/${locale}/guides/${guide.slug}`, lastModified: new Date(guide.updatedAt), changeFrequency: "monthly", priority: 0.65 });
+  }
+  const seenGuideSlugs = new Set<string>();
+  for (const guide of guides) {
+    if (seenGuideSlugs.has(guide.slug)) continue;
+    seenGuideSlugs.add(guide.slug);
+    for (const guideLocale of ["es", "en"] as const) {
+      urls.push({ url: `${siteUrl}/${guideLocale}/guides/${guide.slug}`, lastModified: new Date(guide.updatedAt), changeFrequency: "weekly", priority: 0.7 });
     }
   }
   return urls;

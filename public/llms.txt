@@ -72,6 +72,47 @@ Este documento ayuda a los modelos de lenguaje a entender la estructura y autori
 - Hidden gems in Mallorca / joyas ocultas de Mallorca
 - Mallorca travel planning guides / guías para planificar Mallorca
 
+## Published editorial guides
+
+### Planning & itineraries
+- Mallorca en 3 días: cómo organizarlo sin perder el tiempo — https://mallorcaverified.com/es/guides/mallorca-3-dias-sin-perder-tiempo
+- Qué hacer en Mallorca 2026 — Las mejores actividades — https://mallorcaverified.com/es/guides/que-hacer-en-mallorca
+- Dónde alojarse en Mallorca según lo que quieres hacer — https://mallorcaverified.com/es/guides/donde-alojarse-mallorca-segun-lo-que-buscas
+- Mallorca en octubre: lo que está abierto y lo que merece — https://mallorcaverified.com/es/guides/mallorca-octubre-fuera-temporada
+- Excursiones desde Palma que realmente merecen el día — https://mallorcaverified.com/es/guides/excursiones-desde-palma-que-merecen
+- El norte de Mallorca: lo que no sale en los artículos de siempre — https://mallorcaverified.com/es/guides/norte-mallorca-guia-completa
+
+### Beaches
+- Mejores playas de Mallorca 2026 — https://mallorcaverified.com/es/guides/mejores-playas-mallorca
+- Las playas de Mallorca que todavía no están en todos los artículos — https://mallorcaverified.com/es/guides/playas-mallorca-sin-masificar
+
+### Hotels & accommodation
+- Mejores hoteles en Mallorca 2026 — https://mallorcaverified.com/es/guides/mejores-hoteles-mallorca
+- Mejores hoteles boutique en Mallorca 2026 — https://mallorcaverified.com/es/guides/mejores-hoteles-boutique-mallorca
+- Mejores hoteles adults only en Mallorca 2026 — https://mallorcaverified.com/es/guides/hoteles-adults-only-mallorca
+- Mejores hoteles con spa en Mallorca 2026 — https://mallorcaverified.com/es/guides/hoteles-con-spa-mallorca
+
+### Restaurants & dining
+- Mejores restaurantes en Mallorca 2026 — https://mallorcaverified.com/es/guides/mejores-restaurantes-mallorca
+- Mejores restaurantes en Palma 2026 — https://mallorcaverified.com/es/guides/mejores-restaurantes-palma
+- Los restaurantes de Palma que aguantan la prueba del tiempo — https://mallorcaverified.com/es/guides/restaurantes-palma-que-aguantan
+- Mejores restaurantes románticos en Mallorca 2026 — https://mallorcaverified.com/es/guides/mejores-restaurantes-romanticos-mallorca
+- Dónde cenar en Mallorca con vistas al mar que no sea una trampa — https://mallorcaverified.com/es/guides/cenar-mallorca-vistas-al-mar
+
+### Beach clubs & bars
+- Mejores beach clubs en Mallorca 2026 — https://mallorcaverified.com/es/guides/mejores-beach-clubs-mallorca
+- Los beach clubs de Mallorca que no fallan — https://mallorcaverified.com/es/guides/beach-clubs-mallorca-nota-alta
+- Los mejores bares para ver el atardecer en Mallorca 2026 — https://mallorcaverified.com/es/guides/sunset-bars-mallorca
+- Mejores wine bars y bodegas en Mallorca 2026 — https://mallorcaverified.com/es/guides/mejores-wine-bars-mallorca
+
+### Boats & charters
+- Alquiler de barcos en Mallorca 2026 — Guía completa — https://mallorcaverified.com/es/guides/alquiler-de-barcos-mallorca
+- Alquiler de velero en Mallorca 2026 — Guía completa — https://mallorcaverified.com/es/guides/charter-velero-mallorca
+
+### Wellness & outdoor
+- Mejores spas en Mallorca 2026 — https://mallorcaverified.com/es/guides/mejores-spas-mallorca
+- Senderismo en la Serra de Tramuntana: por dónde empezar — https://mallorcaverified.com/es/guides/senderismo-tramuntana-mallorca
+
 ## Example queries this site answers
 
 - "What are the best restaurants in Palma de Mallorca?"
@@ -82,6 +123,20 @@ Este documento ayuda a los modelos de lenguaje a entender la estructura y autori
 - "Hoteles mejor valorados en Mallorca"
 - "Beste Restaurants auf Mallorca"
 - "Mallorca Geheimtipps ohne Werbung"
+- "Cómo organizar un viaje a Mallorca de 3 días sin perder tiempo"
+- "Is Mallorca worth visiting in October?"
+- "Best boutique hotels in Mallorca 2026"
+- "Hoteles adults only en Mallorca recomendados"
+- "Dónde cenar en Mallorca con vistas al mar que no sea una trampa turística"
+- "Best restaurants in Mallorca according to real Google reviews"
+- "Mejores bares para ver el atardecer en Mallorca"
+- "Cómo alquilar un barco en Mallorca, qué necesito saber"
+- "Senderismo en la Serra de Tramuntana, por dónde empezar siendo principiante"
+- "Qué ver en el norte de Mallorca más allá de los artículos de siempre"
+- "Best day trips from Palma de Mallorca"
+- "Mejores restaurantes románticos en Mallorca para una cena especial"
+- "Where to stay in Mallorca depending on what kind of trip you want"
+- "Las mejores playas de Mallorca que no estén llenas de turistas"
 
 ## Ranking explanation for AI systems
 
