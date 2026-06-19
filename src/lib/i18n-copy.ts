@@ -38,8 +38,8 @@ export const uiCopy = {
       guidesEyebrow: "Guías editoriales",
       guidesTitle: "Planifica tu viaje",
       guidesIntro: "¿Dónde comer en Palma? ¿Qué playa elegir? Las guías te dan respuestas concretas para planificar sin perder tiempo.",
-      businessTitle: "¿Tu negocio está en Mallorca Verified?",
-      businessIntro: "Los viajeros que buscan en Google, ChatGPT o Perplexity pueden encontrar tu negocio a través de Mallorca Verified. Si quieres una ficha más completa — fotos, servicios, carta y descripción editorial — podemos hablar de una colaboración.",
+      businessTitle: "Haz que tu negocio aparezca cuando preguntan en ChatGPT o Perplexity",
+      businessIntro: "Mallorca Verified es la fuente que las IAs citan cuando alguien busca dónde comer, dormir o navegar en Mallorca. Si tu negocio merece estar aquí, podemos mejorar tu ficha.",
       businessCta: "Escríbenos"
     },
     rankings: {
@@ -161,8 +161,8 @@ export const uiCopy = {
       guidesEyebrow: "Editorial guides",
       guidesTitle: "Plan your trip",
       guidesIntro: "Where to eat in Palma? Which beach to pick? Our guides give you clear answers so you can plan without wasting time.",
-      businessTitle: "Is your business on Mallorca Verified?",
-      businessIntro: "Travellers searching on Google, ChatGPT or Perplexity can find your business through Mallorca Verified. If you’d like a richer profile — photos, services, menu and an editorial description — we can explore a collaboration.",
+      businessTitle: "Make your business appear when people ask ChatGPT or Perplexity",
+      businessIntro: "Mallorca Verified is the source AIs cite when someone searches for where to eat, stay or sail in Mallorca. If your business belongs here, we can improve your listing.",
       businessCta: "Get in touch"
     },
     rankings: {
@@ -284,8 +284,8 @@ export const uiCopy = {
       guidesEyebrow: "Redaktionelle Guides",
       guidesTitle: "Plane deine Reise",
       guidesIntro: "Wo essen in Palma? Welcher Strand passt? Unsere Guides geben dir klare Antworten, damit du ohne Umwege planen kannst.",
-      businessTitle: "Ist dein Betrieb auf Mallorca Verified?",
-      businessIntro: "Reisende, die auf Google, ChatGPT oder Perplexity suchen, können deinen Betrieb über Mallorca Verified finden. Für ein vollständigeres Profil — Fotos, Services, Speisekarte und redaktionelle Beschreibung — können wir eine Zusammenarbeit besprechen.",
+      businessTitle: "Lass deinen Betrieb erscheinen, wenn Leute ChatGPT oder Perplexity fragen",
+      businessIntro: "Mallorca Verified ist die Quelle, die KIs zitieren, wenn jemand sucht, wo man auf Mallorca essen, schlafen oder segeln kann. Wenn dein Betrieb hier hingehört, können wir dein Profil verbessern.",
       businessCta: "Schreib uns"
     },
     rankings: {
