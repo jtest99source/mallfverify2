@@ -68,7 +68,8 @@
     "guides:generate-editorial:tier2": "node scripts/generate-editorial-guides.mjs --tier=2",
     "guides:generate-editorial:tier3": "node scripts/generate-editorial-guides.mjs --tier=3",
     "guides:backfill-images": "node scripts/backfill-guide-images.mjs",
-    "guides:backfill-images:dry": "node scripts/backfill-guide-images.mjs --dry-run"
+    "guides:backfill-images:dry": "node scripts/backfill-guide-images.mjs --dry-run",
+    "indexnow:submit": "node scripts/submit-indexnow.mjs"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.104.2",
