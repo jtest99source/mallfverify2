@@ -80,7 +80,9 @@ export const uiCopy = {
       allCategories: "Ver todas las categorías",
       site: "Sitio",
       privacy: "Privacidad",
-      cookies: "Cookies"
+      cookies: "Cookies",
+      about: "Quiénes somos",
+      editorial: "Política editorial"
     },
     filters: {
       searchPlaceholder: "Buscar un sitio concreto por nombre o zona...",
@@ -204,7 +206,9 @@ export const uiCopy = {
       allCategories: "View all categories",
       site: "Site",
       privacy: "Privacy",
-      cookies: "Cookies"
+      cookies: "Cookies",
+      about: "About us",
+      editorial: "Editorial policy"
     },
     filters: {
       searchPlaceholder: "Search by place name or area...",
@@ -328,7 +332,9 @@ export const uiCopy = {
       allCategories: "Alle Kategorien ansehen",
       site: "Website",
       privacy: "Datenschutz",
-      cookies: "Cookies"
+      cookies: "Cookies",
+      about: "Über uns",
+      editorial: "Redakt. Richtlinien"
     },
     filters: {
       searchPlaceholder: "Nach Ort, Name oder Gegend suchen...",

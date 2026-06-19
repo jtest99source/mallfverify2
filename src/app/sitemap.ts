@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { categoryConfigs, getCategorySlugFromBusiness, siteUrl } from "@/lib/data";
 import { locales } from "@/lib/i18n";
-import { methodologyPath } from "@/lib/methodology";
+import { aboutPath, editorialPath, methodologyPath } from "@/lib/methodology";
 import { getBusinessAreaCategoryPages, getSitemapEntities } from "@/lib/repository";
 
 export const revalidate = 3600;
@@ -19,6 +19,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     urls.push({ url: `${siteUrl}/${locale}/rankings`, lastModified: now, changeFrequency: "daily", priority: 0.9 });
     if (locale === "es" || locale === "en") urls.push({ url: `${siteUrl}/${locale}/guides`, lastModified: now, changeFrequency: "weekly", priority: 0.7 });
     urls.push({ url: `${siteUrl}${methodologyPath(locale)}`, lastModified: now, changeFrequency: "monthly", priority: 0.8 });
+    urls.push({ url: `${siteUrl}${aboutPath(locale)}`, lastModified: now, changeFrequency: "monthly", priority: 0.7 });
+    urls.push({ url: `${siteUrl}${editorialPath(locale)}`, lastModified: now, changeFrequency: "monthly", priority: 0.7 });
     for (const category of Object.keys(categoryConfigs)) {
       urls.push({ url: `${siteUrl}/${locale}/${category}`, lastModified: now, changeFrequency: "daily", priority: 0.85 });
       urls.push({ url: `${siteUrl}/${locale}/top/${category}`, lastModified: now, changeFrequency: "daily", priority: 0.85 });

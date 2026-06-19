@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Locale } from "@/lib/i18n";
 import { getCategoryCopy, t } from "@/lib/i18n-copy";
 import { siteConfig } from "@/config/site";
-import { methodologyPath } from "@/lib/methodology";
+import { aboutPath, editorialPath, methodologyPath } from "@/lib/methodology";
 import type { CategorySlug } from "@/lib/data";
 
 const footerCategories: CategorySlug[] = ["restaurants", "hotels", "beach-clubs", "boats", "activities", "beaches", "bars", "spas"];
@@ -36,6 +36,8 @@ export function Footer({ locale }: { locale: Locale }) {
               <Link href={`/${locale}/rankings`} className="hover:text-white">Rankings</Link>
               {locale !== "de" && <Link href={`/${locale}/guides`} className="hover:text-white">{copy.nav.guides}</Link>}
               <Link href={methodologyPath(locale)} className="hover:text-white">{copy.nav.methodology}</Link>
+              <Link href={aboutPath(locale)} className="hover:text-white">{copy.footer.about}</Link>
+              <Link href={editorialPath(locale)} className="hover:text-white">{copy.footer.editorial}</Link>
               <Link href={`/${locale}/business`} className="hover:text-white">{copy.nav.forBusinesses}</Link>
               <Link href={`/${locale}/privacy`} className="hover:text-white">{copy.footer.privacy}</Link>
               <Link href={`/${locale}/cookies`} className="hover:text-white">{copy.footer.cookies}</Link>
