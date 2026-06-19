@@ -281,9 +281,9 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           <div className="pointer-events-none absolute right-3 top-1/2 z-20 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-[#E7DED0] bg-white/95 text-ink shadow-[0_12px_28px_rgba(27,46,75,0.16)] md:hidden">
             <IconChevronRight size={20} stroke={2.4} />
           </div>
-          <div className="flex snap-x gap-4 overflow-x-auto pb-5 pr-10 [scrollbar-width:none] sm:gap-5 [&::-webkit-scrollbar]:hidden">
+          <div className="flex snap-x gap-4 overflow-x-auto pb-5 pr-10 [scrollbar-width:none] sm:gap-5 lg:grid lg:grid-cols-3 lg:overflow-visible lg:pr-0 [&::-webkit-scrollbar]:hidden">
           {categoryRankings.map((ranking) => (
-            <div key={ranking.category} className="w-[88vw] max-w-[420px] shrink-0 snap-start sm:w-[420px] lg:w-[440px]">
+            <div key={ranking.category} className="w-[88vw] max-w-[420px] shrink-0 snap-start sm:w-[420px] lg:w-auto">
               <CategoryRankingCard category={ranking.category} businesses={ranking.businesses} locale={safeLocale} />
             </div>
           ))}
