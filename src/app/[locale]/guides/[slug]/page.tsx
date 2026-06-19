@@ -4,7 +4,7 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { FAQ } from "@/components/FAQ";
 import { JsonLd } from "@/components/JsonLd";
 import { categoryConfigs, getCategorySlugFromBusiness, siteUrl } from "@/lib/data";
-import { getBusinessById, getGuideBySlug } from "@/lib/repository";
+import { getBusinessById, getGuideBySlug, getGuides } from "@/lib/repository";
 import { isLocale, type Locale } from "@/lib/i18n";
 import { createArticleSchema, createBreadcrumbSchema, createFAQSchema, createSimpleItemListSchema } from "@/lib/schema";
 import { generateSeoMetadata } from "@/lib/seo";
@@ -86,6 +86,57 @@ function HotelCard({ business, locale }: { business: Business; locale: Locale })
   );
 }
 
+function guideTopic(slug: string): string {
+  if (/hotel|alojarse|boutique|adults.only/.test(slug)) return "accommodation";
+  if (/restaurante|comer|cenar/.test(slug)) return "restaurants";
+  if (/playa|cala/.test(slug)) return "beaches";
+  if (/beach.club|sunset|bar|wine/.test(slug)) return "nightlife";
+  if (/barco|velero|charter/.test(slug)) return "boats";
+  if (/spa|senderismo|tramuntana/.test(slug)) return "wellness";
+  return "planning";
+}
+
+async function getRelatedGuides(currentSlug: string, locale: Locale): Promise<Guide[]> {
+  const all = await getGuides(locale);
+  const others = all.filter((g) => g.slug !== currentSlug);
+  const topic = guideTopic(currentSlug);
+  const sameTopic = others.filter((g) => guideTopic(g.slug) === topic);
+  const different = others.filter((g) => guideTopic(g.slug) !== topic);
+  return [...sameTopic, ...different].slice(0, 3);
+}
+
+function RelatedGuides({ guides, locale, label }: { guides: Guide[]; locale: Locale; label: string }) {
+  if (!guides.length) return null;
+  return (
+    <aside className="mx-auto max-w-4xl px-4 pb-12 sm:px-6 lg:px-8">
+      <div className="border-t border-borderline pt-10">
+        <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-coral">{label}</p>
+        <div className="mt-5 grid gap-4 sm:grid-cols-3">
+          {guides.map((guide) => (
+            <Link
+              key={guide.slug}
+              href={`/${locale}/guides/${guide.slug}`}
+              className="group flex flex-col rounded-lg border border-borderline bg-white p-5 shadow-[0_4px_18px_rgba(27,46,75,0.05)] transition hover:shadow-[0_8px_28px_rgba(27,46,75,0.10)]"
+            >
+              {guide.heroImageUrl && (
+                <div
+                  className="mb-4 h-28 rounded-md bg-sea bg-cover bg-center"
+                  style={{ backgroundImage: `linear-gradient(180deg,rgba(28,28,24,.04),rgba(28,28,24,.2)),url(${guide.heroImageUrl})` }}
+                />
+              )}
+              <p className="line-clamp-2 font-sans text-[15px] font-bold leading-snug text-ink group-hover:text-[#0E8F72]">{guide.title}</p>
+              <p className="mt-2 line-clamp-2 text-[12px] leading-5 text-olive">{guide.excerpt}</p>
+              <span className="mt-auto pt-4 text-[10px] font-bold uppercase tracking-[0.1em] text-coral">
+                {locale === "de" ? "Guide lesen →" : locale === "en" ? "Read guide →" : "Leer guía →"}
+              </span>
+            </Link>
+          ))}
+        </div>
+      </div>
+    </aside>
+  );
+}
+
 export async function generateMetadata({ params }: { params: Promise<{ locale: string; slug: string }> }) {
   const { locale, slug } = await params;
   const safeLocale = isLocale(locale) ? locale : "es";
@@ -109,7 +160,10 @@ export default async function GuideDetailPage({ params }: { params: Promise<{ lo
   const guide = await getGuideBySlug(slug, safeLocale);
   if (!guide) notFound();
 
-  const businesses = await guideBusinesses(guide);
+  const [businesses, relatedGuides] = await Promise.all([
+    guideBusinesses(guide),
+    getRelatedGuides(guide.slug, safeLocale)
+  ]);
   const guideImage = guide.heroImageUrl || (await firstGuideBusinessImage(guide));
   const copy = t(safeLocale);
   const breadcrumbs = [
@@ -188,8 +242,13 @@ export default async function GuideDetailPage({ params }: { params: Promise<{ lo
         <FAQ faqs={guide.faqs} />
       </article>
 
-      <JsonLd data={jsonLd} />
+      <RelatedGuides
+        guides={relatedGuides}
+        locale={safeLocale}
+        label={safeLocale === "de" ? "Weitere Guides" : safeLocale === "en" ? "Related guides" : "Más guías"}
+      />
 
+      <JsonLd data={jsonLd} />
     </main>
   );
 }
