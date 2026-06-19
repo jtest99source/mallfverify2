@@ -68,6 +68,7 @@ export const uiCopy = {
       empty: "Estamos preparando nuevas guías editoriales. Mientras tanto, puedes comparar negocios directamente en los rankings.",
       updatedLabel: "Actualizado",
       recommended: "Recomendados",
+      readGuide: "Leer guía",
       viewProfile: "Ver ficha completa →",
       reviews: "reseñas",
       breadcrumbGuides: "Guías"
@@ -191,6 +192,7 @@ export const uiCopy = {
       empty: "We're working on new editorial guides. In the meantime, you can compare businesses directly in the rankings.",
       updatedLabel: "Updated",
       recommended: "Recommended",
+      readGuide: "Read guide",
       viewProfile: "View full profile →",
       reviews: "reviews",
       breadcrumbGuides: "Guides"
@@ -314,6 +316,7 @@ export const uiCopy = {
       empty: "Wir arbeiten an neuen redaktionellen Guides. In der Zwischenzeit kannst du Betriebe direkt in den Rankings vergleichen.",
       updatedLabel: "Aktualisiert",
       recommended: "Empfohlen",
+      readGuide: "Guide lesen",
       viewProfile: "Vollständiges Profil ansehen →",
       reviews: "Bewertungen",
       breadcrumbGuides: "Guides"

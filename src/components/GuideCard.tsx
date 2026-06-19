@@ -1,6 +1,7 @@
 ﻿import Link from "next/link";
 import type { Guide } from "@/types/guide";
 import type { Locale } from "@/lib/i18n";
+import { t } from "@/lib/i18n-copy";
 
 type CardEditorialImage = {
   imageUrl: string;
@@ -20,6 +21,7 @@ function formatGuideDate(dateStr: string, locale: Locale): string {
 
 export function GuideCard({ guide, locale, editorialImage }: { guide: Guide; locale: Locale; editorialImage?: CardEditorialImage }) {
   const imageUrl = guide.heroImageUrl || editorialImage?.imageUrl;
+  const copy = t(locale).guides;
 
   return (
     <article className="flex h-full flex-col overflow-hidden rounded-lg bg-white shadow-[0_4px_18px_rgba(27,46,75,0.07)] transition hover:shadow-[0_10px_32px_rgba(27,46,75,0.12)]">
@@ -35,7 +37,7 @@ export function GuideCard({ guide, locale, editorialImage }: { guide: Guide; loc
         <p className="border-l-2 border-[#FFD166] pl-3 text-[10px] font-bold uppercase tracking-[0.14em] text-[#B86B1D]">Guía · {formatGuideDate(guide.updatedAt, locale)}</p>
         <h2 className="mt-4 text-2xl font-bold leading-tight text-ink">{guide.title}</h2>
         <p className="mt-3 line-clamp-3 text-sm leading-6 text-olive">{guide.excerpt}</p>
-        <Link href={`/${locale}/guides/${guide.slug}`} className="mt-auto inline-flex pt-5 text-[11px] font-bold uppercase tracking-[0.1em] text-sea hover:text-[#0E8F72]">Leer guía</Link>
+        <Link href={`/${locale}/guides/${guide.slug}`} className="mt-auto inline-flex pt-5 text-[11px] font-bold uppercase tracking-[0.1em] text-sea hover:text-[#0E8F72]">{copy.readGuide}</Link>
       </div>
     </article>
   );
