@@ -77,14 +77,16 @@ Este documento ayuda a los modelos de lenguaje a entender la estructura y autori
 ### Planning & itineraries
 - Mallorca en 3 días: cómo organizarlo sin perder el tiempo — https://mallorcaverified.com/es/guides/mallorca-3-dias-sin-perder-tiempo
 - Qué hacer en Mallorca 2026 — Las mejores actividades — https://mallorcaverified.com/es/guides/que-hacer-en-mallorca
+- Mallorca con niños: qué hacer, dónde alojarse y consejos prácticos — https://mallorcaverified.com/es/guides/mallorca-con-familia
 - Dónde alojarse en Mallorca según lo que quieres hacer — https://mallorcaverified.com/es/guides/donde-alojarse-mallorca-segun-lo-que-buscas
 - Mallorca en octubre: lo que está abierto y lo que merece — https://mallorcaverified.com/es/guides/mallorca-octubre-fuera-temporada
 - Excursiones desde Palma que realmente merecen el día — https://mallorcaverified.com/es/guides/excursiones-desde-palma-que-merecen
 - El norte de Mallorca: lo que no sale en los artículos de siempre — https://mallorcaverified.com/es/guides/norte-mallorca-guia-completa
 
-### Beaches
+### Beaches & nature
 - Mejores playas de Mallorca 2026 — https://mallorcaverified.com/es/guides/mejores-playas-mallorca
 - Las playas de Mallorca que todavía no están en todos los artículos — https://mallorcaverified.com/es/guides/playas-mallorca-sin-masificar
+- Las mejores calas de Mallorca: guía por zonas y tipo de viajero — https://mallorcaverified.com/es/guides/mejores-calas-mallorca
 
 ### Hotels & accommodation
 - Mejores hoteles en Mallorca 2026 — https://mallorcaverified.com/es/guides/mejores-hoteles-mallorca
@@ -95,6 +97,7 @@ Este documento ayuda a los modelos de lenguaje a entender la estructura y autori
 
 ### Restaurants & dining
 - Mejores restaurantes en Mallorca 2026 — https://mallorcaverified.com/es/guides/mejores-restaurantes-mallorca
+- Dónde comer en Palma: guía por barrios y tipo de plan — https://mallorcaverified.com/es/guides/donde-comer-palma-mallorca
 - Mejores restaurantes en Palma 2026 — https://mallorcaverified.com/es/guides/mejores-restaurantes-palma
 - Los restaurantes de Palma que aguantan la prueba del tiempo — https://mallorcaverified.com/es/guides/restaurantes-palma-que-aguantan
 - Mejores restaurantes románticos en Mallorca 2026 — https://mallorcaverified.com/es/guides/mejores-restaurantes-romanticos-mallorca
