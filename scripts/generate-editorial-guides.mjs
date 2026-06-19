@@ -160,17 +160,28 @@ function chunk(arr, size) {
 }
 
 // ─── HERO IMAGE RESOLUTION ────────────────────────────────────────────────────
-async function searchUnsplash(query) {
+function slugPickIndex(slug) {
+  let hash = 0
+  for (let i = 0; i < slug.length; i++) {
+    hash = ((hash << 5) - hash) + slug.charCodeAt(i)
+    hash |= 0
+  }
+  return Math.abs(hash) % 10
+}
+
+async function searchUnsplash(query, pickIndex = 0) {
   const key = process.env.UNSPLASH_ACCESS_KEY
   if (!key) return null
   try {
-    const params = new URLSearchParams({ query, per_page: '1', orientation: 'landscape', content_filter: 'high' })
+    const params = new URLSearchParams({ query, per_page: '10', orientation: 'landscape', content_filter: 'high' })
     const res = await fetch(`https://api.unsplash.com/search/photos?${params}`, {
       headers: { Authorization: `Client-ID ${key}` }
     })
     if (!res.ok) return null
     const data = await res.json()
-    return data.results?.[0]?.urls?.regular ?? null
+    const results = data.results ?? []
+    if (!results.length) return null
+    return results[pickIndex % results.length]?.urls?.regular ?? null
   } catch {
     return null
   }
@@ -188,14 +199,13 @@ function unsplashQueryForGuide(blogConfig) {
 }
 
 async function resolveHeroImage(blogConfig, businesses) {
-  // 1. Use first business image if available
   for (const b of businesses) {
     if (b.primary_image_url) return b.primary_image_url
   }
-  // 2. Fall back to Unsplash
   const query = unsplashQueryForGuide(blogConfig)
-  console.log(`  Unsplash query: "${query}"`)
-  return searchUnsplash(query)
+  const pickIndex = slugPickIndex(blogConfig.slug)
+  console.log(`  Unsplash query: "${query}" (pick #${pickIndex})`)
+  return searchUnsplash(query, pickIndex)
 }
 
 // ─── GENERATE ONE GUIDE VIA CLAUDE API + WEB SEARCH ───────────────────────────
@@ -352,7 +362,7 @@ async function main() {
   const slugArg = args.find(a => a.startsWith('--slug='))?.split('=')[1]
   const localeArg = args.find(a => a.startsWith('--locale='))?.split('=')[1]
 
-  const locales = localeArg ? [localeArg] : ['es', 'en', 'de']
+  const locales = localeArg ? [localeArg] : ['es', 'en']
 
   let catalog = BLOG_CATALOG
   if (tierArg) catalog = catalog.filter(b => b.tier === parseInt(tierArg))

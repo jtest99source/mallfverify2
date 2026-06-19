@@ -48,7 +48,7 @@ export default async function GuidesPage({ params }: { params: Promise<{ locale:
 
       <section className="mx-auto max-w-7xl px-4 pb-14 sm:px-6 lg:px-8">
         {guides.length > 0 ? (
-          <div className="grid items-stretch gap-px overflow-hidden rounded-lg border border-[#E7DED0] bg-[#E7DED0] shadow-[0_18px_45px_rgba(27,46,75,0.04)] md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid items-stretch gap-5 md:grid-cols-2 lg:grid-cols-3">
             {guides.map((guide, index) => <GuideCard key={guide.id} guide={guide} locale={safeLocale} editorialImage={guideImages[index]} />)}
           </div>
         ) : (

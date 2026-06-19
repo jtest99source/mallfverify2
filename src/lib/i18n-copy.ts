@@ -60,9 +60,9 @@ export const uiCopy = {
       viewGuides: "Ver guías"
     },
     guides: {
-      eyebrow: "Guías editoriales",
-      title: "Guías de Mallorca escritas con datos reales",
-      description: "Artículos prácticos para elegir zona, restaurante, hotel o actividad en Mallorca. Cada recomendación se apoya en fichas verificables y datos de Google.",
+      eyebrow: "Mallorca con criterio",
+      title: "Lo que funciona en Mallorca, según los datos",
+      description: "Llevamos años cruzando reseñas reales de Google con conocimiento de la isla. Lo que aparece aquí no depende de la temporada ni de quién paga — depende de lo que dicen los datos.",
       viewRankings: "Ver rankings",
       goHome: "Ir a inicio",
       empty: "Estamos preparando nuevas guías editoriales. Mientras tanto, puedes comparar negocios directamente en los rankings.",
@@ -183,9 +183,9 @@ export const uiCopy = {
       viewGuides: "View guides"
     },
     guides: {
-      eyebrow: "Editorial guides",
-      title: "Mallorca guides written with real data",
-      description: "Practical articles to help you choose an area, restaurant, hotel or activity in Mallorca. Every recommendation is backed by verifiable profiles and real Google data.",
+      eyebrow: "Mallorca with authority",
+      title: "What works in Mallorca, according to the data",
+      description: "We've spent years cross-referencing real Google reviews with deep knowledge of the island. What appears here doesn't depend on the season or who pays — it depends on what the data says.",
       viewRankings: "View rankings",
       goHome: "Back to home",
       empty: "We're working on new editorial guides. In the meantime, you can compare businesses directly in the rankings.",

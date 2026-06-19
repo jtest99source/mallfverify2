@@ -142,7 +142,7 @@ export default async function RankingsPage({
               {copy.rankings.viewGuides} →
             </Link>
           </div>
-          <div className="grid items-stretch gap-px overflow-hidden rounded-lg border border-[#E7DED0] bg-[#E7DED0] shadow-[0_18px_45px_rgba(27,46,75,0.04)] md:grid-cols-2">
+          <div className="grid items-stretch gap-5 md:grid-cols-2">
             {guides.map((guide, index) => (
               <GuideCard key={guide.id} guide={guide} locale={safeLocale} editorialImage={guideImages[index]} />
             ))}

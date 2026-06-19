@@ -66,7 +66,9 @@
     "guides:generate-editorial": "node scripts/generate-editorial-guides.mjs",
     "guides:generate-editorial:tier1": "node scripts/generate-editorial-guides.mjs --tier=1",
     "guides:generate-editorial:tier2": "node scripts/generate-editorial-guides.mjs --tier=2",
-    "guides:generate-editorial:tier3": "node scripts/generate-editorial-guides.mjs --tier=3"
+    "guides:generate-editorial:tier3": "node scripts/generate-editorial-guides.mjs --tier=3",
+    "guides:backfill-images": "node scripts/backfill-guide-images.mjs",
+    "guides:backfill-images:dry": "node scripts/backfill-guide-images.mjs --dry-run"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.104.2",
@@ -77,6 +79,7 @@
     "next": "^15.3.3",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
+    "resend": "^6.14.0",
     "yet-another-react-lightbox": "^3.32.0",
     "zod": "^3.25.56"
   },

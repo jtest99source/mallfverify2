@@ -277,7 +277,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           </p>
         </div>
         <div className="relative -mx-4 px-4 sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8">
-          <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-12 bg-gradient-to-l from-[#FFFDF7] to-transparent sm:w-20" />
+          <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-12 bg-gradient-to-l from-[#FFFDF7] to-transparent sm:w-20 lg:hidden" />
           <div className="pointer-events-none absolute right-3 top-1/2 z-20 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-[#E7DED0] bg-white/95 text-ink shadow-[0_12px_28px_rgba(27,46,75,0.16)] md:hidden">
             <IconChevronRight size={20} stroke={2.4} />
           </div>
@@ -315,7 +315,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
             <h2 className="font-display mt-2 text-3xl font-black text-ink">{copy.home.guidesTitle}</h2>
             <p className="mt-3 max-w-2xl text-sm leading-7 text-sage">{copy.home.guidesIntro}</p>
           </div>
-          <div className="grid items-stretch gap-px overflow-hidden rounded-lg border border-[#E7DED0] bg-[#E7DED0] shadow-[0_18px_45px_rgba(27,46,75,0.04)] md:grid-cols-2">
+          <div className="grid items-stretch gap-5 md:grid-cols-2">
             {latestGuides.map((guide, index) => (
               <GuideCard key={guide.id} guide={guide} locale={safeLocale} editorialImage={guideImages[index]} />
             ))}
