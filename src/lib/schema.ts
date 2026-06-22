@@ -127,7 +127,7 @@ export function createLocalBusinessSchema(business: Business, locale = "es") {
     "beach-club": "LocalBusiness",
     "boat-rental": "SportsActivityLocation",
     activity: "TouristAttraction",
-    beach: "TouristAttraction",
+    beach: "LocalBusiness",
     bar: "BarOrPub",
     cafe: "CafeOrCoffeeShop",
     bakery: "Bakery",
