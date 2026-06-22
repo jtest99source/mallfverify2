@@ -4,15 +4,34 @@ import { getCategorySlugFromBusiness, siteUrl } from "@/lib/data";
 import { getBusinessPublicName } from "@/lib/business-name-normalizer";
 import { siteConfig } from "@/config/site";
 
+function formatCurrencyAmount(value: number) {
+  return Number.isInteger(value) ? `${value}` : value.toFixed(2).replace(/\.?0+$/, "");
+}
+
+function orientativeRangeFromExactPrice(value: number) {
+  const midpoint = Math.max(5, Math.round(value / 5) * 5);
+  const spread = midpoint <= 30 ? 5 : midpoint <= 80 ? 10 : 20;
+  return {
+    min: Math.max(0, midpoint - spread),
+    max: midpoint + spread
+  };
+}
+
 function formatPriceRange(business: Business) {
   const price = business.priceEstimate;
   const currency = price?.currency === "EUR" || !price?.currency ? "€" : price.currency;
   const min = price?.amount_min ?? price?.range_min ?? price?.per_person_min ?? null;
   const max = price?.amount_max ?? price?.range_max ?? price?.per_person_max ?? null;
 
-  if (typeof min === "number" && typeof max === "number") return `${min}-${max} ${currency}`;
-  if (typeof min === "number") return `from ${min} ${currency}`;
-  if (typeof max === "number") return `up to ${max} ${currency}`;
+  if (typeof min === "number" && typeof max === "number") {
+    if (min === max) {
+      const range = orientativeRangeFromExactPrice(min);
+      return `${formatCurrencyAmount(range.min)}-${formatCurrencyAmount(range.max)} ${currency}`;
+    }
+    return `${formatCurrencyAmount(min)}-${formatCurrencyAmount(max)} ${currency}`;
+  }
+  if (typeof min === "number") return `from ${formatCurrencyAmount(Math.round(min / 5) * 5)} ${currency}`;
+  if (typeof max === "number") return `up to ${formatCurrencyAmount(Math.round(max / 5) * 5)} ${currency}`;
   return business.priceLevel;
 }
 
@@ -108,11 +127,11 @@ export function createLocalBusinessSchema(business: Business, locale = "es") {
     "beach-club": "LocalBusiness",
     "boat-rental": "SportsActivityLocation",
     activity: "TouristAttraction",
-    beach: "Beach",
+    beach: "TouristAttraction",
     bar: "BarOrPub",
     cafe: "CafeOrCoffeeShop",
     bakery: "Bakery",
-    "rent-a-car": "AutoRental",
+    "rent-a-car": "AutomotiveBusiness",
     spa: "HealthAndBeautyBusiness",
     gym: "ExerciseGym",
     museum: "Museum",
