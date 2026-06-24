@@ -1,0 +1,1271 @@
+[
+  {
+    "google_place_id": "ChIJ8wdGfPuXlxIRpqtLh_UKIzo",
+    "vertical_slug": "coworking-mallorca",
+    "name": "Coworking Mallorca - Playa de Palma",
+    "rating": 4.9,
+    "reviews_count": 81,
+    "address": "Carrer de la Garsa, 6, Platja de Palma i Pla de Sant Jordi, 07610 Palma, Illes Balears",
+    "latitude": 39.529596999999995,
+    "longitude": 2.7309844,
+    "website": "https://coworking-mallorca.com/",
+    "phone": "+34 632 96 80 05",
+    "google_maps_url": "https://maps.google.com/?cid=4189204128037841830&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "coworking_space",
+    "types": [
+      "coworking_space",
+      "business_center",
+      "event_venue",
+      "point_of_interest",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "coworking Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJ8wdGfPuXlxIRpqtLh_UKIzo",
+      "types": [
+        "coworking_space",
+        "business_center",
+        "event_venue",
+        "point_of_interest",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 632 96 80 05",
+      "formattedAddress": "Carrer de la Garsa, 6, Platja de Palma i Pla de Sant Jordi, 07610 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.529596999999995,
+        "longitude": 2.7309844
+      },
+      "rating": 4.9,
+      "googleMapsUri": "https://maps.google.com/?cid=4189204128037841830&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://coworking-mallorca.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 81,
+      "displayName": {
+        "text": "Coworking Mallorca - Playa de Palma",
+        "languageCode": "de"
+      },
+      "primaryType": "coworking_space"
+    }
+  },
+  {
+    "google_place_id": "ChIJO8eV6fQtlhIRcIP3q4oy7z4",
+    "vertical_slug": "coworking-mallorca",
+    "name": "Balearic Business Hub Cowork Space",
+    "rating": 4.3,
+    "reviews_count": 6,
+    "address": "Carrer Gabriel Roca, 07400 Alcúdia, Illes Balears",
+    "latitude": 39.8385447,
+    "longitude": 3.1397029,
+    "website": "https://www.alcudiacoworking.com/",
+    "phone": "+34 611 26 98 94",
+    "google_maps_url": "https://maps.google.com/?cid=4534898920957379440&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "coworking_space",
+    "types": [
+      "coworking_space",
+      "point_of_interest",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "coworking Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJO8eV6fQtlhIRcIP3q4oy7z4",
+      "types": [
+        "coworking_space",
+        "point_of_interest",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 611 26 98 94",
+      "formattedAddress": "Carrer Gabriel Roca, 07400 Alcúdia, Illes Balears",
+      "location": {
+        "latitude": 39.8385447,
+        "longitude": 3.1397029
+      },
+      "rating": 4.3,
+      "googleMapsUri": "https://maps.google.com/?cid=4534898920957379440&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://www.alcudiacoworking.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 6,
+      "displayName": {
+        "text": "Balearic Business Hub Cowork Space",
+        "languageCode": "en"
+      },
+      "primaryType": "coworking_space"
+    }
+  },
+  {
+    "google_place_id": "ChIJe9AHzAzVlxIRPAZeYHUNLNo",
+    "vertical_slug": "coworking-mallorca",
+    "name": "Comunidad Inspira",
+    "rating": 5,
+    "reviews_count": 42,
+    "address": "Carrer del Fuster, 49, 07460 Pollença, Illes Balears",
+    "latitude": 39.886409,
+    "longitude": 3.0296152999999997,
+    "website": "https://www.inspira-pollenca.com/",
+    "phone": "+34 613 35 68 70",
+    "google_maps_url": "https://maps.google.com/?cid=15720955197022668348&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "coworking_space",
+    "types": [
+      "coworking_space",
+      "yoga_studio",
+      "fitness_center",
+      "vegetarian_restaurant",
+      "gym",
+      "event_venue",
+      "sports_school",
+      "sports_complex",
+      "sports_activity_location",
+      "health",
+      "restaurant",
+      "food",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "coworking Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJe9AHzAzVlxIRPAZeYHUNLNo",
+      "types": [
+        "coworking_space",
+        "yoga_studio",
+        "fitness_center",
+        "vegetarian_restaurant",
+        "gym",
+        "event_venue",
+        "sports_school",
+        "sports_complex",
+        "sports_activity_location",
+        "health",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 613 35 68 70",
+      "formattedAddress": "Carrer del Fuster, 49, 07460 Pollença, Illes Balears",
+      "location": {
+        "latitude": 39.886409,
+        "longitude": 3.0296152999999997
+      },
+      "rating": 5,
+      "googleMapsUri": "https://maps.google.com/?cid=15720955197022668348&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://www.inspira-pollenca.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 42,
+      "displayName": {
+        "text": "Comunidad Inspira",
+        "languageCode": "es"
+      },
+      "primaryType": "coworking_space"
+    }
+  },
+  {
+    "google_place_id": "ChIJW3NPOEgtlhIRiFOKQCakBwE",
+    "vertical_slug": "coworking-mallorca",
+    "name": "CoCowork Alcúdia Beach",
+    "rating": 4.9,
+    "reviews_count": 25,
+    "address": "Carrer dels Fassers, 07400 Alcúdia, Illes Balears",
+    "latitude": 39.8261774,
+    "longitude": 3.1160069,
+    "website": "https://coworkalcudiabeach.com/",
+    "phone": "+34 617 97 15 20",
+    "google_maps_url": "https://maps.google.com/?cid=74208403073422216&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "coworking_space",
+    "types": [
+      "coworking_space",
+      "point_of_interest",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "coworking Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJW3NPOEgtlhIRiFOKQCakBwE",
+      "types": [
+        "coworking_space",
+        "point_of_interest",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 617 97 15 20",
+      "formattedAddress": "Carrer dels Fassers, 07400 Alcúdia, Illes Balears",
+      "location": {
+        "latitude": 39.8261774,
+        "longitude": 3.1160069
+      },
+      "rating": 4.9,
+      "googleMapsUri": "https://maps.google.com/?cid=74208403073422216&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://coworkalcudiabeach.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 25,
+      "displayName": {
+        "text": "CoCowork Alcúdia Beach",
+        "languageCode": "en"
+      },
+      "primaryType": "coworking_space"
+    }
+  },
+  {
+    "google_place_id": "ChIJTXRHfNdNlhIRNllo7GBVNDw",
+    "vertical_slug": "coworking-mallorca",
+    "name": "Coworking Felanitx - Sa Multidisciplinar",
+    "rating": 5,
+    "reviews_count": 96,
+    "address": "Passeig de la República Argentina, 31, 07200 Felanitx, Illes Balears",
+    "latitude": 39.474780599999995,
+    "longitude": 3.1520761999999998,
+    "website": "https://www.coworkingfelanitx.com/",
+    "phone": "+34 616 04 91 92",
+    "google_maps_url": "https://maps.google.com/?cid=4338186215836113206&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "coworking_space",
+    "types": [
+      "coworking_space",
+      "corporate_office",
+      "real_estate_agency",
+      "finance",
+      "point_of_interest",
+      "consultant",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "coworking Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJTXRHfNdNlhIRNllo7GBVNDw",
+      "types": [
+        "coworking_space",
+        "corporate_office",
+        "real_estate_agency",
+        "finance",
+        "point_of_interest",
+        "consultant",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 616 04 91 92",
+      "formattedAddress": "Passeig de la República Argentina, 31, 07200 Felanitx, Illes Balears",
+      "location": {
+        "latitude": 39.474780599999995,
+        "longitude": 3.1520761999999998
+      },
+      "rating": 5,
+      "googleMapsUri": "https://maps.google.com/?cid=4338186215836113206&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://www.coworkingfelanitx.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 96,
+      "displayName": {
+        "text": "Coworking Felanitx - Sa Multidisciplinar",
+        "languageCode": "es"
+      },
+      "primaryType": "coworking_space"
+    }
+  },
+  {
+    "google_place_id": "ChIJH4z94AmTlxIRUhjHnavfJBw",
+    "vertical_slug": "coworking-mallorca",
+    "name": "Space",
+    "rating": 4.7,
+    "reviews_count": 12,
+    "address": "C. les Rafeletes, 1, Locale 12, Ponent, 07015 Palma, Illes Balears",
+    "latitude": 39.553198699999996,
+    "longitude": 2.6228621,
+    "website": "https://officespace.es/",
+    "phone": "+34 630 14 61 18",
+    "google_maps_url": "https://maps.google.com/?cid=2027991660403038290&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "coworking_space",
+    "types": [
+      "coworking_space",
+      "point_of_interest",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "coworking Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJH4z94AmTlxIRUhjHnavfJBw",
+      "types": [
+        "coworking_space",
+        "point_of_interest",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 630 14 61 18",
+      "formattedAddress": "C. les Rafeletes, 1, Locale 12, Ponent, 07015 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.553198699999996,
+        "longitude": 2.6228621
+      },
+      "rating": 4.7,
+      "googleMapsUri": "https://maps.google.com/?cid=2027991660403038290&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://officespace.es/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 12,
+      "displayName": {
+        "text": "Space",
+        "languageCode": "es"
+      },
+      "primaryType": "coworking_space"
+    }
+  },
+  {
+    "google_place_id": "ChIJ5VS8QNCTlxIRXujv48v67gk",
+    "vertical_slug": "coworking-mallorca",
+    "name": "panteon house",
+    "rating": 5,
+    "reviews_count": 12,
+    "address": "Carrer Joan Maria Thomàs, 2-1, Ponent, 07014 Palma, Illes Balears",
+    "latitude": 39.5719697,
+    "longitude": 2.6329542,
+    "website": "https://panteon.house/",
+    "phone": "+34 971 57 92 66",
+    "google_maps_url": "https://maps.google.com/?cid=715785144407943262&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "coworking_space",
+    "types": [
+      "coworking_space",
+      "point_of_interest",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "coworking Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJ5VS8QNCTlxIRXujv48v67gk",
+      "types": [
+        "coworking_space",
+        "point_of_interest",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 971 57 92 66",
+      "formattedAddress": "Carrer Joan Maria Thomàs, 2-1, Ponent, 07014 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.5719697,
+        "longitude": 2.6329542
+      },
+      "rating": 5,
+      "googleMapsUri": "https://maps.google.com/?cid=715785144407943262&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://panteon.house/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 12,
+      "displayName": {
+        "text": "panteon house",
+        "languageCode": "en"
+      },
+      "primaryType": "coworking_space"
+    }
+  },
+  {
+    "google_place_id": "ChIJhSk8YB-TlxIRORGUNlkSnuc",
+    "vertical_slug": "coworking-mallorca",
+    "name": "Where to Work Coworking Mallorca",
+    "rating": 4.6,
+    "reviews_count": 30,
+    "address": "Carrer Del Sindicat, 67, 1-1, Centre, 07002 Palma, Illes Balears",
+    "latitude": 39.5725586,
+    "longitude": 2.6560983,
+    "website": "https://palma.wheretowork.eu/",
+    "phone": "+34 871 55 65 11",
+    "google_maps_url": "https://maps.google.com/?cid=16689797443458699577&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "coworking_space",
+    "types": [
+      "coworking_space",
+      "business_center",
+      "corporate_office",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "coworking Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJhSk8YB-TlxIRORGUNlkSnuc",
+      "types": [
+        "coworking_space",
+        "business_center",
+        "corporate_office",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 871 55 65 11",
+      "formattedAddress": "Carrer Del Sindicat, 67, 1-1, Centre, 07002 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.5725586,
+        "longitude": 2.6560983
+      },
+      "rating": 4.6,
+      "googleMapsUri": "https://maps.google.com/?cid=16689797443458699577&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://palma.wheretowork.eu/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 30,
+      "displayName": {
+        "text": "Where to Work Coworking Mallorca",
+        "languageCode": "es"
+      },
+      "primaryType": "coworking_space"
+    }
+  },
+  {
+    "google_place_id": "ChIJk2kE1U6WlxIRIj5r0nSLcyE",
+    "vertical_slug": "coworking-mallorca",
+    "name": "Bedndesk - Coliving & Coworking in Mallorca",
+    "rating": 4.7,
+    "reviews_count": 68,
+    "address": "Carrer Maria Antònia Salvà, 22, 07600 S'Arenal, Illes Balears",
+    "latitude": 39.5011006,
+    "longitude": 2.7524227,
+    "website": "https://www.bedndesk.com/",
+    "phone": null,
+    "google_maps_url": "https://maps.google.com/?cid=2410423559436058146&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "coworking_space",
+    "types": [
+      "coworking_space",
+      "point_of_interest",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "coworking Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJk2kE1U6WlxIRIj5r0nSLcyE",
+      "types": [
+        "coworking_space",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Carrer Maria Antònia Salvà, 22, 07600 S'Arenal, Illes Balears",
+      "location": {
+        "latitude": 39.5011006,
+        "longitude": 2.7524227
+      },
+      "rating": 4.7,
+      "googleMapsUri": "https://maps.google.com/?cid=2410423559436058146&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://www.bedndesk.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 68,
+      "displayName": {
+        "text": "Bedndesk - Coliving & Coworking in Mallorca",
+        "languageCode": "en"
+      },
+      "primaryType": "coworking_space"
+    }
+  },
+  {
+    "google_place_id": "ChIJQ6eYw83JlxIRTKz5zz-5Lsk",
+    "vertical_slug": "coworking-mallorca",
+    "name": "Coworking Minds",
+    "rating": 5,
+    "reviews_count": 15,
+    "address": "Carrer Vial E, Carrer Ferrers, 1, 07510 Sineu, Illes Balears",
+    "latitude": 39.6444149,
+    "longitude": 3.0157675000000004,
+    "website": "https://coworkingminds.com/",
+    "phone": "+34 624 07 56 93",
+    "google_maps_url": "https://maps.google.com/?cid=14496727934275529804&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "coworking_space",
+    "types": [
+      "coworking_space",
+      "real_estate_agency",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "coworking Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJQ6eYw83JlxIRTKz5zz-5Lsk",
+      "types": [
+        "coworking_space",
+        "real_estate_agency",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 624 07 56 93",
+      "formattedAddress": "Carrer Vial E, Carrer Ferrers, 1, 07510 Sineu, Illes Balears",
+      "location": {
+        "latitude": 39.6444149,
+        "longitude": 3.0157675000000004
+      },
+      "rating": 5,
+      "googleMapsUri": "https://maps.google.com/?cid=14496727934275529804&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://coworkingminds.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 15,
+      "displayName": {
+        "text": "Coworking Minds",
+        "languageCode": "de"
+      },
+      "primaryType": "coworking_space"
+    }
+  },
+  {
+    "google_place_id": "ChIJb7kWmgiTlxIR9sFsejOn5R4",
+    "vertical_slug": "coworking-mallorca",
+    "name": "Palmapolitan",
+    "rating": 5,
+    "reviews_count": 102,
+    "address": "Carrer Del Sindicat, 74, Centre, 07002 Palma, Illes Balears",
+    "latitude": 39.572351,
+    "longitude": 2.6563996999999997,
+    "website": "https://www.palmapolitan.com/",
+    "phone": "+34 644 07 66 15",
+    "google_maps_url": "https://maps.google.com/?cid=2226369430343696886&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "coworking_space",
+    "types": [
+      "coworking_space",
+      "event_venue",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "coworking Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJb7kWmgiTlxIR9sFsejOn5R4",
+      "types": [
+        "coworking_space",
+        "event_venue",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 644 07 66 15",
+      "formattedAddress": "Carrer Del Sindicat, 74, Centre, 07002 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.572351,
+        "longitude": 2.6563996999999997
+      },
+      "rating": 5,
+      "googleMapsUri": "https://maps.google.com/?cid=2226369430343696886&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://www.palmapolitan.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 102,
+      "displayName": {
+        "text": "Palmapolitan",
+        "languageCode": "es"
+      },
+      "primaryType": "coworking_space"
+    }
+  },
+  {
+    "google_place_id": "ChIJtUIAKOOXlxIRy4NTwg6Sv_s",
+    "vertical_slug": "coworking-mallorca",
+    "name": "Baysense - Coworking-Space & Business-Events",
+    "rating": 4.9,
+    "reviews_count": 54,
+    "address": "Carrer de Marbella, 17, Platja de Palma i Pla de Sant Jordi, 07610 Platja de Palma, Illes Balears",
+    "latitude": 39.528,
+    "longitude": 2.73347,
+    "website": "https://baysense.es/",
+    "phone": "+34 620 73 44 28",
+    "google_maps_url": "https://maps.google.com/?cid=18140378416159097803&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "coworking_space",
+    "types": [
+      "coworking_space",
+      "point_of_interest",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "coworking Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJtUIAKOOXlxIRy4NTwg6Sv_s",
+      "types": [
+        "coworking_space",
+        "point_of_interest",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 620 73 44 28",
+      "formattedAddress": "Carrer de Marbella, 17, Platja de Palma i Pla de Sant Jordi, 07610 Platja de Palma, Illes Balears",
+      "location": {
+        "latitude": 39.528,
+        "longitude": 2.73347
+      },
+      "rating": 4.9,
+      "googleMapsUri": "https://maps.google.com/?cid=18140378416159097803&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://baysense.es/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 54,
+      "displayName": {
+        "text": "Baysense - Coworking-Space & Business-Events",
+        "languageCode": "es"
+      },
+      "primaryType": "coworking_space"
+    }
+  },
+  {
+    "google_place_id": "ChIJp_tJLIKTlxIRxKMKqO5SfSo",
+    "vertical_slug": "coworking-mallorca",
+    "name": "eWave Coworking Mallorca",
+    "rating": 5,
+    "reviews_count": 43,
+    "address": "Carrer de Llucmajor, 75, Platja de Palma i Pla de Sant Jordi, 07006 Palma, Illes Balears",
+    "latitude": 39.5595844,
+    "longitude": 2.6766072999999997,
+    "website": "http://www.ewavemallorca.com/",
+    "phone": "+34 659 86 71 20",
+    "google_maps_url": "https://maps.google.com/?cid=3061694506656768964&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "coworking_space",
+    "types": [
+      "coworking_space",
+      "point_of_interest",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "coworking Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJp_tJLIKTlxIRxKMKqO5SfSo",
+      "types": [
+        "coworking_space",
+        "point_of_interest",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 659 86 71 20",
+      "formattedAddress": "Carrer de Llucmajor, 75, Platja de Palma i Pla de Sant Jordi, 07006 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.5595844,
+        "longitude": 2.6766072999999997
+      },
+      "rating": 5,
+      "googleMapsUri": "https://maps.google.com/?cid=3061694506656768964&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "http://www.ewavemallorca.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 43,
+      "displayName": {
+        "text": "eWave Coworking Mallorca",
+        "languageCode": "es"
+      },
+      "primaryType": "coworking_space"
+    }
+  },
+  {
+    "google_place_id": "ChIJ5erKnBOTlxIRedXqUIVPjsQ",
+    "vertical_slug": "coworking-mallorca",
+    "name": "Mallorca Office: Centro de Negocios, Coworking y Alquiler de salas",
+    "rating": 4.5,
+    "reviews_count": 106,
+    "address": "Son Fuster, Carrer del Fluvià, 1, bajos derecha, Llevant, 07009 Palma, Illes Balears",
+    "latitude": 39.5945379,
+    "longitude": 2.6758311,
+    "website": "http://www.mallorcaoffice.es/",
+    "phone": "+34 971 70 68 82",
+    "google_maps_url": "https://maps.google.com/?cid=14163345312133600633&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "business_center",
+    "types": [
+      "business_center",
+      "coworking_space",
+      "corporate_office",
+      "point_of_interest",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "coworking Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJ5erKnBOTlxIRedXqUIVPjsQ",
+      "types": [
+        "business_center",
+        "coworking_space",
+        "corporate_office",
+        "point_of_interest",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 971 70 68 82",
+      "formattedAddress": "Son Fuster, Carrer del Fluvià, 1, bajos derecha, Llevant, 07009 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.5945379,
+        "longitude": 2.6758311
+      },
+      "rating": 4.5,
+      "googleMapsUri": "https://maps.google.com/?cid=14163345312133600633&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "http://www.mallorcaoffice.es/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 106,
+      "displayName": {
+        "text": "Mallorca Office: Centro de Negocios, Coworking y Alquiler de salas",
+        "languageCode": "es"
+      },
+      "primaryType": "business_center"
+    }
+  },
+  {
+    "google_place_id": "ChIJ1cHj63XtlxIRFJOOJaaphIU",
+    "vertical_slug": "coworking-mallorca",
+    "name": "Cowork BIT - Coworking en el Parc Bit",
+    "rating": 5,
+    "reviews_count": 41,
+    "address": "Carrer Galileo Galilei, 2, Edifici U, Local 10, Norte, 07120 Palma, Illes Balears",
+    "latitude": 39.636776999999995,
+    "longitude": 2.6323817,
+    "website": "https://coworkbit.es/",
+    "phone": "+34 971 37 43 40",
+    "google_maps_url": "https://maps.google.com/?cid=9621001235029988116&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "coworking_space",
+    "types": [
+      "coworking_space",
+      "point_of_interest",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "coworking Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJ1cHj63XtlxIRFJOOJaaphIU",
+      "types": [
+        "coworking_space",
+        "point_of_interest",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 971 37 43 40",
+      "formattedAddress": "Carrer Galileo Galilei, 2, Edifici U, Local 10, Norte, 07120 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.636776999999995,
+        "longitude": 2.6323817
+      },
+      "rating": 5,
+      "googleMapsUri": "https://maps.google.com/?cid=9621001235029988116&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://coworkbit.es/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 41,
+      "displayName": {
+        "text": "Cowork BIT - Coworking en el Parc Bit",
+        "languageCode": "es"
+      },
+      "primaryType": "coworking_space"
+    }
+  },
+  {
+    "google_place_id": "ChIJ6et7IhyVlxIRcDRN5E1yBJE",
+    "vertical_slug": "coworking-mallorca",
+    "name": "Justcoworking - Workspaces",
+    "rating": 5,
+    "reviews_count": 67,
+    "address": "Carrer Cabrera, 15, 07141 Cas Capità, Illes Balears",
+    "latitude": 39.6058899,
+    "longitude": 2.709009,
+    "website": "https://justcoworking.com/",
+    "phone": "+34 641 68 82 10",
+    "google_maps_url": "https://maps.google.com/?cid=10449602714274706544&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "coworking_space",
+    "types": [
+      "coworking_space",
+      "point_of_interest",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "coworking Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJ6et7IhyVlxIRcDRN5E1yBJE",
+      "types": [
+        "coworking_space",
+        "point_of_interest",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 641 68 82 10",
+      "formattedAddress": "Carrer Cabrera, 15, 07141 Cas Capità, Illes Balears",
+      "location": {
+        "latitude": 39.6058899,
+        "longitude": 2.709009
+      },
+      "rating": 5,
+      "googleMapsUri": "https://maps.google.com/?cid=10449602714274706544&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://justcoworking.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 67,
+      "displayName": {
+        "text": "Justcoworking - Workspaces",
+        "languageCode": "es"
+      },
+      "primaryType": "coworking_space"
+    }
+  },
+  {
+    "google_place_id": "ChIJd2vpZmyTlxIRmGbeFohK8So",
+    "vertical_slug": "coworking-mallorca",
+    "name": "CONVENDUM",
+    "rating": 5,
+    "reviews_count": 24,
+    "address": "Carrer dels Apuntadors, 4, Centre, 07012 Palma, Illes Balears",
+    "latitude": 39.5689695,
+    "longitude": 2.6458068999999997,
+    "website": "https://convendum.se/sv/coworking-space/coworking-space-palma/carrer-del-apuntadors-4/?utm_campaign=Google-my-business&utm_source=Google-my-business&utm_medium=Organic%20search&utm_content=CA04",
+    "phone": "+46 10 510 08 88",
+    "google_maps_url": "https://maps.google.com/?cid=3094336367339923096&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "coworking_space",
+    "types": [
+      "coworking_space",
+      "event_venue",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "coworking Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJd2vpZmyTlxIRmGbeFohK8So",
+      "types": [
+        "coworking_space",
+        "event_venue",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+46 10 510 08 88",
+      "formattedAddress": "Carrer dels Apuntadors, 4, Centre, 07012 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.5689695,
+        "longitude": 2.6458068999999997
+      },
+      "rating": 5,
+      "googleMapsUri": "https://maps.google.com/?cid=3094336367339923096&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://convendum.se/sv/coworking-space/coworking-space-palma/carrer-del-apuntadors-4/?utm_campaign=Google-my-business&utm_source=Google-my-business&utm_medium=Organic%20search&utm_content=CA04",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 24,
+      "displayName": {
+        "text": "CONVENDUM",
+        "languageCode": "sv"
+      },
+      "primaryType": "coworking_space"
+    }
+  },
+  {
+    "google_place_id": "ChIJcRfOKZ-TlxIRaTa0BAT79HA",
+    "vertical_slug": "coworking-mallorca",
+    "name": "Homey Group Mallorca",
+    "rating": 5,
+    "reviews_count": 26,
+    "address": "C/ de Miguel de los Santos Oliver, 7A, Bj Izqu, 07011, Ponent, 07011 Palma, Illes Balears",
+    "latitude": 39.578006599999995,
+    "longitude": 2.6434479,
+    "website": "https://coworkinghomey.com/",
+    "phone": "+34 696 48 45 35",
+    "google_maps_url": "https://maps.google.com/?cid=8139406421242689129&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "coworking_space",
+    "types": [
+      "coworking_space",
+      "point_of_interest",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "coworking Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJcRfOKZ-TlxIRaTa0BAT79HA",
+      "types": [
+        "coworking_space",
+        "point_of_interest",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 696 48 45 35",
+      "formattedAddress": "C/ de Miguel de los Santos Oliver, 7A, Bj Izqu, 07011, Ponent, 07011 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.578006599999995,
+        "longitude": 2.6434479
+      },
+      "rating": 5,
+      "googleMapsUri": "https://maps.google.com/?cid=8139406421242689129&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://coworkinghomey.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 26,
+      "displayName": {
+        "text": "Homey Group Mallorca",
+        "languageCode": "es"
+      },
+      "primaryType": "coworking_space"
+    }
+  },
+  {
+    "google_place_id": "ChIJ5_g6NT3PlxIRSIK6AkG1WCQ",
+    "vertical_slug": "coworking-mallorca",
+    "name": "Nomadico Mallorca Community",
+    "rating": 5,
+    "reviews_count": 30,
+    "address": "Poligono, 2, Parcela, 38, 07311 Búger, Illes Balears",
+    "latitude": 39.761730199999995,
+    "longitude": 2.978895,
+    "website": "https://www.nomadico.io/mallorca-coliving?utm_source=google&utm_medium=organic&utm_campaign=gmb",
+    "phone": "+31 6 17705500",
+    "google_maps_url": "https://maps.google.com/?cid=2619042474139222600&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "guest_house",
+    "types": [
+      "guest_house",
+      "community_center",
+      "event_venue",
+      "lodging",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "coworking Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJ5_g6NT3PlxIRSIK6AkG1WCQ",
+      "types": [
+        "guest_house",
+        "community_center",
+        "event_venue",
+        "lodging",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+31 6 17705500",
+      "formattedAddress": "Poligono, 2, Parcela, 38, 07311 Búger, Illes Balears",
+      "location": {
+        "latitude": 39.761730199999995,
+        "longitude": 2.978895
+      },
+      "rating": 5,
+      "googleMapsUri": "https://maps.google.com/?cid=2619042474139222600&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://www.nomadico.io/mallorca-coliving?utm_source=google&utm_medium=organic&utm_campaign=gmb",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 30,
+      "displayName": {
+        "text": "Nomadico Mallorca Community",
+        "languageCode": "en"
+      },
+      "primaryType": "guest_house"
+    }
+  },
+  {
+    "google_place_id": "ChIJH21vAF-TlxIROQ8AsrkgE-I",
+    "vertical_slug": "coworking-mallorca",
+    "name": "Fortuny3 Espai Coworking",
+    "rating": 4.7,
+    "reviews_count": 15,
+    "address": "Carrer de Can Fortuny, 3, Entresuelo B, Centre, 07001 Palma, Illes Balears",
+    "latitude": 39.5685755,
+    "longitude": 2.651181,
+    "website": "http://fortuny3.es/",
+    "phone": "+34 683 36 02 93",
+    "google_maps_url": "https://maps.google.com/?cid=16290400259056602937&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "coworking_space",
+    "types": [
+      "coworking_space",
+      "point_of_interest",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "coworking Palma Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJH21vAF-TlxIROQ8AsrkgE-I",
+      "types": [
+        "coworking_space",
+        "point_of_interest",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 683 36 02 93",
+      "formattedAddress": "Carrer de Can Fortuny, 3, Entresuelo B, Centre, 07001 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.5685755,
+        "longitude": 2.651181
+      },
+      "rating": 4.7,
+      "googleMapsUri": "https://maps.google.com/?cid=16290400259056602937&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "http://fortuny3.es/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 15,
+      "displayName": {
+        "text": "Fortuny3 Espai Coworking",
+        "languageCode": "es"
+      },
+      "primaryType": "coworking_space"
+    }
+  },
+  {
+    "google_place_id": "ChIJHZ_Ae1aSlxIRTau8PHZPGAk",
+    "vertical_slug": "coworking-mallorca",
+    "name": "Cómodo&Co Coworking Arxiduc",
+    "rating": 4.7,
+    "reviews_count": 50,
+    "address": "Carrer Arxiduc Lluís Salvador, 7b, Nord, 07004 Palma, Illes Balears",
+    "latitude": 39.578167,
+    "longitude": 2.6532869999999997,
+    "website": "https://www.coworking-palma.com/",
+    "phone": "+34 971 57 89 14",
+    "google_maps_url": "https://maps.google.com/?cid=655361115026139981&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "coworking_space",
+    "types": [
+      "coworking_space",
+      "point_of_interest",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "coworking Palma Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJHZ_Ae1aSlxIRTau8PHZPGAk",
+      "types": [
+        "coworking_space",
+        "point_of_interest",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 971 57 89 14",
+      "formattedAddress": "Carrer Arxiduc Lluís Salvador, 7b, Nord, 07004 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.578167,
+        "longitude": 2.6532869999999997
+      },
+      "rating": 4.7,
+      "googleMapsUri": "https://maps.google.com/?cid=655361115026139981&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://www.coworking-palma.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 50,
+      "displayName": {
+        "text": "Cómodo&Co Coworking Arxiduc",
+        "languageCode": "en"
+      },
+      "primaryType": "coworking_space"
+    }
+  },
+  {
+    "google_place_id": "ChIJu8UcK3aTlxIRQ01oUUIo47M",
+    "vertical_slug": "coworking-mallorca",
+    "name": "Buenaonda Co-working and Private Offices",
+    "rating": 5,
+    "reviews_count": 15,
+    "address": "Via Roma, 5B, 2 planta, Centre, 07012 Palma, Illes Balears",
+    "latitude": 39.5760404,
+    "longitude": 2.6467191999999997,
+    "website": "https://www.buenaonda.space/",
+    "phone": "+34 689 05 66 16",
+    "google_maps_url": "https://maps.google.com/?cid=12962248417801162051&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "coworking_space",
+    "types": [
+      "coworking_space",
+      "real_estate_agency",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "coworking Palma Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJu8UcK3aTlxIRQ01oUUIo47M",
+      "types": [
+        "coworking_space",
+        "real_estate_agency",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 689 05 66 16",
+      "formattedAddress": "Via Roma, 5B, 2 planta, Centre, 07012 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.5760404,
+        "longitude": 2.6467191999999997
+      },
+      "rating": 5,
+      "googleMapsUri": "https://maps.google.com/?cid=12962248417801162051&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://www.buenaonda.space/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 15,
+      "displayName": {
+        "text": "Buenaonda Co-working and Private Offices",
+        "languageCode": "it"
+      },
+      "primaryType": "coworking_space"
+    }
+  },
+  {
+    "google_place_id": "ChIJDUtnPmCSlxIRGN6lTnUR5Ic",
+    "vertical_slug": "coworking-mallorca",
+    "name": "Fundación Casa Planas. Imagen y turismo",
+    "rating": 4.5,
+    "reviews_count": 381,
+    "address": "Avinguda de Sant Ferran, 21, Ponent, 07011 Palma, Illes Balears",
+    "latitude": 39.5796537,
+    "longitude": 2.6373815,
+    "website": "http://www.casaplanas.org/",
+    "phone": "+34 971 96 67 51",
+    "google_maps_url": "https://maps.google.com/?cid=9791970685338639896&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "association_or_organization",
+    "types": [
+      "coworking_space",
+      "point_of_interest",
+      "association_or_organization",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "coworking Palma Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJDUtnPmCSlxIRGN6lTnUR5Ic",
+      "types": [
+        "coworking_space",
+        "point_of_interest",
+        "association_or_organization",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 971 96 67 51",
+      "formattedAddress": "Avinguda de Sant Ferran, 21, Ponent, 07011 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.5796537,
+        "longitude": 2.6373815
+      },
+      "rating": 4.5,
+      "googleMapsUri": "https://maps.google.com/?cid=9791970685338639896&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "http://www.casaplanas.org/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 381,
+      "displayName": {
+        "text": "Fundación Casa Planas. Imagen y turismo",
+        "languageCode": "es"
+      },
+      "primaryType": "association_or_organization"
+    }
+  },
+  {
+    "google_place_id": "ChIJrWTuvoVUlhIRk_oJnIjsDk4",
+    "vertical_slug": "coworking-mallorca",
+    "name": "Rayaworx Coworking",
+    "rating": 5,
+    "reviews_count": 45,
+    "address": "Placeta de sa Porta Murada, 2, 07650 Santanyí, Illes Balears",
+    "latitude": 39.3549309,
+    "longitude": 3.1279776999999997,
+    "website": "https://www.rayaworx.eu/",
+    "phone": "+34 971 65 37 08",
+    "google_maps_url": "https://maps.google.com/?cid=5624693056109935251&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "coworking_space",
+    "types": [
+      "coworking_space",
+      "point_of_interest",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "coworking space Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJrWTuvoVUlhIRk_oJnIjsDk4",
+      "types": [
+        "coworking_space",
+        "point_of_interest",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 971 65 37 08",
+      "formattedAddress": "Placeta de sa Porta Murada, 2, 07650 Santanyí, Illes Balears",
+      "location": {
+        "latitude": 39.3549309,
+        "longitude": 3.1279776999999997
+      },
+      "rating": 5,
+      "googleMapsUri": "https://maps.google.com/?cid=5624693056109935251&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://www.rayaworx.eu/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 45,
+      "displayName": {
+        "text": "Rayaworx Coworking",
+        "languageCode": "de"
+      },
+      "primaryType": "coworking_space"
+    }
+  },
+  {
+    "google_place_id": "ChIJl-TfeaKTlxIR_6GlEZdGzJg",
+    "vertical_slug": "coworking-mallorca",
+    "name": "No Mads Coworking",
+    "rating": 5,
+    "reviews_count": 7,
+    "address": "Carrer de Cecili Metel, 14, Centre, 07003 Palma, Illes Balears",
+    "latitude": 39.576801700000004,
+    "longitude": 2.6506919,
+    "website": "https://www.nomadspalma.com/",
+    "phone": "+34 636 39 70 02",
+    "google_maps_url": "https://maps.google.com/?cid=11010252803664093695&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "coworking_space",
+    "types": [
+      "coworking_space",
+      "point_of_interest",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "digital nomad Mallorca coworking",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJl-TfeaKTlxIR_6GlEZdGzJg",
+      "types": [
+        "coworking_space",
+        "point_of_interest",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 636 39 70 02",
+      "formattedAddress": "Carrer de Cecili Metel, 14, Centre, 07003 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.576801700000004,
+        "longitude": 2.6506919
+      },
+      "rating": 5,
+      "googleMapsUri": "https://maps.google.com/?cid=11010252803664093695&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://www.nomadspalma.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 7,
+      "displayName": {
+        "text": "No Mads Coworking",
+        "languageCode": "es"
+      },
+      "primaryType": "coworking_space"
+    }
+  },
+  {
+    "google_place_id": "ChIJ7Z5YBlWJlxIRisnBLHd0jq8",
+    "vertical_slug": "coworking-mallorca",
+    "name": "The Circle",
+    "rating": 4.9,
+    "reviews_count": 56,
+    "address": "Carrer Illes Canàries, 07183 Santa Ponça, Illes Balears",
+    "latitude": 39.526660899999996,
+    "longitude": 2.5058643,
+    "website": "http://www.circle-mallorca.de/",
+    "phone": "+34 871 62 00 80",
+    "google_maps_url": "https://maps.google.com/?cid=12650176458531129738&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "business_center",
+    "types": [
+      "business_center",
+      "point_of_interest",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "coworking Santa Ponsa Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJ7Z5YBlWJlxIRisnBLHd0jq8",
+      "types": [
+        "business_center",
+        "point_of_interest",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 871 62 00 80",
+      "formattedAddress": "Carrer Illes Canàries, 07183 Santa Ponça, Illes Balears",
+      "location": {
+        "latitude": 39.526660899999996,
+        "longitude": 2.5058643
+      },
+      "rating": 4.9,
+      "googleMapsUri": "https://maps.google.com/?cid=12650176458531129738&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "http://www.circle-mallorca.de/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 56,
+      "displayName": {
+        "text": "The Circle",
+        "languageCode": "es"
+      },
+      "primaryType": "business_center"
+    }
+  }
+]

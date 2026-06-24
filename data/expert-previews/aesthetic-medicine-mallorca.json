@@ -1,0 +1,57 @@
+[
+  {
+    "google_place_id": "ChIJRYpGX4mTlxIRDV3cM0W88HE",
+    "vertical_slug": "aesthetic-medicine-mallorca",
+    "name": "OLIVA Aesthetic & Hair Clinic | Clínica Estética y Capilar Mallorca",
+    "rating": 5,
+    "reviews_count": 357,
+    "address": "Carrer de Sant Magí, 63, Ponent, 07013 Palma, Illes Balears",
+    "latitude": 39.570452800000005,
+    "longitude": 2.6364884,
+    "website": "http://olivaclinics.com/",
+    "phone": "+34 689 85 49 99",
+    "google_maps_url": "https://maps.google.com/?cid=8210269126105259277",
+    "primary_type": "medical_clinic",
+    "types": [
+      "beautician",
+      "massage_spa",
+      "wellness_center",
+      "beauty_salon",
+      "hair_care",
+      "massage",
+      "spa",
+      "doctor",
+      "medical_clinic",
+      "health",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "healthcare-preview manual extraction",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile."
+  },
+  {
+    "google_place_id": "ChIJYwbumCiTlxIRfNA86shiVYQ",
+    "vertical_slug": "aesthetic-medicine-mallorca",
+    "name": "Clínica Mediben - Medicina estética, cirugía estética, dermatología, medicina capilar, ginecología, depilación y nutrición.",
+    "rating": 4.8,
+    "reviews_count": 303,
+    "address": "Carrer Federico García Lorca, nº 2, 1ºB, Ponent, 07014 Palma, Illes Balears",
+    "latitude": 39.5675899,
+    "longitude": 2.6285927,
+    "website": "http://www.clinicamediben.com/",
+    "phone": "+34 971 91 13 13",
+    "google_maps_url": "https://maps.google.com/?cid=9535636401089728636",
+    "primary_type": "medical_clinic",
+    "types": [
+      "medical_clinic",
+      "health",
+      "point_of_interest",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "healthcare-preview manual extraction",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile."
+  }
+]

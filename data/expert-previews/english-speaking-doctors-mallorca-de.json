@@ -1,0 +1,1318 @@
+[
+  {
+    "google_place_id": "ChIJKZVF14sslhIRhEhsrAzgBIo",
+    "vertical_slug": "english-speaking-doctors-mallorca",
+    "name": "Arztzentrum Alcudia; Terminvergabe nur nach telefonischer Vereinbarung",
+    "rating": 4.9,
+    "reviews_count": 33,
+    "address": "Paseo Maritimo, 12, 07400 Alcúdia, Illes Balears",
+    "latitude": 39.84106,
+    "longitude": 3.1357216,
+    "website": "http://arztzentrum-alcudia.com/",
+    "phone": "+34 608 53 48 80",
+    "google_maps_url": "https://maps.google.com/?cid=9945320222177904772&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "doctor",
+    "types": [
+      "doctor",
+      "health",
+      "point_of_interest",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "deutscher Arzt Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJKZVF14sslhIRhEhsrAzgBIo",
+      "types": [
+        "doctor",
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 608 53 48 80",
+      "formattedAddress": "Paseo Maritimo, 12, 07400 Alcúdia, Illes Balears",
+      "location": {
+        "latitude": 39.84106,
+        "longitude": 3.1357216
+      },
+      "rating": 4.9,
+      "googleMapsUri": "https://maps.google.com/?cid=9945320222177904772&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "http://arztzentrum-alcudia.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 33,
+      "displayName": {
+        "text": "Arztzentrum Alcudia; Terminvergabe nur nach telefonischer Vereinbarung",
+        "languageCode": "de"
+      },
+      "primaryType": "doctor"
+    }
+  },
+  {
+    "google_place_id": "ChIJHwPvOcNQlhIRn446rlzeiLI",
+    "vertical_slug": "english-speaking-doctors-mallorca",
+    "name": "Deutsche Arztpraxis - Ambulanta - Cala d'Or",
+    "rating": 4.5,
+    "reviews_count": 201,
+    "address": "Av. dels Benvinguts, 66, 07660 Cala d'Or, Illes Balears",
+    "latitude": 39.3792571,
+    "longitude": 3.2267181999999996,
+    "website": "http://www.deutsche-arztpraxis-mallorca.de/",
+    "phone": "+34 627 93 47 17",
+    "google_maps_url": "https://maps.google.com/?cid=12864776825225252511&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "health",
+    "types": [
+      "health",
+      "point_of_interest",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "deutscher Arzt Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJHwPvOcNQlhIRn446rlzeiLI",
+      "types": [
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 627 93 47 17",
+      "formattedAddress": "Av. dels Benvinguts, 66, 07660 Cala d'Or, Illes Balears",
+      "location": {
+        "latitude": 39.3792571,
+        "longitude": 3.2267181999999996
+      },
+      "rating": 4.5,
+      "googleMapsUri": "https://maps.google.com/?cid=12864776825225252511&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "http://www.deutsche-arztpraxis-mallorca.de/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 201,
+      "displayName": {
+        "text": "Deutsche Arztpraxis - Ambulanta - Cala d'Or",
+        "languageCode": "de"
+      },
+      "primaryType": "health"
+    }
+  },
+  {
+    "google_place_id": "ChIJna5JjPKXlxIRfmFIwJSijbo",
+    "vertical_slug": "english-speaking-doctors-mallorca",
+    "name": "Mobiler Deutscher Arzt Mallorca",
+    "rating": 5,
+    "reviews_count": 16,
+    "address": "07609 Son Verí Nou, Illes Balears",
+    "latitude": 39.4899408,
+    "longitude": 2.7397179,
+    "website": "https://deutscher-arzt-mallorca.com/",
+    "phone": "+49 160 2810188",
+    "google_maps_url": "https://maps.google.com/?cid=13442579222535627134&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "doctor",
+    "types": [
+      "doctor",
+      "health",
+      "point_of_interest",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "deutscher Arzt Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJna5JjPKXlxIRfmFIwJSijbo",
+      "types": [
+        "doctor",
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+49 160 2810188",
+      "formattedAddress": "07609 Son Verí Nou, Illes Balears",
+      "location": {
+        "latitude": 39.4899408,
+        "longitude": 2.7397179
+      },
+      "rating": 5,
+      "googleMapsUri": "https://maps.google.com/?cid=13442579222535627134&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://deutscher-arzt-mallorca.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 16,
+      "displayName": {
+        "text": "Mobiler Deutscher Arzt Mallorca",
+        "languageCode": "de"
+      },
+      "primaryType": "doctor"
+    }
+  },
+  {
+    "google_place_id": "ChIJU4B5cIkslhIR9mI3mbSHJLI",
+    "vertical_slug": "english-speaking-doctors-mallorca",
+    "name": "Doctor in Alcudia - Doctor Mallorca",
+    "rating": 4.8,
+    "reviews_count": 66,
+    "address": "Avinguda de la Platja, 2, 07400 Port d'Alcúdia, Illes Balears",
+    "latitude": 39.8417771,
+    "longitude": 3.1288905,
+    "website": "https://www.doctormallorca.com/",
+    "phone": "+34 664 40 42 61",
+    "google_maps_url": "https://maps.google.com/?cid=12836534047647163126&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "doctor",
+    "types": [
+      "doctor",
+      "medical_clinic",
+      "health",
+      "point_of_interest",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "deutscher Arzt Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJU4B5cIkslhIR9mI3mbSHJLI",
+      "types": [
+        "doctor",
+        "medical_clinic",
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 664 40 42 61",
+      "formattedAddress": "Avinguda de la Platja, 2, 07400 Port d'Alcúdia, Illes Balears",
+      "location": {
+        "latitude": 39.8417771,
+        "longitude": 3.1288905
+      },
+      "rating": 4.8,
+      "googleMapsUri": "https://maps.google.com/?cid=12836534047647163126&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://www.doctormallorca.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 66,
+      "displayName": {
+        "text": "Doctor in Alcudia - Doctor Mallorca",
+        "languageCode": "es"
+      },
+      "primaryType": "doctor"
+    }
+  },
+  {
+    "google_place_id": "ChIJs5FgGgCXlxIRLUWavX3f4ok",
+    "vertical_slug": "english-speaking-doctors-mallorca",
+    "name": "Arzt Balear 24Std. Can Pastilla",
+    "rating": 4.9,
+    "reviews_count": 235,
+    "address": "Avinguda de Bartomeu Riutort, 4, Platja de Palma i Pla de Sant Jordi, 07610 Can Pastilla, Illes Balears",
+    "latitude": 39.5367446,
+    "longitude": 2.7163950999999997,
+    "website": "https://doctorbalear.com/",
+    "phone": "+34 611 88 80 00",
+    "google_maps_url": "https://maps.google.com/?cid=9935749459077645613&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "doctor",
+    "types": [
+      "doctor",
+      "medical_center",
+      "hospital",
+      "health",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "deutscher Arzt Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJs5FgGgCXlxIRLUWavX3f4ok",
+      "types": [
+        "doctor",
+        "medical_center",
+        "hospital",
+        "health",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 611 88 80 00",
+      "formattedAddress": "Avinguda de Bartomeu Riutort, 4, Platja de Palma i Pla de Sant Jordi, 07610 Can Pastilla, Illes Balears",
+      "location": {
+        "latitude": 39.5367446,
+        "longitude": 2.7163950999999997
+      },
+      "rating": 4.9,
+      "googleMapsUri": "https://maps.google.com/?cid=9935749459077645613&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://doctorbalear.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 235,
+      "displayName": {
+        "text": "Arzt Balear 24Std. Can Pastilla",
+        "languageCode": "de"
+      },
+      "primaryType": "doctor"
+    }
+  },
+  {
+    "google_place_id": "ChIJaZ4W76HVlxIR9X0o4tyFT1s",
+    "vertical_slug": "english-speaking-doctors-mallorca",
+    "name": "Doctor in Pollensa - Doctor Mallorca",
+    "rating": 4.7,
+    "reviews_count": 22,
+    "address": "Carrer de Formentor, 61, 07470 Port de Pollença, Illes Balears",
+    "latitude": 39.9091338,
+    "longitude": 3.0844614999999997,
+    "website": "https://www.doctormallorca.com/en/",
+    "phone": "+34 664 40 42 61",
+    "google_maps_url": "https://maps.google.com/?cid=6579624764345187829&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "doctor",
+    "types": [
+      "doctor",
+      "medical_clinic",
+      "health",
+      "point_of_interest",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "deutscher Arzt Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJaZ4W76HVlxIR9X0o4tyFT1s",
+      "types": [
+        "doctor",
+        "medical_clinic",
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 664 40 42 61",
+      "formattedAddress": "Carrer de Formentor, 61, 07470 Port de Pollença, Illes Balears",
+      "location": {
+        "latitude": 39.9091338,
+        "longitude": 3.0844614999999997
+      },
+      "rating": 4.7,
+      "googleMapsUri": "https://maps.google.com/?cid=6579624764345187829&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://www.doctormallorca.com/en/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 22,
+      "displayName": {
+        "text": "Doctor in Pollensa - Doctor Mallorca",
+        "languageCode": "es"
+      },
+      "primaryType": "doctor"
+    }
+  },
+  {
+    "google_place_id": "ChIJ4YrW-00nmBIR7Fs9uJJZVK4",
+    "vertical_slug": "english-speaking-doctors-mallorca",
+    "name": "Deutsche Facharzt Zentren - Praxis Paguera",
+    "rating": 4.5,
+    "reviews_count": 85,
+    "address": "Carrer de les Malgrats, 6, 07160 Peguera, Illes Balears",
+    "latitude": 39.538507599999996,
+    "longitude": 2.4501735,
+    "website": "http://www.dfz.es/",
+    "phone": "+34 971 68 53 33",
+    "google_maps_url": "https://maps.google.com/?cid=12561763747334282220&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "hospital",
+    "types": [
+      "hospital",
+      "doctor",
+      "health",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "deutscher Arzt Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJ4YrW-00nmBIR7Fs9uJJZVK4",
+      "types": [
+        "hospital",
+        "doctor",
+        "health",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 971 68 53 33",
+      "formattedAddress": "Carrer de les Malgrats, 6, 07160 Peguera, Illes Balears",
+      "location": {
+        "latitude": 39.538507599999996,
+        "longitude": 2.4501735
+      },
+      "rating": 4.5,
+      "googleMapsUri": "https://maps.google.com/?cid=12561763747334282220&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "http://www.dfz.es/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 85,
+      "displayName": {
+        "text": "Deutsche Facharzt Zentren - Praxis Paguera",
+        "languageCode": "de"
+      },
+      "primaryType": "hospital"
+    }
+  },
+  {
+    "google_place_id": "ChIJ8YUdRBk8lhIRyh4J9_RUIVk",
+    "vertical_slug": "english-speaking-doctors-mallorca",
+    "name": "Dr. med. Ralph Ocker",
+    "rating": 4.9,
+    "reviews_count": 90,
+    "address": "Avda, Avinguda de Costa i Llobera, 55, 07570 Artà, Illes Balears",
+    "latitude": 39.692098699999995,
+    "longitude": 3.3549488999999997,
+    "website": "http://www.ocker-arta.com/",
+    "phone": "+34 971 83 50 64",
+    "google_maps_url": "https://maps.google.com/?cid=6422507954700361418&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "doctor",
+    "types": [
+      "doctor",
+      "health",
+      "point_of_interest",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "deutscher Arzt Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJ8YUdRBk8lhIRyh4J9_RUIVk",
+      "types": [
+        "doctor",
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 971 83 50 64",
+      "formattedAddress": "Avda, Avinguda de Costa i Llobera, 55, 07570 Artà, Illes Balears",
+      "location": {
+        "latitude": 39.692098699999995,
+        "longitude": 3.3549488999999997
+      },
+      "rating": 4.9,
+      "googleMapsUri": "https://maps.google.com/?cid=6422507954700361418&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "http://www.ocker-arta.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 90,
+      "displayName": {
+        "text": "Dr. med. Ralph Ocker",
+        "languageCode": "de"
+      },
+      "primaryType": "doctor"
+    }
+  },
+  {
+    "google_place_id": "ChIJwQqymVqSlxIRuh_Ak7feLk8",
+    "vertical_slug": "english-speaking-doctors-mallorca",
+    "name": "MEDICUM PALMA - ÄRZTEHAUS PALMA - FACHARZTPRAXIS PALMA",
+    "rating": 4.6,
+    "reviews_count": 47,
+    "address": "Carrer del Cardenal Rossell, 20, Platja de Palma i Pla de Sant Jordi, 07007 Coll den Rabassa, Illes Balears",
+    "latitude": 39.554684200000004,
+    "longitude": 2.6919655,
+    "website": "https://medicumpalma.com/",
+    "phone": "+34 971 22 80 67",
+    "google_maps_url": "https://maps.google.com/?cid=5705742657964220346&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "medical_clinic",
+    "types": [
+      "medical_clinic",
+      "medical_lab",
+      "chiropractor",
+      "doctor",
+      "health",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "deutscher Arzt Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJwQqymVqSlxIRuh_Ak7feLk8",
+      "types": [
+        "medical_clinic",
+        "medical_lab",
+        "chiropractor",
+        "doctor",
+        "health",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 971 22 80 67",
+      "formattedAddress": "Carrer del Cardenal Rossell, 20, Platja de Palma i Pla de Sant Jordi, 07007 Coll den Rabassa, Illes Balears",
+      "location": {
+        "latitude": 39.554684200000004,
+        "longitude": 2.6919655
+      },
+      "rating": 4.6,
+      "googleMapsUri": "https://maps.google.com/?cid=5705742657964220346&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://medicumpalma.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 47,
+      "displayName": {
+        "text": "MEDICUM PALMA - ÄRZTEHAUS PALMA - FACHARZTPRAXIS PALMA",
+        "languageCode": "de"
+      },
+      "primaryType": "medical_clinic"
+    }
+  },
+  {
+    "google_place_id": "ChIJ5UZcUA-7lxIRdcLsOIOD7bc",
+    "vertical_slug": "english-speaking-doctors-mallorca",
+    "name": "Consulta Médica Mallorca - Praxis Dra. Kraemer",
+    "rating": 4.7,
+    "reviews_count": 62,
+    "address": "Ronda de Migjorn, 95, 07620 Llucmajor, Illes Balears",
+    "latitude": 39.48635,
+    "longitude": 2.887139,
+    "website": "https://consulta-medica-mallorca.com/",
+    "phone": "+34 971 12 07 37",
+    "google_maps_url": "https://maps.google.com/?cid=13253393878040232565&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "doctor",
+    "types": [
+      "doctor",
+      "health",
+      "point_of_interest",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "deutscher Arzt Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJ5UZcUA-7lxIRdcLsOIOD7bc",
+      "types": [
+        "doctor",
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 971 12 07 37",
+      "formattedAddress": "Ronda de Migjorn, 95, 07620 Llucmajor, Illes Balears",
+      "location": {
+        "latitude": 39.48635,
+        "longitude": 2.887139
+      },
+      "rating": 4.7,
+      "googleMapsUri": "https://maps.google.com/?cid=13253393878040232565&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://consulta-medica-mallorca.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 62,
+      "displayName": {
+        "text": "Consulta Médica Mallorca - Praxis Dra. Kraemer",
+        "languageCode": "de"
+      },
+      "primaryType": "doctor"
+    }
+  },
+  {
+    "google_place_id": "ChIJVVVVlWtFlhIRj_3cskhesHM",
+    "vertical_slug": "english-speaking-doctors-mallorca",
+    "name": "Praxis Dr.med Sibylle Walther",
+    "rating": 4.8,
+    "reviews_count": 74,
+    "address": "Passeig de Manacor, 6, 07689 Cales de Mallorca, Illes Balears",
+    "latitude": 39.4624898,
+    "longitude": 3.2785971999999997,
+    "website": "http://www.mallorca-doctor.com/",
+    "phone": "+34 971 94 02 44",
+    "google_maps_url": "https://maps.google.com/?cid=8336266576594271631&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "medical_clinic",
+    "types": [
+      "medical_clinic",
+      "health",
+      "point_of_interest",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "deutscher Arzt Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJVVVVlWtFlhIRj_3cskhesHM",
+      "types": [
+        "medical_clinic",
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 971 94 02 44",
+      "formattedAddress": "Passeig de Manacor, 6, 07689 Cales de Mallorca, Illes Balears",
+      "location": {
+        "latitude": 39.4624898,
+        "longitude": 3.2785971999999997
+      },
+      "rating": 4.8,
+      "googleMapsUri": "https://maps.google.com/?cid=8336266576594271631&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "http://www.mallorca-doctor.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 74,
+      "displayName": {
+        "text": "Praxis Dr.med Sibylle Walther",
+        "languageCode": "de"
+      },
+      "primaryType": "medical_clinic"
+    }
+  },
+  {
+    "google_place_id": "ChIJ3ZRmwkozlhIRUej6ZvhEc60",
+    "vertical_slug": "english-speaking-doctors-mallorca",
+    "name": "DOCTOR ARZT Can Picafort",
+    "rating": 4.7,
+    "reviews_count": 38,
+    "address": "Passeig Colón, 114, 07458 Can Picafort, Illes Balears",
+    "latitude": 39.7682465,
+    "longitude": 3.1499034,
+    "website": "http://doctorarztcanpicafort.com/",
+    "phone": "+34 637 00 33 72",
+    "google_maps_url": "https://maps.google.com/?cid=12498409224553556049&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "medical_clinic",
+    "types": [
+      "medical_clinic",
+      "health",
+      "point_of_interest",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "deutscher Arzt Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJ3ZRmwkozlhIRUej6ZvhEc60",
+      "types": [
+        "medical_clinic",
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 637 00 33 72",
+      "formattedAddress": "Passeig Colón, 114, 07458 Can Picafort, Illes Balears",
+      "location": {
+        "latitude": 39.7682465,
+        "longitude": 3.1499034
+      },
+      "rating": 4.7,
+      "googleMapsUri": "https://maps.google.com/?cid=12498409224553556049&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "http://doctorarztcanpicafort.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 38,
+      "displayName": {
+        "text": "DOCTOR ARZT Can Picafort",
+        "languageCode": "es"
+      },
+      "primaryType": "medical_clinic"
+    }
+  },
+  {
+    "google_place_id": "ChIJ-ROzVHySlxIRcMsP8UvTmso",
+    "vertical_slug": "english-speaking-doctors-mallorca",
+    "name": "HNO MALLORCA | Dr. med. Frank Burkart",
+    "rating": 4.9,
+    "reviews_count": 56,
+    "address": "Clínica Picasso, Avinguda de Picasso, 57, Ponent, 07014 Palma, Illes Balears",
+    "latitude": 39.578358,
+    "longitude": 2.6261129,
+    "website": "https://hno-mallorca.com/",
+    "phone": "+34 971 22 06 66",
+    "google_maps_url": "https://maps.google.com/?cid=14599213465195236208&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "doctor",
+    "types": [
+      "doctor",
+      "medical_clinic",
+      "health",
+      "point_of_interest",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "deutscher Arzt Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJ-ROzVHySlxIRcMsP8UvTmso",
+      "types": [
+        "doctor",
+        "medical_clinic",
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 971 22 06 66",
+      "formattedAddress": "Clínica Picasso, Avinguda de Picasso, 57, Ponent, 07014 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.578358,
+        "longitude": 2.6261129
+      },
+      "rating": 4.9,
+      "googleMapsUri": "https://maps.google.com/?cid=14599213465195236208&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://hno-mallorca.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 56,
+      "displayName": {
+        "text": "HNO MALLORCA | Dr. med. Frank Burkart",
+        "languageCode": "de"
+      },
+      "primaryType": "doctor"
+    }
+  },
+  {
+    "google_place_id": "ChIJT17QLSItlhIRmiPp5D19tjM",
+    "vertical_slug": "english-speaking-doctors-mallorca",
+    "name": "Centre Mèdic Policlinic",
+    "rating": 4.6,
+    "reviews_count": 37,
+    "address": "Av. de s'Albufera, 41, 07458 Platja de Muro, Illes Balears",
+    "latitude": 39.810576499999996,
+    "longitude": 3.1155502,
+    "website": "http://www.policlinic.es/",
+    "phone": "+34 971 89 32 21",
+    "google_maps_url": "https://maps.google.com/?cid=3726303446482625434&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "doctor",
+    "types": [
+      "doctor",
+      "dentist",
+      "health",
+      "point_of_interest",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "Arzt Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJT17QLSItlhIRmiPp5D19tjM",
+      "types": [
+        "doctor",
+        "dentist",
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 971 89 32 21",
+      "formattedAddress": "Av. de s'Albufera, 41, 07458 Platja de Muro, Illes Balears",
+      "location": {
+        "latitude": 39.810576499999996,
+        "longitude": 3.1155502
+      },
+      "rating": 4.6,
+      "googleMapsUri": "https://maps.google.com/?cid=3726303446482625434&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "http://www.policlinic.es/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 37,
+      "displayName": {
+        "text": "Centre Mèdic Policlinic",
+        "languageCode": "es"
+      },
+      "primaryType": "doctor"
+    }
+  },
+  {
+    "google_place_id": "ChIJE8fSLUHFlxIR0VS6zi389ZA",
+    "vertical_slug": "english-speaking-doctors-mallorca",
+    "name": "Dr. Ines Augele",
+    "rating": 5,
+    "reviews_count": 15,
+    "address": "Poligono 8, Parcela 5, 07313 Selva, Illes Balears",
+    "latitude": 39.7441284,
+    "longitude": 2.9331954,
+    "website": "https://www.augele.eu/",
+    "phone": "+34 871 24 91 00",
+    "google_maps_url": "https://maps.google.com/?cid=10445532184427779281&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "doctor",
+    "types": [
+      "doctor",
+      "health",
+      "point_of_interest",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "Arzt Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJE8fSLUHFlxIR0VS6zi389ZA",
+      "types": [
+        "doctor",
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 871 24 91 00",
+      "formattedAddress": "Poligono 8, Parcela 5, 07313 Selva, Illes Balears",
+      "location": {
+        "latitude": 39.7441284,
+        "longitude": 2.9331954
+      },
+      "rating": 5,
+      "googleMapsUri": "https://maps.google.com/?cid=10445532184427779281&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://www.augele.eu/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 15,
+      "displayName": {
+        "text": "Dr. Ines Augele",
+        "languageCode": "de"
+      },
+      "primaryType": "doctor"
+    }
+  },
+  {
+    "google_place_id": "ChIJvyEtys7AGA8RinOG69UJO44",
+    "vertical_slug": "english-speaking-doctors-mallorca",
+    "name": "Hausarztpraxis Barbara Wenzel - Medica Mallorca Llevant",
+    "rating": 5,
+    "reviews_count": 24,
+    "address": "Carrer de Maria Ignàsia Morell, 3, 07570 Artà, Illes Balears",
+    "latitude": 39.6923944,
+    "longitude": 3.3450963,
+    "website": "https://medica-mallorca-llevant.eu/",
+    "phone": "+34 602 65 09 12",
+    "google_maps_url": "https://maps.google.com/?cid=10248796191395836810&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "doctor",
+    "types": [
+      "doctor",
+      "health",
+      "point_of_interest",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "Arzt Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJvyEtys7AGA8RinOG69UJO44",
+      "types": [
+        "doctor",
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 602 65 09 12",
+      "formattedAddress": "Carrer de Maria Ignàsia Morell, 3, 07570 Artà, Illes Balears",
+      "location": {
+        "latitude": 39.6923944,
+        "longitude": 3.3450963
+      },
+      "rating": 5,
+      "googleMapsUri": "https://maps.google.com/?cid=10248796191395836810&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://medica-mallorca-llevant.eu/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 24,
+      "displayName": {
+        "text": "Hausarztpraxis Barbara Wenzel - Medica Mallorca Llevant",
+        "languageCode": "de"
+      },
+      "primaryType": "doctor"
+    }
+  },
+  {
+    "google_place_id": "ChIJvX4J0uuSlxIRYLbeF7e9i-k",
+    "vertical_slug": "english-speaking-doctors-mallorca",
+    "name": "Palma Clinic",
+    "rating": 4.8,
+    "reviews_count": 145,
+    "address": "Camí dels Reis, 308, Edificio 3A, Norte, 07011 Palma, Illes Balears",
+    "latitude": 39.59733,
+    "longitude": 2.6452033999999998,
+    "website": "http://www.palma-clinic.com/",
+    "phone": "+34 971 90 52 02",
+    "google_maps_url": "https://maps.google.com/?cid=16828753026677126752&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "medical_clinic",
+    "types": [
+      "medical_clinic",
+      "doctor",
+      "medical_center",
+      "hospital",
+      "dentist",
+      "health",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "deutsche Klinik Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJvX4J0uuSlxIRYLbeF7e9i-k",
+      "types": [
+        "medical_clinic",
+        "doctor",
+        "medical_center",
+        "hospital",
+        "dentist",
+        "health",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 971 90 52 02",
+      "formattedAddress": "Camí dels Reis, 308, Edificio 3A, Norte, 07011 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.59733,
+        "longitude": 2.6452033999999998
+      },
+      "rating": 4.8,
+      "googleMapsUri": "https://maps.google.com/?cid=16828753026677126752&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "http://www.palma-clinic.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 145,
+      "displayName": {
+        "text": "Palma Clinic",
+        "languageCode": "es"
+      },
+      "primaryType": "medical_clinic"
+    }
+  },
+  {
+    "google_place_id": "ChIJX5yRsvGPlxIRjAjxL48Kx70",
+    "vertical_slug": "english-speaking-doctors-mallorca",
+    "name": "BENDINAT MEDICAL CENTER",
+    "rating": 4.7,
+    "reviews_count": 13,
+    "address": "Calle Arquitecto Francisco Casas, Avinguda de Bendinat, 17, Planta 1, B21, 07181 Bendinat, Illes Balears",
+    "latitude": 39.5401266,
+    "longitude": 2.5831622,
+    "website": "https://bendinat-mc.com/",
+    "phone": "+34 871 03 34 97",
+    "google_maps_url": "https://maps.google.com/?cid=13674910403634727052&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "health",
+    "types": [
+      "doctor",
+      "medical_center",
+      "hospital",
+      "health",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "deutsche Klinik Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJX5yRsvGPlxIRjAjxL48Kx70",
+      "types": [
+        "doctor",
+        "medical_center",
+        "hospital",
+        "health",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 871 03 34 97",
+      "formattedAddress": "Calle Arquitecto Francisco Casas, Avinguda de Bendinat, 17, Planta 1, B21, 07181 Bendinat, Illes Balears",
+      "location": {
+        "latitude": 39.5401266,
+        "longitude": 2.5831622
+      },
+      "rating": 4.7,
+      "googleMapsUri": "https://maps.google.com/?cid=13674910403634727052&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://bendinat-mc.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 13,
+      "displayName": {
+        "text": "BENDINAT MEDICAL CENTER",
+        "languageCode": "de"
+      },
+      "primaryType": "health"
+    }
+  },
+  {
+    "google_place_id": "ChIJU5vsJ60mmBIRoVO8k3FCmHk",
+    "vertical_slug": "english-speaking-doctors-mallorca",
+    "name": "Clinica Port d'Andratx - Allmedica S.L. / Privatklinik",
+    "rating": 4.8,
+    "reviews_count": 164,
+    "address": "Carrer des Saluet, 3, L1, 07157 Port d'Andratx, Illes Balears",
+    "latitude": 39.5456834,
+    "longitude": 2.3918464999999998,
+    "website": "https://arzt-mallorca.com/",
+    "phone": "+34 971 67 20 39",
+    "google_maps_url": "https://maps.google.com/?cid=8761826130626630561&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "hospital",
+    "types": [
+      "skin_care_clinic",
+      "medical_lab",
+      "chiropractor",
+      "doctor",
+      "hospital",
+      "medical_clinic",
+      "health",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "deutsche Klinik Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJU5vsJ60mmBIRoVO8k3FCmHk",
+      "types": [
+        "skin_care_clinic",
+        "medical_lab",
+        "chiropractor",
+        "doctor",
+        "hospital",
+        "medical_clinic",
+        "health",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 971 67 20 39",
+      "formattedAddress": "Carrer des Saluet, 3, L1, 07157 Port d'Andratx, Illes Balears",
+      "location": {
+        "latitude": 39.5456834,
+        "longitude": 2.3918464999999998
+      },
+      "rating": 4.8,
+      "googleMapsUri": "https://maps.google.com/?cid=8761826130626630561&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://arzt-mallorca.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 164,
+      "displayName": {
+        "text": "Clinica Port d'Andratx - Allmedica S.L. / Privatklinik",
+        "languageCode": "de"
+      },
+      "primaryType": "hospital"
+    }
+  },
+  {
+    "google_place_id": "ChIJl6PwhK3rlxIR6G537JjbyIY",
+    "vertical_slug": "english-speaking-doctors-mallorca",
+    "name": "Clinic Santa Maria DOCTOR-ARZT-ÄRZTEZENTRUM",
+    "rating": 5,
+    "reviews_count": 52,
+    "address": "Carrer Bernat de Santa Eugènia, 15b, Local B, 07320 Santa Maria del Camí, Illes Balears",
+    "latitude": 39.652341199999995,
+    "longitude": 2.7757962,
+    "website": "https://www.clinicsantamaria.com/",
+    "phone": "+34 604 28 00 00",
+    "google_maps_url": "https://maps.google.com/?cid=9712254046273236712&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "medical_center",
+    "types": [
+      "medical_center",
+      "wellness_center",
+      "doctor",
+      "hospital",
+      "medical_clinic",
+      "health",
+      "government_office",
+      "point_of_interest",
+      "consultant",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "deutsche Klinik Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJl6PwhK3rlxIR6G537JjbyIY",
+      "types": [
+        "medical_center",
+        "wellness_center",
+        "doctor",
+        "hospital",
+        "medical_clinic",
+        "health",
+        "government_office",
+        "point_of_interest",
+        "consultant",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 604 28 00 00",
+      "formattedAddress": "Carrer Bernat de Santa Eugènia, 15b, Local B, 07320 Santa Maria del Camí, Illes Balears",
+      "location": {
+        "latitude": 39.652341199999995,
+        "longitude": 2.7757962
+      },
+      "rating": 5,
+      "googleMapsUri": "https://maps.google.com/?cid=9712254046273236712&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://www.clinicsantamaria.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 52,
+      "displayName": {
+        "text": "Clinic Santa Maria DOCTOR-ARZT-ÄRZTEZENTRUM",
+        "languageCode": "es"
+      },
+      "primaryType": "medical_center"
+    }
+  },
+  {
+    "google_place_id": "ChIJSzyWarmJlxIRJ3UelD0hrAM",
+    "vertical_slug": "english-speaking-doctors-mallorca",
+    "name": "Deutsche Augenklinik Mallorca",
+    "rating": 4.6,
+    "reviews_count": 34,
+    "address": "Avinguda del Rei Jaume I, 100, 07180 Santa Ponça, Illes Balears",
+    "latitude": 39.5155406,
+    "longitude": 2.4841607,
+    "website": "http://www.deutsche-augen-klinik.de/",
+    "phone": "+34 871 57 06 06",
+    "google_maps_url": "https://maps.google.com/?cid=264623026469762343&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "medical_clinic",
+    "types": [
+      "medical_clinic",
+      "health",
+      "point_of_interest",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "deutsche Klinik Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJSzyWarmJlxIRJ3UelD0hrAM",
+      "types": [
+        "medical_clinic",
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 871 57 06 06",
+      "formattedAddress": "Avinguda del Rei Jaume I, 100, 07180 Santa Ponça, Illes Balears",
+      "location": {
+        "latitude": 39.5155406,
+        "longitude": 2.4841607
+      },
+      "rating": 4.6,
+      "googleMapsUri": "https://maps.google.com/?cid=264623026469762343&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "http://www.deutsche-augen-klinik.de/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 34,
+      "displayName": {
+        "text": "Deutsche Augenklinik Mallorca",
+        "languageCode": "de"
+      },
+      "primaryType": "medical_clinic"
+    }
+  },
+  {
+    "google_place_id": "ChIJBa5-HQOJlxIRgyqFxE0q9rg",
+    "vertical_slug": "english-speaking-doctors-mallorca",
+    "name": "ArztZentrum Santa Ponsa",
+    "rating": 5,
+    "reviews_count": 11,
+    "address": "Avinguda del Rei Jaume I, 100, 07180 Santa Ponça, Illes Balears",
+    "latitude": 39.5155434,
+    "longitude": 2.4841653999999997,
+    "website": "https://arztzentrum.es/",
+    "phone": "+34 601 13 33 33",
+    "google_maps_url": "https://maps.google.com/?cid=13327886660747471491&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "doctor",
+    "types": [
+      "doctor",
+      "health",
+      "point_of_interest",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "Arztzentrum Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJBa5-HQOJlxIRgyqFxE0q9rg",
+      "types": [
+        "doctor",
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 601 13 33 33",
+      "formattedAddress": "Avinguda del Rei Jaume I, 100, 07180 Santa Ponça, Illes Balears",
+      "location": {
+        "latitude": 39.5155434,
+        "longitude": 2.4841653999999997
+      },
+      "rating": 5,
+      "googleMapsUri": "https://maps.google.com/?cid=13327886660747471491&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://arztzentrum.es/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 11,
+      "displayName": {
+        "text": "ArztZentrum Santa Ponsa",
+        "languageCode": "en"
+      },
+      "primaryType": "doctor"
+    }
+  },
+  {
+    "google_place_id": "ChIJ403qeP4XlhIRfEING_b8dJI",
+    "vertical_slug": "english-speaking-doctors-mallorca",
+    "name": "Ärztezentrum Cala Ratjada",
+    "rating": 5,
+    "reviews_count": 21,
+    "address": "Carrer de l'Agulla, 77, 07590 Cala Rajada, Illes Balears",
+    "latitude": 39.71521,
+    "longitude": 3.45986,
+    "website": "https://www.aerztezentrum-calaratjada.com/",
+    "phone": "+34 871 03 90 89",
+    "google_maps_url": "https://maps.google.com/?cid=10553337960781922940&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "doctor",
+    "types": [
+      "doctor",
+      "health",
+      "point_of_interest",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "Arztzentrum Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJ403qeP4XlhIRfEING_b8dJI",
+      "types": [
+        "doctor",
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 871 03 90 89",
+      "formattedAddress": "Carrer de l'Agulla, 77, 07590 Cala Rajada, Illes Balears",
+      "location": {
+        "latitude": 39.71521,
+        "longitude": 3.45986
+      },
+      "rating": 5,
+      "googleMapsUri": "https://maps.google.com/?cid=10553337960781922940&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://www.aerztezentrum-calaratjada.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 21,
+      "displayName": {
+        "text": "Ärztezentrum Cala Ratjada",
+        "languageCode": "es"
+      },
+      "primaryType": "doctor"
+    }
+  },
+  {
+    "google_place_id": "ChIJq_kcVXySlxIRlLOz35PM11c",
+    "vertical_slug": "english-speaking-doctors-mallorca",
+    "name": "Kinderarzt Dr. med. Achim Noack Palma de Mallorca",
+    "rating": 4.9,
+    "reviews_count": 89,
+    "address": "Avinguda de Picasso, 61, Ponent, 07014 Palma, Illes Balears",
+    "latitude": 39.579105,
+    "longitude": 2.6265584,
+    "website": "https://www.kinderarzt-mallorca.com/",
+    "phone": "+34 971 57 36 87",
+    "google_maps_url": "https://maps.google.com/?cid=6329752736777876372&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "doctor",
+    "types": [
+      "doctor",
+      "dentist",
+      "health",
+      "point_of_interest",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "Kinderarzt Mallorca deutsch",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJq_kcVXySlxIRlLOz35PM11c",
+      "types": [
+        "doctor",
+        "dentist",
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 971 57 36 87",
+      "formattedAddress": "Avinguda de Picasso, 61, Ponent, 07014 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.579105,
+        "longitude": 2.6265584
+      },
+      "rating": 4.9,
+      "googleMapsUri": "https://maps.google.com/?cid=6329752736777876372&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://www.kinderarzt-mallorca.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 89,
+      "displayName": {
+        "text": "Kinderarzt Dr. med. Achim Noack Palma de Mallorca",
+        "languageCode": "de"
+      },
+      "primaryType": "doctor"
+    }
+  },
+  {
+    "google_place_id": "ChIJndE_YqSTlxIRIIrS4J2v_50",
+    "vertical_slug": "english-speaking-doctors-mallorca",
+    "name": "Kinderarztpraxis Dr. med Oliver Haak",
+    "rating": 4.9,
+    "reviews_count": 36,
+    "address": "CLINIC 3. Stock Gebäude, Camí dels Reis, 308, 3A, Norte, 07010 Palma, Illes Balears",
+    "latitude": 39.597299,
+    "longitude": 2.6451800999999997,
+    "website": "http://www.mallorca-kinderarzt.de/",
+    "phone": "+34 661 88 66 88",
+    "google_maps_url": "https://maps.google.com/?cid=11385011475632523808&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "doctor",
+    "types": [
+      "doctor",
+      "health",
+      "point_of_interest",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "Kinderarzt Mallorca deutsch",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJndE_YqSTlxIRIIrS4J2v_50",
+      "types": [
+        "doctor",
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 661 88 66 88",
+      "formattedAddress": "CLINIC 3. Stock Gebäude, Camí dels Reis, 308, 3A, Norte, 07010 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.597299,
+        "longitude": 2.6451800999999997
+      },
+      "rating": 4.9,
+      "googleMapsUri": "https://maps.google.com/?cid=11385011475632523808&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "http://www.mallorca-kinderarzt.de/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 36,
+      "displayName": {
+        "text": "Kinderarztpraxis Dr. med Oliver Haak",
+        "languageCode": "de"
+      },
+      "primaryType": "doctor"
+    }
+  },
+  {
+    "google_place_id": "ChIJuyy_zQiSlxIR1PunKecauHA",
+    "vertical_slug": "english-speaking-doctors-mallorca",
+    "name": "Kinderärztin Mallorca Dr. Karin Rittweiler",
+    "rating": 4.7,
+    "reviews_count": 43,
+    "address": "Avinguda de Gabriel Roca, 47, Ponent, 07015 Palma, Illes Balears",
+    "latitude": 39.5519001,
+    "longitude": 2.6236477,
+    "website": "https://www.kinderarzt-palma-mallorca.de/",
+    "phone": "+34 971 70 70 35",
+    "google_maps_url": "https://maps.google.com/?cid=8122271508101331924&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "doctor",
+    "types": [
+      "doctor",
+      "health",
+      "point_of_interest",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "Kinderarzt Mallorca deutsch",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJuyy_zQiSlxIR1PunKecauHA",
+      "types": [
+        "doctor",
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 971 70 70 35",
+      "formattedAddress": "Avinguda de Gabriel Roca, 47, Ponent, 07015 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.5519001,
+        "longitude": 2.6236477
+      },
+      "rating": 4.7,
+      "googleMapsUri": "https://maps.google.com/?cid=8122271508101331924&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://www.kinderarzt-palma-mallorca.de/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 43,
+      "displayName": {
+        "text": "Kinderärztin Mallorca Dr. Karin Rittweiler",
+        "languageCode": "de"
+      },
+      "primaryType": "doctor"
+    }
+  }
+]

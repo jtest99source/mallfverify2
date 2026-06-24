@@ -1,0 +1,709 @@
+[
+  {
+    "google_place_id": "ChIJq6qqqhrSlxIRI0Q2TLH_WCg",
+    "vertical_slug": "international-schools-mallorca",
+    "name": "Mallorca International School",
+    "rating": 4.1,
+    "reviews_count": 19,
+    "address": "Carrer del Llorer, 1, 07420 Sa Pobla, Illes Balears",
+    "latitude": 39.8034753,
+    "longitude": 3.0200321,
+    "website": "http://mallorcainternationalschool.com/",
+    "phone": "+34 971 57 01 10",
+    "google_maps_url": "https://maps.google.com/?cid=2907354696420574243&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": null,
+    "types": [
+      "point_of_interest",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "international school Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJq6qqqhrSlxIRI0Q2TLH_WCg",
+      "types": [
+        "point_of_interest",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 971 57 01 10",
+      "formattedAddress": "Carrer del Llorer, 1, 07420 Sa Pobla, Illes Balears",
+      "location": {
+        "latitude": 39.8034753,
+        "longitude": 3.0200321
+      },
+      "rating": 4.1,
+      "googleMapsUri": "https://maps.google.com/?cid=2907354696420574243&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "http://mallorcainternationalschool.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 19,
+      "displayName": {
+        "text": "Mallorca International School",
+        "languageCode": "es"
+      }
+    }
+  },
+  {
+    "google_place_id": "ChIJR-gHG7nFlxIRF_sQMC9HYPg",
+    "vertical_slug": "international-schools-mallorca",
+    "name": "International School - Idiomas Inca",
+    "rating": 4.3,
+    "reviews_count": 8,
+    "address": "Carrer des Hostals, 51, 07300 Inca, Illes Balears",
+    "latitude": 39.721610399999996,
+    "longitude": 2.9109111999999997,
+    "website": "http://www.internationalschoolinca.com/",
+    "phone": "+34 971 50 58 20",
+    "google_maps_url": "https://maps.google.com/?cid=17897383187165805335&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "educational_institution",
+    "types": [
+      "educational_institution",
+      "point_of_interest",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "international school Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJR-gHG7nFlxIRF_sQMC9HYPg",
+      "types": [
+        "educational_institution",
+        "point_of_interest",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 971 50 58 20",
+      "formattedAddress": "Carrer des Hostals, 51, 07300 Inca, Illes Balears",
+      "location": {
+        "latitude": 39.721610399999996,
+        "longitude": 2.9109111999999997
+      },
+      "rating": 4.3,
+      "googleMapsUri": "https://maps.google.com/?cid=17897383187165805335&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "http://www.internationalschoolinca.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 8,
+      "displayName": {
+        "text": "International School - Idiomas Inca",
+        "languageCode": "es"
+      },
+      "primaryType": "educational_institution"
+    }
+  },
+  {
+    "google_place_id": "ChIJjV09Ps_tlxIRfY3rAguZFU4",
+    "vertical_slug": "international-schools-mallorca",
+    "name": "EDUNAT Cooperativa Educación en la Naturaleza Forest School",
+    "rating": 4.9,
+    "reviews_count": 26,
+    "address": "Ma-11, 07110 Bunyola, Illes Balears",
+    "latitude": 39.6891419,
+    "longitude": 2.6853955,
+    "website": "https://edunat-s-microcoop.negocio.site/?utm_source=gmb&amp;utm_medium=referral",
+    "phone": "+34 662 10 19 50",
+    "google_maps_url": "https://maps.google.com/?cid=5626571582041984381&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "educational_institution",
+    "types": [
+      "educational_institution",
+      "playground",
+      "amusement_center",
+      "farm",
+      "school",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "international school Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJjV09Ps_tlxIRfY3rAguZFU4",
+      "types": [
+        "educational_institution",
+        "playground",
+        "amusement_center",
+        "farm",
+        "school",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 662 10 19 50",
+      "formattedAddress": "Ma-11, 07110 Bunyola, Illes Balears",
+      "location": {
+        "latitude": 39.6891419,
+        "longitude": 2.6853955
+      },
+      "rating": 4.9,
+      "googleMapsUri": "https://maps.google.com/?cid=5626571582041984381&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://edunat-s-microcoop.negocio.site/?utm_source=gmb&amp;utm_medium=referral",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 26,
+      "displayName": {
+        "text": "EDUNAT Cooperativa Educación en la Naturaleza Forest School",
+        "languageCode": "es"
+      },
+      "primaryType": "educational_institution"
+    }
+  },
+  {
+    "google_place_id": "ChIJb9vX1KlJlhIRyouPc7a-foc",
+    "vertical_slug": "international-schools-mallorca",
+    "name": "Move On English School",
+    "rating": 5,
+    "reviews_count": 11,
+    "address": "Avinguda d'es Torrent, 10, 07500 Manacor, Illes Balears",
+    "latitude": 39.5665291,
+    "longitude": 3.2106502,
+    "website": "http://www.moveonschool.com/",
+    "phone": "+34 971 55 14 74",
+    "google_maps_url": "https://maps.google.com/?cid=9763450733017926602&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "educational_institution",
+    "types": [
+      "point_of_interest",
+      "school",
+      "educational_institution",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "British school Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJb9vX1KlJlhIRyouPc7a-foc",
+      "types": [
+        "point_of_interest",
+        "school",
+        "educational_institution",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 971 55 14 74",
+      "formattedAddress": "Avinguda d'es Torrent, 10, 07500 Manacor, Illes Balears",
+      "location": {
+        "latitude": 39.5665291,
+        "longitude": 3.2106502
+      },
+      "rating": 5,
+      "googleMapsUri": "https://maps.google.com/?cid=9763450733017926602&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "http://www.moveonschool.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 11,
+      "displayName": {
+        "text": "Move On English School",
+        "languageCode": "es"
+      },
+      "primaryType": "educational_institution"
+    }
+  },
+  {
+    "google_place_id": "ChIJ0duy9VCSlxIRuVdraRBfzr8",
+    "vertical_slug": "international-schools-mallorca",
+    "name": "The Academy Palma",
+    "rating": 4.8,
+    "reviews_count": 158,
+    "address": "La Rambla, 8, Centre, 07003 Palma, Illes Balears",
+    "latitude": 39.5727836,
+    "longitude": 2.6505739999999998,
+    "website": "http://www.theacademypalma.es/",
+    "phone": "+34 663 71 96 95",
+    "google_maps_url": "https://maps.google.com/?cid=13821088830539388857&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "educational_institution",
+    "types": [
+      "summer_camp_organizer",
+      "educational_institution",
+      "point_of_interest",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "English school Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJ0duy9VCSlxIRuVdraRBfzr8",
+      "types": [
+        "summer_camp_organizer",
+        "educational_institution",
+        "point_of_interest",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 663 71 96 95",
+      "formattedAddress": "La Rambla, 8, Centre, 07003 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.5727836,
+        "longitude": 2.6505739999999998
+      },
+      "rating": 4.8,
+      "googleMapsUri": "https://maps.google.com/?cid=13821088830539388857&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "http://www.theacademypalma.es/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 158,
+      "displayName": {
+        "text": "The Academy Palma",
+        "languageCode": "es"
+      },
+      "primaryType": "educational_institution"
+    }
+  },
+  {
+    "google_place_id": "ChIJdalbi1KSlxIRkVl2ePp00Ow",
+    "vertical_slug": "international-schools-mallorca",
+    "name": "UPtoU English School - Academia de inglés en Palma de Mallorca",
+    "rating": 4.9,
+    "reviews_count": 274,
+    "address": "Avinguda de Gabriel Alomar, 2, segunda planta, Centre, 07006 Palma, Illes Balears",
+    "latitude": 39.571202899999996,
+    "longitude": 2.6564093000000004,
+    "website": "https://www.uptou.es/academias-de-ingles/palma-de-mallorca/",
+    "phone": "+34 871 96 85 83",
+    "google_maps_url": "https://maps.google.com/?cid=17064267607218477457&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "educational_institution",
+    "types": [
+      "educational_institution",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "English school Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJdalbi1KSlxIRkVl2ePp00Ow",
+      "types": [
+        "educational_institution",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 871 96 85 83",
+      "formattedAddress": "Avinguda de Gabriel Alomar, 2, segunda planta, Centre, 07006 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.571202899999996,
+        "longitude": 2.6564093000000004
+      },
+      "rating": 4.9,
+      "googleMapsUri": "https://maps.google.com/?cid=17064267607218477457&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://www.uptou.es/academias-de-ingles/palma-de-mallorca/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 274,
+      "displayName": {
+        "text": "UPtoU English School - Academia de inglés en Palma de Mallorca",
+        "languageCode": "es"
+      },
+      "primaryType": "educational_institution"
+    }
+  },
+  {
+    "google_place_id": "ChIJ9cdFiluSlxIRDHXTlSVdGP4",
+    "vertical_slug": "international-schools-mallorca",
+    "name": "International English",
+    "rating": 4.5,
+    "reviews_count": 8,
+    "address": "Pg. de Mallorca, 28, Centre, 07012 Palma, Illes Balears",
+    "latitude": 39.573803,
+    "longitude": 2.6439855999999997,
+    "website": "https://www.internationalenglish.es/",
+    "phone": "+34 646 55 61 22",
+    "google_maps_url": "https://maps.google.com/?cid=18309486701083587852&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "educational_institution",
+    "types": [
+      "educational_institution",
+      "point_of_interest",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "English school Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJ9cdFiluSlxIRDHXTlSVdGP4",
+      "types": [
+        "educational_institution",
+        "point_of_interest",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 646 55 61 22",
+      "formattedAddress": "Pg. de Mallorca, 28, Centre, 07012 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.573803,
+        "longitude": 2.6439855999999997
+      },
+      "rating": 4.5,
+      "googleMapsUri": "https://maps.google.com/?cid=18309486701083587852&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://www.internationalenglish.es/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 8,
+      "displayName": {
+        "text": "International English",
+        "languageCode": "es"
+      },
+      "primaryType": "educational_institution"
+    }
+  },
+  {
+    "google_place_id": "ChIJS-dCDB8tlhIRgPGHgxhjxKI",
+    "vertical_slug": "international-schools-mallorca",
+    "name": "Kids&Us Alcúdia",
+    "rating": 4.7,
+    "reviews_count": 18,
+    "address": "Carrer del Marisc, 3, 07400 Alcúdia, Illes Balears",
+    "latitude": 39.842508300000006,
+    "longitude": 3.1318997,
+    "website": "https://alcudia.kidsandus.es/",
+    "phone": "+34 660 34 29 11",
+    "google_maps_url": "https://maps.google.com/?cid=11728608286516703616&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "educational_institution",
+    "types": [
+      "educational_institution",
+      "point_of_interest",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "English school Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJS-dCDB8tlhIRgPGHgxhjxKI",
+      "types": [
+        "educational_institution",
+        "point_of_interest",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 660 34 29 11",
+      "formattedAddress": "Carrer del Marisc, 3, 07400 Alcúdia, Illes Balears",
+      "location": {
+        "latitude": 39.842508300000006,
+        "longitude": 3.1318997
+      },
+      "rating": 4.7,
+      "googleMapsUri": "https://maps.google.com/?cid=11728608286516703616&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://alcudia.kidsandus.es/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 18,
+      "displayName": {
+        "text": "Kids&Us Alcúdia",
+        "languageCode": "es"
+      },
+      "primaryType": "educational_institution"
+    }
+  },
+  {
+    "google_place_id": "ChIJPyD_ENiTlxIRjo6xsPspN6g",
+    "vertical_slug": "international-schools-mallorca",
+    "name": "GREEN FROG ENGLISH ACADEMY S.L.",
+    "rating": 5,
+    "reviews_count": 29,
+    "address": "C. de Miquel Capllonch, 22, Nord, 07010 Palma, Illes Balears",
+    "latitude": 39.590689999999995,
+    "longitude": 2.6517679,
+    "website": "http://www.greenfrogacademy.es/",
+    "phone": "+34 676 45 37 04",
+    "google_maps_url": "https://maps.google.com/?cid=12121203083068935822&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "educational_institution",
+    "types": [
+      "educational_institution",
+      "point_of_interest",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "English school Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJPyD_ENiTlxIRjo6xsPspN6g",
+      "types": [
+        "educational_institution",
+        "point_of_interest",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 676 45 37 04",
+      "formattedAddress": "C. de Miquel Capllonch, 22, Nord, 07010 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.590689999999995,
+        "longitude": 2.6517679
+      },
+      "rating": 5,
+      "googleMapsUri": "https://maps.google.com/?cid=12121203083068935822&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "http://www.greenfrogacademy.es/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 29,
+      "displayName": {
+        "text": "GREEN FROG ENGLISH ACADEMY S.L.",
+        "languageCode": "es"
+      },
+      "primaryType": "educational_institution"
+    }
+  },
+  {
+    "google_place_id": "ChIJlb4CTGCSlxIRZiKYZf906MQ",
+    "vertical_slug": "international-schools-mallorca",
+    "name": "English Connection Academia de Inglés - Palma de Mallorca",
+    "rating": 4.7,
+    "reviews_count": 62,
+    "address": "Carrer de Pascual Ribot, 29, Ponent, 07011 Palma, Illes Balears",
+    "latitude": 39.5790595,
+    "longitude": 2.6366038,
+    "website": "https://englishconnection.es/academia-ingles/palma-de-mallorca/?utm_source=gmb&utm_medium=organic&utm_campaign=palma-de-mallorca",
+    "phone": "+34 971 90 10 10",
+    "google_maps_url": "https://maps.google.com/?cid=14188719266300699238&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "educational_institution",
+    "types": [
+      "educational_institution",
+      "point_of_interest",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "English school Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJlb4CTGCSlxIRZiKYZf906MQ",
+      "types": [
+        "educational_institution",
+        "point_of_interest",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 971 90 10 10",
+      "formattedAddress": "Carrer de Pascual Ribot, 29, Ponent, 07011 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.5790595,
+        "longitude": 2.6366038
+      },
+      "rating": 4.7,
+      "googleMapsUri": "https://maps.google.com/?cid=14188719266300699238&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://englishconnection.es/academia-ingles/palma-de-mallorca/?utm_source=gmb&utm_medium=organic&utm_campaign=palma-de-mallorca",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 62,
+      "displayName": {
+        "text": "English Connection Academia de Inglés - Palma de Mallorca",
+        "languageCode": "en"
+      },
+      "primaryType": "educational_institution"
+    }
+  },
+  {
+    "google_place_id": "ChIJe0Y6rmOSlxIReqn3LLe5n8M",
+    "vertical_slug": "international-schools-mallorca",
+    "name": "English with Pippa",
+    "rating": 4.9,
+    "reviews_count": 209,
+    "address": "C/ de la Llibertat, 31, Ponent, 07013 Palma, Illes Balears",
+    "latitude": 39.577797,
+    "longitude": 2.6319019999999997,
+    "website": "http://englishwithpippa.com/",
+    "phone": "+34 663 27 04 79",
+    "google_maps_url": "https://maps.google.com/?cid=14096189555077523834&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "educational_institution",
+    "types": [
+      "educational_institution",
+      "point_of_interest",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "English school Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJe0Y6rmOSlxIReqn3LLe5n8M",
+      "types": [
+        "educational_institution",
+        "point_of_interest",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 663 27 04 79",
+      "formattedAddress": "C/ de la Llibertat, 31, Ponent, 07013 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.577797,
+        "longitude": 2.6319019999999997
+      },
+      "rating": 4.9,
+      "googleMapsUri": "https://maps.google.com/?cid=14096189555077523834&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "http://englishwithpippa.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 209,
+      "displayName": {
+        "text": "English with Pippa",
+        "languageCode": "es"
+      },
+      "primaryType": "educational_institution"
+    }
+  },
+  {
+    "google_place_id": "ChIJ1WwSNmGTlxIRHqhIP5rFaLE",
+    "vertical_slug": "international-schools-mallorca",
+    "name": "The Consulate English Language Academy",
+    "rating": 5,
+    "reviews_count": 55,
+    "address": "Carrer del Pare Francesc Molina, 32, Nord, 07003 Palma, Illes Balears",
+    "latitude": 39.5826764,
+    "longitude": 2.6473418,
+    "website": "https://www.theconsulatepalma.es/",
+    "phone": "+34 692 03 19 18",
+    "google_maps_url": "https://maps.google.com/?cid=12783684808568514590&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "educational_institution",
+    "types": [
+      "educational_institution",
+      "point_of_interest",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "English school Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJ1WwSNmGTlxIRHqhIP5rFaLE",
+      "types": [
+        "educational_institution",
+        "point_of_interest",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 692 03 19 18",
+      "formattedAddress": "Carrer del Pare Francesc Molina, 32, Nord, 07003 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.5826764,
+        "longitude": 2.6473418
+      },
+      "rating": 5,
+      "googleMapsUri": "https://maps.google.com/?cid=12783684808568514590&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://www.theconsulatepalma.es/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 55,
+      "displayName": {
+        "text": "The Consulate English Language Academy",
+        "languageCode": "en"
+      },
+      "primaryType": "educational_institution"
+    }
+  },
+  {
+    "google_place_id": "ChIJHeV2N2yTlxIR5-rvCJr74cY",
+    "vertical_slug": "international-schools-mallorca",
+    "name": "IEDIB (Instituto de enseñanza a distancia Islas Baleares)",
+    "rating": 4.3,
+    "reviews_count": 21,
+    "address": "Carrer de Salvà, 14, Ponent, 07013 Palma, Illes Balears",
+    "latitude": 39.5759137,
+    "longitude": 2.6398287,
+    "website": "https://iedib.net/",
+    "phone": "+34 971 17 06 50",
+    "google_maps_url": "https://maps.google.com/?cid=14331012128263105255&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "educational_institution",
+    "types": [
+      "secondary_school",
+      "school",
+      "educational_institution",
+      "point_of_interest",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "IB school Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJHeV2N2yTlxIR5-rvCJr74cY",
+      "types": [
+        "secondary_school",
+        "school",
+        "educational_institution",
+        "point_of_interest",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 971 17 06 50",
+      "formattedAddress": "Carrer de Salvà, 14, Ponent, 07013 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.5759137,
+        "longitude": 2.6398287
+      },
+      "rating": 4.3,
+      "googleMapsUri": "https://maps.google.com/?cid=14331012128263105255&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://iedib.net/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 21,
+      "displayName": {
+        "text": "IEDIB (Instituto de enseñanza a distancia Islas Baleares)",
+        "languageCode": "es"
+      },
+      "primaryType": "educational_institution"
+    }
+  },
+  {
+    "google_place_id": "ChIJH2S2MwBJlhIRqGZGSbwxBSY",
+    "vertical_slug": "international-schools-mallorca",
+    "name": "ISLA Academy",
+    "rating": 5,
+    "reviews_count": 17,
+    "address": "Diseminado Poligon 7, 115, 07500 Manacor, Illes Balears",
+    "latitude": 39.5673684,
+    "longitude": 3.2300324999999996,
+    "website": "https://www.isla-academy.com/",
+    "phone": "+34 685 10 21 50",
+    "google_maps_url": "https://maps.google.com/?cid=2739650633077778088&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "educational_institution",
+    "types": [
+      "educational_institution",
+      "point_of_interest",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "school Mallorca expat families",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJH2S2MwBJlhIRqGZGSbwxBSY",
+      "types": [
+        "educational_institution",
+        "point_of_interest",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 685 10 21 50",
+      "formattedAddress": "Diseminado Poligon 7, 115, 07500 Manacor, Illes Balears",
+      "location": {
+        "latitude": 39.5673684,
+        "longitude": 3.2300324999999996
+      },
+      "rating": 5,
+      "googleMapsUri": "https://maps.google.com/?cid=2739650633077778088&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://www.isla-academy.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 17,
+      "displayName": {
+        "text": "ISLA Academy",
+        "languageCode": "nl"
+      },
+      "primaryType": "educational_institution"
+    }
+  },
+  {
+    "google_place_id": "ChIJgSRCQQDrlxIR1d4coIgz-NU",
+    "vertical_slug": "international-schools-mallorca",
+    "name": "Reach Mallorca School",
+    "rating": 5,
+    "reviews_count": 7,
+    "address": "07141 Marratxinet, Illes Balears",
+    "latitude": 39.6472172,
+    "longitude": 2.7651881,
+    "website": "http://www.reachmallorca.com/",
+    "phone": "+34 627 08 52 63",
+    "google_maps_url": "https://maps.google.com/?cid=15418129986197708501&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "educational_institution",
+    "types": [
+      "educational_institution",
+      "point_of_interest",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "school Mallorca expat families",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJgSRCQQDrlxIR1d4coIgz-NU",
+      "types": [
+        "educational_institution",
+        "point_of_interest",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 627 08 52 63",
+      "formattedAddress": "07141 Marratxinet, Illes Balears",
+      "location": {
+        "latitude": 39.6472172,
+        "longitude": 2.7651881
+      },
+      "rating": 5,
+      "googleMapsUri": "https://maps.google.com/?cid=15418129986197708501&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "http://www.reachmallorca.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 7,
+      "displayName": {
+        "text": "Reach Mallorca School",
+        "languageCode": "de"
+      },
+      "primaryType": "educational_institution"
+    }
+  }
+]

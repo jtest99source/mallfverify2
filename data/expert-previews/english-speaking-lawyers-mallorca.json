@@ -1,0 +1,3198 @@
+[
+  {
+    "google_place_id": "ChIJOT0uuFOSlxIRA3m4Iu9vHD4",
+    "vertical_slug": "english-speaking-lawyers-mallorca",
+    "name": "Advocate Abroad",
+    "rating": 5,
+    "reviews_count": 25,
+    "address": "Carrer de Josep Anselm Clavé, 8, 7º 2ª, Centre, 07002 Palma, Illes Balears",
+    "latitude": 39.5732297,
+    "longitude": 2.65494,
+    "website": "https://advocateabroad.com/spain/lawyers/balearic-islands/palma-de-mallorca/",
+    "phone": "+34 971 09 89 80",
+    "google_maps_url": "https://maps.google.com/?cid=4475575202569812227&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "lawyer",
+    "types": [
+      "lawyer",
+      "consultant",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "English speaking lawyer Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJOT0uuFOSlxIRA3m4Iu9vHD4",
+      "types": [
+        "lawyer",
+        "consultant",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 971 09 89 80",
+      "formattedAddress": "Carrer de Josep Anselm Clavé, 8, 7º 2ª, Centre, 07002 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.5732297,
+        "longitude": 2.65494
+      },
+      "rating": 5,
+      "googleMapsUri": "https://maps.google.com/?cid=4475575202569812227&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://advocateabroad.com/spain/lawyers/balearic-islands/palma-de-mallorca/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 25,
+      "displayName": {
+        "text": "Advocate Abroad",
+        "languageCode": "en"
+      },
+      "primaryType": "lawyer"
+    }
+  },
+  {
+    "google_place_id": "ChIJZ2V_9VySlxIRB7sOcvwXHPo",
+    "vertical_slug": "english-speaking-lawyers-mallorca",
+    "name": "Castell Abogados",
+    "rating": 4.7,
+    "reviews_count": 333,
+    "address": "Carrer del General Riera, 1, 3º D, Norte, 07003 Palma, Illes Balears",
+    "latitude": 39.5786887,
+    "longitude": 2.6484373999999997,
+    "website": "https://www.castellabogados.com/",
+    "phone": "+34 684 45 04 50",
+    "google_maps_url": "https://maps.google.com/?cid=18022306181842647815&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "lawyer",
+    "types": [
+      "lawyer",
+      "consultant",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "English speaking lawyer Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJZ2V_9VySlxIRB7sOcvwXHPo",
+      "types": [
+        "lawyer",
+        "consultant",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 684 45 04 50",
+      "formattedAddress": "Carrer del General Riera, 1, 3º D, Norte, 07003 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.5786887,
+        "longitude": 2.6484373999999997
+      },
+      "rating": 4.7,
+      "googleMapsUri": "https://maps.google.com/?cid=18022306181842647815&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://www.castellabogados.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 333,
+      "displayName": {
+        "text": "Castell Abogados",
+        "languageCode": "es"
+      },
+      "primaryType": "lawyer"
+    }
+  },
+  {
+    "google_place_id": "ChIJOx6zWSeTlxIRH5UwoNQrapc",
+    "vertical_slug": "english-speaking-lawyers-mallorca",
+    "name": "Abogados 5.0",
+    "rating": 4.9,
+    "reviews_count": 1090,
+    "address": "Carrer de les Parellades, 12A, 2°, Despacho 34, Centre, 07003 Palma, Illes Balears",
+    "latitude": 39.5772718,
+    "longitude": 2.648757,
+    "website": "https://www.abogados50.com/",
+    "phone": "+34 663 93 82 64",
+    "google_maps_url": "https://maps.google.com/?cid=10910581239479047455&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "lawyer",
+    "types": [
+      "lawyer",
+      "consultant",
+      "accounting",
+      "finance",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "English speaking lawyer Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJOx6zWSeTlxIRH5UwoNQrapc",
+      "types": [
+        "lawyer",
+        "consultant",
+        "accounting",
+        "finance",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 663 93 82 64",
+      "formattedAddress": "Carrer de les Parellades, 12A, 2°, Despacho 34, Centre, 07003 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.5772718,
+        "longitude": 2.648757
+      },
+      "rating": 4.9,
+      "googleMapsUri": "https://maps.google.com/?cid=10910581239479047455&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://www.abogados50.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 1090,
+      "displayName": {
+        "text": "Abogados 5.0",
+        "languageCode": "es"
+      },
+      "primaryType": "lawyer"
+    }
+  },
+  {
+    "google_place_id": "ChIJIRWt31mSlxIRa-8rqi2kSnc",
+    "vertical_slug": "english-speaking-lawyers-mallorca",
+    "name": "Raso y Asociados",
+    "rating": 4.8,
+    "reviews_count": 62,
+    "address": "Carrer Femenies, 2, entresuelo A, Ponent, 07013 Palma, Illes Balears",
+    "latitude": 39.5772345,
+    "longitude": 2.6406642,
+    "website": "https://www.rasoyasociados.com/",
+    "phone": "+34 600 33 84 63",
+    "google_maps_url": "https://maps.google.com/?cid=8595863354825502571&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "lawyer",
+    "types": [
+      "lawyer",
+      "consultant",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "English speaking lawyer Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJIRWt31mSlxIRa-8rqi2kSnc",
+      "types": [
+        "lawyer",
+        "consultant",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 600 33 84 63",
+      "formattedAddress": "Carrer Femenies, 2, entresuelo A, Ponent, 07013 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.5772345,
+        "longitude": 2.6406642
+      },
+      "rating": 4.8,
+      "googleMapsUri": "https://maps.google.com/?cid=8595863354825502571&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://www.rasoyasociados.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 62,
+      "displayName": {
+        "text": "Raso y Asociados",
+        "languageCode": "es"
+      },
+      "primaryType": "lawyer"
+    }
+  },
+  {
+    "google_place_id": "ChIJAagA31mSlxIRmO_qxBEgtRc",
+    "vertical_slug": "english-speaking-lawyers-mallorca",
+    "name": "Martín Olmos Abogado",
+    "rating": 4.9,
+    "reviews_count": 32,
+    "address": "Carrer Rafael Rodríguez Méndez, 2º, 1ºG, Ponent, 07011 Palma, Illes Balears",
+    "latitude": 39.5764019,
+    "longitude": 2.642911,
+    "website": "https://www.moabogado.com/",
+    "phone": "+34 687 78 47 45",
+    "google_maps_url": "https://maps.google.com/?cid=1708306894347235224&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "lawyer",
+    "types": [
+      "lawyer",
+      "consultant",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "English speaking lawyer Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJAagA31mSlxIRmO_qxBEgtRc",
+      "types": [
+        "lawyer",
+        "consultant",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 687 78 47 45",
+      "formattedAddress": "Carrer Rafael Rodríguez Méndez, 2º, 1ºG, Ponent, 07011 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.5764019,
+        "longitude": 2.642911
+      },
+      "rating": 4.9,
+      "googleMapsUri": "https://maps.google.com/?cid=1708306894347235224&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://www.moabogado.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 32,
+      "displayName": {
+        "text": "Martín Olmos Abogado",
+        "languageCode": "es"
+      },
+      "primaryType": "lawyer"
+    }
+  },
+  {
+    "google_place_id": "ChIJ3SEJqtmTlxIRWjPjgPeFkps",
+    "vertical_slug": "english-speaking-lawyers-mallorca",
+    "name": "Abogado especializado en derecho deportivo - Himnus Football Lawyers",
+    "rating": 4.9,
+    "reviews_count": 89,
+    "address": "Carrer de Vista Alegre, 12, Ponent, 07015 Palma, Illes Balears",
+    "latitude": 39.5534952,
+    "longitude": 2.6205659,
+    "website": "http://www.himnus.com/",
+    "phone": "+34 606 56 36 50",
+    "google_maps_url": "https://maps.google.com/?cid=11210169720544375642&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "lawyer",
+    "types": [
+      "lawyer",
+      "consultant",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "English speaking lawyer Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJ3SEJqtmTlxIRWjPjgPeFkps",
+      "types": [
+        "lawyer",
+        "consultant",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 606 56 36 50",
+      "formattedAddress": "Carrer de Vista Alegre, 12, Ponent, 07015 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.5534952,
+        "longitude": 2.6205659
+      },
+      "rating": 4.9,
+      "googleMapsUri": "https://maps.google.com/?cid=11210169720544375642&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "http://www.himnus.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 89,
+      "displayName": {
+        "text": "Abogado especializado en derecho deportivo - Himnus Football Lawyers",
+        "languageCode": "es"
+      },
+      "primaryType": "lawyer"
+    }
+  },
+  {
+    "google_place_id": "ChIJSQCKLN1JlhIRj7cfzkpk02Y",
+    "vertical_slug": "english-speaking-lawyers-mallorca",
+    "name": "Abogados Extranjeria Oliver Chadid محامون للهجرة",
+    "rating": 4.9,
+    "reviews_count": 341,
+    "address": "Avinguda d'es Torrent, 8, 07500 Manacor, Illes Balears",
+    "latitude": 39.566479799999996,
+    "longitude": 3.210709,
+    "website": "https://oliverchadid.com/",
+    "phone": "+34 666 57 19 57",
+    "google_maps_url": "https://maps.google.com/?cid=7409376084403140495&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "lawyer",
+    "types": [
+      "lawyer",
+      "consultant",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "English speaking lawyer Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJSQCKLN1JlhIRj7cfzkpk02Y",
+      "types": [
+        "lawyer",
+        "consultant",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 666 57 19 57",
+      "formattedAddress": "Avinguda d'es Torrent, 8, 07500 Manacor, Illes Balears",
+      "location": {
+        "latitude": 39.566479799999996,
+        "longitude": 3.210709
+      },
+      "rating": 4.9,
+      "googleMapsUri": "https://maps.google.com/?cid=7409376084403140495&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://oliverchadid.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 341,
+      "displayName": {
+        "text": "Abogados Extranjeria Oliver Chadid محامون للهجرة",
+        "languageCode": "es"
+      },
+      "primaryType": "lawyer"
+    }
+  },
+  {
+    "google_place_id": "ChIJq0HPsxDFlxIRV148cKiIXPI",
+    "vertical_slug": "english-speaking-lawyers-mallorca",
+    "name": "Jaume Perelló Abogados",
+    "rating": 4.9,
+    "reviews_count": 95,
+    "address": "Plaça Santa Maria la Major, 12, 07300 Inca, Illes Balears",
+    "latitude": 39.7215208,
+    "longitude": 2.9110028999999997,
+    "website": "https://jperelloabogados.com/",
+    "phone": "+34 663 87 95 39",
+    "google_maps_url": "https://maps.google.com/?cid=17463983712054828631&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "lawyer",
+    "types": [
+      "lawyer",
+      "consultant",
+      "accounting",
+      "finance",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "English speaking lawyer Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJq0HPsxDFlxIRV148cKiIXPI",
+      "types": [
+        "lawyer",
+        "consultant",
+        "accounting",
+        "finance",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 663 87 95 39",
+      "formattedAddress": "Plaça Santa Maria la Major, 12, 07300 Inca, Illes Balears",
+      "location": {
+        "latitude": 39.7215208,
+        "longitude": 2.9110028999999997
+      },
+      "rating": 4.9,
+      "googleMapsUri": "https://maps.google.com/?cid=17463983712054828631&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://jperelloabogados.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 95,
+      "displayName": {
+        "text": "Jaume Perelló Abogados",
+        "languageCode": "es"
+      },
+      "primaryType": "lawyer"
+    }
+  },
+  {
+    "google_place_id": "ChIJdwNfcFmSlxIR9Uhhh2bTU6A",
+    "vertical_slug": "english-speaking-lawyers-mallorca",
+    "name": "Carolina Torres Abogados",
+    "rating": 5,
+    "reviews_count": 30,
+    "address": "Carrer de Manuel Azaña, 1-1, Llevant, 07006 Palma, Illes Balears",
+    "latitude": 39.5659421,
+    "longitude": 2.6633601,
+    "website": "https://www.ctorresabogados.com/",
+    "phone": "+34 601 34 90 63",
+    "google_maps_url": "https://maps.google.com/?cid=11552809906446878965&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "lawyer",
+    "types": [
+      "lawyer",
+      "consultant",
+      "travel_agency",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "English speaking lawyer Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJdwNfcFmSlxIR9Uhhh2bTU6A",
+      "types": [
+        "lawyer",
+        "consultant",
+        "travel_agency",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 601 34 90 63",
+      "formattedAddress": "Carrer de Manuel Azaña, 1-1, Llevant, 07006 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.5659421,
+        "longitude": 2.6633601
+      },
+      "rating": 5,
+      "googleMapsUri": "https://maps.google.com/?cid=11552809906446878965&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://www.ctorresabogados.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 30,
+      "displayName": {
+        "text": "Carolina Torres Abogados",
+        "languageCode": "es"
+      },
+      "primaryType": "lawyer"
+    }
+  },
+  {
+    "google_place_id": "ChIJDdyHBW2TlxIRAWeXkCSxEiA",
+    "vertical_slug": "english-speaking-lawyers-mallorca",
+    "name": "TRAMITE ITALIA - Abogada Schiuma",
+    "rating": 4.8,
+    "reviews_count": 155,
+    "address": "Carrer de Josep Anselm Clavé, 8, 6º2ºA, Centre, 07002 Palma, Illes Balears",
+    "latitude": 39.573290799999995,
+    "longitude": 2.6549983999999998,
+    "website": "https://www.tramiteitalia.com/",
+    "phone": "+34 871 50 62 58",
+    "google_maps_url": "https://maps.google.com/?cid=2311104329397266177&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "lawyer",
+    "types": [
+      "lawyer",
+      "consultant",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "English speaking lawyer Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJDdyHBW2TlxIRAWeXkCSxEiA",
+      "types": [
+        "lawyer",
+        "consultant",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 871 50 62 58",
+      "formattedAddress": "Carrer de Josep Anselm Clavé, 8, 6º2ºA, Centre, 07002 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.573290799999995,
+        "longitude": 2.6549983999999998
+      },
+      "rating": 4.8,
+      "googleMapsUri": "https://maps.google.com/?cid=2311104329397266177&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://www.tramiteitalia.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 155,
+      "displayName": {
+        "text": "TRAMITE ITALIA - Abogada Schiuma",
+        "languageCode": "en"
+      },
+      "primaryType": "lawyer"
+    }
+  },
+  {
+    "google_place_id": "ChIJaQ0UiFuTlxIRG8QNc_rr1Uk",
+    "vertical_slug": "english-speaking-lawyers-mallorca",
+    "name": "Natalia Rios Servicios Jurídicos",
+    "rating": 4.9,
+    "reviews_count": 113,
+    "address": "Carrer de Josep Anselm Clavé, 8, Piso 6to 4a, Centre, 07002 Palma, Illes Balears",
+    "latitude": 39.5732528,
+    "longitude": 2.6549738,
+    "website": "http://www.nataliarios.es/",
+    "phone": "+34 640 15 60 86",
+    "google_maps_url": "https://maps.google.com/?cid=5320417995712742427&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "lawyer",
+    "types": [
+      "lawyer",
+      "consultant",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "English speaking lawyer Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJaQ0UiFuTlxIRG8QNc_rr1Uk",
+      "types": [
+        "lawyer",
+        "consultant",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 640 15 60 86",
+      "formattedAddress": "Carrer de Josep Anselm Clavé, 8, Piso 6to 4a, Centre, 07002 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.5732528,
+        "longitude": 2.6549738
+      },
+      "rating": 4.9,
+      "googleMapsUri": "https://maps.google.com/?cid=5320417995712742427&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "http://www.nataliarios.es/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 113,
+      "displayName": {
+        "text": "Natalia Rios Servicios Jurídicos",
+        "languageCode": "es"
+      },
+      "primaryType": "lawyer"
+    }
+  },
+  {
+    "google_place_id": "ChIJncmf51qSlxIRouFuQY04m1c",
+    "vertical_slug": "english-speaking-lawyers-mallorca",
+    "name": "Gerboth & Partner Abogados Lawyers",
+    "rating": 4.7,
+    "reviews_count": 31,
+    "address": "Av. de Jaume III, 3, Centre, 07012 Palma, Illes Balears",
+    "latitude": 39.5716063,
+    "longitude": 2.6462516,
+    "website": "http://www.gerboth-partner.com/",
+    "phone": "+34 971 72 24 94",
+    "google_maps_url": "https://maps.google.com/?cid=6312701482029212066&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "consultant",
+    "types": [
+      "lawyer",
+      "consultant",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "English speaking lawyer Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJncmf51qSlxIRouFuQY04m1c",
+      "types": [
+        "lawyer",
+        "consultant",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 971 72 24 94",
+      "formattedAddress": "Av. de Jaume III, 3, Centre, 07012 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.5716063,
+        "longitude": 2.6462516
+      },
+      "rating": 4.7,
+      "googleMapsUri": "https://maps.google.com/?cid=6312701482029212066&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "http://www.gerboth-partner.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 31,
+      "displayName": {
+        "text": "Gerboth & Partner Abogados Lawyers",
+        "languageCode": "es"
+      },
+      "primaryType": "consultant"
+    }
+  },
+  {
+    "google_place_id": "ChIJRfn-YUDVlxIRz3hXSeEnqgk",
+    "vertical_slug": "english-speaking-lawyers-mallorca",
+    "name": "Abogado en Pollensa Germán Álvarez de Sotomayor",
+    "rating": 4.8,
+    "reviews_count": 12,
+    "address": "Carrer de Cecili Metel, 29, 07460 Pollença, Illes Balears",
+    "latitude": 39.8756209,
+    "longitude": 3.0197312,
+    "website": "http://www.abogadopollensa.com/",
+    "phone": "+34 696 89 62 39",
+    "google_maps_url": "https://maps.google.com/?cid=696412940933757135&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "lawyer",
+    "types": [
+      "lawyer",
+      "consultant",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "English speaking lawyer Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJRfn-YUDVlxIRz3hXSeEnqgk",
+      "types": [
+        "lawyer",
+        "consultant",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 696 89 62 39",
+      "formattedAddress": "Carrer de Cecili Metel, 29, 07460 Pollença, Illes Balears",
+      "location": {
+        "latitude": 39.8756209,
+        "longitude": 3.0197312
+      },
+      "rating": 4.8,
+      "googleMapsUri": "https://maps.google.com/?cid=696412940933757135&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "http://www.abogadopollensa.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 12,
+      "displayName": {
+        "text": "Abogado en Pollensa Germán Álvarez de Sotomayor",
+        "languageCode": "es"
+      },
+      "primaryType": "lawyer"
+    }
+  },
+  {
+    "google_place_id": "ChIJ1_yC9ueTlxIR1_eTgnEAcLs",
+    "vertical_slug": "english-speaking-lawyers-mallorca",
+    "name": "AB Legal",
+    "rating": 4.9,
+    "reviews_count": 30,
+    "address": "Carrer dels Llums, 8, Centre, 07001 Palma, Illes Balears",
+    "latitude": 39.5695388,
+    "longitude": 2.6506773,
+    "website": "http://www.ablegal.es/",
+    "phone": "+34 971 96 50 76",
+    "google_maps_url": "https://maps.google.com/?cid=13506295770006157271&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "lawyer",
+    "types": [
+      "lawyer",
+      "consultant",
+      "accounting",
+      "finance",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "English speaking lawyer Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJ1_yC9ueTlxIR1_eTgnEAcLs",
+      "types": [
+        "lawyer",
+        "consultant",
+        "accounting",
+        "finance",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 971 96 50 76",
+      "formattedAddress": "Carrer dels Llums, 8, Centre, 07001 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.5695388,
+        "longitude": 2.6506773
+      },
+      "rating": 4.9,
+      "googleMapsUri": "https://maps.google.com/?cid=13506295770006157271&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "http://www.ablegal.es/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 30,
+      "displayName": {
+        "text": "AB Legal",
+        "languageCode": "es"
+      },
+      "primaryType": "lawyer"
+    }
+  },
+  {
+    "google_place_id": "ChIJr3sqPVGSlxIRzoUwzi1d7vk",
+    "vertical_slug": "english-speaking-lawyers-mallorca",
+    "name": "Sierra Abogados & Inversiones",
+    "rating": 4.9,
+    "reviews_count": 213,
+    "address": "C, Costa de Can Muntaner, nº 6, 3º, Centre, 07003 Palma, Illes Balears",
+    "latitude": 39.574112299999996,
+    "longitude": 2.6517733,
+    "website": "https://www.sierraabogados.es/?utm_source=google&utm_medium=local&utm_campaign=google_my_business",
+    "phone": "+34 971 72 28 60",
+    "google_maps_url": "https://maps.google.com/?cid=18009434411215390158&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "lawyer",
+    "types": [
+      "lawyer",
+      "consultant",
+      "accounting",
+      "finance",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "English speaking lawyer Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJr3sqPVGSlxIRzoUwzi1d7vk",
+      "types": [
+        "lawyer",
+        "consultant",
+        "accounting",
+        "finance",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 971 72 28 60",
+      "formattedAddress": "C, Costa de Can Muntaner, nº 6, 3º, Centre, 07003 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.574112299999996,
+        "longitude": 2.6517733
+      },
+      "rating": 4.9,
+      "googleMapsUri": "https://maps.google.com/?cid=18009434411215390158&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://www.sierraabogados.es/?utm_source=google&utm_medium=local&utm_campaign=google_my_business",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 213,
+      "displayName": {
+        "text": "Sierra Abogados & Inversiones",
+        "languageCode": "es"
+      },
+      "primaryType": "lawyer"
+    }
+  },
+  {
+    "google_place_id": "ChIJR5Vxx0mTlxIRl_Pg9MCdMk0",
+    "vertical_slug": "english-speaking-lawyers-mallorca",
+    "name": "Andronic Abogados",
+    "rating": 5,
+    "reviews_count": 33,
+    "address": "Carrer Torcuato Luca Tena, 27, Llevant, 07005 Palma, Illes Balears",
+    "latitude": 39.5771521,
+    "longitude": 2.6633473999999997,
+    "website": "https://andronicabogados.com/",
+    "phone": "+34 665 96 58 19",
+    "google_maps_url": "https://maps.google.com/?cid=5562681941823648663&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "lawyer",
+    "types": [
+      "lawyer",
+      "consultant",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "English speaking lawyer Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJR5Vxx0mTlxIRl_Pg9MCdMk0",
+      "types": [
+        "lawyer",
+        "consultant",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 665 96 58 19",
+      "formattedAddress": "Carrer Torcuato Luca Tena, 27, Llevant, 07005 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.5771521,
+        "longitude": 2.6633473999999997
+      },
+      "rating": 5,
+      "googleMapsUri": "https://maps.google.com/?cid=5562681941823648663&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://andronicabogados.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 33,
+      "displayName": {
+        "text": "Andronic Abogados",
+        "languageCode": "es"
+      },
+      "primaryType": "lawyer"
+    }
+  },
+  {
+    "google_place_id": "ChIJTdrwwvyTlxIR86hdLmzx5q4",
+    "vertical_slug": "english-speaking-lawyers-mallorca",
+    "name": "Legal Steps",
+    "rating": 5,
+    "reviews_count": 21,
+    "address": "Carrer de Sant Miquel, 46, Centre, 07002 Palma, Illes Balears",
+    "latitude": 39.574729399999995,
+    "longitude": 2.6522574,
+    "website": "https://www.legal-steps.com/",
+    "phone": "+34 971 64 86 96",
+    "google_maps_url": "https://maps.google.com/?cid=12603026054179563763&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "lawyer",
+    "types": [
+      "lawyer",
+      "consultant",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "English speaking lawyer Palma Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJTdrwwvyTlxIR86hdLmzx5q4",
+      "types": [
+        "lawyer",
+        "consultant",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 971 64 86 96",
+      "formattedAddress": "Carrer de Sant Miquel, 46, Centre, 07002 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.574729399999995,
+        "longitude": 2.6522574
+      },
+      "rating": 5,
+      "googleMapsUri": "https://maps.google.com/?cid=12603026054179563763&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://www.legal-steps.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 21,
+      "displayName": {
+        "text": "Legal Steps",
+        "languageCode": "es"
+      },
+      "primaryType": "lawyer"
+    }
+  },
+  {
+    "google_place_id": "ChIJgXT8S0WSlxIRm2fVtO34sgw",
+    "vertical_slug": "english-speaking-lawyers-mallorca",
+    "name": "Campaner Law Abogados",
+    "rating": 4.9,
+    "reviews_count": 66,
+    "address": "Carrer de Sant Miquel, 46, Esc. Izda. 1º - 5, Centre, 07002 Palma, Illes Balears",
+    "latitude": 39.574729399999995,
+    "longitude": 2.6522574,
+    "website": "http://www.campaner.law/",
+    "phone": "+34 871 11 62 47",
+    "google_maps_url": "https://maps.google.com/?cid=915067374134454171&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "lawyer",
+    "types": [
+      "lawyer",
+      "consultant",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "English speaking lawyer Palma Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJgXT8S0WSlxIRm2fVtO34sgw",
+      "types": [
+        "lawyer",
+        "consultant",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 871 11 62 47",
+      "formattedAddress": "Carrer de Sant Miquel, 46, Esc. Izda. 1º - 5, Centre, 07002 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.574729399999995,
+        "longitude": 2.6522574
+      },
+      "rating": 4.9,
+      "googleMapsUri": "https://maps.google.com/?cid=915067374134454171&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "http://www.campaner.law/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 66,
+      "displayName": {
+        "text": "Campaner Law Abogados",
+        "languageCode": "es"
+      },
+      "primaryType": "lawyer"
+    }
+  },
+  {
+    "google_place_id": "ChIJU1ZY5VOSlxIROBVyTmQ9JkY",
+    "vertical_slug": "english-speaking-lawyers-mallorca",
+    "name": "Abogadas Olmos",
+    "rating": 4.8,
+    "reviews_count": 116,
+    "address": "Carrer del Bisbe Perelló, nº1, 5ºB, Centre, 07002 Palma, Illes Balears",
+    "latitude": 39.5746392,
+    "longitude": 2.6545069,
+    "website": "http://abogadasolmos.com/",
+    "phone": "+34 971 72 52 38",
+    "google_maps_url": "https://maps.google.com/?cid=5054795132792083768&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "lawyer",
+    "types": [
+      "lawyer",
+      "consultant",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "English speaking lawyer Palma Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJU1ZY5VOSlxIROBVyTmQ9JkY",
+      "types": [
+        "lawyer",
+        "consultant",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 971 72 52 38",
+      "formattedAddress": "Carrer del Bisbe Perelló, nº1, 5ºB, Centre, 07002 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.5746392,
+        "longitude": 2.6545069
+      },
+      "rating": 4.8,
+      "googleMapsUri": "https://maps.google.com/?cid=5054795132792083768&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "http://abogadasolmos.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 116,
+      "displayName": {
+        "text": "Abogadas Olmos",
+        "languageCode": "es"
+      },
+      "primaryType": "lawyer"
+    }
+  },
+  {
+    "google_place_id": "ChIJxWDOd1CSlxIR3u8r6g6_s_I",
+    "vertical_slug": "english-speaking-lawyers-mallorca",
+    "name": "Dr. Frühbeck Abogados",
+    "rating": 5,
+    "reviews_count": 27,
+    "address": "Carrer dels Caputxins, 4, Centre, 07002 Palma, Illes Balears",
+    "latitude": 39.5742958,
+    "longitude": 2.6538682,
+    "website": "http://www.anwalt-mallorca.net/",
+    "phone": "+34 971 71 92 28",
+    "google_maps_url": "https://maps.google.com/?cid=17488531848788963294&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "lawyer",
+    "types": [
+      "lawyer",
+      "accounting",
+      "consultant",
+      "finance",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "English speaking lawyer Palma Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJxWDOd1CSlxIR3u8r6g6_s_I",
+      "types": [
+        "lawyer",
+        "accounting",
+        "consultant",
+        "finance",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 971 71 92 28",
+      "formattedAddress": "Carrer dels Caputxins, 4, Centre, 07002 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.5742958,
+        "longitude": 2.6538682
+      },
+      "rating": 5,
+      "googleMapsUri": "https://maps.google.com/?cid=17488531848788963294&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "http://www.anwalt-mallorca.net/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 27,
+      "displayName": {
+        "text": "Dr. Frühbeck Abogados",
+        "languageCode": "es"
+      },
+      "primaryType": "lawyer"
+    }
+  },
+  {
+    "google_place_id": "ChIJi0zAPESTlxIRC-xdTnhMBEE",
+    "vertical_slug": "english-speaking-lawyers-mallorca",
+    "name": "Nicolas Sosa Abogado Lawyer Rechtsanwalt",
+    "rating": 5,
+    "reviews_count": 83,
+    "address": "La Rambla, 26, Piso 1, Centre, 07003 Palma, Illes Balears",
+    "latitude": 39.574813299999995,
+    "longitude": 2.6485653,
+    "website": "https://nsabogado.com/",
+    "phone": "+34 687 12 35 87",
+    "google_maps_url": "https://maps.google.com/?cid=4684953591966723083&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "lawyer",
+    "types": [
+      "lawyer",
+      "consultant",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "English speaking lawyer Palma Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJi0zAPESTlxIRC-xdTnhMBEE",
+      "types": [
+        "lawyer",
+        "consultant",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 687 12 35 87",
+      "formattedAddress": "La Rambla, 26, Piso 1, Centre, 07003 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.574813299999995,
+        "longitude": 2.6485653
+      },
+      "rating": 5,
+      "googleMapsUri": "https://maps.google.com/?cid=4684953591966723083&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://nsabogado.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 83,
+      "displayName": {
+        "text": "Nicolas Sosa Abogado Lawyer Rechtsanwalt",
+        "languageCode": "es"
+      },
+      "primaryType": "lawyer"
+    }
+  },
+  {
+    "google_place_id": "ChIJ9X1iKBKTlxIR3Gv0xWlut3w",
+    "vertical_slug": "english-speaking-lawyers-mallorca",
+    "name": "Magnier Abogados | Avocat Immobilier & Successions · Palma",
+    "rating": 5,
+    "reviews_count": 73,
+    "address": "Carrer de Caro, 1, 1-G, Ponent, 07013 Palma, Illes Balears",
+    "latitude": 39.5725988,
+    "longitude": 2.6399515000000005,
+    "website": "http://www.magnierabogados.com/",
+    "phone": "+34 971 77 50 00",
+    "google_maps_url": "https://maps.google.com/?cid=8986772982012865500&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "lawyer",
+    "types": [
+      "lawyer",
+      "accounting",
+      "consultant",
+      "real_estate_agency",
+      "finance",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "English speaking lawyer Palma Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJ9X1iKBKTlxIR3Gv0xWlut3w",
+      "types": [
+        "lawyer",
+        "accounting",
+        "consultant",
+        "real_estate_agency",
+        "finance",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 971 77 50 00",
+      "formattedAddress": "Carrer de Caro, 1, 1-G, Ponent, 07013 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.5725988,
+        "longitude": 2.6399515000000005
+      },
+      "rating": 5,
+      "googleMapsUri": "https://maps.google.com/?cid=8986772982012865500&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "http://www.magnierabogados.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 73,
+      "displayName": {
+        "text": "Magnier Abogados | Avocat Immobilier & Successions · Palma",
+        "languageCode": "es"
+      },
+      "primaryType": "lawyer"
+    }
+  },
+  {
+    "google_place_id": "ChIJoUyA43qTlxIRNUqoGhSWng4",
+    "vertical_slug": "english-speaking-lawyers-mallorca",
+    "name": "Kanzlei Sonja Willner",
+    "rating": 4.9,
+    "reviews_count": 104,
+    "address": "Carrer de Velázquez, 10, Entlo. 1, Centre, 07002 Palma, Illes Balears",
+    "latitude": 39.5730541,
+    "longitude": 2.6545274000000005,
+    "website": "http://www.willner.legal/",
+    "phone": "+34 871 18 01 97",
+    "google_maps_url": "https://maps.google.com/?cid=1053444375942023733&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "lawyer",
+    "types": [
+      "lawyer",
+      "point_of_interest",
+      "consultant",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "property lawyer Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJoUyA43qTlxIRNUqoGhSWng4",
+      "types": [
+        "lawyer",
+        "point_of_interest",
+        "consultant",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 871 18 01 97",
+      "formattedAddress": "Carrer de Velázquez, 10, Entlo. 1, Centre, 07002 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.5730541,
+        "longitude": 2.6545274000000005
+      },
+      "rating": 4.9,
+      "googleMapsUri": "https://maps.google.com/?cid=1053444375942023733&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "http://www.willner.legal/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 104,
+      "displayName": {
+        "text": "Kanzlei Sonja Willner",
+        "languageCode": "es"
+      },
+      "primaryType": "lawyer"
+    }
+  },
+  {
+    "google_place_id": "ChIJsfriRZSTlxIRMyR2VzyaToI",
+    "vertical_slug": "english-speaking-lawyers-mallorca",
+    "name": "Sbert & Jaume, Maritime & Real Estate Law",
+    "rating": 5,
+    "reviews_count": 68,
+    "address": "Carrer de Francesc de Borja Moll, 9, Entl. B, Centre, 07003 Palma, Illes Balears",
+    "latitude": 39.576822799999995,
+    "longitude": 2.6509692,
+    "website": "http://sbert-jaume.com/",
+    "phone": "+34 677 72 82 59",
+    "google_maps_url": "https://maps.google.com/?cid=9389611857070138419&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "lawyer",
+    "types": [
+      "lawyer",
+      "point_of_interest",
+      "consultant",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "property lawyer Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJsfriRZSTlxIRMyR2VzyaToI",
+      "types": [
+        "lawyer",
+        "point_of_interest",
+        "consultant",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 677 72 82 59",
+      "formattedAddress": "Carrer de Francesc de Borja Moll, 9, Entl. B, Centre, 07003 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.576822799999995,
+        "longitude": 2.6509692
+      },
+      "rating": 5,
+      "googleMapsUri": "https://maps.google.com/?cid=9389611857070138419&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "http://sbert-jaume.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 68,
+      "displayName": {
+        "text": "Sbert & Jaume, Maritime & Real Estate Law",
+        "languageCode": "es"
+      },
+      "primaryType": "lawyer"
+    }
+  },
+  {
+    "google_place_id": "ChIJR0EpHQ6NlxIRjIhDKGmN3Q8",
+    "vertical_slug": "english-speaking-lawyers-mallorca",
+    "name": "Onelawyers",
+    "rating": 4.7,
+    "reviews_count": 6,
+    "address": "Carrer Marola, 6, Ponent, 07013 Palma, Illes Balears",
+    "latitude": 39.5945329,
+    "longitude": 2.5936571,
+    "website": "http://www.onelawyers.es/",
+    "phone": "+34 971 69 85 56",
+    "google_maps_url": "https://maps.google.com/?cid=1143225363208571020&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "lawyer",
+    "types": [
+      "lawyer",
+      "finance",
+      "point_of_interest",
+      "consultant",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "property lawyer Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJR0EpHQ6NlxIRjIhDKGmN3Q8",
+      "types": [
+        "lawyer",
+        "finance",
+        "point_of_interest",
+        "consultant",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 971 69 85 56",
+      "formattedAddress": "Carrer Marola, 6, Ponent, 07013 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.5945329,
+        "longitude": 2.5936571
+      },
+      "rating": 4.7,
+      "googleMapsUri": "https://maps.google.com/?cid=1143225363208571020&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "http://www.onelawyers.es/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 6,
+      "displayName": {
+        "text": "Onelawyers",
+        "languageCode": "es"
+      },
+      "primaryType": "lawyer"
+    }
+  },
+  {
+    "google_place_id": "ChIJxbTS_1ySlxIRp113ymSgNy4",
+    "vertical_slug": "english-speaking-lawyers-mallorca",
+    "name": "desalvador.",
+    "rating": 5,
+    "reviews_count": 48,
+    "address": "Carrer de Pere Dezcallar i Net, 8A, Entresuelo - Despacho 1, Centre, 07003 Palma, Illes Balears",
+    "latitude": 39.577672,
+    "longitude": 2.6492866,
+    "website": "https://www.desalvador.es/",
+    "phone": "+34 871 18 14 37",
+    "google_maps_url": "https://maps.google.com/?cid=3330306804217765287&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "lawyer",
+    "types": [
+      "lawyer",
+      "finance",
+      "point_of_interest",
+      "consultant",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "property lawyer Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJxbTS_1ySlxIRp113ymSgNy4",
+      "types": [
+        "lawyer",
+        "finance",
+        "point_of_interest",
+        "consultant",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 871 18 14 37",
+      "formattedAddress": "Carrer de Pere Dezcallar i Net, 8A, Entresuelo - Despacho 1, Centre, 07003 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.577672,
+        "longitude": 2.6492866
+      },
+      "rating": 5,
+      "googleMapsUri": "https://maps.google.com/?cid=3330306804217765287&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://www.desalvador.es/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 48,
+      "displayName": {
+        "text": "desalvador.",
+        "languageCode": "es"
+      },
+      "primaryType": "lawyer"
+    }
+  },
+  {
+    "google_place_id": "ChIJ1e_LwlavlxIR7DRtTy6DTzY",
+    "vertical_slug": "english-speaking-lawyers-mallorca",
+    "name": "Puigserver Abogados",
+    "rating": 4.9,
+    "reviews_count": 31,
+    "address": "Av. d'Alemanya, 15, Centre, 07003 Palma, Illes Balears",
+    "latitude": 39.5765478,
+    "longitude": 2.6472360999999998,
+    "website": "http://www.puigserverabogados.com/",
+    "phone": "+34 661 76 01 63",
+    "google_maps_url": "https://maps.google.com/?cid=3913490836132541676&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "lawyer",
+    "types": [
+      "lawyer",
+      "point_of_interest",
+      "consultant",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "property lawyer Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJ1e_LwlavlxIR7DRtTy6DTzY",
+      "types": [
+        "lawyer",
+        "point_of_interest",
+        "consultant",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 661 76 01 63",
+      "formattedAddress": "Av. d'Alemanya, 15, Centre, 07003 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.5765478,
+        "longitude": 2.6472360999999998
+      },
+      "rating": 4.9,
+      "googleMapsUri": "https://maps.google.com/?cid=3913490836132541676&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "http://www.puigserverabogados.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 31,
+      "displayName": {
+        "text": "Puigserver Abogados",
+        "languageCode": "es"
+      },
+      "primaryType": "lawyer"
+    }
+  },
+  {
+    "google_place_id": "ChIJL6ulVViSlxIR4PxtQLoFOy0",
+    "vertical_slug": "english-speaking-lawyers-mallorca",
+    "name": "KNOWMAD LAWYER",
+    "rating": 5,
+    "reviews_count": 16,
+    "address": "Carrer Carles I, 6, Nord, 07003 Palma, Illes Balears",
+    "latitude": 39.5781108,
+    "longitude": 2.646343,
+    "website": "https://www.knowmadlawyer.com/",
+    "phone": "+34 619 02 17 20",
+    "google_maps_url": "https://maps.google.com/?cid=3259205052835691744&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "lawyer",
+    "types": [
+      "lawyer",
+      "point_of_interest",
+      "consultant",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "property lawyer Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJL6ulVViSlxIR4PxtQLoFOy0",
+      "types": [
+        "lawyer",
+        "point_of_interest",
+        "consultant",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 619 02 17 20",
+      "formattedAddress": "Carrer Carles I, 6, Nord, 07003 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.5781108,
+        "longitude": 2.646343
+      },
+      "rating": 5,
+      "googleMapsUri": "https://maps.google.com/?cid=3259205052835691744&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://www.knowmadlawyer.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 16,
+      "displayName": {
+        "text": "KNOWMAD LAWYER",
+        "languageCode": "es"
+      },
+      "primaryType": "lawyer"
+    }
+  },
+  {
+    "google_place_id": "ChIJc0aUEqRJlhIRfzQZUozt_hE",
+    "vertical_slug": "english-speaking-lawyers-mallorca",
+    "name": "HOUSETROPÍA PSI REAL ESTATE PERSONAL SHOPPER AND LAWYER / HOUSE HUNTER",
+    "rating": 5,
+    "reviews_count": 8,
+    "address": "Carrer d'En Bosch, 12, 07500 Manacor, Illes Balears",
+    "latitude": 39.5691403,
+    "longitude": 3.210978,
+    "website": "https://www.housetropia.com/en/book-appointment/",
+    "phone": "+34 686 45 56 44",
+    "google_maps_url": "https://maps.google.com/?cid=1296734929657869439&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "consultant",
+    "types": [
+      "real_estate_agency",
+      "lawyer",
+      "consultant",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "real estate lawyer Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJc0aUEqRJlhIRfzQZUozt_hE",
+      "types": [
+        "real_estate_agency",
+        "lawyer",
+        "consultant",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 686 45 56 44",
+      "formattedAddress": "Carrer d'En Bosch, 12, 07500 Manacor, Illes Balears",
+      "location": {
+        "latitude": 39.5691403,
+        "longitude": 3.210978
+      },
+      "rating": 5,
+      "googleMapsUri": "https://maps.google.com/?cid=1296734929657869439&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://www.housetropia.com/en/book-appointment/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 8,
+      "displayName": {
+        "text": "HOUSETROPÍA PSI REAL ESTATE PERSONAL SHOPPER AND LAWYER / HOUSE HUNTER",
+        "languageCode": "es"
+      },
+      "primaryType": "consultant"
+    }
+  },
+  {
+    "google_place_id": "ChIJg3DFYdDsMoQRBTd4IRlGILE",
+    "vertical_slug": "english-speaking-lawyers-mallorca",
+    "name": "EM LEGIS Abogada Ewelina Majcherek",
+    "rating": 5,
+    "reviews_count": 14,
+    "address": "Pescadores número, 9, 07400 Port d'Alcúdia, Illes Balears",
+    "latitude": 39.842997,
+    "longitude": 3.1329620000000005,
+    "website": "https://www.emlegis.com/",
+    "phone": "+34 674 81 17 28",
+    "google_maps_url": "https://maps.google.com/?cid=12763278417717638917&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "consultant",
+    "types": [
+      "consultant",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "real estate lawyer Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJg3DFYdDsMoQRBTd4IRlGILE",
+      "types": [
+        "consultant",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 674 81 17 28",
+      "formattedAddress": "Pescadores número, 9, 07400 Port d'Alcúdia, Illes Balears",
+      "location": {
+        "latitude": 39.842997,
+        "longitude": 3.1329620000000005
+      },
+      "rating": 5,
+      "googleMapsUri": "https://maps.google.com/?cid=12763278417717638917&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://www.emlegis.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 14,
+      "displayName": {
+        "text": "EM LEGIS Abogada Ewelina Majcherek",
+        "languageCode": "es"
+      },
+      "primaryType": "consultant"
+    }
+  },
+  {
+    "google_place_id": "ChIJ0ccLfaDWlxIRWWchER7BNr0",
+    "vertical_slug": "english-speaking-lawyers-mallorca",
+    "name": "Benavides Asociados | Gestoría en Pollensa | Asesoría Fiscal y Contable | Abogados",
+    "rating": 4.9,
+    "reviews_count": 72,
+    "address": "Carrer de Cecili Metel, 29, 07460 Pollença, Illes Balears",
+    "latitude": 39.8756641,
+    "longitude": 3.0196494,
+    "website": "http://benavidesasociados.com/",
+    "phone": "+34 971 53 07 19",
+    "google_maps_url": "https://maps.google.com/?cid=13634297256791336793&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "consultant",
+    "types": [
+      "lawyer",
+      "consultant",
+      "finance",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "tax advisor Mallorca expats",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJ0ccLfaDWlxIRWWchER7BNr0",
+      "types": [
+        "lawyer",
+        "consultant",
+        "finance",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 971 53 07 19",
+      "formattedAddress": "Carrer de Cecili Metel, 29, 07460 Pollença, Illes Balears",
+      "location": {
+        "latitude": 39.8756641,
+        "longitude": 3.0196494
+      },
+      "rating": 4.9,
+      "googleMapsUri": "https://maps.google.com/?cid=13634297256791336793&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "http://benavidesasociados.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 72,
+      "displayName": {
+        "text": "Benavides Asociados | Gestoría en Pollensa | Asesoría Fiscal y Contable | Abogados",
+        "languageCode": "es"
+      },
+      "primaryType": "consultant"
+    }
+  },
+  {
+    "google_place_id": "ChIJs7kTpZqTlxIR0EmCVblnJ8U",
+    "vertical_slug": "english-speaking-lawyers-mallorca",
+    "name": "Global Accountancy",
+    "rating": 5,
+    "reviews_count": 15,
+    "address": "Carrer d'Antoni Maria Alcover, 2, Ponent, 07011 Palma, Illes Balears",
+    "latitude": 39.5798497,
+    "longitude": 2.6391529,
+    "website": "https://www.globalaccountancy.es/mallorca/",
+    "phone": "+34 971 46 38 18",
+    "google_maps_url": "https://maps.google.com/?cid=14206437595264731600&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "accounting",
+    "types": [
+      "accounting",
+      "finance",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "tax advisor Mallorca expats",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJs7kTpZqTlxIR0EmCVblnJ8U",
+      "types": [
+        "accounting",
+        "finance",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 971 46 38 18",
+      "formattedAddress": "Carrer d'Antoni Maria Alcover, 2, Ponent, 07011 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.5798497,
+        "longitude": 2.6391529
+      },
+      "rating": 5,
+      "googleMapsUri": "https://maps.google.com/?cid=14206437595264731600&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://www.globalaccountancy.es/mallorca/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 15,
+      "displayName": {
+        "text": "Global Accountancy",
+        "languageCode": "en"
+      },
+      "primaryType": "accounting"
+    }
+  },
+  {
+    "google_place_id": "ChIJxarHs8STlxIR7e9ysZKNLcg",
+    "vertical_slug": "english-speaking-lawyers-mallorca",
+    "name": "Garcia Elsener Steuerberater Mallorca",
+    "rating": 5,
+    "reviews_count": 21,
+    "address": "Pl. d'Espanya, 11, 1º, Centre, 07002 Palma, Illes Balears",
+    "latitude": 39.575126,
+    "longitude": 2.6533249999999997,
+    "website": "https://www.garciaelsener.com/",
+    "phone": "+34 638 26 19 01",
+    "google_maps_url": "https://maps.google.com/?cid=14424340842719408109&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "consultant",
+    "types": [
+      "lawyer",
+      "consultant",
+      "accounting",
+      "finance",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "tax advisor Mallorca expats",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJxarHs8STlxIR7e9ysZKNLcg",
+      "types": [
+        "lawyer",
+        "consultant",
+        "accounting",
+        "finance",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 638 26 19 01",
+      "formattedAddress": "Pl. d'Espanya, 11, 1º, Centre, 07002 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.575126,
+        "longitude": 2.6533249999999997
+      },
+      "rating": 5,
+      "googleMapsUri": "https://maps.google.com/?cid=14424340842719408109&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://www.garciaelsener.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 21,
+      "displayName": {
+        "text": "Garcia Elsener Steuerberater Mallorca",
+        "languageCode": "es"
+      },
+      "primaryType": "consultant"
+    }
+  },
+  {
+    "google_place_id": "ChIJj0-e5FuSlxIRV9GWtHdAhBM",
+    "vertical_slug": "english-speaking-lawyers-mallorca",
+    "name": "Gestoría Emprendix",
+    "rating": 4.8,
+    "reviews_count": 176,
+    "address": "Carrer de Sant Miquel, 30, 5ºA, Centre, 07002 Palma, Illes Balears",
+    "latitude": 39.5734518,
+    "longitude": 2.6521827,
+    "website": "https://emprendix.com/",
+    "phone": "+34 871 95 20 75",
+    "google_maps_url": "https://maps.google.com/?cid=1406319866521506135&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "finance",
+    "types": [
+      "consultant",
+      "finance",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "tax advisor Mallorca expats",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJj0-e5FuSlxIRV9GWtHdAhBM",
+      "types": [
+        "consultant",
+        "finance",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 871 95 20 75",
+      "formattedAddress": "Carrer de Sant Miquel, 30, 5ºA, Centre, 07002 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.5734518,
+        "longitude": 2.6521827
+      },
+      "rating": 4.8,
+      "googleMapsUri": "https://maps.google.com/?cid=1406319866521506135&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://emprendix.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 176,
+      "displayName": {
+        "text": "Gestoría Emprendix",
+        "languageCode": "es"
+      },
+      "primaryType": "finance"
+    }
+  },
+  {
+    "google_place_id": "ChIJzwvWB_2TlxIR9WW84RCVSvI",
+    "vertical_slug": "english-speaking-lawyers-mallorca",
+    "name": "Lullius Partners | Tax Lawyers | Tax · Private Wealth · Tax Litigation",
+    "rating": 4.2,
+    "reviews_count": 42,
+    "address": "Carrer Unió, 10, 2ºA, Centre, 07001 Palma, Illes Balears",
+    "latitude": 39.5713773,
+    "longitude": 2.6485491,
+    "website": "http://www.lullius.com/",
+    "phone": "+34 871 00 21 51",
+    "google_maps_url": "https://maps.google.com/?cid=17458930805194384885&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "lawyer",
+    "types": [
+      "lawyer",
+      "consultant",
+      "accounting",
+      "finance",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "tax advisor Mallorca expats",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJzwvWB_2TlxIR9WW84RCVSvI",
+      "types": [
+        "lawyer",
+        "consultant",
+        "accounting",
+        "finance",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 871 00 21 51",
+      "formattedAddress": "Carrer Unió, 10, 2ºA, Centre, 07001 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.5713773,
+        "longitude": 2.6485491
+      },
+      "rating": 4.2,
+      "googleMapsUri": "https://maps.google.com/?cid=17458930805194384885&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "http://www.lullius.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 42,
+      "displayName": {
+        "text": "Lullius Partners | Tax Lawyers | Tax · Private Wealth · Tax Litigation",
+        "languageCode": "es"
+      },
+      "primaryType": "lawyer"
+    }
+  },
+  {
+    "google_place_id": "ChIJqd3wvqSTlxIR2Q_Bw9h_T1M",
+    "vertical_slug": "english-speaking-lawyers-mallorca",
+    "name": "Resitax",
+    "rating": 4.9,
+    "reviews_count": 14,
+    "address": "Pg. de Mallorca, 14A, Entresuelos C y D, Centre, 07012 Palma, Illes Balears",
+    "latitude": 39.572848,
+    "longitude": 2.642554,
+    "website": "https://www.resitax.eu/",
+    "phone": "+34 871 24 21 73",
+    "google_maps_url": "https://maps.google.com/?cid=6003157397282033625&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "consultant",
+    "types": [
+      "consultant",
+      "finance",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "tax advisor Mallorca expats",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJqd3wvqSTlxIR2Q_Bw9h_T1M",
+      "types": [
+        "consultant",
+        "finance",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 871 24 21 73",
+      "formattedAddress": "Pg. de Mallorca, 14A, Entresuelos C y D, Centre, 07012 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.572848,
+        "longitude": 2.642554
+      },
+      "rating": 4.9,
+      "googleMapsUri": "https://maps.google.com/?cid=6003157397282033625&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://www.resitax.eu/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 14,
+      "displayName": {
+        "text": "Resitax",
+        "languageCode": "es"
+      },
+      "primaryType": "consultant"
+    }
+  },
+  {
+    "google_place_id": "ChIJE7tQi1qSlxIRkQvl5GE3hsA",
+    "vertical_slug": "english-speaking-lawyers-mallorca",
+    "name": "Montis Advisors",
+    "rating": 4.3,
+    "reviews_count": 12,
+    "address": "Carrer de Sant Jaume, 7, Centre, 07012 Palma, Illes Balears",
+    "latitude": 39.5722009,
+    "longitude": 2.6471184,
+    "website": "https://montisadvisors.com/",
+    "phone": "+34 971 21 30 96",
+    "google_maps_url": "https://maps.google.com/?cid=13872836595752962961&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "lawyer",
+    "types": [
+      "lawyer",
+      "consultant",
+      "accounting",
+      "finance",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "tax advisor Mallorca expats",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJE7tQi1qSlxIRkQvl5GE3hsA",
+      "types": [
+        "lawyer",
+        "consultant",
+        "accounting",
+        "finance",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 971 21 30 96",
+      "formattedAddress": "Carrer de Sant Jaume, 7, Centre, 07012 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.5722009,
+        "longitude": 2.6471184
+      },
+      "rating": 4.3,
+      "googleMapsUri": "https://maps.google.com/?cid=13872836595752962961&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://montisadvisors.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 12,
+      "displayName": {
+        "text": "Montis Advisors",
+        "languageCode": "es"
+      },
+      "primaryType": "lawyer"
+    }
+  },
+  {
+    "google_place_id": "ChIJzaYKP1eSlxIRKFqwRj_934k",
+    "vertical_slug": "english-speaking-lawyers-mallorca",
+    "name": "Antonia Perelló Company",
+    "rating": 5,
+    "reviews_count": 76,
+    "address": "Carrer de Cecili Metel, 11, Centre, 07003 Palma, Illes Balears",
+    "latitude": 39.5762978,
+    "longitude": 2.6499322999999997,
+    "website": "https://www.perelloabogados.com/",
+    "phone": "+34 971 72 20 78",
+    "google_maps_url": "https://maps.google.com/?cid=9934937751213333032&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "lawyer",
+    "types": [
+      "lawyer",
+      "consultant",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "inheritance lawyer Mallorca English",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJzaYKP1eSlxIRKFqwRj_934k",
+      "types": [
+        "lawyer",
+        "consultant",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 971 72 20 78",
+      "formattedAddress": "Carrer de Cecili Metel, 11, Centre, 07003 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.5762978,
+        "longitude": 2.6499322999999997
+      },
+      "rating": 5,
+      "googleMapsUri": "https://maps.google.com/?cid=9934937751213333032&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://www.perelloabogados.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 76,
+      "displayName": {
+        "text": "Antonia Perelló Company",
+        "languageCode": "es"
+      },
+      "primaryType": "lawyer"
+    }
+  },
+  {
+    "google_place_id": "ChIJhYTcNVGSlxIRSNAQTKHysII",
+    "vertical_slug": "english-speaking-lawyers-mallorca",
+    "name": "Omnia Consulting steuerberater",
+    "rating": 4.8,
+    "reviews_count": 136,
+    "address": "Carrer de Sant Miquel, 46, 2º piso, 10-A y 10-B, Centre, 07002 Palma, Illes Balears",
+    "latitude": 39.574729399999995,
+    "longitude": 2.6522574,
+    "website": "https://www.omnia-consulting.com/",
+    "phone": "+34 971 28 84 42",
+    "google_maps_url": "https://maps.google.com/?cid=9417293595411533896&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "consultant",
+    "types": [
+      "real_estate_agency",
+      "lawyer",
+      "consultant",
+      "finance",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "inheritance lawyer Mallorca English",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJhYTcNVGSlxIRSNAQTKHysII",
+      "types": [
+        "real_estate_agency",
+        "lawyer",
+        "consultant",
+        "finance",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 971 28 84 42",
+      "formattedAddress": "Carrer de Sant Miquel, 46, 2º piso, 10-A y 10-B, Centre, 07002 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.574729399999995,
+        "longitude": 2.6522574
+      },
+      "rating": 4.8,
+      "googleMapsUri": "https://maps.google.com/?cid=9417293595411533896&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://www.omnia-consulting.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 136,
+      "displayName": {
+        "text": "Omnia Consulting steuerberater",
+        "languageCode": "es"
+      },
+      "primaryType": "consultant"
+    }
+  },
+  {
+    "google_place_id": "ChIJp7l5-gSTlxIRgJlKOrjb9HA",
+    "vertical_slug": "english-speaking-lawyers-mallorca",
+    "name": "DE PRADA & MOYA Abogados",
+    "rating": 4.9,
+    "reviews_count": 258,
+    "address": "C. del Cardenal Rossell, 15, A, Platja de Palma i Pla de Sant Jordi, 07007 Coll den Rabassa, Illes Balears",
+    "latitude": 39.553990000000006,
+    "longitude": 2.6932899999999997,
+    "website": "http://www.depradamoya-realestate.com/",
+    "phone": "+34 638 30 70 85",
+    "google_maps_url": "https://maps.google.com/?cid=8139372010863761792&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "real_estate_agency",
+    "types": [
+      "real_estate_agency",
+      "consultant",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "abogado inmobiliario Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJp7l5-gSTlxIRgJlKOrjb9HA",
+      "types": [
+        "real_estate_agency",
+        "consultant",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 638 30 70 85",
+      "formattedAddress": "C. del Cardenal Rossell, 15, A, Platja de Palma i Pla de Sant Jordi, 07007 Coll den Rabassa, Illes Balears",
+      "location": {
+        "latitude": 39.553990000000006,
+        "longitude": 2.6932899999999997
+      },
+      "rating": 4.9,
+      "googleMapsUri": "https://maps.google.com/?cid=8139372010863761792&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "http://www.depradamoya-realestate.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 258,
+      "displayName": {
+        "text": "DE PRADA & MOYA Abogados",
+        "languageCode": "es"
+      },
+      "primaryType": "real_estate_agency"
+    }
+  },
+  {
+    "google_place_id": "ChIJC5puBsiTlxIRQwN5L-kK62A",
+    "vertical_slug": "english-speaking-lawyers-mallorca",
+    "name": "PK Abogados Palma",
+    "rating": 5,
+    "reviews_count": 56,
+    "address": "Carrer de, Av. de Jaume III, 3, 1 - 1ª, Centre, 07012 Palma, Illes Balears",
+    "latitude": 39.571554,
+    "longitude": 2.6463861,
+    "website": "https://inmojudicial.com/",
+    "phone": "+34 679 67 64 22",
+    "google_maps_url": "https://maps.google.com/?cid=6983687643808203587&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "lawyer",
+    "types": [
+      "lawyer",
+      "real_estate_agency",
+      "consultant",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "abogado inmobiliario Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJC5puBsiTlxIRQwN5L-kK62A",
+      "types": [
+        "lawyer",
+        "real_estate_agency",
+        "consultant",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 679 67 64 22",
+      "formattedAddress": "Carrer de, Av. de Jaume III, 3, 1 - 1ª, Centre, 07012 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.571554,
+        "longitude": 2.6463861
+      },
+      "rating": 5,
+      "googleMapsUri": "https://maps.google.com/?cid=6983687643808203587&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://inmojudicial.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 56,
+      "displayName": {
+        "text": "PK Abogados Palma",
+        "languageCode": "es"
+      },
+      "primaryType": "lawyer"
+    }
+  },
+  {
+    "google_place_id": "ChIJ6X2fPlGSlxIRp6BckcAZbqQ",
+    "vertical_slug": "english-speaking-lawyers-mallorca",
+    "name": "Bufete Frau Lawyers",
+    "rating": 5,
+    "reviews_count": 15,
+    "address": "Carrer de Sant Miquel, 63 -2, Centre, 07002 Palma, Illes Balears",
+    "latitude": 39.5748951,
+    "longitude": 2.6519478999999997,
+    "website": "https://www.bufetefrau.com/en/",
+    "phone": "+34 971 22 80 36",
+    "google_maps_url": "https://maps.google.com/?cid=11848435984521535655&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "lawyer",
+    "types": [
+      "lawyer",
+      "consultant",
+      "accounting",
+      "finance",
+      "health",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "abogado inmobiliario Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJ6X2fPlGSlxIRp6BckcAZbqQ",
+      "types": [
+        "lawyer",
+        "consultant",
+        "accounting",
+        "finance",
+        "health",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 971 22 80 36",
+      "formattedAddress": "Carrer de Sant Miquel, 63 -2, Centre, 07002 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.5748951,
+        "longitude": 2.6519478999999997
+      },
+      "rating": 5,
+      "googleMapsUri": "https://maps.google.com/?cid=11848435984521535655&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://www.bufetefrau.com/en/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 15,
+      "displayName": {
+        "text": "Bufete Frau Lawyers",
+        "languageCode": "es"
+      },
+      "primaryType": "lawyer"
+    }
+  },
+  {
+    "google_place_id": "ChIJxdiK78fNlxIR1BhuKluxrjQ",
+    "vertical_slug": "english-speaking-lawyers-mallorca",
+    "name": "Abogado en Sa Pobla Jonatan García Arenas",
+    "rating": 4.8,
+    "reviews_count": 21,
+    "address": "Carrer dels Fadrins, 29, 07420 Sa Pobla, Illes Balears",
+    "latitude": 39.7708052,
+    "longitude": 3.0207672,
+    "website": "https://jonatangarciaabogados.com/",
+    "phone": "+34 699 07 07 35",
+    "google_maps_url": "https://maps.google.com/?cid=3796166541031905492&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "lawyer",
+    "types": [
+      "lawyer",
+      "consultant",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "abogado inmobiliario Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJxdiK78fNlxIR1BhuKluxrjQ",
+      "types": [
+        "lawyer",
+        "consultant",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 699 07 07 35",
+      "formattedAddress": "Carrer dels Fadrins, 29, 07420 Sa Pobla, Illes Balears",
+      "location": {
+        "latitude": 39.7708052,
+        "longitude": 3.0207672
+      },
+      "rating": 4.8,
+      "googleMapsUri": "https://maps.google.com/?cid=3796166541031905492&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://jonatangarciaabogados.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 21,
+      "displayName": {
+        "text": "Abogado en Sa Pobla Jonatan García Arenas",
+        "languageCode": "es"
+      },
+      "primaryType": "lawyer"
+    }
+  },
+  {
+    "google_place_id": "ChIJqRKUAlOSlxIRWSiKMui56xo",
+    "vertical_slug": "english-speaking-lawyers-mallorca",
+    "name": "Bufete Ferrer",
+    "rating": 4.9,
+    "reviews_count": 103,
+    "address": "Carrer Del Sindicat, 69, 6B, Centre, 07002 Palma, Illes Balears",
+    "latitude": 39.5725982,
+    "longitude": 2.6562558999999997,
+    "website": "https://bufeteferrerabogados.es/",
+    "phone": "+34 971 22 93 39",
+    "google_maps_url": "https://maps.google.com/?cid=1939848471444596825&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "lawyer",
+    "types": [
+      "lawyer",
+      "consultant",
+      "accounting",
+      "finance",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "abogado fiscal Mallorca extranjeros",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJqRKUAlOSlxIRWSiKMui56xo",
+      "types": [
+        "lawyer",
+        "consultant",
+        "accounting",
+        "finance",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 971 22 93 39",
+      "formattedAddress": "Carrer Del Sindicat, 69, 6B, Centre, 07002 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.5725982,
+        "longitude": 2.6562558999999997
+      },
+      "rating": 4.9,
+      "googleMapsUri": "https://maps.google.com/?cid=1939848471444596825&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://bufeteferrerabogados.es/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 103,
+      "displayName": {
+        "text": "Bufete Ferrer",
+        "languageCode": "es"
+      },
+      "primaryType": "lawyer"
+    }
+  },
+  {
+    "google_place_id": "ChIJt-5rtlKSlxIRYlGVumG_zeg",
+    "vertical_slug": "english-speaking-lawyers-mallorca",
+    "name": "Pro Quo Abogados y Asesores",
+    "rating": 4.8,
+    "reviews_count": 66,
+    "address": "Camí de l’Ullastre, 7, Llevant, 07120 Palma, Illes Balears",
+    "latitude": 39.570853,
+    "longitude": 2.659121,
+    "website": "https://www.proquoabogados.com/asesoria-fiscal-mallorca/",
+    "phone": "+34 871 95 10 67",
+    "google_maps_url": "https://maps.google.com/?cid=16775274613488046434&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "finance",
+    "types": [
+      "lawyer",
+      "consultant",
+      "accounting",
+      "finance",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "abogado fiscal Mallorca extranjeros",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJt-5rtlKSlxIRYlGVumG_zeg",
+      "types": [
+        "lawyer",
+        "consultant",
+        "accounting",
+        "finance",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 871 95 10 67",
+      "formattedAddress": "Camí de l’Ullastre, 7, Llevant, 07120 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.570853,
+        "longitude": 2.659121
+      },
+      "rating": 4.8,
+      "googleMapsUri": "https://maps.google.com/?cid=16775274613488046434&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://www.proquoabogados.com/asesoria-fiscal-mallorca/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 66,
+      "displayName": {
+        "text": "Pro Quo Abogados y Asesores",
+        "languageCode": "es"
+      },
+      "primaryType": "finance"
+    }
+  },
+  {
+    "google_place_id": "ChIJizW4bBaTlxIRuh68WaPu8jg",
+    "vertical_slug": "english-speaking-lawyers-mallorca",
+    "name": "PYR Asesores",
+    "rating": 4.8,
+    "reviews_count": 72,
+    "address": "Carrer Gremi de Sabaters, 21, LOCAL 7, Nord, 07009 Palma, Illes Balears",
+    "latitude": 39.5992779,
+    "longitude": 2.6689537,
+    "website": "https://www.pyrasesores.es/",
+    "phone": "+34 871 55 22 77",
+    "google_maps_url": "https://maps.google.com/?cid=4103604595840523962&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "consultant",
+    "types": [
+      "lawyer",
+      "consultant",
+      "accounting",
+      "local_government_office",
+      "government_office",
+      "finance",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "abogado fiscal Mallorca extranjeros",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJizW4bBaTlxIRuh68WaPu8jg",
+      "types": [
+        "lawyer",
+        "consultant",
+        "accounting",
+        "local_government_office",
+        "government_office",
+        "finance",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 871 55 22 77",
+      "formattedAddress": "Carrer Gremi de Sabaters, 21, LOCAL 7, Nord, 07009 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.5992779,
+        "longitude": 2.6689537
+      },
+      "rating": 4.8,
+      "googleMapsUri": "https://maps.google.com/?cid=4103604595840523962&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://www.pyrasesores.es/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 72,
+      "displayName": {
+        "text": "PYR Asesores",
+        "languageCode": "es"
+      },
+      "primaryType": "consultant"
+    }
+  },
+  {
+    "google_place_id": "ChIJ2QYa2TGTlxIRMIgCII6CT3I",
+    "vertical_slug": "english-speaking-lawyers-mallorca",
+    "name": "RFM Asesores Fiscales & Abogados",
+    "rating": 4.6,
+    "reviews_count": 65,
+    "address": "C/ Julián Álvarez 12A, 2ºPiso, Norte, 07004 Palma, Illes Balears",
+    "latitude": 39.580045299999995,
+    "longitude": 2.6529947,
+    "website": "http://rfmasesores.com/",
+    "phone": "+34 871 02 72 97",
+    "google_maps_url": "https://maps.google.com/?cid=8236945790417930288&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "consultant",
+    "types": [
+      "lawyer",
+      "consultant",
+      "accounting",
+      "finance",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "abogado fiscal Mallorca extranjeros",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJ2QYa2TGTlxIRMIgCII6CT3I",
+      "types": [
+        "lawyer",
+        "consultant",
+        "accounting",
+        "finance",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 871 02 72 97",
+      "formattedAddress": "C/ Julián Álvarez 12A, 2ºPiso, Norte, 07004 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.580045299999995,
+        "longitude": 2.6529947
+      },
+      "rating": 4.6,
+      "googleMapsUri": "https://maps.google.com/?cid=8236945790417930288&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "http://rfmasesores.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 65,
+      "displayName": {
+        "text": "RFM Asesores Fiscales & Abogados",
+        "languageCode": "es"
+      },
+      "primaryType": "consultant"
+    }
+  },
+  {
+    "google_place_id": "ChIJgfXhKJyTlxIRFUFyDDGq9p0",
+    "vertical_slug": "english-speaking-lawyers-mallorca",
+    "name": "Quamtia Asesores (Gestoría Palma)",
+    "rating": 4.9,
+    "reviews_count": 38,
+    "address": "Carrer del Fluvià, 1, Llevant, 07009 Palma, Illes Balears",
+    "latitude": 39.5945379,
+    "longitude": 2.6758311,
+    "website": "https://quamtia.es/",
+    "phone": "+34 611 62 14 60",
+    "google_maps_url": "https://maps.google.com/?cid=11382472235864441109&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "consultant",
+    "types": [
+      "lawyer",
+      "consultant",
+      "accounting",
+      "finance",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "abogado fiscal Mallorca extranjeros",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJgfXhKJyTlxIRFUFyDDGq9p0",
+      "types": [
+        "lawyer",
+        "consultant",
+        "accounting",
+        "finance",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 611 62 14 60",
+      "formattedAddress": "Carrer del Fluvià, 1, Llevant, 07009 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.5945379,
+        "longitude": 2.6758311
+      },
+      "rating": 4.9,
+      "googleMapsUri": "https://maps.google.com/?cid=11382472235864441109&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://quamtia.es/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 38,
+      "displayName": {
+        "text": "Quamtia Asesores (Gestoría Palma)",
+        "languageCode": "es"
+      },
+      "primaryType": "consultant"
+    }
+  },
+  {
+    "google_place_id": "ChIJDXIHWFGSlxIRQV9bFrT41es",
+    "vertical_slug": "english-speaking-lawyers-mallorca",
+    "name": "DMS Legal Intelligence",
+    "rating": 4.4,
+    "reviews_count": 34,
+    "address": "1º, Edifici Orisba, Caputxins, 4 A, Centre, 07002 Palma, Illes Balears",
+    "latitude": 39.5744654,
+    "longitude": 2.6536341,
+    "website": "https://www.consultingdms.com/",
+    "phone": "+34 971 72 21 01",
+    "google_maps_url": "https://maps.google.com/?cid=16993762221305323329&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "lawyer",
+    "types": [
+      "lawyer",
+      "consultant",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "abogado fiscal Mallorca extranjeros",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJDXIHWFGSlxIRQV9bFrT41es",
+      "types": [
+        "lawyer",
+        "consultant",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 971 72 21 01",
+      "formattedAddress": "1º, Edifici Orisba, Caputxins, 4 A, Centre, 07002 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.5744654,
+        "longitude": 2.6536341
+      },
+      "rating": 4.4,
+      "googleMapsUri": "https://maps.google.com/?cid=16993762221305323329&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://www.consultingdms.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 34,
+      "displayName": {
+        "text": "DMS Legal Intelligence",
+        "languageCode": "es"
+      },
+      "primaryType": "lawyer"
+    }
+  },
+  {
+    "google_place_id": "ChIJgc0-liKTlxIReOJYYUBEEVg",
+    "vertical_slug": "english-speaking-lawyers-mallorca",
+    "name": "Gestoría Pòrtol",
+    "rating": 4.9,
+    "reviews_count": 1989,
+    "address": "Gran Via Asima, 15, 1º Izquierda, Nord, 07009 Polígon industrial de Son Castelló, Illes Balears",
+    "latitude": 39.6053861,
+    "longitude": 2.6691157,
+    "website": "https://www.gestoriaportol.com/",
+    "phone": "+34 971 90 80 95",
+    "google_maps_url": "https://maps.google.com/?cid=6345928393243550328&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "finance",
+    "types": [
+      "accounting",
+      "consultant",
+      "finance",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "gestoria Mallorca expats",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJgc0-liKTlxIReOJYYUBEEVg",
+      "types": [
+        "accounting",
+        "consultant",
+        "finance",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 971 90 80 95",
+      "formattedAddress": "Gran Via Asima, 15, 1º Izquierda, Nord, 07009 Polígon industrial de Son Castelló, Illes Balears",
+      "location": {
+        "latitude": 39.6053861,
+        "longitude": 2.6691157
+      },
+      "rating": 4.9,
+      "googleMapsUri": "https://maps.google.com/?cid=6345928393243550328&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://www.gestoriaportol.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 1989,
+      "displayName": {
+        "text": "Gestoría Pòrtol",
+        "languageCode": "es"
+      },
+      "primaryType": "finance"
+    }
+  },
+  {
+    "google_place_id": "ChIJkwRRPumSlxIRvI572Ga0Qus",
+    "vertical_slug": "english-speaking-lawyers-mallorca",
+    "name": "PlattesGroup SL",
+    "rating": 4.7,
+    "reviews_count": 185,
+    "address": "Camí dels Reis, 308, Edificio 3A, 2°, Norte, 07010 Palma, Illes Balears",
+    "latitude": 39.59733,
+    "longitude": 2.6452033999999998,
+    "website": "https://www.plattes.net/",
+    "phone": "+34 971 67 94 18",
+    "google_maps_url": "https://maps.google.com/?cid=16952310301187608252&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "consultant",
+    "types": [
+      "consultant",
+      "finance",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "gestoria Mallorca expats",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJkwRRPumSlxIRvI572Ga0Qus",
+      "types": [
+        "consultant",
+        "finance",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 971 67 94 18",
+      "formattedAddress": "Camí dels Reis, 308, Edificio 3A, 2°, Norte, 07010 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.59733,
+        "longitude": 2.6452033999999998
+      },
+      "rating": 4.7,
+      "googleMapsUri": "https://maps.google.com/?cid=16952310301187608252&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://www.plattes.net/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 185,
+      "displayName": {
+        "text": "PlattesGroup SL",
+        "languageCode": "es"
+      },
+      "primaryType": "consultant"
+    }
+  },
+  {
+    "google_place_id": "ChIJ6X2fPlGSlxIRg8Yd13geU2g",
+    "vertical_slug": "english-speaking-lawyers-mallorca",
+    "name": "Gestoría Mas",
+    "rating": 4.4,
+    "reviews_count": 25,
+    "address": "Carrer de Sant Miquel, 36, Piso 2º, Centre, 07002 Palma, Illes Balears",
+    "latitude": 39.5741325,
+    "longitude": 2.6521776999999997,
+    "website": "http://www.gestoriamas.es/",
+    "phone": "+34 971 71 13 83",
+    "google_maps_url": "https://maps.google.com/?cid=7517385707365451395&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "finance",
+    "types": [
+      "finance",
+      "point_of_interest",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "gestoria Mallorca expats",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJ6X2fPlGSlxIRg8Yd13geU2g",
+      "types": [
+        "finance",
+        "point_of_interest",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 971 71 13 83",
+      "formattedAddress": "Carrer de Sant Miquel, 36, Piso 2º, Centre, 07002 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.5741325,
+        "longitude": 2.6521776999999997
+      },
+      "rating": 4.4,
+      "googleMapsUri": "https://maps.google.com/?cid=7517385707365451395&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "http://www.gestoriamas.es/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 25,
+      "displayName": {
+        "text": "Gestoría Mas",
+        "languageCode": "es"
+      },
+      "primaryType": "finance"
+    }
+  },
+  {
+    "google_place_id": "ChIJrYOxZFGSlxIRmFVrwkU0sqE",
+    "vertical_slug": "english-speaking-lawyers-mallorca",
+    "name": "Gestoría March",
+    "rating": 4.6,
+    "reviews_count": 20,
+    "address": "Carrer de Josep Tous i Ferrer, 8, 4º, Centre, 07002 Palma, Illes Balears",
+    "latitude": 39.5732666,
+    "longitude": 2.6534801999999997,
+    "website": "http://www.gestoriamarch.com/",
+    "phone": "+34 971 72 17 50",
+    "google_maps_url": "https://maps.google.com/?cid=11651432660180096408&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "consultant",
+    "types": [
+      "accounting",
+      "consultant",
+      "finance",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "gestoria Mallorca expats",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJrYOxZFGSlxIRmFVrwkU0sqE",
+      "types": [
+        "accounting",
+        "consultant",
+        "finance",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 971 72 17 50",
+      "formattedAddress": "Carrer de Josep Tous i Ferrer, 8, 4º, Centre, 07002 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.5732666,
+        "longitude": 2.6534801999999997
+      },
+      "rating": 4.6,
+      "googleMapsUri": "https://maps.google.com/?cid=11651432660180096408&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "http://www.gestoriamarch.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 20,
+      "displayName": {
+        "text": "Gestoría March",
+        "languageCode": "en"
+      },
+      "primaryType": "consultant"
+    }
+  },
+  {
+    "google_place_id": "ChIJqwNEDviSlxIRa8DJWTcahZk",
+    "vertical_slug": "english-speaking-lawyers-mallorca",
+    "name": "Penta Asesores",
+    "rating": 4.4,
+    "reviews_count": 13,
+    "address": "Carrer del Pare Bartomeu Pou, 34, Nord, 07003 Palma, Illes Balears",
+    "latitude": 39.5810799,
+    "longitude": 2.6496229,
+    "website": "http://www.pentaasesores.com/",
+    "phone": "+34 971 76 14 51",
+    "google_maps_url": "https://maps.google.com/?cid=11062276884737409131&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "consultant",
+    "types": [
+      "accounting",
+      "lawyer",
+      "consultant",
+      "finance",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "gestoria Mallorca expats",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJqwNEDviSlxIRa8DJWTcahZk",
+      "types": [
+        "accounting",
+        "lawyer",
+        "consultant",
+        "finance",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 971 76 14 51",
+      "formattedAddress": "Carrer del Pare Bartomeu Pou, 34, Nord, 07003 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.5810799,
+        "longitude": 2.6496229
+      },
+      "rating": 4.4,
+      "googleMapsUri": "https://maps.google.com/?cid=11062276884737409131&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "http://www.pentaasesores.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 13,
+      "displayName": {
+        "text": "Penta Asesores",
+        "languageCode": "es"
+      },
+      "primaryType": "consultant"
+    }
+  },
+  {
+    "google_place_id": "ChIJAzDSVgiSlxIRULBUan7_50Q",
+    "vertical_slug": "english-speaking-lawyers-mallorca",
+    "name": "De Micco & Friends Rechtsanwälte",
+    "rating": 4.7,
+    "reviews_count": 215,
+    "address": "C. Llorenc y Vicens 3, Centre, 07002 Palma, Illes Balears",
+    "latitude": 39.5736174,
+    "longitude": 2.6554009,
+    "website": "http://www.lawyers-auditors.com/",
+    "phone": "+34 871 95 50 77",
+    "google_maps_url": "https://maps.google.com/?cid=4965218032614158416&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "consultant",
+    "types": [
+      "lawyer",
+      "consultant",
+      "accounting",
+      "finance",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "law firm Mallorca international clients",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJAzDSVgiSlxIRULBUan7_50Q",
+      "types": [
+        "lawyer",
+        "consultant",
+        "accounting",
+        "finance",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 871 95 50 77",
+      "formattedAddress": "C. Llorenc y Vicens 3, Centre, 07002 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.5736174,
+        "longitude": 2.6554009
+      },
+      "rating": 4.7,
+      "googleMapsUri": "https://maps.google.com/?cid=4965218032614158416&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "http://www.lawyers-auditors.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 215,
+      "displayName": {
+        "text": "De Micco & Friends Rechtsanwälte",
+        "languageCode": "de"
+      },
+      "primaryType": "consultant"
+    }
+  },
+  {
+    "google_place_id": "ChIJ-XCNylaSlxIRCBK0-nWaLLE",
+    "vertical_slug": "english-speaking-lawyers-mallorca",
+    "name": "The Legal Partner Asesores SL",
+    "rating": 4.6,
+    "reviews_count": 45,
+    "address": "Plaça de la Porta Pintada, 1, 1, Centre, 07002 Palma, Illes Balears",
+    "latitude": 39.575329100000005,
+    "longitude": 2.6523746,
+    "website": "https://thelegalpartner.es/",
+    "phone": "+34 971 72 88 42",
+    "google_maps_url": "https://maps.google.com/?cid=12766748875196469768&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "consultant",
+    "types": [
+      "lawyer",
+      "consultant",
+      "accounting",
+      "finance",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "law firm Mallorca international clients",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJ-XCNylaSlxIRCBK0-nWaLLE",
+      "types": [
+        "lawyer",
+        "consultant",
+        "accounting",
+        "finance",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 971 72 88 42",
+      "formattedAddress": "Plaça de la Porta Pintada, 1, 1, Centre, 07002 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.575329100000005,
+        "longitude": 2.6523746
+      },
+      "rating": 4.6,
+      "googleMapsUri": "https://maps.google.com/?cid=12766748875196469768&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://thelegalpartner.es/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 45,
+      "displayName": {
+        "text": "The Legal Partner Asesores SL",
+        "languageCode": "en"
+      },
+      "primaryType": "consultant"
+    }
+  },
+  {
+    "google_place_id": "ChIJKYfPUbuJlxIRnnU8Cc1tJkU",
+    "vertical_slug": "english-speaking-lawyers-mallorca",
+    "name": "Global Consulting Mallorca",
+    "rating": 4.6,
+    "reviews_count": 23,
+    "address": "Local1 Global Consulting, Gran Via Puig des Castellet, 1, Bl. 6, 07180 Santa Ponça, Illes Balears",
+    "latitude": 39.5161629,
+    "longitude": 2.4896276,
+    "website": "http://www.gcmca.es/",
+    "phone": "+34 971 69 40 44",
+    "google_maps_url": "https://maps.google.com/?cid=4982790765122712990&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "consultant",
+    "types": [
+      "consultant",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "law firm Mallorca international clients",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJKYfPUbuJlxIRnnU8Cc1tJkU",
+      "types": [
+        "consultant",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 971 69 40 44",
+      "formattedAddress": "Local1 Global Consulting, Gran Via Puig des Castellet, 1, Bl. 6, 07180 Santa Ponça, Illes Balears",
+      "location": {
+        "latitude": 39.5161629,
+        "longitude": 2.4896276
+      },
+      "rating": 4.6,
+      "googleMapsUri": "https://maps.google.com/?cid=4982790765122712990&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "http://www.gcmca.es/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 23,
+      "displayName": {
+        "text": "Global Consulting Mallorca",
+        "languageCode": "es"
+      },
+      "primaryType": "consultant"
+    }
+  },
+  {
+    "google_place_id": "ChIJtS0oAFOSlxIR7eKy71n4blc",
+    "vertical_slug": "english-speaking-lawyers-mallorca",
+    "name": "Lamas Lawyers",
+    "rating": 4.8,
+    "reviews_count": 28,
+    "address": "Carrer Del Sindicat, 69, Centre, 07002 Palma, Illes Balears",
+    "latitude": 39.5725468,
+    "longitude": 2.6563279,
+    "website": "http://www.lamas-lawyers.com/",
+    "phone": "+34 971 72 02 02",
+    "google_maps_url": "https://maps.google.com/?cid=6300245993895158509&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "lawyer",
+    "types": [
+      "lawyer",
+      "consultant",
+      "accounting",
+      "finance",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "law firm Mallorca international clients",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJtS0oAFOSlxIR7eKy71n4blc",
+      "types": [
+        "lawyer",
+        "consultant",
+        "accounting",
+        "finance",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 971 72 02 02",
+      "formattedAddress": "Carrer Del Sindicat, 69, Centre, 07002 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.5725468,
+        "longitude": 2.6563279
+      },
+      "rating": 4.8,
+      "googleMapsUri": "https://maps.google.com/?cid=6300245993895158509&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "http://www.lamas-lawyers.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 28,
+      "displayName": {
+        "text": "Lamas Lawyers",
+        "languageCode": "es"
+      },
+      "primaryType": "lawyer"
+    }
+  },
+  {
+    "google_place_id": "ChIJ2VDRAFqSlxIRwFoEwXyTVuE",
+    "vertical_slug": "english-speaking-lawyers-mallorca",
+    "name": "Illeslex Abogados",
+    "rating": 4.1,
+    "reviews_count": 43,
+    "address": "C/ dels Oms, 50, Centre, 07003 Palma, Illes Balears",
+    "latitude": 39.575002999999995,
+    "longitude": 2.648665,
+    "website": "http://www.illeslex.com/",
+    "phone": "+34 971 72 80 08",
+    "google_maps_url": "https://maps.google.com/?cid=16237327670554417856&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "consultant",
+    "types": [
+      "consultant",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "law firm Mallorca international clients",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJ2VDRAFqSlxIRwFoEwXyTVuE",
+      "types": [
+        "consultant",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 971 72 80 08",
+      "formattedAddress": "C/ dels Oms, 50, Centre, 07003 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.575002999999995,
+        "longitude": 2.648665
+      },
+      "rating": 4.1,
+      "googleMapsUri": "https://maps.google.com/?cid=16237327670554417856&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "http://www.illeslex.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 43,
+      "displayName": {
+        "text": "Illeslex Abogados",
+        "languageCode": "es"
+      },
+      "primaryType": "consultant"
+    }
+  },
+  {
+    "google_place_id": "ChIJ68E8TVCSlxIR5ZG65qQGiFo",
+    "vertical_slug": "english-speaking-lawyers-mallorca",
+    "name": "FR&P Abogados",
+    "rating": 4.7,
+    "reviews_count": 34,
+    "address": "Plaça Major, 3D, Centre, 07002 Palma, Illes Balears",
+    "latitude": 39.5718707,
+    "longitude": 2.6511253999999997,
+    "website": "https://www.frpabogados.com/",
+    "phone": "+34 971 71 58 83",
+    "google_maps_url": "https://maps.google.com/?cid=6523471365561553381&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "lawyer",
+    "types": [
+      "lawyer",
+      "consultant",
+      "accounting",
+      "finance",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "law firm Mallorca international clients",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJ68E8TVCSlxIR5ZG65qQGiFo",
+      "types": [
+        "lawyer",
+        "consultant",
+        "accounting",
+        "finance",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 971 71 58 83",
+      "formattedAddress": "Plaça Major, 3D, Centre, 07002 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.5718707,
+        "longitude": 2.6511253999999997
+      },
+      "rating": 4.7,
+      "googleMapsUri": "https://maps.google.com/?cid=6523471365561553381&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://www.frpabogados.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 34,
+      "displayName": {
+        "text": "FR&P Abogados",
+        "languageCode": "es"
+      },
+      "primaryType": "lawyer"
+    }
+  },
+  {
+    "google_place_id": "ChIJTW2WU3qTlxIRnSjskRXhCmg",
+    "vertical_slug": "english-speaking-lawyers-mallorca",
+    "name": "Palma Lawyers",
+    "rating": 5,
+    "reviews_count": 6,
+    "address": "Plaça de España 1 (esquina, Plaça de la Porta Pintada, 6º, Centre, 07002 Palma, Illes Balears",
+    "latitude": 39.5754628,
+    "longitude": 2.6530337,
+    "website": "http://www.palmalawyers.com/",
+    "phone": "+34 971 72 47 35",
+    "google_maps_url": "https://maps.google.com/?cid=7497052012470347933&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "consultant",
+    "types": [
+      "consultant",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "law firm Mallorca international clients",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJTW2WU3qTlxIRnSjskRXhCmg",
+      "types": [
+        "consultant",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 971 72 47 35",
+      "formattedAddress": "Plaça de España 1 (esquina, Plaça de la Porta Pintada, 6º, Centre, 07002 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.5754628,
+        "longitude": 2.6530337
+      },
+      "rating": 5,
+      "googleMapsUri": "https://maps.google.com/?cid=7497052012470347933&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "http://www.palmalawyers.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 6,
+      "displayName": {
+        "text": "Palma Lawyers",
+        "languageCode": "es"
+      },
+      "primaryType": "consultant"
+    }
+  },
+  {
+    "google_place_id": "ChIJZ8BLclGSlxIRVSQhKncZdVk",
+    "vertical_slug": "english-speaking-lawyers-mallorca",
+    "name": "PalmAbogados",
+    "rating": 4.3,
+    "reviews_count": 49,
+    "address": "Carrer de Bonaire, 6A, Centre, 07012 Palma, Illes Balears",
+    "latitude": 39.5729732,
+    "longitude": 2.6451712,
+    "website": "http://www.palmabogados.com/",
+    "phone": "+34 971 66 60 54",
+    "google_maps_url": "https://maps.google.com/?cid=6446086441249350741&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "lawyer",
+    "types": [
+      "lawyer",
+      "consultant",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "law firm Mallorca international clients",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJZ8BLclGSlxIRVSQhKncZdVk",
+      "types": [
+        "lawyer",
+        "consultant",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 971 66 60 54",
+      "formattedAddress": "Carrer de Bonaire, 6A, Centre, 07012 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.5729732,
+        "longitude": 2.6451712
+      },
+      "rating": 4.3,
+      "googleMapsUri": "https://maps.google.com/?cid=6446086441249350741&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "http://www.palmabogados.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 49,
+      "displayName": {
+        "text": "PalmAbogados",
+        "languageCode": "es"
+      },
+      "primaryType": "lawyer"
+    }
+  }
+]

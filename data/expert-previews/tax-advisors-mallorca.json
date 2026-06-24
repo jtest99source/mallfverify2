@@ -1,0 +1,1895 @@
+[
+  {
+    "google_place_id": "ChIJ0ccLfaDWlxIRWWchER7BNr0",
+    "vertical_slug": "tax-advisors-mallorca",
+    "name": "Benavides Asociados | Gestoría en Pollensa | Asesoría Fiscal y Contable | Abogados",
+    "rating": 4.9,
+    "reviews_count": 72,
+    "address": "Carrer de Cecili Metel, 29, 07460 Pollença, Illes Balears",
+    "latitude": 39.8756641,
+    "longitude": 3.0196494,
+    "website": "http://benavidesasociados.com/",
+    "phone": "+34 971 53 07 19",
+    "google_maps_url": "https://maps.google.com/?cid=13634297256791336793&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "consultant",
+    "types": [
+      "lawyer",
+      "consultant",
+      "finance",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "tax advisor Mallorca expats",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJ0ccLfaDWlxIRWWchER7BNr0",
+      "types": [
+        "lawyer",
+        "consultant",
+        "finance",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 971 53 07 19",
+      "formattedAddress": "Carrer de Cecili Metel, 29, 07460 Pollença, Illes Balears",
+      "location": {
+        "latitude": 39.8756641,
+        "longitude": 3.0196494
+      },
+      "rating": 4.9,
+      "googleMapsUri": "https://maps.google.com/?cid=13634297256791336793&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "http://benavidesasociados.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 72,
+      "displayName": {
+        "text": "Benavides Asociados | Gestoría en Pollensa | Asesoría Fiscal y Contable | Abogados",
+        "languageCode": "es"
+      },
+      "primaryType": "consultant"
+    }
+  },
+  {
+    "google_place_id": "ChIJs7kTpZqTlxIR0EmCVblnJ8U",
+    "vertical_slug": "tax-advisors-mallorca",
+    "name": "Global Accountancy",
+    "rating": 5,
+    "reviews_count": 15,
+    "address": "Carrer d'Antoni Maria Alcover, 2, Ponent, 07011 Palma, Illes Balears",
+    "latitude": 39.5798497,
+    "longitude": 2.6391529,
+    "website": "https://www.globalaccountancy.es/mallorca/",
+    "phone": "+34 971 46 38 18",
+    "google_maps_url": "https://maps.google.com/?cid=14206437595264731600&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "accounting",
+    "types": [
+      "accounting",
+      "finance",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "tax advisor Mallorca expats",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJs7kTpZqTlxIR0EmCVblnJ8U",
+      "types": [
+        "accounting",
+        "finance",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 971 46 38 18",
+      "formattedAddress": "Carrer d'Antoni Maria Alcover, 2, Ponent, 07011 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.5798497,
+        "longitude": 2.6391529
+      },
+      "rating": 5,
+      "googleMapsUri": "https://maps.google.com/?cid=14206437595264731600&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://www.globalaccountancy.es/mallorca/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 15,
+      "displayName": {
+        "text": "Global Accountancy",
+        "languageCode": "en"
+      },
+      "primaryType": "accounting"
+    }
+  },
+  {
+    "google_place_id": "ChIJxarHs8STlxIR7e9ysZKNLcg",
+    "vertical_slug": "tax-advisors-mallorca",
+    "name": "Garcia Elsener Steuerberater Mallorca",
+    "rating": 5,
+    "reviews_count": 21,
+    "address": "Pl. d'Espanya, 11, 1º, Centre, 07002 Palma, Illes Balears",
+    "latitude": 39.575126,
+    "longitude": 2.6533249999999997,
+    "website": "https://www.garciaelsener.com/",
+    "phone": "+34 638 26 19 01",
+    "google_maps_url": "https://maps.google.com/?cid=14424340842719408109&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "consultant",
+    "types": [
+      "accounting",
+      "lawyer",
+      "consultant",
+      "finance",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "tax advisor Mallorca expats",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJxarHs8STlxIR7e9ysZKNLcg",
+      "types": [
+        "accounting",
+        "lawyer",
+        "consultant",
+        "finance",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 638 26 19 01",
+      "formattedAddress": "Pl. d'Espanya, 11, 1º, Centre, 07002 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.575126,
+        "longitude": 2.6533249999999997
+      },
+      "rating": 5,
+      "googleMapsUri": "https://maps.google.com/?cid=14424340842719408109&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://www.garciaelsener.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 21,
+      "displayName": {
+        "text": "Garcia Elsener Steuerberater Mallorca",
+        "languageCode": "es"
+      },
+      "primaryType": "consultant"
+    }
+  },
+  {
+    "google_place_id": "ChIJj0-e5FuSlxIRV9GWtHdAhBM",
+    "vertical_slug": "tax-advisors-mallorca",
+    "name": "Gestoría Emprendix",
+    "rating": 4.8,
+    "reviews_count": 176,
+    "address": "Carrer de Sant Miquel, 30, 5ºA, Centre, 07002 Palma, Illes Balears",
+    "latitude": 39.5734518,
+    "longitude": 2.6521827,
+    "website": "https://emprendix.com/",
+    "phone": "+34 871 95 20 75",
+    "google_maps_url": "https://maps.google.com/?cid=1406319866521506135&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "finance",
+    "types": [
+      "consultant",
+      "finance",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "tax advisor Mallorca expats",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJj0-e5FuSlxIRV9GWtHdAhBM",
+      "types": [
+        "consultant",
+        "finance",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 871 95 20 75",
+      "formattedAddress": "Carrer de Sant Miquel, 30, 5ºA, Centre, 07002 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.5734518,
+        "longitude": 2.6521827
+      },
+      "rating": 4.8,
+      "googleMapsUri": "https://maps.google.com/?cid=1406319866521506135&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://emprendix.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 176,
+      "displayName": {
+        "text": "Gestoría Emprendix",
+        "languageCode": "es"
+      },
+      "primaryType": "finance"
+    }
+  },
+  {
+    "google_place_id": "ChIJqd3wvqSTlxIR2Q_Bw9h_T1M",
+    "vertical_slug": "tax-advisors-mallorca",
+    "name": "Resitax",
+    "rating": 4.9,
+    "reviews_count": 14,
+    "address": "Pg. de Mallorca, 14A, Entresuelos C y D, Centre, 07012 Palma, Illes Balears",
+    "latitude": 39.572848,
+    "longitude": 2.642554,
+    "website": "https://www.resitax.eu/",
+    "phone": "+34 871 24 21 73",
+    "google_maps_url": "https://maps.google.com/?cid=6003157397282033625&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "consultant",
+    "types": [
+      "consultant",
+      "finance",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "tax advisor Mallorca expats",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJqd3wvqSTlxIR2Q_Bw9h_T1M",
+      "types": [
+        "consultant",
+        "finance",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 871 24 21 73",
+      "formattedAddress": "Pg. de Mallorca, 14A, Entresuelos C y D, Centre, 07012 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.572848,
+        "longitude": 2.642554
+      },
+      "rating": 4.9,
+      "googleMapsUri": "https://maps.google.com/?cid=6003157397282033625&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://www.resitax.eu/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 14,
+      "displayName": {
+        "text": "Resitax",
+        "languageCode": "es"
+      },
+      "primaryType": "consultant"
+    }
+  },
+  {
+    "google_place_id": "ChIJhYTcNVGSlxIRSNAQTKHysII",
+    "vertical_slug": "tax-advisors-mallorca",
+    "name": "Omnia Consulting steuerberater",
+    "rating": 4.8,
+    "reviews_count": 136,
+    "address": "Carrer de Sant Miquel, 46, 2º piso, 10-A y 10-B, Centre, 07002 Palma, Illes Balears",
+    "latitude": 39.574729399999995,
+    "longitude": 2.6522574,
+    "website": "https://www.omnia-consulting.com/",
+    "phone": "+34 971 28 84 42",
+    "google_maps_url": "https://maps.google.com/?cid=9417293595411533896&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "consultant",
+    "types": [
+      "real_estate_agency",
+      "lawyer",
+      "consultant",
+      "finance",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "tax consultant Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJhYTcNVGSlxIRSNAQTKHysII",
+      "types": [
+        "real_estate_agency",
+        "lawyer",
+        "consultant",
+        "finance",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 971 28 84 42",
+      "formattedAddress": "Carrer de Sant Miquel, 46, 2º piso, 10-A y 10-B, Centre, 07002 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.574729399999995,
+        "longitude": 2.6522574
+      },
+      "rating": 4.8,
+      "googleMapsUri": "https://maps.google.com/?cid=9417293595411533896&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://www.omnia-consulting.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 136,
+      "displayName": {
+        "text": "Omnia Consulting steuerberater",
+        "languageCode": "es"
+      },
+      "primaryType": "consultant"
+    }
+  },
+  {
+    "google_place_id": "ChIJkwRRPumSlxIRvI572Ga0Qus",
+    "vertical_slug": "tax-advisors-mallorca",
+    "name": "PlattesGroup SL",
+    "rating": 4.7,
+    "reviews_count": 185,
+    "address": "Camí dels Reis, 308, Edificio 3A, 2°, Norte, 07010 Palma, Illes Balears",
+    "latitude": 39.59733,
+    "longitude": 2.6452033999999998,
+    "website": "https://www.plattes.net/",
+    "phone": "+34 971 67 94 18",
+    "google_maps_url": "https://maps.google.com/?cid=16952310301187608252&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "consultant",
+    "types": [
+      "consultant",
+      "finance",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "tax consultant Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJkwRRPumSlxIRvI572Ga0Qus",
+      "types": [
+        "consultant",
+        "finance",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 971 67 94 18",
+      "formattedAddress": "Camí dels Reis, 308, Edificio 3A, 2°, Norte, 07010 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.59733,
+        "longitude": 2.6452033999999998
+      },
+      "rating": 4.7,
+      "googleMapsUri": "https://maps.google.com/?cid=16952310301187608252&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://www.plattes.net/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 185,
+      "displayName": {
+        "text": "PlattesGroup SL",
+        "languageCode": "es"
+      },
+      "primaryType": "consultant"
+    }
+  },
+  {
+    "google_place_id": "ChIJ1eK30t6TlxIRSYZfD7KllUk",
+    "vertical_slug": "tax-advisors-mallorca",
+    "name": "OnlyTax",
+    "rating": 4.7,
+    "reviews_count": 82,
+    "address": "Parc Bit, Carrer Galileo Galilei, 2, Edificio U, Oficina 2, Nord, 07120 Palma, Illes Balears",
+    "latitude": 39.6365546,
+    "longitude": 2.6316675,
+    "website": "https://onlytax.es/",
+    "phone": null,
+    "google_maps_url": "https://maps.google.com/?cid=5302326320479307337&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "consultant",
+    "types": [
+      "consultant",
+      "finance",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "tax consultant Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJ1eK30t6TlxIRSYZfD7KllUk",
+      "types": [
+        "consultant",
+        "finance",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "formattedAddress": "Parc Bit, Carrer Galileo Galilei, 2, Edificio U, Oficina 2, Nord, 07120 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.6365546,
+        "longitude": 2.6316675
+      },
+      "rating": 4.7,
+      "googleMapsUri": "https://maps.google.com/?cid=5302326320479307337&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://onlytax.es/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 82,
+      "displayName": {
+        "text": "OnlyTax",
+        "languageCode": "es"
+      },
+      "primaryType": "consultant"
+    }
+  },
+  {
+    "google_place_id": "ChIJgfXhKJyTlxIRFUFyDDGq9p0",
+    "vertical_slug": "tax-advisors-mallorca",
+    "name": "Quamtia Asesores (Gestoría Palma)",
+    "rating": 4.9,
+    "reviews_count": 38,
+    "address": "Carrer del Fluvià, 1, Llevant, 07009 Palma, Illes Balears",
+    "latitude": 39.5945379,
+    "longitude": 2.6758311,
+    "website": "https://quamtia.es/",
+    "phone": "+34 611 62 14 60",
+    "google_maps_url": "https://maps.google.com/?cid=11382472235864441109&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "consultant",
+    "types": [
+      "accounting",
+      "lawyer",
+      "consultant",
+      "finance",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "tax consultant Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJgfXhKJyTlxIRFUFyDDGq9p0",
+      "types": [
+        "accounting",
+        "lawyer",
+        "consultant",
+        "finance",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 611 62 14 60",
+      "formattedAddress": "Carrer del Fluvià, 1, Llevant, 07009 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.5945379,
+        "longitude": 2.6758311
+      },
+      "rating": 4.9,
+      "googleMapsUri": "https://maps.google.com/?cid=11382472235864441109&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://quamtia.es/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 38,
+      "displayName": {
+        "text": "Quamtia Asesores (Gestoría Palma)",
+        "languageCode": "es"
+      },
+      "primaryType": "consultant"
+    }
+  },
+  {
+    "google_place_id": "ChIJqbaIWDuTlxIRylVs6LYtM4w",
+    "vertical_slug": "tax-advisors-mallorca",
+    "name": "Perfil Asesor",
+    "rating": 4.9,
+    "reviews_count": 557,
+    "address": "Gremi des Fusters, 33, local 6, Norte, Norte, 07009 Palma, Illes Balears",
+    "latitude": 39.6064905,
+    "longitude": 2.670163,
+    "website": "http://perfilasesor.com/",
+    "phone": "+34 971 79 50 59",
+    "google_maps_url": "https://maps.google.com/?cid=10102468652728866250&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "finance",
+    "types": [
+      "accounting",
+      "consultant",
+      "finance",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "tax consultant Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJqbaIWDuTlxIRylVs6LYtM4w",
+      "types": [
+        "accounting",
+        "consultant",
+        "finance",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 971 79 50 59",
+      "formattedAddress": "Gremi des Fusters, 33, local 6, Norte, Norte, 07009 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.6064905,
+        "longitude": 2.670163
+      },
+      "rating": 4.9,
+      "googleMapsUri": "https://maps.google.com/?cid=10102468652728866250&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "http://perfilasesor.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 557,
+      "displayName": {
+        "text": "Perfil Asesor",
+        "languageCode": "es"
+      },
+      "primaryType": "finance"
+    }
+  },
+  {
+    "google_place_id": "ChIJs8ArsWmJlxIRdau-wlkBIqA",
+    "vertical_slug": "tax-advisors-mallorca",
+    "name": "GESTORIA del PILAR",
+    "rating": 5,
+    "reviews_count": 113,
+    "address": "Carrer de les Parellades, 12A, piso 3, of. 33, Centre, 07003 Palma, Illes Balears",
+    "latitude": 39.5772718,
+    "longitude": 2.648757,
+    "website": "http://www.gestoriadelpilar.com/",
+    "phone": "+34 680 15 98 11",
+    "google_maps_url": "https://maps.google.com/?cid=11538786680307624821&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "finance",
+    "types": [
+      "finance",
+      "point_of_interest",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "English speaking tax advisor Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJs8ArsWmJlxIRdau-wlkBIqA",
+      "types": [
+        "finance",
+        "point_of_interest",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 680 15 98 11",
+      "formattedAddress": "Carrer de les Parellades, 12A, piso 3, of. 33, Centre, 07003 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.5772718,
+        "longitude": 2.648757
+      },
+      "rating": 5,
+      "googleMapsUri": "https://maps.google.com/?cid=11538786680307624821&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "http://www.gestoriadelpilar.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 113,
+      "displayName": {
+        "text": "GESTORIA del PILAR",
+        "languageCode": "es"
+      },
+      "primaryType": "finance"
+    }
+  },
+  {
+    "google_place_id": "ChIJ29IMbyxeKGQRH-yRNdi5MfA",
+    "vertical_slug": "tax-advisors-mallorca",
+    "name": "SamirLaw - International Tax & Residency Lawyers",
+    "rating": 5,
+    "reviews_count": 11,
+    "address": "Carrer de Còrdova, 5, 07181 Palmanova, Illes Balears",
+    "latitude": 39.5298308,
+    "longitude": 2.5396804000000004,
+    "website": "https://www.samirlaw.com/",
+    "phone": "+34 871 18 01 13",
+    "google_maps_url": "https://maps.google.com/?cid=17307819181224356895&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "lawyer",
+    "types": [
+      "accounting",
+      "lawyer",
+      "consultant",
+      "finance",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "non resident tax advisor Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJ29IMbyxeKGQRH-yRNdi5MfA",
+      "types": [
+        "accounting",
+        "lawyer",
+        "consultant",
+        "finance",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 871 18 01 13",
+      "formattedAddress": "Carrer de Còrdova, 5, 07181 Palmanova, Illes Balears",
+      "location": {
+        "latitude": 39.5298308,
+        "longitude": 2.5396804000000004
+      },
+      "rating": 5,
+      "googleMapsUri": "https://maps.google.com/?cid=17307819181224356895&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://www.samirlaw.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 11,
+      "displayName": {
+        "text": "SamirLaw - International Tax & Residency Lawyers",
+        "languageCode": "es"
+      },
+      "primaryType": "lawyer"
+    }
+  },
+  {
+    "google_place_id": "ChIJgc0-liKTlxIReOJYYUBEEVg",
+    "vertical_slug": "tax-advisors-mallorca",
+    "name": "Gestoría Pòrtol",
+    "rating": 4.9,
+    "reviews_count": 1989,
+    "address": "Gran Via Asima, 15, 1º Izquierda, Nord, 07009 Polígon industrial de Son Castelló, Illes Balears",
+    "latitude": 39.6053861,
+    "longitude": 2.6691157,
+    "website": "https://www.gestoriaportol.com/",
+    "phone": "+34 971 90 80 95",
+    "google_maps_url": "https://maps.google.com/?cid=6345928393243550328&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "finance",
+    "types": [
+      "accounting",
+      "consultant",
+      "finance",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "non resident tax advisor Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJgc0-liKTlxIReOJYYUBEEVg",
+      "types": [
+        "accounting",
+        "consultant",
+        "finance",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 971 90 80 95",
+      "formattedAddress": "Gran Via Asima, 15, 1º Izquierda, Nord, 07009 Polígon industrial de Son Castelló, Illes Balears",
+      "location": {
+        "latitude": 39.6053861,
+        "longitude": 2.6691157
+      },
+      "rating": 4.9,
+      "googleMapsUri": "https://maps.google.com/?cid=6345928393243550328&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://www.gestoriaportol.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 1989,
+      "displayName": {
+        "text": "Gestoría Pòrtol",
+        "languageCode": "es"
+      },
+      "primaryType": "finance"
+    }
+  },
+  {
+    "google_place_id": "ChIJPbVZVCJ_JEIRppjnbeiE-I8",
+    "vertical_slug": "tax-advisors-mallorca",
+    "name": "NomadTaxSpain",
+    "rating": 5,
+    "reviews_count": 13,
+    "address": "Plaça Major, Centre, 07002 Palma, Illes Balears",
+    "latitude": 39.571396299999996,
+    "longitude": 2.6517432999999997,
+    "website": "https://www.nomadtaxspain.com/",
+    "phone": "+34 624 55 05 66",
+    "google_maps_url": "https://maps.google.com/?cid=10374187875459111078&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "consultant",
+    "types": [
+      "consultant",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "non resident tax advisor Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJPbVZVCJ_JEIRppjnbeiE-I8",
+      "types": [
+        "consultant",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 624 55 05 66",
+      "formattedAddress": "Plaça Major, Centre, 07002 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.571396299999996,
+        "longitude": 2.6517432999999997
+      },
+      "rating": 5,
+      "googleMapsUri": "https://maps.google.com/?cid=10374187875459111078&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://www.nomadtaxspain.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 13,
+      "displayName": {
+        "text": "NomadTaxSpain",
+        "languageCode": "es"
+      },
+      "primaryType": "consultant"
+    }
+  },
+  {
+    "google_place_id": "ChIJubhYtkqTlxIR05gDZyjt5Xc",
+    "vertical_slug": "tax-advisors-mallorca",
+    "name": "Gestoria Mariam Morey",
+    "rating": 4.5,
+    "reviews_count": 401,
+    "address": "Carrer de Julián Gayarre, 3, local 1, Norte, 07004 Palma, Illes Balears",
+    "latitude": 39.5850669,
+    "longitude": 2.6631798,
+    "website": "http://gestoriamorey.com/",
+    "phone": "+34 638 56 39 41",
+    "google_maps_url": "https://maps.google.com/?cid=8639572217962928339&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "finance",
+    "types": [
+      "finance",
+      "point_of_interest",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "non resident tax advisor Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJubhYtkqTlxIR05gDZyjt5Xc",
+      "types": [
+        "finance",
+        "point_of_interest",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 638 56 39 41",
+      "formattedAddress": "Carrer de Julián Gayarre, 3, local 1, Norte, 07004 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.5850669,
+        "longitude": 2.6631798
+      },
+      "rating": 4.5,
+      "googleMapsUri": "https://maps.google.com/?cid=8639572217962928339&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "http://gestoriamorey.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 401,
+      "displayName": {
+        "text": "Gestoria Mariam Morey",
+        "languageCode": "es"
+      },
+      "primaryType": "finance"
+    }
+  },
+  {
+    "google_place_id": "ChIJhXuexb6TlxIRXerAnGRUXa4",
+    "vertical_slug": "tax-advisors-mallorca",
+    "name": "Tous y Solis Asesores SCP",
+    "rating": 5,
+    "reviews_count": 49,
+    "address": "Carrer de les Parellades Num 12-3-23, Centre, 07003 Palma, Illes Balears",
+    "latitude": 39.577348199999996,
+    "longitude": 2.6490091000000002,
+    "website": "http://www.asesoria-toussolis.com/",
+    "phone": "+34 971 71 73 60",
+    "google_maps_url": "https://maps.google.com/?cid=12564291326536903261&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "consultant",
+    "types": [
+      "accounting",
+      "lawyer",
+      "consultant",
+      "finance",
+      "point_of_interest",
+      "association_or_organization",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "non resident tax advisor Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJhXuexb6TlxIRXerAnGRUXa4",
+      "types": [
+        "accounting",
+        "lawyer",
+        "consultant",
+        "finance",
+        "point_of_interest",
+        "association_or_organization",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 971 71 73 60",
+      "formattedAddress": "Carrer de les Parellades Num 12-3-23, Centre, 07003 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.577348199999996,
+        "longitude": 2.6490091000000002
+      },
+      "rating": 5,
+      "googleMapsUri": "https://maps.google.com/?cid=12564291326536903261&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "http://www.asesoria-toussolis.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 49,
+      "displayName": {
+        "text": "Tous y Solis Asesores SCP",
+        "languageCode": "es"
+      },
+      "primaryType": "consultant"
+    }
+  },
+  {
+    "google_place_id": "ChIJ_fTfQa6TlxIRb7sti5e_dYI",
+    "vertical_slug": "tax-advisors-mallorca",
+    "name": "Asesoria Serra & Femenias",
+    "rating": 5,
+    "reviews_count": 38,
+    "address": "C. de Manacor, 54, 1 2, Llevant, 07006 Palma, Illes Balears",
+    "latitude": 39.5712725,
+    "longitude": 2.6646179,
+    "website": "https://www.asesoria.org/",
+    "phone": "+34 971 27 04 99",
+    "google_maps_url": "https://maps.google.com/?cid=9400630454801775471&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "consultant",
+    "types": [
+      "accounting",
+      "consultant",
+      "finance",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "non resident tax advisor Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJ_fTfQa6TlxIRb7sti5e_dYI",
+      "types": [
+        "accounting",
+        "consultant",
+        "finance",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 971 27 04 99",
+      "formattedAddress": "C. de Manacor, 54, 1 2, Llevant, 07006 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.5712725,
+        "longitude": 2.6646179
+      },
+      "rating": 5,
+      "googleMapsUri": "https://maps.google.com/?cid=9400630454801775471&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://www.asesoria.org/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 38,
+      "displayName": {
+        "text": "Asesoria Serra & Femenias",
+        "languageCode": "es"
+      },
+      "primaryType": "consultant"
+    }
+  },
+  {
+    "google_place_id": "ChIJz6YBWbuJlxIRyuZYlLGq5k8",
+    "vertical_slug": "tax-advisors-mallorca",
+    "name": "Blevins Franks Wealth Management Ltd",
+    "rating": 5,
+    "reviews_count": 10,
+    "address": "Via Puig del Castellet 1, Boulevard, Local 1, bloque 5, 07180 Santa Ponça, Illes Balears",
+    "latitude": 39.51679550000001,
+    "longitude": 2.4895966,
+    "website": "https://www.blevinsfranks.com/",
+    "phone": "+34 971 71 91 81",
+    "google_maps_url": "https://maps.google.com/?cid=5757476853314545354&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "consultant",
+    "types": [
+      "consultant",
+      "finance",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "non resident tax advisor Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJz6YBWbuJlxIRyuZYlLGq5k8",
+      "types": [
+        "consultant",
+        "finance",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 971 71 91 81",
+      "formattedAddress": "Via Puig del Castellet 1, Boulevard, Local 1, bloque 5, 07180 Santa Ponça, Illes Balears",
+      "location": {
+        "latitude": 39.51679550000001,
+        "longitude": 2.4895966
+      },
+      "rating": 5,
+      "googleMapsUri": "https://maps.google.com/?cid=5757476853314545354&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://www.blevinsfranks.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 10,
+      "displayName": {
+        "text": "Blevins Franks Wealth Management Ltd",
+        "languageCode": "en"
+      },
+      "primaryType": "consultant"
+    }
+  },
+  {
+    "google_place_id": "ChIJq6pqnDyTlxIRkFDO_ZRjvFs",
+    "vertical_slug": "tax-advisors-mallorca",
+    "name": "LGS Asesores",
+    "rating": 4.8,
+    "reviews_count": 457,
+    "address": "Gran Via Asima, 20, 2ª Planta - Oficina 13, Nord, 07009 Palma, Illes Balears",
+    "latitude": 39.6055176,
+    "longitude": 2.6702133999999997,
+    "website": "https://lgsasesores.es/",
+    "phone": "+34 971 09 94 31",
+    "google_maps_url": "https://maps.google.com/?cid=6610267844637511824&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "consultant",
+    "types": [
+      "consultant",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "non resident tax advisor Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJq6pqnDyTlxIRkFDO_ZRjvFs",
+      "types": [
+        "consultant",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 971 09 94 31",
+      "formattedAddress": "Gran Via Asima, 20, 2ª Planta - Oficina 13, Nord, 07009 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.6055176,
+        "longitude": 2.6702133999999997
+      },
+      "rating": 4.8,
+      "googleMapsUri": "https://maps.google.com/?cid=6610267844637511824&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://lgsasesores.es/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 457,
+      "displayName": {
+        "text": "LGS Asesores",
+        "languageCode": "es"
+      },
+      "primaryType": "consultant"
+    }
+  },
+  {
+    "google_place_id": "ChIJfc-AM7mTlxIR3452XYQGwWU",
+    "vertical_slug": "tax-advisors-mallorca",
+    "name": "Gestoría G1 Palma de Mallorca",
+    "rating": 4.6,
+    "reviews_count": 77,
+    "address": "Gran Vía Asima, 31, nord 1º despacho 9, Norte, 07009 Palma, Illes Balears",
+    "latitude": 39.6103028,
+    "longitude": 2.6644756,
+    "website": "http://gestoria1.com/",
+    "phone": "+34 871 15 99 39",
+    "google_maps_url": "https://maps.google.com/?cid=7332148833909378783&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "finance",
+    "types": [
+      "finance",
+      "point_of_interest",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "gestoria fiscal Mallorca extranjeros",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJfc-AM7mTlxIR3452XYQGwWU",
+      "types": [
+        "finance",
+        "point_of_interest",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 871 15 99 39",
+      "formattedAddress": "Gran Vía Asima, 31, nord 1º despacho 9, Norte, 07009 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.6103028,
+        "longitude": 2.6644756
+      },
+      "rating": 4.6,
+      "googleMapsUri": "https://maps.google.com/?cid=7332148833909378783&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "http://gestoria1.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 77,
+      "displayName": {
+        "text": "Gestoría G1 Palma de Mallorca",
+        "languageCode": "es"
+      },
+      "primaryType": "finance"
+    }
+  },
+  {
+    "google_place_id": "ChIJsaIXNwiTlxIRED0tQQNfSoY",
+    "vertical_slug": "tax-advisors-mallorca",
+    "name": "Gestoria Cabezas Echegoyen",
+    "rating": 4.9,
+    "reviews_count": 63,
+    "address": "Carrer Femenies, 9, Ponent, 07013 Palma, Illes Balears",
+    "latitude": 39.5768578,
+    "longitude": 2.6402539,
+    "website": "http://www.gestoriacabezasechegoyen.com/",
+    "phone": "+34 643 27 66 89",
+    "google_maps_url": "https://maps.google.com/?cid=9676651216941956368&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "finance",
+    "types": [
+      "corporate_office",
+      "finance",
+      "point_of_interest",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "gestoria fiscal Mallorca extranjeros",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJsaIXNwiTlxIRED0tQQNfSoY",
+      "types": [
+        "corporate_office",
+        "finance",
+        "point_of_interest",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 643 27 66 89",
+      "formattedAddress": "Carrer Femenies, 9, Ponent, 07013 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.5768578,
+        "longitude": 2.6402539
+      },
+      "rating": 4.9,
+      "googleMapsUri": "https://maps.google.com/?cid=9676651216941956368&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "http://www.gestoriacabezasechegoyen.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 63,
+      "displayName": {
+        "text": "Gestoria Cabezas Echegoyen",
+        "languageCode": "es"
+      },
+      "primaryType": "finance"
+    }
+  },
+  {
+    "google_place_id": "ChIJ0eEA-v_MlxIReWGKjrs8t4w",
+    "vertical_slug": "tax-advisors-mallorca",
+    "name": "Gestoria Admin. Cladera Moragues",
+    "rating": 4.7,
+    "reviews_count": 39,
+    "address": "Carrer Joan Carles I, 63, A, Baixos, 07440 Muro, Illes Balears",
+    "latitude": 39.734643,
+    "longitude": 3.0541476,
+    "website": "http://www.gestoriacladeramoragues.com/",
+    "phone": "+34 971 53 74 75",
+    "google_maps_url": "https://maps.google.com/?cid=10139639862295945593&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "finance",
+    "types": [
+      "finance",
+      "point_of_interest",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "gestoria fiscal Mallorca extranjeros",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJ0eEA-v_MlxIReWGKjrs8t4w",
+      "types": [
+        "finance",
+        "point_of_interest",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 971 53 74 75",
+      "formattedAddress": "Carrer Joan Carles I, 63, A, Baixos, 07440 Muro, Illes Balears",
+      "location": {
+        "latitude": 39.734643,
+        "longitude": 3.0541476
+      },
+      "rating": 4.7,
+      "googleMapsUri": "https://maps.google.com/?cid=10139639862295945593&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "http://www.gestoriacladeramoragues.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 39,
+      "displayName": {
+        "text": "Gestoria Admin. Cladera Moragues",
+        "languageCode": "es"
+      },
+      "primaryType": "finance"
+    }
+  },
+  {
+    "google_place_id": "ChIJizW4bBaTlxIRuh68WaPu8jg",
+    "vertical_slug": "tax-advisors-mallorca",
+    "name": "PYR Asesores",
+    "rating": 4.8,
+    "reviews_count": 72,
+    "address": "Carrer Gremi de Sabaters, 21, LOCAL 7, Nord, 07009 Palma, Illes Balears",
+    "latitude": 39.5992779,
+    "longitude": 2.6689537,
+    "website": "https://www.pyrasesores.es/",
+    "phone": "+34 871 55 22 77",
+    "google_maps_url": "https://maps.google.com/?cid=4103604595840523962&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "consultant",
+    "types": [
+      "accounting",
+      "local_government_office",
+      "government_office",
+      "finance",
+      "lawyer",
+      "consultant",
+      "service",
+      "point_of_interest",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "gestoria fiscal Mallorca extranjeros",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJizW4bBaTlxIRuh68WaPu8jg",
+      "types": [
+        "accounting",
+        "local_government_office",
+        "government_office",
+        "finance",
+        "lawyer",
+        "consultant",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 871 55 22 77",
+      "formattedAddress": "Carrer Gremi de Sabaters, 21, LOCAL 7, Nord, 07009 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.5992779,
+        "longitude": 2.6689537
+      },
+      "rating": 4.8,
+      "googleMapsUri": "https://maps.google.com/?cid=4103604595840523962&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://www.pyrasesores.es/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 72,
+      "displayName": {
+        "text": "PYR Asesores",
+        "languageCode": "es"
+      },
+      "primaryType": "consultant"
+    }
+  },
+  {
+    "google_place_id": "ChIJk9kUawaTlxIRt3dbBJEC3wQ",
+    "vertical_slug": "tax-advisors-mallorca",
+    "name": "Es triangle",
+    "rating": 5,
+    "reviews_count": 139,
+    "address": "Carrer del Llampúgol, 37, Llevant, 07005 Palma, Illes Balears",
+    "latitude": 39.583492,
+    "longitude": 2.6660871999999998,
+    "website": "https://estriangle.com/",
+    "phone": "+34 971 24 11 74",
+    "google_maps_url": "https://maps.google.com/?cid=351002117824804791&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "consultant",
+    "types": [
+      "accounting",
+      "finance",
+      "consultant",
+      "service",
+      "point_of_interest",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "gestoria fiscal Mallorca extranjeros",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJk9kUawaTlxIRt3dbBJEC3wQ",
+      "types": [
+        "accounting",
+        "finance",
+        "consultant",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 971 24 11 74",
+      "formattedAddress": "Carrer del Llampúgol, 37, Llevant, 07005 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.583492,
+        "longitude": 2.6660871999999998
+      },
+      "rating": 5,
+      "googleMapsUri": "https://maps.google.com/?cid=351002117824804791&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://estriangle.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 139,
+      "displayName": {
+        "text": "Es triangle",
+        "languageCode": "es"
+      },
+      "primaryType": "consultant"
+    }
+  },
+  {
+    "google_place_id": "ChIJe-UjoLGOlxIR_d1uh_HmALo",
+    "vertical_slug": "tax-advisors-mallorca",
+    "name": "Puga & Alarcón Asesores y Abogados",
+    "rating": 5,
+    "reviews_count": 226,
+    "address": "Carrer Saragossa, 1, Piso 1º Local F, 07181 Palmanova, Illes Balears",
+    "latitude": 39.5287987,
+    "longitude": 2.5460396,
+    "website": "http://www.puga-alarcon.com/index.html",
+    "phone": "+34 971 23 61 01",
+    "google_maps_url": "https://maps.google.com/?cid=13402966416088292861&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "consultant",
+    "types": [
+      "finance",
+      "point_of_interest",
+      "consultant",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "asesor fiscal Mallorca expats",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJe-UjoLGOlxIR_d1uh_HmALo",
+      "types": [
+        "finance",
+        "point_of_interest",
+        "consultant",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 971 23 61 01",
+      "formattedAddress": "Carrer Saragossa, 1, Piso 1º Local F, 07181 Palmanova, Illes Balears",
+      "location": {
+        "latitude": 39.5287987,
+        "longitude": 2.5460396
+      },
+      "rating": 5,
+      "googleMapsUri": "https://maps.google.com/?cid=13402966416088292861&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "http://www.puga-alarcon.com/index.html",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 226,
+      "displayName": {
+        "text": "Puga & Alarcón Asesores y Abogados",
+        "languageCode": "es"
+      },
+      "primaryType": "consultant"
+    }
+  },
+  {
+    "google_place_id": "ChIJKYfPUbuJlxIRnnU8Cc1tJkU",
+    "vertical_slug": "tax-advisors-mallorca",
+    "name": "Global Consulting Mallorca",
+    "rating": 4.6,
+    "reviews_count": 23,
+    "address": "Local1 Global Consulting, Gran Via Puig des Castellet, 1, Bl. 6, 07180 Santa Ponça, Illes Balears",
+    "latitude": 39.5161629,
+    "longitude": 2.4896276,
+    "website": "http://www.gcmca.es/",
+    "phone": "+34 971 69 40 44",
+    "google_maps_url": "https://maps.google.com/?cid=4982790765122712990&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "consultant",
+    "types": [
+      "point_of_interest",
+      "consultant",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "asesor fiscal Mallorca expats",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJKYfPUbuJlxIRnnU8Cc1tJkU",
+      "types": [
+        "point_of_interest",
+        "consultant",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 971 69 40 44",
+      "formattedAddress": "Local1 Global Consulting, Gran Via Puig des Castellet, 1, Bl. 6, 07180 Santa Ponça, Illes Balears",
+      "location": {
+        "latitude": 39.5161629,
+        "longitude": 2.4896276
+      },
+      "rating": 4.6,
+      "googleMapsUri": "https://maps.google.com/?cid=4982790765122712990&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "http://www.gcmca.es/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 23,
+      "displayName": {
+        "text": "Global Consulting Mallorca",
+        "languageCode": "es"
+      },
+      "primaryType": "consultant"
+    }
+  },
+  {
+    "google_place_id": "ChIJAzDSVgiSlxIRULBUan7_50Q",
+    "vertical_slug": "tax-advisors-mallorca",
+    "name": "De Micco & Friends Rechtsanwälte",
+    "rating": 4.7,
+    "reviews_count": 215,
+    "address": "C. Llorenc y Vicens 3, Centre, 07002 Palma, Illes Balears",
+    "latitude": 39.5736174,
+    "longitude": 2.6554009,
+    "website": "http://www.lawyers-auditors.com/",
+    "phone": "+34 871 95 50 77",
+    "google_maps_url": "https://maps.google.com/?cid=4965218032614158416&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "consultant",
+    "types": [
+      "accounting",
+      "lawyer",
+      "consultant",
+      "finance",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "steuerberater Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJAzDSVgiSlxIRULBUan7_50Q",
+      "types": [
+        "accounting",
+        "lawyer",
+        "consultant",
+        "finance",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 871 95 50 77",
+      "formattedAddress": "C. Llorenc y Vicens 3, Centre, 07002 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.5736174,
+        "longitude": 2.6554009
+      },
+      "rating": 4.7,
+      "googleMapsUri": "https://maps.google.com/?cid=4965218032614158416&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "http://www.lawyers-auditors.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 215,
+      "displayName": {
+        "text": "De Micco & Friends Rechtsanwälte",
+        "languageCode": "de"
+      },
+      "primaryType": "consultant"
+    }
+  },
+  {
+    "google_place_id": "ChIJOx6zWSeTlxIRH5UwoNQrapc",
+    "vertical_slug": "tax-advisors-mallorca",
+    "name": "Abogados 5.0",
+    "rating": 4.9,
+    "reviews_count": 1090,
+    "address": "Carrer de les Parellades, 12A, 2°, Despacho 34, Centre, 07003 Palma, Illes Balears",
+    "latitude": 39.5772718,
+    "longitude": 2.648757,
+    "website": "https://www.abogados50.com/",
+    "phone": "+34 663 93 82 64",
+    "google_maps_url": "https://maps.google.com/?cid=10910581239479047455&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "lawyer",
+    "types": [
+      "lawyer",
+      "accounting",
+      "consultant",
+      "finance",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "tax lawyer Mallorca non residents",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJOx6zWSeTlxIRH5UwoNQrapc",
+      "types": [
+        "lawyer",
+        "accounting",
+        "consultant",
+        "finance",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 663 93 82 64",
+      "formattedAddress": "Carrer de les Parellades, 12A, 2°, Despacho 34, Centre, 07003 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.5772718,
+        "longitude": 2.648757
+      },
+      "rating": 4.9,
+      "googleMapsUri": "https://maps.google.com/?cid=10910581239479047455&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://www.abogados50.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 1090,
+      "displayName": {
+        "text": "Abogados 5.0",
+        "languageCode": "es"
+      },
+      "primaryType": "lawyer"
+    }
+  },
+  {
+    "google_place_id": "ChIJ1_yC9ueTlxIR1_eTgnEAcLs",
+    "vertical_slug": "tax-advisors-mallorca",
+    "name": "AB Legal",
+    "rating": 4.9,
+    "reviews_count": 30,
+    "address": "Carrer dels Llums, 8, Centre, 07001 Palma, Illes Balears",
+    "latitude": 39.5695388,
+    "longitude": 2.6506773,
+    "website": "http://www.ablegal.es/",
+    "phone": "+34 971 96 50 76",
+    "google_maps_url": "https://maps.google.com/?cid=13506295770006157271&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "lawyer",
+    "types": [
+      "accounting",
+      "lawyer",
+      "consultant",
+      "finance",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "tax lawyer Mallorca non residents",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJ1_yC9ueTlxIR1_eTgnEAcLs",
+      "types": [
+        "accounting",
+        "lawyer",
+        "consultant",
+        "finance",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 971 96 50 76",
+      "formattedAddress": "Carrer dels Llums, 8, Centre, 07001 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.5695388,
+        "longitude": 2.6506773
+      },
+      "rating": 4.9,
+      "googleMapsUri": "https://maps.google.com/?cid=13506295770006157271&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "http://www.ablegal.es/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 30,
+      "displayName": {
+        "text": "AB Legal",
+        "languageCode": "es"
+      },
+      "primaryType": "lawyer"
+    }
+  },
+  {
+    "google_place_id": "ChIJIRWt31mSlxIRa-8rqi2kSnc",
+    "vertical_slug": "tax-advisors-mallorca",
+    "name": "Raso y Asociados",
+    "rating": 4.8,
+    "reviews_count": 62,
+    "address": "Carrer Femenies, 2, entresuelo A, Ponent, 07013 Palma, Illes Balears",
+    "latitude": 39.5772345,
+    "longitude": 2.6406642,
+    "website": "https://www.rasoyasociados.com/",
+    "phone": "+34 600 33 84 63",
+    "google_maps_url": "https://maps.google.com/?cid=8595863354825502571&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "lawyer",
+    "types": [
+      "lawyer",
+      "consultant",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "tax lawyer Mallorca non residents",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJIRWt31mSlxIRa-8rqi2kSnc",
+      "types": [
+        "lawyer",
+        "consultant",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 600 33 84 63",
+      "formattedAddress": "Carrer Femenies, 2, entresuelo A, Ponent, 07013 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.5772345,
+        "longitude": 2.6406642
+      },
+      "rating": 4.8,
+      "googleMapsUri": "https://maps.google.com/?cid=8595863354825502571&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://www.rasoyasociados.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 62,
+      "displayName": {
+        "text": "Raso y Asociados",
+        "languageCode": "es"
+      },
+      "primaryType": "lawyer"
+    }
+  },
+  {
+    "google_place_id": "ChIJZ2V_9VySlxIRB7sOcvwXHPo",
+    "vertical_slug": "tax-advisors-mallorca",
+    "name": "Castell Abogados",
+    "rating": 4.7,
+    "reviews_count": 333,
+    "address": "Carrer del General Riera, 1, 3º D, Norte, 07003 Palma, Illes Balears",
+    "latitude": 39.5786887,
+    "longitude": 2.6484373999999997,
+    "website": "https://www.castellabogados.com/",
+    "phone": "+34 684 45 04 50",
+    "google_maps_url": "https://maps.google.com/?cid=18022306181842647815&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "lawyer",
+    "types": [
+      "lawyer",
+      "consultant",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "tax lawyer Mallorca non residents",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJZ2V_9VySlxIRB7sOcvwXHPo",
+      "types": [
+        "lawyer",
+        "consultant",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 684 45 04 50",
+      "formattedAddress": "Carrer del General Riera, 1, 3º D, Norte, 07003 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.5786887,
+        "longitude": 2.6484373999999997
+      },
+      "rating": 4.7,
+      "googleMapsUri": "https://maps.google.com/?cid=18022306181842647815&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://www.castellabogados.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 333,
+      "displayName": {
+        "text": "Castell Abogados",
+        "languageCode": "es"
+      },
+      "primaryType": "lawyer"
+    }
+  },
+  {
+    "google_place_id": "ChIJyYOrSkuTlxIRi7ZCw0E_clQ",
+    "vertical_slug": "tax-advisors-mallorca",
+    "name": "Capllonch Advocats",
+    "rating": 4.9,
+    "reviews_count": 55,
+    "address": "Plaça del, Plaça del Comtat del Rosselló, 4A, 2on, Centre, 07002 pis, Illes Balears",
+    "latitude": 39.5741483,
+    "longitude": 2.6546852,
+    "website": "https://capllonchadvocats.com/",
+    "phone": "+34 971 75 97 28",
+    "google_maps_url": "https://maps.google.com/?cid=6084995598212314763&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "lawyer",
+    "types": [
+      "lawyer",
+      "consultant",
+      "finance",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "tax lawyer Mallorca non residents",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJyYOrSkuTlxIRi7ZCw0E_clQ",
+      "types": [
+        "lawyer",
+        "consultant",
+        "finance",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 971 75 97 28",
+      "formattedAddress": "Plaça del, Plaça del Comtat del Rosselló, 4A, 2on, Centre, 07002 pis, Illes Balears",
+      "location": {
+        "latitude": 39.5741483,
+        "longitude": 2.6546852
+      },
+      "rating": 4.9,
+      "googleMapsUri": "https://maps.google.com/?cid=6084995598212314763&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://capllonchadvocats.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 55,
+      "displayName": {
+        "text": "Capllonch Advocats",
+        "languageCode": "ca"
+      },
+      "primaryType": "lawyer"
+    }
+  },
+  {
+    "google_place_id": "ChIJtS0oAFOSlxIR7eKy71n4blc",
+    "vertical_slug": "tax-advisors-mallorca",
+    "name": "Lamas Lawyers",
+    "rating": 4.8,
+    "reviews_count": 28,
+    "address": "Carrer Del Sindicat, 69, Centre, 07002 Palma, Illes Balears",
+    "latitude": 39.5725468,
+    "longitude": 2.6563279,
+    "website": "http://www.lamas-lawyers.com/",
+    "phone": "+34 971 72 02 02",
+    "google_maps_url": "https://maps.google.com/?cid=6300245993895158509&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "lawyer",
+    "types": [
+      "lawyer",
+      "accounting",
+      "consultant",
+      "finance",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "tax lawyer Mallorca non residents",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJtS0oAFOSlxIR7eKy71n4blc",
+      "types": [
+        "lawyer",
+        "accounting",
+        "consultant",
+        "finance",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 971 72 02 02",
+      "formattedAddress": "Carrer Del Sindicat, 69, Centre, 07002 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.5725468,
+        "longitude": 2.6563279
+      },
+      "rating": 4.8,
+      "googleMapsUri": "https://maps.google.com/?cid=6300245993895158509&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "http://www.lamas-lawyers.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 28,
+      "displayName": {
+        "text": "Lamas Lawyers",
+        "languageCode": "es"
+      },
+      "primaryType": "lawyer"
+    }
+  },
+  {
+    "google_place_id": "ChIJr3sqPVGSlxIRzoUwzi1d7vk",
+    "vertical_slug": "tax-advisors-mallorca",
+    "name": "Sierra Abogados & Inversiones",
+    "rating": 4.9,
+    "reviews_count": 213,
+    "address": "C, Costa de Can Muntaner, nº 6, 3º, Centre, 07003 Palma, Illes Balears",
+    "latitude": 39.574112299999996,
+    "longitude": 2.6517733,
+    "website": "https://www.sierraabogados.es/?utm_source=google&utm_medium=local&utm_campaign=google_my_business",
+    "phone": "+34 971 72 28 60",
+    "google_maps_url": "https://maps.google.com/?cid=18009434411215390158&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "lawyer",
+    "types": [
+      "lawyer",
+      "accounting",
+      "consultant",
+      "finance",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "tax lawyer Mallorca non residents",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJr3sqPVGSlxIRzoUwzi1d7vk",
+      "types": [
+        "lawyer",
+        "accounting",
+        "consultant",
+        "finance",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 971 72 28 60",
+      "formattedAddress": "C, Costa de Can Muntaner, nº 6, 3º, Centre, 07003 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.574112299999996,
+        "longitude": 2.6517733
+      },
+      "rating": 4.9,
+      "googleMapsUri": "https://maps.google.com/?cid=18009434411215390158&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://www.sierraabogados.es/?utm_source=google&utm_medium=local&utm_campaign=google_my_business",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 213,
+      "displayName": {
+        "text": "Sierra Abogados & Inversiones",
+        "languageCode": "es"
+      },
+      "primaryType": "lawyer"
+    }
+  },
+  {
+    "google_place_id": "ChIJ6X2fPlGSlxIRp6BckcAZbqQ",
+    "vertical_slug": "tax-advisors-mallorca",
+    "name": "Bufete Frau Lawyers",
+    "rating": 5,
+    "reviews_count": 15,
+    "address": "Carrer de Sant Miquel, 63 -2, Centre, 07002 Palma, Illes Balears",
+    "latitude": 39.5748951,
+    "longitude": 2.6519478999999997,
+    "website": "https://www.bufetefrau.com/en/",
+    "phone": "+34 971 22 80 36",
+    "google_maps_url": "https://maps.google.com/?cid=11848435984521535655&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "lawyer",
+    "types": [
+      "accounting",
+      "lawyer",
+      "consultant",
+      "health",
+      "finance",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "tax lawyer Mallorca non residents",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJ6X2fPlGSlxIRp6BckcAZbqQ",
+      "types": [
+        "accounting",
+        "lawyer",
+        "consultant",
+        "health",
+        "finance",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 971 22 80 36",
+      "formattedAddress": "Carrer de Sant Miquel, 63 -2, Centre, 07002 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.5748951,
+        "longitude": 2.6519478999999997
+      },
+      "rating": 5,
+      "googleMapsUri": "https://maps.google.com/?cid=11848435984521535655&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://www.bufetefrau.com/en/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 15,
+      "displayName": {
+        "text": "Bufete Frau Lawyers",
+        "languageCode": "es"
+      },
+      "primaryType": "lawyer"
+    }
+  },
+  {
+    "google_place_id": "ChIJ1e_LwlavlxIR7DRtTy6DTzY",
+    "vertical_slug": "tax-advisors-mallorca",
+    "name": "Puigserver Abogados",
+    "rating": 4.9,
+    "reviews_count": 31,
+    "address": "Av. d'Alemanya, 15, Centre, 07003 Palma, Illes Balears",
+    "latitude": 39.5765478,
+    "longitude": 2.6472360999999998,
+    "website": "http://www.puigserverabogados.com/",
+    "phone": "+34 661 76 01 63",
+    "google_maps_url": "https://maps.google.com/?cid=3913490836132541676&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "lawyer",
+    "types": [
+      "lawyer",
+      "consultant",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "tax lawyer Mallorca non residents",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJ1e_LwlavlxIR7DRtTy6DTzY",
+      "types": [
+        "lawyer",
+        "consultant",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 661 76 01 63",
+      "formattedAddress": "Av. d'Alemanya, 15, Centre, 07003 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.5765478,
+        "longitude": 2.6472360999999998
+      },
+      "rating": 4.9,
+      "googleMapsUri": "https://maps.google.com/?cid=3913490836132541676&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "http://www.puigserverabogados.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 31,
+      "displayName": {
+        "text": "Puigserver Abogados",
+        "languageCode": "es"
+      },
+      "primaryType": "lawyer"
+    }
+  },
+  {
+    "google_place_id": "ChIJScWTNlGSlxIRUG_JLeXNU-I",
+    "vertical_slug": "tax-advisors-mallorca",
+    "name": "Assessoria Moll",
+    "rating": 4.8,
+    "reviews_count": 25,
+    "address": "Carrer de Sant Miquel, 46, Centre, 07002 Palma, Illes Balears",
+    "latitude": 39.574805399999995,
+    "longitude": 2.6522264,
+    "website": "https://www.assessoriamoll.es/",
+    "phone": "+34 971 22 77 01",
+    "google_maps_url": "https://maps.google.com/?cid=16308605059838078800&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "consultant",
+    "types": [
+      "consultant",
+      "finance",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "modelo 210 Mallorca asesor fiscal",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJScWTNlGSlxIRUG_JLeXNU-I",
+      "types": [
+        "consultant",
+        "finance",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 971 22 77 01",
+      "formattedAddress": "Carrer de Sant Miquel, 46, Centre, 07002 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.574805399999995,
+        "longitude": 2.6522264
+      },
+      "rating": 4.8,
+      "googleMapsUri": "https://maps.google.com/?cid=16308605059838078800&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://www.assessoriamoll.es/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 25,
+      "displayName": {
+        "text": "Assessoria Moll",
+        "languageCode": "es"
+      },
+      "primaryType": "consultant"
+    }
+  }
+]

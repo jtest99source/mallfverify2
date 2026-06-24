@@ -1,0 +1,2199 @@
+[
+  {
+    "google_place_id": "ChIJi8NIW0WSlxIRwk9NyFHCuVU",
+    "vertical_slug": "property-managers-mallorca",
+    "name": "Porta Mallorquina",
+    "rating": 4.5,
+    "reviews_count": 47,
+    "address": "C. del Conquistador, 8, Centre, 07001 Palma, Illes Balears",
+    "latitude": 39.569207,
+    "longitude": 2.647955,
+    "website": "https://www.porta-mallorquina.de/",
+    "phone": "+34 871 71 62 90",
+    "google_maps_url": "https://maps.google.com/?cid=6177182020423995330&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "service",
+    "types": [
+      "real_estate_agency",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "Immobilienverwaltung Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJi8NIW0WSlxIRwk9NyFHCuVU",
+      "types": [
+        "real_estate_agency",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 871 71 62 90",
+      "formattedAddress": "C. del Conquistador, 8, Centre, 07001 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.569207,
+        "longitude": 2.647955
+      },
+      "rating": 4.5,
+      "googleMapsUri": "https://maps.google.com/?cid=6177182020423995330&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://www.porta-mallorquina.de/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 47,
+      "displayName": {
+        "text": "Porta Mallorquina",
+        "languageCode": "de"
+      },
+      "primaryType": "service"
+    }
+  },
+  {
+    "google_place_id": "ChIJa0l9EUKTlxIRSA4343gz7OU",
+    "vertical_slug": "property-managers-mallorca",
+    "name": "Immobilienbetreuung Mallorca S.L.",
+    "rating": 5,
+    "reviews_count": 5,
+    "address": "Carrer de Llorenç Vicens, 3, 4º, Centre, 07002 Palma, Illes Balears",
+    "latitude": 39.5736174,
+    "longitude": 2.6554009,
+    "website": "http://www.immobilienbetreuung-mallorca.com/",
+    "phone": "+34 971 74 73 72",
+    "google_maps_url": "https://maps.google.com/?cid=16567673723490340424&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "service",
+    "types": [
+      "real_estate_agency",
+      "finance",
+      "point_of_interest",
+      "consultant",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "Immobilienverwaltung Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJa0l9EUKTlxIRSA4343gz7OU",
+      "types": [
+        "real_estate_agency",
+        "finance",
+        "point_of_interest",
+        "consultant",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 971 74 73 72",
+      "formattedAddress": "Carrer de Llorenç Vicens, 3, 4º, Centre, 07002 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.5736174,
+        "longitude": 2.6554009
+      },
+      "rating": 5,
+      "googleMapsUri": "https://maps.google.com/?cid=16567673723490340424&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "http://www.immobilienbetreuung-mallorca.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 5,
+      "displayName": {
+        "text": "Immobilienbetreuung Mallorca S.L.",
+        "languageCode": "de"
+      },
+      "primaryType": "service"
+    }
+  },
+  {
+    "google_place_id": "ChIJX9fHw6-XlxIRmQP4qz6jwnM",
+    "vertical_slug": "property-managers-mallorca",
+    "name": "Mallorca Topimmobilien",
+    "rating": 4.4,
+    "reviews_count": 48,
+    "address": "Carrer de Na Plana, 2, 07609 Maioris Decima, Illes Balears",
+    "latitude": 39.453662099999995,
+    "longitude": 2.7514893,
+    "website": "https://www.mallorca-topimmobilien.de/de/index_0__1_sp1_1.html",
+    "phone": "+34 677 33 32 93",
+    "google_maps_url": "https://maps.google.com/?cid=8341408949412037529&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "service",
+    "types": [
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "Immobilienverwaltung Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJX9fHw6-XlxIRmQP4qz6jwnM",
+      "types": [
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 677 33 32 93",
+      "formattedAddress": "Carrer de Na Plana, 2, 07609 Maioris Decima, Illes Balears",
+      "location": {
+        "latitude": 39.453662099999995,
+        "longitude": 2.7514893
+      },
+      "rating": 4.4,
+      "googleMapsUri": "https://maps.google.com/?cid=8341408949412037529&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://www.mallorca-topimmobilien.de/de/index_0__1_sp1_1.html",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 48,
+      "displayName": {
+        "text": "Mallorca Topimmobilien",
+        "languageCode": "de"
+      },
+      "primaryType": "service"
+    }
+  },
+  {
+    "google_place_id": "ChIJlzKsNADFlxIRVLif4wHo51o",
+    "vertical_slug": "property-managers-mallorca",
+    "name": "Home in Mallorca",
+    "rating": 4.9,
+    "reviews_count": 25,
+    "address": "Carrer Campanet, 5, 07316 Moscari, Illes Balears",
+    "latitude": 39.7650852,
+    "longitude": 2.9366477,
+    "website": "http://www.homeinmallorca.com/",
+    "phone": "+34 622 50 29 24",
+    "google_maps_url": "https://maps.google.com/?cid=6550459277845182548&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "real_estate_agency",
+    "types": [
+      "real_estate_agency",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "Immobilienverwaltung Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJlzKsNADFlxIRVLif4wHo51o",
+      "types": [
+        "real_estate_agency",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 622 50 29 24",
+      "formattedAddress": "Carrer Campanet, 5, 07316 Moscari, Illes Balears",
+      "location": {
+        "latitude": 39.7650852,
+        "longitude": 2.9366477
+      },
+      "rating": 4.9,
+      "googleMapsUri": "https://maps.google.com/?cid=6550459277845182548&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "http://www.homeinmallorca.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 25,
+      "displayName": {
+        "text": "Home in Mallorca",
+        "languageCode": "es"
+      },
+      "primaryType": "real_estate_agency"
+    }
+  },
+  {
+    "google_place_id": "ChIJHRrFsOUnmBIRlrqe_bdKPEg",
+    "vertical_slug": "property-managers-mallorca",
+    "name": "Herzog Real Estate",
+    "rating": 5,
+    "reviews_count": 16,
+    "address": "Bulevar de Peguera, 12, 07160 Peguera, Illes Balears",
+    "latitude": 39.5371909,
+    "longitude": 2.4414515,
+    "website": "https://www.herzog-mallorca.com/",
+    "phone": "+34 871 25 27 27",
+    "google_maps_url": "https://maps.google.com/?cid=5205117423427959446&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "service",
+    "types": [
+      "point_of_interest",
+      "consultant",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "Immobilienverwaltung Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJHRrFsOUnmBIRlrqe_bdKPEg",
+      "types": [
+        "point_of_interest",
+        "consultant",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 871 25 27 27",
+      "formattedAddress": "Bulevar de Peguera, 12, 07160 Peguera, Illes Balears",
+      "location": {
+        "latitude": 39.5371909,
+        "longitude": 2.4414515
+      },
+      "rating": 5,
+      "googleMapsUri": "https://maps.google.com/?cid=5205117423427959446&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://www.herzog-mallorca.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 16,
+      "displayName": {
+        "text": "Herzog Real Estate",
+        "languageCode": "de"
+      },
+      "primaryType": "service"
+    }
+  },
+  {
+    "google_place_id": "ChIJx2WElouZlxIR9W5FC3ab2xE",
+    "vertical_slug": "property-managers-mallorca",
+    "name": "Axel Real Estate Mallorca",
+    "rating": 4.8,
+    "reviews_count": 18,
+    "address": "Carrer d'Andorra, 4, 07609 Sa Torre, Illes Balears",
+    "latitude": 39.4416262,
+    "longitude": 2.7523538,
+    "website": "http://www.axel-realestate.com/",
+    "phone": "+34 971 12 85 93",
+    "google_maps_url": "https://maps.google.com/?cid=1286793049841954549&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "real_estate_agency",
+    "types": [
+      "real_estate_agency",
+      "travel_agency",
+      "finance",
+      "point_of_interest",
+      "consultant",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "Immobilienverwaltung Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJx2WElouZlxIR9W5FC3ab2xE",
+      "types": [
+        "real_estate_agency",
+        "travel_agency",
+        "finance",
+        "point_of_interest",
+        "consultant",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 971 12 85 93",
+      "formattedAddress": "Carrer d'Andorra, 4, 07609 Sa Torre, Illes Balears",
+      "location": {
+        "latitude": 39.4416262,
+        "longitude": 2.7523538
+      },
+      "rating": 4.8,
+      "googleMapsUri": "https://maps.google.com/?cid=1286793049841954549&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "http://www.axel-realestate.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 18,
+      "displayName": {
+        "text": "Axel Real Estate Mallorca",
+        "languageCode": "de"
+      },
+      "primaryType": "real_estate_agency"
+    }
+  },
+  {
+    "google_place_id": "ChIJ7yYIP8qrlxIRFEpD7jwbse8",
+    "vertical_slug": "property-managers-mallorca",
+    "name": "home4you",
+    "rating": 4.9,
+    "reviews_count": 31,
+    "address": "Av. Francesc de Borja Moll, 22-24, 07640 Ses Salines, Illes Balears",
+    "latitude": 39.3397487,
+    "longitude": 3.0496619999999997,
+    "website": "http://www.home4you.info/",
+    "phone": "+34 871 90 60 00",
+    "google_maps_url": "https://maps.google.com/?cid=17271615994451937812&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "service",
+    "types": [
+      "real_estate_agency",
+      "general_contractor",
+      "finance",
+      "point_of_interest",
+      "consultant",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "Immobilienverwaltung Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJ7yYIP8qrlxIRFEpD7jwbse8",
+      "types": [
+        "real_estate_agency",
+        "general_contractor",
+        "finance",
+        "point_of_interest",
+        "consultant",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 871 90 60 00",
+      "formattedAddress": "Av. Francesc de Borja Moll, 22-24, 07640 Ses Salines, Illes Balears",
+      "location": {
+        "latitude": 39.3397487,
+        "longitude": 3.0496619999999997
+      },
+      "rating": 4.9,
+      "googleMapsUri": "https://maps.google.com/?cid=17271615994451937812&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "http://www.home4you.info/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 31,
+      "displayName": {
+        "text": "home4you",
+        "languageCode": "de"
+      },
+      "primaryType": "service"
+    }
+  },
+  {
+    "google_place_id": "ChIJ54QhG66JlxIRhfimwfJdW18",
+    "vertical_slug": "property-managers-mallorca",
+    "name": "Immobilienmallorca.com",
+    "rating": 5,
+    "reviews_count": 42,
+    "address": "Avinguda del Rei Jaume I, 111, 07180 Santa Ponça, Illes Balears",
+    "latitude": 39.5167818,
+    "longitude": 2.4852814000000003,
+    "website": "https://www.immobilienmallorca.com/",
+    "phone": "+49 1515 3543136",
+    "google_maps_url": "https://maps.google.com/?cid=6871188953696237701&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "real_estate_agency",
+    "types": [
+      "real_estate_agency",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "Immobilienverwaltung Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJ54QhG66JlxIRhfimwfJdW18",
+      "types": [
+        "real_estate_agency",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+49 1515 3543136",
+      "formattedAddress": "Avinguda del Rei Jaume I, 111, 07180 Santa Ponça, Illes Balears",
+      "location": {
+        "latitude": 39.5167818,
+        "longitude": 2.4852814000000003
+      },
+      "rating": 5,
+      "googleMapsUri": "https://maps.google.com/?cid=6871188953696237701&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://www.immobilienmallorca.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 42,
+      "displayName": {
+        "text": "Immobilienmallorca.com",
+        "languageCode": "de"
+      },
+      "primaryType": "real_estate_agency"
+    }
+  },
+  {
+    "google_place_id": "ChIJZYLMMgm7lxIRGmata9i41eo",
+    "vertical_slug": "property-managers-mallorca",
+    "name": "¡TODO! Mallorca Immobilien & Immobilienbetreuung",
+    "rating": 4.8,
+    "reviews_count": 39,
+    "address": "Ronda de Migjorn, 145B, 07620 Llucmajor, Illes Balears",
+    "latitude": 39.4869603,
+    "longitude": 2.8825784999999997,
+    "website": "https://immobilien.todo-mallorca.es/",
+    "phone": "+34 971 62 88 50",
+    "google_maps_url": "https://maps.google.com/?cid=16921634414573479450&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "service",
+    "types": [
+      "real_estate_agency",
+      "point_of_interest",
+      "consultant",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "Immobilienverwaltung Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJZYLMMgm7lxIRGmata9i41eo",
+      "types": [
+        "real_estate_agency",
+        "point_of_interest",
+        "consultant",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 971 62 88 50",
+      "formattedAddress": "Ronda de Migjorn, 145B, 07620 Llucmajor, Illes Balears",
+      "location": {
+        "latitude": 39.4869603,
+        "longitude": 2.8825784999999997
+      },
+      "rating": 4.8,
+      "googleMapsUri": "https://maps.google.com/?cid=16921634414573479450&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://immobilien.todo-mallorca.es/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 39,
+      "displayName": {
+        "text": "¡TODO! Mallorca Immobilien & Immobilienbetreuung",
+        "languageCode": "de"
+      },
+      "primaryType": "service"
+    }
+  },
+  {
+    "google_place_id": "ChIJzV68zsUXlhIRJxqWe5H9yok",
+    "vertical_slug": "property-managers-mallorca",
+    "name": "Mayer & Dau Immobilien Mallorca SL",
+    "rating": 5,
+    "reviews_count": 90,
+    "address": "Carrer d'Elionor Servera, 77, 07590 Cala Rajada, Illes Balears",
+    "latitude": 39.7114238,
+    "longitude": 3.4627497,
+    "website": "http://www.mayer-dau.es/",
+    "phone": "+34 871 18 13 10",
+    "google_maps_url": "https://maps.google.com/?cid=9929027129777199655&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "service",
+    "types": [
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "Immobilienverwaltung Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJzV68zsUXlhIRJxqWe5H9yok",
+      "types": [
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 871 18 13 10",
+      "formattedAddress": "Carrer d'Elionor Servera, 77, 07590 Cala Rajada, Illes Balears",
+      "location": {
+        "latitude": 39.7114238,
+        "longitude": 3.4627497
+      },
+      "rating": 5,
+      "googleMapsUri": "https://maps.google.com/?cid=9929027129777199655&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "http://www.mayer-dau.es/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 90,
+      "displayName": {
+        "text": "Mayer & Dau Immobilien Mallorca SL",
+        "languageCode": "de"
+      },
+      "primaryType": "service"
+    }
+  },
+  {
+    "google_place_id": "ChIJl3DbSBs8lhIR1YcQar_37HI",
+    "vertical_slug": "property-managers-mallorca",
+    "name": "de Haas & Partner",
+    "rating": 5,
+    "reviews_count": 26,
+    "address": "C. de Ciutat, 21, 07570 Artà, Illes Balears",
+    "latitude": 39.692367,
+    "longitude": 3.3493690999999997,
+    "website": "http://www.dehaas-immobilien.com/",
+    "phone": "+34 971 83 69 72",
+    "google_maps_url": "https://maps.google.com/?cid=8281266216317781973&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "real_estate_agency",
+    "types": [
+      "real_estate_agency",
+      "point_of_interest",
+      "consultant",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "Immobilienverwaltung Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJl3DbSBs8lhIR1YcQar_37HI",
+      "types": [
+        "real_estate_agency",
+        "point_of_interest",
+        "consultant",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 971 83 69 72",
+      "formattedAddress": "C. de Ciutat, 21, 07570 Artà, Illes Balears",
+      "location": {
+        "latitude": 39.692367,
+        "longitude": 3.3493690999999997
+      },
+      "rating": 5,
+      "googleMapsUri": "https://maps.google.com/?cid=8281266216317781973&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "http://www.dehaas-immobilien.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 26,
+      "displayName": {
+        "text": "de Haas & Partner",
+        "languageCode": "de"
+      },
+      "primaryType": "real_estate_agency"
+    }
+  },
+  {
+    "google_place_id": "ChIJO5OouWeSlxIRgFM3dK5382E",
+    "vertical_slug": "property-managers-mallorca",
+    "name": "Chic Mallorca International Real Estate",
+    "rating": 4.8,
+    "reviews_count": 165,
+    "address": "Carrer de Joan Crespí, 14, Ponent, 07014 Palma, Illes Balears",
+    "latitude": 39.573668399999995,
+    "longitude": 2.6338748,
+    "website": "http://www.chicmallorca.com/",
+    "phone": "+34 685 98 91 98",
+    "google_maps_url": "https://maps.google.com/?cid=7058116632177496960&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "real_estate_agency",
+    "types": [
+      "real_estate_agency",
+      "point_of_interest",
+      "consultant",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "Immobilienverwaltung Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJO5OouWeSlxIRgFM3dK5382E",
+      "types": [
+        "real_estate_agency",
+        "point_of_interest",
+        "consultant",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 685 98 91 98",
+      "formattedAddress": "Carrer de Joan Crespí, 14, Ponent, 07014 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.573668399999995,
+        "longitude": 2.6338748
+      },
+      "rating": 4.8,
+      "googleMapsUri": "https://maps.google.com/?cid=7058116632177496960&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "http://www.chicmallorca.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 165,
+      "displayName": {
+        "text": "Chic Mallorca International Real Estate",
+        "languageCode": "es"
+      },
+      "primaryType": "real_estate_agency"
+    }
+  },
+  {
+    "google_place_id": "ChIJEz5IIuGNlxIR_88WUImVANo",
+    "vertical_slug": "property-managers-mallorca",
+    "name": "Herden Immobilien Mallorca - Real Estate - Manfred Herden Immobilienmakler",
+    "rating": 4.9,
+    "reviews_count": 46,
+    "address": "Passeig Illetes, 6, 07181 Cas Català-Illetes, Illes Balears",
+    "latitude": 39.543760299999995,
+    "longitude": 2.5955307000000003,
+    "website": "http://www.herden-immobilien.com/",
+    "phone": "+34 871 61 12 09",
+    "google_maps_url": "https://maps.google.com/?cid=15708719917255020543&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "service",
+    "types": [
+      "real_estate_agency",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "Immobilienverwaltung Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJEz5IIuGNlxIR_88WUImVANo",
+      "types": [
+        "real_estate_agency",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 871 61 12 09",
+      "formattedAddress": "Passeig Illetes, 6, 07181 Cas Català-Illetes, Illes Balears",
+      "location": {
+        "latitude": 39.543760299999995,
+        "longitude": 2.5955307000000003
+      },
+      "rating": 4.9,
+      "googleMapsUri": "https://maps.google.com/?cid=15708719917255020543&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "http://www.herden-immobilien.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 46,
+      "displayName": {
+        "text": "Herden Immobilien Mallorca - Real Estate - Manfred Herden Immobilienmakler",
+        "languageCode": "de"
+      },
+      "primaryType": "service"
+    }
+  },
+  {
+    "google_place_id": "ChIJ63R4Y1ySlxIRpFSDmxage78",
+    "vertical_slug": "property-managers-mallorca",
+    "name": "Casa Mia Real Estate SL",
+    "rating": 5,
+    "reviews_count": 29,
+    "address": "Pg. de Mallorca, 18E, Centre, 07012 Palma, Illes Balears",
+    "latitude": 39.5731073,
+    "longitude": 2.642969,
+    "website": "http://casamia-mallorca.com/",
+    "phone": "+34 971 12 83 92",
+    "google_maps_url": "https://maps.google.com/?cid=13797797902338446500&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "service",
+    "types": [
+      "real_estate_agency",
+      "lawyer",
+      "point_of_interest",
+      "consultant",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "Immobilienverwaltung Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJ63R4Y1ySlxIRpFSDmxage78",
+      "types": [
+        "real_estate_agency",
+        "lawyer",
+        "point_of_interest",
+        "consultant",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 971 12 83 92",
+      "formattedAddress": "Pg. de Mallorca, 18E, Centre, 07012 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.5731073,
+        "longitude": 2.642969
+      },
+      "rating": 5,
+      "googleMapsUri": "https://maps.google.com/?cid=13797797902338446500&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "http://casamia-mallorca.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 29,
+      "displayName": {
+        "text": "Casa Mia Real Estate SL",
+        "languageCode": "de"
+      },
+      "primaryType": "service"
+    }
+  },
+  {
+    "google_place_id": "ChIJlfvs5JyTlxIRmNrNM-nH0m4",
+    "vertical_slug": "property-managers-mallorca",
+    "name": "DAHLER Mallorca Palma / Son Vida",
+    "rating": 4.7,
+    "reviews_count": 14,
+    "address": "Pg. de Mallorca, 12, Centre, 07012 Palma, Illes Balears",
+    "latitude": 39.572337399999995,
+    "longitude": 2.6424133999999997,
+    "website": "https://www.dahlercompany.com/de/mallorca/immobilienmakler/palma",
+    "phone": "+34 636 84 42 65",
+    "google_maps_url": "https://maps.google.com/?cid=7985664893691746968&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "service",
+    "types": [
+      "real_estate_agency",
+      "finance",
+      "point_of_interest",
+      "consultant",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "Immobilienverwaltung Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJlfvs5JyTlxIRmNrNM-nH0m4",
+      "types": [
+        "real_estate_agency",
+        "finance",
+        "point_of_interest",
+        "consultant",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 636 84 42 65",
+      "formattedAddress": "Pg. de Mallorca, 12, Centre, 07012 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.572337399999995,
+        "longitude": 2.6424133999999997
+      },
+      "rating": 4.7,
+      "googleMapsUri": "https://maps.google.com/?cid=7985664893691746968&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://www.dahlercompany.com/de/mallorca/immobilienmakler/palma",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 14,
+      "displayName": {
+        "text": "DAHLER Mallorca Palma / Son Vida",
+        "languageCode": "de"
+      },
+      "primaryType": "service"
+    }
+  },
+  {
+    "google_place_id": "ChIJZZGBP2KWlxIR7g7c4OwPsiU",
+    "vertical_slug": "property-managers-mallorca",
+    "name": "Schanz & Kohne Immobilien Mallorca",
+    "rating": 4.3,
+    "reviews_count": 67,
+    "address": "Carrer de l'Ametler, 1, 07609 Llucmajor, Illes Balears",
+    "latitude": 39.4932291,
+    "longitude": 2.7434038,
+    "website": "http://www.schanzundkohne.de/",
+    "phone": "+34 628 12 06 81",
+    "google_maps_url": "https://maps.google.com/?cid=2716251035317047022&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "real_estate_agency",
+    "types": [
+      "real_estate_agency",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "Immobilienverwaltung Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJZZGBP2KWlxIR7g7c4OwPsiU",
+      "types": [
+        "real_estate_agency",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 628 12 06 81",
+      "formattedAddress": "Carrer de l'Ametler, 1, 07609 Llucmajor, Illes Balears",
+      "location": {
+        "latitude": 39.4932291,
+        "longitude": 2.7434038
+      },
+      "rating": 4.3,
+      "googleMapsUri": "https://maps.google.com/?cid=2716251035317047022&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "http://www.schanzundkohne.de/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 67,
+      "displayName": {
+        "text": "Schanz & Kohne Immobilien Mallorca",
+        "languageCode": "de"
+      },
+      "primaryType": "real_estate_agency"
+    }
+  },
+  {
+    "google_place_id": "ChIJ7xQVB87JlxIRgQ14EtvdXRo",
+    "vertical_slug": "property-managers-mallorca",
+    "name": "FincaCare Mallorca",
+    "rating": 5,
+    "reviews_count": 10,
+    "address": "Poligono 4 Parcela 51, 07510 Sineu, Illes Balears",
+    "latitude": 39.629794,
+    "longitude": 3.0066262999999998,
+    "website": "https://www.fincacare-mallorca.com/",
+    "phone": "+34 634 34 77 00",
+    "google_maps_url": "https://maps.google.com/?cid=1899918550797651329&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "service",
+    "types": [
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "Immobilienverwaltung Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJ7xQVB87JlxIRgQ14EtvdXRo",
+      "types": [
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 634 34 77 00",
+      "formattedAddress": "Poligono 4 Parcela 51, 07510 Sineu, Illes Balears",
+      "location": {
+        "latitude": 39.629794,
+        "longitude": 3.0066262999999998
+      },
+      "rating": 5,
+      "googleMapsUri": "https://maps.google.com/?cid=1899918550797651329&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://www.fincacare-mallorca.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 10,
+      "displayName": {
+        "text": "FincaCare Mallorca",
+        "languageCode": "de"
+      },
+      "primaryType": "service"
+    }
+  },
+  {
+    "google_place_id": "ChIJiUJ2wSYdK6gRl49GlWWkAdE",
+    "vertical_slug": "property-managers-mallorca",
+    "name": "Brummundo Mallorca S.L.",
+    "rating": 4.8,
+    "reviews_count": 37,
+    "address": "Rambla, 4, 07609 Son Verí Nou, Illes Balears",
+    "latitude": 39.4928299,
+    "longitude": 2.7434282,
+    "website": "https://www.brummundo.com/",
+    "phone": "+49 1512 8162916",
+    "google_maps_url": "https://maps.google.com/?cid=15060499385106730903&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "service",
+    "types": [
+      "sporting_goods_store",
+      "general_contractor",
+      "point_of_interest",
+      "store",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "Immobilienverwaltung Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJiUJ2wSYdK6gRl49GlWWkAdE",
+      "types": [
+        "sporting_goods_store",
+        "general_contractor",
+        "point_of_interest",
+        "store",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+49 1512 8162916",
+      "formattedAddress": "Rambla, 4, 07609 Son Verí Nou, Illes Balears",
+      "location": {
+        "latitude": 39.4928299,
+        "longitude": 2.7434282
+      },
+      "rating": 4.8,
+      "googleMapsUri": "https://maps.google.com/?cid=15060499385106730903&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://www.brummundo.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 37,
+      "displayName": {
+        "text": "Brummundo Mallorca S.L.",
+        "languageCode": "de"
+      },
+      "primaryType": "service"
+    }
+  },
+  {
+    "google_place_id": "ChIJt_uDAh7UlxIRfpZLCRcMJcY",
+    "vertical_slug": "property-managers-mallorca",
+    "name": "Balearic Properties - Savills Mallorca",
+    "rating": 4.3,
+    "reviews_count": 68,
+    "address": "Carrer d'Alcúdia, 3, 07460 Pollença, Illes Balears",
+    "latitude": 39.876568299999995,
+    "longitude": 3.0170521999999997,
+    "website": "http://www.balearic-properties.com/",
+    "phone": "+34 971 53 29 84",
+    "google_maps_url": "https://maps.google.com/?cid=14277831486727755390&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "real_estate_agency",
+    "types": [
+      "real_estate_agency",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "Immobilienverwaltung Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJt_uDAh7UlxIRfpZLCRcMJcY",
+      "types": [
+        "real_estate_agency",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 971 53 29 84",
+      "formattedAddress": "Carrer d'Alcúdia, 3, 07460 Pollença, Illes Balears",
+      "location": {
+        "latitude": 39.876568299999995,
+        "longitude": 3.0170521999999997
+      },
+      "rating": 4.3,
+      "googleMapsUri": "https://maps.google.com/?cid=14277831486727755390&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "http://www.balearic-properties.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 68,
+      "displayName": {
+        "text": "Balearic Properties - Savills Mallorca",
+        "languageCode": "en"
+      },
+      "primaryType": "real_estate_agency"
+    }
+  },
+  {
+    "google_place_id": "ChIJl-D9aYOOlxIRaJFMsjC6a6c",
+    "vertical_slug": "property-managers-mallorca",
+    "name": "ImmoConceptBalear",
+    "rating": 5,
+    "reviews_count": 7,
+    "address": "Passeig Illetes, 4, 07181 Cas Català-Illetes, Illes Balears",
+    "latitude": 39.54404590000001,
+    "longitude": 2.5949785,
+    "website": "http://www.immoconceptbalear.com/",
+    "phone": "+34 693 73 95 66",
+    "google_maps_url": "https://maps.google.com/?cid=12063940745154564456&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "real_estate_agency",
+    "types": [
+      "real_estate_agency",
+      "point_of_interest",
+      "consultant",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "Immobilienverwaltung Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJl-D9aYOOlxIRaJFMsjC6a6c",
+      "types": [
+        "real_estate_agency",
+        "point_of_interest",
+        "consultant",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 693 73 95 66",
+      "formattedAddress": "Passeig Illetes, 4, 07181 Cas Català-Illetes, Illes Balears",
+      "location": {
+        "latitude": 39.54404590000001,
+        "longitude": 2.5949785
+      },
+      "rating": 5,
+      "googleMapsUri": "https://maps.google.com/?cid=12063940745154564456&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "http://www.immoconceptbalear.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 7,
+      "displayName": {
+        "text": "ImmoConceptBalear",
+        "languageCode": "de"
+      },
+      "primaryType": "real_estate_agency"
+    }
+  },
+  {
+    "google_place_id": "ChIJB96JqW3BlxIR_wBCLSSlfjQ",
+    "vertical_slug": "property-managers-mallorca",
+    "name": "House Services Mallorca",
+    "rating": 5,
+    "reviews_count": 10,
+    "address": "Polígono, 14, parcela 481, 07350 Binissalem, Illes Balears",
+    "latitude": 39.7048516,
+    "longitude": 2.8494896,
+    "website": "http://www.houseservicesmallorca.com/",
+    "phone": "+34 666 37 33 51",
+    "google_maps_url": "https://maps.google.com/?cid=3782642311834501375&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "service",
+    "types": [
+      "general_contractor",
+      "service",
+      "point_of_interest",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "Hausverwaltung Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJB96JqW3BlxIR_wBCLSSlfjQ",
+      "types": [
+        "general_contractor",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 666 37 33 51",
+      "formattedAddress": "Polígono, 14, parcela 481, 07350 Binissalem, Illes Balears",
+      "location": {
+        "latitude": 39.7048516,
+        "longitude": 2.8494896
+      },
+      "rating": 5,
+      "googleMapsUri": "https://maps.google.com/?cid=3782642311834501375&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "http://www.houseservicesmallorca.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 10,
+      "displayName": {
+        "text": "House Services Mallorca",
+        "languageCode": "es"
+      },
+      "primaryType": "service"
+    }
+  },
+  {
+    "google_place_id": "ChIJ8cfS2VjFlxIRq8q7BS4xo9w",
+    "vertical_slug": "property-managers-mallorca",
+    "name": "Moscari Finca Service S.L.",
+    "rating": 4.8,
+    "reviews_count": 38,
+    "address": "Carrer des Pou, 1C, 07316 Moscari, Illes Balears",
+    "latitude": 39.7649962,
+    "longitude": 2.9352348999999998,
+    "website": "http://www.moscari-finca-service.es/",
+    "phone": "+34 648 18 51 46",
+    "google_maps_url": "https://maps.google.com/?cid=15898605183282432683&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "real_estate_agency",
+    "types": [
+      "real_estate_agency",
+      "service",
+      "point_of_interest",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "Hausverwaltung Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJ8cfS2VjFlxIRq8q7BS4xo9w",
+      "types": [
+        "real_estate_agency",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 648 18 51 46",
+      "formattedAddress": "Carrer des Pou, 1C, 07316 Moscari, Illes Balears",
+      "location": {
+        "latitude": 39.7649962,
+        "longitude": 2.9352348999999998
+      },
+      "rating": 4.8,
+      "googleMapsUri": "https://maps.google.com/?cid=15898605183282432683&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "http://www.moscari-finca-service.es/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 38,
+      "displayName": {
+        "text": "Moscari Finca Service S.L.",
+        "languageCode": "de"
+      },
+      "primaryType": "real_estate_agency"
+    }
+  },
+  {
+    "google_place_id": "ChIJNa4qBlGvlxIRau7xF6X6rJI",
+    "vertical_slug": "property-managers-mallorca",
+    "name": "Fincaservices Mallorca",
+    "rating": 5,
+    "reviews_count": 24,
+    "address": "Carrer del Grup Escolar, 23, 07620 Llucmajor, Illes Balears",
+    "latitude": 39.4911928,
+    "longitude": 2.8865129,
+    "website": "http://fincaservices-mallorca.com/",
+    "phone": "+34 627 85 43 66",
+    "google_maps_url": "https://maps.google.com/?cid=10569098012509990506&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "service",
+    "types": [
+      "service",
+      "point_of_interest",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "Hausverwaltung Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJNa4qBlGvlxIRau7xF6X6rJI",
+      "types": [
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 627 85 43 66",
+      "formattedAddress": "Carrer del Grup Escolar, 23, 07620 Llucmajor, Illes Balears",
+      "location": {
+        "latitude": 39.4911928,
+        "longitude": 2.8865129
+      },
+      "rating": 5,
+      "googleMapsUri": "https://maps.google.com/?cid=10569098012509990506&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "http://fincaservices-mallorca.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 24,
+      "displayName": {
+        "text": "Fincaservices Mallorca",
+        "languageCode": "de"
+      },
+      "primaryType": "service"
+    }
+  },
+  {
+    "google_place_id": "ChIJb_osd_RAlhIRDfEoXKYpLu4",
+    "vertical_slug": "property-managers-mallorca",
+    "name": "Eigentum Mallorca Immobilien",
+    "rating": 4.3,
+    "reviews_count": 24,
+    "address": "Avinguda de ses Palmeres, 81, 07560 Sa Coma, Illes Balears",
+    "latitude": 39.5788387,
+    "longitude": 3.3750416000000003,
+    "website": "https://eigentum-mallorca.com/?utm_source=googlemybusiness&utm_medium=organic&utm_campaign=organicmap",
+    "phone": "+34 971 81 02 61",
+    "google_maps_url": "https://maps.google.com/?cid=17162701024443035917&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "real_estate_agency",
+    "types": [
+      "real_estate_agency",
+      "service",
+      "point_of_interest",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "Hausverwaltung Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJb_osd_RAlhIRDfEoXKYpLu4",
+      "types": [
+        "real_estate_agency",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 971 81 02 61",
+      "formattedAddress": "Avinguda de ses Palmeres, 81, 07560 Sa Coma, Illes Balears",
+      "location": {
+        "latitude": 39.5788387,
+        "longitude": 3.3750416000000003
+      },
+      "rating": 4.3,
+      "googleMapsUri": "https://maps.google.com/?cid=17162701024443035917&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://eigentum-mallorca.com/?utm_source=googlemybusiness&utm_medium=organic&utm_campaign=organicmap",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 24,
+      "displayName": {
+        "text": "Eigentum Mallorca Immobilien",
+        "languageCode": "es"
+      },
+      "primaryType": "real_estate_agency"
+    }
+  },
+  {
+    "google_place_id": "ChIJmQR41JEslhIRdgPDrvWvNTw",
+    "vertical_slug": "property-managers-mallorca",
+    "name": "Ideal Property Mallorca",
+    "rating": 4,
+    "reviews_count": 194,
+    "address": "Av. Tucà, 33, G, 07400 Port d'Alcúdia, Illes Balears",
+    "latitude": 39.8381672,
+    "longitude": 3.1101805,
+    "website": "https://www.idealpropertymallorca.com/",
+    "phone": "+34 630 72 88 97",
+    "google_maps_url": "https://maps.google.com/?cid=4338567285775205238&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "travel_agency",
+    "types": [
+      "real_estate_agency",
+      "travel_agency",
+      "service",
+      "point_of_interest",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "Hausverwaltung Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJmQR41JEslhIRdgPDrvWvNTw",
+      "types": [
+        "real_estate_agency",
+        "travel_agency",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 630 72 88 97",
+      "formattedAddress": "Av. Tucà, 33, G, 07400 Port d'Alcúdia, Illes Balears",
+      "location": {
+        "latitude": 39.8381672,
+        "longitude": 3.1101805
+      },
+      "rating": 4,
+      "googleMapsUri": "https://maps.google.com/?cid=4338567285775205238&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://www.idealpropertymallorca.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 194,
+      "displayName": {
+        "text": "Ideal Property Mallorca",
+        "languageCode": "es"
+      },
+      "primaryType": "travel_agency"
+    }
+  },
+  {
+    "google_place_id": "ChIJ99TRXI8rlhIRMOA281U19NI",
+    "vertical_slug": "property-managers-mallorca",
+    "name": "Ferienhaus Bonaire",
+    "rating": 4.9,
+    "reviews_count": 14,
+    "address": "Carrer de la Camamil·la, 10, 07400 Es Mal Pas - Bonaire, Illes Balears",
+    "latitude": 39.862673099999995,
+    "longitude": 3.1486003,
+    "website": "https://www.fewo-direkt.de/ferienwohnung-ferienhaus/p517977",
+    "phone": "+49 172 1976856",
+    "google_maps_url": "https://maps.google.com/?cid=15200833285551218736&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "cottage",
+    "types": [
+      "cottage",
+      "lodging",
+      "point_of_interest",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "Ferienhaus Betreuung Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJ99TRXI8rlhIRMOA281U19NI",
+      "types": [
+        "cottage",
+        "lodging",
+        "point_of_interest",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+49 172 1976856",
+      "formattedAddress": "Carrer de la Camamil·la, 10, 07400 Es Mal Pas - Bonaire, Illes Balears",
+      "location": {
+        "latitude": 39.862673099999995,
+        "longitude": 3.1486003
+      },
+      "rating": 4.9,
+      "googleMapsUri": "https://maps.google.com/?cid=15200833285551218736&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://www.fewo-direkt.de/ferienwohnung-ferienhaus/p517977",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 14,
+      "displayName": {
+        "text": "Ferienhaus Bonaire",
+        "languageCode": "de"
+      },
+      "primaryType": "cottage"
+    }
+  },
+  {
+    "google_place_id": "ChIJ3V7xI_I6lhIRu_RcQCwYTfg",
+    "vertical_slug": "property-managers-mallorca",
+    "name": "Casa - Del mar 37",
+    "rating": 4.8,
+    "reviews_count": 20,
+    "address": "Carrer del Mar, 37, 07579 Colònia de Sant Pere, Illes Balears",
+    "latitude": 39.737952,
+    "longitude": 3.2832839999999996,
+    "website": "https://delmar37.com/",
+    "phone": "+34 619 23 04 22",
+    "google_maps_url": "https://maps.google.com/?cid=17891983472950310075&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "lodging",
+    "types": [
+      "lodging",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "Ferienhaus Betreuung Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJ3V7xI_I6lhIRu_RcQCwYTfg",
+      "types": [
+        "lodging",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 619 23 04 22",
+      "formattedAddress": "Carrer del Mar, 37, 07579 Colònia de Sant Pere, Illes Balears",
+      "location": {
+        "latitude": 39.737952,
+        "longitude": 3.2832839999999996
+      },
+      "rating": 4.8,
+      "googleMapsUri": "https://maps.google.com/?cid=17891983472950310075&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://delmar37.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 20,
+      "displayName": {
+        "text": "Casa - Del mar 37",
+        "languageCode": "en"
+      },
+      "primaryType": "lodging"
+    }
+  },
+  {
+    "google_place_id": "ChIJc3mQo3aJlxIRuK9ra97vGe0",
+    "vertical_slug": "property-managers-mallorca",
+    "name": "Ferienhaus \"Buena Vista\" - Mallorca",
+    "rating": 5,
+    "reviews_count": 11,
+    "address": "Carrer de Bernat de Campanes, 38b, 07183 Santa Ponça, Illes Balears",
+    "latitude": 39.5211332,
+    "longitude": 2.4799607000000004,
+    "website": "http://www.mallorca-ferienhaus-pool.de/",
+    "phone": "+49 1522 2730283",
+    "google_maps_url": "https://maps.google.com/?cid=17084950399970684856&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "lodging",
+    "types": [
+      "lodging",
+      "point_of_interest",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "Ferienhaus Betreuung Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJc3mQo3aJlxIRuK9ra97vGe0",
+      "types": [
+        "lodging",
+        "point_of_interest",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+49 1522 2730283",
+      "formattedAddress": "Carrer de Bernat de Campanes, 38b, 07183 Santa Ponça, Illes Balears",
+      "location": {
+        "latitude": 39.5211332,
+        "longitude": 2.4799607000000004
+      },
+      "rating": 5,
+      "googleMapsUri": "https://maps.google.com/?cid=17084950399970684856&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "http://www.mallorca-ferienhaus-pool.de/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 11,
+      "displayName": {
+        "text": "Ferienhaus \"Buena Vista\" - Mallorca",
+        "languageCode": "de"
+      },
+      "primaryType": "lodging"
+    }
+  },
+  {
+    "google_place_id": "ChIJy4IIQPszlhIRTUQkZa5kTlw",
+    "vertical_slug": "property-managers-mallorca",
+    "name": "Ferienhaus von Markus",
+    "rating": 5,
+    "reviews_count": 7,
+    "address": "Carrer Arbocera, 5, 07458 Ca'n Picafort, Illes Balears",
+    "latitude": 39.761438399999996,
+    "longitude": 3.1501642999999997,
+    "website": "http://www.markus-schmitz-event.de/urlaub/",
+    "phone": "+49 172 2477229",
+    "google_maps_url": "https://maps.google.com/?cid=6651364399856763981&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "lodging",
+    "types": [
+      "cottage",
+      "hotel",
+      "lodging",
+      "point_of_interest",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "Ferienhaus Betreuung Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJy4IIQPszlhIRTUQkZa5kTlw",
+      "types": [
+        "cottage",
+        "hotel",
+        "lodging",
+        "point_of_interest",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+49 172 2477229",
+      "formattedAddress": "Carrer Arbocera, 5, 07458 Ca'n Picafort, Illes Balears",
+      "location": {
+        "latitude": 39.761438399999996,
+        "longitude": 3.1501642999999997
+      },
+      "rating": 5,
+      "googleMapsUri": "https://maps.google.com/?cid=6651364399856763981&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "http://www.markus-schmitz-event.de/urlaub/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 7,
+      "displayName": {
+        "text": "Ferienhaus von Markus",
+        "languageCode": "de"
+      },
+      "primaryType": "lodging"
+    }
+  },
+  {
+    "google_place_id": "ChIJq99qIXotlhIRTdDjpEEKWI4",
+    "vertical_slug": "property-managers-mallorca",
+    "name": "Villa Alcúdia - Ferienhaus",
+    "rating": 5,
+    "reviews_count": 31,
+    "address": "Carrer Ignacio Zuloaga, 5, 07400 Alcúdia, Illes Balears",
+    "latitude": 39.856195299999996,
+    "longitude": 3.1045282999999997,
+    "website": "http://www.villa-alcudia.de/",
+    "phone": null,
+    "google_maps_url": "https://maps.google.com/?cid=10256959428391850061&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "lodging",
+    "types": [
+      "lodging",
+      "point_of_interest",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "Ferienhaus Betreuung Mallorca",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJq99qIXotlhIRTdDjpEEKWI4",
+      "types": [
+        "lodging",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "Carrer Ignacio Zuloaga, 5, 07400 Alcúdia, Illes Balears",
+      "location": {
+        "latitude": 39.856195299999996,
+        "longitude": 3.1045282999999997
+      },
+      "rating": 5,
+      "googleMapsUri": "https://maps.google.com/?cid=10256959428391850061&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "http://www.villa-alcudia.de/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 31,
+      "displayName": {
+        "text": "Villa Alcúdia - Ferienhaus",
+        "languageCode": "de"
+      },
+      "primaryType": "lodging"
+    }
+  },
+  {
+    "google_place_id": "ChIJ6Qs6-laJlxIR7msGuZtCdks",
+    "vertical_slug": "property-managers-mallorca",
+    "name": "Anke Sevenster SERVICES",
+    "rating": 4.9,
+    "reviews_count": 86,
+    "address": "Gran Via Puig des Castellet, 1, bloque 2, 07180 Santa Ponça, Illes Balears",
+    "latitude": 39.5171717,
+    "longitude": 2.4891370999999998,
+    "website": "https://www.ankesevenster.com/",
+    "phone": "+34 971 69 24 25",
+    "google_maps_url": "https://maps.google.com/?cid=5437606836688022510&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "consultant",
+    "types": [
+      "consultant",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "Relocation Mallorca deutsch",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJ6Qs6-laJlxIR7msGuZtCdks",
+      "types": [
+        "consultant",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 971 69 24 25",
+      "formattedAddress": "Gran Via Puig des Castellet, 1, bloque 2, 07180 Santa Ponça, Illes Balears",
+      "location": {
+        "latitude": 39.5171717,
+        "longitude": 2.4891370999999998
+      },
+      "rating": 4.9,
+      "googleMapsUri": "https://maps.google.com/?cid=5437606836688022510&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://www.ankesevenster.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 86,
+      "displayName": {
+        "text": "Anke Sevenster SERVICES",
+        "languageCode": "es"
+      },
+      "primaryType": "consultant"
+    }
+  },
+  {
+    "google_place_id": "ChIJxS_lZOuTlxIRwRSXyVIEq6k",
+    "vertical_slug": "property-managers-mallorca",
+    "name": "La Mallorquina",
+    "rating": 4.6,
+    "reviews_count": 131,
+    "address": "Carrer de Sor Isabel Cifre, 26, Platja de Palma i Pla de Sant Jordi, 07007 Palma, Illes Balears",
+    "latitude": 39.557112599999996,
+    "longitude": 2.6830069,
+    "website": "http://www.mudanzaslamallorquina.com/",
+    "phone": "+34 633 25 64 65",
+    "google_maps_url": "https://maps.google.com/?cid=12225870367043294401&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "moving_company",
+    "types": [
+      "moving_company",
+      "transportation_service",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "Relocation Mallorca deutsch",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJxS_lZOuTlxIRwRSXyVIEq6k",
+      "types": [
+        "moving_company",
+        "transportation_service",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 633 25 64 65",
+      "formattedAddress": "Carrer de Sor Isabel Cifre, 26, Platja de Palma i Pla de Sant Jordi, 07007 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.557112599999996,
+        "longitude": 2.6830069
+      },
+      "rating": 4.6,
+      "googleMapsUri": "https://maps.google.com/?cid=12225870367043294401&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "http://www.mudanzaslamallorquina.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 131,
+      "displayName": {
+        "text": "La Mallorquina",
+        "languageCode": "en"
+      },
+      "primaryType": "moving_company"
+    }
+  },
+  {
+    "google_place_id": "ChIJG4ElMNYblmwRjuAI0P0zn0c",
+    "vertical_slug": "property-managers-mallorca",
+    "name": "Nieruchomości na Majorce | Zakup lub wynajem długoterminowy | Domy na Majorce | Destination Mallorca",
+    "rating": 5,
+    "reviews_count": 32,
+    "address": "Carrer de Minerva, 27, 07400 Port d'Alcúdia, Illes Balears",
+    "latitude": 39.8342022,
+    "longitude": 3.1203912,
+    "website": "https://majorkanieruchomosci.pl/announcements/",
+    "phone": "+34 673 35 64 72",
+    "google_maps_url": "https://maps.google.com/?cid=5160900863199862926&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "service",
+    "types": [
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "Relocation Mallorca deutsch",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJG4ElMNYblmwRjuAI0P0zn0c",
+      "types": [
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 673 35 64 72",
+      "formattedAddress": "Carrer de Minerva, 27, 07400 Port d'Alcúdia, Illes Balears",
+      "location": {
+        "latitude": 39.8342022,
+        "longitude": 3.1203912
+      },
+      "rating": 5,
+      "googleMapsUri": "https://maps.google.com/?cid=5160900863199862926&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://majorkanieruchomosci.pl/announcements/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 32,
+      "displayName": {
+        "text": "Nieruchomości na Majorce | Zakup lub wynajem długoterminowy | Domy na Majorce | Destination Mallorca",
+        "languageCode": "es"
+      },
+      "primaryType": "service"
+    }
+  },
+  {
+    "google_place_id": "ChIJh7anpViXlxIRUEs9JJ2stVY",
+    "vertical_slug": "property-managers-mallorca",
+    "name": "TODO Mallorca CB",
+    "rating": 4.9,
+    "reviews_count": 84,
+    "address": "Ronda de Migjorn, 145B, 07620 Llucmajor, Illes Balears",
+    "latitude": 39.4869603,
+    "longitude": 2.8825784999999997,
+    "website": "https://www.todo-mallorca.es/",
+    "phone": "+34 634 36 62 33",
+    "google_maps_url": "https://maps.google.com/?cid=6248089848964270928&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "health",
+    "types": [
+      "health",
+      "point_of_interest",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "Relocation Mallorca deutsch",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJh7anpViXlxIRUEs9JJ2stVY",
+      "types": [
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 634 36 62 33",
+      "formattedAddress": "Ronda de Migjorn, 145B, 07620 Llucmajor, Illes Balears",
+      "location": {
+        "latitude": 39.4869603,
+        "longitude": 2.8825784999999997
+      },
+      "rating": 4.9,
+      "googleMapsUri": "https://maps.google.com/?cid=6248089848964270928&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://www.todo-mallorca.es/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 84,
+      "displayName": {
+        "text": "TODO Mallorca CB",
+        "languageCode": "de"
+      },
+      "primaryType": "health"
+    }
+  },
+  {
+    "google_place_id": "ChIJXVusaEeIlxIRmH5aWQrskJA",
+    "vertical_slug": "property-managers-mallorca",
+    "name": "Unique Mallorca Luxury Real Estate S.L.",
+    "rating": 4.4,
+    "reviews_count": 69,
+    "address": "Carrer Gran Via, 43, 07180 El Toro, Illes Balears",
+    "latitude": 39.4876138,
+    "longitude": 2.4810299,
+    "website": "http://www.uniquemallorca.com/",
+    "phone": "+34 971 69 93 29",
+    "google_maps_url": "https://maps.google.com/?cid=10417085467300888216&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "real_estate_agency",
+    "types": [
+      "real_estate_agency",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "Relocation Mallorca deutsch",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJXVusaEeIlxIRmH5aWQrskJA",
+      "types": [
+        "real_estate_agency",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 971 69 93 29",
+      "formattedAddress": "Carrer Gran Via, 43, 07180 El Toro, Illes Balears",
+      "location": {
+        "latitude": 39.4876138,
+        "longitude": 2.4810299
+      },
+      "rating": 4.4,
+      "googleMapsUri": "https://maps.google.com/?cid=10417085467300888216&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "http://www.uniquemallorca.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 69,
+      "displayName": {
+        "text": "Unique Mallorca Luxury Real Estate S.L.",
+        "languageCode": "en"
+      },
+      "primaryType": "real_estate_agency"
+    }
+  },
+  {
+    "google_place_id": "ChIJAzDSVgiSlxIRULBUan7_50Q",
+    "vertical_slug": "property-managers-mallorca",
+    "name": "De Micco & Friends Rechtsanwälte",
+    "rating": 4.7,
+    "reviews_count": 215,
+    "address": "C. Llorenc y Vicens 3, Centre, 07002 Palma, Illes Balears",
+    "latitude": 39.5736174,
+    "longitude": 2.6554009,
+    "website": "http://www.lawyers-auditors.com/",
+    "phone": "+34 871 95 50 77",
+    "google_maps_url": "https://maps.google.com/?cid=4965218032614158416&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "consultant",
+    "types": [
+      "lawyer",
+      "consultant",
+      "accounting",
+      "finance",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "Relocation Mallorca deutsch",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJAzDSVgiSlxIRULBUan7_50Q",
+      "types": [
+        "lawyer",
+        "consultant",
+        "accounting",
+        "finance",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 871 95 50 77",
+      "formattedAddress": "C. Llorenc y Vicens 3, Centre, 07002 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.5736174,
+        "longitude": 2.6554009
+      },
+      "rating": 4.7,
+      "googleMapsUri": "https://maps.google.com/?cid=4965218032614158416&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "http://www.lawyers-auditors.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 215,
+      "displayName": {
+        "text": "De Micco & Friends Rechtsanwälte",
+        "languageCode": "de"
+      },
+      "primaryType": "consultant"
+    }
+  },
+  {
+    "google_place_id": "ChIJm-jyK18WlhIRe740e3jqEgQ",
+    "vertical_slug": "property-managers-mallorca",
+    "name": "CCC Real Estate",
+    "rating": 4.8,
+    "reviews_count": 128,
+    "address": "Via Mallorca, 28, 07590 Cala Rajada, Illes Balears",
+    "latitude": 39.7103087,
+    "longitude": 3.4574494,
+    "website": "https://www.ccc-real-estate.com/",
+    "phone": "+34 971 56 61 78",
+    "google_maps_url": "https://maps.google.com/?cid=293554728916532859&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "service",
+    "types": [
+      "real_estate_agency",
+      "consultant",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "Relocation Mallorca deutsch",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJm-jyK18WlhIRe740e3jqEgQ",
+      "types": [
+        "real_estate_agency",
+        "consultant",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 971 56 61 78",
+      "formattedAddress": "Via Mallorca, 28, 07590 Cala Rajada, Illes Balears",
+      "location": {
+        "latitude": 39.7103087,
+        "longitude": 3.4574494
+      },
+      "rating": 4.8,
+      "googleMapsUri": "https://maps.google.com/?cid=293554728916532859&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://www.ccc-real-estate.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 128,
+      "displayName": {
+        "text": "CCC Real Estate",
+        "languageCode": "de"
+      },
+      "primaryType": "service"
+    }
+  },
+  {
+    "google_place_id": "ChIJr6xQ5QotlhIRdZVZMclucDE",
+    "vertical_slug": "property-managers-mallorca",
+    "name": "DAHLER Mallorca Alcúdia",
+    "rating": 4.9,
+    "reviews_count": 30,
+    "address": "Carrer del Progrés, 14, 07400 Alcúdia, Illes Balears",
+    "latitude": 39.853648899999996,
+    "longitude": 3.1192252,
+    "website": "https://www.dahlercompany.com/de/mallorca/immobilienmakler/alcudia",
+    "phone": "+49 163 6392225",
+    "google_maps_url": "https://maps.google.com/?cid=3562469115645498741&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "service",
+    "types": [
+      "real_estate_agency",
+      "consultant",
+      "finance",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "Immobilienservice Mallorca deutsch",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJr6xQ5QotlhIRdZVZMclucDE",
+      "types": [
+        "real_estate_agency",
+        "consultant",
+        "finance",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+49 163 6392225",
+      "formattedAddress": "Carrer del Progrés, 14, 07400 Alcúdia, Illes Balears",
+      "location": {
+        "latitude": 39.853648899999996,
+        "longitude": 3.1192252
+      },
+      "rating": 4.9,
+      "googleMapsUri": "https://maps.google.com/?cid=3562469115645498741&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://www.dahlercompany.com/de/mallorca/immobilienmakler/alcudia",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 30,
+      "displayName": {
+        "text": "DAHLER Mallorca Alcúdia",
+        "languageCode": "de"
+      },
+      "primaryType": "service"
+    }
+  },
+  {
+    "google_place_id": "ChIJ10_8pM1BlhIRZ_DoVifKst4",
+    "vertical_slug": "property-managers-mallorca",
+    "name": "FALC Real Estate Nordost",
+    "rating": 5,
+    "reviews_count": 53,
+    "address": "Av. del Bon Temps, 16, 07560 Cala Millor, Illes Balears",
+    "latitude": 39.5990403,
+    "longitude": 3.3815492,
+    "website": "https://www.falcrealestate.de/standort/cala-millor/",
+    "phone": "+34 601 90 27 83",
+    "google_maps_url": "https://maps.google.com/?cid=16047110692585140327&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "service",
+    "types": [
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "Immobilienservice Mallorca deutsch",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJ10_8pM1BlhIRZ_DoVifKst4",
+      "types": [
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 601 90 27 83",
+      "formattedAddress": "Av. del Bon Temps, 16, 07560 Cala Millor, Illes Balears",
+      "location": {
+        "latitude": 39.5990403,
+        "longitude": 3.3815492
+      },
+      "rating": 5,
+      "googleMapsUri": "https://maps.google.com/?cid=16047110692585140327&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://www.falcrealestate.de/standort/cala-millor/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 53,
+      "displayName": {
+        "text": "FALC Real Estate Nordost",
+        "languageCode": "de"
+      },
+      "primaryType": "service"
+    }
+  },
+  {
+    "google_place_id": "ChIJtVDra3iSlxIRTeqHP7M-oNI",
+    "vertical_slug": "property-managers-mallorca",
+    "name": "MARCEL REMUS REAL ESTATE",
+    "rating": 4.3,
+    "reviews_count": 58,
+    "address": "Camí de Gènova, 4, loc 4, Ponent, 07014 Palma, Illes Balears",
+    "latitude": 39.572733299999996,
+    "longitude": 2.6199738999999997,
+    "website": "http://www.marcelremus.com/",
+    "phone": "+34 971 45 00 19",
+    "google_maps_url": "https://maps.google.com/?cid=15177199683824511565&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "real_estate_agency",
+    "types": [
+      "real_estate_agency",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "Immobilienservice Mallorca deutsch",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJtVDra3iSlxIRTeqHP7M-oNI",
+      "types": [
+        "real_estate_agency",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 971 45 00 19",
+      "formattedAddress": "Camí de Gènova, 4, loc 4, Ponent, 07014 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.572733299999996,
+        "longitude": 2.6199738999999997
+      },
+      "rating": 4.3,
+      "googleMapsUri": "https://maps.google.com/?cid=15177199683824511565&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "http://www.marcelremus.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 58,
+      "displayName": {
+        "text": "MARCEL REMUS REAL ESTATE",
+        "languageCode": "de"
+      },
+      "primaryType": "real_estate_agency"
+    }
+  },
+  {
+    "google_place_id": "ChIJ4fJj6_uTlxIRBuguiLGS7cE",
+    "vertical_slug": "property-managers-mallorca",
+    "name": "LUXURY ON MALLORCA",
+    "rating": 5,
+    "reviews_count": 14,
+    "address": "Plaza Mediterraneo, 5, Ponent, 07014 Palma, Illes Balears",
+    "latitude": 39.5618273,
+    "longitude": 2.6275117999999997,
+    "website": "https://www.luxuryonmallorca.com/",
+    "phone": "+34 600 59 76 73",
+    "google_maps_url": "https://maps.google.com/?cid=13973986509992159238&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "service",
+    "types": [
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "Immobilienservice Mallorca deutsch",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJ4fJj6_uTlxIRBuguiLGS7cE",
+      "types": [
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 600 59 76 73",
+      "formattedAddress": "Plaza Mediterraneo, 5, Ponent, 07014 Palma, Illes Balears",
+      "location": {
+        "latitude": 39.5618273,
+        "longitude": 2.6275117999999997
+      },
+      "rating": 5,
+      "googleMapsUri": "https://maps.google.com/?cid=13973986509992159238&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://www.luxuryonmallorca.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 14,
+      "displayName": {
+        "text": "LUXURY ON MALLORCA",
+        "languageCode": "de"
+      },
+      "primaryType": "service"
+    }
+  },
+  {
+    "google_place_id": "ChIJBxcW2KatlxIRNtotg41A4ro",
+    "vertical_slug": "property-managers-mallorca",
+    "name": "MD Immobilien Projekte",
+    "rating": 5,
+    "reviews_count": 9,
+    "address": "Carrer de ses Sitges, 1, 07630 Campos, Illes Balears",
+    "latitude": 39.430679399999995,
+    "longitude": 3.0206936,
+    "website": "http://www.md-immoprojekte.com/",
+    "phone": "+34 971 16 04 29",
+    "google_maps_url": "https://maps.google.com/?cid=13466396812326591030&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "real_estate_agency",
+    "types": [
+      "real_estate_agency",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "Immobilienservice Mallorca deutsch",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJBxcW2KatlxIRNtotg41A4ro",
+      "types": [
+        "real_estate_agency",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 971 16 04 29",
+      "formattedAddress": "Carrer de ses Sitges, 1, 07630 Campos, Illes Balears",
+      "location": {
+        "latitude": 39.430679399999995,
+        "longitude": 3.0206936
+      },
+      "rating": 5,
+      "googleMapsUri": "https://maps.google.com/?cid=13466396812326591030&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "http://www.md-immoprojekte.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 9,
+      "displayName": {
+        "text": "MD Immobilien Projekte",
+        "languageCode": "de"
+      },
+      "primaryType": "real_estate_agency"
+    }
+  },
+  {
+    "google_place_id": "ChIJeUxUqDUnmBIR5FQZlJGjqXo",
+    "vertical_slug": "property-managers-mallorca",
+    "name": "Mallorca Agent - Luxury Real Estate",
+    "rating": 5,
+    "reviews_count": 18,
+    "address": "Passeig Illetes, 4, local 6, 07181 Cas Català-Illetes, Illes Balears",
+    "latitude": 39.544016899999995,
+    "longitude": 2.5949667,
+    "website": "http://www.mallorcaagent.com/",
+    "phone": "+34 634 33 42 77",
+    "google_maps_url": "https://maps.google.com/?cid=8838775589341582564&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "real_estate_agency",
+    "types": [
+      "real_estate_agency",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "Immobilienservice Mallorca deutsch",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJeUxUqDUnmBIR5FQZlJGjqXo",
+      "types": [
+        "real_estate_agency",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 634 33 42 77",
+      "formattedAddress": "Passeig Illetes, 4, local 6, 07181 Cas Català-Illetes, Illes Balears",
+      "location": {
+        "latitude": 39.544016899999995,
+        "longitude": 2.5949667
+      },
+      "rating": 5,
+      "googleMapsUri": "https://maps.google.com/?cid=8838775589341582564&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "http://www.mallorcaagent.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 18,
+      "displayName": {
+        "text": "Mallorca Agent - Luxury Real Estate",
+        "languageCode": "de"
+      },
+      "primaryType": "real_estate_agency"
+    }
+  },
+  {
+    "google_place_id": "ChIJx1b1jstGlhIRuaB8lCMgdAA",
+    "vertical_slug": "property-managers-mallorca",
+    "name": "Mallorca Dream | Inmobiliaria en Porto Cristo",
+    "rating": 4.3,
+    "reviews_count": 46,
+    "address": "Ronda Oeste, 40, 07680 Porto Cristo, Illes Balears",
+    "latitude": 39.546833,
+    "longitude": 3.335509,
+    "website": "http://www.mallorca-dream.eu/",
+    "phone": "+34 606 34 70 74",
+    "google_maps_url": "https://maps.google.com/?cid=32686434485575865&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "real_estate_agency",
+    "types": [
+      "real_estate_agency",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "Immobilienservice Mallorca deutsch",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJx1b1jstGlhIRuaB8lCMgdAA",
+      "types": [
+        "real_estate_agency",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 606 34 70 74",
+      "formattedAddress": "Ronda Oeste, 40, 07680 Porto Cristo, Illes Balears",
+      "location": {
+        "latitude": 39.546833,
+        "longitude": 3.335509
+      },
+      "rating": 4.3,
+      "googleMapsUri": "https://maps.google.com/?cid=32686434485575865&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "http://www.mallorca-dream.eu/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 46,
+      "displayName": {
+        "text": "Mallorca Dream | Inmobiliaria en Porto Cristo",
+        "languageCode": "de"
+      },
+      "primaryType": "real_estate_agency"
+    }
+  },
+  {
+    "google_place_id": "ChIJV5XKUxQXlhIRgYtbvozrUyM",
+    "vertical_slug": "property-managers-mallorca",
+    "name": "Immobilienmakler Mallorca ツ HUETHER & PARTNER ®",
+    "rating": 4.7,
+    "reviews_count": 64,
+    "address": "Ronda de l'Oest, 76, 07680 Porto Cristo, Illes Balears",
+    "latitude": 39.5471127,
+    "longitude": 3.3378514,
+    "website": "https://www.huether-partner-mallorca.de/",
+    "phone": "+34 971 83 40 07",
+    "google_maps_url": "https://maps.google.com/?cid=2545637204116081537&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "primary_type": "service",
+    "types": [
+      "real_estate_agency",
+      "consultant",
+      "finance",
+      "point_of_interest",
+      "service",
+      "establishment"
+    ],
+    "business_status": "OPERATIONAL",
+    "source_query": "Immobilienservice Mallorca deutsch",
+    "review_note": "Candidate only. Confirm official website, languages, specialty and fit before publishing a Mallorca Verified Experts profile.",
+    "raw_google_place": {
+      "id": "ChIJV5XKUxQXlhIRgYtbvozrUyM",
+      "types": [
+        "real_estate_agency",
+        "consultant",
+        "finance",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "internationalPhoneNumber": "+34 971 83 40 07",
+      "formattedAddress": "Ronda de l'Oest, 76, 07680 Porto Cristo, Illes Balears",
+      "location": {
+        "latitude": 39.5471127,
+        "longitude": 3.3378514
+      },
+      "rating": 4.7,
+      "googleMapsUri": "https://maps.google.com/?cid=2545637204116081537&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+      "websiteUri": "https://www.huether-partner-mallorca.de/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 64,
+      "displayName": {
+        "text": "Immobilienmakler Mallorca ツ HUETHER & PARTNER ®",
+        "languageCode": "de"
+      },
+      "primaryType": "service"
+    }
+  }
+]

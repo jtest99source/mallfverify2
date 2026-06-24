@@ -5,7 +5,7 @@ export const PLACE_CATEGORY_CONFIGS = {
     output: "data/import-previews/bars-preview.json",
     image: "/images/bar.svg",
     minRating: 4.0,
-    minReviews: 20,
+    minReviews: 30,
     searches: [
       // Palma — por tipo
       "best bars in Palma Mallorca",
@@ -101,7 +101,7 @@ export const PLACE_CATEGORY_CONFIGS = {
     singular: "cafeteria",
     output: "data/import-previews/cafes-preview.json",
     image: "/images/cafe.svg",
-    minRating: 4.1,
+    minRating: 4.2,
     minReviews: 20,
     searches: [
       // Palma — en inglés por tipo
@@ -186,6 +186,162 @@ export const PLACE_CATEGORY_CONFIGS = {
       "cafes with sea view Mallorca",
       "cafeterías con encanto Mallorca",
       "breakfast Mallorca"
+    ]
+  },
+
+  nightlife: {
+    businessCategory: "nightlife",
+    singular: "nightlife venue",
+    output: "data/import-previews/nightlife-preview.json",
+    image: "/images/activity.svg",
+    minRating: 3.8,
+    minReviews: 100,
+    searches: [
+      "nightclubs Mallorca",
+      "best clubs Mallorca",
+      "nightlife Mallorca",
+      "clubs Palma Mallorca",
+      "nightlife Palma Mallorca",
+      "discotecas Mallorca",
+      "discotecas Palma Mallorca",
+      "clubs Santa Catalina Palma",
+      "clubs Paseo Maritimo Palma",
+      "clubs Playa de Palma Mallorca",
+      "nightlife Playa de Palma Mallorca",
+      "clubs Magaluf Mallorca",
+      "nightlife Magaluf Mallorca",
+      "clubs Palmanova Mallorca",
+      "clubs Santa Ponsa Mallorca",
+      "clubs Cala Ratjada Mallorca",
+      "nightlife Cala Ratjada Mallorca",
+      "clubs Alcudia Mallorca",
+      "clubs Port d'Alcudia Mallorca",
+      "clubs Cala d'Or Mallorca",
+      "beach party Mallorca",
+      "live music club Mallorca",
+      "late night bar Mallorca",
+      "Diskothek Mallorca",
+      "Nachtclub Mallorca",
+      "Party Mallorca",
+      "Clubs auf Mallorca",
+      "Ausgehen Mallorca",
+      "Nachtleben Palma Mallorca"
+    ]
+  },
+
+  "car-dealers": {
+    businessCategory: "car-dealer",
+    singular: "car dealer",
+    output: "data/import-previews/car-dealers-preview.json",
+    image: "/images/placeholder.svg",
+    minRating: 3.9,
+    minReviews: 15,
+    searches: [
+      "used car dealer Mallorca",
+      "car dealer Mallorca",
+      "second hand cars Mallorca",
+      "buy used car Mallorca",
+      "coches segunda mano Mallorca",
+      "compraventa coches Mallorca",
+      "concesionario coches Mallorca",
+      "coches ocasion Mallorca",
+      "venta coches usados Palma Mallorca",
+      "concesionario Palma Mallorca",
+      "car dealer Palma Mallorca",
+      "used cars Palma Mallorca",
+      "car dealer Calvia Mallorca",
+      "car dealer Manacor Mallorca",
+      "car dealer Inca Mallorca",
+      "car dealer Llucmajor Mallorca",
+      "Autohandler Mallorca",
+      "Gebrauchtwagen Mallorca",
+      "Auto kaufen Mallorca",
+      "Autoverkauf Mallorca"
+    ]
+  },
+
+  healthcare: {
+    businessCategory: "healthcare",
+    singular: "clinic or healthcare provider",
+    output: "data/import-previews/healthcare-preview.json",
+    image: "/images/placeholder.svg",
+    minRating: 4.0,
+    minReviews: 8,
+    searches: [
+      "English speaking doctor Mallorca",
+      "private clinic Mallorca expats",
+      "private doctor Mallorca",
+      "British GP Mallorca",
+      "German doctor Mallorca",
+      "international clinic Mallorca",
+      "medical center Mallorca English",
+      "doctor Palma Mallorca English",
+      "private clinic Palma Mallorca",
+      "emergency doctor Mallorca",
+      "24h doctor Mallorca",
+      "dentist Mallorca English speaking",
+      "English speaking dentist Mallorca",
+      "German dentist Mallorca",
+      "dental clinic Mallorca",
+      "private hospital Mallorca",
+      "expat doctor Mallorca",
+      "arzt Mallorca deutsch",
+      "deutscher Arzt Mallorca",
+      "Zahnarzt Mallorca deutsch",
+      "Kinderarzt Mallorca deutsch",
+      "Privatklinik Mallorca",
+      "clinica privada Mallorca",
+      "medico ingles Mallorca",
+      "dentista ingles Mallorca"
+    ]
+  },
+
+  "real-estate": {
+    businessCategory: "real-estate",
+    singular: "real estate agency",
+    output: "data/import-previews/real-estate-preview.json",
+    image: "/images/placeholder.svg",
+    minRating: 3.9,
+    minReviews: 8,
+    blockedTypes: [
+      "jewelry_store",
+      "clothing_store",
+      "furniture_store",
+      "home_goods_store",
+      "grocery_store",
+      "supermarket",
+      "restaurant",
+      "food",
+      "store"
+    ],
+    searches: [
+      "real estate agency Mallorca",
+      "estate agents Mallorca",
+      "property agency Mallorca",
+      "buy property Mallorca",
+      "luxury real estate Mallorca",
+      "inmobiliaria Mallorca",
+      "agencia inmobiliaria Mallorca",
+      "comprar casa Mallorca",
+      "Immobilienmakler Mallorca",
+      "Immobilien Mallorca",
+      "Haus kaufen Mallorca",
+      "real estate agency Palma Mallorca",
+      "estate agents Palma Mallorca",
+      "inmobiliaria Palma Mallorca",
+      "Immobilienmakler Palma Mallorca",
+      "real estate agency Port d'Andratx Mallorca",
+      "estate agents Santa Ponsa Mallorca",
+      "estate agents Puerto Portals Mallorca",
+      "estate agents Pollenca Mallorca",
+      "estate agents Port de Pollenca Mallorca",
+      "real estate Alcudia Mallorca",
+      "real estate Soller Mallorca",
+      "real estate Deia Mallorca",
+      "real estate Santanyi Mallorca",
+      "real estate Cala d'Or Mallorca",
+      "real estate Manacor Mallorca",
+      "real estate Inca Mallorca"
     ]
   },
 
@@ -280,9 +436,41 @@ export const PLACE_CATEGORY_CONFIGS = {
     businessCategory: "rent-a-car",
     singular: "alquiler de coches",
     output: "data/import-previews/rent-a-car-preview.json",
-    image: "/images/car.svg",
+    image: "/images/placeholder.svg",
     minRating: 3.8,
-    minReviews: 25,
+    minReviews: 50,
+    // Block anything that is clearly not car/moto rental: quads, tours, dealers, boats
+    blockedTypes: [
+      "bicycle_rental",
+      "bicycle_store",
+      "sporting_goods_store",
+      "adventure_sports_center",
+      "tour_agency",
+      "travel_agency",
+      "car_dealer",
+      "car_repair",
+      "boat_rental",
+      "tourist_attraction",
+      "amusement_park"
+    ],
+    // Block bike and quad rental companies Google classifies generically as "service"
+    // "bike " / " bike" / "bikes" catches Bike Island, Paco's Rent A Bike, Clips Bikes
+    // without catching "motorbike" (has no space around bike) or "e-bike" (caught by "e-bike")
+    blockedNameKeywords: [
+      "bicycle",
+      "cycling",
+      "ciclismo",
+      "bike ",
+      " bike",
+      "bikes",
+      "e-bike",
+      "bicicleta",
+      "biciclet",
+      "bikeholiday",
+      "quad",
+      "buggy",
+      "kids car"
+    ],
     searches: [
       // Aeropuerto y Palma — en inglés
       "car rental Palma de Mallorca airport",
@@ -295,34 +483,26 @@ export const PLACE_CATEGORY_CONFIGS = {
       "luxury car rental Mallorca",
       "electric car rental Mallorca",
 
-      // En español
+      // En español — coches y vehículos a motor
       "alquiler de coches Mallorca",
       "alquiler de coches Palma Mallorca",
       "alquiler de coches aeropuerto Mallorca",
-      "alquiler de motos Mallorca",
-      "alquiler de moto Palma Mallorca",
-      "alquiler de scooter Mallorca",
-      "alquiler de scooter Palma Mallorca",
-      "alquiler de bicicletas Mallorca",
-      "alquiler de bicicleta Palma Mallorca",
       "alquiler de coches eléctricos Mallorca",
       "rent a car barato Mallorca",
       "alquiler de vehículos Mallorca",
-      "alquiler de quad Mallorca",
       "alquiler sin tarjeta de crédito Mallorca",
       "coches de alquiler Mallorca",
 
-      // Por tipo de vehículo
+      // Motos y scooters (sí son alquiler de vehículo, no bikes)
+      "alquiler de motos Mallorca",
+      "alquiler de moto Palma Mallorca",
+      "alquiler de scooter Mallorca",
       "scooter rental Mallorca",
       "motorcycle rental Mallorca",
       "moped rental Mallorca",
-      "electric scooter rental Mallorca",
-      "bicycle rental Mallorca",
-      "e-bike rental Mallorca",
-      "quad rental Mallorca",
       "motorbike rental Mallorca",
 
-      // Por zona
+      // Por zona — solo coches
       "car rental Alcudia Mallorca",
       "car rental Port d'Alcudia Mallorca",
       "car rental Port de Pollenca Mallorca",
@@ -348,9 +528,36 @@ export const PLACE_CATEGORY_CONFIGS = {
     businessCategory: "spa",
     singular: "spa",
     output: "data/import-previews/spas-preview.json",
-    image: "/images/spa.svg",
-    minRating: 4.1,
+    image: "/images/placeholder.svg",
+    minRating: 4.2,
     minReviews: 15,
+    // Block hotels, hair/nail salons, gyms, medical, restaurants, beaches
+    blockedTypes: [
+      "hotel",
+      "resort_hotel",
+      "lodging",
+      "bed_and_breakfast",
+      "motel",
+      "hair_salon",
+      "nail_salon",
+      "barber_shop",
+      "gym",
+      "fitness_center",
+      "restaurant",
+      "food",
+      "tourist_attraction",
+      "natural_feature",
+      "grocery_store",
+      "store",
+      "medical_clinic",
+      "medical_center",
+      "doctor",
+      "dentist",
+      "dental_clinic",
+      "physiotherapist",
+      "hospital",
+      "skin_care_clinic"
+    ],
     searches: [
       // Palma — en inglés
       "best spa Palma Mallorca",
@@ -382,7 +589,7 @@ export const PLACE_CATEGORY_CONFIGS = {
       "spa in Santa Catalina Palma",
       "spa in Old Town Palma Mallorca",
 
-      // Tramuntana — spas en hoteles boutique y fincas
+      // Tramuntana
       "spa in Soller Mallorca",
       "spa in Port de Soller Mallorca",
       "spa in Valldemossa Mallorca",
@@ -421,12 +628,11 @@ export const PLACE_CATEGORY_CONFIGS = {
       "spa in Llucmajor Mallorca",
       "masajes Peguera Mallorca",
 
-      // General
-      "hotel spa Mallorca",
+      // General (eliminado "hotel spa Mallorca" — traía 128 hoteles)
       "wellness spa Mallorca",
+      "day spa Mallorca",
       "spa de lujo Mallorca",
       "masajes Mallorca",
-      "spa day Mallorca",
       "thalassotherapy Mallorca",
       "hammam Mallorca"
     ]
@@ -436,7 +642,7 @@ export const PLACE_CATEGORY_CONFIGS = {
     businessCategory: "gym",
     singular: "gimnasio",
     output: "data/import-previews/gyms-preview.json",
-    image: "/images/gym.svg",
+    image: "/images/placeholder.svg",
     minRating: 4.0,
     minReviews: 20,
     searches: [
@@ -716,6 +922,59 @@ export const PLACE_CATEGORY_CONFIGS = {
       "catamaran tours Mallorca",
       "sailing tours Mallorca",
       "velero tours Mallorca"
+    ]
+  },
+
+  "aesthetic-medicine": {
+    businessCategory: "healthcare",
+    singular: "aesthetic medicine clinic",
+    output: "data/import-previews/aesthetic-medicine-preview.json",
+    image: "/images/placeholder.svg",
+    minRating: 4.4,
+    minReviews: 20,
+    searches: [
+      // English-speaking aesthetic clinics
+      "english speaking aesthetic clinic Mallorca",
+      "english speaking cosmetic clinic Mallorca",
+      "botox clinic Mallorca english",
+      "filler clinic Mallorca english",
+      "aesthetic medicine Mallorca english",
+      "cosmetic medicine Mallorca english speaking",
+      "skin clinic Mallorca english",
+      "laser clinic Mallorca english",
+      "anti aging clinic Mallorca english",
+      "aesthetic surgery Mallorca english",
+
+      // German-speaking aesthetic clinics
+      "Schönheitsklinik Mallorca",
+      "Ästhetische Medizin Mallorca",
+      "Schönheitsbehandlung Mallorca",
+      "Botox Mallorca deutsch",
+      "Filler Behandlung Mallorca",
+      "Hautarzt Mallorca ästhetisch",
+      "Laserbehandlung Mallorca deutsch",
+      "Antiaging Klinik Mallorca",
+      "kosmetische Klinik Mallorca",
+
+      // Specific branded clinics known to serve expats
+      "Beauty Clinic Mallorca Bendinat",
+      "mySkin Mallorca",
+      "MD Aesthetics Santa Ponsa",
+      "CENSALUD Palma aesthetic",
+      "OLIVA Aesthetic Mallorca",
+      "Mallorca Medical Group",
+      "Clínica Mediben Palma",
+
+      // General terms
+      "clinica estetica Mallorca",
+      "medicina estetica Palma Mallorca",
+      "cirugia estetica Mallorca",
+      "dermatologia estetica Mallorca",
+      "tratamientos esteticos Palma",
+      "botox Palma Mallorca",
+      "acido hialuronico Palma Mallorca",
+      "depilacion laser Mallorca",
+      "rejuvenecimiento facial Mallorca"
     ]
   }
 };
