@@ -84,12 +84,12 @@ export function HomePlaceSearch({ locale, categories, locations }: HomePlaceSear
     <form
       ref={rootRef}
       onSubmit={onSubmit}
-      className="relative z-30 mt-6 overflow-visible rounded-lg border border-white/10 bg-[#0A0A0A]/50 p-1.5 shadow-[0_28px_80px_rgba(0,0,0,0.45)] backdrop-blur-md sm:mt-8"
+      className="relative z-30 mx-auto mt-8 w-full max-w-[680px] overflow-visible rounded-lg border border-white/20 bg-[#0A0A0A]/78 p-1.5 shadow-[0_28px_80px_rgba(0,0,0,0.58)] backdrop-blur-md"
     >
-      <div className="grid sm:grid-cols-[minmax(0,1.15fr)_minmax(0,1fr)_auto] sm:items-stretch">
+      <div className="grid sm:grid-cols-[minmax(0,1fr)_minmax(0,1fr)_128px] sm:items-stretch">
         {/* WHAT */}
-        <div className="relative z-40 px-4 py-3 sm:border-r sm:border-white/10">
-          <span className="mb-1 block text-[10px] font-black uppercase tracking-[0.14em] text-white/45">
+        <div className="relative z-40 px-5 py-4 sm:border-r sm:border-white/10">
+          <span className="mb-1.5 block text-[9px] font-black uppercase tracking-[0.14em] text-white/45">
             {labels.category}
           </span>
           <button
@@ -99,11 +99,11 @@ export function HomePlaceSearch({ locale, categories, locations }: HomePlaceSear
               event.stopPropagation();
               toggleMenu("category");
             }}
-            className="flex h-9 w-full items-center gap-3 text-left"
+            className="flex h-10 w-full items-center gap-3 text-left"
             aria-expanded={openMenu === "category"}
           >
             <IconSearch aria-hidden="true" size={18} className="shrink-0 text-white/55" />
-            <span className="min-w-0 flex-1 truncate text-base font-black text-white">{selectedCategoryLabel}</span>
+            <span className="min-w-0 flex-1 truncate text-[15px] font-black text-white">{selectedCategoryLabel}</span>
             <IconChevronDown
               aria-hidden="true"
               size={17}
@@ -134,8 +134,8 @@ export function HomePlaceSearch({ locale, categories, locations }: HomePlaceSear
         </div>
 
         {/* WHERE */}
-        <div className="relative z-40 border-t border-white/10 px-4 py-3 sm:border-t-0">
-          <span className="mb-1 block text-[10px] font-black uppercase tracking-[0.14em] text-white/45">
+        <div className="relative z-40 border-t border-white/10 px-5 py-4 sm:border-t-0">
+          <span className="mb-1.5 block text-[9px] font-black uppercase tracking-[0.14em] text-white/45">
             {labels.location}
           </span>
           <button
@@ -145,11 +145,11 @@ export function HomePlaceSearch({ locale, categories, locations }: HomePlaceSear
               event.stopPropagation();
               toggleMenu("location");
             }}
-            className="flex h-9 w-full items-center gap-3 text-left"
+            className="flex h-10 w-full items-center gap-3 text-left"
             aria-expanded={openMenu === "location"}
           >
             <IconMapPin aria-hidden="true" size={18} className="shrink-0 text-white/55" />
-            <span className="min-w-0 flex-1 truncate text-base font-black text-white">{selectedLocationLabel}</span>
+            <span className="min-w-0 flex-1 truncate text-[15px] font-black text-white">{selectedLocationLabel}</span>
             <IconChevronDown
               aria-hidden="true"
               size={17}
@@ -196,7 +196,7 @@ export function HomePlaceSearch({ locale, categories, locations }: HomePlaceSear
         {/* SUBMIT */}
         <button
           type="submit"
-          className="inline-flex min-h-14 w-full items-center justify-center rounded-md bg-[#FFCC00] px-8 text-[12px] font-black uppercase tracking-[0.14em] text-[#0A0A0A] transition-all duration-150 hover:bg-white sm:w-auto"
+          className="inline-flex min-h-14 w-full items-center justify-center rounded-md bg-[#FFCC00] px-6 text-[12px] font-black uppercase tracking-[0.14em] text-[#0A0A0A] transition-all duration-150 hover:bg-white sm:min-h-full sm:w-[128px]"
         >
           {labels.submit}
         </button>

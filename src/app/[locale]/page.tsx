@@ -385,8 +385,23 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
   const approvedExperts = expertProfiles.filter((profile) => profile.status !== "hidden");
   const expertMetricLabel =
     safeLocale === "de" ? "gepruefte Experten" : safeLocale === "en" ? "verified experts" : "expertos verificados";
-  const heroBusinesses = [restaurantsPalma[0], beachClubs[0], hotels[0], activities[0], restaurantsSoller[0]]
-    .filter((business): business is Business => Boolean(business) && Boolean(getBusinessImageUrl(business)))
+  const seenHeroBusinessIds = new Set<string>();
+  const heroBusinesses = [
+    ...restaurantsPalma,
+    ...beachClubs,
+    ...hotels,
+    ...activities,
+    ...restaurantsSoller,
+    ...boats,
+    ...bars,
+    ...cafes
+  ]
+    .filter((business): business is Business => {
+      const businessId = String(business.id);
+      if (!business || !getBusinessImageUrl(business) || seenHeroBusinessIds.has(businessId)) return false;
+      seenHeroBusinessIds.add(businessId);
+      return true;
+    })
     .slice(0, 4);
   const heroChips = [
     { href: `/${safeLocale}/top/restaurants?area=Palma`, label: safeLocale === "de" ? "Restaurants in Palma" : safeLocale === "en" ? "Restaurants in Palma" : "Restaurantes en Palma" },
@@ -408,7 +423,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
             </BusinessImage>
           ))}
         </div>
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_90%_at_50%_50%,rgba(10,10,10,0.84)_0%,rgba(10,10,10,0.56)_100%),linear-gradient(to_bottom,rgba(10,10,10,0.68)_0%,rgba(10,10,10,0.32)_42%,rgba(10,10,10,0.9)_100%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_72%_72%_at_50%_43%,rgba(10,10,10,0.9)_0%,rgba(10,10,10,0.76)_48%,rgba(10,10,10,0.88)_100%),linear-gradient(to_bottom,rgba(10,10,10,0.78)_0%,rgba(10,10,10,0.42)_42%,rgba(10,10,10,0.95)_100%)]" />
         <div className="relative z-10 flex w-full max-w-[780px] flex-col items-center">
           <div className="w-full max-w-[780px]">
             <div className="mb-6 inline-flex items-center gap-3 text-[10px] font-semibold uppercase tracking-[0.16em] text-[#FFCC00] before:h-px before:w-6 before:bg-[#FFCC00] after:h-px after:w-6 after:bg-[#FFCC00]">
@@ -418,7 +433,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
             <h1 className="font-display mx-auto max-w-4xl text-balance text-5xl font-black leading-[0.92] text-white sm:text-7xl lg:text-[88px]">
               {copy.home.title}
             </h1>
-            <p className="mx-auto mt-6 max-w-[520px] text-base font-light leading-8 text-white/55 sm:text-[17px]">
+            <p className="mx-auto mt-6 max-w-[520px] text-base font-light leading-8 text-white/72 sm:text-[17px]">
               {copy.home.intro}
             </p>
             <HomePlaceSearch locale={safeLocale} categories={[...publicCategorySlugs]} locations={homepageSearchLocations} />
