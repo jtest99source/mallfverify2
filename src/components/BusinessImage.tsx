@@ -45,7 +45,11 @@ const imageOverlays: Record<BusinessImageVariant, string> = {
 // If none found, falls back to the scraped primaryImageUrl as usual.
 const DIRECT_IMAGE_OVERRIDES: Record<string, string> = {
   "catedral-basilica-de-santa-maria-de-mallorca":
-    "https://catedraldemallorca.org/wp-content/uploads/2025/05/CatedralInterior.jpg.webp"
+    "https://catedraldemallorca.org/wp-content/uploads/2025/05/CatedralInterior.jpg.webp",
+  "illeta-camp-de-mar":
+    "https://lh3.googleusercontent.com/place-photos/AJRVUZOUKjISFZlFHX6Nyh6myuMTvL5jvUv8zg7RykqUdG3dlsNWMHmGy3vIK0rqLMIRjHumvsoLrJM7I2CnTvyQYq2rx-zIX3YkqZ1uh5aYA4Il4neOu85H3_Hl_7ZC48H-f5TPqcQcP3JTqdLHR0cKZyGe=s4800-w1600",
+  "restaurante-illeta":
+    "https://lh3.googleusercontent.com/place-photos/AJRVUZOUKjISFZlFHX6Nyh6myuMTvL5jvUv8zg7RykqUdG3dlsNWMHmGy3vIK0rqLMIRjHumvsoLrJM7I2CnTvyQYq2rx-zIX3YkqZ1uh5aYA4Il4neOu85H3_Hl_7ZC48H-f5TPqcQcP3JTqdLHR0cKZyGe=s4800-w1600"
 };
 
 const GALLERY_INDEX_OVERRIDES: Record<string, number[]> = {

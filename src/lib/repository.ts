@@ -597,6 +597,78 @@ function sortByAuthority(businesses: Business[]) {
   });
 }
 
+function businessRankingScore(business: Pick<Business, "rating" | "reviewsCount">) {
+  return (business.rating ?? 0) * Math.log((business.reviewsCount ?? 0) + 1);
+}
+
+function sortByRankingScore(businesses: Business[]) {
+  return businesses.slice().sort((a, b) => {
+    const scoreDiff = businessRankingScore(b) - businessRankingScore(a);
+    if (scoreDiff !== 0) return scoreDiff;
+    return (b.reviewsCount ?? 0) - (a.reviewsCount ?? 0);
+  });
+}
+
+function businessRankingArea(business: Pick<Business, "city" | "area" | "municipality">) {
+  return business.city || business.area || business.municipality || "Mallorca";
+}
+
+export type BusinessRankingPlacement = {
+  scope: "local" | "island";
+  area: string;
+  areaSlug: string;
+  category: CategorySlug;
+  position: number;
+  total: number;
+};
+
+export type BusinessRankingContext = {
+  primary?: BusinessRankingPlacement;
+  local?: BusinessRankingPlacement;
+  island?: BusinessRankingPlacement;
+};
+
+export async function getBusinessRankingContext(business: Business, category: CategorySlug, minLocalBusinesses = 3): Promise<BusinessRankingContext> {
+  const businesses = sortByRankingScore(await getBusinesses(category));
+  const islandIndex = businesses.findIndex((item) => item.id === business.id);
+  const island =
+    islandIndex >= 0
+      ? {
+          scope: "island" as const,
+          area: "Mallorca",
+          areaSlug: "mallorca",
+          category,
+          position: islandIndex + 1,
+          total: businesses.length
+        }
+      : undefined;
+
+  const localArea = businessRankingArea(business);
+  const localAreaSlug = toSlug(localArea);
+  const localBusinesses =
+    localAreaSlug && localAreaSlug !== "mallorca"
+      ? businesses.filter((item) => toSlug(businessRankingArea(item)) === localAreaSlug)
+      : [];
+  const localIndex = localBusinesses.findIndex((item) => item.id === business.id);
+  const local =
+    localBusinesses.length >= minLocalBusinesses && localIndex >= 0
+      ? {
+          scope: "local" as const,
+          area: localArea,
+          areaSlug: localAreaSlug,
+          category,
+          position: localIndex + 1,
+          total: localBusinesses.length
+        }
+      : undefined;
+
+  return {
+    primary: local ?? island,
+    local,
+    island
+  };
+}
+
 export async function getTopBusinessesByCategory(category: CategorySlug, limit = 40): Promise<Business[]> {
   const businesses = await getBusinesses(category);
   return sortByAuthority(businesses).slice(0, limit);

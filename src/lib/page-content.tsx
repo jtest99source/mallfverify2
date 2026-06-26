@@ -11,7 +11,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { BusinessImage, getBusinessImageUrl } from "@/components/BusinessImage";
 import { categoryConfigs, getCategorySlugFromBusiness, isPublicCategorySlug, siteUrl, type CategorySlug } from "@/lib/data";
 import { categoryLabelForBusiness, getCategoryCopy, t } from "@/lib/i18n-copy";
-import { getBusinessAreaCategoryPages, getBusinessBySlug, getBusinesses, getBusinessSlugsByCategory, getRelatedBusinesses, getRelatedRankings } from "@/lib/repository";
+import { getBusinessAreaCategoryPages, getBusinessBySlug, getBusinessRankingContext, getBusinesses, getBusinessSlugsByCategory, getRelatedBusinesses, getRelatedRankings, type BusinessRankingPlacement } from "@/lib/repository";
 import { createBreadcrumbSchema, createCollectionPageSchema, createFAQSchema, createLocalBusinessSchema } from "@/lib/schema";
 import { generateSeoMetadata } from "@/lib/seo";
 import { isLocale, type Locale } from "@/lib/i18n";
@@ -225,6 +225,32 @@ function formatLocalizedRating(rating: number, locale: Locale) {
   return rating.toLocaleString(numberLocale(locale), { minimumFractionDigits: 1, maximumFractionDigits: 1 });
 }
 
+function rankingCategoryLabel(category: CategorySlug, locale: Locale) {
+  return getCategoryCopy(category, locale).label.toLowerCase();
+}
+
+function rankingScopeLabel(placement: BusinessRankingPlacement, category: CategorySlug, locale: Locale) {
+  const categoryLabel = rankingCategoryLabel(category, locale);
+  if (placement.scope === "island") return locale === "es" ? `${categoryLabel} de Mallorca` : locale === "de" ? `${categoryLabel} auf Mallorca` : `Mallorca ${categoryLabel}`;
+  return locale === "es" ? `${categoryLabel} de ${placement.area}` : locale === "de" ? `${categoryLabel} in ${placement.area}` : `${placement.area} ${categoryLabel}`;
+}
+
+function rankingEyebrow(placement: BusinessRankingPlacement, category: CategorySlug, locale: Locale) {
+  return locale === "es"
+    ? `#${placement.position} en ${rankingScopeLabel(placement, category, locale)}`
+    : `#${placement.position} in ${rankingScopeLabel(placement, category, locale)}`;
+}
+
+function rankingTotalLabel(placement: BusinessRankingPlacement, locale: Locale) {
+  const total = placement.total.toLocaleString(numberLocale(locale));
+  return locale === "es" ? `de ${total} rankeados` : locale === "de" ? `von ${total} gerankt` : `out of ${total} ranked`;
+}
+
+function rankingSecondaryLine(placement: BusinessRankingPlacement, category: CategorySlug, locale: Locale) {
+  const label = rankingScopeLabel(placement, category, locale);
+  return locale === "es" ? `también #${placement.position} en ${label}` : locale === "de" ? `auch #${placement.position} in ${label}` : `also #${placement.position} in ${label}`;
+}
+
 function renderStars(rating?: number) {
   if (typeof rating !== "number") return "Google";
   const filled = Math.max(0, Math.min(5, Math.round(rating)));
@@ -431,6 +457,40 @@ function QuickScore({ business, locale }: { business: Business; locale: Locale }
   );
 }
 
+function BusinessRankingCard({
+  primary,
+  island,
+  category,
+  locale
+}: {
+  primary?: BusinessRankingPlacement;
+  island?: BusinessRankingPlacement;
+  category: CategorySlug;
+  locale: Locale;
+}) {
+  if (!primary) return null;
+  const showSecondaryIsland = island && primary.scope !== "island";
+  const heading =
+    locale === "es"
+      ? `Posición en ${rankingScopeLabel(primary, category, locale)}`
+      : locale === "de"
+        ? `Position in ${rankingScopeLabel(primary, category, locale)}`
+        : `Position in ${rankingScopeLabel(primary, category, locale)}`;
+
+  return (
+    <section className="rounded-md bg-[#FFCC00] p-5 text-[#0A0A0A] shadow-[0_18px_36px_rgba(255,204,0,0.18)]">
+      <p className="text-[10px] font-black uppercase tracking-[0.14em] text-[#0A0A0A]/60">{heading}</p>
+      <div className="mt-2 font-display text-6xl font-black leading-none">#{primary.position}</div>
+      <p className="mt-1 text-xs font-semibold text-[#0A0A0A]/70">{rankingTotalLabel(primary, locale)}</p>
+      {showSecondaryIsland && (
+        <div className="mt-4 border-t border-[#0A0A0A]/18 pt-3 text-xs font-black uppercase tracking-[0.08em] text-[#0A0A0A]/70">
+          {rankingSecondaryLine(island, category, locale)}
+        </div>
+      )}
+    </section>
+  );
+}
+
 export function generateCategoryMetadata(category: CategorySlug, locale: string) {
   const safeLocale = isLocale(locale) ? locale : "es";
   if (!isPublicCategorySlug(category)) return { robots: { index: false, follow: false } };
@@ -613,7 +673,7 @@ export async function BusinessDetailPage({ category, locale, slug }: { category:
   const business = await getBusinessBySlug(category, slug);
   if (!business) notFound();
 
-  const related = await getRelatedBusinesses(business);
+  const [related, rankingContext] = await Promise.all([getRelatedBusinesses(business), getBusinessRankingContext(business, category)]);
   const publicName = getBusinessPublicName(business);
   const location = business.city || business.area || business.municipality || "Mallorca";
   const copy = t(locale);
@@ -622,6 +682,14 @@ export async function BusinessDetailPage({ category, locale, slug }: { category:
   const heroImage = getBusinessImageUrl(business) || galleryImages[0];
   const priceValue = getBusinessPriceValue(business, locale);
   const publicWebsite = business.website && !isSocialWebsiteType(business.websiteType) ? business.website : null;
+  const primaryRanking = rankingContext.primary;
+  const secondaryIslandRanking = rankingContext.island && primaryRanking?.scope !== "island" ? rankingContext.island : undefined;
+  const heroMeta = [
+    typeof business.rating === "number" ? `★ ${formatLocalizedRating(business.rating, locale)}` : null,
+    typeof business.reviewsCount === "number" ? `${business.reviewsCount.toLocaleString(numberLocale(locale))} ${copy.business.reviewsOnGoogle}` : null,
+    business.address || `${location}, Mallorca`,
+    secondaryIslandRanking ? rankingSecondaryLine(secondaryIslandRanking, category, locale) : null
+  ].filter(Boolean);
   const breadcrumbs = [
     { name: copy.category.breadcrumbHome, url: `${siteUrl}/${locale}` },
     { name: getCategoryCopy(category, locale).label, url: `${siteUrl}/${locale}/${category}` },
@@ -639,8 +707,11 @@ export async function BusinessDetailPage({ category, locale, slug }: { category:
           <div className="absolute inset-x-0 bottom-0 z-10 px-4 pb-6 sm:px-6 lg:px-8">
             <div className="flex flex-col items-start gap-3 sm:gap-5 lg:flex-row lg:items-end lg:justify-between">
               <div className="max-w-4xl">
-                <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-gold">{localizedCategoryLabel(business.category, locale)} · {location}</p>
+                <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-gold">
+                  {primaryRanking ? rankingEyebrow(primaryRanking, category, locale) : `${localizedCategoryLabel(business.category, locale)} · ${location}`}
+                </p>
                 <h1 className="mt-2 text-3xl font-black leading-[0.98] text-paper [text-shadow:_0_2px_12px_rgba(0,0,0,0.55)] sm:text-5xl lg:text-6xl">{publicName}</h1>
+                {heroMeta.length > 0 && <p className="mt-3 max-w-3xl text-sm font-semibold leading-6 text-white/78">{heroMeta.join(" · ")}</p>}
               </div>
               <div className="flex w-fit shrink-0 items-stretch gap-2">
               {(typeof business.rating === "number" || typeof business.reviewsCount === "number") && (
@@ -680,15 +751,16 @@ export async function BusinessDetailPage({ category, locale, slug }: { category:
 
         <aside className="hidden rounded-md border border-borderline bg-white p-5 shadow-[0_18px_45px_rgba(28,28,24,0.05)] lg:block">
           <div className="lg:sticky lg:top-24">
-            <section className="border-b border-linen pb-6">
+            <section className="grid gap-4 border-b border-linen pb-6">
+              <BusinessRankingCard primary={primaryRanking} island={rankingContext.island} category={category} locale={locale} />
               <QuickScore business={business} locale={locale} />
               {priceValue && (
-                <div className="mt-3 flex items-center justify-between rounded-md border border-borderline bg-paper px-4 py-3">
+                <div className="flex items-center justify-between rounded-md border border-borderline bg-paper px-4 py-3">
                   <span className="text-[9px] font-bold uppercase tracking-[0.08em] text-sage">{priceValue.label ? `${copy.business.pricePer} ${priceValue.label}` : copy.business.price}</span>
                   <span className="text-[19px] font-black leading-none text-ink">{priceValue.display}</span>
                 </div>
               )}
-              <div className="mt-4 grid gap-2">
+              <div className="grid gap-2">
                 {business.googleMapsUrl && <a href={business.googleMapsUrl} target="_blank" rel="noreferrer" className="rounded-sm bg-[#0A0A0A] px-4 py-3 text-center text-[11px] font-bold uppercase tracking-[0.1em] text-paper hover:bg-[#262626]">{copy.business.googleMaps}</a>}
                 {publicWebsite && <a href={publicWebsite} target="_blank" rel="noreferrer" className="rounded-sm border border-borderline px-4 py-3 text-center text-[11px] font-bold uppercase tracking-[0.1em] text-ink">{business.websiteType === "official_website" ? copy.business.officialWebsite : getWebsiteLabel(business.websiteType)}</a>}
               </div>
