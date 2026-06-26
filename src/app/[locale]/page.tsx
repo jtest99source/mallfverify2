@@ -30,7 +30,7 @@ import { getBusinessPublicName } from "@/lib/business-name-normalizer";
 import { methodologyPath } from "@/lib/methodology";
 import { getEditorialImageForGuide } from "@/lib/unsplash";
 import { HomePlaceSearch } from "@/components/HomePlaceSearch";
-import { BusinessImage } from "@/components/BusinessImage";
+import { BusinessImage, getBusinessImageUrl } from "@/components/BusinessImage";
 import { RatingBadge } from "@/components/RatingBadge";
 import { JsonLd } from "@/components/JsonLd";
 import { siteConfig } from "@/config/site";
@@ -217,12 +217,12 @@ function CategoryRankingCard({ category, businesses, locale }: { category: Categ
 
 function CarouselBusinessCard({ business, index, locale }: { business: Business; index: number; locale: Locale }) {
   return (
-    <Link href={businessHref(locale, business)} className="group block w-[78vw] max-w-[330px] shrink-0 snap-start overflow-hidden rounded-lg border border-[#E5E7EB] bg-white shadow-[0_18px_45px_rgba(10,10,10,0.05)] transition-all duration-200 hover:-translate-y-1 hover:border-[#0A0A0A] hover:shadow-[0_28px_70px_rgba(10,10,10,0.12)] sm:w-[310px]">
-      <BusinessImage business={business} category={business.category} variant="card" className="h-[190px] min-h-[190px]">
+    <Link href={businessHref(locale, business)} className="group block w-[78vw] max-w-[330px] shrink-0 snap-start overflow-hidden bg-[#111111] ring-1 ring-white/[0.08] transition-all duration-200 hover:bg-[#1A1A1A] sm:w-[310px]">
+      <BusinessImage business={business} category={business.category} variant="card" className="h-[200px] min-h-[200px] rounded-none p-3">
         <div className="flex h-full flex-col justify-between">
-          <span className="inline-flex h-8 w-8 items-center justify-center rounded-md bg-[#0A0A0A] text-xs font-black text-white">#{index + 1}</span>
+          <span className="font-display inline-flex text-xl font-black leading-none text-[#FFCC00]">#{index + 1}</span>
           <div>
-            <p className="inline-flex items-center gap-1 rounded-full bg-black/65 px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.08em] text-white">
+            <p className="inline-flex items-center gap-1 bg-black/55 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.08em] text-white/75 backdrop-blur">
               <IconMapPin size={12} stroke={2} />
               {businessLocation(business)}
             </p>
@@ -233,10 +233,10 @@ function CarouselBusinessCard({ business, index, locale }: { business: Business;
         <div className="mb-3 flex min-h-6 items-center justify-between gap-2">
           <RatingBadge rating={business.rating} reviewsCount={business.reviewsCount} locale={locale} compact />
         </div>
-        <h3 className="line-clamp-2 text-lg font-black leading-tight text-[#0A0A0A]">{getBusinessPublicName(business)}</h3>
-        <div className="mt-4 inline-flex items-center gap-1 text-[10px] font-black uppercase tracking-[0.1em] text-[#0A0A0A] transition-opacity group-hover:opacity-65">
+        <h3 className="font-display line-clamp-2 text-xl font-bold leading-tight text-white">{getBusinessPublicName(business)}</h3>
+        <div className="mt-4 border-t border-white/[0.08] pt-3 text-[10px] font-bold uppercase tracking-[0.1em] text-white/35 transition-colors group-hover:text-[#FFCC00]">
           {locale === "de" ? "Ansehen" : locale === "en" ? "View details" : "Ver ficha"}
-          <IconArrowUpRight size={13} stroke={2} />
+          <IconArrowUpRight size={13} stroke={2} className="ml-1 inline" />
         </div>
       </div>
     </Link>
@@ -259,13 +259,13 @@ function EditorialRankingCarousel({
   if (!businesses.length) return null;
 
   return (
-    <section className="border-t border-[#0A0A0A] py-8 first:border-t-0">
+    <section className="border-t border-white/[0.08] py-10 first:border-t-0">
       <div className="mb-4 flex items-end justify-between gap-4">
         <div>
-          <p className="inline-flex rounded-sm bg-[#0A0A0A] px-2 py-1 text-[10px] font-black uppercase tracking-[0.16em] text-white">{eyebrow}</p>
-          <h3 className="font-display mt-1 text-2xl font-black leading-tight text-[#0A0A0A] sm:text-3xl">{title}</h3>
+          <p className="inline-flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.16em] text-[#FFCC00] before:h-px before:w-4 before:bg-[#FFCC00]">{eyebrow}</p>
+          <h3 className="font-display mt-2 text-3xl font-bold leading-tight text-white sm:text-4xl">{title}</h3>
         </div>
-        <Link href={href} className="hidden shrink-0 text-[10px] font-black uppercase tracking-[0.1em] text-[#0A0A0A] transition-opacity hover:opacity-65 sm:inline-flex">
+        <Link href={href} className="hidden shrink-0 text-[12px] font-semibold tracking-[0.04em] text-white/40 transition-colors hover:text-[#FFCC00] sm:inline-flex">
           {locale === "de" ? "Alle ansehen" : locale === "en" ? "View all" : "Ver todos"} →
         </Link>
       </div>
@@ -385,35 +385,54 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
   const approvedExperts = expertProfiles.filter((profile) => profile.status !== "hidden");
   const expertMetricLabel =
     safeLocale === "de" ? "gepruefte Experten" : safeLocale === "en" ? "verified experts" : "expertos verificados";
+  const heroBusinesses = [restaurantsPalma[0], beachClubs[0], hotels[0], activities[0], restaurantsSoller[0]]
+    .filter((business): business is Business => Boolean(business) && Boolean(getBusinessImageUrl(business)))
+    .slice(0, 4);
+  const heroChips = [
+    { href: `/${safeLocale}/top/restaurants?area=Palma`, label: safeLocale === "de" ? "Restaurants in Palma" : safeLocale === "en" ? "Restaurants in Palma" : "Restaurantes en Palma" },
+    { href: `/${safeLocale}/top/beach-clubs`, label: safeLocale === "de" ? "Beachclubs" : safeLocale === "en" ? "Beach clubs" : "Beach clubs" },
+    { href: `/${safeLocale}/top/hotels`, label: safeLocale === "de" ? "Hotels" : safeLocale === "en" ? "Hotels" : "Hoteles" },
+    { href: `/${safeLocale}/experts`, label: safeLocale === "de" ? "Experts" : safeLocale === "en" ? "Experts" : "Expertos" }
+  ];
 
   return (
-    <main className="bg-white">
-      <section className="relative z-20 overflow-visible bg-[#0A0A0A] px-4 pb-8 pt-10 text-white sm:pb-12 sm:pt-14 sm:px-6 lg:px-8">
-        <div className="relative z-10 mx-auto grid max-w-7xl gap-9 lg:grid-cols-[minmax(0,0.95fr)_minmax(360px,0.55fr)] lg:items-end">
-          <div className="max-w-3xl">
-            <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.08em] text-[#FFCC00]">
+    <main className="bg-[#0A0A0A] text-white">
+      <section className="relative z-20 flex min-h-[96vh] items-center justify-center overflow-visible bg-[#0A0A0A] px-4 py-20 text-center text-white sm:px-6 lg:px-8">
+        <div className="absolute inset-0 grid grid-cols-2 gap-px opacity-90 md:grid-cols-4">
+          {heroBusinesses.map((business, index) => (
+            <BusinessImage key={business.id} business={business} category={business.category} variant="hero" className="h-full min-h-full rounded-none p-0">
+              <div className="absolute left-4 top-4 font-display text-xl font-black text-[#FFCC00]">#{index + 1}</div>
+              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 whitespace-nowrap bg-black/50 px-2.5 py-1 text-[9px] font-bold uppercase tracking-[0.1em] text-white/45 backdrop-blur">
+                {businessLocation(business)}
+              </div>
+            </BusinessImage>
+          ))}
+        </div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_90%_at_50%_50%,rgba(10,10,10,0.84)_0%,rgba(10,10,10,0.56)_100%),linear-gradient(to_bottom,rgba(10,10,10,0.68)_0%,rgba(10,10,10,0.32)_42%,rgba(10,10,10,0.9)_100%)]" />
+        <div className="relative z-10 flex w-full max-w-[780px] flex-col items-center">
+          <div className="w-full max-w-[780px]">
+            <div className="mb-6 inline-flex items-center gap-3 text-[10px] font-semibold uppercase tracking-[0.16em] text-[#FFCC00] before:h-px before:w-6 before:bg-[#FFCC00] after:h-px after:w-6 after:bg-[#FFCC00]">
               <IconShieldCheck size={15} stroke={2} />
               {copy.home.eyebrow}
             </div>
-            <h1 className="font-display text-balance text-3xl font-black leading-[1.05] text-white sm:text-5xl lg:text-6xl">
+            <h1 className="font-display mx-auto max-w-4xl text-balance text-5xl font-black leading-[0.92] text-white sm:text-7xl lg:text-[88px]">
               {copy.home.title}
             </h1>
-            <p className="mt-5 max-w-2xl text-base leading-8 text-white/68">
+            <p className="mx-auto mt-6 max-w-[520px] text-base font-light leading-8 text-white/55 sm:text-[17px]">
               {copy.home.intro}
             </p>
             <HomePlaceSearch locale={safeLocale} categories={[...publicCategorySlugs]} locations={homepageSearchLocations} />
-            <div className="mt-3 flex flex-wrap items-center gap-3 sm:mt-4">
-              <Link href={`/${safeLocale}/top/restaurants`} className="inline-flex min-h-11 items-center justify-center rounded-md border border-white bg-white px-5 text-[11px] font-black uppercase tracking-[0.1em] text-[#0A0A0A] transition-all duration-150 hover:-translate-y-0.5 hover:bg-[#FFCC00]">
-                {copy.home.exploreRankings}
-              </Link>
-              <Link href={`/${safeLocale}/experts`} className="inline-flex min-h-11 items-center justify-center rounded-md border border-white/25 bg-transparent px-5 text-[11px] font-black uppercase tracking-[0.1em] text-white transition-all duration-150 hover:-translate-y-0.5 hover:border-white hover:bg-white hover:text-[#0A0A0A]">
-                {safeLocale === "de" ? "Experten ansehen" : safeLocale === "en" ? "View experts" : "Ver expertos"}
-              </Link>
+            <div className="mt-4 flex flex-wrap justify-center gap-2">
+              {heroChips.map((chip) => (
+                <Link key={chip.href} href={chip.href} className="rounded-full border border-white/15 px-3.5 py-1.5 text-[11px] font-medium text-white/45 backdrop-blur transition hover:border-[#FFCC00] hover:text-[#FFCC00]">
+                  {chip.label}
+                </Link>
+              ))}
             </div>
           </div>
 
           {restaurantsPalma.length > 0 && (
-            <aside className="hidden rounded-lg border border-white/14 bg-white/[0.06] p-3 shadow-[0_30px_90px_rgba(0,0,0,0.28)] lg:block">
+            <aside className="hidden">
               <div className="flex items-end justify-between border-b border-white/10 px-2 pb-3">
                 <div>
                   <p className="text-[10px] font-black uppercase tracking-[0.18em] text-[#FFCC00]">
@@ -448,21 +467,21 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
             </aside>
           )}
 
-          <div className="grid grid-cols-2 gap-2 sm:grid-cols-4 sm:gap-4 lg:col-span-2">
+          <div className="mt-12 grid w-full max-w-[640px] grid-cols-2 border-t border-white/10 pt-8 sm:grid-cols-4">
             {[
               { value: formatIntegerMetric(stats.publishedBusinesses, safeLocale), label: copy.home.verifiedBusinesses },
               { value: formatMillionMetric(stats.analyzedReviews, safeLocale), label: copy.home.analyzedReviews },
               { value: formatIntegerMetric(publicCategorySlugs.length, safeLocale), label: copy.home.activeCategories },
               { value: formatIntegerMetric(approvedExperts.length, safeLocale), label: expertMetricLabel }
             ].map((stat) => (
-              <div key={stat.label} className="rounded-lg border border-white/15 bg-white/[0.06] px-3 py-3 shadow-[0_18px_45px_rgba(0,0,0,0.16)] sm:px-5 sm:py-5">
-                <div className="font-display text-xl font-black leading-none text-[#FFCC00] sm:text-4xl">{stat.value}</div>
-                <div className="mt-1 text-[9px] font-bold uppercase leading-tight tracking-[0.1em] text-white/60 sm:mt-2 sm:text-[10px] sm:tracking-[0.12em]">{stat.label}</div>
+              <div key={stat.label} className="border-white/10 px-3 py-2 sm:border-r last:border-r-0">
+                <div className="font-display text-3xl font-black leading-none text-[#FFCC00]">{stat.value}</div>
+                <div className="mt-2 text-[10px] font-medium uppercase leading-tight tracking-[0.08em] text-white/30">{stat.label}</div>
               </div>
             ))}
           </div>
 
-          <div className="hidden flex-wrap gap-x-5 gap-y-2 text-[11px] font-bold uppercase tracking-[0.08em] text-white/65 sm:flex lg:col-span-2">
+          <div className="mt-5 hidden flex-wrap justify-center gap-x-5 gap-y-2 text-[11px] font-bold uppercase tracking-[0.08em] text-white/45 sm:flex">
             {copy.home.signals.map((item) => (
               <span key={item} className="inline-flex items-center gap-2"><IconCircleCheckFilled size={14} className="text-[#FFCC00]" />{item}</span>
             ))}
@@ -470,21 +489,21 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         </div>
       </section>
 
-      <section className="border-b border-[#E5E7EB] bg-[#F7F7F5] px-4 py-10 sm:px-6 sm:py-14 lg:px-8">
+      <section className="border-b border-white/[0.08] bg-[#0A0A0A] px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
         <div className="mx-auto grid max-w-[1360px] gap-8 lg:grid-cols-[300px_minmax(0,1fr)]">
         <div className="lg:sticky lg:top-24 lg:self-start">
-          <p className="text-[11px] font-black uppercase tracking-[0.18em] text-[#0A0A0A]">{copy.home.selection}</p>
-          <h2 className="font-display mt-3 text-4xl font-black leading-[0.96] text-ink sm:text-5xl">
+          <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#FFCC00]">{copy.home.selection}</p>
+          <h2 className="font-display mt-3 text-4xl font-bold leading-[0.96] text-white sm:text-5xl">
             {safeLocale === "de" ? "Mallorca-Rankings nach Kategorie" : safeLocale === "en" ? "Mallorca rankings, by category" : "Rankings de Mallorca por categoría"}
           </h2>
-          <p className="mt-5 text-sm leading-7 text-[#4B5563]">
+          <p className="mt-5 text-sm leading-7 text-white/45">
             {copy.home.bestThisWeekIntro}
           </p>
-          <Link href={`/${safeLocale}/top/restaurants`} className="mt-6 inline-flex min-h-11 items-center justify-center rounded-md bg-[#0A0A0A] px-5 text-[11px] font-black uppercase tracking-[0.1em] text-white transition hover:bg-[#FFCC00] hover:text-[#0A0A0A]">
+          <Link href={`/${safeLocale}/top/restaurants`} className="mt-6 inline-flex min-h-11 items-center justify-center rounded-sm bg-[#FFCC00] px-5 text-[11px] font-black uppercase tracking-[0.1em] text-[#0A0A0A] transition hover:bg-white">
             {safeLocale === "de" ? "Alle Rankings" : safeLocale === "en" ? "All rankings" : "Todos los rankings"} {"\u2192"}
           </Link>
         </div>
-        <div className="min-w-0 divide-y divide-[#DADDE2] border-t border-[#0A0A0A]">
+        <div className="min-w-0 divide-y divide-white/[0.08] border-t border-white/[0.08]">
           {editorialRankingModules.slice(0, 6).map((module) => (
             <EditorialRankingCarousel
               key={module.key}
@@ -499,29 +518,27 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         </div>
       </section>
 
-      <section className="px-4 py-12 sm:px-6 lg:px-8">
-        <div className="mx-auto grid max-w-7xl border-y border-[#0A0A0A] lg:grid-cols-[320px_minmax(0,1fr)]">
-          <div className="bg-[#0A0A0A] p-7 text-white lg:p-8">
+      <section className="bg-[#111111] px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
+        <div className="mx-auto max-w-7xl">
+          <div className="mb-8 flex items-end justify-between gap-6">
+          <div>
             <p className="text-[11px] font-black uppercase tracking-[0.18em] text-[#FFCC00]">
               {safeLocale === "de" ? "Methode" : safeLocale === "en" ? "Method" : "Metodo"}
             </p>
-            <h2 className="font-display mt-4 text-4xl font-black leading-none">
+            <h2 className="font-display mt-3 text-4xl font-bold leading-none text-white">
               {safeLocale === "de" ? "Warum diese Reihenfolge?" : safeLocale === "en" ? "Why this order?" : "Por que este orden?"}
             </h2>
-            <Link href={methodologyPath(safeLocale)} className="mt-7 inline-flex text-[11px] font-black uppercase tracking-[0.1em] text-white underline decoration-[#FFCC00] decoration-2 underline-offset-4">
+          </div>
+            <Link href={methodologyPath(safeLocale)} className="hidden text-[12px] font-semibold tracking-[0.04em] text-white/40 transition-colors hover:text-[#FFCC00] sm:inline-flex">
               {methodology.link}
             </Link>
           </div>
-          <div className="divide-y divide-[#E5E7EB] bg-white">
-            {methodology.items.map(({ Icon, title, text }) => (
-              <div key={title} className="grid gap-4 p-6 sm:grid-cols-[44px_minmax(0,1fr)] sm:p-7">
-                <span className="flex h-11 w-11 items-center justify-center rounded-md bg-[#0A0A0A] text-[#FFCC00]">
-                  <Icon size={24} stroke={1.8} />
-                </span>
-                <div>
-                  <h2 className="text-xl font-black leading-tight text-ink">{title}</h2>
-                  <p className="mt-2 max-w-2xl text-sm leading-7 text-[#4B5563]">{text}</p>
-                </div>
+          <div className="grid border border-white/[0.08] md:grid-cols-3">
+            {methodology.items.map(({ title, text }, index) => (
+              <div key={title} className="border-b border-white/[0.08] p-8 last:border-b-0 md:border-b-0 md:border-r md:last:border-r-0">
+                <div className="font-display text-5xl font-black leading-none text-[#FFCC00]/30">{String(index + 1).padStart(2, "0")}</div>
+                <h2 className="font-display mt-5 text-2xl font-bold leading-tight text-white">{title}</h2>
+                <p className="mt-3 text-sm font-light leading-7 text-white/42">{text}</p>
               </div>
             ))}
           </div>
@@ -529,11 +546,11 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
       </section>
 
       {safeLocale === "es" && latestGuides.length > 0 && (
-        <section className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
+        <section className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
           <div className="mb-6 pb-3">
-            <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-[#0A0A0A]">{copy.home.guidesEyebrow}</p>
-            <h2 className="font-display mt-2 text-3xl font-black text-ink">{copy.home.guidesTitle}</h2>
-            <p className="mt-3 max-w-2xl text-sm leading-7 text-[#6B7280]">{copy.home.guidesIntro}</p>
+            <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-[#FFCC00]">{copy.home.guidesEyebrow}</p>
+            <h2 className="font-display mt-2 text-3xl font-bold text-white">{copy.home.guidesTitle}</h2>
+            <p className="mt-3 max-w-2xl text-sm leading-7 text-white/45">{copy.home.guidesIntro}</p>
           </div>
           <div className="grid items-stretch gap-5 md:grid-cols-2">
             {latestGuides.map((guide, index) => (
@@ -559,16 +576,16 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         }
       ]} />
 
-      <section className="bg-[#0A0A0A] px-4 py-14 sm:px-6 sm:py-16 lg:px-8">
+      <section className="bg-[#FFCC00] px-4 py-8 text-[#0A0A0A] sm:px-6 lg:px-8">
         <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-8 sm:flex-row sm:items-center">
           <div>
-            <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-[#FFCC00]">
+            <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-black/55">
               {safeLocale === "de" ? "Experten-Verzeichnis" : safeLocale === "en" ? "Expert Directory" : "Directorio de Expertos"}
             </p>
-            <h2 className="font-display mt-3 text-3xl font-black text-white sm:text-4xl">
+            <h2 className="font-display mt-1 text-3xl font-black text-[#0A0A0A] sm:text-4xl">
               {safeLocale === "de" ? "Profis in deiner Sprache" : safeLocale === "en" ? "Professionals in your language" : "Profesionales en tu idioma"}
             </h2>
-            <p className="mt-3 max-w-xl text-sm leading-7 text-white/60">
+            <p className="mt-1 max-w-xl text-sm leading-7 text-black/55">
               {safeLocale === "de"
                 ? "Anwaelte, Immobilienmakler, Aerzte und mehr - kuratiert nach redaktionellen Kriterien, nicht nach Gebuehren."
                 : safeLocale === "en"
@@ -576,20 +593,38 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
                   : "Abogados, agentes inmobiliarios, médicos y más - seleccionados por criterio editorial, no por tarifas."}
             </p>
           </div>
-          <Link href={`/${safeLocale}/experts`} className="group inline-flex min-h-12 shrink-0 items-center gap-3 rounded-md border border-white/20 bg-white/10 px-7 text-[12px] font-black uppercase tracking-[0.1em] text-white transition-all duration-200 hover:bg-white hover:text-[#0A0A0A]">
+          <Link href={`/${safeLocale}/experts`} className="group inline-flex min-h-12 shrink-0 items-center gap-3 rounded-sm bg-[#0A0A0A] px-7 text-[12px] font-black uppercase tracking-[0.1em] text-[#FFCC00] transition-all duration-200 hover:bg-white hover:text-[#0A0A0A]">
             {safeLocale === "de" ? "Experten ansehen" : safeLocale === "en" ? "View experts" : "Ver expertos"}
             <span className="text-xl leading-none transition-transform duration-200 group-hover:translate-x-1">→</span>
           </Link>
         </div>
       </section>
 
-      <section className="px-4 py-12 text-center sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-3xl rounded-lg border border-[#E5E7EB] bg-white px-5 py-10 shadow-[0_18px_45px_rgba(10,10,10,0.04)]">
-          <h2 className="text-3xl font-bold text-ink">{copy.home.businessTitle}</h2>
-          <p className="mx-auto mt-4 max-w-2xl text-sm leading-7 text-[#6B7280]">{copy.home.businessIntro}</p>
-          <Link href={`/${safeLocale}/business`} className="mt-7 inline-flex min-h-12 items-center justify-center rounded-sm bg-[#0A0A0A] px-6 text-[11px] font-bold uppercase tracking-[0.1em] text-white hover:bg-[#262626]">
+      <section className="px-4 py-20 sm:px-6 lg:px-8">
+        <div className="mx-auto grid max-w-7xl gap-12 md:grid-cols-[minmax(0,1fr)_360px] md:items-center">
+          <div>
+          <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-[#FFCC00]">
+            {safeLocale === "de" ? "Fuer Unternehmen" : safeLocale === "en" ? "For businesses" : "Para negocios"}
+          </p>
+          <h2 className="font-display mt-3 max-w-2xl text-4xl font-bold leading-tight text-white sm:text-5xl">{copy.home.businessTitle}</h2>
+          <p className="mt-5 max-w-2xl text-base leading-8 text-white/45">{copy.home.businessIntro}</p>
+          <Link href={`/${safeLocale}/business`} className="mt-8 inline-flex min-h-12 items-center justify-center rounded-sm bg-[#FFCC00] px-7 text-[12px] font-bold uppercase tracking-[0.1em] text-[#0A0A0A] hover:bg-white">
             {copy.home.businessCta}
           </Link>
+          </div>
+          <div className="space-y-5 border-l border-white/[0.08] pl-8">
+            {[
+              { value: formatIntegerMetric(stats.publishedBusinesses, safeLocale), label: copy.home.verifiedBusinesses },
+              { value: formatMillionMetric(stats.analyzedReviews, safeLocale), label: copy.home.analyzedReviews },
+              { value: formatIntegerMetric(publicCategorySlugs.length, safeLocale), label: copy.home.activeCategories },
+              { value: formatIntegerMetric(approvedExperts.length, safeLocale), label: expertMetricLabel }
+            ].map((stat) => (
+              <div key={stat.label} className="flex items-baseline gap-3">
+                <div className="font-display text-4xl font-black leading-none text-[#FFCC00]">{stat.value}</div>
+                <div className="text-sm text-white/35">{stat.label}</div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
     </main>
