@@ -1,6 +1,6 @@
 import "server-only";
 import { validateCategoryAttributes, socialProfilesSchema } from "@/lib/business-attribute-schemas";
-import { categoryConfigs, getBusinessCategoryFromSlug, getCategorySlugFromBusiness, type CategorySlug } from "@/lib/data";
+import { categoryConfigs, getBusinessCategoryFromSlug, getCategorySlugFromBusiness, isPublicCategorySlug, publicCategorySlugs, type CategorySlug } from "@/lib/data";
 import { createSupabaseServerClient, hasSupabaseConfig } from "@/lib/supabase";
 import { toSlug } from "@/lib/slugs";
 import { siteConfig } from "@/config/site";
@@ -14,6 +14,9 @@ import type { Locale } from "@/lib/i18n";
 const publicStatuses: ContentStatus[] = ["published", "premium"];
 const configuredBusinessCategories = new Set<BusinessCategory>(
   Object.values(categoryConfigs).map((config) => config.businessCategory)
+);
+const publicBusinessCategories = new Set<BusinessCategory>(
+  publicCategorySlugs.map((slug) => categoryConfigs[slug].businessCategory)
 );
 const fallbackPublicBusinessStats = {
   publishedBusinesses: 4791,
@@ -432,7 +435,7 @@ export async function getPublicBusinessStats() {
     const rows = (data ?? []) as Pick<BusinessRow, "category" | "reviews_count">[];
 
     for (const row of rows) {
-      if (!configuredBusinessCategories.has(row.category)) continue;
+      if (!publicBusinessCategories.has(row.category)) continue;
       publishedBusinesses += 1;
       analyzedReviews += row.reviews_count ?? 0;
       activeCategories.add(row.category);
@@ -460,7 +463,7 @@ export async function getBusinesses(category: CategorySlug): Promise<Business[]>
   return mapBusinesses(data as BusinessRow[]);
 }
 
-function mapMiniRankingBusiness(row: Pick<BusinessRow, "id" | "slug" | "name" | "display_name" | "category" | "short_description" | "description" | "area" | "city" | "rating" | "reviews_count" | "updated_at">): Business {
+function mapMiniRankingBusiness(row: Pick<BusinessRow, "id" | "slug" | "name" | "display_name" | "category" | "short_description" | "description" | "area" | "city" | "image" | "primary_image_url" | "gallery_image_urls" | "rating" | "reviews_count" | "updated_at">): Business {
   return {
     id: row.id,
     slug: row.slug,
@@ -471,6 +474,9 @@ function mapMiniRankingBusiness(row: Pick<BusinessRow, "id" | "slug" | "name" | 
     description: row.description,
     area: row.area,
     city: row.city ?? undefined,
+    image: row.image ?? undefined,
+    primaryImageUrl: row.primary_image_url ?? undefined,
+    galleryImageUrls: row.gallery_image_urls ?? undefined,
     tags: [],
     bestFor: [],
     faqs: [],
@@ -540,7 +546,7 @@ export async function getHomepageMiniRankingBusinesses(category: CategorySlug, l
   let query = publicStatusFilter(
     supabase
       .from("businesses")
-      .select("id,slug,name,display_name,category,short_description,description,area,city,rating,reviews_count,updated_at")
+      .select("id,slug,name,display_name,category,short_description,description,area,city,image,primary_image_url,gallery_image_urls,rating,reviews_count,updated_at")
       .eq("category", getBusinessCategoryFromSlug(category))
       .not("rating", "is", null)
       .not("reviews_count", "is", null)
@@ -555,7 +561,7 @@ export async function getHomepageMiniRankingBusinesses(category: CategorySlug, l
   const { data, error } = await query;
   if (error) throw error;
 
-  return ((data ?? []) as Array<Pick<BusinessRow, "id" | "slug" | "name" | "display_name" | "category" | "short_description" | "description" | "area" | "city" | "rating" | "reviews_count" | "updated_at">>)
+  return ((data ?? []) as Array<Pick<BusinessRow, "id" | "slug" | "name" | "display_name" | "category" | "short_description" | "description" | "area" | "city" | "image" | "primary_image_url" | "gallery_image_urls" | "rating" | "reviews_count" | "updated_at">>)
     .sort((a, b) => {
       const ratioDiff = ratioScore(b) - ratioScore(a);
       if (ratioDiff !== 0) return ratioDiff;
@@ -728,7 +734,9 @@ export async function getRankingBySlug(slug: string, locale: Locale): Promise<Ra
   const supabase = createSupabaseServerClient();
   const { data, error } = await publicStatusFilter(supabase.from("rankings").select("*, ranking_items(*)").eq("slug", slug).eq("locale", locale).limit(1)).maybeSingle();
   if (error) throw error;
-  return data ? mapRanking(data as RankingRow) : undefined;
+  if (!data) return undefined;
+  const ranking = mapRanking(data as RankingRow);
+  return isPublicCategorySlug(ranking.category) ? ranking : undefined;
 }
 
 export async function getRelatedRankings(category: CategorySlug | RankingCategory, limit = 3): Promise<Ranking[]> {
@@ -775,6 +783,31 @@ export async function getGuideBySlug(slug: string, locale: Locale): Promise<Guid
   return data ? mapGuide(data as GuideRow) : undefined;
 }
 
+export async function getRelatedGuides(areaSlug: string | null, categoryKeywords: string[], locale: Locale, limit = 3): Promise<Guide[]> {
+  const fallback = emptyWhenUnconfigured<Guide[]>([]);
+  if (fallback) return fallback;
+
+  const supabase = createSupabaseServerClient();
+
+  // Build ilike conditions: area slug + category keywords, searched in title and slug
+  const terms: string[] = [];
+  if (areaSlug) {
+    const area = areaSlug.replace(/-/g, " ");
+    terms.push(`title.ilike.%${area}%`, `slug.ilike.%${areaSlug}%`);
+  }
+  for (const kw of categoryKeywords) {
+    terms.push(`title.ilike.%${kw}%`, `slug.ilike.%${kw}%`);
+  }
+
+  if (!terms.length) return [];
+
+  const { data, error } = await publicStatusFilter(
+    supabase.from("guides").select("*").eq("locale", locale).or(terms.join(",")).order("is_featured", { ascending: false }).limit(limit)
+  );
+  if (error) return [];
+  return (data as GuideRow[]).map(mapGuide);
+}
+
 export async function getGuideSlugs(): Promise<{ slug: string }[]> {
   const fallback = emptyWhenUnconfigured<{ slug: string }[]>([]);
   if (fallback) return fallback;
@@ -788,7 +821,7 @@ export async function getGuideSlugs(): Promise<{ slug: string }[]> {
 export async function getSitemapEntities() {
   const fallback = emptyWhenUnconfigured<{
     businesses: Array<{ slug: string; category: BusinessCategory; updatedAt: string }>;
-    rankings: Array<{ slug: string; locale: Locale; updatedAt: string }>;
+    rankings: Array<{ slug: string; locale: Locale; category: RankingCategory; updatedAt: string }>;
     guides: Array<{ slug: string; updatedAt: string }>;
   }>({ businesses: [], rankings: [], guides: [] });
   if (fallback) return fallback;
@@ -796,7 +829,7 @@ export async function getSitemapEntities() {
   const supabase = createSupabaseServerClient();
   const [businessesResult, rankingsResult, guidesResult] = await Promise.all([
     publicStatusFilter(supabase.from("businesses").select("slug,category,updated_at")),
-    publicStatusFilter(supabase.from("rankings").select("slug,locale,updated_at")),
+    publicStatusFilter(supabase.from("rankings").select("slug,locale,category,updated_at")),
     publicStatusFilter(supabase.from("guides").select("slug,updated_at"))
   ]);
 
@@ -810,9 +843,12 @@ export async function getSitemapEntities() {
       category: row.category,
       updatedAt: row.updated_at
     })),
-    rankings: ((rankingsResult.data ?? []) as Array<{ slug: string; locale: Locale; updated_at: string }>).map((row) => ({
+    rankings: ((rankingsResult.data ?? []) as Array<{ slug: string; locale: Locale; category: RankingCategory; updated_at: string }>)
+      .filter((row) => isPublicCategorySlug(row.category))
+      .map((row) => ({
       slug: row.slug,
       locale: row.locale,
+      category: row.category,
       updatedAt: row.updated_at
     })),
     guides: ((guidesResult.data ?? []) as Array<{ slug: string; updated_at: string }>).map((row) => ({

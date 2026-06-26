@@ -44,7 +44,22 @@ type ImageCandidate = {
   foundAt?: string;
 };
 
-const categories = ["restaurant", "hotel", "beach-club", "boat-rental", "activity", "beach"];
+const categories = [
+  "restaurant",
+  "hotel",
+  "beach-club",
+  "bar",
+  "cafe",
+  "nightlife",
+  "activity",
+  "boat-rental",
+  "rent-a-car",
+  "car-dealer",
+  "gym",
+  "spa",
+  "healthcare",
+  "real-estate"
+];
 const statuses = ["draft", "published", "premium", "hidden"];
 const priorities = ["low", "medium", "high"];
 const imageStatuses = ["missing", "editorial_placeholder", "uploaded", "google_places", "client_provided", "candidate_assigned"];

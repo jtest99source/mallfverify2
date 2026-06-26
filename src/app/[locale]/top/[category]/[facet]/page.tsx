@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd } from "@/components/JsonLd";
 import { LoadMoreBusinessGrid } from "@/components/LoadMoreBusinessGrid";
-import { isCategorySlug, siteUrl } from "@/lib/data";
+import { isCategorySlug, isPublicCategorySlug, siteUrl } from "@/lib/data";
 import { isLocale, type Locale } from "@/lib/i18n";
 import { getCategoryCopy, t } from "@/lib/i18n-copy";
 import { getBusinesses, getTopBusinessesByFacet } from "@/lib/repository";
@@ -43,7 +43,7 @@ function numberLocale(locale: Locale) {
 export async function generateMetadata({ params }: { params: Promise<{ locale: string; category: string; facet: string }> }) {
   const { locale, category, facet } = await params;
   const safeLocale = isLocale(locale) ? locale : "es";
-  if (!isCategorySlug(category)) return {};
+  if (!isCategorySlug(category) || !isPublicCategorySlug(category)) return {};
   const rankingFacet = getFacet(category, facet);
   if (!rankingFacet) return {};
 
@@ -58,7 +58,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 export default async function TopFacetPage({ params }: { params: Promise<{ locale: string; category: string; facet: string }> }) {
   const { locale, category, facet } = await params;
   const safeLocale = (isLocale(locale) ? locale : "es") as Locale;
-  if (!isCategorySlug(category)) notFound();
+  if (!isCategorySlug(category) || !isPublicCategorySlug(category)) notFound();
 
   const rankingFacet = getFacet(category, facet);
   if (!rankingFacet) notFound();
@@ -75,36 +75,36 @@ export default async function TopFacetPage({ params }: { params: Promise<{ local
   const relatedFacets = getPopularFacetsForBusinesses(category, allCategoryBusinesses, 3).filter((item) => item.slug !== rankingFacet.slug).slice(0, 8);
   const breadcrumbs = [
     { name: copy.category.breadcrumbHome, url: `${siteUrl}/${safeLocale}` },
-    { name: "Rankings", url: `${siteUrl}/${safeLocale}/rankings` },
+    { name: "Rankings", url: `${siteUrl}/${safeLocale}/top/restaurants` },
     { name: config.label, url: `${siteUrl}/${safeLocale}/top/${category}` },
     { name: rankingFacet.label, url: `${siteUrl}/${safeLocale}/top/${category}/${rankingFacet.slug}` }
   ];
 
   return (
-    <main className="bg-[linear-gradient(180deg,#FFF8EC_0%,#FFFDF7_48%,#FFF8EC_100%)]">
+    <main className="bg-[linear-gradient(180deg,#FFFFFF_0%,#FFFFFF_48%,#FFFFFF_100%)]">
       <section className="px-4 py-12 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <Breadcrumbs
             items={[
               { label: copy.category.breadcrumbHome, href: `/${safeLocale}` },
-              { label: "Rankings", href: `/${safeLocale}/rankings` },
+              { label: "Rankings", href: `/${safeLocale}/top/restaurants` },
               { label: config.label, href: `/${safeLocale}/top/${category}` },
               { label: rankingFacet.label, href: `/${safeLocale}/top/${category}/${rankingFacet.slug}` }
             ]}
           />
           <div className="mt-7 grid gap-8 lg:grid-cols-[1fr_340px] lg:items-end">
             <div className="max-w-4xl">
-              <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-[#0E8F72]">{localCopy.specificRanking}</p>
+              <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-[#0A0A0A]">{localCopy.specificRanking}</p>
               <h1 className="mt-3 font-sans text-5xl font-black leading-none text-ink sm:text-6xl">{rankingFacet.title}</h1>
               <p className="mt-5 max-w-2xl text-base leading-8 text-olive">{rankingFacet.intro}</p>
               <p className="mt-3 text-sm leading-7 text-sage">
                 {localCopy.found(businesses.length.toLocaleString(numberLocale(safeLocale)), config.label.toLowerCase())}
               </p>
             </div>
-            <div className="rounded-lg border border-[#F1D3A2] bg-white/80 p-5 shadow-[0_18px_45px_rgba(27,46,75,0.04)]">
-              <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-[#B86B1D]">{localCopy.methodologyTitle}</p>
+            <div className="rounded-lg border border-[#E5E7EB] bg-white/80 p-5 shadow-[0_18px_45px_rgba(10,10,10,0.04)]">
+              <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-[#0A0A0A]">{localCopy.methodologyTitle}</p>
               <p className="mt-2 text-sm leading-7 text-olive">{localCopy.methodologyText}</p>
-              <Link href={methodologyPath(safeLocale)} className="mt-4 inline-flex min-h-11 items-center justify-center rounded-sm bg-ink px-5 text-[11px] font-bold uppercase tracking-[0.1em] text-white hover:bg-[#0E8F72]">
+              <Link href={methodologyPath(safeLocale)} className="mt-4 inline-flex min-h-11 items-center justify-center rounded-sm bg-ink px-5 text-[11px] font-bold uppercase tracking-[0.1em] text-white hover:bg-[#262626]">
                 {localCopy.methodologyCta}
               </Link>
             </div>
@@ -116,7 +116,7 @@ export default async function TopFacetPage({ params }: { params: Promise<{ local
         <section className="mx-auto max-w-7xl px-4 pb-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap gap-2">
             {relatedFacets.map((item) => (
-              <Link key={item.slug} href={facetPath(safeLocale, category, item.slug)} className="rounded-full border border-[#E7DED0] bg-white px-3 py-2 text-[11px] font-bold uppercase tracking-[0.06em] text-ink hover:border-[#0E8F72] hover:text-[#0E8F72]">
+              <Link key={item.slug} href={facetPath(safeLocale, category, item.slug)} className="rounded-full border border-[#E5E7EB] bg-white px-3 py-2 text-[11px] font-bold uppercase tracking-[0.06em] text-ink hover:border-[#0A0A0A] hover:text-[#0A0A0A]">
                 {item.label} · {item.count.toLocaleString(numberLocale(safeLocale))}
               </Link>
             ))}

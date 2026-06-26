@@ -15,7 +15,7 @@ export function FAQ({ faqs }: { faqs: FAQType[] }) {
           <details key={faq.question} className="group border-b border-linen last:border-b-0">
             <summary className="flex cursor-pointer list-none items-center justify-between gap-4 px-5 py-4 text-sm font-bold">
               {faq.question}
-              <span className="text-lg text-coral">+</span>
+              <span className="text-lg text-[#0A0A0A]">+</span>
             </summary>
             <p className="px-5 pb-5 text-sm leading-7 text-olive">{renderAnswer(faq.answer)}</p>
           </details>

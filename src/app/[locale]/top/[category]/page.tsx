@@ -1,12 +1,13 @@
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { BusinessListCTA } from "@/components/BusinessListCTA";
+import { GuideCard } from "@/components/GuideCard";
 import { JsonLd } from "@/components/JsonLd";
 import { TopRankingExplorer } from "@/components/TopRankingExplorer";
 import { getCategoryCopy, t } from "@/lib/i18n-copy";
-import { getCategorySlugFromBusiness, isCategorySlug, siteUrl, type CategorySlug } from "@/lib/data";
+import { getCategoryGuideKeywords, getCategorySlugFromBusiness, isCategorySlug, isPublicCategorySlug, siteUrl, type CategorySlug } from "@/lib/data";
 import { isLocale, type Locale } from "@/lib/i18n";
-import { getBusinessesForFacetScan, getTopBusinessesByCategory } from "@/lib/repository";
+import { getBusinessesForFacetScan, getRelatedGuides, getTopBusinessesByCategory } from "@/lib/repository";
 import { createBreadcrumbSchema, createSimpleItemListSchema } from "@/lib/schema";
 import { generateSeoMetadata } from "@/lib/seo";
 import { getPopularFacetsForBusinesses } from "@/lib/taxonomy";
@@ -21,7 +22,7 @@ function getTitle(category: CategorySlug, locale: Locale) {
 export async function generateMetadata({ params }: { params: Promise<{ locale: string; category: string }> }) {
   const { locale, category } = await params;
   const safeLocale = isLocale(locale) ? locale : "es";
-  if (!isCategorySlug(category)) return {};
+  if (!isCategorySlug(category) || !isPublicCategorySlug(category)) return {};
   const title = getTitle(category, safeLocale);
   return generateSeoMetadata({
     title: `${title} | Mallorca Verified`,
@@ -34,11 +35,13 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 export default async function TopCategoryPage({ params }: { params: Promise<{ locale: string; category: string }> }) {
   const { locale, category } = await params;
   const safeLocale = (isLocale(locale) ? locale : "es") as Locale;
-  if (!isCategorySlug(category)) notFound();
+  if (!isCategorySlug(category) || !isPublicCategorySlug(category)) notFound();
 
-  const [businesses, allCategoryBusinesses] = await Promise.all([
+  const keywords = getCategoryGuideKeywords(category);
+  const [businesses, allCategoryBusinesses, relatedGuides] = await Promise.all([
     getTopBusinessesByCategory(category, TOP_CATEGORY_LIMIT),
-    getBusinessesForFacetScan(category)
+    getBusinessesForFacetScan(category),
+    getRelatedGuides(null, keywords, safeLocale, 3)
   ]);
   if (!businesses.length) notFound();
 
@@ -48,32 +51,43 @@ export default async function TopCategoryPage({ params }: { params: Promise<{ lo
   const facets = getPopularFacetsForBusinesses(category, allCategoryBusinesses, category === "beach-clubs" || category === "boats" ? 3 : 5).slice(0, 12);
   const breadcrumbs = [
     { name: copy.category.breadcrumbHome, url: `${siteUrl}/${safeLocale}` },
-    { name: "Rankings", url: `${siteUrl}/${safeLocale}/rankings` },
+    { name: "Rankings", url: `${siteUrl}/${safeLocale}/top/restaurants` },
     { name: config.label, url: `${siteUrl}/${safeLocale}/top/${category}` }
   ];
 
   return (
-    <main className="bg-[linear-gradient(180deg,#FFF8EC_0%,#FFFDF7_48%,#FFF8EC_100%)]">
-      <section className="px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
+    <main className="bg-[linear-gradient(180deg,#FFFFFF_0%,#FFFFFF_48%,#FFFFFF_100%)]">
+      <section className="px-4 py-7 sm:px-6 sm:py-9 lg:px-8">
         <div className="mx-auto max-w-7xl">
-          <Breadcrumbs items={[{ label: copy.category.breadcrumbHome, href: `/${safeLocale}` }, { label: "Rankings", href: `/${safeLocale}/rankings` }, { label: config.label, href: `/${safeLocale}/top/${category}` }]} />
-          <div className="mt-6 max-w-4xl sm:mt-7">
-            <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-[#0E8F72]">{copy.category.rankingByCategory}</p>
-            <h1 className="mt-3 font-sans text-3xl font-black leading-[1.05] text-ink sm:text-6xl">{title}</h1>
-            <p className="mt-4 max-w-2xl text-sm leading-7 text-olive sm:mt-5 sm:text-base sm:leading-8">{copy.category.signalLine}</p>
-          </div>
-
-          <div className="mt-8 hidden lg:block">
-            <BusinessListCTA locale={safeLocale} />
+          <Breadcrumbs items={[{ label: copy.category.breadcrumbHome, href: `/${safeLocale}` }, { label: "Rankings", href: `/${safeLocale}/top/restaurants` }, { label: config.label, href: `/${safeLocale}/top/${category}` }]} />
+          <div className="mt-5 max-w-3xl sm:mt-6">
+            <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-[#0A0A0A]">{copy.category.rankingByCategory}</p>
+            <h1 className="mt-3 font-sans text-3xl font-black leading-[1.05] text-ink sm:text-5xl">{title}</h1>
+            <p className="mt-4 max-w-xl text-sm leading-6 text-olive sm:line-clamp-2">{copy.category.signalLine}</p>
           </div>
         </div>
       </section>
 
       <TopRankingExplorer businesses={businesses} locale={safeLocale} category={category} facets={facets} />
 
-      <section className="mx-auto max-w-7xl px-4 pb-8 sm:px-6 lg:hidden">
-        <BusinessListCTA locale={safeLocale} />
-      </section>
+      {relatedGuides.length > 0 && (
+        <section className="mx-auto max-w-7xl px-4 pb-14 sm:px-6 lg:px-8">
+          <div className="border-t border-[#E5E7EB] pt-10">
+            <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-[#0A0A0A]">{copy.category.relatedGuidesEyebrow}</p>
+            <div className="mt-3 flex items-end justify-between gap-4">
+              <h2 className="text-2xl font-black text-ink sm:text-3xl">{copy.category.relatedGuidesTitle(config.label)}</h2>
+              <Link href={`/${safeLocale}/guides`} className="shrink-0 text-[11px] font-bold uppercase tracking-[0.08em] text-[#0A0A0A] opacity-60 hover:opacity-100">
+                {copy.category.viewAllGuides} →
+              </Link>
+            </div>
+            <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+              {relatedGuides.map((guide) => (
+                <GuideCard key={guide.id} guide={guide} locale={safeLocale} />
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       <JsonLd
         data={[

@@ -5,37 +5,37 @@ import { isLocale, type Locale } from "@/lib/i18n";
 const pageCopy = {
   es: {
     metaTitle: "Sugerir un negocio | Mallorca Verified",
-    metaDescription: "¿Conoces algún negocio en Mallorca que no aparece en nuestros rankings? Sugiérenos el local y lo revisamos.",
+    metaDescription: "¿Conoces algún negocio en Mallorca que debería estar en el directorio de referencia para residentes internacionales? Cuéntanoslo.",
     eyebrow: "Sugerir negocio",
-    title: "¿Echas en falta algún local?",
-    description: "Si conoces un restaurante, hotel, beach club, barco u otro negocio en Mallorca que no aparece en nuestros rankings, cuéntanos. Lo revisamos, verificamos los datos y lo añadimos si cumple los criterios.",
+    title: "¿Conoces un sitio que debería estar aquí?",
+    description: "Mallorca Verified existe para que expats, compradores y residentes internacionales encuentren sitios buenos sin depender del azar. Si conoces un negocio que se lo ha ganado de verdad, cuéntanoslo.",
     trust: [
-      "La ficha básica es siempre gratuita",
-      "Revisamos cada sugerencia manualmente",
-      "Respondemos si nos das tu email"
+      "Revisión manual de cada sugerencia",
+      "Sin coste si cumple el umbral de calidad",
+      "Respondemos si nos dejas tu email"
     ]
   },
   en: {
     metaTitle: "Suggest a business | Mallorca Verified",
-    metaDescription: "Know a business in Mallorca that's missing from our rankings? Suggest it and we'll review it.",
+    metaDescription: "Know a business in Mallorca that should be in the reference directory for international residents? Tell us.",
     eyebrow: "Suggest a business",
-    title: "Know a place we're missing?",
-    description: "If you know a restaurant, hotel, beach club, boat company or other business in Mallorca that isn't in our rankings, let us know. We'll review it, verify the data and add it if it meets our criteria.",
+    title: "Know a place that should be verified?",
+    description: "Mallorca Verified exists so expats, buyers and international residents can find good places without relying on guesswork. If you know a business that's genuinely earned its reputation, tell us.",
     trust: [
-      "Basic listings are always free",
-      "We review every suggestion manually",
+      "Every suggestion reviewed manually",
+      "Listed free if it meets the quality threshold",
       "We'll reply if you leave your email"
     ]
   },
   de: {
     metaTitle: "Betrieb vorschlagen | Mallorca Verified",
-    metaDescription: "Kennst du einen Betrieb auf Mallorca, der in unseren Rankings fehlt? Schlage ihn vor und wir prüfen ihn.",
+    metaDescription: "Kennst du einen Betrieb auf Mallorca, der im Referenzverzeichnis für internationale Bewohner sein sollte? Sag es uns.",
     eyebrow: "Betrieb vorschlagen",
-    title: "Fehlt ein Betrieb?",
-    description: "Wenn du ein Restaurant, Hotel, Beachclub, Bootsvermieter oder anderen Betrieb auf Mallorca kennst, der nicht in unseren Rankings erscheint, sag es uns. Wir prüfen es, verifizieren die Daten und fügen es hinzu, wenn es unsere Kriterien erfüllt.",
+    title: "Kennst du einen Ort, der hier sein sollte?",
+    description: "Mallorca Verified gibt es damit Expats, Käufer und internationale Bewohner gute Orte finden, ohne auf Zufall angewiesen zu sein. Wenn du einen Betrieb kennst, der es wirklich verdient hat, sag es uns.",
     trust: [
-      "Basisprofile sind immer kostenlos",
-      "Wir prüfen jeden Vorschlag manuell",
+      "Jeder Vorschlag wird manuell geprüft",
+      "Kostenlos aufgenommen, wenn die Qualitätsschwelle erreicht wird",
       "Wir antworten, wenn du deine E-Mail angibst"
     ]
   }
@@ -59,25 +59,25 @@ export default async function SuggestPage({ params }: { params: Promise<{ locale
   const copy = pageCopy[safeLocale];
 
   return (
-    <main className="bg-[linear-gradient(180deg,#FFF8EC_0%,#FFFDF7_50%,#FFF8EC_100%)] min-h-screen">
+    <main className="bg-[linear-gradient(180deg,#FFFFFF_0%,#FFFFFF_50%,#FFFFFF_100%)] min-h-screen">
       <section className="mx-auto max-w-5xl px-4 py-14 sm:px-6 sm:py-20 lg:px-8">
         <div className="grid gap-12 lg:grid-cols-[1fr_480px] lg:items-start">
 
           <div>
-            <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#0E8F72]">{copy.eyebrow}</p>
+            <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#0A0A0A]">{copy.eyebrow}</p>
             <h1 className="mt-4 font-sans text-4xl font-black leading-tight text-ink sm:text-5xl">{copy.title}</h1>
             <p className="mt-5 max-w-lg text-base leading-7 text-ink/65">{copy.description}</p>
             <ul className="mt-8 space-y-3">
               {copy.trust.map((item) => (
                 <li key={item} className="flex items-start gap-3 text-sm text-ink/70">
-                  <span className="mt-0.5 shrink-0 text-[#0E8F72]">✓</span>
+                  <span className="mt-0.5 shrink-0 text-[#0A0A0A]">✓</span>
                   {item}
                 </li>
               ))}
             </ul>
           </div>
 
-          <div className="rounded-lg border border-[#E7DED0] bg-white p-6 shadow-[0_18px_45px_rgba(27,46,75,0.06)] sm:p-8">
+          <div className="rounded-lg border border-[#E5E7EB] bg-white p-6 shadow-[0_18px_45px_rgba(10,10,10,0.06)] sm:p-8">
             <SuggestForm locale={safeLocale} />
           </div>
 

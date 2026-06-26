@@ -12,31 +12,31 @@ const pageCopy = {
     trust: [
       "Sin coste ni compromiso",
       "Respuesta en menos de 48h",
-      "Somos los creadores de Mallorca Verified"
+      "Creamos el directorio de referencia para residentes internacionales en Mallorca"
     ]
   },
   en: {
     metaTitle: "Request a visibility audit | Mallorca Verified",
-    metaDescription: "We audit your visibility on Google, ChatGPT and Google AI at no cost. We built Mallorca Verified — we know what works for local businesses in Mallorca.",
+    metaDescription: "We audit your visibility on Google, ChatGPT and Google AI at no cost. We built Mallorca Verified — the reference directory for international residents in Mallorca.",
     eyebrow: "Free audit",
     title: "How visible is your business on Google and AI systems?",
     description: "We analyse your local presence at no cost: how you appear on Google, what ChatGPT and Perplexity cite when someone searches your category in Mallorca, and what's holding back your visibility. No commitment.",
     trust: [
       "No cost, no commitment",
       "Response within 48 hours",
-      "We built Mallorca Verified"
+      "We built the reference directory for international residents in Mallorca"
     ]
   },
   de: {
     metaTitle: "Sichtbarkeits-Audit anfordern | Mallorca Verified",
-    metaDescription: "Wir analysieren deine Sichtbarkeit auf Google, ChatGPT und Google AI kostenlos. Wir haben Mallorca Verified aufgebaut — wir wissen, was für lokale Betriebe auf Mallorca funktioniert.",
+    metaDescription: "Wir analysieren deine Sichtbarkeit auf Google, ChatGPT und Google AI kostenlos. Wir haben Mallorca Verified aufgebaut — das Referenzverzeichnis für internationale Bewohner auf Mallorca.",
     eyebrow: "Kostenloses Audit",
     title: "Wie sichtbar bist du auf Google und in KI-Systemen?",
     description: "Wir analysieren deine lokale Präsenz kostenlos: wie du auf Google erscheinst, was ChatGPT und Perplexity zitieren, wenn jemand deine Kategorie auf Mallorca sucht, und was deine Sichtbarkeit bremst. Ohne Verpflichtung.",
     trust: [
       "Kein Aufwand, keine Verpflichtung",
       "Antwort innerhalb von 48 Stunden",
-      "Wir haben Mallorca Verified aufgebaut"
+      "Wir haben das Referenzverzeichnis für internationale Bewohner auf Mallorca aufgebaut"
     ]
   }
 } as const;
@@ -59,25 +59,25 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
   const copy = pageCopy[safeLocale];
 
   return (
-    <main className="bg-[linear-gradient(180deg,#FFF8EC_0%,#FFFDF7_50%,#FFF8EC_100%)] min-h-screen">
+    <main className="bg-[linear-gradient(180deg,#FFFFFF_0%,#FFFFFF_50%,#FFFFFF_100%)] min-h-screen">
       <section className="mx-auto max-w-5xl px-4 py-14 sm:px-6 sm:py-20 lg:px-8">
         <div className="grid gap-12 lg:grid-cols-[1fr_480px] lg:items-start">
 
           <div>
-            <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#0E8F72]">{copy.eyebrow}</p>
+            <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#0A0A0A]">{copy.eyebrow}</p>
             <h1 className="mt-4 font-sans text-4xl font-black leading-tight text-ink sm:text-5xl">{copy.title}</h1>
             <p className="mt-5 max-w-lg text-base leading-7 text-ink/65">{copy.description}</p>
             <ul className="mt-8 space-y-3">
               {copy.trust.map((item) => (
                 <li key={item} className="flex items-start gap-3 text-sm text-ink/70">
-                  <span className="mt-0.5 shrink-0 text-[#0E8F72]">✓</span>
+                  <span className="mt-0.5 shrink-0 text-[#0A0A0A]">✓</span>
                   {item}
                 </li>
               ))}
             </ul>
           </div>
 
-          <div className="rounded-lg border border-[#E7DED0] bg-white p-6 shadow-[0_18px_45px_rgba(27,46,75,0.06)] sm:p-8">
+          <div className="rounded-lg border border-[#E5E7EB] bg-white p-6 shadow-[0_18px_45px_rgba(10,10,10,0.06)] sm:p-8">
             <ContactForm locale={safeLocale} />
           </div>
 

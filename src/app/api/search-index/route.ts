@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { categoryConfigs, getCategorySlugFromBusiness, type CategorySlug } from "@/lib/data";
+import { categoryConfigs, getCategorySlugFromBusiness, isPublicCategorySlug, publicCategorySlugs, type CategorySlug } from "@/lib/data";
 import { createSupabaseServerClient, hasSupabaseConfig } from "@/lib/supabase";
 import type { BusinessCategory, ContentStatus } from "@/types/business";
 
@@ -22,9 +22,9 @@ type SearchBusinessRow = {
 };
 
 const publicStatuses: ContentStatus[] = ["published", "premium"];
-const categorySlugs = Object.keys(categoryConfigs) as CategorySlug[];
+const categorySlugs: CategorySlug[] = [...publicCategorySlugs];
 const configuredCategories = new Set<BusinessCategory>(
-  Object.values(categoryConfigs).map((config) => config.businessCategory)
+  categorySlugs.map((slug) => categoryConfigs[slug].businessCategory)
 );
 const categoryKeywords: Partial<Record<CategorySlug, string>> = {
   restaurants: "restaurante restaurantes comer cena comida pizzeria hamburgueseria tapas paella sushi italiano",
@@ -32,15 +32,14 @@ const categoryKeywords: Partial<Record<CategorySlug, string>> = {
   "beach-clubs": "beach club beachclub piscina hamacas playa day club",
   boats: "barco barcos lancha alquiler charter patron puerto",
   activities: "actividad actividades plan planes kayak buceo buggy aventura",
-  beaches: "playa playas cala calas arena mar",
   bars: "bar bares copa copas coctel cocteles vermut tapas",
   cafes: "cafe cafeteria cafeterias brunch desayuno coffee specialty",
-  bakeries: "horno panaderia pasteleria ensaimada pan dulce",
-  "rent-a-car": "rent a car alquiler coche coches aeropuerto",
-  spas: "spa wellness masaje masajes bienestar",
-  gyms: "gimnasio gimnasios fitness crossfit yoga pilates entrenar",
-  routes: "ruta rutas mirador miradores senderismo excursion a pie caminar",
-  excursions: "excursion excursiones tour tours visita guiada"
+  nightlife: "discoteca club nightlife night club salir noche fiesta",
+  "rent-a-car": "rent car coche alquiler aeropuerto rentacar rental",
+  "car-dealers": "coche coches compraventa concesionario segunda mano used car dealer",
+  spas: "spa wellness masaje masajes bienestar tratamiento",
+  healthcare: "medico clinica doctor dentist dentista salud healthcare emergency",
+  "real-estate": "inmobiliaria inmobiliarias real estate property agency alquiler compra casa"
 };
 
 function publicName(row: SearchBusinessRow) {
@@ -95,6 +94,7 @@ export async function GET() {
     for (const category of categorySlugs) businessesByCategory.set(category, []);
     for (const business of businesses) {
       const category = getCategorySlugFromBusiness(business.category);
+      if (!isPublicCategorySlug(category)) continue;
       businessesByCategory.get(category)?.push(business);
     }
 

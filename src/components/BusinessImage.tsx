@@ -15,17 +15,17 @@ type BusinessImageProps = {
 
 const abstractBackgrounds: Partial<Record<BusinessCategory, string>> = {
   restaurant:
-    "radial-gradient(circle at 20% 20%, rgba(194,129,62,0.42), transparent 30%), linear-gradient(135deg, #354030 0%, #1C1C18 62%, #6B7860 100%)",
+    "radial-gradient(circle at 20% 20%, rgba(255,204,0,0.10), transparent 30%), linear-gradient(135deg, #0A0A0A 0%, #262626 100%)",
   hotel:
-    "linear-gradient(135deg, rgba(232,200,136,0.34) 0 12%, transparent 12% 24%, rgba(200,191,168,0.2) 24% 36%, transparent 36%), linear-gradient(120deg, #1C1C18, #354030)",
+    "radial-gradient(circle at 80% 20%, rgba(255,204,0,0.08), transparent 25%), linear-gradient(135deg, #171717 0%, #0A0A0A 100%)",
   "beach-club":
-    "radial-gradient(circle at 70% 30%, rgba(232,200,136,0.5), transparent 18%), repeating-linear-gradient(135deg, rgba(107,120,96,0.28) 0 2px, transparent 2px 20px), linear-gradient(135deg, #354030, #1C1C18)",
+    "radial-gradient(circle at 70% 30%, rgba(255,204,0,0.12), transparent 35%), linear-gradient(135deg, #0A0A0A 0%, #262626 100%)",
   "boat-rental":
-    "repeating-linear-gradient(160deg, rgba(232,200,136,0.22) 0 1px, transparent 1px 26px), radial-gradient(circle at 25% 75%, rgba(194,129,62,0.38), transparent 24%), linear-gradient(135deg, #1C1C18, #354030)",
+    "radial-gradient(circle at 25% 75%, rgba(255,204,0,0.12), transparent 30%), linear-gradient(135deg, #171717 0%, #0A0A0A 100%)",
   activity:
-    "linear-gradient(145deg, transparent 0 38%, rgba(232,200,136,0.24) 38% 42%, transparent 42%), radial-gradient(circle at 78% 18%, rgba(194,129,62,0.4), transparent 22%), linear-gradient(135deg, #354030, #4A5440)",
+    "radial-gradient(circle at 78% 18%, rgba(255,204,0,0.10), transparent 25%), linear-gradient(135deg, #0A0A0A 0%, #262626 100%)",
   beach:
-    "radial-gradient(circle at 80% 20%, rgba(232,200,136,0.55), transparent 20%), linear-gradient(160deg, rgba(200,191,168,0.28) 0 22%, transparent 22% 44%, rgba(107,120,96,0.24) 44% 66%, transparent 66%), linear-gradient(135deg, #354030, #1C1C18)"
+    "radial-gradient(circle at 60% 15%, rgba(255,204,0,0.14), transparent 32%), linear-gradient(160deg, #171717 0%, #0A0A0A 100%)"
 };
 
 const variantClasses: Record<BusinessImageVariant, string> = {
@@ -40,13 +40,38 @@ const imageOverlays: Record<BusinessImageVariant, string> = {
   detail: "linear-gradient(90deg, rgba(28,28,24,0.10), rgba(28,28,24,0))"
 };
 
+// Businesses where the primary Google photo is wrong (e.g. staff photo instead of building).
+// Maps slug → list of gallery indices to try in order. The first valid URL wins.
+// If none found, falls back to the scraped primaryImageUrl as usual.
+const DIRECT_IMAGE_OVERRIDES: Record<string, string> = {
+  "catedral-basilica-de-santa-maria-de-mallorca":
+    "https://catedraldemallorca.org/wp-content/uploads/2025/05/CatedralInterior.jpg.webp"
+};
+
+const GALLERY_INDEX_OVERRIDES: Record<string, number[]> = {
+  "catedral-basilica-de-santa-maria-de-mallorca": [1, 2, 3, 4, 5],
+};
+
 function hasRealBusinessImage(image?: string) {
   if (!image) return false;
   return !image.includes("placeholder") && !image.endsWith(".svg");
 }
 
 export function getBusinessImageUrl(business: Business) {
+  const slug = business.slug;
+  if (slug && slug in DIRECT_IMAGE_OVERRIDES) return DIRECT_IMAGE_OVERRIDES[slug];
+
+  if (slug && slug in GALLERY_INDEX_OVERRIDES) {
+    const gallery = business.galleryImageUrls ?? [];
+    for (const idx of GALLERY_INDEX_OVERRIDES[slug]) {
+      const candidate = gallery[idx];
+      if (hasRealBusinessImage(candidate)) return candidate;
+    }
+  }
   if (hasRealBusinessImage(business.primaryImageUrl)) return business.primaryImageUrl;
+  for (const candidate of business.galleryImageUrls ?? []) {
+    if (hasRealBusinessImage(candidate)) return candidate;
+  }
   if (hasRealBusinessImage(business.image)) return business.image;
   return undefined;
 }
@@ -64,7 +89,7 @@ export function BusinessImage({ business, category, variant, className = "", chi
   return (
     <div
       aria-label={imageUrl ? imageLabel : `Imagen editorial de ${categoryLabel} en ${location}, Mallorca`}
-      className={`editorial-texture flex items-end overflow-hidden bg-sea ${variantClasses[variant]} ${className}`}
+      className={`editorial-texture flex items-end overflow-hidden bg-[#0A0A0A] ${variantClasses[variant]} ${className}`}
       style={{ backgroundImage, backgroundSize: "cover", backgroundPosition: "center" }}
     >
       {!imageUrl && (

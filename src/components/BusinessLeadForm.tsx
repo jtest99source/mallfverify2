@@ -96,7 +96,7 @@ export function BusinessLeadForm({ locale = "es" }: { locale?: Locale }) {
         <button
           type="submit"
           disabled={status === "loading"}
-          className="min-h-12 rounded-md bg-coral px-8 py-3 text-[11px] font-bold uppercase tracking-[0.1em] text-white transition-all duration-150 hover:bg-coral/90 disabled:opacity-60"
+          className="min-h-12 rounded-md bg-[#0A0A0A] px-8 py-3 text-[11px] font-bold uppercase tracking-[0.1em] text-[#FFFFFF] transition-all duration-150 hover:bg-[#262626] disabled:opacity-60"
         >
           {status === "loading" ? c.sending : c.submit}
         </button>

@@ -2,14 +2,14 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import {
-  IconBriefcase, IconChartBar, IconDiamond, IconMail,
+  IconChartBar, IconDiamond, IconMail,
   IconMessages, IconRefresh, IconShieldCheck, IconStar,
   IconUsers, IconX
 } from "@tabler/icons-react";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd } from "@/components/JsonLd";
 import { siteConfig } from "@/config/site";
-import { siteUrl } from "@/lib/data";
+import { publicCategorySlugs, siteUrl } from "@/lib/data";
 import { isLocale, locales, type Locale } from "@/lib/i18n";
 import {
   aboutPath, aboutSlugs, editorialPath, editorialSlugs,
@@ -28,14 +28,14 @@ const methodologyCopy = {
     home: "Inicio",
     label: "Metodología",
     badge: "Rankings independientes",
-    title: "Cómo evaluamos los negocios de Mallorca",
-    intro: "Comparamos negocios con reseñas reales de Google, señales públicas y una metodología clara. La posición en rankings no se compra.",
+    title: "Por qué usamos datos de Google — y nada más",
+    intro: "La mayoría de portales mezclan publicidad, estancias invitadas y opinión personal con los rankings. Mallorca Verified los separa completamente. Los rankings se construyen sobre datos públicos de Google: ninguna posición se compra.",
     businessEyebrow: "Para negocios",
     businessTitle: "Mejora la ficha, no el ranking",
     businessText: "Una colaboración puede completar fotos, servicios, carta, horarios y datos útiles. No modifica valoraciones, reseñas ni posiciones.",
     businessCta: "Escríbenos →",
-    whyTitle: "Por qué existe esta guía",
-    whyText: "Muchas recomendaciones mezclan publicidad, invitaciones y opinión personal. Mallorca Verified separa los rankings objetivos del contenido editorial para que el usuario entienda por qué aparece cada sitio.",
+    whyTitle: "Por qué las reseñas de Google son la base",
+    whyText: "Las reseñas de Google de miles de personas reales a lo largo de años son la señal más difícil de manipular. Un restaurante con 4,8 de 600 personas en tres años no se puede fabricar. Ese es el punto de partida — y filtramos todo lo que no supera un umbral mínimo de señal real y consistente.",
     factorsTitle: "Cómo construimos los rankings",
     factorsIntro: "Cada categoría se compara por separado. Restaurantes compiten con restaurantes, hoteles con hoteles y barcos con barcos.",
     factors: [
@@ -68,14 +68,14 @@ const methodologyCopy = {
     home: "Home",
     label: "Methodology",
     badge: "Independent rankings",
-    title: "How we evaluate businesses in Mallorca",
-    intro: "We compare businesses with real Google reviews, public signals and a clear methodology. Ranking positions cannot be bought.",
+    title: "Why we rank on Google data — and nothing else",
+    intro: "Most travel sites mix advertising, invited stays and personal opinion into their rankings. Mallorca Verified separates them completely. Rankings are built on public Google data — nothing buys a position.",
     businessEyebrow: "For businesses",
     businessTitle: "Improve the profile, not the ranking",
     businessText: "A collaboration can complete photos, services, menus, opening hours and useful data. It never changes ratings, reviews or ranking positions.",
     businessCta: "Contact us →",
-    whyTitle: "Why this guide exists",
-    whyText: "Many travel recommendations mix advertising, invitations and personal opinion. Mallorca Verified separates objective rankings from editorial content so users understand why each place appears.",
+    whyTitle: "Why Google reviews are the foundation",
+    whyText: "Google reviews from thousands of real visitors over years are the hardest signal to fake. A restaurant with 4.8★ from 600 people over three years can't be manufactured. That's the foundation — and we filter out anything that hasn't cleared a minimum threshold of real, consistent signal.",
     factorsTitle: "How rankings are built",
     factorsIntro: "Each category is compared separately. Restaurants compete with restaurants, hotels with hotels and boats with boats.",
     factors: [
@@ -108,14 +108,14 @@ const methodologyCopy = {
     home: "Start",
     label: "Methodik",
     badge: "Unabhaengige Rankings",
-    title: "Wie wir Betriebe auf Mallorca bewerten",
-    intro: "Wir vergleichen Betriebe mit echten Google-Bewertungen, oeffentlichen Signalen und einer klaren Methodik. Ranking-Positionen koennen nicht gekauft werden.",
+    title: "Warum wir nach Google-Daten ranken — und nach nichts anderem",
+    intro: "Die meisten Reiseportale mischen Werbung, eingeladene Aufenthalte und persönliche Meinungen in ihre Rankings. Mallorca Verified trennt das vollständig. Rankings basieren auf öffentlichen Google-Daten — keine Position wird gekauft.",
     businessEyebrow: "Fuer Betriebe",
     businessTitle: "Profil verbessern, nicht das Ranking",
     businessText: "Eine Zusammenarbeit kann Fotos, Services, Speisekarten, Oeffnungszeiten und nuetzliche Daten ergaenzen. Bewertungen, Rezensionen und Positionen bleiben unveraendert.",
     businessCta: "Kontakt aufnehmen →",
-    whyTitle: "Warum es diese Methodik gibt",
-    whyText: "Viele Reiseempfehlungen mischen Werbung, Einladungen und persoenliche Meinung. Mallorca Verified trennt objektive Rankings von redaktionellem Kontext.",
+    whyTitle: "Warum Google-Bewertungen die Grundlage sind",
+    whyText: "Google-Bewertungen von tausenden echten Besuchern über Jahre sind das schwierigste Signal zu fälschen. Ein Restaurant mit 4,8 von 600 Personen über drei Jahre lässt sich nicht fabricieren. Das ist die Grundlage — und wir filtern alles heraus, das keine minimale Schwelle echter, konsistenter Signale erreicht.",
     factorsTitle: "Wie Rankings entstehen",
     factorsIntro: "Jede Kategorie wird separat verglichen. Restaurants mit Restaurants, Hotels mit Hotels und Boote mit Booten.",
     factors: [
@@ -149,16 +149,16 @@ const methodologyCopy = {
 const aboutCopy = {
   es: {
     metaTitle: "Quiénes somos | Mallorca Verified",
-    metaDescription: "Un equipo con raíces en Mallorca que construyó una guía basada en datos reales, sin publicidad y sin favoritismos.",
+    metaDescription: "Un equipo con raíces en Mallorca que construyó el directorio de referencia para residentes internacionales, compradores y expats en la isla. Sin publicidad, sin posiciones de pago.",
     home: "Inicio",
     label: "Quiénes somos",
     badge: "El equipo",
     title: "La gente detrás de Mallorca Verified",
-    intro: "Un equipo pequeño con raíces en Mallorca que creyó que había una forma mejor de encontrar sitios buenos en la isla: datos reales, sin publicidad.",
+    intro: "Un equipo pequeño con raíces en Mallorca que construyó el directorio de referencia para residentes internacionales, compradores y expats. Sin publicidad, sin posiciones de pago.",
     whyTitle: "Por qué lo construimos",
-    whyText: "Cada año millones de personas buscan recomendaciones para Mallorca y acaban en listas patrocinadas, artículos de afiliados o rankings donde el primero pagó más. Quisimos construir algo diferente: una guía que fuera útil de verdad, basada en el consenso de miles de reseñas reales y verificada editorialmente. Sin cobrar a nadie para subir.",
+    whyText: "Cada año millones de personas llegan a Mallorca sin red local y acaban en tourist traps, listas patrocinadas o rankings donde el primero pagó más. Para expats y compradores internacionales el problema es doble: además de los tourist traps, necesitan profesionales en su idioma para las decisiones importantes. Quisimos construir algo diferente: un directorio basado en datos reales de Google, con profesionales seleccionados por criterio editorial.",
     teamTitle: "Cómo trabajamos",
-    teamText: "Combinamos conocimiento local con análisis de datos. Conocemos la isla en temporada alta y en invierno, en el centro y en los pueblos del interior. Esa perspectiva local nos ayuda a separar los sitios que de verdad funcionan de los que tienen buena campaña de marketing.",
+    teamText: "Combinamos conocimiento local con análisis de datos. Conocemos la isla en temporada alta y en invierno, en el centro y en los pueblos del interior. Esa perspectiva local nos ayuda a separar los sitios que de verdad funcionan de los que solo tienen buena campaña de marketing — y a entender qué necesita alguien que acaba de llegar a la isla.",
     principlesTitle: "Nuestros principios",
     principles: [
       ["Datos primero", "Cada posición en los rankings se basa en valoración media, volumen de reseñas y el Untapped Score. No en la opinión de un solo editor."],
@@ -176,16 +176,16 @@ const aboutCopy = {
   },
   en: {
     metaTitle: "About us | Mallorca Verified",
-    metaDescription: "A team with roots in Mallorca that built a guide based on real data, without advertising or favouritism.",
+    metaDescription: "A small team with roots in Mallorca that built the reference directory for international residents, buyers and expats on the island. No advertising, no paid placements.",
     home: "Home",
     label: "About us",
     badge: "The team",
     title: "The people behind Mallorca Verified",
-    intro: "A small team with roots in Mallorca that believed there was a better way to find good places on the island: real data, no advertising.",
+    intro: "A small team with roots in Mallorca that built the reference directory for international residents, buyers and expats. No advertising, no paid placements.",
     whyTitle: "Why we built this",
-    whyText: "Every year millions of people search for recommendations about Mallorca and end up on sponsored lists, affiliate articles or rankings where the top result paid the most. We wanted to build something different: a guide that is genuinely useful, based on the consensus of thousands of real reviews and editorially verified. Without charging anyone to rank higher.",
+    whyText: "Every year millions of people arrive in Mallorca without a local network and end up in tourist traps, sponsored lists or rankings where the top result paid the most. For expats and international buyers the problem is compounded: on top of tourist traps, they need professionals in their language for the decisions that matter. We wanted to build something different: a directory based on real Google data, with professionals selected on editorial criteria.",
     teamTitle: "How we work",
-    teamText: "We combine local knowledge with data analysis. We know the island in high season and in winter, in the centre and in the inland villages. That local perspective helps us separate places that genuinely deliver from those that just have a good marketing campaign.",
+    teamText: "We combine local knowledge with data analysis. We know the island in high season and in winter, in the centre and in the inland villages. That local perspective helps us separate places that genuinely deliver from those with a good marketing campaign — and understand what someone needs when they've just arrived on the island.",
     principlesTitle: "Our principles",
     principles: [
       ["Data first", "Every ranking position is based on average rating, review volume and the Untapped Score. Not on a single editor's opinion."],
@@ -203,16 +203,16 @@ const aboutCopy = {
   },
   de: {
     metaTitle: "Ueber uns | Mallorca Verified",
-    metaDescription: "Ein Team mit Mallorca-Wurzeln, das eine Plattform auf Basis echter Daten aufgebaut hat – ohne Werbung und ohne Bevorzugung.",
+    metaDescription: "Ein kleines Team mit Mallorca-Wurzeln, das das Referenzverzeichnis für internationale Bewohner, Käufer und Expats auf der Insel aufgebaut hat. Keine Werbung, keine bezahlten Platzierungen.",
     home: "Start",
-    label: "Ueber uns",
+    label: "Über uns",
     badge: "Das Team",
     title: "Die Menschen hinter Mallorca Verified",
-    intro: "Ein kleines Team mit Wurzeln auf Mallorca, das glaubte, es gaebe einen besseren Weg, gute Orte auf der Insel zu finden: echte Daten, keine Werbung.",
+    intro: "Ein kleines Team mit Wurzeln auf Mallorca, das das Referenzverzeichnis für internationale Bewohner, Käufer und Expats aufgebaut hat. Keine Werbung, keine bezahlten Platzierungen.",
     whyTitle: "Warum wir das aufgebaut haben",
-    whyText: "Jedes Jahr suchen Millionen Menschen nach Empfehlungen fuer Mallorca und landen bei gesponserten Listen, Affiliate-Artikeln oder Rankings, bei denen der Erste am meisten bezahlt hat. Wir wollten etwas anderes aufbauen: eine Plattform, die wirklich nuetzlich ist, auf dem Konsens Tausender echter Bewertungen basiert und redaktionell geprueft wird.",
+    whyText: "Jedes Jahr kommen Millionen Menschen ohne lokales Netzwerk nach Mallorca und landen in Touristenfallen, gesponserten Listen oder Rankings, bei denen der Erste am meisten bezahlt hat. Für Expats und internationale Käufer ist das Problem doppelt: Neben den Touristenfallen brauchen sie Profis in ihrer Sprache für wichtige Entscheidungen. Wir wollten etwas anderes aufbauen: ein Verzeichnis auf Basis echter Google-Daten, mit Profis, die nach redaktionellen Kriterien ausgewählt werden.",
     teamTitle: "Wie wir arbeiten",
-    teamText: "Wir kombinieren lokales Wissen mit Datenanalyse. Wir kennen die Insel in der Hochsaison und im Winter, im Zentrum und in den Doerfern im Inland. Diese lokale Perspektive hilft uns, Orte, die wirklich funktionieren, von solchen zu unterscheiden, die nur eine gute Marketingkampagne haben.",
+    teamText: "Wir kombinieren lokales Wissen mit Datenanalyse. Wir kennen die Insel in der Hochsaison und im Winter, im Zentrum und in den Dörfern im Inland. Diese lokale Perspektive hilft uns, Orte, die wirklich funktionieren, von solchen zu unterscheiden, die nur eine gute Marketingkampagne haben — und zu verstehen, was jemand braucht, der gerade auf die Insel gezogen ist.",
     principlesTitle: "Unsere Grundsaetze",
     principles: [
       ["Daten zuerst", "Jede Ranking-Position basiert auf Durchschnittsbewertung, Bewertungsvolumen und dem Untapped Score. Nicht auf der Meinung eines einzelnen Redakteurs."],
@@ -380,6 +380,67 @@ function formatMillionMetric(value: number, locale: Locale) {
   return `${(value / 1_000_000).toLocaleString(numberLocale(locale), { maximumFractionDigits: 1 })}M+`;
 }
 
+function methodologyPageSections(locale: Locale) {
+  if (locale === "en") {
+    return [
+      {
+        title: "Places and rankings",
+        text: "Category pages and ranking pages are built for comparison: rating, review volume, area, category and practical public data. They are not paid lists."
+      },
+      {
+        title: "Business profiles",
+        text: "Profile pages organise the public facts people need before deciding: address, opening hours, price guidance, Google rating, selected review signals and what the place offers."
+      },
+      {
+        title: "Experts",
+        text: "Expert pages focus on professionals for expats, buyers and residents. Language, specialty, area served and public credibility signals are made explicit."
+      },
+      {
+        title: "Guides",
+        text: "Guides add editorial context when a pure ranking is not enough: how to choose an area, what to compare and which trade-offs matter."
+      }
+    ];
+  }
+  if (locale === "de") {
+    return [
+      {
+        title: "Orte und Rankings",
+        text: "Kategorie- und Rankingseiten sind zum Vergleichen gedacht: Bewertung, Bewertungsvolumen, Gebiet, Kategorie und praktische öffentliche Daten. Es sind keine gekauften Listen."
+      },
+      {
+        title: "Profile von Betrieben",
+        text: "Profilseiten ordnen die öffentlichen Fakten, die Nutzer vor einer Entscheidung brauchen: Adresse, Öffnungszeiten, Preisorientierung, Google-Bewertung, Bewertungssignale und Angebot."
+      },
+      {
+        title: "Experten",
+        text: "Expertenseiten konzentrieren sich auf Profis für Expats, Käufer und Residenten. Sprache, Spezialisierung, Gebiet und öffentliche Vertrauenssignale werden klar gemacht."
+      },
+      {
+        title: "Guides",
+        text: "Guides ergänzen redaktionellen Kontext, wenn ein reines Ranking nicht reicht: Gebietswahl, Vergleichskriterien und wichtige Kompromisse."
+      }
+    ];
+  }
+  return [
+    {
+      title: "Places y rankings",
+      text: "Las páginas de categoría y ranking sirven para comparar: valoración, volumen de reseñas, zona, categoría y datos públicos útiles. No son listas compradas."
+    },
+    {
+      title: "Fichas de negocios",
+      text: "Las fichas ordenan los datos públicos que una persona necesita antes de decidir: dirección, horarios, precio orientativo, valoración de Google, señales de reseñas y qué ofrece."
+    },
+    {
+      title: "Experts",
+      text: "Las páginas de expertos se centran en profesionales para expats, compradores y residentes. Idioma, especialidad, zona y señales públicas de confianza aparecen de forma explícita."
+    },
+    {
+      title: "Guías",
+      text: "Las guías añaden contexto editorial cuando un ranking no basta: cómo elegir zona, qué comparar y qué detalles conviene tener en cuenta."
+    }
+  ];
+}
+
 function canonicalForPage(locale: Locale, pageType: StaticPageType) {
   if (pageType === "about") return `${siteUrl}${aboutPath(locale)}`;
   if (pageType === "editorial") return `${siteUrl}${editorialPath(locale)}`;
@@ -463,51 +524,44 @@ function MethodologyPage({ locale, canonical, stats }: { locale: Locale; canonic
     publisher: { "@type": "Organization", name: siteConfig.name, url: siteConfig.url },
     mainEntityOfPage: canonical
   };
+  const pageSections = methodologyPageSections(locale);
 
   return (
     <main className="bg-paper">
-      <section className="border-b border-borderline bg-[#FFF8EC] px-4 py-14 sm:px-6 lg:px-8">
+      <section className="bg-[#FFFFFF] px-4 py-14 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <Breadcrumbs items={[{ label: c.home, href: `/${locale}` }, { label: c.label, href: methodologyPath(locale) }]} />
-          <div className="mt-8 grid gap-8 lg:grid-cols-[minmax(0,1fr)_380px] lg:items-end">
-            <div className="max-w-4xl">
-              <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-[#BFE8D2] bg-white px-3 py-1 text-[11px] font-bold uppercase tracking-[0.08em] text-[#047857]">
-                <IconShieldCheck size={15} stroke={2} />
-                {c.badge}
-              </div>
-              <h1 className="font-display text-balance text-4xl font-black leading-[1] text-ink sm:text-5xl lg:text-6xl">{c.title}</h1>
-              <p className="mt-5 max-w-2xl text-base leading-8 text-olive">{c.intro}</p>
+          <div className="mt-8 max-w-4xl">
+            <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-[#E5E7EB] bg-[#FFFFFF] px-3 py-1 text-[11px] font-bold uppercase tracking-[0.08em] text-[#0A0A0A]">
+              <IconShieldCheck size={15} stroke={2} />
+              {c.badge}
             </div>
-            <div className="rounded-lg border border-[#F1D3A2] bg-white p-5 shadow-[0_18px_40px_rgba(27,46,75,0.08)]">
-              <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-[#B86B1D]">{c.businessEyebrow}</p>
-              <h2 className="mt-2 font-sans text-2xl font-black leading-tight text-ink">{c.businessTitle}</h2>
-              <p className="mt-3 text-sm leading-7 text-olive">{c.businessText}</p>
-              <a href="mailto:hola@mallorcaverified.com?subject=Ficha en Mallorca Verified" className="mt-5 inline-flex min-h-11 items-center justify-center rounded-sm bg-[#1B2E4B] px-5 text-[11px] font-bold uppercase tracking-[0.1em] text-white hover:bg-[#0E8F72]">
-                {c.businessCta}
-              </a>
-            </div>
+            <h1 className="font-display text-balance text-4xl font-black leading-[1] text-ink sm:text-5xl lg:text-6xl">{c.title}</h1>
+            <p className="mt-5 max-w-2xl text-base leading-8 text-olive">{c.intro}</p>
           </div>
         </div>
       </section>
 
       <article className="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8">
         <section className="border-b border-borderline pb-10">
-          <h2 className="font-sans text-3xl font-bold leading-tight">{c.whyTitle}</h2>
+          <p className="mb-2 text-[11px] font-black uppercase tracking-[0.18em] text-[#0A0A0A]/30">01</p>
+          <h2 className="font-sans text-3xl font-black leading-tight">{c.whyTitle}</h2>
           <p className="mt-5 text-base leading-8 text-ink/75">{c.whyText}</p>
         </section>
 
         <section className="border-b border-borderline py-10">
-          <h2 className="font-sans text-3xl font-bold leading-tight">{c.factorsTitle}</h2>
+          <p className="mb-2 text-[11px] font-black uppercase tracking-[0.18em] text-[#0A0A0A]/30">02</p>
+          <h2 className="font-sans text-3xl font-black leading-tight">{c.factorsTitle}</h2>
           <p className="mt-5 text-base leading-8 text-ink/75">{c.factorsIntro}</p>
           <div className="mt-7 grid gap-4">
             {c.factors.map(([eyebrow, title, text], index) => {
               const Icon = index === 0 ? IconStar : index === 1 ? IconMessages : IconDiamond;
               return (
-                <div key={title} className="rounded-lg border border-borderline bg-white p-5 shadow-[0_12px_28px_rgba(27,46,75,0.04)]">
+                <div key={title} className="rounded-lg border border-borderline bg-[#FFFFFF] p-5 shadow-[0_12px_28px_rgba(10,10,10,0.04)]">
                   <div className="flex gap-4">
-                    <Icon size={26} stroke={1.8} className="mt-1 shrink-0 text-[#0E8F72]" />
+                    <Icon size={26} stroke={1.8} className="mt-1 shrink-0 text-[#0A0A0A]" />
                     <div>
-                      <p className="text-[10px] font-bold uppercase tracking-[0.12em] text-[#B86B1D]">{eyebrow}</p>
+                      <p className="text-[10px] font-bold uppercase tracking-[0.12em] text-[#0A0A0A]">{eyebrow}</p>
                       <h3 className="mt-1 font-sans text-xl font-bold text-ink">{title}</h3>
                       <p className="mt-3 text-sm leading-7 text-olive">{text}</p>
                     </div>
@@ -519,11 +573,12 @@ function MethodologyPage({ locale, canonical, stats }: { locale: Locale; canonic
         </section>
 
         <section className="border-b border-borderline py-10">
-          <h2 className="font-sans text-3xl font-bold leading-tight">{c.neverTitle}</h2>
+          <p className="mb-2 text-[11px] font-black uppercase tracking-[0.18em] text-[#0A0A0A]/30">03</p>
+          <h2 className="font-sans text-3xl font-black leading-tight">{c.neverTitle}</h2>
           <div className="mt-6 grid gap-4">
             {c.never.map(([title, text]) => (
-              <div key={title} className="flex gap-4 rounded-lg border border-borderline bg-white p-5">
-                <IconX size={22} stroke={2} className="mt-1 shrink-0 text-[#B86B1D]" />
+              <div key={title} className="flex gap-4 rounded-lg border border-borderline bg-[#FFFFFF] p-5">
+                <IconShieldCheck size={22} stroke={2} className="mt-1 shrink-0 text-[#0A0A0A]" />
                 <div>
                   <h3 className="font-sans text-lg font-bold text-ink">{title}</h3>
                   <p className="mt-2 text-sm leading-7 text-olive">{text}</p>
@@ -534,16 +589,17 @@ function MethodologyPage({ locale, canonical, stats }: { locale: Locale; canonic
         </section>
 
         <section className="border-b border-borderline py-10">
-          <h2 className="font-sans text-3xl font-bold leading-tight">{c.dataTitle}</h2>
+          <p className="mb-2 text-[11px] font-black uppercase tracking-[0.18em] text-[#0A0A0A]/30">04</p>
+          <h2 className="font-sans text-3xl font-black leading-tight">{c.dataTitle}</h2>
           <p className="mt-5 text-base leading-8 text-ink/75">{c.dataText}</p>
           <div className="mt-8 grid gap-4 sm:grid-cols-3">
             {[
               { value: formatIntegerMetric(stats.publishedBusinesses, locale), label: c.published },
               { value: formatMillionMetric(stats.analyzedReviews, locale), label: c.reviews },
-              { value: formatIntegerMetric(stats.activeCategories, locale), label: c.categories }
+              { value: formatIntegerMetric(publicCategorySlugs.length, locale), label: c.categories }
             ].map((stat) => (
-              <div key={stat.label} className="rounded-lg border border-[#FFD166]/60 bg-[linear-gradient(135deg,#17324E_0%,#0E5F66_58%,#0E8F72_100%)] px-6 py-5 text-white">
-                <div className="font-sans text-4xl font-black leading-none text-[#FFD166]">{stat.value}</div>
+              <div key={stat.label} className="rounded-lg border border-[#FFCC00]/60 bg-[linear-gradient(135deg,#0A0A0A_0%,#262626_58%,#0A0A0A_100%)] px-6 py-5 text-white">
+                <div className="font-sans text-4xl font-black leading-none text-[#FFCC00]">{stat.value}</div>
                 <div className="mt-2 text-[10px] font-bold uppercase tracking-[0.12em] text-white/75">{stat.label}</div>
               </div>
             ))}
@@ -551,25 +607,33 @@ function MethodologyPage({ locale, canonical, stats }: { locale: Locale; canonic
         </section>
 
         <section className="border-b border-borderline py-10">
-          <div className="rounded-lg border border-[#F1D3A2] bg-[#FFF8EC] p-6">
-            <div className="flex gap-4">
-              <IconBriefcase size={28} stroke={1.8} className="mt-1 shrink-0 text-[#B86B1D]" />
-              <div>
-                <h2 className="font-sans text-2xl font-black leading-tight text-ink">{c.businessTitle}</h2>
-                <p className="mt-3 text-sm leading-7 text-olive">{c.businessText}</p>
+          <p className="mb-2 text-[11px] font-black uppercase tracking-[0.18em] text-[#0A0A0A]/30">05</p>
+          <h2 className="font-sans text-3xl font-black leading-tight">
+            {locale === "en" ? "How each page works" : locale === "de" ? "Wie jede Seite funktioniert" : "Cómo funciona cada página"}
+          </h2>
+          <div className="mt-6 grid gap-4 sm:grid-cols-2">
+            {pageSections.map((item, index) => {
+              const PageIcon = index === 0 ? IconChartBar : index === 1 ? IconStar : index === 2 ? IconUsers : IconDiamond;
+              return (
+              <div key={item.title} className="rounded-lg border border-[#E5E7EB] bg-[#FFFFFF] p-5 shadow-[0_12px_28px_rgba(10,10,10,0.04)]">
+                <PageIcon size={22} stroke={1.8} className="text-[#0A0A0A]" />
+                <h3 className="mt-3 font-sans text-lg font-black text-ink">{item.title}</h3>
+                <p className="mt-2 text-sm leading-7 text-olive">{item.text}</p>
               </div>
-            </div>
+              );
+            })}
           </div>
         </section>
 
         <section className="pt-10">
-          <h2 className="font-sans text-3xl font-bold leading-tight">{c.faqTitle}</h2>
-          <div className="mt-6 divide-y divide-borderline overflow-hidden rounded-lg border border-borderline bg-white">
+          <p className="mb-2 text-[11px] font-black uppercase tracking-[0.18em] text-[#0A0A0A]/30">06</p>
+          <h2 className="font-sans text-3xl font-black leading-tight">{c.faqTitle}</h2>
+          <div className="mt-6 divide-y divide-borderline overflow-hidden rounded-lg border border-borderline bg-[#FFFFFF]">
             {c.faqs.map(([question, answer]) => (
               <details key={question} className="group p-5">
                 <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-sans text-lg font-bold text-ink">
                   <span>{question}</span>
-                  <span className="text-[#B86B1D] transition group-open:rotate-45">+</span>
+                  <span className="text-[#0A0A0A] transition group-open:rotate-45">+</span>
                 </summary>
                 <p className="mt-4 text-sm leading-7 text-olive">{answer}</p>
               </details>
@@ -610,11 +674,11 @@ function AboutPage({ locale, canonical, stats }: { locale: Locale; canonical: st
 
   return (
     <main className="bg-paper">
-      <section className="border-b border-borderline bg-[#FFF8EC] px-4 py-14 sm:px-6 lg:px-8">
+      <section className="border-b border-borderline bg-[#FFFFFF] px-4 py-14 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <Breadcrumbs items={[{ label: c.home, href: `/${locale}` }, { label: c.label, href: canonical }]} />
           <div className="mt-8 max-w-3xl">
-            <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-[#BFE8D2] bg-white px-3 py-1 text-[11px] font-bold uppercase tracking-[0.08em] text-[#047857]">
+            <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-[#E5E7EB] bg-white px-3 py-1 text-[11px] font-bold uppercase tracking-[0.08em] text-[#0A0A0A]">
               <IconUsers size={15} stroke={2} />
               {c.badge}
             </div>
@@ -626,23 +690,23 @@ function AboutPage({ locale, canonical, stats }: { locale: Locale; canonical: st
 
       <article className="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8">
         <section className="border-b border-borderline pb-10">
-          <h2 className="font-sans text-3xl font-bold leading-tight">{c.whyTitle}</h2>
+          <h2 className="font-sans text-3xl font-black leading-tight">{c.whyTitle}</h2>
           <p className="mt-5 text-base leading-8 text-ink/75">{c.whyText}</p>
         </section>
 
         <section className="border-b border-borderline py-10">
-          <h2 className="font-sans text-3xl font-bold leading-tight">{c.teamTitle}</h2>
+          <h2 className="font-sans text-3xl font-black leading-tight">{c.teamTitle}</h2>
           <p className="mt-5 text-base leading-8 text-ink/75">{c.teamText}</p>
         </section>
 
         <section className="border-b border-borderline py-10">
-          <h2 className="font-sans text-3xl font-bold leading-tight">{c.principlesTitle}</h2>
+          <h2 className="font-sans text-3xl font-black leading-tight">{c.principlesTitle}</h2>
           <div className="mt-7 grid gap-4 sm:grid-cols-2">
             {c.principles.map(([title, text], index) => {
               const Icon = principleIcons[index] ?? IconShieldCheck;
               return (
-                <div key={title} className="rounded-lg border border-borderline bg-white p-5 shadow-[0_12px_28px_rgba(27,46,75,0.04)]">
-                  <Icon size={24} stroke={1.8} className="text-[#0E8F72]" />
+                <div key={title} className="rounded-lg border border-borderline bg-white p-5 shadow-[0_12px_28px_rgba(10,10,10,0.04)]">
+                  <Icon size={24} stroke={1.8} className="text-[#0A0A0A]" />
                   <h3 className="mt-3 font-sans text-lg font-bold text-ink">{title}</h3>
                   <p className="mt-2 text-sm leading-7 text-olive">{text}</p>
                 </div>
@@ -656,10 +720,10 @@ function AboutPage({ locale, canonical, stats }: { locale: Locale; canonical: st
             {[
               { value: formatIntegerMetric(stats.publishedBusinesses, locale), label: c.published },
               { value: formatMillionMetric(stats.analyzedReviews, locale), label: c.reviews },
-              { value: formatIntegerMetric(stats.activeCategories, locale), label: c.categories }
+              { value: formatIntegerMetric(publicCategorySlugs.length, locale), label: c.categories }
             ].map((stat) => (
-              <div key={stat.label} className="rounded-lg border border-[#FFD166]/60 bg-[linear-gradient(135deg,#17324E_0%,#0E5F66_58%,#0E8F72_100%)] px-6 py-5 text-white">
-                <div className="font-sans text-4xl font-black leading-none text-[#FFD166]">{stat.value}</div>
+              <div key={stat.label} className="rounded-lg border border-[#FFCC00]/60 bg-[linear-gradient(135deg,#0A0A0A_0%,#262626_58%,#0A0A0A_100%)] px-6 py-5 text-white">
+                <div className="font-sans text-4xl font-black leading-none text-[#FFCC00]">{stat.value}</div>
                 <div className="mt-2 text-[10px] font-bold uppercase tracking-[0.12em] text-white/75">{stat.label}</div>
               </div>
             ))}
@@ -667,15 +731,15 @@ function AboutPage({ locale, canonical, stats }: { locale: Locale; canonical: st
         </section>
 
         <section className="pt-10">
-          <div className="rounded-lg border border-[#E7DED0] bg-white p-6 shadow-[0_4px_18px_rgba(27,46,75,0.06)]">
-            <IconMail size={28} stroke={1.8} className="text-[#0E8F72]" />
+          <div className="rounded-lg border border-[#E5E7EB] bg-white p-6 shadow-[0_4px_18px_rgba(10,10,10,0.06)]">
+            <IconMail size={28} stroke={1.8} className="text-[#0A0A0A]" />
             <h2 className="mt-3 font-sans text-2xl font-black leading-tight text-ink">{c.contactTitle}</h2>
             <p className="mt-3 text-sm leading-7 text-olive">{c.contactText}</p>
-            <a href={`mailto:${c.contactCta}`} className="mt-4 inline-flex min-h-11 items-center justify-center rounded-sm bg-[#1B2E4B] px-5 text-[11px] font-bold uppercase tracking-[0.1em] text-white hover:bg-[#0E8F72]">
+            <a href={`mailto:${c.contactCta}`} className="mt-4 inline-flex min-h-11 items-center justify-center rounded-sm bg-[#262626] px-5 text-[11px] font-bold uppercase tracking-[0.1em] text-white hover:bg-[#262626]">
               {c.contactCta}
             </a>
             <div className="mt-4">
-              <Link href={editorialPath(locale)} className="text-sm font-semibold text-[#0E8F72] hover:underline">
+              <Link href={editorialPath(locale)} className="text-sm font-semibold text-[#0A0A0A] hover:underline">
                 {c.editorialLinkText}
               </Link>
             </div>
@@ -714,11 +778,11 @@ function EditorialPage({ locale, canonical }: { locale: Locale; canonical: strin
 
   return (
     <main className="bg-paper">
-      <section className="border-b border-borderline bg-[#FFF8EC] px-4 py-14 sm:px-6 lg:px-8">
+      <section className="border-b border-borderline bg-[#FFFFFF] px-4 py-14 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <Breadcrumbs items={[{ label: c.home, href: `/${locale}` }, { label: c.label, href: canonical }]} />
           <div className="mt-8 max-w-3xl">
-            <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-[#BFE8D2] bg-white px-3 py-1 text-[11px] font-bold uppercase tracking-[0.08em] text-[#047857]">
+            <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-[#E5E7EB] bg-white px-3 py-1 text-[11px] font-bold uppercase tracking-[0.08em] text-[#0A0A0A]">
               <IconShieldCheck size={15} stroke={2} />
               {c.badge}
             </div>
@@ -730,10 +794,10 @@ function EditorialPage({ locale, canonical }: { locale: Locale; canonical: strin
 
       <article className="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8">
         <section className="border-b border-borderline pb-10">
-          <h2 className="font-sans text-3xl font-bold leading-tight">{c.criteriaTitle}</h2>
+          <h2 className="font-sans text-3xl font-black leading-tight">{c.criteriaTitle}</h2>
           <div className="mt-6 grid gap-4">
             {c.criteria.map(([title, text]) => (
-              <div key={title} className="rounded-lg border border-borderline bg-white p-5 shadow-[0_4px_18px_rgba(27,46,75,0.04)]">
+              <div key={title} className="rounded-lg border border-borderline bg-white p-5 shadow-[0_4px_18px_rgba(10,10,10,0.04)]">
                 <h3 className="font-sans text-lg font-bold text-ink">{title}</h3>
                 <p className="mt-2 text-sm leading-7 text-olive">{text}</p>
               </div>
@@ -742,12 +806,12 @@ function EditorialPage({ locale, canonical }: { locale: Locale; canonical: strin
         </section>
 
         <section className="border-b border-borderline py-10">
-          <h2 className="font-sans text-3xl font-bold leading-tight">{c.sourcesTitle}</h2>
+          <h2 className="font-sans text-3xl font-black leading-tight">{c.sourcesTitle}</h2>
           <p className="mt-5 text-base leading-8 text-ink/75">{c.sourcesText}</p>
           <div className="mt-6 grid gap-4">
             {c.sources.map(([title, text]) => (
               <div key={title} className="flex gap-4 rounded-lg border border-borderline bg-white p-5">
-                <IconChartBar size={22} stroke={1.8} className="mt-1 shrink-0 text-[#0E8F72]" />
+                <IconChartBar size={22} stroke={1.8} className="mt-1 shrink-0 text-[#0A0A0A]" />
                 <div>
                   <h3 className="font-sans text-lg font-bold text-ink">{title}</h3>
                   <p className="mt-2 text-sm leading-7 text-olive">{text}</p>
@@ -758,12 +822,12 @@ function EditorialPage({ locale, canonical }: { locale: Locale; canonical: strin
         </section>
 
         <section className="border-b border-borderline py-10">
-          <h2 className="font-sans text-3xl font-bold leading-tight">{c.updateTitle}</h2>
+          <h2 className="font-sans text-3xl font-black leading-tight">{c.updateTitle}</h2>
           <p className="mt-5 text-base leading-8 text-ink/75">{c.updateText}</p>
           <div className="mt-6 grid gap-4">
             {c.updates.map(([title, text]) => (
               <div key={title} className="flex gap-4 rounded-lg border border-borderline bg-white p-5">
-                <IconRefresh size={22} stroke={1.8} className="mt-1 shrink-0 text-[#B86B1D]" />
+                <IconRefresh size={22} stroke={1.8} className="mt-1 shrink-0 text-[#0A0A0A]" />
                 <div>
                   <h3 className="font-sans text-lg font-bold text-ink">{title}</h3>
                   <p className="mt-2 text-sm leading-7 text-olive">{text}</p>
@@ -774,12 +838,12 @@ function EditorialPage({ locale, canonical }: { locale: Locale; canonical: strin
         </section>
 
         <section className="border-b border-borderline py-10">
-          <h2 className="font-sans text-3xl font-bold leading-tight">{c.separationTitle}</h2>
+          <h2 className="font-sans text-3xl font-black leading-tight">{c.separationTitle}</h2>
           <p className="mt-5 text-base leading-8 text-ink/75">{c.separationText}</p>
           <div className="mt-6 grid gap-4">
             {c.separations.map(([title, text]) => (
               <div key={title} className="flex gap-4 rounded-lg border border-borderline bg-white p-5">
-                <IconX size={22} stroke={2} className="mt-1 shrink-0 text-[#B86B1D]" />
+                <IconX size={22} stroke={2} className="mt-1 shrink-0 text-[#0A0A0A]" />
                 <div>
                   <h3 className="font-sans text-lg font-bold text-ink">{title}</h3>
                   <p className="mt-2 text-sm leading-7 text-olive">{text}</p>
@@ -790,15 +854,15 @@ function EditorialPage({ locale, canonical }: { locale: Locale; canonical: strin
         </section>
 
         <section className="pt-10">
-          <div className="rounded-lg border border-[#E7DED0] bg-white p-6 shadow-[0_4px_18px_rgba(27,46,75,0.06)]">
-            <IconMail size={28} stroke={1.8} className="text-[#0E8F72]" />
+          <div className="rounded-lg border border-[#E5E7EB] bg-white p-6 shadow-[0_4px_18px_rgba(10,10,10,0.06)]">
+            <IconMail size={28} stroke={1.8} className="text-[#0A0A0A]" />
             <h2 className="mt-3 font-sans text-2xl font-black leading-tight text-ink">{c.correctionsTitle}</h2>
             <p className="mt-3 text-sm leading-7 text-olive">{c.correctionsText}</p>
-            <a href={`mailto:${c.correctionsCta}`} className="mt-4 inline-flex min-h-11 items-center justify-center rounded-sm bg-[#1B2E4B] px-5 text-[11px] font-bold uppercase tracking-[0.1em] text-white hover:bg-[#0E8F72]">
+            <a href={`mailto:${c.correctionsCta}`} className="mt-4 inline-flex min-h-11 items-center justify-center rounded-sm bg-[#262626] px-5 text-[11px] font-bold uppercase tracking-[0.1em] text-white hover:bg-[#262626]">
               {c.correctionsCta}
             </a>
             <div className="mt-4">
-              <Link href={aboutPath(locale)} className="text-sm font-semibold text-[#0E8F72] hover:underline">
+              <Link href={aboutPath(locale)} className="text-sm font-semibold text-[#0A0A0A] hover:underline">
                 {c.aboutLinkText}
               </Link>
             </div>

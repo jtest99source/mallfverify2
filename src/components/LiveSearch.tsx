@@ -76,9 +76,10 @@ function categoryLabel(category: BusinessCategory, locale: Locale) {
 
 function itemHref(locale: Locale, item: SearchItem) {
   if (item.type === "ranking") {
-    const params = new URLSearchParams({ category: item.categorySlug });
+    const params = new URLSearchParams();
     if (item.location) params.set("area", item.location);
-    return `/${locale}/rankings?${params.toString()}`;
+    const query = params.toString();
+    return `/${locale}/top/${item.categorySlug}${query ? `?${query}` : ""}`;
   }
 
   return `/${locale}/${getCategorySlugFromBusiness(item.category)}/${item.slug}`;
@@ -197,14 +198,14 @@ export function SearchBox({ locale, variant = "navbar", className = "" }: Search
   const results = useMemo(() => search(debouncedQuery, 8, locale), [search, debouncedQuery, locale]);
   const showDropdown = open && normalize(query).length >= 2;
   const inputClass = isHero
-    ? "h-14 w-full rounded-md border border-borderline bg-white px-12 text-base text-ink shadow-soft outline-none placeholder:text-sage focus:border-coral"
+    ? "h-14 w-full rounded-md border border-borderline bg-white px-12 text-base text-ink shadow-soft outline-none placeholder:text-[#525252] focus:border-[#0A0A0A]"
     : isNav
-      ? "h-11 w-full rounded-md border border-borderline bg-linen px-10 text-sm text-ink outline-none placeholder:text-sage focus:border-ink focus:bg-white"
-      : "h-9 w-[220px] rounded-full border border-borderline bg-linen px-9 text-[12px] text-ink outline-none placeholder:text-sage transition-all duration-200 focus:w-[300px] focus:border-ink focus:bg-white";
+      ? "h-11 w-full rounded-md border border-borderline bg-linen px-10 text-sm text-ink outline-none placeholder:text-[#525252] focus:border-ink focus:bg-white"
+      : "h-9 w-[220px] rounded-full border border-borderline bg-linen px-9 text-[12px] text-ink outline-none placeholder:text-[#525252] transition-all duration-200 focus:w-[300px] focus:border-ink focus:bg-white";
 
   return (
     <div ref={wrapperRef} className={`relative z-[90] ${className}`}>
-      <IconSearch aria-hidden="true" size={isHero ? 22 : 15} className={`pointer-events-none absolute left-4 top-1/2 z-10 -translate-y-1/2 ${isHero ? "text-coral" : "text-sage"}`} />
+      <IconSearch aria-hidden="true" size={isHero ? 22 : 15} className="pointer-events-none absolute left-4 top-1/2 z-10 -translate-y-1/2 text-[#0A0A0A]" />
       <input
         value={query}
         onChange={(event) => {
@@ -220,7 +221,7 @@ export function SearchBox({ locale, variant = "navbar", className = "" }: Search
         className={inputClass}
       />
       {showDropdown && (
-        <div className={`absolute z-[100] mt-2 overflow-hidden rounded-lg border border-borderline bg-white shadow-[0_22px_60px_rgba(27,46,75,0.22)] ${isHero ? "left-0 w-full" : "right-0 w-[min(390px,88vw)]"}`}>
+        <div className={`absolute z-[100] mt-2 overflow-hidden rounded-lg border border-borderline bg-white shadow-[0_22px_60px_rgba(10,10,10,0.22)] ${isHero ? "left-0 w-full" : "right-0 w-[min(390px,88vw)]"}`}>
           {isLoading ? (
             <p className="px-3 py-4 text-sm text-olive">{locale === "de" ? "Suche wird geladen..." : locale === "en" ? "Loading search..." : "Cargando búsqueda..."}</p>
           ) : results.length > 0 ? (
@@ -228,7 +229,7 @@ export function SearchBox({ locale, variant = "navbar", className = "" }: Search
               {results.map((item) => (
                 <Link key={item.id} href={itemHref(locale, item)} onClick={() => setOpen(false)} className="grid grid-cols-[36px_1fr] gap-3 px-3 py-2.5 hover:bg-paper">
                   {item.type === "ranking" ? (
-                    <div className="flex h-9 w-9 items-center justify-center rounded bg-[#F0FDF4] text-[#0E8F72]">
+                    <div className="flex h-9 w-9 items-center justify-center rounded bg-[#F5F5F5] text-[#0A0A0A]">
                       <IconChartBar size={18} stroke={2} />
                     </div>
                   ) : (
@@ -236,7 +237,7 @@ export function SearchBox({ locale, variant = "navbar", className = "" }: Search
                   )}
                   <div className="min-w-0">
                     <p className="truncate font-sans text-[13px] font-bold leading-tight text-ink">{item.name}</p>
-                    <p className="mt-1 truncate text-[10px] font-semibold uppercase tracking-[0.08em] text-sage">
+                    <p className="mt-1 truncate text-[10px] font-bold uppercase tracking-[0.08em] text-[#0A0A0A]">
                       {item.type === "ranking" && item.location ? <IconMapPin size={11} className="mr-1 inline-block align-[-1px]" /> : null}
                       {itemSubtitle(item, locale)}
                     </p>

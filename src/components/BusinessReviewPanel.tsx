@@ -148,13 +148,12 @@ export function BusinessReviewPanel({ business, locale }: { business: Business; 
   const themes = (business.reviewThemes?.length ? business.reviewThemes : sentimentFallbackThemes(business.reviewSentiment, locale))
     .filter((theme) => theme.label?.trim())
     .slice(0, 6);
-  const hasPros = Boolean(business.reviewPros?.length);
   const displayedReviews = business.featuredReviews?.length ? business.featuredReviews : googleReviewsAsFeatured(business.googleReviews);
   const hasFeaturedReviews = Boolean(displayedReviews.length);
   const hasServices = Boolean(business.services?.length) && !(business.category === "beach" && business.categoryAttributes);
   const rating = formatRating(business.rating, locale);
 
-  if (!rating && !themes.length && !hasPros && !hasFeaturedReviews && !hasServices) return null;
+  if (!rating && !themes.length && !hasFeaturedReviews && !hasServices) return null;
 
   return (
     <section className="rv" aria-label={copy.business.reviewsSection}>
@@ -180,17 +179,6 @@ export function BusinessReviewPanel({ business, locale }: { business: Business; 
                 ))}
               </div>
             )}
-          </div>
-        </div>
-      )}
-
-      {hasPros && (
-        <div className="rv-block">
-          <div className="rv-pc pros">
-            <div className="rv-pc-title">{copy.business.whatPeopleLike}</div>
-            {business.reviewPros?.slice(0, 4).map((item) => (
-              <div className="rv-pc-item" key={item}><span aria-hidden="true">+</span>{item}</div>
-            ))}
           </div>
         </div>
       )}

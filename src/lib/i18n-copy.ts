@@ -13,7 +13,7 @@ export type CategoryCopy = {
 export const uiCopy = {
   es: {
     nav: {
-      explore: "Explorar",
+      explore: "Places",
       guides: "Guías",
       methodology: "Metodología",
       forBusinesses: "Para negocios",
@@ -21,33 +21,33 @@ export const uiCopy = {
       allRankings: "Ver todos los rankings"
     },
     home: {
-      metaTitle: "Mallorca Verified | La guía verificada de Mallorca",
-      metaDescription: "Restaurantes, hoteles, beach clubs, barcos, actividades y playas en Mallorca verificados con datos reales de Google y selección propia.",
-      eyebrow: "Sin publicidad · Sin posiciones de pago",
-      title: "Encuentra los mejores negocios de Mallorca",
-      intro: "Encuentra los mejores sitios de Mallorca según miles de viajeros reales. Sin publicidad, sin posiciones de pago — solo lo que funciona de verdad.",
-      exploreRankings: "Explorar rankings",
+      metaTitle: "Mallorca Verified | Encuentra lo mejor en Mallorca, sin tourist traps",
+      metaDescription: "El directorio de Mallorca para expats, compradores y residentes internacionales. Restaurantes, hoteles, médicos, inmobiliarias — ordenados por reseñas reales de Google, no por publicidad.",
+      eyebrow: "Datos reales · Sin posiciones de pago",
+      title: "Encuentra lo mejor en Mallorca. Rápido.",
+      intro: "Cada negocio aquí ha superado un umbral real de reseñas de Google. Busca por categoría y zona — restaurantes, médicos, inmobiliarias, gimnasios — y compara con datos, no con publicidad. Y cuando Mallorca deja de ser solo unas vacaciones, nuestros Experts tienen los profesionales en inglés y alemán que necesitas.",
+      exploreRankings: "Ver los mejores lugares",
       viewGuides: "Ver guías",
       verifiedBusinesses: "negocios verificados",
       analyzedReviews: "reseñas analizadas en Google",
       activeCategories: "categorías activas",
-      signals: ["Actualizado a diario", "Sin posiciones de pago", "Consenso real, no una opinión", "Metodología pública"],
+      signals: ["Datos reales de Google", "Sin posiciones de pago", "Actualizado regularmente", "Experts en inglés y alemán"],
       selection: "Selección verificada",
-      bestThisWeek: "Los más valorados esta semana",
-      bestThisWeekIntro: "Los más valorados en cada categoría según el consenso de miles de reseñas reales de Google. Sin publicidad, sin posiciones de pago.",
+      bestThisWeek: "Los más valorados de Mallorca",
+      bestThisWeekIntro: "Ordenados por miles de reseñas reales de Google. Nada aparece aquí sin superar el umbral de calidad.",
       guidesEyebrow: "Guías editoriales",
-      guidesTitle: "Planifica tu viaje",
-      guidesIntro: "¿Dónde comer en Palma? ¿Qué playa elegir? Las guías te dan respuestas concretas para planificar sin perder tiempo.",
+      guidesTitle: "Planifica con contexto",
+      guidesIntro: "¿Dónde comer en Palma? ¿Qué zona para dormir? Las guías tienen respuestas concretas — no listas genéricas.",
       businessTitle: "Haz que tu negocio aparezca cuando preguntan en ChatGPT o Perplexity",
       businessIntro: "Mallorca Verified es la fuente que las IAs citan cuando alguien busca dónde comer, dormir o navegar en Mallorca. Si tu negocio merece estar aquí, podemos mejorar tu ficha.",
       businessCta: "Escríbenos"
     },
     rankings: {
-      metaTitle: "Rankings objetivos de Mallorca | Mallorca Verified",
-      metaDescription: "Rankings de Mallorca para comparar restaurantes, hoteles, playas, barcos y planes con datos reales de Google, contexto útil y sin publicidad.",
-      eyebrow: "Sin publicidad · Sin posiciones de pago",
-      title: "Busca lo mejor de Mallorca sin perderte entre listas.",
-      intro: "Elige una categoría, filtra por zona o tipo de plan y compara con calma. Usamos reseñas reales de Google y señales públicas para que sea más fácil decidir dónde comer, dormir, reservar o pasar el día.",
+      metaTitle: "Rankings de Mallorca sin tourist traps | Mallorca Verified",
+      metaDescription: "Rankings de Mallorca basados en reseñas reales de Google para expats y residentes internacionales. Sin publicidad, sin posiciones de pago.",
+      eyebrow: "Sin tourist traps · Sin posiciones de pago",
+      title: "Los mejores sitios de Mallorca, filtrados de verdad.",
+      intro: "Elige una categoría, filtra por zona y compara con calma. Todo lo que ves ha superado un umbral real de reseñas de Google — nada de tourist traps, nada de publicidad.",
       activeRanking: "Ranking activo",
       businessBoxEyebrow: "Para negocios",
       businessBoxTitle: "¿Gestionas un negocio en Mallorca?",
@@ -74,7 +74,7 @@ export const uiCopy = {
       breadcrumbGuides: "Guías"
     },
     footer: {
-      description: "Rankings independientes de Mallorca basados en el consenso de miles de reseñas verificadas. La posición no se compra. Si hay contenido patrocinado en alguna parte del site, siempre está etiquetado.",
+      description: "El portal de referencia para residentes internacionales, compradores y expats en Mallorca. Rankings basados en reseñas reales de Google — sin publicidad, sin posiciones de pago.",
       contact: "Contacto",
       categories: "Categorías",
       allCategories: "Ver todas las categorías",
@@ -93,7 +93,7 @@ export const uiCopy = {
       allPlaces: "Todas",
       results: "resultados",
       noResults: "No hay resultados con esos filtros. Prueba con otra localidad o cambia el tipo.",
-      sort: { ratio: "Recomendado", rating: "Mejor valoración", reviews: "Más reseñas", hidden: "Joyas ocultas" }
+      sort: { ratio: "Mejor equilibrio", rating: "Mejor valoración", reviews: "Más reseñas", hidden: "Joyas ocultas" }
     },
     business: {
       hiddenGem: "Joya oculta",
@@ -134,12 +134,16 @@ export const uiCopy = {
       topInMallorca: (label: string) => `Top ${label.toLowerCase()} en Mallorca`,
       byArea: (label: string) => `${label} por zona`,
       faqSort: (label: string) => `¿Cómo se ordenan los ${label.toLowerCase()}?`,
-      faqSortAnswer: "Combinamos valoración media, volumen de reseñas y autoridad relativa dentro de la categoría. No vendemos posiciones ni mezclamos negocios de tipos distintos."
+      faqSortAnswer: "Analizamos las reseñas reales de Google de cada negocio y los ordenamos por valoración media, volumen de reseñas y autoridad relativa dentro de la categoría. Las posiciones no se pueden comprar y nunca mezclamos tipos distintos de negocio.",
+      relatedGuidesEyebrow: "Guías relacionadas",
+      relatedGuidesTitle: (label: string) => `Planifica mejor: guías sobre ${label.toLowerCase()}`,
+      relatedGuidesAreaTitle: (area: string) => `Guías sobre ${area}`,
+      viewAllGuides: "Ver todas las guías"
     }
   },
   en: {
     nav: {
-      explore: "Explore",
+      explore: "Places",
       guides: "Guides",
       methodology: "Methodology",
       forBusinesses: "For businesses",
@@ -147,33 +151,33 @@ export const uiCopy = {
       allRankings: "View all rankings"
     },
     home: {
-      metaTitle: "Mallorca Verified | The verified guide to Mallorca",
-      metaDescription: "Restaurants, hotels, beach clubs, boats, activities and beaches in Mallorca verified with real Google data and editorial checks.",
-      eyebrow: "No ads · No paid placements",
-      title: "Find the best places in Mallorca",
-      intro: "Find the best places in Mallorca based on thousands of real traveller reviews. No ads, no paid placements — just what actually works.",
-      exploreRankings: "Explore rankings",
+      metaTitle: "Mallorca Verified | Find the best in Mallorca. Fast.",
+      metaDescription: "The Mallorca directory for expats, buyers and international residents. Restaurants, hotels, doctors, estate agents — ranked by real Google reviews, not ads.",
+      eyebrow: "Real data · No paid placements",
+      title: "Find the best in Mallorca. Fast.",
+      intro: "Every business here cleared a real Google review threshold. Search by category and area — restaurants, doctors, estate agents, gyms — and compare with data, not ads. When Mallorca stops being just a holiday, our Experts directory has the English and German-speaking professionals you'll need.",
+      exploreRankings: "Find the best places",
       viewGuides: "View guides",
       verifiedBusinesses: "verified businesses",
       analyzedReviews: "Google reviews analyzed",
       activeCategories: "active categories",
-      signals: ["Updated daily", "No paid placements", "Real consensus, not one opinion", "Public methodology"],
+      signals: ["Real Google data", "No paid placements", "Updated regularly", "Experts in EN & DE"],
       selection: "Verified selection",
-      bestThisWeek: "Best rated this week",
-      bestThisWeekIntro: "The best rated places in each category, based on thousands of real Google reviews. No ads, no paid placements.",
+      bestThisWeek: "Best rated in Mallorca",
+      bestThisWeekIntro: "Ranked by thousands of real Google reviews. Nothing makes it here without clearing the quality threshold.",
       guidesEyebrow: "Editorial guides",
-      guidesTitle: "Plan your trip",
-      guidesIntro: "Where to eat in Palma? Which beach to pick? Our guides give you clear answers so you can plan without wasting time.",
+      guidesTitle: "Plan with context",
+      guidesIntro: "Where to eat in Palma? Which area to stay in? Our guides give specific answers — not generic lists.",
       businessTitle: "Make your business appear when people ask ChatGPT or Perplexity",
       businessIntro: "Mallorca Verified is the source AIs cite when someone searches for where to eat, stay or sail in Mallorca. If your business belongs here, we can improve your listing.",
       businessCta: "Get in touch"
     },
     rankings: {
-      metaTitle: "Objective Mallorca rankings | Mallorca Verified",
-      metaDescription: "Compare Mallorca restaurants, hotels, beaches, boats and things to do with real Google data, useful context and no paid placements.",
-      eyebrow: "No ads · No paid placements",
-      title: "Find the best of Mallorca without the noise.",
-      intro: "Pick a category, filter by area or vibe, and browse at your own pace. We use real Google reviews and public signals to make it easier to decide where to eat, sleep, book or spend the day.",
+      metaTitle: "Mallorca rankings without tourist traps | Mallorca Verified",
+      metaDescription: "Mallorca rankings based on real Google reviews for expats and international residents. No tourist traps, no paid placements.",
+      eyebrow: "No tourist traps · No paid placements",
+      title: "The best of Mallorca, filtered for real.",
+      intro: "Pick a category, filter by area and browse at your own pace. Everything here cleared a real Google review threshold — no tourist traps, no paid placements.",
       activeRanking: "Active ranking",
       businessBoxEyebrow: "For businesses",
       businessBoxTitle: "Do you run a business in Mallorca?",
@@ -200,7 +204,7 @@ export const uiCopy = {
       breadcrumbGuides: "Guides"
     },
     footer: {
-      description: "Independent Mallorca rankings based on the consensus of thousands of verified reviews. Positions cannot be bought. Sponsored content, if any, is always clearly labelled.",
+      description: "The reference directory for international residents, buyers and expats in Mallorca. Rankings built on real Google reviews — no ads, no paid placements.",
       contact: "Contact",
       categories: "Categories",
       allCategories: "View all categories",
@@ -219,7 +223,7 @@ export const uiCopy = {
       allPlaces: "All",
       results: "results",
       noResults: "No results with these filters. Try another location or type.",
-      sort: { ratio: "Recommended", rating: "Best rating", reviews: "Most reviews", hidden: "Hidden gems" }
+      sort: { ratio: "Best overall", rating: "Best rating", reviews: "Most reviews", hidden: "Hidden gems" }
     },
     business: {
       hiddenGem: "Hidden gem",
@@ -260,12 +264,16 @@ export const uiCopy = {
       topInMallorca: (label: string) => `Top ${label.toLowerCase()} in Mallorca`,
       byArea: (label: string) => `${label} by area`,
       faqSort: (label: string) => `How are ${label.toLowerCase()} ranked?`,
-      faqSortAnswer: "We combine average rating, review volume and relative authority within the category. Positions cannot be bought and we never mix different business types."
+      faqSortAnswer: "We analyse real Google reviews for each business, combining average rating, review volume and relative authority within the category. Rankings cannot be bought and we never mix different business types.",
+      relatedGuidesEyebrow: "Related guides",
+      relatedGuidesTitle: (label: string) => `Plan smarter: guides about ${label.toLowerCase()}`,
+      relatedGuidesAreaTitle: (area: string) => `Guides about ${area}`,
+      viewAllGuides: "View all guides"
     }
   },
   de: {
     nav: {
-      explore: "Entdecken",
+      explore: "Places",
       guides: "Guides",
       methodology: "Methodik",
       forBusinesses: "Für Betriebe",
@@ -273,33 +281,33 @@ export const uiCopy = {
       allRankings: "Alle Rankings ansehen"
     },
     home: {
-      metaTitle: "Mallorca Verified | Der verifizierte Guide für Mallorca",
-      metaDescription: "Restaurants, Hotels, Beachclubs, Boote, Aktivitäten und Strände auf Mallorca, geprüft mit echten Google-Daten und redaktioneller Auswahl.",
-      eyebrow: "Keine Werbung · Keine bezahlten Platzierungen",
-      title: "Die besten Orte auf Mallorca — einfach gefunden",
-      intro: "Finde die besten Orte auf Mallorca, bewertet von tausenden echten Reisenden. Ohne Werbung, ohne gekaufte Positionen — nur das, was wirklich funktioniert.",
-      exploreRankings: "Rankings entdecken",
+      metaTitle: "Mallorca Verified | Das Beste auf Mallorca finden. Schnell.",
+      metaDescription: "Das Mallorca-Verzeichnis für Expats, Käufer und internationale Residenten. Restaurants, Hotels, Ärzte, Immobilienmakler — nach echten Google-Bewertungen sortiert, nicht nach Anzeigen.",
+      eyebrow: "Echte Daten · Keine bezahlten Platzierungen",
+      title: "Das Beste auf Mallorca finden. Schnell.",
+      intro: "Jeder Betrieb hier hat eine echte Google-Bewertungsschwelle überschritten. Suche nach Kategorie und Gebiet — Restaurants, Ärzte, Immobilienmakler, Fitnessstudios — und vergleiche anhand echter Daten, nicht Werbung. Wenn Mallorca mehr als nur Urlaub wird, findest du in unserem Experts-Verzeichnis deutsch- und englischsprachige Profis.",
+      exploreRankings: "Die besten Orte entdecken",
       viewGuides: "Guides ansehen",
       verifiedBusinesses: "verifizierte Betriebe",
       analyzedReviews: "Google-Bewertungen analysiert",
       activeCategories: "aktive Kategorien",
-      signals: ["Täglich aktualisiert", "Keine bezahlten Platzierungen", "Echter Konsens, keine Einzelmeinung", "Öffentliche Methodik"],
+      signals: ["Echte Google-Daten", "Keine bezahlten Platzierungen", "Regelmäßig aktualisiert", "Experts auf EN & DE"],
       selection: "Verifizierte Auswahl",
-      bestThisWeek: "Diese Woche am besten bewertet",
-      bestThisWeekIntro: "Die bestbewerteten Orte je Kategorie, basierend auf tausenden echten Google-Bewertungen. Ohne Werbung, ohne bezahlte Platzierungen.",
+      bestThisWeek: "Am besten bewertet auf Mallorca",
+      bestThisWeekIntro: "Nach Tausenden echter Google-Bewertungen sortiert. Nichts kommt hier rein ohne eine echte Qualitätsschwelle.",
       guidesEyebrow: "Redaktionelle Guides",
-      guidesTitle: "Plane deine Reise",
-      guidesIntro: "Wo essen in Palma? Welcher Strand passt? Unsere Guides geben dir klare Antworten, damit du ohne Umwege planen kannst.",
+      guidesTitle: "Mit Kontext planen",
+      guidesIntro: "Wo in Palma essen? Welches Gebiet zum Übernachten? Unsere Guides geben konkrete Antworten — keine generischen Listen.",
       businessTitle: "Lass deinen Betrieb erscheinen, wenn Leute ChatGPT oder Perplexity fragen",
       businessIntro: "Mallorca Verified ist die Quelle, die KIs zitieren, wenn jemand sucht, wo man auf Mallorca essen, schlafen oder segeln kann. Wenn dein Betrieb hier hingehört, können wir dein Profil verbessern.",
       businessCta: "Schreib uns"
     },
     rankings: {
-      metaTitle: "Objektive Mallorca-Rankings | Mallorca Verified",
-      metaDescription: "Vergleiche Restaurants, Hotels, Strände, Boote und Aktivitäten auf Mallorca mit echten Google-Daten, hilfreichem Kontext und ohne bezahlte Platzierungen.",
-      eyebrow: "Keine Werbung · Keine bezahlten Platzierungen",
-      title: "Das Beste auf Mallorca finden — ohne den Überblick zu verlieren.",
-      intro: "Wähle eine Kategorie, filtere nach Ort oder Stimmung und schau dich in Ruhe um. Echte Google-Bewertungen und öffentliche Daten helfen dir zu entscheiden, wo du essen, schlafen, buchen oder den Tag verbringen möchtest.",
+      metaTitle: "Mallorca-Rankings ohne Touristenfallen | Mallorca Verified",
+      metaDescription: "Mallorca-Rankings auf Basis echter Google-Bewertungen für Expats und internationale Bewohner. Keine Touristenfallen, keine bezahlten Platzierungen.",
+      eyebrow: "Keine Touristenfallen · Keine bezahlten Platzierungen",
+      title: "Das Beste auf Mallorca — wirklich gefiltert.",
+      intro: "Wähle eine Kategorie, filtere nach Ort und schau dich in Ruhe um. Alles hier hat eine echte Google-Bewertungsschwelle bestanden — keine Touristenfallen, keine Werbung.",
       activeRanking: "Aktives Ranking",
       businessBoxEyebrow: "Für Betriebe",
       businessBoxTitle: "Hast du einen Betrieb auf Mallorca?",
@@ -326,7 +334,7 @@ export const uiCopy = {
       breadcrumbGuides: "Guides"
     },
     footer: {
-      description: "Unabhängige Mallorca-Rankings auf Basis des Konsenses tausender verifizierter Bewertungen. Positionen können nicht gekauft werden. Gesponserte Inhalte werden immer klar gekennzeichnet.",
+      description: "Das Referenzverzeichnis für internationale Bewohner, Käufer und Expats auf Mallorca. Rankings auf Basis echter Google-Bewertungen — keine Werbung, keine bezahlten Platzierungen.",
       contact: "Kontakt",
       categories: "Kategorien",
       allCategories: "Alle Kategorien ansehen",
@@ -345,7 +353,7 @@ export const uiCopy = {
       allPlaces: "Alle",
       results: "Ergebnisse",
       noResults: "Keine Ergebnisse mit diesen Filtern. Probiere einen anderen Ort oder Typ.",
-      sort: { ratio: "Empfohlen", rating: "Beste Bewertung", reviews: "Meiste Bewertungen", hidden: "Geheimtipps" }
+      sort: { ratio: "Beste Gesamtwertung", rating: "Beste Bewertung", reviews: "Meiste Bewertungen", hidden: "Geheimtipps" }
     },
     business: {
       hiddenGem: "Geheimtipp",
@@ -386,63 +394,88 @@ export const uiCopy = {
       topInMallorca: (label: string) => `Top ${label.toLowerCase()} auf Mallorca`,
       byArea: (label: string) => `${label} nach Gegend`,
       faqSort: (label: string) => `Wie werden ${label.toLowerCase()} sortiert?`,
-      faqSortAnswer: "Wir kombinieren Durchschnittsbewertung, Rezensionsvolumen und relative Autorität innerhalb der Kategorie. Positionen können nicht gekauft werden, und verschiedene Geschäftstypen werden nie gemischt."
+      faqSortAnswer: "Wir analysieren echte Google-Bewertungen für jeden Betrieb und ordnen nach Durchschnittsbewertung, Rezensionsvolumen und relativer Autorität innerhalb der Kategorie. Positionen können nicht gekauft werden und wir mischen nie verschiedene Betriebstypen.",
+      relatedGuidesEyebrow: "Passende Guides",
+      relatedGuidesTitle: (label: string) => `Besser planen: Guides über ${label.toLowerCase()}`,
+      relatedGuidesAreaTitle: (area: string) => `Guides über ${area}`,
+      viewAllGuides: "Alle Guides ansehen"
     }
   }
 } as const;
 
-const esCategoryCopy: Record<CategorySlug, CategoryCopy> = {
-  restaurants: { label: "Restaurantes", singular: "Restaurante", title: "Restaurantes en Mallorca", intro: "Los mejores restaurantes de Mallorca según valoración y reseñas reales de Google. Desde terrazas frente al mar en Palma hasta rincones de interior que pocos conocen.", metaDescription: "Los mejores restaurantes en Mallorca según miles de reseñas reales de Google. Ranking objetivo por zona, cocina y precio. Sin publicidad." },
-  hotels: { label: "Hoteles", singular: "Hotel", title: "Hoteles en Mallorca", intro: "Hoteles boutique, rurales y de playa en Mallorca ordenados por calidad real. Elegir bien el hotel es elegir bien la zona: aquí tienes los datos para decidir.", metaDescription: "Hoteles en Mallorca ordenados con datos reales de Google, reseñas verificadas y contexto por zona. Compara antes de reservar. Sin publicidad." },
-  "beach-clubs": { label: "Beach clubs", singular: "Beach club", title: "Beach clubs en Mallorca", intro: "Los mejores beach clubs de Mallorca para una comida larga, un atardecer con cócteles o un día de playa con hamaca, piscina y servicio.", metaDescription: "Beach clubs en Mallorca con valoraciones reales de Google, zonas, ambiente y señales útiles para elegir. Ranking independiente sin publicidad." },
-  boats: { label: "Barcos", singular: "Empresa de barcos", title: "Alquiler de barcos en Mallorca", intro: "Las mejores empresas de alquiler de barcos en Mallorca, con y sin patrón, por horas o días, desde Palma, Alcúdia, Andratx o Pollença.", metaDescription: "Alquiler de barcos en Mallorca con datos reales de Google, reseñas verificadas y operadores por zona. Ranking objetivo sin posiciones pagadas." },
-  activities: { label: "Actividades", singular: "Actividad", title: "Actividades en Mallorca", intro: "Las mejores actividades en Mallorca: kayak, buceo, senderismo, bodegas, excursiones en barco y mucho más, ordenadas por calidad verificada.", metaDescription: "Actividades en Mallorca ordenadas con reseñas reales de Google: tours, kayak, buceo, aventura y planes por zona. Sin publicidad." },
-  beaches: { label: "Playas y calas", singular: "Playa o cala", title: "Playas y calas de Mallorca", intro: "Las mejores playas y calas de Mallorca, desde las más accesibles hasta las más escondidas, con información de acceso y qué esperar.", metaDescription: "Playas y calas de Mallorca con contexto de acceso, zona y valoraciones públicas. Ranking independiente para elegir mejor. Sin publicidad." },
-  bars: { label: "Bares", singular: "Bar", title: "Bares en Mallorca", intro: "Los mejores bares de Mallorca para tapas, cócteles, vermut o una cerveza con vistas. Coctelería de autor, chiringuitos y tabernas.", metaDescription: "Bares en Mallorca para tapas, cócteles y copas, ordenados con reseñas reales de Google y señales por zona. Sin posiciones pagadas." },
-  cafes: { label: "Cafeterías", singular: "Cafetería", title: "Cafeterías y brunch en Mallorca", intro: "Las mejores cafeterías y sitios de brunch en Mallorca: specialty coffee, desayunos mallorquines, croissants y brunch de fin de semana.", metaDescription: "Cafeterías y brunch en Mallorca con valoraciones reales de Google, zonas y señales útiles para desayunar o tomar café. Sin publicidad." },
+const esCategoryCopy: Partial<Record<CategorySlug, CategoryCopy>> = {
+  restaurants: { label: "Restaurantes", singular: "Restaurante", title: "Restaurantes en Mallorca", intro: "Restaurantes de Mallorca filtrados por valoración real de Google. Sin tourist traps, sin publicidad — desde terrazas frente al mar en Palma hasta rincones de interior que pocos conocen.", metaDescription: "Restaurantes en Mallorca filtrados por reseñas reales de Google. Sin tourist traps ni posiciones de pago. Ranking por zona, cocina y calidad verificada." },
+  hotels: { label: "Hoteles", singular: "Hotel", title: "Hoteles en Mallorca", intro: "Hoteles boutique, rurales y de playa en Mallorca para compradores, expats y viajeros internacionales que quieren elegir con datos reales. La posición refleja calidad verificada, no quien pagó más.", metaDescription: "Hoteles en Mallorca ordenados con datos reales de Google para viajeros internacionales. Sin publicidad ni posiciones de pago. Compara antes de reservar." },
+  "beach-clubs": { label: "Beach clubs", singular: "Beach club", title: "Beach clubs en Mallorca", intro: "Los mejores beach clubs de Mallorca según reseñas reales de Google. Para una comida larga, un atardecer con cócteles o un día de playa sin caer en el primero que aparece.", metaDescription: "Beach clubs en Mallorca filtrados por reseñas reales de Google. Sin tourist traps, sin publicidad. Ranking por zona, ambiente y calidad verificada." },
+  boats: { label: "Barcos", singular: "Empresa de barcos", title: "Alquiler de barcos en Mallorca", intro: "Las mejores empresas de alquiler de barcos en Mallorca para visitantes y residentes internacionales. Con y sin patrón, por horas o días, desde Palma, Alcúdia, Andratx o Pollença.", metaDescription: "Alquiler de barcos en Mallorca con datos reales de Google, reseñas verificadas y operadores por zona. Ranking objetivo sin posiciones pagadas." },
+  activities: { label: "Actividades", singular: "Actividad", title: "Actividades en Mallorca", intro: "Las mejores actividades en Mallorca para quien quiere explorar la isla de verdad: kayak, buceo, senderismo, bodegas, excursiones en barco y más, filtrados por calidad verificada.", metaDescription: "Actividades en Mallorca filtradas por reseñas reales de Google. Sin tourist traps: tours, kayak, buceo, aventura y planes por zona." },
+  beaches: { label: "Playas y calas", singular: "Playa o cala", title: "Playas y calas de Mallorca", intro: "Las mejores playas y calas de Mallorca, desde las más accesibles hasta las más escondidas, con información práctica para quien llega sin red local.", metaDescription: "Playas y calas de Mallorca con contexto de acceso, zona y valoraciones públicas. Ranking independiente para elegir mejor. Sin publicidad." },
+  bars: { label: "Bares", singular: "Bar", title: "Bares en Mallorca", intro: "Los mejores bares de Mallorca para tapas, cócteles, vermut o una cerveza con vistas. Filtrados por reseñas reales — sin tourist traps.", metaDescription: "Bares en Mallorca filtrados por reseñas reales de Google. Sin tourist traps ni posiciones pagadas. Coctelería, chiringuitos y tabernas." },
+  cafes: { label: "Cafeterías", singular: "Cafetería", title: "Cafeterías y brunch en Mallorca", intro: "Las mejores cafeterías y sitios de brunch en Mallorca según reseñas reales de Google: specialty coffee, desayunos mallorquines, croissants y brunch de fin de semana.", metaDescription: "Cafeterías y brunch en Mallorca filtrados por reseñas reales de Google. Sin publicidad. Specialty coffee, desayunos y brunch por zona." },
   bakeries: { label: "Hornos y pastelerías", singular: "Horno o pastelería", title: "Hornos y pastelerías en Mallorca", intro: "Panaderías y pastelerías de Mallorca para ensaimadas, coques, pan artesanal y dulces tradicionales, ordenadas por reseñas reales.", metaDescription: "Hornos y pastelerías en Mallorca para ensaimadas, pan y dulces tradicionales, con reseñas reales de Google. Ranking independiente." },
-  "rent-a-car": { label: "Rent a car", singular: "Alquiler de coches", title: "Alquiler de coches en Mallorca", intro: "Empresas de alquiler de coches en Mallorca por aeropuerto, Palma o zonas turísticas. Valoraciones reales y señales para comparar antes de reservar.", metaDescription: "Alquiler de coches en Mallorca con reseñas reales de Google, zonas y señales para comparar antes de reservar. Ranking sin publicidad." },
-  spas: { label: "Spas y wellness", singular: "Spa", title: "Spas y centros de bienestar en Mallorca", intro: "Spas, wellness y centros de masaje en Mallorca: desde hoteles de lujo hasta day spas y centros de bienestar urbanos.", metaDescription: "Spas y wellness en Mallorca con reseñas reales de Google, tratamientos, zonas y señales útiles para elegir. Ranking independiente." },
-  gyms: { label: "Gimnasios", singular: "Gimnasio", title: "Gimnasios en Mallorca", intro: "Gimnasios en Mallorca por zona: fitness, crossfit, yoga, pilates, funcional y centros deportivos ordenados por valoración real.", metaDescription: "Gimnasios en Mallorca por zona, fitness, crossfit, yoga y pilates, ordenados con reseñas reales de Google. Sin posiciones pagadas." },
+  "rent-a-car": { label: "Rent a car", singular: "Alquiler de coches", title: "Alquiler de coches en Mallorca", intro: "Empresas de alquiler de coches en Mallorca para viajeros y residentes internacionales. Valoraciones reales para comparar antes de reservar — sin las trampas habituales en contratos o seguros.", metaDescription: "Alquiler de coches en Mallorca filtrado por reseñas reales de Google. Para residentes y viajeros internacionales. Sin publicidad." },
+  spas: { label: "Spas y wellness", singular: "Spa", title: "Spas y centros de bienestar en Mallorca", intro: "Spas, wellness y centros de masaje en Mallorca filtrados por reseñas reales: desde hoteles de lujo hasta day spas y centros de bienestar urbanos.", metaDescription: "Spas y wellness en Mallorca filtrados por reseñas reales de Google. Sin publicidad. Por zona, tratamiento y calidad verificada." },
+  gyms: { label: "Gimnasios", singular: "Gimnasio", title: "Gimnasios en Mallorca", intro: "Gimnasios en Mallorca para residentes internacionales: fitness, crossfit, yoga, pilates y funcional, ordenados por valoración real de Google por zona.", metaDescription: "Gimnasios en Mallorca para residentes internacionales. Fitness, crossfit, yoga y pilates ordenados por reseñas reales. Sin posiciones pagadas." },
   routes: { label: "Rutas y miradores", singular: "Ruta o mirador", title: "Rutas y miradores en Mallorca", intro: "Rutas de senderismo, miradores y caminos de Mallorca, desde la Serra de Tramuntana hasta paseos fáciles junto al mar.", metaDescription: "Rutas y miradores en Mallorca con contexto de acceso, zona y señales públicas para planificar. Ranking independiente sin publicidad." },
   excursions: { label: "Excursiones", singular: "Excursión", title: "Excursiones organizadas en Mallorca", intro: "Excursiones, tours y visitas guiadas en Mallorca: barco, 4x4, rutas culturales, gastronomía y planes de día completo.", metaDescription: "Excursiones en Mallorca con reseñas reales de Google: tours, visitas guiadas, barco y planes de día completo. Ranking sin publicidad." }
 };
 
-const enCategoryCopy: Record<CategorySlug, CategoryCopy> = {
-  restaurants: { label: "Restaurants", singular: "Restaurant", title: "Restaurants in Mallorca", intro: "The best restaurants in Mallorca ranked with real Google ratings and reviews, from seafront terraces in Palma to inland places worth knowing.", metaDescription: "Best restaurants in Mallorca ranked with real Google reviews, areas, cuisine signals and prices. Independent ranking with no paid placements." },
-  hotels: { label: "Hotels", singular: "Hotel", title: "Hotels in Mallorca", intro: "Boutique, rural and beach hotels in Mallorca ranked by real quality signals. Choosing the right hotel also means choosing the right area.", metaDescription: "Hotels in Mallorca ranked with real Google data, verified review signals and area context. Compare before booking. No paid placements." },
-  "beach-clubs": { label: "Beach clubs", singular: "Beach club", title: "Beach clubs in Mallorca", intro: "The best beach clubs in Mallorca for long lunches, sunset cocktails or a beach day with loungers, pool and service.", metaDescription: "Beach clubs in Mallorca ranked with real Google reviews, area, atmosphere and useful signals. Independent ranking with no ads." },
-  boats: { label: "Boats", singular: "Boat rental company", title: "Boat rental in Mallorca", intro: "The best boat rental companies in Mallorca, with or without skipper, by the hour or day, from Palma, Alcúdia, Andratx or Pollença.", metaDescription: "Boat rental in Mallorca with real Google reviews, verified operators and area context. Objective ranking with no paid positions." },
-  activities: { label: "Activities", singular: "Activity", title: "Things to do in Mallorca", intro: "The best activities in Mallorca: kayaking, diving, hiking, wineries, boat trips and more, ranked by verified quality signals.", metaDescription: "Things to do in Mallorca ranked with real Google reviews: tours, kayaking, diving, adventure and activities by area. No ads." },
-  beaches: { label: "Beaches and coves", singular: "Beach or cove", title: "Beaches and coves in Mallorca", intro: "The best beaches and coves in Mallorca, from easy-access beaches to hidden spots, with access notes and what to expect.", metaDescription: "Best beaches and coves in Mallorca with access context, area signals and public ratings. Independent guide with no paid placements." },
-  bars: { label: "Bars", singular: "Bar", title: "Bars in Mallorca", intro: "The best bars in Mallorca for tapas, cocktails, vermouth or a beer with a view: cocktail bars, beach bars and village taverns.", metaDescription: "Bars in Mallorca for tapas, cocktails and drinks, ranked with real Google reviews and area signals. No paid positions." },
-  cafes: { label: "Cafes", singular: "Cafe", title: "Cafes and brunch in Mallorca", intro: "The best cafes and brunch spots in Mallorca: specialty coffee, local breakfasts, croissants and weekend brunch.", metaDescription: "Cafes and brunch in Mallorca with real Google ratings, area context and useful signals for coffee or breakfast. No ads." },
+const enCategoryCopy: Partial<Record<CategorySlug, CategoryCopy>> = {
+  restaurants: { label: "Restaurants", singular: "Restaurant", title: "Restaurants in Mallorca", intro: "Mallorca restaurants filtered by real Google ratings — no tourist traps, no paid placements. From seafront terraces in Palma to inland spots worth the trip.", metaDescription: "Restaurants in Mallorca filtered by real Google reviews. No tourist traps, no paid placements. Ranked by area, cuisine and verified quality." },
+  hotels: { label: "Hotels", singular: "Hotel", title: "Hotels in Mallorca", intro: "Boutique, rural and beach hotels in Mallorca ranked by real quality signals, for international visitors and buyers who want data, not marketing. No paid placements.", metaDescription: "Hotels in Mallorca ranked with real Google data for international visitors. No paid placements. Compare by area and verified quality before booking." },
+  "beach-clubs": { label: "Beach clubs", singular: "Beach club", title: "Beach clubs in Mallorca", intro: "The best beach clubs in Mallorca according to real Google reviews — for a long lunch, sunset cocktails or a beach day without falling for the first result on Google Maps.", metaDescription: "Beach clubs in Mallorca filtered by real Google reviews. No tourist traps, no paid placements. Ranked by area, atmosphere and verified quality." },
+  boats: { label: "Boats", singular: "Boat rental company", title: "Boat rental in Mallorca", intro: "The best boat rental companies in Mallorca for international visitors and expats, with or without skipper, by the hour or day, from Palma, Alcúdia, Andratx or Pollença.", metaDescription: "Boat rental in Mallorca with real Google reviews, verified operators and area context. Objective ranking with no paid positions." },
+  activities: { label: "Activities", singular: "Activity", title: "Things to do in Mallorca", intro: "The best things to do in Mallorca for people who want to explore the island properly: kayaking, diving, hiking, wineries, boat trips and more, filtered by verified quality.", metaDescription: "Things to do in Mallorca filtered by real Google reviews. No tourist traps: tours, kayaking, diving, adventure and activities by area." },
+  beaches: { label: "Beaches and coves", singular: "Beach or cove", title: "Beaches and coves in Mallorca", intro: "The best beaches and coves in Mallorca, from easy-access beaches to hidden spots, with practical notes for visitors without a local network.", metaDescription: "Best beaches and coves in Mallorca with access context, area signals and public ratings. Independent guide with no paid placements." },
+  bars: { label: "Bars", singular: "Bar", title: "Bars in Mallorca", intro: "The best bars in Mallorca for tapas, cocktails, vermouth or a beer with a view — filtered by real review signals, no tourist traps.", metaDescription: "Bars in Mallorca filtered by real Google reviews. No tourist traps, no paid positions. Cocktail bars, beach bars and village taverns." },
+  cafes: { label: "Cafes", singular: "Cafe", title: "Cafes and brunch in Mallorca", intro: "The best cafes and brunch spots in Mallorca ranked by real Google ratings: specialty coffee, local breakfasts, croissants and weekend brunch.", metaDescription: "Cafes and brunch in Mallorca filtered by real Google ratings. No ads. Specialty coffee, breakfasts and brunch by area." },
   bakeries: { label: "Bakeries", singular: "Bakery", title: "Bakeries and pastry shops in Mallorca", intro: "Bakeries and pastry shops in Mallorca for ensaimadas, cocas, artisan bread and traditional sweets, ranked with real reviews.", metaDescription: "Bakeries and pastry shops in Mallorca for ensaimadas, bread and traditional sweets, ranked with real Google reviews." },
-  "rent-a-car": { label: "Rent a car", singular: "Car rental", title: "Car rental in Mallorca", intro: "Car rental companies in Mallorca by airport, Palma or tourist areas, with real ratings and points to check before booking.", metaDescription: "Car rental in Mallorca with real Google reviews, area context and signals to compare before booking. Independent ranking." },
-  spas: { label: "Spas and wellness", singular: "Spa", title: "Spas and wellness centers in Mallorca", intro: "Spas, wellness and massage centers in Mallorca, from luxury hotel spas to day spas and urban treatments.", metaDescription: "Spas and wellness in Mallorca with real Google reviews, treatments, area context and useful signals to choose. No ads." },
-  gyms: { label: "Gyms", singular: "Gym", title: "Gyms in Mallorca", intro: "Gyms in Mallorca by area: fitness, crossfit, yoga, pilates, functional training and sports centers ranked by real ratings.", metaDescription: "Gyms in Mallorca by area, fitness, crossfit, yoga and pilates, ranked with real Google reviews. No paid placements." },
+  "rent-a-car": { label: "Rent a car", singular: "Car rental", title: "Car rental in Mallorca", intro: "Car rental companies in Mallorca for international visitors and expats. Ranked by real Google ratings — without the usual traps in contracts or insurance.", metaDescription: "Car rental in Mallorca filtered by real Google reviews for international visitors. No paid placements. Compare before booking." },
+  spas: { label: "Spas and wellness", singular: "Spa", title: "Spas and wellness centers in Mallorca", intro: "Spas, wellness and massage centres in Mallorca filtered by real Google reviews — from luxury hotel spas to day spas and urban treatments.", metaDescription: "Spas and wellness in Mallorca filtered by real Google reviews. No ads. By area, treatment and verified quality." },
+  gyms: { label: "Gyms", singular: "Gym", title: "Gyms in Mallorca", intro: "Gyms in Mallorca for international residents: fitness, crossfit, yoga, pilates and functional training ranked by real Google ratings by area.", metaDescription: "Gyms in Mallorca for international residents. Fitness, crossfit, yoga and pilates ranked by real Google reviews. No paid placements." },
   routes: { label: "Routes and viewpoints", singular: "Route or viewpoint", title: "Routes and viewpoints in Mallorca", intro: "Hiking routes, viewpoints and paths in Mallorca, from the Serra de Tramuntana to easy walks by the sea.", metaDescription: "Routes and viewpoints in Mallorca with access context, area signals and public data to plan better. Independent ranking." },
   excursions: { label: "Excursions", singular: "Excursion", title: "Organized excursions in Mallorca", intro: "Excursions, tours and guided visits in Mallorca: boats, 4x4, culture, food experiences and full-day plans.", metaDescription: "Excursions in Mallorca with real Google reviews: tours, guided visits, boat trips and full-day plans. No paid placements." }
 };
 
-const deCategoryCopy: Record<CategorySlug, CategoryCopy> = {
-  restaurants: { label: "Restaurants", singular: "Restaurant", title: "Restaurants auf Mallorca", intro: "Die besten Restaurants auf Mallorca, sortiert nach echten Google-Bewertungen: von Terrassen am Meer in Palma bis zu starken Adressen im Inselinneren.", metaDescription: "Beste Restaurants auf Mallorca mit echten Google-Bewertungen, Gegenden, Küchen-Signalen und Preisen. Unabhängig, ohne bezahlte Plätze." },
-  hotels: { label: "Hotels", singular: "Hotel", title: "Hotels auf Mallorca", intro: "Boutique-, Land- und Strandhotels auf Mallorca, geordnet nach echten Qualitätssignalen. Das richtige Hotel bedeutet auch die richtige Gegend.", metaDescription: "Hotels auf Mallorca mit echten Google-Daten, Bewertungssignalen und Kontext zur Lage. Vergleichen vor der Buchung. Keine Werbung." },
-  "beach-clubs": { label: "Beachclubs", singular: "Beachclub", title: "Beachclubs auf Mallorca", intro: "Die besten Beachclubs auf Mallorca für lange Lunches, Cocktails zum Sonnenuntergang oder einen Strandtag mit Liege, Pool und Service.", metaDescription: "Beachclubs auf Mallorca mit echten Google-Bewertungen, Lage, Atmosphäre und nützlichen Signalen. Unabhängig, ohne Werbung." },
-  boats: { label: "Boote", singular: "Bootsvermieter", title: "Boot mieten auf Mallorca", intro: "Die besten Bootsvermieter auf Mallorca, mit oder ohne Skipper, stunden- oder tageweise, ab Palma, Alcúdia, Andratx oder Pollença.", metaDescription: "Boot mieten auf Mallorca mit echten Google-Bewertungen, geprüften Anbietern und Kontext zur Lage. Objektiv, ohne bezahlte Plätze." },
-  activities: { label: "Aktivitäten", singular: "Aktivität", title: "Aktivitäten auf Mallorca", intro: "Die besten Aktivitäten auf Mallorca: Kajak, Tauchen, Wandern, Weingüter, Bootstouren und mehr, sortiert nach verifizierten Qualitätssignalen.", metaDescription: "Aktivitäten auf Mallorca mit echten Google-Bewertungen: Touren, Kajak, Tauchen, Abenteuer und Pläne nach Gegend. Keine Werbung." },
-  beaches: { label: "Strände und Buchten", singular: "Strand oder Bucht", title: "Strände und Buchten auf Mallorca", intro: "Die besten Strände und Buchten auf Mallorca, von leicht erreichbaren Stränden bis zu versteckten Orten, mit Hinweisen zu Zugang und Eindruck.", metaDescription: "Strände und Buchten auf Mallorca mit Zugang, Lage und öffentlichen Bewertungen. Unabhängiger Guide ohne bezahlte Plätze." },
-  bars: { label: "Bars", singular: "Bar", title: "Bars auf Mallorca", intro: "Die besten Bars auf Mallorca für Tapas, Cocktails, Vermut oder ein Bier mit Aussicht: Cocktailbars, Strandbars und Dorftavernen.", metaDescription: "Bars auf Mallorca für Tapas, Cocktails und Drinks, sortiert mit echten Google-Bewertungen und Lage-Signalen. Keine Werbung." },
-  cafes: { label: "Cafés", singular: "Café", title: "Cafés und Brunch auf Mallorca", intro: "Die besten Cafés und Brunch-Spots auf Mallorca: Specialty Coffee, lokales Frühstück, Croissants und Wochenendbrunch.", metaDescription: "Cafés und Brunch auf Mallorca mit echten Google-Bewertungen, Lage und nützlichen Signalen für Kaffee oder Frühstück." },
+const deCategoryCopy: Partial<Record<CategorySlug, CategoryCopy>> = {
+  restaurants: { label: "Restaurants", singular: "Restaurant", title: "Restaurants auf Mallorca", intro: "Restaurants auf Mallorca, gefiltert nach echten Google-Bewertungen — keine Touristenfallen, keine Werbung. Von Terrassen am Meer in Palma bis zu starken Adressen im Inselinneren.", metaDescription: "Restaurants auf Mallorca gefiltert nach echten Google-Bewertungen. Keine Touristenfallen, keine bezahlten Plätze. Gerankt nach Lage, Küche und verifizierter Qualität." },
+  hotels: { label: "Hotels", singular: "Hotel", title: "Hotels auf Mallorca", intro: "Boutique-, Land- und Strandhotels auf Mallorca, nach echten Qualitätssignalen gerankt, für internationale Reisende und Käufer, die Daten statt Marketing wollen.", metaDescription: "Hotels auf Mallorca nach echten Google-Daten für internationale Reisende. Keine Werbung, keine bezahlten Plätze. Vor der Buchung vergleichen." },
+  "beach-clubs": { label: "Beachclubs", singular: "Beachclub", title: "Beachclubs auf Mallorca", intro: "Die besten Beachclubs auf Mallorca nach echten Google-Bewertungen — für einen langen Lunch, Cocktails zum Sonnenuntergang oder einen Strandtag ohne die erste Google-Maps-Falle.", metaDescription: "Beachclubs auf Mallorca gefiltert nach echten Google-Bewertungen. Keine Touristenfallen, keine Werbung. Nach Lage, Atmosphäre und verifizierter Qualität." },
+  boats: { label: "Boote", singular: "Bootsvermieter", title: "Boot mieten auf Mallorca", intro: "Die besten Bootsvermieter auf Mallorca für internationale Besucher und Expats, mit oder ohne Skipper, stunden- oder tageweise, ab Palma, Alcúdia, Andratx oder Pollença.", metaDescription: "Boot mieten auf Mallorca mit echten Google-Bewertungen, geprüften Anbietern und Kontext zur Lage. Objektiv, ohne bezahlte Plätze." },
+  activities: { label: "Aktivitäten", singular: "Aktivität", title: "Aktivitäten auf Mallorca", intro: "Die besten Aktivitäten auf Mallorca für alle, die die Insel wirklich erkunden wollen: Kajak, Tauchen, Wandern, Weingüter und mehr, gefiltert nach verifizierten Qualitätssignalen.", metaDescription: "Aktivitäten auf Mallorca gefiltert nach echten Google-Bewertungen. Keine Touristenfallen: Touren, Kajak, Tauchen, Abenteuer und Pläne nach Gegend." },
+  beaches: { label: "Strände und Buchten", singular: "Strand oder Bucht", title: "Strände und Buchten auf Mallorca", intro: "Die besten Strände und Buchten auf Mallorca, von leicht erreichbaren bis zu versteckten Orten, mit praktischen Hinweisen für Besucher ohne lokales Netzwerk.", metaDescription: "Strände und Buchten auf Mallorca mit Zugang, Lage und öffentlichen Bewertungen. Unabhängiger Guide ohne bezahlte Plätze." },
+  bars: { label: "Bars", singular: "Bar", title: "Bars auf Mallorca", intro: "Die besten Bars auf Mallorca für Tapas, Cocktails, Vermut oder ein Bier mit Aussicht — gefiltert nach echten Bewertungssignalen, keine Touristenfallen.", metaDescription: "Bars auf Mallorca gefiltert nach echten Google-Bewertungen. Keine Touristenfallen, keine Werbung. Cocktailbars, Strandbars und Dorftavernen." },
+  cafes: { label: "Cafés", singular: "Café", title: "Cafés und Brunch auf Mallorca", intro: "Die besten Cafés und Brunch-Spots auf Mallorca nach echten Google-Bewertungen: Specialty Coffee, lokales Frühstück, Croissants und Wochenendbrunch.", metaDescription: "Cafés und Brunch auf Mallorca gefiltert nach echten Google-Bewertungen. Keine Werbung. Specialty Coffee, Frühstück und Brunch nach Gegend." },
   bakeries: { label: "Bäckereien", singular: "Bäckerei", title: "Bäckereien und Konditoreien auf Mallorca", intro: "Bäckereien und Konditoreien auf Mallorca für Ensaimadas, Cocas, handwerkliches Brot und traditionelle Süßwaren.", metaDescription: "Bäckereien und Konditoreien auf Mallorca für Ensaimadas, Brot und Süßes, sortiert mit echten Google-Bewertungen." },
-  "rent-a-car": { label: "Mietwagen", singular: "Mietwagenanbieter", title: "Mietwagen auf Mallorca", intro: "Mietwagenanbieter auf Mallorca am Flughafen, in Palma oder in touristischen Gegenden, mit echten Bewertungen und nützlichen Signalen zum Vergleichen.", metaDescription: "Mietwagen auf Mallorca mit echten Google-Bewertungen, Lage-Kontext und Signalen zum Vergleichen vor der Buchung." },
-  spas: { label: "Spas und Wellness", singular: "Spa", title: "Spas und Wellness auf Mallorca", intro: "Spas, Wellness- und Massagezentren auf Mallorca: von Luxushotel-Spas bis zu Day Spas und urbanen Treatments.", metaDescription: "Spas und Wellness auf Mallorca mit echten Google-Bewertungen, Treatments, Lage und nützlichen Signalen. Keine Werbung." },
-  gyms: { label: "Fitnessstudios", singular: "Fitnessstudio", title: "Fitnessstudios auf Mallorca", intro: "Fitnessstudios auf Mallorca nach Gegend: Fitness, Crossfit, Yoga, Pilates, Functional Training und Sportzentren.", metaDescription: "Fitnessstudios auf Mallorca nach Gegend, Fitness, Crossfit, Yoga und Pilates, sortiert mit echten Google-Bewertungen." },
+  "rent-a-car": { label: "Mietwagen", singular: "Mietwagenanbieter", title: "Mietwagen auf Mallorca", intro: "Mietwagenanbieter auf Mallorca für internationale Besucher und Expats. Nach echten Google-Bewertungen gerankt — ohne die üblichen Fallen in Verträgen oder Versicherungen.", metaDescription: "Mietwagen auf Mallorca gefiltert nach echten Google-Bewertungen für internationale Besucher. Keine Werbung. Vor der Buchung vergleichen." },
+  spas: { label: "Spas und Wellness", singular: "Spa", title: "Spas und Wellness auf Mallorca", intro: "Spas, Wellness- und Massagezentren auf Mallorca, gefiltert nach echten Google-Bewertungen — von Luxushotel-Spas bis zu Day Spas und urbanen Treatments.", metaDescription: "Spas und Wellness auf Mallorca gefiltert nach echten Google-Bewertungen. Keine Werbung. Nach Lage, Treatment und verifizierter Qualität." },
+  gyms: { label: "Fitnessstudios", singular: "Fitnessstudio", title: "Fitnessstudios auf Mallorca", intro: "Fitnessstudios auf Mallorca für internationale Residenten: Fitness, Crossfit, Yoga, Pilates und Functional Training, nach echten Google-Bewertungen nach Gegend sortiert.", metaDescription: "Fitnessstudios auf Mallorca für internationale Residenten. Fitness, Crossfit, Yoga und Pilates nach echten Bewertungen. Keine bezahlten Plätze." },
   routes: { label: "Routen und Aussichtspunkte", singular: "Route oder Aussichtspunkt", title: "Routen und Aussichtspunkte auf Mallorca", intro: "Wanderrouten, Aussichtspunkte und Wege auf Mallorca, von der Serra de Tramuntana bis zu einfachen Spaziergängen am Meer.", metaDescription: "Routen und Aussichtspunkte auf Mallorca mit Zugang, Lage und öffentlichen Daten zur Planung. Unabhängig, ohne Werbung." },
   excursions: { label: "Ausflüge", singular: "Ausflug", title: "Organisierte Ausflüge auf Mallorca", intro: "Ausflüge, Touren und geführte Besuche auf Mallorca: Boot, 4x4, Kultur, Kulinarik und Tagespläne.", metaDescription: "Ausflüge auf Mallorca mit echten Google-Bewertungen: Touren, Führungen, Bootsausflüge und Tagespläne. Keine Werbung." }
 };
 
-export const categoryCopy: Record<Locale, Record<CategorySlug, CategoryCopy>> = {
+Object.assign(esCategoryCopy, {
+  nightlife: { label: "Nightlife", singular: "Local nocturno", title: "Discotecas y nightlife en Mallorca", intro: "Clubs, discotecas y locales nocturnos en Mallorca filtrados por reseñas reales de Google. Sin posiciones de pago — lo que aparece primero es lo que mejor valoran quienes han estado.", metaDescription: "Discotecas y nightlife en Mallorca filtrados por reseñas reales de Google. Sin posiciones pagadas. Por zona, ambiente y calidad verificada." },
+  "car-dealers": { label: "Concesionarios", singular: "Compraventa de coches", title: "Compraventa de coches en Mallorca", intro: "Concesionarios y compraventas de coches para residentes, expats y estancias largas en Mallorca. Filtrados por reseñas reales para tomar la decisión con información.", metaDescription: "Compraventa de coches en Mallorca filtrada por reseñas reales para residentes y expats. Sin publicidad ni posiciones pagadas." },
+  healthcare: { label: "Salud", singular: "Clínica o profesional sanitario", title: "Clínicas, médicos y dentistas en Mallorca", intro: "Clínicas privadas, médicos y dentistas en Mallorca orientados a extranjeros, expats y residentes internacionales. Contrastados con señales públicas verificables.", metaDescription: "Clínicas, médicos y dentistas en Mallorca para residentes internacionales. Reseñas reales y señales verificables. Sin publicidad." },
+  "real-estate": { label: "Inmobiliarias", singular: "Agencia inmobiliaria", title: "Agencias inmobiliarias en Mallorca", intro: "Agencias inmobiliarias en Mallorca para compradores y residentes internacionales que quieren comparar opciones con datos reales, no con marketing.", metaDescription: "Agencias inmobiliarias en Mallorca para compradores internacionales. Reseñas reales, zonas y señales verificadas. Sin publicidad." }
+} satisfies Partial<Record<CategorySlug, CategoryCopy>>);
+
+Object.assign(enCategoryCopy, {
+  nightlife: { label: "Nightlife", singular: "Nightlife venue", title: "Nightlife in Mallorca", intro: "Clubs, late bars and nightlife venues in Mallorca filtered by real Google review signals. No paid placements — what ranks highest is what real visitors rated highest.", metaDescription: "Nightlife in Mallorca filtered by real Google reviews. No paid placements. Clubs, late bars and venues by area and verified quality." },
+  "car-dealers": { label: "Car dealers", singular: "Car dealer", title: "Used car dealers in Mallorca", intro: "Car dealers and used car sellers in Mallorca for expats, international residents and longer stays. Filtered by real Google reviews to make the decision with real information.", metaDescription: "Used car dealers in Mallorca filtered by real Google reviews for expats and residents. No paid placements." },
+  healthcare: { label: "Healthcare", singular: "Clinic or healthcare provider", title: "Doctors, clinics and dentists in Mallorca", intro: "Private clinics, doctors and dentists in Mallorca for foreigners, expats and international residents. Cross-referenced with public signals.", metaDescription: "Doctors, clinics and dentists in Mallorca for international residents. Real Google reviews and verifiable signals. No ads." },
+  "real-estate": { label: "Real estate", singular: "Real estate agency", title: "Real estate agencies in Mallorca", intro: "Real estate agencies in Mallorca for international buyers and residents who want to compare options with real data, not marketing.", metaDescription: "Real estate agencies in Mallorca for international buyers. Real reviews, area context and verified signals. No ads." }
+} satisfies Partial<Record<CategorySlug, CategoryCopy>>);
+
+Object.assign(deCategoryCopy, {
+  nightlife: { label: "Nightlife", singular: "Nachtclub", title: "Nightlife auf Mallorca", intro: "Clubs, Diskotheken und späte Bars auf Mallorca, gefiltert nach echten Google-Bewertungssignalen. Keine bezahlten Plätze — was am höchsten rankt, hat echte Besucher überzeugt.", metaDescription: "Nightlife auf Mallorca gefiltert nach echten Google-Bewertungen. Keine Werbung. Clubs, Diskotheken und Bars nach Lage und verifizierter Qualität." },
+  "car-dealers": { label: "Autohändler", singular: "Autohändler", title: "Gebrauchtwagenhändler auf Mallorca", intro: "Autohändler und Gebrauchtwagenanbieter auf Mallorca für Expats, internationale Residenten und längere Aufenthalte. Gefiltert nach echten Bewertungen für eine informierte Entscheidung.", metaDescription: "Gebrauchtwagenhändler auf Mallorca gefiltert nach echten Google-Bewertungen für Residenten und Expats. Keine Werbung." },
+  healthcare: { label: "Gesundheit", singular: "Klinik oder Arztpraxis", title: "Ärzte, Kliniken und Zahnärzte auf Mallorca", intro: "Private Kliniken, Ärzte und Zahnärzte auf Mallorca für Ausländer, Expats und internationale Bewohner. Anhand öffentlicher Signale überprüft.", metaDescription: "Ärzte, Kliniken und Zahnärzte auf Mallorca für internationale Bewohner. Echte Bewertungen und prüfbare Signale. Keine Werbung." },
+  "real-estate": { label: "Immobilien", singular: "Immobilienagentur", title: "Immobilienmakler auf Mallorca", intro: "Immobilienagenturen auf Mallorca für internationale Käufer und Bewohner, die Optionen mit echten Daten statt Marketing vergleichen wollen.", metaDescription: "Immobilienmakler auf Mallorca für internationale Käufer. Echte Bewertungen, Lage-Kontext und verifizierte Signale. Keine Werbung." }
+} satisfies Partial<Record<CategorySlug, CategoryCopy>>);
+
+export const categoryCopy: Record<Locale, Partial<Record<CategorySlug, CategoryCopy>>> = {
   es: esCategoryCopy,
   en: enCategoryCopy,
   de: deCategoryCopy
@@ -453,7 +486,14 @@ export function t(locale: Locale) {
 }
 
 export function getCategoryCopy(slug: CategorySlug, locale: Locale): CategoryCopy {
-  return categoryCopy[locale][slug] ?? categoryCopy.es[slug] ?? categoryConfigs[slug];
+  const fallback = categoryConfigs[slug];
+  return categoryCopy[locale][slug] ?? categoryCopy.es[slug] ?? {
+    label: fallback.label,
+    singular: fallback.singular,
+    title: fallback.title,
+    intro: fallback.intro,
+    metaDescription: fallback.intro
+  };
 }
 
 export function categoryLabelForBusiness(category: BusinessCategory, locale: Locale) {

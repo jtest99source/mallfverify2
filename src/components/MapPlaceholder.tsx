@@ -33,7 +33,7 @@ export function MapPlaceholder({ area, latitude, longitude, label }: MapPlacehol
   }
 
   return (
-    <div className="editorial-texture flex aspect-[16/9] items-center justify-center border border-dashed border-borderline bg-sea text-[11px] font-bold uppercase tracking-[0.1em] text-sage">
+    <div className="editorial-texture flex aspect-[16/9] items-center justify-center border border-dashed border-[#FFCC00]/60 bg-sea text-[11px] font-bold uppercase tracking-[0.1em] text-[#FFCC00]">
       Mapa editorial pendiente - {area}
     </div>
   );

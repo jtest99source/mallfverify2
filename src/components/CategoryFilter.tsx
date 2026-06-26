@@ -212,9 +212,9 @@ export function CategoryFilter({ businesses, locale }: { businesses: Business[];
 
   return (
     <div>
-      <div className="rounded-lg border border-[#E7DED0] bg-white/80 p-4 shadow-[0_18px_45px_rgba(27,46,75,0.035)]">
+      <div className="rounded-lg border border-[#E5E7EB] bg-white/80 p-4 shadow-[0_18px_45px_rgba(10,10,10,0.035)]">
         <div className="mb-4 flex flex-wrap items-center gap-2">
-          <span className="mr-2 text-[11px] font-bold uppercase tracking-[0.12em] text-sage">{c.orderedBy}</span>
+          <span className="mr-2 text-[11px] font-black uppercase tracking-[0.12em] text-[#0A0A0A]">{c.orderedBy}</span>
           {(Object.keys(c.sort) as SortKey[]).map((key) => {
             const active = sort === key;
             const Icon = sortIcons[key];
@@ -223,7 +223,7 @@ export function CategoryFilter({ businesses, locale }: { businesses: Business[];
                 key={key}
                 type="button"
                 onClick={() => updateParam("sort", key)}
-                className={`inline-flex min-h-10 items-center gap-2 rounded-md border px-3 text-[11px] font-bold uppercase tracking-[0.08em] transition ${active ? "border-ink bg-ink text-white" : "border-[#E7DED0] bg-white text-ink hover:border-ink"}`}
+                className={`inline-flex min-h-10 items-center gap-2 rounded-md border px-3 text-[11px] font-bold uppercase tracking-[0.08em] transition ${active ? "border-ink bg-ink text-white" : "border-[#E5E7EB] bg-white text-ink hover:border-ink"}`}
               >
                 <Icon size={15} stroke={1.8} />
                 {c.sort[key]}
@@ -240,7 +240,7 @@ export function CategoryFilter({ businesses, locale }: { businesses: Business[];
                 key={item}
                 type="button"
                 onClick={() => updateParam("area", item)}
-                className={`shrink-0 rounded-full border px-3 py-2 text-[11px] font-semibold ${active ? "border-verified bg-[#F0FDF4] text-verified" : "border-[#E7DED0] bg-white text-olive hover:border-ink hover:text-ink"}`}
+                className={`shrink-0 rounded-full border px-3 py-2 text-[11px] font-semibold ${active ? "border-verified bg-[#F9FAFB] text-verified" : "border-[#E5E7EB] bg-white text-olive hover:border-ink hover:text-ink"}`}
               >
                 {item === ALL_AREAS ? c.allAreas : item}
               </button>
@@ -249,61 +249,61 @@ export function CategoryFilter({ businesses, locale }: { businesses: Business[];
         </div>
 
         <div className="grid gap-3 lg:grid-cols-[1.2fr_1fr_auto] lg:items-end">
-          <label className="grid gap-1 text-[11px] font-bold uppercase tracking-[0.1em] text-sage">
+          <label className="grid gap-1 text-[11px] font-black uppercase tracking-[0.1em] text-[#0A0A0A]">
             {c.search}
             <input
               value={query}
               onChange={(event) => updateParam("q", event.target.value)}
               placeholder={c.searchPlaceholder}
-              className="border-[#E7DED0] bg-[#FFFDF7] text-sm font-normal normal-case tracking-normal text-ink focus:border-ink focus:ring-ink"
+              className="border-[#E5E7EB] bg-[#FFFFFF] text-sm font-normal normal-case tracking-normal text-ink focus:border-ink focus:ring-ink"
             />
           </label>
-          <label className="grid gap-1 text-[11px] font-bold uppercase tracking-[0.1em] text-sage">
+          <label className="grid gap-1 text-[11px] font-black uppercase tracking-[0.1em] text-[#0A0A0A]">
             {c.style}
-            <select value={tag} onChange={(event) => updateParam("tag", event.target.value)} className="border-[#E7DED0] bg-[#FFFDF7] text-sm font-normal normal-case tracking-normal text-ink focus:border-ink focus:ring-ink">
+            <select value={tag} onChange={(event) => updateParam("tag", event.target.value)} className="border-[#E5E7EB] bg-[#FFFFFF] text-sm font-normal normal-case tracking-normal text-ink focus:border-ink focus:ring-ink">
               <option value={ALL_TAGS}>{c.allStyles}</option>
               {tags.map((item) => <option key={item} value={item}>{item}</option>)}
             </select>
           </label>
-          <span className="text-[11px] font-bold uppercase tracking-[0.1em] text-sage lg:pb-3">{filtered.length.toLocaleString(numberLocale(locale))} {c.results}</span>
+          <span className="text-[11px] font-black uppercase tracking-[0.1em] text-[#0A0A0A] lg:pb-3">{filtered.length.toLocaleString(numberLocale(locale))} {c.results}</span>
         </div>
       </div>
 
       {top && (
-        <section className="mt-8 grid overflow-hidden rounded-lg border border-[#E7DED0] bg-white/80 shadow-[0_18px_45px_rgba(27,46,75,0.04)] lg:grid-cols-[1.35fr_1fr]">
+        <section className="mt-8 grid overflow-hidden rounded-lg border border-[#E5E7EB] bg-white/80 shadow-[0_18px_45px_rgba(10,10,10,0.04)] lg:grid-cols-[1.35fr_1fr]">
           <Link href={`/${locale}/${getCategorySlugFromBusiness(top.category)}/${top.slug}`} className="block">
             <BusinessImage business={top} category={top.category} variant="hero" className="min-h-[280px]">
               <div className="flex flex-wrap gap-2">
-                <span className="bg-coral px-3 py-1 text-[9px] font-bold uppercase tracking-[0.14em] text-white">{c.bestResult}</span>
-                {isUntapped(top.untappedScore) && <span className="inline-flex items-center gap-1 bg-[#FEF3C7] px-3 py-1 text-[9px] font-bold uppercase tracking-[0.14em] text-[#92400E]"><IconDiamond size={12} /> {c.hiddenGem}</span>}
+                <span className="bg-[#0A0A0A] px-3 py-1 text-[9px] font-black uppercase tracking-[0.14em] text-[#FFCC00]">{c.bestResult}</span>
+                {isUntapped(top.untappedScore) && <span className="inline-flex items-center gap-1 bg-[#F9FAFB] px-3 py-1 text-[9px] font-bold uppercase tracking-[0.14em] text-[#0A0A0A]"><IconDiamond size={12} /> {c.hiddenGem}</span>}
               </div>
               <h2 className="mt-4 font-sans text-4xl font-black leading-tight text-white">{getBusinessPublicName(top)}</h2>
               <div className="mt-3"><RatingBadge rating={top.rating} reviewsCount={top.reviewsCount} locale={locale} compact /></div>
             </BusinessImage>
           </Link>
           <div className="flex flex-col p-8">
-            <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-sage">{businessArea(top)}</p>
+            <p className="text-[10px] font-black uppercase tracking-[0.14em] text-[#0A0A0A]">{businessArea(top)}</p>
             <p className="mt-4 flex-1 text-sm leading-7 text-olive">{descriptionFor(top)}</p>
             <div className="mt-5 flex flex-wrap gap-2">
-              {getBusinessTags(top).slice(0, 4).map((item) => <span key={item} className="border border-[#E7DED0] bg-[#FFFDF7] px-3 py-1 text-[10px] text-olive">{item}</span>)}
+              {getBusinessTags(top).slice(0, 4).map((item) => <span key={item} className="border border-[#E5E7EB] bg-[#FFFFFF] px-3 py-1 text-[10px] text-olive">{item}</span>)}
             </div>
-            <Link href={`/${locale}/${getCategorySlugFromBusiness(top.category)}/${top.slug}`} className="mt-6 w-fit rounded-sm bg-ink px-5 py-3 text-[11px] font-bold uppercase tracking-[0.1em] text-white hover:bg-[#0E8F72]">{c.viewProfile}</Link>
+            <Link href={`/${locale}/${getCategorySlugFromBusiness(top.category)}/${top.slug}`} className="mt-6 w-fit rounded-sm bg-ink px-5 py-3 text-[11px] font-bold uppercase tracking-[0.1em] text-white hover:bg-[#262626]">{c.viewProfile}</Link>
           </div>
         </section>
       )}
 
-      <div className="mt-10 pb-3 text-[10px] font-bold uppercase tracking-[0.14em] text-sage">{c.allResults}</div>
+      <div className="mt-10 pb-3 text-[10px] font-black uppercase tracking-[0.14em] text-[#0A0A0A]">{c.allResults}</div>
       {filtered.length > 0 ? (
         <div className="mt-3 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {visibleBusinesses.map((business) => <BusinessCard key={business.id} business={business} locale={locale} />)}
         </div>
       ) : (
-        <div className="mt-3 rounded-lg border border-[#E7DED0] bg-white/85 p-5 text-sm text-olive">
+        <div className="mt-3 rounded-lg border border-[#E5E7EB] bg-white/85 p-5 text-sm text-olive">
           <p>{c.noResults}</p>
           <button
             type="button"
             onClick={clearFilters}
-            className="mt-4 min-h-10 rounded-md border border-[#E7DED0] bg-white px-4 text-[11px] font-bold uppercase tracking-[0.1em] text-ink transition hover:border-[#0E8F72] hover:text-[#0E8F72]"
+            className="mt-4 min-h-10 rounded-md border border-[#E5E7EB] bg-white px-4 text-[11px] font-bold uppercase tracking-[0.1em] text-ink transition hover:border-[#0A0A0A] hover:text-[#0A0A0A]"
           >
             {c.clearFilters}
           </button>
@@ -312,12 +312,12 @@ export function CategoryFilter({ businesses, locale }: { businesses: Business[];
 
       {filtered.length > PAGE_SIZE && (
         <div className="mt-8 flex flex-col items-center gap-3">
-          <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-sage">{c.showing(shownCount, totalCount)}</p>
+          <p className="text-[11px] font-black uppercase tracking-[0.1em] text-[#0A0A0A]">{c.showing(shownCount, totalCount)}</p>
           {hasMore && (
             <button
               type="button"
               onClick={() => setVisibleCount((value) => Math.min(value + PAGE_SIZE, filtered.length))}
-              className="min-h-11 rounded-md border border-[#E7DED0] bg-white px-6 text-[11px] font-bold uppercase tracking-[0.1em] text-ink shadow-sm transition hover:border-[#0E8F72] hover:text-[#0E8F72]"
+              className="min-h-11 rounded-md border border-[#0A0A0A] bg-[#0A0A0A] px-6 text-[11px] font-black uppercase tracking-[0.1em] text-[#FFFFFF] shadow-[0_14px_30px_rgba(10,10,10,0.18)] transition hover:-translate-y-0.5 hover:bg-[#262626]"
             >
               {c.loadMore}
             </button>

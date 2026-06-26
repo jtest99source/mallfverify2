@@ -68,7 +68,7 @@ function RankingBusinessImage({ business, name }: { business?: Business; name: s
     <div
       aria-label={name}
       className="h-20 w-[120px] shrink-0 rounded-md bg-sea bg-cover bg-center"
-      style={image ? { backgroundImage: `url(${image})` } : { backgroundImage: "linear-gradient(135deg, #354030, #1C1C18)" }}
+      style={image ? { backgroundImage: `url(${image})` } : { backgroundImage: "linear-gradient(135deg, #0A0A0A, #262626)" }}
     />
   );
 }

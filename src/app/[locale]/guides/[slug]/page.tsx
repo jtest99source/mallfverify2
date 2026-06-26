@@ -70,7 +70,7 @@ function HotelCard({ business, locale }: { business: Business; locale: Locale })
     <Link href={href} className="group grid grid-rows-[120px_1fr] rounded-md border border-borderline bg-white transition hover:-translate-y-0.5 hover:shadow-soft">
       <div
         className="rounded-t-md bg-sea bg-cover bg-center"
-        style={image ? { backgroundImage: `linear-gradient(180deg, rgba(28,28,24,0.02), rgba(28,28,24,0.22)), url(${image})` } : { backgroundImage: "linear-gradient(135deg, #354030, #1C1C18)" }}
+        style={image ? { backgroundImage: `linear-gradient(180deg, rgba(28,28,24,0.02), rgba(28,28,24,0.22)), url(${image})` } : { backgroundImage: "linear-gradient(135deg, #0A0A0A, #262626)" }}
       />
       <div className="p-4">
         <p className="text-[9px] font-bold uppercase tracking-[0.14em] text-turquesa">{categoryConfigs[getCategorySlugFromBusiness(business.category)].singular}</p>
@@ -116,7 +116,7 @@ function RelatedGuides({ guides, locale, label }: { guides: Guide[]; locale: Loc
             <Link
               key={guide.slug}
               href={`/${locale}/guides/${guide.slug}`}
-              className="group flex flex-col rounded-lg border border-borderline bg-white p-5 shadow-[0_4px_18px_rgba(27,46,75,0.05)] transition hover:shadow-[0_8px_28px_rgba(27,46,75,0.10)]"
+              className="group flex flex-col rounded-lg border border-borderline bg-white p-5 shadow-[0_4px_18px_rgba(10,10,10,0.05)] transition hover:shadow-[0_8px_28px_rgba(10,10,10,0.10)]"
             >
               {guide.heroImageUrl && (
                 <div
@@ -124,7 +124,7 @@ function RelatedGuides({ guides, locale, label }: { guides: Guide[]; locale: Loc
                   style={{ backgroundImage: `linear-gradient(180deg,rgba(28,28,24,.04),rgba(28,28,24,.2)),url(${guide.heroImageUrl})` }}
                 />
               )}
-              <p className="line-clamp-2 font-sans text-[15px] font-bold leading-snug text-ink group-hover:text-[#0E8F72]">{guide.title}</p>
+              <p className="line-clamp-2 font-sans text-[15px] font-bold leading-snug text-ink group-hover:text-[#0A0A0A]">{guide.title}</p>
               <p className="mt-2 line-clamp-2 text-[12px] leading-5 text-olive">{guide.excerpt}</p>
               <span className="mt-auto pt-4 text-[10px] font-bold uppercase tracking-[0.1em] text-coral">
                 {locale === "de" ? "Guide lesen →" : locale === "en" ? "Read guide →" : "Leer guía →"}
@@ -193,14 +193,14 @@ export default async function GuideDetailPage({ params }: { params: Promise<{ lo
   ];
 
   return (
-    <main className="bg-[linear-gradient(180deg,#FFF8EC_0%,#FFFDF7_46%,#FFF8EC_100%)]">
+    <main className="bg-[linear-gradient(180deg,#FFFFFF_0%,#FFFFFF_46%,#FFFFFF_100%)]">
       <article className="mx-auto max-w-4xl px-4 pb-10 pt-8 sm:px-6 sm:pt-12 lg:px-8">
         <Breadcrumbs items={[{ label: copy.category.breadcrumbHome, href: `/${safeLocale}` }, { label: copy.nav.guides, href: `/${safeLocale}/guides` }, { label: guide.title, href: `/${safeLocale}/guides/${guide.slug}` }]} />
-        <p className="mt-6 text-[11px] font-semibold uppercase tracking-[0.2em] text-[#0E8F72]">{copy.guides.updatedLabel} {formatDate(guide.updatedAt, safeLocale)}</p>
-        <h1 className="mt-3 font-sans text-3xl font-black text-[#10253D] sm:text-5xl">{guide.title}</h1>
-        <p className="mt-4 max-w-3xl text-base leading-7 text-[#4B5B4D] sm:text-xl sm:leading-8">{guide.intro}</p>
+        <p className="mt-6 text-[11px] font-semibold uppercase tracking-[0.2em] text-[#0A0A0A]">{copy.guides.updatedLabel} {formatDate(guide.updatedAt, safeLocale)}</p>
+        <h1 className="mt-3 font-sans text-3xl font-black text-[#0A0A0A] sm:text-5xl">{guide.title}</h1>
+        <p className="mt-4 max-w-3xl text-base leading-7 text-[#6B7280] sm:text-xl sm:leading-8">{guide.intro}</p>
 
-        <div className="mt-6 rounded-md border border-[#E7DED0] border-l-4 border-l-[#B86B1D] bg-[#FFFDF7] px-5 py-4 text-base leading-7 text-[#4B5B4D] shadow-[0_14px_34px_rgba(27,46,75,0.04)] sm:mt-8 sm:px-6 sm:py-5 sm:text-lg sm:leading-8">
+        <div className="mt-6 rounded-md border border-[#E5E7EB] border-l-4 border-l-[#0A0A0A] bg-[#FFFFFF] px-5 py-4 text-base leading-7 text-[#6B7280] shadow-[0_14px_34px_rgba(10,10,10,0.04)] sm:mt-8 sm:px-6 sm:py-5 sm:text-lg sm:leading-8">
           {guide.excerpt}
         </div>
 

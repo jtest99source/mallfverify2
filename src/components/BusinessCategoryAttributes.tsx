@@ -121,7 +121,7 @@ export function BusinessCategoryAttributes({ category, attributes }: { category:
       <dl className="mt-5 grid gap-4">
         {rows.map((row) => (
           <div key={row.key} className="grid gap-2 text-sm leading-6 text-earth sm:grid-cols-[150px_1fr]">
-            <dt className="text-[10px] font-bold uppercase tracking-[0.1em] text-sage">{row.label}</dt>
+            <dt className="text-[10px] font-black uppercase tracking-[0.1em] text-[#0A0A0A]">{row.label}</dt>
             {row.presentation === "text" ? (
               <dd className="grid gap-1.5 text-sm leading-6 text-earth">
                 {displayValues(row).map((value) => (
