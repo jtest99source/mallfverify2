@@ -85,6 +85,16 @@ export const categoryConfigs = {
     faq: "¿Dónde desayunar bien en Mallorca?",
     editorialContext: "En cafeterías miramos valoración, volumen de reseñas, consistencia, tipo de desayuno, ubicación y si el lugar encaja para trabajar, desayunar rápido o hacer un brunch largo."
   },
+  nightlife: {
+    label: "Nightlife",
+    singular: "Local nocturno",
+    businessCategory: "nightlife",
+    icon: "IconMusic",
+    title: "Discotecas y nightlife en Mallorca",
+    intro: "Clubs, discotecas y locales nocturnos de Mallorca para salir de noche con contexto real: zona, ambiente, reseñas y señales útiles antes de decidir.",
+    faq: "¿Dónde salir de noche en Mallorca si vengo de fuera?",
+    editorialContext: "En nightlife la nota media suele variar más que en otras categorías, así que miramos reseñas, volumen, zona, seguridad percibida, tipo de público y encaje para turistas, nómadas o residentes internacionales."
+  },
   bakeries: {
     label: "Hornos y pastelerías",
     singular: "Horno o pastelería",
@@ -105,6 +115,16 @@ export const categoryConfigs = {
     faq: "¿Cuánto cuesta alquilar un coche en Mallorca?",
     editorialContext: "En rent a car importan las reseñas recientes, la claridad de condiciones, depósitos, seguros, recogida y atención al cliente. Separarlo del resto de categorías evita comparar servicios muy distintos."
   },
+  "car-dealers": {
+    label: "Concesionarios",
+    singular: "Compraventa de coches",
+    businessCategory: "car-dealer",
+    icon: "IconCarGarage",
+    title: "Compraventa de coches en Mallorca",
+    intro: "Concesionarios y compraventas de coches en Mallorca para residentes, expats y estancias largas que necesitan comparar opciones con datos reales.",
+    faq: "¿Dónde comprar un coche de segunda mano en Mallorca?",
+    editorialContext: "Para compraventa de coches priorizamos volumen de reseñas, claridad comercial, ubicación, experiencia postventa y señales de confianza. Es una categoría especialmente útil para expats y residentes nuevos."
+  },
   spas: {
     label: "Spas y wellness",
     singular: "Spa",
@@ -124,6 +144,26 @@ export const categoryConfigs = {
     intro: "Gimnasios en Mallorca por zona: fitness, crossfit, yoga, pilates, funcional y centros deportivos ordenados por valoración real.",
     faq: "¿Qué gimnasio elegir en Palma de Mallorca?",
     editorialContext: "Los gimnasios se comparan por valoración, reseñas, ubicación, tipo de entrenamiento y señales de servicio. Es una categoría especialmente útil para residentes y estancias largas."
+  },
+  healthcare: {
+    label: "Salud",
+    singular: "Clínica o profesional sanitario",
+    businessCategory: "healthcare",
+    icon: "IconHeartRateMonitor",
+    title: "Clínicas, médicos y dentistas en Mallorca",
+    intro: "Clínicas privadas, médicos y dentistas en Mallorca orientados a extranjeros, expats y visitantes que necesitan resolver algo con rapidez.",
+    faq: "¿Dónde encontrar médico o dentista que atienda a extranjeros en Mallorca?",
+    editorialContext: "En salud miramos reseñas, volumen, especialidad, ubicación, claridad de contacto y señales de atención internacional. No sustituye consejo médico, pero ayuda a encontrar opciones verificables."
+  },
+  "real-estate": {
+    label: "Inmobiliarias",
+    singular: "Agencia inmobiliaria",
+    businessCategory: "real-estate",
+    icon: "IconHomeDollar",
+    title: "Agencias inmobiliarias en Mallorca",
+    intro: "Agencias inmobiliarias en Mallorca para comprar, alquilar o comparar zonas si vienes de fuera y necesitas señales públicas antes de contactar.",
+    faq: "¿Qué agencia inmobiliaria elegir en Mallorca si soy extranjero?",
+    editorialContext: "En real estate valoramos reseñas, volumen, zona, claridad de servicio y orientación a compradores o residentes internacionales. La posición nunca depende de acuerdos comerciales."
   },
   routes: {
     label: "Rutas y miradores",
@@ -149,10 +189,32 @@ export const categoryConfigs = {
 
 export type CategorySlug = keyof typeof categoryConfigs;
 
+export const publicCategorySlugs = [
+  "restaurants",
+  "hotels",
+  "beach-clubs",
+  "bars",
+  "cafes",
+  "nightlife",
+  "activities",
+  "boats",
+  "rent-a-car",
+  "car-dealers",
+  "spas",
+  "healthcare",
+  "real-estate"
+] as const satisfies CategorySlug[];
+
+export type PublicCategorySlug = (typeof publicCategorySlugs)[number];
+
+export function isPublicCategorySlug(value: string): value is PublicCategorySlug {
+  return (publicCategorySlugs as readonly string[]).includes(value);
+}
+
 export const categoryGroups = {
   gastronomia: {
     label: "Gastronomía",
-    categories: ["restaurants", "bars", "cafes", "bakeries"] as CategorySlug[]
+    categories: ["restaurants", "bars", "cafes"] as CategorySlug[]
   },
   alojamiento: {
     label: "Alojamiento",
@@ -160,19 +222,19 @@ export const categoryGroups = {
   },
   playa: {
     label: "Playa y náutico",
-    categories: ["beach-clubs", "boats", "beaches"] as CategorySlug[]
+    categories: ["beach-clubs", "boats"] as CategorySlug[]
   },
   bienestar: {
     label: "Bienestar",
-    categories: ["spas", "gyms"] as CategorySlug[]
+    categories: ["spas", "healthcare"] as CategorySlug[]
   },
   experiencias: {
     label: "Experiencias",
-    categories: ["activities", "excursions", "routes"] as CategorySlug[]
+    categories: ["activities"] as CategorySlug[]
   },
   movilidad: {
     label: "Movilidad",
-    categories: ["rent-a-car"] as CategorySlug[]
+    categories: ["rent-a-car", "car-dealers", "real-estate"] as CategorySlug[]
   }
 } as const;
 
@@ -191,4 +253,29 @@ export function isCategorySlug(value: string): value is CategorySlug {
 
 export function isRankingCategory(value: string): value is RankingCategory {
   return value in categoryConfigs;
+}
+
+const categoryGuideKeywords: Record<CategorySlug, string[]> = {
+  restaurants: ["restauran", "comer", "dining", "gastronomía", "gastronom"],
+  hotels: ["hotel", "alojam", "dormir", "stay"],
+  "beach-clubs": ["beach club", "chiringuito", "playa"],
+  boats: ["barco", "boat", "vela", "sail", "nautic"],
+  activities: ["actividad", "activity", "excursión", "senderismo", "kayak", "que hacer", "things to do"],
+  beaches: ["playa", "cala", "beach"],
+  bars: ["bar", "cóctel", "cocktail", "vermut", "copa"],
+  cafes: ["café", "cafe", "brunch", "desayuno", "coffee"],
+  nightlife: ["nightlife", "discoteca", "noche", "club"],
+  bakeries: ["ensaimada", "pastelería", "panadería", "bakery", "horno"],
+  "rent-a-car": ["coche", "car rental", "alquiler de coche"],
+  "car-dealers": ["compra", "concesionario", "segunda mano", "car"],
+  spas: ["spa", "wellness", "bienestar", "masaje"],
+  gyms: ["gimnasio", "gym", "fitness", "deporte"],
+  healthcare: ["médico", "doctor", "dentista", "salud", "clínica", "health"],
+  "real-estate": ["inmobiliaria", "property", "comprar casa", "real estate", "vivienda"],
+  routes: ["ruta", "senderismo", "mirador", "trail", "hiking"],
+  excursions: ["excursión", "tour", "visita", "excursion"]
+};
+
+export function getCategoryGuideKeywords(category: CategorySlug): string[] {
+  return categoryGuideKeywords[category] ?? [];
 }

@@ -86,6 +86,11 @@ export const rankingFacets = {
     facet("specialty-coffee", "Specialty coffee", "Cafés de especialidad en Mallorca", ["specialty", "coffee", "cafe", "café", "roaster"]),
     facet("pasteleria", "Pastelería", "Cafeterías con dulce en Mallorca", ["pasteleria", "pastelería", "bakery", "croissant", "ensaimada"])
   ],
+  nightlife: [
+    facet("clubs", "Clubs", "Discotecas y clubs en Mallorca", ["club", "discoteca", "nightclub", "dance"]),
+    facet("late-bars", "Late bars", "Bares para salir de noche en Mallorca", ["late", "noche", "bar", "cocktail", "copas"]),
+    facet("music", "Musica", "Locales con musica en Mallorca", ["music", "musica", "dj", "live"])
+  ],
   bakeries: [
     facet("ensaimadas", "Ensaimadas", "Hornos de ensaimadas en Mallorca", ["ensaimada", "pasteleria", "pastelería"]),
     facet("pan-artesano", "Pan artesano", "Panaderías artesanas en Mallorca", ["pan", "bread", "artesano", "masa madre"])
@@ -105,6 +110,16 @@ export const rankingFacets = {
   "car-dealers": [
     facet("segunda-mano", "Segunda mano", "Coches de segunda mano en Mallorca", ["used", "segunda mano", "ocasión"]),
     facet("oficial", "Oficial", "Concesionarios oficiales en Mallorca", ["oficial", "dealer", "concesionario"])
+  ],
+  healthcare: [
+    facet("doctors", "Medicos", "Medicos y clinicas en Mallorca", ["doctor", "medico", "clinic", "clinica"]),
+    facet("dentists", "Dentistas", "Dentistas en Mallorca", ["dentist", "dentista", "dental"]),
+    facet("english-speaking", "English-speaking", "Atencion en ingles en Mallorca", ["english", "ingles", "british", "international"])
+  ],
+  "real-estate": [
+    facet("buying", "Comprar", "Agencias para comprar casa en Mallorca", ["buy", "comprar", "venta", "property", "real estate"]),
+    facet("rentals", "Alquiler", "Agencias de alquiler en Mallorca", ["rent", "rental", "alquiler"]),
+    facet("international", "Internacional", "Inmobiliarias para compradores internacionales", ["international", "english", "german", "deutsch", "expat"])
   ],
   markets: [
     facet("producto-local", "Producto local", "Mercados con producto local en Mallorca", ["local", "mallorca", "gourmet", "artesano"]),
@@ -194,4 +209,61 @@ export function getPopularFacetsForBusinesses(category: CategorySlug, businesses
 
 export function facetPath(locale: string, category: CategorySlug, facetSlug: string) {
   return `/${locale}/top/${category}/${toSlug(facetSlug)}`;
+}
+
+const facetLabelTranslations: Record<string, { en: string; de: string }> = {
+  "mediterraneo":      { en: "Mediterranean",     de: "Mediterran" },
+  "carne":             { en: "Meat",               de: "Fleisch" },
+  "marisco":           { en: "Seafood",            de: "Meeresfrüchte" },
+  "mallorquin":        { en: "Mallorcan",          de: "Mallorquinisch" },
+  "hamburguesas":      { en: "Burgers",            de: "Burger" },
+  "arrocerias":        { en: "Rice dishes",        de: "Reisgerichte" },
+  "playa":             { en: "Beach",              de: "Strand" },
+  "lujo":              { en: "Luxury",             de: "Luxus" },
+  "rurales":           { en: "Rural",              de: "Landhotels" },
+  "familiares":        { en: "Family",             de: "Familien" },
+  "restaurante":       { en: "Restaurant",         de: "Restaurant" },
+  "fiesta":            { en: "Party",              de: "Party" },
+  "tranquilos":        { en: "Peaceful",           de: "Ruhig" },
+  "piscina":           { en: "Pool",               de: "Pool" },
+  "excursiones":       { en: "Excursions",         de: "Ausflüge" },
+  "veleros":           { en: "Sailing",            de: "Segelboote" },
+  "sin-licencia":      { en: "No license",         de: "Ohne Führerschein" },
+  "con-patron":        { en: "With skipper",       de: "Mit Skipper" },
+  "catamaranes":       { en: "Catamarans",         de: "Katamarane" },
+  "tours-excursiones": { en: "Tours",              de: "Touren" },
+  "aventura":          { en: "Adventure",          de: "Abenteuer" },
+  "acuaticas":         { en: "Water sports",       de: "Wassersport" },
+  "museos-cultura":    { en: "Museums & culture",  de: "Museen & Kultur" },
+  "bodegas":           { en: "Wineries",           de: "Weingüter" },
+  "miradores":         { en: "Viewpoints",         de: "Aussichtspunkte" },
+  "arena":             { en: "Sandy beach",        de: "Sandstrand" },
+  "calas":             { en: "Coves",              de: "Buchten" },
+  "naturales":         { en: "Natural",            de: "Naturstrand" },
+  "acceso-facil":      { en: "Easy access",        de: "Leichter Zugang" },
+  "cocteles":          { en: "Cocktails",          de: "Cocktails" },
+  "terraza":           { en: "Terrace",            de: "Terrasse" },
+  "pasteleria":        { en: "Pastry café",        de: "Café-Konditorei" },
+  "pan-artesano":      { en: "Artisan bread",      de: "Handwerksbrot" },
+  "masajes":           { en: "Massage",            de: "Massage" },
+  "aeropuerto":        { en: "Airport",            de: "Flughafen" },
+  "sin-franquicia":    { en: "No excess fee",      de: "Ohne Selbstbeteiligung" },
+  "senderismo":        { en: "Hiking",             de: "Wandern" },
+  "barco":             { en: "Boat",               de: "Boot" },
+  "guiadas":           { en: "Guided",             de: "Geführt" },
+  "segunda-mano":      { en: "Used cars",          de: "Gebrauchtwagen" },
+  "oficial":           { en: "Official dealer",    de: "Offizieller Händler" },
+  "producto-local":    { en: "Local produce",      de: "Lokale Produkte" },
+  "ecologico":         { en: "Organic",            de: "Bio" },
+  "artesania":         { en: "Crafts",             de: "Kunsthandwerk" },
+  "moda":              { en: "Fashion",            de: "Mode" },
+  "arte":              { en: "Art",                de: "Kunst" },
+  "historia":          { en: "History",            de: "Geschichte" },
+};
+
+export function getLocalizedFacetLabel(slug: string, defaultLabel: string, locale: string): string {
+  if (locale === "es") return defaultLabel;
+  const t = facetLabelTranslations[slug];
+  if (!t) return defaultLabel;
+  return locale === "de" ? (t.de ?? defaultLabel) : (t.en ?? defaultLabel);
 }
