@@ -35,8 +35,8 @@ const variantClasses: Record<BusinessImageVariant, string> = {
 };
 
 const imageOverlays: Record<BusinessImageVariant, string> = {
-  card: "linear-gradient(180deg, rgba(12,18,26,0.12), rgba(12,18,26,0.76))",
-  hero: "linear-gradient(180deg, rgba(12,18,26,0.10), rgba(12,18,26,0.58))",
+  card: "linear-gradient(180deg, rgba(10,10,10,0.02), rgba(10,10,10,0.24))",
+  hero: "linear-gradient(180deg, rgba(10,10,10,0.08), rgba(10,10,10,0.54))",
   detail: "linear-gradient(90deg, rgba(28,28,24,0.10), rgba(28,28,24,0))"
 };
 

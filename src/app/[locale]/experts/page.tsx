@@ -653,7 +653,7 @@ export default async function ExpertsPage({
             {copy.secondaryCta}
           </Link>
           </div>
-          <aside className="rounded-lg border border-[#E5E7EB] bg-white p-5 shadow-[0_22px_55px_rgba(10,10,10,0.09)]">
+          <aside className="hidden rounded-lg border border-[#E5E7EB] bg-white p-5 shadow-[0_22px_55px_rgba(10,10,10,0.09)] lg:block">
             <div className="flex items-center gap-3">
               <div className="flex h-12 w-12 items-center justify-center rounded-md bg-[#0A0A0A] text-[#FFCC00]">
                 <IconShieldCheck size={26} stroke={2} />
@@ -694,7 +694,7 @@ export default async function ExpertsPage({
         </div>
       </section>
 
-      <section className="px-4 py-10 sm:px-6 lg:px-8">
+      <section className="px-4 pb-10 pt-2 sm:px-6 sm:pt-6 lg:px-8 lg:py-10">
         <div className="mx-auto max-w-7xl">
           <p className="text-[11px] font-black uppercase tracking-[0.16em] text-[#0A0A0A]">{copy.directoryEyebrow}</p>
           <div className="mt-5 grid gap-6 lg:grid-cols-[280px_minmax(0,1fr)]">

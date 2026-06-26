@@ -34,6 +34,7 @@ function localizedList(list: Partial<Record<Locale, string[]>>, locale: Locale):
 
 function DirectoryCard({
   profile,
+  position,
   locale,
   verticalLabel,
   verticalColor,
@@ -41,6 +42,7 @@ function DirectoryCard({
   labels
 }: {
   profile: ExpertProfile;
+  position: number;
   locale: Locale;
   verticalLabel: string;
   verticalColor: string;
@@ -52,11 +54,14 @@ function DirectoryCard({
 
   return (
     <article
-      className="group flex min-h-[300px] flex-col overflow-hidden rounded-lg border border-l-4 border-[#E5E7EB] bg-white shadow-sm transition-all duration-150 hover:-translate-y-0.5 hover:shadow-md"
+      className="group flex min-h-[260px] flex-col overflow-hidden rounded-md border border-l-4 border-[#E5E7EB] bg-white shadow-sm transition-all duration-150 hover:-translate-y-0.5 hover:border-[#0A0A0A] hover:shadow-[0_14px_34px_rgba(10,10,10,0.10)]"
       style={{ borderLeftColor: verticalColor }}
     >
       <div className="flex flex-1 flex-col p-5">
         <div className={`flex flex-wrap items-center gap-2 ${!hideVertical && verticalLabel ? "justify-between" : "justify-end"}`}>
+          <span className="inline-flex h-7 min-w-7 items-center justify-center rounded-sm bg-[#0A0A0A] px-2 text-[10px] font-black text-white">
+            #{position}
+          </span>
           {!hideVertical && verticalLabel ? (
             <span className="rounded-full bg-[#FFF3B0] px-2.5 py-1 text-[9px] font-black uppercase tracking-[0.12em] text-[#0A0A0A]">
               {verticalLabel}
@@ -65,10 +70,10 @@ function DirectoryCard({
           <RatingBadge rating={profile.rating} reviewsCount={profile.reviewsCount} locale={locale} compact />
         </div>
 
-        <h3 className="mt-4 text-lg font-black leading-tight text-[#0A0A0A]">{profile.name}</h3>
+        <h3 className="mt-4 text-xl font-black leading-[1.05] text-[#0A0A0A]">{profile.name}</h3>
 
         {editorialNote ? (
-          <p className="mt-4 line-clamp-2 rounded-md border border-[#E5E7EB] bg-[#FFFFFF] p-3 text-xs font-semibold leading-5 text-[#6B7280]">
+          <p className="mt-3 line-clamp-2 border-l-2 border-[#0A0A0A] bg-[#F9FAFB] px-3 py-2 text-xs font-semibold leading-5 text-[#6B7280]">
             {editorialNote}
           </p>
         ) : null}
@@ -88,7 +93,7 @@ function DirectoryCard({
             <dt className="text-[10px] font-black uppercase tracking-[0.12em] text-[#0A0A0A]">{labels.specialties}</dt>
             <dd className="mt-1.5 flex flex-wrap gap-1.5">
               {specialties.slice(0, 3).map((specialty) => (
-                <span key={specialty} className="rounded-full border border-[#FFCC00]/50 bg-[#FFF3B0] px-2.5 py-0.5 text-xs font-bold text-[#0A0A0A]">
+                <span key={specialty} className="rounded-full border border-[#E5E7EB] bg-[#F9FAFB] px-2.5 py-0.5 text-xs font-bold text-[#0A0A0A]">
                   {specialty}
                 </span>
               ))}
@@ -155,12 +160,13 @@ export function LoadMoreExpertGrid({
   return (
     <>
       <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        {visibleProfiles.map((profile) => {
+        {visibleProfiles.map((profile, index) => {
           const category = categories.find((item) => item.slug === profile.verticalSlug);
           return (
             <DirectoryCard
               key={profile.slug}
               profile={profile}
+              position={index + 1}
               locale={locale}
               verticalLabel={category?.title ?? ""}
               verticalColor={verticalColors[profile.verticalSlug] ?? "#0A0A0A"}

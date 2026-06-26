@@ -114,9 +114,9 @@ export function BusinessCard({ business, locale }: { business: Business; locale:
   const badges = usefulBadges(business, locale);
 
   return (
-    <article className="group flex h-full min-h-[360px] flex-col overflow-hidden rounded-lg border border-borderline bg-white shadow-sm transition-all duration-150 hover:-translate-y-0.5 hover:border-[#0A0A0A] hover:shadow-[0_6px_28px_rgba(10,10,10,0.14)]">
+    <article className="group flex h-full min-h-[330px] flex-col overflow-hidden rounded-md border border-borderline bg-white shadow-sm transition-all duration-150 hover:-translate-y-0.5 hover:border-[#0A0A0A] hover:shadow-[0_10px_30px_rgba(10,10,10,0.12)]">
       <Link href={`/${locale}/${categorySlug}/${business.slug}`} className="flex flex-1 flex-col">
-        <BusinessImage business={business} category={business.category} variant="card" className="aspect-[4/3] min-h-0 shrink-0">
+        <BusinessImage business={business} category={business.category} variant="card" className="aspect-[16/10] min-h-0 shrink-0">
           <div className="flex h-full flex-col justify-between">
             <div className="flex items-start justify-between gap-2">
               <span className="inline-flex items-center gap-1 rounded-full bg-black/50 px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.12em] text-white backdrop-blur">
@@ -127,11 +127,11 @@ export function BusinessCard({ business, locale }: { business: Business; locale:
                 <IconArrowUpRight size={15} stroke={2} />
               </span>
             </div>
-            <h2 className="line-clamp-2 text-2xl font-black leading-tight text-white drop-shadow-sm">{publicName}</h2>
+            <h2 className="line-clamp-2 text-[23px] font-black leading-[1.02] text-white drop-shadow-sm">{publicName}</h2>
           </div>
         </BusinessImage>
 
-        <div className="flex flex-1 flex-col p-5 pb-4">
+        <div className="flex flex-1 flex-col p-4 pb-4">
           <div className="flex flex-wrap items-center justify-between gap-3">
             <p className="text-[10px] font-black uppercase tracking-[0.12em] text-[#0A0A0A]">{categoryLabel}</p>
             <RatingBadge rating={business.rating} reviewsCount={business.reviewsCount} locale={locale} compact />

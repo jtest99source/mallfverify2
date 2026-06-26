@@ -368,7 +368,7 @@ function MobileBusinessActions({
     business.phone
       ? {
           href: `tel:${business.phone.replace(/\s+/g, "")}`,
-          label: business.phone,
+          label: locale === "de" ? "Anrufen" : locale === "en" ? "Call" : "Llamar",
           Icon: IconPhone
         }
       : null,
@@ -383,7 +383,7 @@ function MobileBusinessActions({
     business.googleMapsUrl
       ? {
           href: business.googleMapsUrl,
-          label: copy.business.googleMaps,
+          label: "Google Maps",
           Icon: IconMapPin,
           external: true
         }
@@ -395,21 +395,20 @@ function MobileBusinessActions({
   return (
     <section className="bg-paper px-4 pt-3 lg:hidden">
       <div className="relative mx-auto max-w-[1440px]">
-        <div className="flex gap-2 overflow-x-auto pb-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+        <div className="grid grid-cols-3 gap-2">
           {actions.map(({ href, label, Icon, external }) => (
             <a
               key={`${href}-${label}`}
               href={href}
               target={external ? "_blank" : undefined}
               rel={external ? "noreferrer" : undefined}
-              className="inline-flex min-h-10 shrink-0 items-center gap-2 rounded-full border border-borderline bg-white px-3 text-[11px] font-bold text-ink shadow-sm"
+              className="inline-flex min-h-11 min-w-0 items-center justify-center gap-2 rounded-full border border-borderline bg-white px-3 text-center text-[11px] font-bold leading-tight text-ink shadow-sm"
             >
               <Icon aria-hidden="true" size={14} stroke={2} className="text-coral" />
-              <span>{label}</span>
+              <span className="truncate">{label}</span>
             </a>
           ))}
         </div>
-        <div className="pointer-events-none absolute inset-y-0 right-0 w-10 bg-gradient-to-l from-paper to-transparent" />
       </div>
     </section>
   );

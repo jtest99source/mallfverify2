@@ -95,6 +95,15 @@ function getBusinessTags(business: Business) {
   return business.idealFor?.length ? business.idealFor : business.tags;
 }
 
+function isUsefulPublicTag(tag: string) {
+  const normalized = tag.trim();
+  if (!normalized) return false;
+  if (normalized.includes("_")) return false;
+  if (/^(restaurant|food|point of interest|point_of_interest|establishment|store|bar)$/i.test(normalized)) return false;
+  if (/^[a-z]+(-[a-z]+)+$/.test(normalized) && normalized.length > 18) return false;
+  return true;
+}
+
 function businessArea(business: Business) {
   return business.city || business.area || "Mallorca";
 }
@@ -137,7 +146,9 @@ function sortBusinesses(businesses: Business[], sort: SortKey) {
 function getPopularTags(businesses: Business[], locale: Locale) {
   const counts = new Map<string, number>();
   for (const business of businesses) {
-    for (const tag of getBusinessTags(business)) counts.set(tag, (counts.get(tag) ?? 0) + 1);
+    for (const tag of getBusinessTags(business)) {
+      if (isUsefulPublicTag(tag)) counts.set(tag, (counts.get(tag) ?? 0) + 1);
+    }
   }
 
   return Array.from(counts.entries())
@@ -212,7 +223,7 @@ export function CategoryFilter({ businesses, locale }: { businesses: Business[];
 
   return (
     <div>
-      <div className="rounded-lg border border-[#E5E7EB] bg-white/80 p-4 shadow-[0_18px_45px_rgba(10,10,10,0.035)]">
+      <div className="rounded-md border border-[#E5E7EB] bg-white p-4 shadow-[0_18px_45px_rgba(10,10,10,0.035)]">
         <div className="mb-4 flex flex-wrap items-center gap-2">
           <span className="mr-2 text-[11px] font-black uppercase tracking-[0.12em] text-[#0A0A0A]">{c.orderedBy}</span>
           {(Object.keys(c.sort) as SortKey[]).map((key) => {
@@ -223,7 +234,7 @@ export function CategoryFilter({ businesses, locale }: { businesses: Business[];
                 key={key}
                 type="button"
                 onClick={() => updateParam("sort", key)}
-                className={`inline-flex min-h-10 items-center gap-2 rounded-md border px-3 text-[11px] font-bold uppercase tracking-[0.08em] transition ${active ? "border-ink bg-ink text-white" : "border-[#E5E7EB] bg-white text-ink hover:border-ink"}`}
+                className={`inline-flex min-h-10 items-center gap-2 rounded-full border px-3 text-[11px] font-black uppercase tracking-[0.08em] transition ${active ? "border-ink bg-ink text-white" : "border-[#E5E7EB] bg-white text-ink hover:border-ink"}`}
               >
                 <Icon size={15} stroke={1.8} />
                 {c.sort[key]}
@@ -240,7 +251,7 @@ export function CategoryFilter({ businesses, locale }: { businesses: Business[];
                 key={item}
                 type="button"
                 onClick={() => updateParam("area", item)}
-                className={`shrink-0 rounded-full border px-3 py-2 text-[11px] font-semibold ${active ? "border-verified bg-[#F9FAFB] text-verified" : "border-[#E5E7EB] bg-white text-olive hover:border-ink hover:text-ink"}`}
+                  className={`shrink-0 rounded-full border px-3 py-2 text-[11px] font-bold ${active ? "border-[#0A0A0A] bg-[#0A0A0A] text-white" : "border-[#E5E7EB] bg-white text-olive hover:border-ink hover:text-ink"}`}
               >
                 {item === ALL_AREAS ? c.allAreas : item}
               </button>
@@ -270,9 +281,9 @@ export function CategoryFilter({ businesses, locale }: { businesses: Business[];
       </div>
 
       {top && (
-        <section className="mt-8 grid overflow-hidden rounded-lg border border-[#E5E7EB] bg-white/80 shadow-[0_18px_45px_rgba(10,10,10,0.04)] lg:grid-cols-[1.35fr_1fr]">
+        <section className="mt-8 grid overflow-hidden rounded-md border border-[#0A0A0A] bg-white shadow-[0_18px_45px_rgba(10,10,10,0.06)] lg:grid-cols-[1.15fr_1fr]">
           <Link href={`/${locale}/${getCategorySlugFromBusiness(top.category)}/${top.slug}`} className="block">
-            <BusinessImage business={top} category={top.category} variant="hero" className="min-h-[280px]">
+            <BusinessImage business={top} category={top.category} variant="hero" className="min-h-[220px] sm:min-h-[280px]">
               <div className="flex flex-wrap gap-2">
                 <span className="bg-[#0A0A0A] px-3 py-1 text-[9px] font-black uppercase tracking-[0.14em] text-[#FFCC00]">{c.bestResult}</span>
                 {isUntapped(top.untappedScore) && <span className="inline-flex items-center gap-1 bg-[#F9FAFB] px-3 py-1 text-[9px] font-bold uppercase tracking-[0.14em] text-[#0A0A0A]"><IconDiamond size={12} /> {c.hiddenGem}</span>}
@@ -285,7 +296,7 @@ export function CategoryFilter({ businesses, locale }: { businesses: Business[];
             <p className="text-[10px] font-black uppercase tracking-[0.14em] text-[#0A0A0A]">{businessArea(top)}</p>
             <p className="mt-4 flex-1 text-sm leading-7 text-olive">{descriptionFor(top)}</p>
             <div className="mt-5 flex flex-wrap gap-2">
-              {getBusinessTags(top).slice(0, 4).map((item) => <span key={item} className="border border-[#E5E7EB] bg-[#FFFFFF] px-3 py-1 text-[10px] text-olive">{item}</span>)}
+              {getBusinessTags(top).filter(isUsefulPublicTag).slice(0, 4).map((item) => <span key={item} className="rounded-full border border-[#E5E7EB] bg-[#F9FAFB] px-3 py-1 text-[10px] font-bold text-[#0A0A0A]">{item}</span>)}
             </div>
             <Link href={`/${locale}/${getCategorySlugFromBusiness(top.category)}/${top.slug}`} className="mt-6 w-fit rounded-sm bg-ink px-5 py-3 text-[11px] font-bold uppercase tracking-[0.1em] text-white hover:bg-[#262626]">{c.viewProfile}</Link>
           </div>

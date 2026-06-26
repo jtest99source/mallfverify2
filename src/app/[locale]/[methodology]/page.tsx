@@ -536,7 +536,7 @@ function MethodologyPage({ locale, canonical, stats }: { locale: Locale; canonic
               <IconShieldCheck size={15} stroke={2} />
               {c.badge}
             </div>
-            <h1 className="font-display text-balance text-4xl font-black leading-[1] text-ink sm:text-5xl lg:text-6xl">{c.title}</h1>
+            <h1 className="font-display text-balance text-3xl font-black leading-[1.03] text-ink sm:text-5xl lg:text-6xl">{c.title}</h1>
             <p className="mt-5 max-w-2xl text-base leading-8 text-olive">{c.intro}</p>
           </div>
         </div>
@@ -545,13 +545,13 @@ function MethodologyPage({ locale, canonical, stats }: { locale: Locale; canonic
       <article className="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8">
         <section className="border-b border-borderline pb-10">
           <p className="mb-2 text-[11px] font-black uppercase tracking-[0.18em] text-[#0A0A0A]/30">01</p>
-          <h2 className="font-sans text-3xl font-black leading-tight">{c.whyTitle}</h2>
+          <h2 className="font-sans text-2xl font-black leading-tight sm:text-3xl">{c.whyTitle}</h2>
           <p className="mt-5 text-base leading-8 text-ink/75">{c.whyText}</p>
         </section>
 
         <section className="border-b border-borderline py-10">
           <p className="mb-2 text-[11px] font-black uppercase tracking-[0.18em] text-[#0A0A0A]/30">02</p>
-          <h2 className="font-sans text-3xl font-black leading-tight">{c.factorsTitle}</h2>
+          <h2 className="font-sans text-2xl font-black leading-tight sm:text-3xl">{c.factorsTitle}</h2>
           <p className="mt-5 text-base leading-8 text-ink/75">{c.factorsIntro}</p>
           <div className="mt-7 grid gap-4">
             {c.factors.map(([eyebrow, title, text], index) => {
@@ -574,7 +574,7 @@ function MethodologyPage({ locale, canonical, stats }: { locale: Locale; canonic
 
         <section className="border-b border-borderline py-10">
           <p className="mb-2 text-[11px] font-black uppercase tracking-[0.18em] text-[#0A0A0A]/30">03</p>
-          <h2 className="font-sans text-3xl font-black leading-tight">{c.neverTitle}</h2>
+          <h2 className="font-sans text-2xl font-black leading-tight sm:text-3xl">{c.neverTitle}</h2>
           <div className="mt-6 grid gap-4">
             {c.never.map(([title, text]) => (
               <div key={title} className="flex gap-4 rounded-lg border border-borderline bg-[#FFFFFF] p-5">
@@ -590,7 +590,7 @@ function MethodologyPage({ locale, canonical, stats }: { locale: Locale; canonic
 
         <section className="border-b border-borderline py-10">
           <p className="mb-2 text-[11px] font-black uppercase tracking-[0.18em] text-[#0A0A0A]/30">04</p>
-          <h2 className="font-sans text-3xl font-black leading-tight">{c.dataTitle}</h2>
+          <h2 className="font-sans text-2xl font-black leading-tight sm:text-3xl">{c.dataTitle}</h2>
           <p className="mt-5 text-base leading-8 text-ink/75">{c.dataText}</p>
           <div className="mt-8 grid gap-4 sm:grid-cols-3">
             {[
@@ -608,7 +608,7 @@ function MethodologyPage({ locale, canonical, stats }: { locale: Locale; canonic
 
         <section className="border-b border-borderline py-10">
           <p className="mb-2 text-[11px] font-black uppercase tracking-[0.18em] text-[#0A0A0A]/30">05</p>
-          <h2 className="font-sans text-3xl font-black leading-tight">
+          <h2 className="font-sans text-2xl font-black leading-tight sm:text-3xl">
             {locale === "en" ? "How each page works" : locale === "de" ? "Wie jede Seite funktioniert" : "Cómo funciona cada página"}
           </h2>
           <div className="mt-6 grid gap-4 sm:grid-cols-2">
@@ -627,7 +627,7 @@ function MethodologyPage({ locale, canonical, stats }: { locale: Locale; canonic
 
         <section className="pt-10">
           <p className="mb-2 text-[11px] font-black uppercase tracking-[0.18em] text-[#0A0A0A]/30">06</p>
-          <h2 className="font-sans text-3xl font-black leading-tight">{c.faqTitle}</h2>
+          <h2 className="font-sans text-2xl font-black leading-tight sm:text-3xl">{c.faqTitle}</h2>
           <div className="mt-6 divide-y divide-borderline overflow-hidden rounded-lg border border-borderline bg-[#FFFFFF]">
             {c.faqs.map(([question, answer]) => (
               <details key={question} className="group p-5">
@@ -682,7 +682,7 @@ function AboutPage({ locale, canonical, stats }: { locale: Locale; canonical: st
               <IconUsers size={15} stroke={2} />
               {c.badge}
             </div>
-            <h1 className="font-display text-balance text-4xl font-black leading-[1] text-ink sm:text-5xl lg:text-6xl">{c.title}</h1>
+            <h1 className="font-display text-balance text-3xl font-black leading-[1.03] text-ink sm:text-5xl lg:text-6xl">{c.title}</h1>
             <p className="mt-5 max-w-2xl text-base leading-8 text-olive">{c.intro}</p>
           </div>
         </div>
@@ -690,17 +690,17 @@ function AboutPage({ locale, canonical, stats }: { locale: Locale; canonical: st
 
       <article className="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8">
         <section className="border-b border-borderline pb-10">
-          <h2 className="font-sans text-3xl font-black leading-tight">{c.whyTitle}</h2>
+          <h2 className="font-sans text-2xl font-black leading-tight sm:text-3xl">{c.whyTitle}</h2>
           <p className="mt-5 text-base leading-8 text-ink/75">{c.whyText}</p>
         </section>
 
         <section className="border-b border-borderline py-10">
-          <h2 className="font-sans text-3xl font-black leading-tight">{c.teamTitle}</h2>
+          <h2 className="font-sans text-2xl font-black leading-tight sm:text-3xl">{c.teamTitle}</h2>
           <p className="mt-5 text-base leading-8 text-ink/75">{c.teamText}</p>
         </section>
 
         <section className="border-b border-borderline py-10">
-          <h2 className="font-sans text-3xl font-black leading-tight">{c.principlesTitle}</h2>
+          <h2 className="font-sans text-2xl font-black leading-tight sm:text-3xl">{c.principlesTitle}</h2>
           <div className="mt-7 grid gap-4 sm:grid-cols-2">
             {c.principles.map(([title, text], index) => {
               const Icon = principleIcons[index] ?? IconShieldCheck;
@@ -786,7 +786,7 @@ function EditorialPage({ locale, canonical }: { locale: Locale; canonical: strin
               <IconShieldCheck size={15} stroke={2} />
               {c.badge}
             </div>
-            <h1 className="font-display text-balance text-4xl font-black leading-[1] text-ink sm:text-5xl lg:text-6xl">{c.title}</h1>
+            <h1 className="font-display text-balance text-3xl font-black leading-[1.03] text-ink sm:text-5xl lg:text-6xl">{c.title}</h1>
             <p className="mt-5 max-w-2xl text-base leading-8 text-olive">{c.intro}</p>
           </div>
         </div>
@@ -794,7 +794,7 @@ function EditorialPage({ locale, canonical }: { locale: Locale; canonical: strin
 
       <article className="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8">
         <section className="border-b border-borderline pb-10">
-          <h2 className="font-sans text-3xl font-black leading-tight">{c.criteriaTitle}</h2>
+          <h2 className="font-sans text-2xl font-black leading-tight sm:text-3xl">{c.criteriaTitle}</h2>
           <div className="mt-6 grid gap-4">
             {c.criteria.map(([title, text]) => (
               <div key={title} className="rounded-lg border border-borderline bg-white p-5 shadow-[0_4px_18px_rgba(10,10,10,0.04)]">
@@ -806,7 +806,7 @@ function EditorialPage({ locale, canonical }: { locale: Locale; canonical: strin
         </section>
 
         <section className="border-b border-borderline py-10">
-          <h2 className="font-sans text-3xl font-black leading-tight">{c.sourcesTitle}</h2>
+          <h2 className="font-sans text-2xl font-black leading-tight sm:text-3xl">{c.sourcesTitle}</h2>
           <p className="mt-5 text-base leading-8 text-ink/75">{c.sourcesText}</p>
           <div className="mt-6 grid gap-4">
             {c.sources.map(([title, text]) => (
@@ -822,7 +822,7 @@ function EditorialPage({ locale, canonical }: { locale: Locale; canonical: strin
         </section>
 
         <section className="border-b border-borderline py-10">
-          <h2 className="font-sans text-3xl font-black leading-tight">{c.updateTitle}</h2>
+          <h2 className="font-sans text-2xl font-black leading-tight sm:text-3xl">{c.updateTitle}</h2>
           <p className="mt-5 text-base leading-8 text-ink/75">{c.updateText}</p>
           <div className="mt-6 grid gap-4">
             {c.updates.map(([title, text]) => (
@@ -838,7 +838,7 @@ function EditorialPage({ locale, canonical }: { locale: Locale; canonical: strin
         </section>
 
         <section className="border-b border-borderline py-10">
-          <h2 className="font-sans text-3xl font-black leading-tight">{c.separationTitle}</h2>
+          <h2 className="font-sans text-2xl font-black leading-tight sm:text-3xl">{c.separationTitle}</h2>
           <p className="mt-5 text-base leading-8 text-ink/75">{c.separationText}</p>
           <div className="mt-6 grid gap-4">
             {c.separations.map(([title, text]) => (

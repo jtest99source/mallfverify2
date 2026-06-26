@@ -129,20 +129,21 @@ function RankingBusinessRow({
   const summary = summaryFor(business);
 
   return (
-    <article className="group overflow-hidden rounded-lg border border-[#0A0A0A] bg-white shadow-[0_14px_34px_rgba(10,10,10,0.08)] transition-all duration-150 hover:-translate-y-0.5 hover:shadow-[0_20px_44px_rgba(10,10,10,0.14)]">
-      <Link href={`/${locale}/${categorySlug}/${business.slug}`} className="grid min-h-[134px] grid-cols-[42px_minmax(0,1fr)] sm:grid-cols-[50px_210px_minmax(0,1fr)] lg:grid-cols-[54px_250px_minmax(0,1fr)]">
-        <div className="flex items-start justify-center bg-[#111111] px-2 py-4">
-            <span className="inline-flex h-7 min-w-7 items-center justify-center rounded bg-[#0A0A0A] px-2 text-[11px] font-black text-white ring-1 ring-white/15">#{rank}</span>
-        </div>
-
-        <div className="relative hidden min-h-[134px] overflow-hidden sm:block">
-          <BusinessImage business={business} category={business.category} variant="card" className="h-full min-h-[134px] p-0" />
-          <div className="absolute right-2 top-2 hidden sm:block">
+    <article className="group overflow-hidden rounded-md border border-[#0A0A0A] bg-white shadow-[0_12px_30px_rgba(10,10,10,0.07)] transition-all duration-150 hover:-translate-y-0.5 hover:shadow-[0_20px_44px_rgba(10,10,10,0.13)]">
+      <Link href={`/${locale}/${categorySlug}/${business.slug}`} className="grid min-h-[124px] grid-cols-[82px_minmax(0,1fr)] sm:grid-cols-[46px_220px_minmax(0,1fr)] lg:grid-cols-[50px_250px_minmax(0,1fr)]">
+        <div className="relative min-h-[124px] overflow-hidden sm:order-2">
+          <BusinessImage business={business} category={business.category} variant="card" className="h-full min-h-[124px] p-0" />
+          <span className="absolute left-2 top-2 inline-flex h-7 min-w-7 items-center justify-center rounded-sm bg-[#0A0A0A] px-2 text-[11px] font-black text-white ring-1 ring-white/20 sm:hidden">#{rank}</span>
+          <div className="absolute bottom-2 left-2 hidden sm:block">
             <RatingBadge rating={business.rating} reviewsCount={business.reviewsCount} locale={locale} compact />
           </div>
         </div>
 
-        <div className="min-w-0 p-4 sm:p-4 lg:px-5">
+        <div className="hidden items-start justify-center bg-[#0A0A0A] px-2 py-4 sm:order-1 sm:flex">
+          <span className="inline-flex h-7 min-w-7 items-center justify-center rounded-sm bg-white px-2 text-[11px] font-black text-[#0A0A0A]">#{rank}</span>
+        </div>
+
+        <div className="min-w-0 p-4 sm:order-3 sm:p-4 lg:px-5">
           <div className="flex min-w-0 flex-wrap items-center gap-2">
             {showCategory && categoryLabel && (
               <span className="rounded-full border border-[#E5E7EB] bg-[#F9FAFB] px-2.5 py-1 text-[9px] font-black uppercase tracking-[0.08em] text-[#0A0A0A]">
@@ -155,7 +156,7 @@ function RankingBusinessRow({
             </span>
           </div>
 
-          <h2 className="mt-2 line-clamp-2 text-lg font-black leading-tight text-[#0A0A0A] sm:text-xl">{getBusinessPublicName(business)}</h2>
+          <h2 className="mt-2 line-clamp-2 text-[19px] font-black leading-[1.05] text-[#0A0A0A] sm:text-xl">{getBusinessPublicName(business)}</h2>
           {summary && <p className="mt-1.5 hidden max-w-2xl text-sm leading-6 text-[#6B7280] lg:line-clamp-1">{summary}</p>}
           {address && (
             <p className="mt-2 flex max-w-2xl gap-1.5 text-xs leading-5 text-[#6B7280] sm:text-sm">
