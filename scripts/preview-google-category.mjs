@@ -56,16 +56,33 @@ function mapPlace(place, businessCategory) {
 }
 
 function passesFilters(place, config) {
-  return Boolean(
-    place.google_place_id &&
-      place.name &&
-      place.business_status !== "CLOSED_PERMANENTLY" &&
-      place.business_status !== "CLOSED_TEMPORARILY" &&
-      typeof place.rating === "number" &&
-      typeof place.reviews_count === "number" &&
-      place.rating >= config.minRating &&
-      place.reviews_count >= config.minReviews
-  );
+  if (
+    !place.google_place_id ||
+    !place.name ||
+    place.business_status === "CLOSED_PERMANENTLY" ||
+    place.business_status === "CLOSED_TEMPORARILY" ||
+    typeof place.rating !== "number" ||
+    typeof place.reviews_count !== "number" ||
+    place.rating < config.minRating ||
+    place.reviews_count < config.minReviews
+  ) return false;
+
+  if (config.blockedTypes?.length) {
+    const allTypes = [place.primary_type, ...(place.types ?? [])].filter(Boolean);
+    if (config.blockedTypes.some((bt) => allTypes.includes(bt))) return false;
+  }
+
+  if (config.requiredTypes?.length) {
+    const allTypes = [place.primary_type, ...(place.types ?? [])].filter(Boolean);
+    if (!config.requiredTypes.some((rt) => allTypes.includes(rt))) return false;
+  }
+
+  if (config.blockedNameKeywords?.length) {
+    const nameLower = (place.name ?? "").toLowerCase();
+    if (config.blockedNameKeywords.some((kw) => nameLower.includes(kw.toLowerCase()))) return false;
+  }
+
+  return true;
 }
 
 async function searchPlaces(apiKey, textQuery) {

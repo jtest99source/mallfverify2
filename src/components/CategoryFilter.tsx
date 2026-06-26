@@ -223,9 +223,9 @@ export function CategoryFilter({ businesses, locale }: { businesses: Business[];
 
   return (
     <div>
-      <div className="rounded-md border border-[#E5E7EB] bg-white p-4 shadow-[0_18px_45px_rgba(10,10,10,0.035)]">
+      <div className="rounded-sm border border-white/[0.10] bg-[#101010] p-4 shadow-[0_18px_45px_rgba(0,0,0,0.22)]">
         <div className="mb-4 flex flex-wrap items-center gap-2">
-          <span className="mr-2 text-[11px] font-black uppercase tracking-[0.12em] text-[#0A0A0A]">{c.orderedBy}</span>
+          <span className="mr-2 text-[11px] font-black uppercase tracking-[0.12em] text-white/52">{c.orderedBy}</span>
           {(Object.keys(c.sort) as SortKey[]).map((key) => {
             const active = sort === key;
             const Icon = sortIcons[key];
@@ -234,7 +234,7 @@ export function CategoryFilter({ businesses, locale }: { businesses: Business[];
                 key={key}
                 type="button"
                 onClick={() => updateParam("sort", key)}
-                className={`inline-flex min-h-10 items-center gap-2 rounded-full border px-3 text-[11px] font-black uppercase tracking-[0.08em] transition ${active ? "border-ink bg-ink text-white" : "border-[#E5E7EB] bg-white text-ink hover:border-ink"}`}
+                className={`inline-flex min-h-10 items-center gap-2 rounded-sm border px-3 text-[11px] font-black uppercase tracking-[0.08em] transition ${active ? "border-[#FFCC00] bg-[#FFCC00] text-[#0A0A0A]" : "border-white/[0.10] bg-[#050505] text-white/70 hover:border-[#FFCC00]/70 hover:text-white"}`}
               >
                 <Icon size={15} stroke={1.8} />
                 {c.sort[key]}
@@ -251,7 +251,7 @@ export function CategoryFilter({ businesses, locale }: { businesses: Business[];
                 key={item}
                 type="button"
                 onClick={() => updateParam("area", item)}
-                  className={`shrink-0 rounded-full border px-3 py-2 text-[11px] font-bold ${active ? "border-[#0A0A0A] bg-[#0A0A0A] text-white" : "border-[#E5E7EB] bg-white text-olive hover:border-ink hover:text-ink"}`}
+                  className={`shrink-0 rounded-sm border px-3 py-2 text-[11px] font-bold ${active ? "border-[#FFCC00] bg-[#FFCC00] text-[#0A0A0A]" : "border-white/[0.10] bg-[#050505] text-white/64 hover:border-[#FFCC00]/70 hover:text-white"}`}
               >
                 {item === ALL_AREAS ? c.allAreas : item}
               </button>
@@ -260,28 +260,28 @@ export function CategoryFilter({ businesses, locale }: { businesses: Business[];
         </div>
 
         <div className="grid gap-3 lg:grid-cols-[1.2fr_1fr_auto] lg:items-end">
-          <label className="grid gap-1 text-[11px] font-black uppercase tracking-[0.1em] text-[#0A0A0A]">
+          <label className="grid gap-1 text-[11px] font-black uppercase tracking-[0.1em] text-white/52">
             {c.search}
             <input
               value={query}
               onChange={(event) => updateParam("q", event.target.value)}
               placeholder={c.searchPlaceholder}
-              className="border-[#E5E7EB] bg-[#FFFFFF] text-sm font-normal normal-case tracking-normal text-ink focus:border-ink focus:ring-ink"
+              className="border-white/[0.12] bg-[#050505] text-sm font-normal normal-case tracking-normal text-white placeholder:text-white/34 focus:border-[#FFCC00] focus:ring-[#FFCC00]"
             />
           </label>
-          <label className="grid gap-1 text-[11px] font-black uppercase tracking-[0.1em] text-[#0A0A0A]">
+          <label className="grid gap-1 text-[11px] font-black uppercase tracking-[0.1em] text-white/52">
             {c.style}
-            <select value={tag} onChange={(event) => updateParam("tag", event.target.value)} className="border-[#E5E7EB] bg-[#FFFFFF] text-sm font-normal normal-case tracking-normal text-ink focus:border-ink focus:ring-ink">
+            <select value={tag} onChange={(event) => updateParam("tag", event.target.value)} className="border-white/[0.12] bg-[#050505] text-sm font-normal normal-case tracking-normal text-white focus:border-[#FFCC00] focus:ring-[#FFCC00] [&_option]:text-[#0A0A0A]">
               <option value={ALL_TAGS}>{c.allStyles}</option>
               {tags.map((item) => <option key={item} value={item}>{item}</option>)}
             </select>
           </label>
-          <span className="text-[11px] font-black uppercase tracking-[0.1em] text-[#0A0A0A] lg:pb-3">{filtered.length.toLocaleString(numberLocale(locale))} {c.results}</span>
+          <span className="text-[11px] font-black uppercase tracking-[0.1em] text-white/58 lg:pb-3">{filtered.length.toLocaleString(numberLocale(locale))} {c.results}</span>
         </div>
       </div>
 
       {top && (
-        <section className="mt-8 grid overflow-hidden rounded-md border border-[#0A0A0A] bg-white shadow-[0_18px_45px_rgba(10,10,10,0.06)] lg:grid-cols-[1.15fr_1fr]">
+        <section className="mt-8 grid overflow-hidden rounded-sm border border-white/[0.10] bg-[#101010] shadow-[0_18px_45px_rgba(0,0,0,0.24)] lg:grid-cols-[1.15fr_1fr]">
           <Link href={`/${locale}/${getCategorySlugFromBusiness(top.category)}/${top.slug}`} className="block">
             <BusinessImage business={top} category={top.category} variant="hero" className="min-h-[220px] sm:min-h-[280px]">
               <div className="flex flex-wrap gap-2">
@@ -293,28 +293,28 @@ export function CategoryFilter({ businesses, locale }: { businesses: Business[];
             </BusinessImage>
           </Link>
           <div className="flex flex-col p-8">
-            <p className="text-[10px] font-black uppercase tracking-[0.14em] text-[#0A0A0A]">{businessArea(top)}</p>
-            <p className="mt-4 flex-1 text-sm leading-7 text-olive">{descriptionFor(top)}</p>
+            <p className="text-[10px] font-black uppercase tracking-[0.14em] text-[#FFCC00]">{businessArea(top)}</p>
+            <p className="mt-4 flex-1 text-sm leading-7 text-white/66">{descriptionFor(top)}</p>
             <div className="mt-5 flex flex-wrap gap-2">
-              {getBusinessTags(top).filter(isUsefulPublicTag).slice(0, 4).map((item) => <span key={item} className="rounded-full border border-[#E5E7EB] bg-[#F9FAFB] px-3 py-1 text-[10px] font-bold text-[#0A0A0A]">{item}</span>)}
+              {getBusinessTags(top).filter(isUsefulPublicTag).slice(0, 4).map((item) => <span key={item} className="rounded-sm border border-white/[0.10] bg-white/[0.04] px-3 py-1 text-[10px] font-bold text-white/74">{item}</span>)}
             </div>
-            <Link href={`/${locale}/${getCategorySlugFromBusiness(top.category)}/${top.slug}`} className="mt-6 w-fit rounded-sm bg-ink px-5 py-3 text-[11px] font-bold uppercase tracking-[0.1em] text-white hover:bg-[#262626]">{c.viewProfile}</Link>
+            <Link href={`/${locale}/${getCategorySlugFromBusiness(top.category)}/${top.slug}`} className="mt-6 w-fit rounded-sm bg-[#FFCC00] px-5 py-3 text-[11px] font-bold uppercase tracking-[0.1em] text-[#0A0A0A] hover:bg-white">{c.viewProfile}</Link>
           </div>
         </section>
       )}
 
-      <div className="mt-10 pb-3 text-[10px] font-black uppercase tracking-[0.14em] text-[#0A0A0A]">{c.allResults}</div>
+      <div className="mt-10 pb-3 text-[10px] font-black uppercase tracking-[0.14em] text-[#FFCC00]">{c.allResults}</div>
       {filtered.length > 0 ? (
         <div className="mt-3 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {visibleBusinesses.map((business) => <BusinessCard key={business.id} business={business} locale={locale} />)}
         </div>
       ) : (
-        <div className="mt-3 rounded-lg border border-[#E5E7EB] bg-white/85 p-5 text-sm text-olive">
+        <div className="mt-3 rounded-sm border border-white/[0.10] bg-[#101010] p-5 text-sm text-white/68">
           <p>{c.noResults}</p>
           <button
             type="button"
             onClick={clearFilters}
-            className="mt-4 min-h-10 rounded-md border border-[#E5E7EB] bg-white px-4 text-[11px] font-bold uppercase tracking-[0.1em] text-ink transition hover:border-[#0A0A0A] hover:text-[#0A0A0A]"
+            className="mt-4 min-h-10 rounded-sm border border-[#FFCC00] bg-[#FFCC00] px-4 text-[11px] font-bold uppercase tracking-[0.1em] text-[#0A0A0A] transition hover:bg-white"
           >
             {c.clearFilters}
           </button>
@@ -323,12 +323,12 @@ export function CategoryFilter({ businesses, locale }: { businesses: Business[];
 
       {filtered.length > PAGE_SIZE && (
         <div className="mt-8 flex flex-col items-center gap-3">
-          <p className="text-[11px] font-black uppercase tracking-[0.1em] text-[#0A0A0A]">{c.showing(shownCount, totalCount)}</p>
+          <p className="text-[11px] font-black uppercase tracking-[0.1em] text-white/56">{c.showing(shownCount, totalCount)}</p>
           {hasMore && (
             <button
               type="button"
               onClick={() => setVisibleCount((value) => Math.min(value + PAGE_SIZE, filtered.length))}
-              className="min-h-11 rounded-md border border-[#0A0A0A] bg-[#0A0A0A] px-6 text-[11px] font-black uppercase tracking-[0.1em] text-[#FFFFFF] shadow-[0_14px_30px_rgba(10,10,10,0.18)] transition hover:-translate-y-0.5 hover:bg-[#262626]"
+              className="min-h-11 rounded-sm border border-[#FFCC00] bg-[#FFCC00] px-6 text-[11px] font-black uppercase tracking-[0.1em] text-[#0A0A0A] shadow-[0_14px_30px_rgba(255,204,0,0.12)] transition hover:-translate-y-0.5 hover:bg-white"
             >
               {c.loadMore}
             </button>

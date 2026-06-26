@@ -484,42 +484,42 @@ function categoryEditorialGuidance(category: string) {
   }> = {
     restaurant: {
       angle: "Restaurante: describe cocina, ambiente, servicio y tipo de plan. Si hay menciones claras, distingue entre comida tranquila, cena especial, tapeo, terraza, vistas o plan familiar.",
-      faqExamples: ["Â¿Para quÃ© plan encaja?", "Â¿Es buena opciÃ³n para cenar?", "Â¿El ambiente es tranquilo o animado?", "Â¿Conviene reservar?"],
+      faqExamples: ["¿Para qué plan encaja?", "¿Es buena opción para cenar?", "¿El ambiente es tranquilo o animado?", "¿Conviene reservar?"],
       avoidFaq: "No preguntes por barcos, habitaciones, parking de playa o licencia.",
       sentimentExample: '{ "ambiente": 0-100, "servicio": 0-100, "comida": 0-100, "valor_precio": 0-100 }',
-      serviceExample: '[{ "label": "Terraza", "icon": "sun" }, { "label": "CÃ³cteles", "icon": "glass-cocktail" }]'
+      serviceExample: '[{ "label": "Terraza", "icon": "sun" }, { "label": "Cócteles", "icon": "glass-cocktail" }]'
     },
     "beach-club": {
       angle: "Beach club: describe ambiente, musica, vistas, tumbonas o zona de playa/piscina, comida, cocteles y si encaja mas para comer, tomar algo o alargar la tarde.",
-      faqExamples: ["Â¿Para quÃ© plan encaja?", "Â¿Encaja mÃ¡s para comer o para tomar algo?", "Â¿El ambiente es tranquilo o animado?", "Â¿Es buena opciÃ³n para ir en pareja?"],
+      faqExamples: ["¿Para qué plan encaja?", "¿Encaja más para comer o para tomar algo?", "¿El ambiente es tranquilo o animado?", "¿Es buena opción para ir en pareja?"],
       avoidFaq: "No preguntes por licencia nautica, habitaciones de hotel o senderismo.",
       sentimentExample: '{ "ambiente": 0-100, "servicio": 0-100, "comida_bebida": 0-100, "ubicacion": 0-100 }',
-      serviceExample: '[{ "label": "Tumbonas", "icon": "umbrella" }, { "label": "CÃ³cteles", "icon": "glass-cocktail" }]'
+      serviceExample: '[{ "label": "Tumbonas", "icon": "umbrella" }, { "label": "Cócteles", "icon": "glass-cocktail" }]'
     },
     hotel: {
       angle: "Hotel: describe tipo de estancia, ubicacion, descanso, habitaciones, desayuno, piscina/spa si aparecen, trato y para quien encaja: pareja, familia, adultos, escapada o viaje comodo.",
-      faqExamples: ["Â¿Para quÃ© tipo de estancia encaja?", "Â¿Es buena opciÃ³n para ir en pareja?", "Â¿QuÃ© destaca de las habitaciones o instalaciones?", "Â¿La ubicaciÃ³n es cÃ³moda?"],
+      faqExamples: ["¿Para qué tipo de estancia encaja?", "¿Es buena opción para ir en pareja?", "¿Qué destaca de las habitaciones o instalaciones?", "¿La ubicación es cómoda?"],
       avoidFaq: "No preguntes por shisha, licencias nauticas ni si se puede tomar algo salvo que sea un hotel-restaurante claro.",
       sentimentExample: '{ "descanso": 0-100, "servicio": 0-100, "habitaciones": 0-100, "ubicacion": 0-100 }',
       serviceExample: '[{ "label": "Piscina", "icon": "pool" }, { "label": "Spa", "icon": "massage" }]'
     },
     "boat-rental": {
       angle: "Alquiler de barcos: describe confianza, trato, estado del barco, rutas, facilidad de reserva, patron/skipper, grupos y si encaja para familia, pareja o dia con amigos.",
-      faqExamples: ["Â¿Se puede ir con patrÃ³n?", "Â¿Hace falta licencia?", "Â¿Para quÃ© tipo de grupo encaja?", "Â¿QuÃ© conviene confirmar antes de reservar?"],
+      faqExamples: ["¿Se puede ir con patrón?", "¿Hace falta licencia?", "¿Para qué tipo de grupo encaja?", "¿Qué conviene confirmar antes de reservar?"],
       avoidFaq: "No preguntes por comida, habitaciones, tumbonas o ambiente de restaurante salvo que las resenas lo mencionen claramente.",
       sentimentExample: '{ "trato": 0-100, "barcos": 0-100, "reserva": 0-100, "experiencia": 0-100 }',
-      serviceExample: '[{ "label": "PatrÃ³n", "icon": "sailboat" }, { "label": "Rutas privadas", "icon": "map-route" }]'
+      serviceExample: '[{ "label": "Patrón", "icon": "sailboat" }, { "label": "Rutas privadas", "icon": "map-route" }]'
     },
     activity: {
       angle: "Actividad: describe experiencia, organizacion, guia/instructor, dificultad, duracion si aparece, seguridad y para quien encaja: parejas, familias, grupos o viajeros activos.",
-      faqExamples: ["Â¿Para quiÃ©n encaja la actividad?", "Â¿Es una experiencia tranquila o activa?", "Â¿Conviene reservar con antelaciÃ³n?", "Â¿QuÃ© hay que tener en cuenta antes de ir?"],
+      faqExamples: ["¿Para quién encaja la actividad?", "¿Es una experiencia tranquila o activa?", "¿Conviene reservar con antelación?", "¿Qué hay que tener en cuenta antes de ir?"],
       avoidFaq: "No preguntes por habitaciones, precio de carta, tumbonas o licencia nautica salvo que sea una actividad nautica y aparezca en los datos.",
       sentimentExample: '{ "experiencia": 0-100, "organizacion": 0-100, "guia": 0-100, "seguridad": 0-100 }',
-      serviceExample: '[{ "label": "GuÃ­a", "icon": "user-star" }, { "label": "Reserva", "icon": "calendar" }]'
+      serviceExample: '[{ "label": "Guía", "icon": "user-star" }, { "label": "Reserva", "icon": "calendar" }]'
     },
     beach: {
       angle: "Playa o cala: describe paisaje, tipo de acceso, ambiente, servicios, agua, arena/roca, parking si aparece y para quien encaja: familias, snorkel, paseo, fotos o tranquilidad.",
-      faqExamples: ["Â¿QuÃ© tipo de playa es?", "Â¿Es cÃ³moda para ir en familia?", "Â¿CÃ³mo es el acceso?", "Â¿Hay servicios cerca?"],
+      faqExamples: ["¿Qué tipo de playa es?", "¿Es cómoda para ir en familia?", "¿Cómo es el acceso?", "¿Hay servicios cerca?"],
       avoidFaq: "No preguntes por reservas, shisha, habitaciones o patron.",
       sentimentExample: '{ "paisaje": 0-100, "acceso": 0-100, "servicios": 0-100, "tranquilidad": 0-100 }',
       serviceExample: '[{ "label": "Parking", "icon": "parking" }, { "label": "Snorkel", "icon": "swimming" }]'
@@ -529,7 +529,7 @@ function categoryEditorialGuidance(category: string) {
   const contractCategory = attributeContractCategory(category as BusinessCategory);
   return guidance[category] ?? guidance[contractCategory] ?? {
     angle: "Negocio local: describe caracter, trato, ubicacion, tipo de plan y para quien encaja.",
-    faqExamples: ["Â¿Para quÃ© plan encaja?", "Â¿QuÃ© conviene confirmar antes de ir?", "Â¿El ambiente es tranquilo o animado?"],
+    faqExamples: ["¿Para qué plan encaja?", "¿Qué conviene confirmar antes de ir?", "¿El ambiente es tranquilo o animado?"],
     avoidFaq: "No uses preguntas que no encajen con la categoria.",
     sentimentExample: '{ "ambiente": 0-100, "servicio": 0-100, "experiencia": 0-100 }',
     serviceExample: '[{ "label": "Reserva", "icon": "calendar" }]'
@@ -759,10 +759,10 @@ function truncateForPrompt(value: string, maxChars = REVIEW_PROMPT_MAX_CHARS) {
 function priceLevelNumber(priceLevel?: string | null) {
   if (!priceLevel) return null;
   const normalized = priceLevel.trim();
-  if (normalized.includes("â‚¬â‚¬â‚¬â‚¬")) return 4;
-  if (normalized.includes("â‚¬â‚¬â‚¬")) return 3;
-  if (normalized.includes("â‚¬â‚¬")) return 2;
-  if (normalized.includes("â‚¬")) return 1;
+  if (normalized.includes("€€€€")) return 4;
+  if (normalized.includes("€€€")) return 3;
+  if (normalized.includes("€€")) return 2;
+  if (normalized.includes("€")) return 1;
   return null;
 }
 
@@ -941,9 +941,9 @@ Reglas:
 - beach-club.daybed_or_pool_facilities: rellena solo si aparecen tumbonas, hamacas, daybeds, camas balinesas, piscina o facilities equivalentes. Si solo hay terraza/playa/comida, usa [].
 - Para categoria beach: no uses vocabulario de negocio como servicio atento, carta, cocina o clientes. Habla de paisaje, agua, arena/roca, acceso, aparcamiento, servicios publicos, alquileres, masificacion y mejor momento. nearby_food solo si aparecen bares/restaurantes cercanos.
 - price_estimate: solo si las resenas o price_estimate_places mencionan importes o gasto concreto. Usa amount_min/amount_max/currency/unit/label/source/confidence/note/reported_by. No generes precio a partir de opiniones subjetivas como caro, barato o mala relacion calidad-precio. Si no hay importes o rango claro, devuelve null. No derives rangos desde price_level_places.
-- services: extrae 5-8 servicios, detalles o atributos mencionados por resenas si existen. Iconos de Tabler sin prefijo y reales; si dudas usa point. No devuelvas solo 2 si hay mas seÃ±ales claras.
+- services: extrae 5-8 servicios, detalles o atributos mencionados por resenas si existen. Iconos de Tabler sin prefijo y reales; si dudas usa point. No devuelvas solo 2 si hay mas señales claras.
 - featured_reviews: 2-3 resenas representativas, recientes y con texto sustancial. Trunca a unas 260 letras. Asigna topic corto y lang. Si lang no es "es", traduce el texto al espanol en text_translated y pon translated_from con el lang original. Si ya esta en espanol, text_translated=null.
-- faq: preguntas que una persona se haria antes de decidir si ir, adaptadas a la categoria. Usa los ejemplos de "Enfoque editorial por categoria" como orientacion, pero no copies preguntas que no esten respaldadas por datos. Escribe en espanol correcto, con signos de apertura y cierre. Evita preguntas de inventario salvo que el detalle sea un factor diferencial importante. Nada de "Â¿Donde esta X?", "Â¿Que tipo de sitio es X?" o preguntas de relleno. Responde con tono directo, sin repetir "las resenas dicen"; minimo 3, maximo 5; si no hay datos suficientes, devuelve menos.
+- faq: preguntas que una persona se haria antes de decidir si ir, adaptadas a la categoria. Usa los ejemplos de "Enfoque editorial por categoria" como orientacion, pero no copies preguntas que no esten respaldadas por datos. Escribe en espanol correcto, con signos de apertura y cierre. Evita preguntas de inventario salvo que el detalle sea un factor diferencial importante. Nada de "¿Donde esta X?", "¿Que tipo de sitio es X?" o preguntas de relleno. Responde con tono directo, sin repetir "las resenas dicen"; minimo 3, maximo 5; si no hay datos suficientes, devuelve menos.
 - Prohibido inventar horarios, servicios, precios concretos o condiciones no respaldadas. La ausencia de informacion sobre precio, reservas u horarios no es un punto negativo.
 - Tienes tambien la descripcion que el propio negocio publica en business_self_description. Usala SOLO para extraer datos factuales como concepto, cocina, ubicacion o servicios. NO copies su tono promocional ni adjetivos publicitarios como "experiencia unica", "los mejores" o "exquisito". La opinion editorial debe basarse principalmente en resenas reales.
 `.trim();
@@ -1062,7 +1062,7 @@ function parseJsonObject(text: string) {
 function truncateText(value: string, maxLength: number) {
   const normalized = value.replace(/\s+/g, " ").trim();
   if (normalized.length <= maxLength) return normalized;
-  return `${normalized.slice(0, Math.max(0, maxLength - 1)).trimEnd()}â€¦`;
+  return `${normalized.slice(0, Math.max(0, maxLength - 1)).trimEnd()}…`;
 }
 
 function sanitizeStringArrays(value: unknown): unknown {

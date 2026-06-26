@@ -38,8 +38,8 @@ async function getPublishedSlugs() {
 }
 
 const CATEGORIES = [
-  'restaurants','hotels','beach-clubs','boats','activities',
-  'beaches','bars','cafes','bakeries','spas','gyms','rent-a-car','routes','excursions'
+  'restaurants','hotels','beach-clubs','bars','cafes','nightlife',
+  'activities','boats','rent-a-car','car-dealers','spas','healthcare','real-estate'
 ]
 
 function categoryPath(cat) {

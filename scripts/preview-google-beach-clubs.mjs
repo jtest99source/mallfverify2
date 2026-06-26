@@ -126,7 +126,7 @@ function passesFilters(place) {
       typeof place.rating === "number" &&
       typeof place.reviews_count === "number" &&
       place.rating >= 4.0 &&
-      place.reviews_count >= 20
+      place.reviews_count >= 30
   );
 }
 

@@ -162,8 +162,8 @@ function passesFilters(place) {
       place.business_status !== "CLOSED_TEMPORARILY" &&
       typeof place.rating === "number" &&
       typeof place.reviews_count === "number" &&
-      place.rating >= 4.2 &&
-      place.reviews_count >= 20
+      place.rating >= 4.3 &&
+      place.reviews_count >= 15
   );
 }
 

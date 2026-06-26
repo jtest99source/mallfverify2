@@ -49,7 +49,15 @@ const DIRECT_IMAGE_OVERRIDES: Record<string, string> = {
   "illeta-camp-de-mar":
     "https://lh3.googleusercontent.com/place-photos/AJRVUZOUKjISFZlFHX6Nyh6myuMTvL5jvUv8zg7RykqUdG3dlsNWMHmGy3vIK0rqLMIRjHumvsoLrJM7I2CnTvyQYq2rx-zIX3YkqZ1uh5aYA4Il4neOu85H3_Hl_7ZC48H-f5TPqcQcP3JTqdLHR0cKZyGe=s4800-w1600",
   "restaurante-illeta":
-    "https://lh3.googleusercontent.com/place-photos/AJRVUZOUKjISFZlFHX6Nyh6myuMTvL5jvUv8zg7RykqUdG3dlsNWMHmGy3vIK0rqLMIRjHumvsoLrJM7I2CnTvyQYq2rx-zIX3YkqZ1uh5aYA4Il4neOu85H3_Hl_7ZC48H-f5TPqcQcP3JTqdLHR0cKZyGe=s4800-w1600"
+    "https://lh3.googleusercontent.com/place-photos/AJRVUZOUKjISFZlFHX6Nyh6myuMTvL5jvUv8zg7RykqUdG3dlsNWMHmGy3vIK0rqLMIRjHumvsoLrJM7I2CnTvyQYq2rx-zIX3YkqZ1uh5aYA4Il4neOu85H3_Hl_7ZC48H-f5TPqcQcP3JTqdLHR0cKZyGe=s4800-w1600",
+  "krishna-curry-bar-santa-catalina":
+    "https://lh3.googleusercontent.com/place-photos/AJRVUZPp6opAy-ORtwaq5tPQkLskodQbVEDDzXAdK11WgsUQtZahchKLqqUgs_isbg_OZjPffPVovwwy-_TNKreUc_zpe1AVVE_dvvIC-R4tqJpQVIfjwVEH_ShcD_OD2pYiiJVhb3JxykHk-3f3=s4800-w1600",
+  "wiber-rent-a-car-mallorca":
+    "https://lh3.googleusercontent.com/place-photos/AJRVUZPDF4AOow4Rqn27Me6kVp6uC1Tw-gTtulFEhGj7HXHl0yZgTxJMOq_1SbwoQtDxXIWLUFQb_AVZEJvijgcPw-M1_KYydcioUxoldYSvV2VtjkOXL6SDRR-_LF47vM-nD2p9t7g3Z_tGRpBl_jk=s4800-w1600",
+  "centauro-alquiler-de-coches":
+    "https://lh3.googleusercontent.com/place-photos/AJRVUZPUEAUSlvnGZheBfUvK7-38YnC-nNr6WgqWQGfoojxUt5yg05e3_mOzYC2LtjZC8YkxmYvOeWkpurVLXa2Y-5S2pPLoWDtYSeqOSZxzrxEHhzKRfWmo8sjZUMp9EAxqGMKAh8Z76jryac2pAA=s4800-w1536",
+  "europcar-mallorca-palma-aeropuerto":
+    "https://lh3.googleusercontent.com/place-photos/AJRVUZNdviz0Is1RiHp8tE9J6I7OiAoet_CbXjRFpHWX-kTQYe1WsVj-2sylprCI0lzjOXnM-ZaGi5Z1wFO5mknoAXYoR0x5BoUlZHT_f-YC5S8M5SVplRPoepEAjNzRP9Z-q1XpFgj1m7a7nOTj2vDzw9TU=s4800-w480"
 };
 
 const GALLERY_INDEX_OVERRIDES: Record<string, number[]> = {
@@ -58,7 +66,8 @@ const GALLERY_INDEX_OVERRIDES: Record<string, number[]> = {
 
 function hasRealBusinessImage(image?: string) {
   if (!image) return false;
-  return !image.includes("placeholder") && !image.endsWith(".svg");
+  const normalized = image.trim().toLowerCase();
+  return !normalized.includes("placeholder") && !normalized.endsWith(".svg") && !normalized.endsWith("/null") && !normalized.endsWith("/undefined");
 }
 
 export function getBusinessImageUrl(business: Business) {

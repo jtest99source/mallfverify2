@@ -24,6 +24,14 @@ function argValue(name) {
   return arg ? arg.slice(name.length + 3).trim() : null;
 }
 
+function argNumber(name) {
+  const value = argValue(name);
+  if (!value) return null;
+  const number = Number.parseInt(value, 10);
+  if (!Number.isFinite(number) || number < 0) throw new Error(`Invalid --${name}=${value}`);
+  return number;
+}
+
 function toSlug(value) {
   return value
     .normalize("NFD")
@@ -111,6 +119,9 @@ async function main() {
 
   const category = argValue("category");
   if (!category) throw new Error("Missing --category. Example: npm run places:import:category -- --category=cafes");
+  const limit = argNumber("limit");
+  const offset = argNumber("offset") ?? 0;
+  const skipCount = process.argv.includes("--skip-count");
 
   const config = getPlaceCategoryConfig(category);
   if (!existsSync(config.output)) {
@@ -156,7 +167,9 @@ async function main() {
   let inserted = 0;
   let updated = 0;
 
-  for (const place of unique.values()) {
+  const placesToImport = Array.from(unique.values()).slice(offset, limit ? offset + limit : undefined);
+
+  for (const place of placesToImport) {
     const enrichment = buildEnrichment(place);
     const { data: existing, error: existingError } = await supabase
       .from("businesses")
@@ -228,16 +241,24 @@ async function main() {
     inserted += 1;
   }
 
-  const { count, error: countError } = await supabase
-    .from("businesses")
-    .select("*", { count: "exact", head: true })
-    .eq("category", config.businessCategory);
+  let count = null;
+  if (!skipCount) {
+    const { count: categoryCount, error: countError } = await supabase
+      .from("businesses")
+      .select("*", { count: "exact", head: true })
+      .eq("category", config.businessCategory);
 
-  if (countError) throw countError;
+    if (countError) throw countError;
+    count = categoryCount;
+  }
 
   console.log(JSON.stringify({
     category,
     business_category: config.businessCategory,
+    limit,
+    offset,
+    unique_preview_places: unique.size,
+    attempted_this_run: placesToImport.length,
     inserted,
     updated,
     duplicate_rows_ignored: duplicateRowsIgnored,

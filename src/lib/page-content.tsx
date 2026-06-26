@@ -359,10 +359,10 @@ function AddressBar({ business, location, locale }: { business: Business; locati
   if (!address) return null;
 
   return (
-    <div className="bg-paper">
-      <div className="mx-auto flex max-w-[1440px] flex-col items-start gap-2 border border-t-0 border-borderline bg-white px-4 py-3 sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:px-8">
-        <div className="flex items-center gap-2 text-xs leading-5 text-sea">
-          <IconMapPin aria-hidden="true" size={14} stroke={2} className="shrink-0 text-coral" />
+    <div className="border-y border-white/[0.08] bg-[#0A0A0A]">
+      <div className="mx-auto flex max-w-[1440px] flex-col items-start gap-2 px-4 py-3 sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:px-8">
+        <div className="flex items-center gap-2 text-xs leading-5 text-white/66">
+          <IconMapPin aria-hidden="true" size={14} stroke={2} className="shrink-0 text-[#FFCC00]" />
           <span className="sm:hidden">{location}, Mallorca</span>
           <span className="hidden sm:inline">{address}</span>
         </div>
@@ -370,7 +370,7 @@ function AddressBar({ business, location, locale }: { business: Business; locati
           href={getDirectionsUrl(business)}
           target="_blank"
           rel="noreferrer"
-          className="shrink-0 text-[10px] font-bold uppercase tracking-[0.06em] text-turquesa underline-offset-4 hover:underline"
+          className="shrink-0 text-[10px] font-bold uppercase tracking-[0.06em] text-[#FFCC00] underline-offset-4 hover:underline"
         >
           <span>{copy.business.howToGetThere}</span>
           <IconExternalLink aria-hidden="true" size={12} stroke={2} className="ml-1 inline-block align-[-2px]" />
@@ -419,7 +419,7 @@ function MobileBusinessActions({
   if (!actions.length) return null;
 
   return (
-    <section className="bg-paper px-4 pt-3 lg:hidden">
+    <section className="bg-[#050505] px-4 pt-3 lg:hidden">
       <div className="relative mx-auto max-w-[1440px]">
         <div className="grid grid-cols-3 gap-2">
           {actions.map(({ href, label, Icon, external }) => (
@@ -428,9 +428,9 @@ function MobileBusinessActions({
               href={href}
               target={external ? "_blank" : undefined}
               rel={external ? "noreferrer" : undefined}
-              className="inline-flex min-h-11 min-w-0 items-center justify-center gap-2 rounded-full border border-borderline bg-white px-3 text-center text-[11px] font-bold leading-tight text-ink shadow-sm"
+              className="inline-flex min-h-11 min-w-0 items-center justify-center gap-2 rounded-sm border border-white/[0.12] bg-[#111111] px-3 text-center text-[11px] font-bold leading-tight text-white shadow-sm"
             >
-              <Icon aria-hidden="true" size={14} stroke={2} className="text-coral" />
+              <Icon aria-hidden="true" size={14} stroke={2} className="text-[#FFCC00]" />
               <span className="truncate">{label}</span>
             </a>
           ))}
@@ -547,9 +547,9 @@ export async function CategoryPage({ category, locale }: { category: CategorySlu
   ];
 
   return (
-    <main className="bg-[linear-gradient(180deg,#FFFDF7_0%,#FFFDF7_46%,#FFFDF7_100%)]">
+    <main className="bg-[#050505] text-white">
       <section
-        className="relative overflow-hidden border-b border-[#E2D9CC] bg-[#FFFDF7] px-4 py-8 sm:px-6 sm:py-10 lg:px-8"
+        className="relative overflow-hidden border-b border-white/[0.08] bg-[#0A0A0A] px-4 py-10 sm:px-6 sm:py-14 lg:px-8"
         data-attribution={categoryImage?.attribution}
         data-image-alt={categoryImage?.alt}
       >
@@ -557,16 +557,16 @@ export async function CategoryPage({ category, locale }: { category: CategorySlu
           <div
             aria-hidden="true"
             className="absolute inset-y-0 right-0 hidden w-[42%] bg-cover bg-center opacity-20 lg:block"
-            style={{ backgroundImage: `linear-gradient(90deg,#FFFDF7 0%,rgba(255,253,247,0.18) 40%), url(${categoryImage.imageUrl})` }}
+            style={{ backgroundImage: `linear-gradient(90deg,#0A0A0A 0%,rgba(10,10,10,0.38) 42%,rgba(10,10,10,0.72) 100%), url(${categoryImage.imageUrl})` }}
           />
         )}
         <div className="relative mx-auto max-w-7xl">
           <Breadcrumbs items={[{ label: copy.category.breadcrumbHome, href: `/${locale}` }, { label: config.label, href: `/${locale}/${category}` }]} />
           <div className="mt-6 max-w-3xl">
-            <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-[#10253D]">{copy.category.comparator}</p>
-            <h1 className="mt-3 max-w-2xl text-3xl font-black leading-[1.05] text-[#10253D] sm:text-6xl">{config.title}</h1>
-            <p className="mt-4 max-w-2xl text-sm leading-6 text-[#31445E] sm:mt-5 sm:text-base sm:leading-8">{config.intro}</p>
-            <p className="mt-3 max-w-2xl text-sm leading-6 text-[#31445E] sm:mt-4 sm:leading-7">
+            <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-[#FFCC00]">{copy.category.comparator}</p>
+            <h1 className="mt-3 max-w-3xl font-display text-4xl font-black leading-[0.96] text-white sm:text-7xl">{config.title}</h1>
+            <p className="mt-5 max-w-2xl text-sm leading-7 text-white/70 sm:text-base sm:leading-8">{config.intro}</p>
+            <p className="mt-3 max-w-2xl text-sm leading-7 text-white/58">
               {copy.category.signalLine}
             </p>
           </div>
@@ -576,22 +576,22 @@ export async function CategoryPage({ category, locale }: { category: CategorySlu
       <section className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
         <CategoryFilter businesses={businesses} locale={locale} />
         <section className="mt-12 grid gap-6 lg:grid-cols-[320px_1fr]">
-          <div className="rounded-md border border-[#E2D9CC] bg-[#FFFDF7] p-6 shadow-[0_16px_42px_rgba(27,46,75,0.06)]">
-            <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-[#10253D]">{copy.category.rankingByCategory}</p>
-            <h2 className="mt-2 text-3xl font-black text-[#10253D]">{copy.category.topInMallorca(config.label)}</h2>
-            <p className="mt-4 text-sm leading-7 text-[#31445E]">
+          <div className="rounded-sm border border-white/[0.10] bg-[#101010] p-6 shadow-[0_16px_42px_rgba(0,0,0,0.20)]">
+            <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-[#FFCC00]">{copy.category.rankingByCategory}</p>
+            <h2 className="mt-2 font-display text-3xl font-black leading-tight text-white">{copy.category.topInMallorca(config.label)}</h2>
+            <p className="mt-4 text-sm leading-7 text-white/64">
               {copy.category.topIntro}
             </p>
-            <Link href={`/${locale}/top/${category}`} className="mt-5 inline-flex rounded-sm bg-[#10253D] px-4 py-3 text-[11px] font-bold uppercase tracking-[0.1em] text-white hover:bg-[#1B2E4B]">{copy.category.fullRanking}</Link>
+            <Link href={`/${locale}/top/${category}`} className="mt-5 inline-flex rounded-sm bg-[#FFCC00] px-4 py-3 text-[11px] font-bold uppercase tracking-[0.1em] text-[#0A0A0A] hover:bg-white">{copy.category.fullRanking}</Link>
           </div>
           {areaPages.length > 0 && (
-            <div className="rounded-md border border-[#E2D9CC] bg-[#FFFDF7] p-6">
-              <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-[#10253D]">{copy.category.areaEyebrow}</p>
-              <h2 className="mt-2 text-3xl font-black text-[#10253D]">{copy.category.byArea(config.label)}</h2>
+            <div className="rounded-sm border border-white/[0.10] bg-[#101010] p-6">
+              <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-[#FFCC00]">{copy.category.areaEyebrow}</p>
+              <h2 className="mt-2 font-display text-3xl font-black leading-tight text-white">{copy.category.byArea(config.label)}</h2>
               <div className="mt-5 grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
                 {areaPages.map((page) => (
-                  <Link key={`${page.areaSlug}-${page.category}`} href={`/${locale}/areas/${page.areaSlug}/${category}`} className="rounded-sm border border-[#E2D9CC] bg-[#FFFDF7] p-4 text-sm font-bold text-[#10253D] hover:border-[#10253D] hover:bg-white">
-                    {page.area} <span className="text-[#31445E]">({page.count})</span>
+                  <Link key={`${page.areaSlug}-${page.category}`} href={`/${locale}/areas/${page.areaSlug}/${category}`} className="rounded-sm border border-white/[0.10] bg-[#050505] p-4 text-sm font-bold text-white hover:border-[#FFCC00]/70">
+                    {page.area} <span className="text-white/44">({page.count})</span>
                   </Link>
                 ))}
               </div>
@@ -599,14 +599,14 @@ export async function CategoryPage({ category, locale }: { category: CategorySlu
           )}
         </section>
         {relatedRankings.length > 0 && (
-          <section className="mt-14 rounded-md border border-[#E2D9CC] bg-[#FFFDF7] p-6">
-            <div className="mb-5 flex items-end justify-between border-b border-[#E2D9CC] pb-3">
-              <h2 className="text-3xl font-bold text-[#10253D]">{copy.category.relatedRankings}</h2>
-              <Link href={`/${locale}/top/restaurants`} className="text-[11px] font-bold uppercase tracking-[0.1em] text-[#0A0A0A]">{copy.category.viewAll}</Link>
+          <section className="mt-14 rounded-sm border border-white/[0.10] bg-[#101010] p-6">
+            <div className="mb-5 flex items-end justify-between border-b border-white/[0.10] pb-3">
+              <h2 className="font-display text-3xl font-bold text-white">{copy.category.relatedRankings}</h2>
+              <Link href={`/${locale}/top/restaurants`} className="text-[11px] font-bold uppercase tracking-[0.1em] text-[#FFCC00]">{copy.category.viewAll}</Link>
             </div>
             <div className="grid gap-3 md:grid-cols-3">
               {relatedRankings.map((ranking) => (
-                <Link key={ranking.id} href={`/${locale}/rankings/${ranking.slug}`} className="rounded-sm border border-[#E2D9CC] bg-[#FFFDF7] p-5 text-sm font-bold text-[#10253D] hover:border-[#10253D] hover:bg-white">{ranking.title}</Link>
+                <Link key={ranking.id} href={`/${locale}/rankings/${ranking.slug}`} className="rounded-sm border border-white/[0.10] bg-[#050505] p-5 text-sm font-bold text-white hover:border-[#FFCC00]/70">{ranking.title}</Link>
               ))}
             </div>
           </section>
@@ -633,16 +633,16 @@ export async function CategoryPage({ category, locale }: { category: CategorySlu
 function BusinessProfileReviewCta({ businessName, locale }: { businessName: string; locale: Locale }) {
   const copy = t(locale);
   return (
-    <section className="mt-8 hidden overflow-hidden rounded-lg border border-[#E2D9CC] bg-[#FFFDF7] p-6 shadow-[0_18px_45px_rgba(27,46,75,0.06)] lg:block">
-      <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-[#10253D]">{copy.business.profileCtaEyebrow}</p>
-      <h2 className="mt-2 text-2xl font-black leading-tight text-ink">{copy.business.profileCtaTitle}</h2>
-      <p className="mt-3 text-sm leading-7 text-olive">
+    <section className="mt-8 hidden overflow-hidden rounded-sm border border-white/[0.10] bg-[#101010] p-6 shadow-[0_18px_45px_rgba(0,0,0,0.22)] lg:block">
+      <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-[#FFCC00]">{copy.business.profileCtaEyebrow}</p>
+      <h2 className="mt-2 text-2xl font-black leading-tight text-white">{copy.business.profileCtaTitle}</h2>
+      <p className="mt-3 text-sm leading-7 text-white/68">
         {copy.business.profileCtaText.replace("la ficha", `la ficha de ${businessName}`)}
       </p>
-      <p className="mt-3 rounded-md border border-[#E2D9CC] bg-white px-4 py-3 text-xs font-semibold leading-5 text-[#10253D]">
+      <p className="mt-3 rounded-sm border border-white/[0.10] bg-white/[0.045] px-4 py-3 text-xs font-semibold leading-5 text-white/72">
         {copy.business.profileCtaNote}
       </p>
-      <Link href={`/${locale}/business`} className="mt-5 inline-flex min-h-11 items-center justify-center rounded-sm bg-[#0A0A0A] px-5 text-[11px] font-bold uppercase tracking-[0.1em] text-white shadow-[0_10px_22px_rgba(10,10,10,0.16)] hover:bg-[#262626]">
+      <Link href={`/${locale}/business`} className="mt-5 inline-flex min-h-11 items-center justify-center rounded-sm bg-[#FFCC00] px-5 text-[11px] font-bold uppercase tracking-[0.1em] text-[#0A0A0A] shadow-[0_10px_22px_rgba(255,204,0,0.12)] hover:bg-white">
         {copy.business.profileCtaButton}
       </Link>
     </section>
@@ -652,13 +652,13 @@ function BusinessProfileReviewCta({ businessName, locale }: { businessName: stri
 function MobileBusinessClaimCta({ businessName, locale }: { businessName: string; locale: Locale }) {
   const copy = t(locale);
   return (
-    <section className="mt-6 rounded-lg border border-[#E2D9CC] bg-[#FFFDF7] p-4 lg:hidden">
-      <p className="text-[10px] font-bold uppercase tracking-[0.12em] text-[#10253D]">{copy.business.profileCtaEyebrow}</p>
-      <h2 className="mt-2 text-xl font-black leading-tight text-ink">{copy.business.profileCtaTitle}</h2>
-      <p className="mt-2 text-sm leading-6 text-olive">
+    <section className="mt-6 rounded-sm border border-white/[0.10] bg-[#101010] p-4 lg:hidden">
+      <p className="text-[10px] font-bold uppercase tracking-[0.12em] text-[#FFCC00]">{copy.business.profileCtaEyebrow}</p>
+      <h2 className="mt-2 text-xl font-black leading-tight text-white">{copy.business.profileCtaTitle}</h2>
+      <p className="mt-2 text-sm leading-6 text-white/68">
         {copy.business.profileCtaText.replace("la ficha", `la ficha de ${businessName}`)}
       </p>
-      <Link href={`/${locale}/business`} className="mt-4 inline-flex min-h-10 items-center justify-center rounded-sm bg-[#0A0A0A] px-4 text-[11px] font-bold uppercase tracking-[0.1em] text-white hover:bg-[#262626]">
+      <Link href={`/${locale}/business`} className="mt-4 inline-flex min-h-10 items-center justify-center rounded-sm bg-[#FFCC00] px-4 text-[11px] font-bold uppercase tracking-[0.1em] text-[#0A0A0A] hover:bg-white">
         {copy.business.profileCtaButton}
       </Link>
     </section>
@@ -697,37 +697,21 @@ export async function BusinessDetailPage({ category, locale, slug }: { category:
   ];
 
   return (
-    <main>
-      <section className="bg-paper">
+    <main className="bg-[#050505] text-white">
+      <section className="bg-[#050505]">
         <div
-          className="relative mx-auto h-[clamp(320px,46vh,480px)] max-w-[1440px] overflow-hidden bg-ink bg-cover bg-center"
+          className="relative h-[clamp(520px,72vh,780px)] overflow-hidden bg-[#0A0A0A] bg-cover bg-center"
           style={heroImage ? { backgroundImage: `url(${heroImage})` } : undefined}
         >
-          <div className="absolute inset-0 bg-[linear-gradient(to_top,rgba(20,18,14,0.90)_0%,rgba(20,18,14,0.30)_50%,transparent_100%)]" />
-          <div className="absolute inset-x-0 bottom-0 z-10 px-4 pb-6 sm:px-6 lg:px-8">
-            <div className="flex flex-col items-start gap-3 sm:gap-5 lg:flex-row lg:items-end lg:justify-between">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_42%,rgba(255,204,0,0.10),transparent_24%),linear-gradient(to_top,rgba(5,5,5,0.98)_0%,rgba(5,5,5,0.66)_42%,rgba(5,5,5,0.30)_100%)]" />
+          <div className="absolute inset-x-0 bottom-0 z-10 px-4 pb-10 sm:px-8 lg:px-12">
+            <div className="mx-auto flex max-w-[1440px] flex-col items-start gap-6">
               <div className="max-w-4xl">
                 <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-gold">
                   {primaryRanking ? rankingEyebrow(primaryRanking, category, locale) : `${localizedCategoryLabel(business.category, locale)} · ${location}`}
                 </p>
-                <h1 className="mt-2 text-3xl font-black leading-[0.98] text-paper [text-shadow:_0_2px_12px_rgba(0,0,0,0.55)] sm:text-5xl lg:text-6xl">{publicName}</h1>
-                {heroMeta.length > 0 && <p className="mt-3 max-w-3xl text-sm font-semibold leading-6 text-white/78">{heroMeta.join(" · ")}</p>}
-              </div>
-              <div className="flex w-fit shrink-0 items-stretch gap-2">
-              {(typeof business.rating === "number" || typeof business.reviewsCount === "number") && (
-                <div className="flex h-[68px] min-w-[104px] shrink-0 flex-col items-center justify-center rounded-md border border-[#FFCC00]/70 bg-[#0A0A0A]/95 px-4 py-2.5 text-center shadow-[0_16px_40px_rgba(0,0,0,0.34)]">
-                  {typeof business.rating === "number" && <div className="text-[22px] font-black leading-none text-[#FFCC00]">{formatLocalizedRating(business.rating, locale)}</div>}
-                  <div className="mt-1 text-[10px] tracking-[-0.08em] text-[#FFCC00]">{renderStars(business.rating)}</div>
-                  {typeof business.reviewsCount === "number" && <div className="mt-1 text-[9px] text-white/75">{business.reviewsCount.toLocaleString(numberLocale(locale))} {copy.business.reviewsOnGoogle.replace(" on Google", "").replace(" auf Google", "").replace(" en Google", "")}</div>}
-                </div>
-              )}
-              {priceValue && (
-                <div className="flex h-[68px] min-w-[104px] shrink-0 flex-col items-center justify-center rounded-md border border-[#FFCC00]/70 bg-[#0A0A0A]/95 px-4 py-2.5 text-center shadow-[0_16px_40px_rgba(0,0,0,0.34)]">
-                  <div className="whitespace-nowrap text-[17px] font-black leading-none text-[#FFCC00]">{priceValue.display}</div>
-                  <div aria-hidden="true" className="mt-1 h-[10px]" />
-                  {priceValue.label && <div className="mt-1 text-[7px] font-bold uppercase tracking-[0.06em] text-white/75">{priceValue.label}</div>}
-                </div>
-              )}
+                <h1 className="mt-3 max-w-5xl font-display text-5xl font-black leading-[0.92] text-white [text-shadow:_0_2px_22px_rgba(0,0,0,0.65)] sm:text-7xl lg:text-8xl">{publicName}</h1>
+                {heroMeta.length > 0 && <p className="mt-5 max-w-4xl text-base font-semibold leading-7 text-white/78">{heroMeta.join(" · ")}</p>}
               </div>
             </div>
           </div>
@@ -737,50 +721,49 @@ export async function BusinessDetailPage({ category, locale, slug }: { category:
       <AddressBar business={business} location={location} locale={locale} />
       <MobileBusinessActions business={business} publicWebsite={publicWebsite} locale={locale} />
       {business.openingHours && business.category !== "boat-rental" && (
-        <div className="border-t border-borderline bg-white px-4 lg:hidden">
+        <div className="border-t border-white/[0.08] bg-[#050505] px-4 text-white lg:hidden">
           <div className="mx-auto max-w-[1440px]">
             <BusinessHours openingHours={business.openingHours} locale={locale} />
           </div>
         </div>
       )}
 
-      <div className="mx-auto grid max-w-[1440px] items-start gap-6 px-4 py-6 sm:px-6 sm:py-8 lg:grid-cols-[minmax(0,1fr)_340px] lg:gap-10 lg:px-10">
+      <div className="mx-auto grid max-w-[1440px] items-start gap-8 px-4 py-8 sm:px-8 sm:py-12 lg:grid-cols-[minmax(0,1fr)_360px] lg:gap-12 lg:px-12">
         <article className="min-w-0">
           <BusinessReviewPanel business={business} locale={locale} />
         </article>
 
-        <aside className="hidden rounded-md border border-borderline bg-white p-5 shadow-[0_18px_45px_rgba(28,28,24,0.05)] lg:block">
+        <aside className="hidden rounded-sm border border-white/[0.10] bg-[#101010] p-5 shadow-[0_24px_70px_rgba(0,0,0,0.38)] lg:block">
           <div className="lg:sticky lg:top-24">
-            <section className="grid gap-4 border-b border-linen pb-6">
+            <section className="grid gap-4 border-b border-white/[0.08] pb-6">
               <BusinessRankingCard primary={primaryRanking} island={rankingContext.island} category={category} locale={locale} />
-              <QuickScore business={business} locale={locale} />
               {priceValue && (
-                <div className="flex items-center justify-between rounded-md border border-borderline bg-paper px-4 py-3">
-                  <span className="text-[9px] font-bold uppercase tracking-[0.08em] text-sage">{priceValue.label ? `${copy.business.pricePer} ${priceValue.label}` : copy.business.price}</span>
-                  <span className="text-[19px] font-black leading-none text-ink">{priceValue.display}</span>
+                <div className="flex items-center justify-between rounded-sm border border-white/[0.10] bg-[#181818] px-4 py-3">
+                  <span className="text-[9px] font-bold uppercase tracking-[0.08em] text-white/44">{priceValue.label ? `${copy.business.pricePer} ${priceValue.label}` : copy.business.price}</span>
+                  <span className="text-[19px] font-black leading-none text-white">{priceValue.display}</span>
                 </div>
               )}
               <div className="grid gap-2">
-                {business.googleMapsUrl && <a href={business.googleMapsUrl} target="_blank" rel="noreferrer" className="rounded-sm bg-[#0A0A0A] px-4 py-3 text-center text-[11px] font-bold uppercase tracking-[0.1em] text-paper hover:bg-[#262626]">{copy.business.googleMaps}</a>}
-                {publicWebsite && <a href={publicWebsite} target="_blank" rel="noreferrer" className="rounded-sm border border-borderline px-4 py-3 text-center text-[11px] font-bold uppercase tracking-[0.1em] text-ink">{business.websiteType === "official_website" ? copy.business.officialWebsite : getWebsiteLabel(business.websiteType)}</a>}
+                {business.googleMapsUrl && <a href={business.googleMapsUrl} target="_blank" rel="noreferrer" className="rounded-sm bg-[#FFCC00] px-4 py-3 text-center text-[11px] font-black uppercase tracking-[0.1em] text-[#0A0A0A] hover:bg-[#FFD633]">{copy.business.googleMaps}</a>}
+                {publicWebsite && <a href={publicWebsite} target="_blank" rel="noreferrer" className="rounded-sm border border-white/[0.14] px-4 py-3 text-center text-[11px] font-bold uppercase tracking-[0.1em] text-white hover:border-[#FFCC00]/70">{business.websiteType === "official_website" ? copy.business.officialWebsite : getWebsiteLabel(business.websiteType)}</a>}
               </div>
             </section>
 
             {business.category !== "boat-rental" && <BusinessHours openingHours={business.openingHours} locale={locale} />}
 
             {(business.address || business.phone) && (
-              <section className="border-b border-linen py-6">
-                <p className="mb-3 text-[11px] font-extrabold uppercase tracking-[0.12em] text-ink">{copy.business.contact}</p>
-                <div className="business-contact-summary grid gap-3 text-sm font-medium leading-6 text-ink">
+              <section className="border-b border-white/[0.08] py-6">
+                <p className="mb-3 text-[11px] font-extrabold uppercase tracking-[0.12em] text-white">{copy.business.contact}</p>
+                <div className="business-contact-summary grid gap-3 text-sm font-medium leading-6 text-white/72">
                   {business.address && (
                     <div className="flex gap-2">
-                      <IconMapPin aria-hidden="true" size={15} stroke={2} className="mt-1 shrink-0 text-coral" />
+                      <IconMapPin aria-hidden="true" size={15} stroke={2} className="mt-1 shrink-0 text-[#FFCC00]" />
                       <span>{business.address}</span>
                     </div>
                   )}
                   {business.phone && (
-                    <a href={`tel:${business.phone.replace(/\s+/g, "")}`} className="flex gap-2 hover:text-coral">
-                      <IconPhone aria-hidden="true" size={15} stroke={2} className="mt-1 shrink-0 text-coral" />
+                    <a href={`tel:${business.phone.replace(/\s+/g, "")}`} className="flex gap-2 hover:text-[#FFCC00]">
+                      <IconPhone aria-hidden="true" size={15} stroke={2} className="mt-1 shrink-0 text-[#FFCC00]" />
                       <span>{business.phone}</span>
                     </a>
                   )}
@@ -790,14 +773,14 @@ export async function BusinessDetailPage({ category, locale, slug }: { category:
 
             {related.length > 0 && (
               <section className="pt-6">
-                <p className="mb-3 text-[11px] font-extrabold uppercase tracking-[0.12em] text-ink">{copy.business.related}</p>
+                <p className="mb-3 text-[11px] font-extrabold uppercase tracking-[0.12em] text-white">{copy.business.related}</p>
                 <div className="grid gap-3">
                   {related.map((item) => (
-                    <Link key={item.id} href={`/${locale}/${getCategorySlugFromBusiness(item.category)}/${item.slug}`} className="grid grid-cols-[54px_1fr] gap-3 hover:bg-paper">
+                    <Link key={item.id} href={`/${locale}/${getCategorySlugFromBusiness(item.category)}/${item.slug}`} className="grid grid-cols-[54px_1fr] gap-3 rounded-sm hover:bg-white/[0.04]">
                       <BusinessImage business={item} category={item.category} variant="card" className="min-h-[54px] rounded-sm p-2" />
                       <div className="min-w-0 py-1">
-                        <p className="text-[9px] font-bold uppercase tracking-[0.12em] text-coral">{localizedCategoryLabel(item.category, locale)} · {item.area}</p>
-                        <p className="mt-1 line-clamp-2 text-base font-bold leading-tight text-ink">{getBusinessPublicName(item)}</p>
+                        <p className="text-[9px] font-bold uppercase tracking-[0.12em] text-[#FFCC00]">{localizedCategoryLabel(item.category, locale)} · {item.area}</p>
+                        <p className="mt-1 line-clamp-2 text-base font-bold leading-tight text-white">{getBusinessPublicName(item)}</p>
                       </div>
                     </Link>
                   ))}

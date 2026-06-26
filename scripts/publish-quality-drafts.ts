@@ -42,20 +42,20 @@ type QualityRule = {
 };
 
 const QUALITY_RULES: Record<string, QualityRule> = {
-  restaurant: { minRating: 4.2, minReviews: 50 },
-  hotel: { minRating: 4.1, minReviews: 50 },
-  "beach-club": { minRating: 4.1, minReviews: 30 },
-  bar: { minRating: 4.1, minReviews: 30 },
-  cafe: { minRating: 4.2, minReviews: 25 },
-  bakery: { minRating: 4.2, minReviews: 15 },
-  spa: { minRating: 4.2, minReviews: 15 },
+  restaurant: { minRating: 4.0, minReviews: 50 },
+  hotel: { minRating: 4.1, minReviews: 80 },
+  "beach-club": { minRating: 4.0, minReviews: 30 },
+  bar: { minRating: 4.0, minReviews: 30 },
+  cafe: { minRating: 4.2, minReviews: 20 },
+  nightlife: { minRating: 3.8, minReviews: 80 },
+  activity: { minRating: 4.3, minReviews: 15 },
+  "boat-rental": { minRating: 4.2, minReviews: 10 },
+  "rent-a-car": { minRating: 3.8, minReviews: 50 },
+  "car-dealer": { minRating: 3.9, minReviews: 15 },
   gym: { minRating: 4.0, minReviews: 20 },
-  "rent-a-car": { minRating: 4.1, minReviews: 40 },
-  activity: { minRating: 4.2, minReviews: 20 },
-  excursion: { minRating: 4.2, minReviews: 20 },
-  "boat-rental": { minRating: 4.3, minReviews: 15 },
-  route: { minRating: 4.3, minReviews: 10 },
-  beach: { minRating: 4.2, minReviews: 15 }
+  spa: { minRating: 4.2, minReviews: 15 },
+  healthcare: { minRating: 4.0, minReviews: 8 },
+  "real-estate": { minRating: 3.9, minReviews: 8 }
 };
 
 const DEFAULT_CATEGORIES = Object.keys(QUALITY_RULES);
@@ -146,10 +146,14 @@ function nameIncludes(row: BusinessRow, ...keywords: string[]) {
 function hasCompatibleCategoryTypes(row: BusinessRow) {
   const primary = primaryType(row);
 
+  // Car dealers often get classified as "market" or "store" by Google — check before the global blocklist
+  if (row.category === "car-dealer") {
+    return hasType(row, "car_dealer", "used_car_dealer", "market", "store") ||
+      nameIncludes(row, "compraventa", "concesionario", "car dealer", "used car", "venta", "auto", "motor", "cars", "garage", "ocasion", "vehiculo");
+  }
+
   if (
     [
-      "car_dealer",
-      "used_car_dealer",
       "market",
       "grocery_store",
       "supermarket",
@@ -175,9 +179,28 @@ function hasCompatibleCategoryTypes(row: BusinessRow) {
   if (row.category === "bar") return hasType(row, "bar", "pub", "wine_bar", "cocktail_bar") || nameIncludes(row, "bar", "pub", "cocteleria");
   if (row.category === "cafe") return hasType(row, "cafe", "coffee_shop", "ice_cream_shop") || nameIncludes(row, "cafe", "cafeteria", "coffee", "gelato", "heladeria");
   if (row.category === "bakery") return hasType(row, "bakery", "pastry_shop") || nameIncludes(row, "forn", "pasteleria", "pastisseria", "bakery", "panaderia");
+  if (row.category === "nightlife") return hasType(row, "night_club") || nameIncludes(row, "discoteca", "nightclub", "night club", "club", "music bar");
   if (row.category === "spa") return hasType(row, "spa", "massage", "wellness_center", "beauty_salon") || nameIncludes(row, "spa", "wellness", "massage");
   if (row.category === "gym") return hasType(row, "gym", "fitness_center", "yoga_studio", "pilates_studio", "sports_complex", "sports_activity_location") || nameIncludes(row, "gym", "fitness", "crossfit", "pilates", "yoga", "padel");
   if (row.category === "rent-a-car") return hasType(row, "car_rental") || nameIncludes(row, "rent", "rental", "rent a car", "rentacar", "car rental", "alquiler");
+  if (row.category === "healthcare") return hasType(row, "medical_clinic", "doctor", "dentist", "physiotherapist", "hospital", "health") || nameIncludes(row, "clinic", "clinica", "doctor", "dentist", "dentista", "medical", "medicina", "fisio", "physio");
+  if (row.category === "real-estate") {
+    return hasType(row, "real_estate_agency") || nameIncludes(
+      row,
+      "real estate",
+      "inmobiliaria",
+      "immobiliaria",
+      "immobilien",
+      "properties",
+      "property",
+      "estate",
+      "agency",
+      "broker",
+      "viviendas",
+      "villas",
+      "homes"
+    );
+  }
   if (row.category === "boat-rental") return hasType(row, "boat_rental", "tour_agency", "travel_agency") || nameIncludes(row, "boat", "barco", "yacht", "charter", "llaut", "sail");
   if (row.category === "beach-club") return nameIncludes(row, "beach club", "chiringuito", "balneario") || (hasType(row, "restaurant", "bar") && nameIncludes(row, "beach", "playa", "cala", "mar"));
   if (row.category === "beach") return hasType(row, "beach", "public_bath") || nameIncludes(row, "cala", "playa", "platja", "calo", "beach");
@@ -202,6 +225,10 @@ function photoCredit(row: BusinessRow) {
   return row.place_photos?.find((photo) => photo.name === photoName(row))?.credit ?? "Google Places";
 }
 
+function minPhotosForCategory(category: string) {
+  return ["healthcare", "car-dealer"].includes(category) ? 1 : 3;
+}
+
 function qualify(row: BusinessRow) {
   const rule = QUALITY_RULES[row.category];
   const reasons: string[] = [];
@@ -212,7 +239,7 @@ function qualify(row: BusinessRow) {
   if (typeof row.rating !== "number" || row.rating < (rule?.minRating ?? 999)) reasons.push("rating_below_cut");
   if (typeof row.reviews_count !== "number" || row.reviews_count < (rule?.minReviews ?? 999999)) reasons.push("reviews_below_cut");
   if (arrayLength(row.place_reviews) < 3) reasons.push("too_few_place_reviews");
-  if (Math.max(arrayLength(row.place_photos), arrayLength(row.photo_names), hasText(row.primary_photo_name) ? 1 : 0) < 3) reasons.push("too_few_photos");
+  if (Math.max(arrayLength(row.place_photos), arrayLength(row.photo_names), hasText(row.primary_photo_name) ? 1 : 0) < minPhotosForCategory(row.category)) reasons.push("too_few_photos");
   if (!photoName(row) && !hasText(row.primary_image_url)) reasons.push("no_primary_image_source");
   if (!locationIsUsable(row)) reasons.push("weak_location");
   if (!hasCompatibleCategoryTypes(row)) reasons.push("category_type_mismatch");

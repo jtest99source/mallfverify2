@@ -3,7 +3,7 @@ import path from "node:path";
 
 const MAX_RESULTS = 2000;
 const MIN_RATING = 4.0;
-const MIN_REVIEWS = 20;
+const MIN_REVIEWS = 50;
 const OUTPUT_PATH = "data/import-previews/restaurants-preview.json";
 
 const SEARCHES = [

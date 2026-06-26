@@ -59,10 +59,10 @@ function getPhotoNames(place: PreviewPlace) {
 function getShortDescription(place: NormalizedPlace) {
   const location = inferLocationFromAddress(place.address);
   if (location.area && location.area !== "Mallorca") {
-    return `${place.name} es una empresa de alquiler de barcos o charter en ${location.area} importada desde Google Places para revisiÃ³n editorial.`;
+    return `${place.name} es una empresa de alquiler de barcos o charter en ${location.area} importada desde Google Places para revisión editorial.`;
   }
 
-  return `${place.name} es una empresa de alquiler de barcos o charter en Mallorca importada desde Google Places para revisiÃ³n editorial.`;
+  return `${place.name} es una empresa de alquiler de barcos o charter en Mallorca importada desde Google Places para revisión editorial.`;
 }
 
 type NormalizedPlace = {

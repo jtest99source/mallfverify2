@@ -54,46 +54,46 @@ function DirectoryCard({
 
   return (
     <article
-      className="group flex min-h-[260px] flex-col overflow-hidden rounded-md border border-l-4 border-[#E5E7EB] bg-white shadow-sm transition-all duration-150 hover:-translate-y-0.5 hover:border-[#0A0A0A] hover:shadow-[0_14px_34px_rgba(10,10,10,0.10)]"
+      className="group flex min-h-[260px] flex-col overflow-hidden rounded-sm border border-l-4 border-white/[0.10] bg-[#101010] shadow-[0_18px_45px_rgba(0,0,0,0.18)] transition-all duration-150 hover:-translate-y-0.5 hover:border-white/[0.22]"
       style={{ borderLeftColor: verticalColor }}
     >
       <div className="flex flex-1 flex-col p-5">
         <div className={`flex flex-wrap items-center gap-2 ${!hideVertical && verticalLabel ? "justify-between" : "justify-end"}`}>
-          <span className="inline-flex h-7 min-w-7 items-center justify-center rounded-sm bg-[#0A0A0A] px-2 text-[10px] font-black text-white">
+          <span className="inline-flex h-7 min-w-7 items-center justify-center rounded-sm border border-white/[0.10] bg-[#050505] px-2 text-[10px] font-black text-[#FFCC00]">
             #{position}
           </span>
           {!hideVertical && verticalLabel ? (
-            <span className="rounded-full bg-[#FFF3B0] px-2.5 py-1 text-[9px] font-black uppercase tracking-[0.12em] text-[#0A0A0A]">
+            <span className="rounded-full bg-[#FFCC00] px-2.5 py-1 text-[9px] font-black uppercase tracking-[0.12em] text-[#0A0A0A]">
               {verticalLabel}
             </span>
           ) : null}
           <RatingBadge rating={profile.rating} reviewsCount={profile.reviewsCount} locale={locale} compact />
         </div>
 
-        <h3 className="mt-4 text-xl font-black leading-[1.05] text-[#0A0A0A]">{profile.name}</h3>
+        <h3 className="mt-4 text-xl font-black leading-[1.05] text-white">{profile.name}</h3>
 
         {editorialNote ? (
-          <p className="mt-3 line-clamp-2 border-l-2 border-[#0A0A0A] bg-[#F9FAFB] px-3 py-2 text-xs font-semibold leading-5 text-[#6B7280]">
+          <p className="mt-3 line-clamp-2 border-l-2 border-[#FFCC00] bg-white/[0.04] px-3 py-2 text-xs font-semibold leading-5 text-white/64">
             {editorialNote}
           </p>
         ) : null}
 
         <dl className="mt-4 grid gap-3 sm:grid-cols-2">
           <div>
-            <dt className="text-[10px] font-black uppercase tracking-[0.12em] text-[#0A0A0A]">{labels.languages}</dt>
+            <dt className="text-[10px] font-black uppercase tracking-[0.12em] text-white/48">{labels.languages}</dt>
             <dd className="mt-1.5 flex flex-wrap gap-1.5">
               {profile.languages.map((language) => (
-                <span key={language} className="rounded-full border border-[#E5E7EB] px-2.5 py-0.5 text-xs font-bold text-[#0A0A0A]">
+                <span key={language} className="rounded-full border border-white/[0.12] px-2.5 py-0.5 text-xs font-bold text-white/78">
                   {language}
                 </span>
               ))}
             </dd>
           </div>
           <div>
-            <dt className="text-[10px] font-black uppercase tracking-[0.12em] text-[#0A0A0A]">{labels.specialties}</dt>
+            <dt className="text-[10px] font-black uppercase tracking-[0.12em] text-white/48">{labels.specialties}</dt>
             <dd className="mt-1.5 flex flex-wrap gap-1.5">
               {specialties.slice(0, 3).map((specialty) => (
-                <span key={specialty} className="rounded-full border border-[#E5E7EB] bg-[#F9FAFB] px-2.5 py-0.5 text-xs font-bold text-[#0A0A0A]">
+                <span key={specialty} className="rounded-full border border-white/[0.12] bg-white/[0.04] px-2.5 py-0.5 text-xs font-bold text-white/78">
                   {specialty}
                 </span>
               ))}
@@ -105,7 +105,7 @@ function DirectoryCard({
           {profile.phone ? (
             <a
               href={`tel:${profile.phone.replace(/\s+/g, "")}`}
-              className="inline-flex items-center gap-1.5 rounded border border-[#E5E7EB] px-3 py-1.5 text-[10px] font-black uppercase tracking-[0.1em] text-[#0A0A0A] hover:border-[#0A0A0A]"
+              className="inline-flex items-center gap-1.5 rounded-sm border border-white/[0.12] px-3 py-1.5 text-[10px] font-black uppercase tracking-[0.1em] text-white/72 hover:border-[#FFCC00]/70 hover:text-white"
             >
               <IconPhone size={13} stroke={1.8} />
               {labels.phone}
@@ -116,7 +116,7 @@ function DirectoryCard({
               href={profile.website}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-1.5 rounded border border-[#E5E7EB] px-3 py-1.5 text-[10px] font-black uppercase tracking-[0.1em] text-[#0A0A0A] hover:border-[#0A0A0A]"
+              className="inline-flex items-center gap-1.5 rounded-sm border border-white/[0.12] px-3 py-1.5 text-[10px] font-black uppercase tracking-[0.1em] text-white/72 hover:border-[#FFCC00]/70 hover:text-white"
             >
               {labels.website}
               <IconExternalLink size={13} stroke={1.8} />
@@ -124,7 +124,7 @@ function DirectoryCard({
           ) : null}
           <Link
             href={`/${locale}/experts/${profile.verticalSlug}/${profile.slug}`}
-            className="inline-flex items-center gap-1.5 rounded bg-[#0A0A0A] px-3 py-1.5 text-[10px] font-black uppercase tracking-[0.1em] text-white hover:bg-[#262626]"
+            className="inline-flex items-center gap-1.5 rounded-sm bg-[#FFCC00] px-3 py-1.5 text-[10px] font-black uppercase tracking-[0.1em] text-[#0A0A0A] hover:bg-white"
           >
             {labels.details}
             <IconExternalLink size={13} stroke={1.8} />
@@ -178,12 +178,12 @@ export function LoadMoreExpertGrid({
       </div>
       {profiles.length > PAGE_SIZE && (
         <div className="mt-8 flex flex-col items-center gap-3">
-          <p className="text-[11px] font-black uppercase tracking-[0.1em] text-[#0A0A0A]">{c.showing(shown, total)}</p>
+          <p className="text-[11px] font-black uppercase tracking-[0.1em] text-white/56">{c.showing(shown, total)}</p>
           {hasMore && (
             <button
               type="button"
               onClick={() => setVisibleCount((value) => Math.min(value + PAGE_SIZE, profiles.length))}
-              className="min-h-11 rounded-md border border-[#0A0A0A] bg-[#0A0A0A] px-6 text-[11px] font-black uppercase tracking-[0.1em] text-[#FFFFFF] shadow-[0_14px_30px_rgba(10,10,10,0.18)] transition hover:-translate-y-0.5 hover:bg-[#262626]"
+              className="min-h-11 rounded-sm border border-[#FFCC00] bg-[#FFCC00] px-6 text-[11px] font-black uppercase tracking-[0.1em] text-[#0A0A0A] shadow-[0_14px_30px_rgba(255,204,0,0.12)] transition hover:-translate-y-0.5 hover:bg-white"
             >
               {c.loadMore}
             </button>

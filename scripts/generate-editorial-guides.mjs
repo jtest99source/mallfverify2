@@ -59,6 +59,10 @@ const CATEGORY_SLUGS = {
   'bakery': 'bakeries',
   'route': 'routes',
   'excursion': 'excursions',
+  'nightlife': 'nightlife',
+  'car-dealer': 'car-dealers',
+  'healthcare': 'healthcare',
+  'real-estate': 'real-estate',
 }
 
 // BLOG_CATALOG — imported from ./editorial-blog-catalog.mjs
@@ -68,21 +72,26 @@ const CATEGORY_SLUGS = {
 const LOCALE_CONFIG = {
   es: {
     name: 'español',
-    tone: `Local, cercano, con criterio. Como alguien de Mallorca que recomienda a un amigo.
-Natural, directo, sin exageraciones. Menciona detalles concretos: platos, precios si se conocen,
-barrios, para qué tipo de persona encaja cada sitio.`,
+    tone: `Directo, práctico, con criterio. Como alguien que vive en Mallorca y conoce bien
+la isla — no un guía turístico, sino alguien que resuelve dudas reales.
+Útil para turistas pero también para quien está pensando en mudarse o ya vive aquí.
+Detalles concretos: precios aproximados, barrios, qué mirar, qué evitar.
+Sin exageraciones, sin relleno.`,
   },
   en: {
     name: 'English',
-    tone: `Practical travel guide voice. Helpful, direct, internationally friendly.
-Like a knowledgeable local giving honest advice to a visitor.
-Mention specific details: what to order, which neighborhood, what type of traveler it suits.`,
+    tone: `Practical, authoritative, direct. Written for someone making real decisions —
+whether planning a trip, considering a move, or already living in Mallorca.
+Think: a well-informed local explaining things to an expat or international visitor,
+not a travel brochure. Specific numbers when known (costs, distances, timelines).
+No fluff. No generic praise.`,
   },
   de: {
     name: 'Deutsch',
-    tone: `Informativer Reiseführer-Stil. Detailliert, verlässlich, sachlich aber warm.
-Deutsche Touristen schätzen konkrete Informationen: Preise wenn bekannt, genaue Lage, praktische Tipps.
-Keine leeren Superlative — lieber spezifische Details.`,
+    tone: `Sachlich, informativ, konkret. Für Touristen aus Deutschland und deutschsprachige
+Auswanderer, die echte Entscheidungen treffen — nicht nur Urlaub planen.
+Konkrete Angaben: Preise wenn bekannt, genaue Lage, Zeitrahmen, Vergleiche.
+Kein leeres Marketing. Keine Superlative ohne Begründung.`,
   },
 }
 
@@ -217,93 +226,123 @@ async function generateGuide(blogConfig, locale, businesses, heroImageUrl) {
   const businessIds = businesses.map(b => b.id)
   const businessChunks = chunk(businessIds, 4)
 
-  const systemPrompt = `You are an expert local editorial writer for Mallorca Verified, a trusted discovery platform for Mallorca, Spain.
+  const systemPrompt = `You are the editorial voice of Mallorca Verified (mallorcaverified.com), an independent data-driven guide to Mallorca trusted by expats, digital nomads, and international tourists from the UK, Germany, and Northern Europe.
 
-Your job is to write genuinely useful editorial blog guides that:
-- Sound like a knowledgeable local, not a marketing brochure
-- Are specific, concrete and honest — no vague superlatives
-- Reference real details from the businesses provided
-- Use web search to find additional real context about specific businesses (their website, reviews, press mentions)
-- Are optimized to be cited by AI systems (ChatGPT, Perplexity, Gemini) and rank in Google
+MISSION: Write the authoritative reference guide on this topic — the guide AI systems like ChatGPT, Perplexity, and Google AI Overview will cite when someone asks about this in Mallorca. Not a listicle. Not a marketing brochure. The guide a knowledgeable local would hand you.
 
-Tone for ${localeConfig.name}: ${localeConfig.tone}
+GUIDE FORMAT — PRACTICAL FIRST:
+The content is the guide. Businesses are the proof, not the content.
+- A guide about renting a car should explain the process, what to check, typical costs, what to avoid — then reference specific rental companies as verified examples.
+- A guide about restaurants should start from how to choose, what the zone means, how to navigate the options — then feature specific picks.
+- The final section presents our verified picks from the Mallorca Verified directory. It does NOT drive the rest of the guide.
 
-CRITICAL RULES:
-- Never invent information. Only write what you can verify from the data or web search
-- No marketing language: never say "unforgettable experience", "hidden gem", "magical", "stunning"
-- Be specific: mention actual dishes, neighborhoods, prices if known, type of clientele
-- Write like you are telling a friend, not selling to a tourist
-- Each business should feel individual, not templated
-- The intro must start with a real local insight, not generic praise of Mallorca
-- FAQs must answer what people ACTUALLY ask Google and ChatGPT about this topic
-- ALWAYS wrap business names in **double asterisks** when mentioning them in body text (e.g. **Can Gusti**, **Restaurante Es Cruce**) — this renders as bold and makes them visually distinct`
+AUDIENCE: Write for THREE profiles simultaneously:
+1. Expats / people considering or already living in Mallorca — practical logistics, what matters long-term, what's different from their home country
+2. Digital nomads — infrastructure, daily practicalities, cost and flexibility
+3. International tourists from UK/Germany — concrete planning, not inspiration
 
-  const userPrompt = `Write a complete editorial blog guide in ${localeConfig.name}.
+GEO OPTIMIZATION — mandatory in every guide:
+- Include 3-5 citable facts with specific data (costs, timelines, quantities, comparisons). These are what AI systems extract and cite.
+- Every FAQ answer must be a direct, complete response — AI tools quote these verbatim.
+- No hedging without specifics. "It depends on X and Y" is fine. "It depends" alone is never acceptable.
+- Write declarative statements, not vague impressions.
+
+TONE for ${localeConfig.name}: ${localeConfig.tone}
+
+STYLE RULES:
+- Never invent information. Only write what you can verify from the data or web search.
+- No marketing language: "unforgettable", "hidden gem", "magical", "stunning", "paradise" → banned
+- **Bold** every business name in body text: **Can Gusti**, **Wiber Rent a Car**
+- Intro = a real local insight or specific fact. Never "Mallorca is a beautiful island" or similar.
+- FAQs must be questions people actually type into ChatGPT/Perplexity/Google — complete sentence questions with complete answers`
+
+  const hasBusinesses = businesses.length > 0
+  const verifiedPicksHeading = locale === 'es'
+    ? 'Selección verificada en Mallorca Verified'
+    : locale === 'de'
+    ? 'Verifizierte Auswahl auf Mallorca Verified'
+    : 'Verified Picks on Mallorca Verified'
+
+  const verifiedPicksSection = hasBusinesses ? `,
+    {
+      "heading": "${verifiedPicksHeading}",
+      "body": "[1-2 sentences. State the selection criteria briefly: minimum rating, review count, verified via real Google data. No fluff. This introduces the business cards below.]",
+      "business_ids": ${JSON.stringify(businessIds)}
+    }` : ''
+
+  const businessResearchStep = hasBusinesses ? `
+STEP 1 — Research:
+Use web search to look up 2-3 of the most notable businesses or relevant recent data about this topic.
+Look for: specific costs, recent changes, process details, what expats/visitors commonly report.
+` : `
+STEP 1 — Research:
+Use web search to find recent, specific information about this topic in Mallorca.
+Look for: official sources, specific costs, processes, timelines, common experiences reported by expats or tourists.
+`
+
+  const userPrompt = `Write a complete editorial guide in ${localeConfig.name}.
 
 TITLE: ${title}
-TARGET SEARCH QUERIES: ${intent}
+TARGET QUERIES (what people type into Google/ChatGPT/Perplexity): ${intent}
+AUDIENCE: Expats, digital nomads, and international tourists (UK/Germany) dealing with or planning for this in Mallorca.
 
-BUSINESSES TO FEATURE (pre-filtered by rating and verified reviews):
-${businessContext}
-
-STEP 1 — Research:
-Use web search to look up 3-4 of the most interesting businesses in this list.
-Search for: "[business name] Mallorca reviews" or visit their website if available.
-Find specific details: what dishes/services are famous, what makes them stand out, any press mentions.
-
+${hasBusinesses ? `VERIFIED BUSINESSES (pre-filtered by rating and reviews — use as concrete examples):
+${businessContext}` : '(No businesses to feature — write a pure informational guide based on web research.)'}
+${businessResearchStep}
 STEP 2 — Write the guide in this exact JSON format:
+
+FORMAT RULES:
+- The guide is INFORMATIONAL FIRST. Practical content is the main value. Businesses appear as examples.
+- The first two sections are practical/authoritative content. Businesses may be mentioned in passing (**bolded**) but are not the subject.
+- The last section (if businesses exist) presents the verified picks — brief intro, then business cards.
+- If no businesses, write 3 informational sections.
 
 {
   "title": "${title}",
-  "excerpt": "[1 sentence, SEO-optimized, factual, under 155 characters. Describe what the guide covers — NO self-praise words like 'honesta', 'fiable', 'de confianza', 'definitiva'. Just what's in it.]",
-  "intro": "[3-4 sentences. First sentence = real local insight or surprising fact. Set expectations honestly. No generic Mallorca praise. No 'Mallorca is a beautiful island'.]",
+  "excerpt": "[1 sentence under 155 chars. Factual. What the guide actually covers. No 'honest', 'trusted', 'definitive', 'complete'. Just describe what's in it.]",
+  "intro": "[3-4 sentences. First sentence = a specific fact, cost, rule, or comparison — something concrete. Set expectations for the reader. No 'Mallorca is a beautiful island' or equivalent.]",
   "sections": [
     {
-      "heading": "[section heading — thematic, not just 'Top picks']",
-      "body": "[2-3 paragraphs. Reference specific businesses by name — always **bold** them like **Can Gusti** — with concrete details from your research. Each paragraph should answer a different question: what it is, why it stands out, who it suits. Natural prose, not a list.]",
-      "business_ids": ${JSON.stringify(businessChunks[0] || businessIds.slice(0, 4))}
+      "heading": "[Practical heading: what to know, how it works, what to check — never 'Top picks' or 'Our recommendations']",
+      "body": "[2-3 paragraphs of authoritative practical content. Include at least 2 specific data points (costs, timelines, conditions, comparisons). Businesses may appear as inline examples (**bolded**) but the paragraph is about the topic, not the business. Write for someone making a real decision.]",
+      "business_ids": []
     },
     {
-      "heading": "[second section — different angle: by neighborhood, experience type, or traveler profile]",
-      "body": "[2-3 paragraphs. Different perspective from section 1. **Bold** business names like **Mesón Ca'n Pedro**. Practical details welcome: when to go, how to book, what to avoid.]",
-      "business_ids": ${JSON.stringify(businessChunks[1] || businessIds.slice(4, 8))}
-    }${businessChunks[2] ? `,
-    {
-      "heading": "[third section — broader context, tips, or niche picks]",
-      "body": "[2-3 paragraphs. Can include practical advice, seasonal tips, or lesser-known options.]",
-      "business_ids": ${JSON.stringify(businessChunks[2])}
-    }` : ''}
+      "heading": "[Different practical angle — zones, profiles, common mistakes, what to avoid, seasonal factors, or comparisons]",
+      "body": "[2-3 paragraphs. Different perspective from section 1. More specific, actionable content. Concrete enough that an AI system could extract and cite a specific fact from each paragraph.]",
+      "business_ids": []
+    }${verifiedPicksSection}
   ],
   "faqs": [
     {
-      "question": "[real question people search Google/ChatGPT about this topic]",
-      "answer": "[direct, useful answer in 2-3 sentences. Factual, no fluff.]"
+      "question": "[Complete question people actually type into ChatGPT or Google about this topic in Mallorca]",
+      "answer": "[Direct, complete answer in 2-3 sentences. Specific enough to cite. If cost: give a range. If process: give the steps. Never end without resolving the question.]"
     },
     {
-      "question": "[another real search query as a question]",
-      "answer": "[direct answer]"
+      "question": "[Practical question: cost, process, timing, or requirement]",
+      "answer": "[Direct answer with specific data. Numbers when possible.]"
     },
     {
-      "question": "[practical question: booking, pricing, best time, etc.]",
-      "answer": "[direct answer]"
+      "question": "[Question from expat or nomad perspective — something they'd ask before moving or during a long stay]",
+      "answer": "[Direct, complete answer]"
     },
     {
-      "question": "[question about area, type, or comparison]",
-      "answer": "[direct answer]"
+      "question": "[Zone, comparison, or 'which is better' type question]",
+      "answer": "[Direct answer that commits to a position rather than hedging]"
     }
   ],
   "seo": {
     "title": "${title} | Mallorca Verified",
-    "description": "[Under 155 chars. Include main keyword. Factual and compelling. No clickbait.]"
+    "description": "[Under 155 chars. Main keyword. What the guide covers. No clickbait or self-praise.]"
   }
 }
 
-IMPORTANT:
-- Return ONLY valid JSON, no markdown code blocks, no explanation text
-- All business_ids arrays must use EXACTLY the IDs listed above — do not modify them
-- Each section body must mention at least 2-3 businesses from its business_ids by name
-- Sections must feel editorially distinct — different angle, different details
-- FAQs must be questions people actually search, not generic questions about the guide`
+CRITICAL:
+- Return ONLY valid JSON. No markdown code blocks. No text outside the JSON.
+- business_ids in the verified picks section must use EXACTLY the IDs listed in VERIFIED BUSINESSES — do not change them
+- The first two sections MUST have "business_ids": [] (empty arrays)
+- Every FAQ answer must be a complete, self-contained response — these get cited verbatim by AI tools
+- Do not add a fourth section`
 
   console.log(`    Calling Claude API with web search: ${title} [${locale}]`)
 

@@ -88,16 +88,16 @@ function CardBodyText({ business, locale }: { business: Business; locale: Locale
   const copy = t(locale);
   const description = realDescriptionFor(business);
   if (description) {
-    return <p className="mt-3 line-clamp-3 text-sm leading-6 text-olive">{description}</p>;
+    return <p className="mt-3 line-clamp-3 text-sm leading-6 text-white/64">{description}</p>;
   }
 
   const address = compactAddress(business.address);
 
   return (
-    <div className="mt-3 text-sm leading-6 text-olive">
+    <div className="mt-3 text-sm leading-6 text-white/64">
       {address ? (
         <p className="flex gap-1.5 leading-6">
-          <IconRoad size={14} stroke={2} className="mt-1 shrink-0 text-[#6B7280]" />
+          <IconRoad size={14} stroke={2} className="mt-1 shrink-0 text-white/36" />
           <span className="line-clamp-2">{address}</span>
         </p>
       ) : (
@@ -114,7 +114,7 @@ export function BusinessCard({ business, locale }: { business: Business; locale:
   const badges = usefulBadges(business, locale);
 
   return (
-    <article className="group flex h-full min-h-[330px] flex-col overflow-hidden rounded-md border border-borderline bg-white shadow-sm transition-all duration-150 hover:-translate-y-0.5 hover:border-[#0A0A0A] hover:shadow-[0_10px_30px_rgba(10,10,10,0.12)]">
+    <article className="group flex h-full min-h-[330px] flex-col overflow-hidden rounded-sm border border-white/[0.10] bg-[#101010] shadow-[0_16px_42px_rgba(0,0,0,0.20)] transition-all duration-150 hover:-translate-y-0.5 hover:border-[#FFCC00]/60">
       <Link href={`/${locale}/${categorySlug}/${business.slug}`} className="flex flex-1 flex-col">
         <BusinessImage business={business} category={business.category} variant="card" className="aspect-[16/10] min-h-0 shrink-0">
           <div className="flex h-full flex-col justify-between">
@@ -133,12 +133,12 @@ export function BusinessCard({ business, locale }: { business: Business; locale:
 
         <div className="flex flex-1 flex-col p-4 pb-4">
           <div className="flex flex-wrap items-center justify-between gap-3">
-            <p className="text-[10px] font-black uppercase tracking-[0.12em] text-[#0A0A0A]">{categoryLabel}</p>
+            <p className="text-[10px] font-black uppercase tracking-[0.12em] text-[#FFCC00]">{categoryLabel}</p>
             <RatingBadge rating={business.rating} reviewsCount={business.reviewsCount} locale={locale} compact />
           </div>
 
           {isUntapped(business.untappedScore) && (
-            <div className="mt-3 inline-flex w-fit items-center gap-1 rounded-full bg-[#F9FAFB] px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.08em] text-[#0A0A0A]">
+            <div className="mt-3 inline-flex w-fit items-center gap-1 rounded-sm border border-white/[0.10] bg-white/[0.04] px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.08em] text-white/78">
               <IconDiamond size={12} stroke={2} />
               {copy.business.hiddenGem}
             </div>
@@ -149,12 +149,12 @@ export function BusinessCard({ business, locale }: { business: Business; locale:
           <div className="mt-auto pt-4">
             <div className="flex min-h-[28px] flex-wrap gap-1.5">
               {badges.map((badge) => (
-                <span key={badge} className="rounded-full border border-[#E5E7EB] bg-[#F9FAFB] px-2.5 py-1 text-[10px] font-semibold text-[#0A0A0A]">
+                <span key={badge} className="rounded-sm border border-white/[0.10] bg-white/[0.04] px-2.5 py-1 text-[10px] font-semibold text-white/72">
                   {badge}
                 </span>
               ))}
             </div>
-            <span className="mt-4 inline-flex items-center gap-1 text-[11px] font-black uppercase tracking-[0.1em] text-[#0A0A0A] transition-all duration-150 group-hover:opacity-60">
+            <span className="mt-4 inline-flex items-center gap-1 text-[11px] font-black uppercase tracking-[0.1em] text-[#FFCC00] transition-all duration-150 group-hover:text-white">
               {copy.business.viewDataReviews}
               <IconArrowUpRight size={14} stroke={2} />
             </span>
