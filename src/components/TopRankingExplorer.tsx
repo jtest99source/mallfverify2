@@ -173,8 +173,17 @@ function RankingBusinessRow({
         <div className="hidden items-center justify-center p-4 text-center sm:flex">
           <div>
             {typeof business.rating === "number" && (
-              <div className="font-display inline-flex items-baseline gap-1 text-4xl font-black leading-none text-[#FFCC00] ">
+              <div className="font-display text-4xl font-black leading-none text-[#FFCC00]">
                 {business.rating.toLocaleString(numberLocale(locale), { minimumFractionDigits: 1, maximumFractionDigits: 1 })}
+              </div>
+            )}
+            {typeof business.rating === "number" && (
+              <div className="mt-1 flex justify-center gap-0.5 text-[10px] leading-none text-[#FFCC00]">
+                {Array.from({ length: 5 }, (_, starIndex) => (
+                  <span key={starIndex} className={starIndex < Math.round(business.rating ?? 0) ? "opacity-100" : "opacity-22"}>
+                    ★
+                  </span>
+                ))}
               </div>
             )}
             {typeof business.reviewsCount === "number" && (

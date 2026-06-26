@@ -56,7 +56,7 @@ export default async function TopCategoryPage({ params }: { params: Promise<{ lo
 
   return (
     <main className="bg-[#0A0A0A] text-white">
-      <section className="border-b border-white/[0.08] bg-[#111111] px-4 py-10 sm:px-6 sm:py-12 lg:px-8">
+      <section className="bg-[#0A0A0A] px-4 py-10 sm:px-6 sm:py-12 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <div className="flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.08em] text-white/25">
             <Link href={`/${safeLocale}`} className="transition-colors hover:text-[#FFCC00]">{copy.category.breadcrumbHome}</Link>
