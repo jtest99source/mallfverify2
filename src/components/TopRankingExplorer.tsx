@@ -173,7 +173,7 @@ function RankingBusinessRow({
         <div className="hidden items-center justify-center p-4 text-center sm:flex">
           <div>
             {typeof business.rating === "number" && (
-              <div className="font-display text-4xl font-black leading-none text-[#FFCC00]">
+              <div className="font-display inline-flex items-baseline gap-1 text-4xl font-black leading-none text-[#FFCC00] before:text-lg before:content-['★']">
                 {business.rating.toLocaleString(numberLocale(locale), { minimumFractionDigits: 1, maximumFractionDigits: 1 })}
               </div>
             )}

@@ -201,11 +201,12 @@ export function SearchBox({ locale, variant = "navbar", className = "" }: Search
     ? "h-14 w-full rounded-md border border-borderline bg-white px-12 text-base text-ink shadow-soft outline-none placeholder:text-[#525252] focus:border-[#0A0A0A]"
     : isNav
       ? "h-11 w-full rounded-md border border-borderline bg-linen px-10 text-sm text-ink outline-none placeholder:text-[#525252] focus:border-ink focus:bg-white"
-      : "h-9 w-[220px] rounded-full border border-borderline bg-linen px-9 text-[12px] text-ink outline-none placeholder:text-[#525252] transition-all duration-200 focus:w-[300px] focus:border-ink focus:bg-white";
+      : "h-9 w-[220px] rounded-sm border border-white/[0.12] bg-[#111111] px-9 text-[12px] text-white outline-none placeholder:text-white/35 transition-all duration-200 focus:w-[300px] focus:border-[#FFCC00] focus:bg-[#111111]";
+  const iconClass = isHero || isNav ? "text-[#0A0A0A]" : "text-white/45";
 
   return (
     <div ref={wrapperRef} className={`relative z-[90] ${className}`}>
-      <IconSearch aria-hidden="true" size={isHero ? 22 : 15} className="pointer-events-none absolute left-4 top-1/2 z-10 -translate-y-1/2 text-[#0A0A0A]" />
+      <IconSearch aria-hidden="true" size={isHero ? 22 : 15} className={`pointer-events-none absolute left-4 top-1/2 z-10 -translate-y-1/2 ${iconClass}`} />
       <input
         value={query}
         onChange={(event) => {
