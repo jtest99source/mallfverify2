@@ -397,12 +397,20 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
     ...cafes
   ]
     .filter((business): business is Business => {
+      if (!business || !getBusinessImageUrl(business)) return false;
       const businessId = String(business.id);
-      if (!business || !getBusinessImageUrl(business) || seenHeroBusinessIds.has(businessId)) return false;
+      if (seenHeroBusinessIds.has(businessId)) return false;
       seenHeroBusinessIds.add(businessId);
       return true;
     })
     .slice(0, 4);
+  const heroFallbacks = [
+    "linear-gradient(160deg,#202020,#080808)",
+    "linear-gradient(160deg,#1f241f,#090909)",
+    "linear-gradient(160deg,#231b14,#080808)",
+    "linear-gradient(160deg,#101b1f,#070707)"
+  ];
+  const heroPanels = Array.from({ length: 4 }, (_, index) => heroBusinesses[index] ?? null);
   const heroChips = [
     { href: `/${safeLocale}/top/restaurants?area=Palma`, label: safeLocale === "de" ? "Restaurants in Palma" : safeLocale === "en" ? "Restaurants in Palma" : "Restaurantes en Palma" },
     { href: `/${safeLocale}/top/beach-clubs`, label: safeLocale === "de" ? "Beachclubs" : safeLocale === "en" ? "Beach clubs" : "Beach clubs" },
@@ -413,14 +421,29 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
   return (
     <main className="bg-[#0A0A0A] text-white">
       <section className="relative z-20 flex min-h-[96vh] items-center justify-center overflow-visible bg-[#0A0A0A] px-4 py-20 text-center text-white sm:px-6 lg:px-8">
-        <div className="absolute inset-0 grid grid-cols-2 gap-px opacity-90 md:grid-cols-4">
-          {heroBusinesses.map((business, index) => (
-            <BusinessImage key={business.id} business={business} category={business.category} variant="hero" className="h-full min-h-full rounded-none p-0">
-              <div className="absolute left-4 top-4 font-display text-xl font-black text-[#FFCC00]">#{index + 1}</div>
-              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 whitespace-nowrap bg-black/50 px-2.5 py-1 text-[9px] font-bold uppercase tracking-[0.1em] text-white/45 backdrop-blur">
-                {businessLocation(business)}
-              </div>
-            </BusinessImage>
+        <div className="absolute inset-0 grid grid-cols-2 gap-px opacity-95 md:grid-cols-4">
+          {heroPanels.map((business, index) => (
+            <div
+              key={business?.id ?? `fallback-${index}`}
+              className="relative h-full min-h-full overflow-hidden bg-[#111111]"
+              style={{
+                backgroundImage: business
+                  ? `linear-gradient(180deg,rgba(10,10,10,0.1),rgba(10,10,10,0.34)), url(${getBusinessImageUrl(business)})`
+                  : heroFallbacks[index],
+                backgroundSize: "cover",
+                backgroundPosition: "center"
+              }}
+            >
+              <div className="absolute inset-0 bg-[#0A0A0A]/10" />
+              {business && (
+                <>
+                  <div className="absolute left-4 top-4 font-display text-xl font-black text-[#FFCC00]">#{index + 1}</div>
+                  <div className="absolute bottom-4 left-1/2 -translate-x-1/2 whitespace-nowrap bg-black/50 px-2.5 py-1 text-[9px] font-bold uppercase tracking-[0.1em] text-white/45 backdrop-blur">
+                    {businessLocation(business)}
+                  </div>
+                </>
+              )}
+            </div>
           ))}
         </div>
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_72%_72%_at_50%_43%,rgba(10,10,10,0.9)_0%,rgba(10,10,10,0.76)_48%,rgba(10,10,10,0.88)_100%),linear-gradient(to_bottom,rgba(10,10,10,0.78)_0%,rgba(10,10,10,0.42)_42%,rgba(10,10,10,0.95)_100%)]" />

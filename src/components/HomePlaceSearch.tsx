@@ -84,11 +84,11 @@ export function HomePlaceSearch({ locale, categories, locations }: HomePlaceSear
     <form
       ref={rootRef}
       onSubmit={onSubmit}
-      className="relative z-30 mx-auto mt-8 w-full max-w-[680px] overflow-visible rounded-lg border border-white/20 bg-[#0A0A0A]/78 p-1.5 shadow-[0_28px_80px_rgba(0,0,0,0.58)] backdrop-blur-md"
+      className="relative z-30 mx-auto mt-8 w-full max-w-[650px] overflow-visible rounded-md border border-white/20 bg-[#0A0A0A]/78 p-1 shadow-[0_28px_80px_rgba(0,0,0,0.58)] backdrop-blur-md"
     >
-      <div className="grid sm:grid-cols-[minmax(0,1fr)_minmax(0,1fr)_128px] sm:items-stretch">
+      <div className="grid sm:grid-cols-[minmax(0,1fr)_minmax(0,1fr)_104px] sm:items-stretch">
         {/* WHAT */}
-        <div className="relative z-40 px-5 py-4 sm:border-r sm:border-white/10">
+        <div className="relative z-40 px-5 py-3.5 sm:border-r sm:border-white/10">
           <span className="mb-1.5 block text-[9px] font-black uppercase tracking-[0.14em] text-white/45">
             {labels.category}
           </span>
@@ -134,7 +134,7 @@ export function HomePlaceSearch({ locale, categories, locations }: HomePlaceSear
         </div>
 
         {/* WHERE */}
-        <div className="relative z-40 border-t border-white/10 px-5 py-4 sm:border-t-0">
+        <div className="relative z-40 border-t border-white/10 px-5 py-3.5 sm:border-t-0">
           <span className="mb-1.5 block text-[9px] font-black uppercase tracking-[0.14em] text-white/45">
             {labels.location}
           </span>
@@ -196,7 +196,7 @@ export function HomePlaceSearch({ locale, categories, locations }: HomePlaceSear
         {/* SUBMIT */}
         <button
           type="submit"
-          className="inline-flex min-h-14 w-full items-center justify-center rounded-md bg-[#FFCC00] px-6 text-[12px] font-black uppercase tracking-[0.14em] text-[#0A0A0A] transition-all duration-150 hover:bg-white sm:min-h-full sm:w-[128px]"
+          className="m-1 inline-flex min-h-12 w-[calc(100%-0.5rem)] items-center justify-center rounded-sm bg-[#FFCC00] px-5 text-[11px] font-black uppercase tracking-[0.14em] text-[#0A0A0A] transition-all duration-150 hover:bg-white sm:min-h-0 sm:w-[96px]"
         >
           {labels.submit}
         </button>

@@ -43,7 +43,7 @@ export function Header({ locale }: { locale: Locale }) {
 
   return (
     <>
-      <header className="sticky top-0 z-40 border-b border-white/[0.08] bg-[#0A0A0A]/96 text-white backdrop-blur">
+      <header className="sticky top-0 z-40 border-b border-white/[0.08] bg-[#0A0A0A] text-white shadow-[0_1px_0_rgba(255,255,255,0.04)]">
         <div className="mx-auto flex h-14 max-w-[1440px] items-center gap-6 px-4 sm:px-6 lg:px-8">
           <NavLogo locale={locale} />
 
