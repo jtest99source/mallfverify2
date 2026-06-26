@@ -129,45 +129,63 @@ function RankingBusinessRow({
   const summary = summaryFor(business);
 
   return (
-    <article className="group overflow-hidden rounded-md border border-[#0A0A0A] bg-white shadow-[0_12px_30px_rgba(10,10,10,0.07)] transition-all duration-150 hover:-translate-y-0.5 hover:shadow-[0_20px_44px_rgba(10,10,10,0.13)]">
-      <Link href={`/${locale}/${categorySlug}/${business.slug}`} className="grid min-h-[124px] grid-cols-[82px_minmax(0,1fr)] sm:grid-cols-[220px_minmax(0,1fr)] lg:grid-cols-[250px_minmax(0,1fr)]">
-        <div className="relative min-h-[124px] overflow-hidden">
-          <BusinessImage business={business} category={business.category} variant="card" className="h-full min-h-[124px] p-0" />
-          <span className="absolute left-2 top-2 inline-flex h-7 min-w-7 items-center justify-center rounded-sm bg-[#0A0A0A] px-2 text-[11px] font-black text-white ring-1 ring-white/20">#{rank}</span>
-          <div className="absolute bottom-2 left-2 hidden sm:block">
-            <RatingBadge rating={business.rating} reviewsCount={business.reviewsCount} locale={locale} compact />
-          </div>
+    <article className="group bg-[#111111] ring-1 ring-white/[0.08] transition-colors duration-150 hover:bg-[#1A1A1A]">
+      <Link href={`/${locale}/${categorySlug}/${business.slug}`} className="grid min-h-[118px] grid-cols-[52px_minmax(0,1fr)] sm:grid-cols-[64px_156px_minmax(0,1fr)_136px]">
+        <div className="flex items-center justify-center border-r border-white/[0.08]">
+          <span className="font-display text-2xl font-black text-[#FFCC00]">#{rank}</span>
         </div>
 
-        <div className="min-w-0 p-4 sm:p-4 lg:px-5">
+        <div className="relative hidden min-h-[118px] overflow-hidden sm:block">
+          <BusinessImage business={business} category={business.category} variant="card" className="h-full min-h-[118px] rounded-none p-0" />
+          <span className="absolute bottom-2 left-2 inline-flex items-center gap-1 bg-black/55 px-2 py-1 text-[10px] font-semibold uppercase tracking-[0.08em] text-white/70 backdrop-blur">
+            <IconMapPin size={12} stroke={2} />
+            {businessPlace(business)}
+          </span>
+        </div>
+
+        <div className="min-w-0 border-r border-white/[0.08] p-4 sm:px-6">
           <div className="flex min-w-0 flex-wrap items-center gap-2">
             {showCategory && categoryLabel && (
-              <span className="rounded-full border border-[#E5E7EB] bg-[#F9FAFB] px-2.5 py-1 text-[9px] font-black uppercase tracking-[0.08em] text-[#0A0A0A]">
+              <span className="rounded-full border border-white/[0.1] px-2.5 py-1 text-[9px] font-bold uppercase tracking-[0.08em] text-white/40">
                 {categoryLabel}
               </span>
             )}
-            <span className="inline-flex min-w-0 items-center gap-1 text-[11px] font-bold text-[#6B7280]">
+            <span className="inline-flex min-w-0 items-center gap-1 text-[11px] font-semibold text-white/35">
               <IconMapPin size={13} stroke={2} />
               <span className="truncate">{businessPlace(business)}</span>
             </span>
           </div>
 
-          <h2 className="mt-2 line-clamp-2 text-[19px] font-black leading-[1.05] text-[#0A0A0A] sm:text-xl">{getBusinessPublicName(business)}</h2>
-          {summary && <p className="mt-1.5 hidden max-w-2xl text-sm leading-6 text-[#6B7280] lg:line-clamp-1">{summary}</p>}
+          <h2 className="font-display mt-2 line-clamp-2 text-xl font-bold leading-tight text-white">{getBusinessPublicName(business)}</h2>
+          {summary && <p className="mt-1.5 hidden max-w-2xl text-sm font-light leading-6 text-white/40 lg:line-clamp-1">{summary}</p>}
           {address && (
-            <p className="mt-2 flex max-w-2xl gap-1.5 text-xs leading-5 text-[#6B7280] sm:text-sm">
-              <IconMapPin size={14} stroke={2} className="mt-0.5 shrink-0 text-[#6B7280]" />
+            <p className="mt-2 flex max-w-2xl gap-1.5 text-xs leading-5 text-white/35 sm:text-sm">
+              <IconMapPin size={14} stroke={2} className="mt-0.5 shrink-0 text-white/28" />
               <span className="line-clamp-1">{address}</span>
             </p>
           )}
 
-          <div className="mt-3 flex flex-wrap items-center gap-3">
-            <div className="sm:hidden">
-              <RatingBadge rating={business.rating} reviewsCount={business.reviewsCount} locale={locale} compact />
-            </div>
-            <span className="inline-flex items-center gap-1 text-[10px] font-black uppercase tracking-[0.1em] text-[#0A0A0A] transition-opacity group-hover:opacity-65">
-              {locale === "de" ? "Ansehen" : locale === "en" ? "View details" : "Ver ficha"}
-              <IconArrowUpRight size={14} stroke={2} />
+          <div className="mt-3 sm:hidden">
+            <RatingBadge rating={business.rating} reviewsCount={business.reviewsCount} locale={locale} compact />
+          </div>
+        </div>
+
+        <div className="hidden items-center justify-center p-4 text-center sm:flex">
+          <div>
+            {typeof business.rating === "number" && (
+              <div className="font-display text-4xl font-black leading-none text-[#FFCC00]">
+                {business.rating.toLocaleString(numberLocale(locale), { minimumFractionDigits: 1, maximumFractionDigits: 1 })}
+              </div>
+            )}
+            <div className="mt-1 text-[12px] text-[#FFCC00]/70">★</div>
+            {typeof business.reviewsCount === "number" && (
+              <div className="mt-1 text-[10px] font-semibold uppercase tracking-[0.06em] text-white/30">
+                {business.reviewsCount.toLocaleString(numberLocale(locale))} {locale === "es" ? "reseñas" : locale === "de" ? "Rezensionen" : "reviews"}
+              </div>
+            )}
+            <span className="mt-3 inline-flex items-center gap-1 rounded-sm border border-white/[0.12] px-3 py-1.5 text-[10px] font-black uppercase tracking-[0.08em] text-white/35 transition-colors group-hover:border-[#FFCC00] group-hover:text-[#FFCC00]">
+              {locale === "de" ? "Details" : locale === "en" ? "Details" : "Ficha"}
+              <IconArrowUpRight size={13} stroke={2} />
             </span>
           </div>
         </div>
@@ -277,18 +295,20 @@ export function TopRankingExplorer({
   }, [facetSlug, place, query, sort]);
 
   return (
-    <section className="mx-auto max-w-7xl px-4 pb-14 sm:px-6 lg:px-8">
-      <div className="relative mb-3 max-w-4xl">
-        <IconSearch size={16} stroke={1.8} className="absolute left-4 top-1/2 -translate-y-1/2 text-[#0A0A0A]" />
+    <section className="pb-14">
+      <div className="border-b border-white/[0.08] bg-[#1A1A1A] px-4 py-3 sm:px-6 lg:px-8">
+      <div className="relative mx-auto max-w-7xl">
+        <IconSearch size={16} stroke={1.8} className="absolute left-4 top-1/2 -translate-y-1/2 text-white/25" />
         <input
           value={query}
           onChange={(event) => updateParam("q", event.target.value)}
           placeholder={scopedSearchPlaceholder}
-          className="h-12 w-full rounded-md border border-[#E5E7EB] bg-white pl-11 pr-4 text-sm text-ink shadow-sm focus:border-[#0A0A0A] focus:outline-none focus:ring-1 focus:ring-[#0A0A0A]"
+          className="h-11 w-full max-w-[440px] rounded-sm border border-white/[0.12] bg-[#242424] pl-11 pr-4 text-sm text-white placeholder:text-white/25 focus:border-[#FFCC00] focus:outline-none focus:ring-1 focus:ring-[#FFCC00]"
         />
       </div>
+      </div>
       {/* Mobile filters: sort chips + compact 2-col dropdowns */}
-      <div className="sm:hidden">
+      <div className="px-4 py-4 sm:hidden">
         <div className="flex gap-2 overflow-x-auto pb-1 [&::-webkit-scrollbar]:hidden">
           {sortOptions.map((option) => (
             <button
@@ -297,8 +317,8 @@ export function TopRankingExplorer({
               onClick={() => updateParam("sort", option.value)}
               className={`shrink-0 rounded-full px-3.5 py-2 text-[11px] font-bold uppercase tracking-[0.06em] transition-colors ${
                 sort === option.value
-                  ? "bg-ink text-white"
-                  : "border border-[#E5E7EB] bg-white text-ink"
+                  ? "bg-[#FFCC00] text-[#0A0A0A]"
+                  : "border border-white/[0.12] bg-[#111111] text-white/55"
               }`}
             >
               {option.label}
@@ -307,46 +327,48 @@ export function TopRankingExplorer({
         </div>
         <div className={`mt-2 grid gap-2 ${SHOW_TYPE_FILTER && facets.length > 0 ? "grid-cols-2" : "grid-cols-1"}`}>
           {SHOW_TYPE_FILTER && facets.length > 0 && (
-            <select value={facetSlug} onChange={(event) => updateParam("type", event.target.value)} className="h-10 rounded-md border border-[#E5E7EB] bg-[#FFFFFF] px-2 text-xs text-ink focus:border-[#0A0A0A] focus:ring-[#0A0A0A]">
+            <select value={facetSlug} onChange={(event) => updateParam("type", event.target.value)} className="h-10 rounded-sm border border-white/[0.12] bg-[#111111] px-2 text-xs text-white focus:border-[#FFCC00] focus:ring-[#FFCC00]">
               <option value={ALL}>{copy.filters.type}: {copy.filters.all}</option>
               {facets.map((facet) => (
                 <option key={facet.slug} value={facet.slug}>{getLocalizedFacetLabel(facet.slug, facet.label, locale)} ({facet.count})</option>
               ))}
             </select>
           )}
-          <select value={place} onChange={(event) => updateParam("area", event.target.value)} className="h-10 rounded-md border border-[#E5E7EB] bg-[#FFFFFF] px-2 text-xs text-ink focus:border-[#0A0A0A] focus:ring-[#0A0A0A]">
+          <select value={place} onChange={(event) => updateParam("area", event.target.value)} className="h-10 rounded-sm border border-white/[0.12] bg-[#111111] px-2 text-xs text-white focus:border-[#FFCC00] focus:ring-[#FFCC00]">
             <option value={ALL}>{copy.filters.place}: {copy.filters.allPlaces}</option>
             {places.map((item) => (
               <option key={item} value={item}>{item}</option>
             ))}
           </select>
         </div>
-        <p className="mt-2 text-[11px] font-black uppercase tracking-[0.1em] text-[#0A0A0A]">
+        <p className="mt-2 text-[11px] font-black uppercase tracking-[0.1em] text-white/55">
           {totalCount} {copy.filters.results}
         </p>
-        <Link href={methodologyPath(locale)} className="mt-2 inline-flex items-center gap-1 text-[10px] font-black uppercase tracking-[0.1em] text-[#0A0A0A]">
+        <Link href={methodologyPath(locale)} className="mt-2 inline-flex items-center gap-1 text-[10px] font-black uppercase tracking-[0.1em] text-[#FFCC00]">
           <IconInfoCircle size={13} stroke={2} />
           {sortHelp.link}
         </Link>
       </div>
 
-      <div className="mt-6 grid gap-6 lg:grid-cols-[240px_minmax(0,820px)]">
-        <aside className="hidden lg:block">
-          <div className="sticky top-20 rounded-md border border-[#E5E7EB] bg-white p-4 shadow-[0_14px_36px_rgba(10,10,10,0.035)]">
-            <p className="text-[11px] font-black uppercase tracking-[0.12em] text-[#0A0A0A]">{totalCount} {copy.filters.results}</p>
-            <div className="grid gap-3">
-              <label className="grid gap-1.5 text-[10px] font-black uppercase tracking-[0.12em] text-[#0A0A0A]">
+      <div className="hidden border-b border-white/[0.08] bg-[#1A1A1A] px-4 py-4 lg:block lg:px-8">
+        <div className="mx-auto flex max-w-7xl items-center gap-6">
+          <div className="shrink-0">
+            <div className="font-display text-xl font-bold text-white">{totalCount}</div>
+            <div className="text-[11px] text-white/30">{copy.filters.results}</div>
+          </div>
+          <div className="h-8 w-px bg-white/[0.08]" />
+          <label className="flex items-center gap-3 text-[10px] font-black uppercase tracking-[0.12em] text-white/30">
                 {copy.filters.sortBy}
-                <select value={sort} onChange={(event) => updateParam("sort", event.target.value)} className="h-11 rounded-md border border-[#E5E7EB] bg-[#FFFFFF] px-3 text-sm font-normal normal-case tracking-normal text-ink focus:border-[#0A0A0A] focus:outline-none focus:ring-1 focus:ring-[#0A0A0A]">
+                <select value={sort} onChange={(event) => updateParam("sort", event.target.value)} className="h-9 rounded-sm border border-white/[0.12] bg-[#242424] px-3 text-sm font-normal normal-case tracking-normal text-white focus:border-[#FFCC00] focus:outline-none focus:ring-1 focus:ring-[#FFCC00]">
                   {sortOptions.map((option) => (
                     <option key={option.value} value={option.value}>{option.label}</option>
                   ))}
                 </select>
-              </label>
+          </label>
               {SHOW_TYPE_FILTER && facets.length > 0 && (
-                <label className="grid gap-1.5 text-[10px] font-black uppercase tracking-[0.12em] text-[#0A0A0A]">
+                <label className="flex items-center gap-3 text-[10px] font-black uppercase tracking-[0.12em] text-white/30">
                   {copy.filters.type}
-                  <select value={facetSlug} onChange={(event) => updateParam("type", event.target.value)} className="h-11 rounded-md border border-[#E5E7EB] bg-[#FFFFFF] px-3 text-sm font-normal normal-case tracking-normal text-ink focus:border-[#0A0A0A] focus:outline-none focus:ring-1 focus:ring-[#0A0A0A]">
+                  <select value={facetSlug} onChange={(event) => updateParam("type", event.target.value)} className="h-9 rounded-sm border border-white/[0.12] bg-[#242424] px-3 text-sm font-normal normal-case tracking-normal text-white focus:border-[#FFCC00] focus:outline-none focus:ring-1 focus:ring-[#FFCC00]">
                     <option value={ALL}>{copy.filters.all}</option>
                     {facets.map((facet) => (
                       <option key={facet.slug} value={facet.slug}>{getLocalizedFacetLabel(facet.slug, facet.label, locale)} ({facet.count})</option>
@@ -354,30 +376,26 @@ export function TopRankingExplorer({
                   </select>
                 </label>
               )}
-              <label className="grid gap-1.5 text-[10px] font-black uppercase tracking-[0.12em] text-[#0A0A0A]">
+              <label className="flex items-center gap-3 text-[10px] font-black uppercase tracking-[0.12em] text-white/30">
                 {copy.filters.place}
-                <select value={place} onChange={(event) => updateParam("area", event.target.value)} className="h-11 rounded-md border border-[#E5E7EB] bg-[#FFFFFF] px-3 text-sm font-normal normal-case tracking-normal text-ink focus:border-[#0A0A0A] focus:outline-none focus:ring-1 focus:ring-[#0A0A0A]">
+                <select value={place} onChange={(event) => updateParam("area", event.target.value)} className="h-9 rounded-sm border border-white/[0.12] bg-[#242424] px-3 text-sm font-normal normal-case tracking-normal text-white focus:border-[#FFCC00] focus:outline-none focus:ring-1 focus:ring-[#FFCC00]">
                   <option value={ALL}>{copy.filters.allPlaces}</option>
                   {places.map((item) => (
                     <option key={item} value={item}>{item}</option>
                   ))}
                 </select>
               </label>
-              <details className="rounded-md border border-[#E5E7EB] bg-[#F9FAFB] p-3 text-xs leading-5 text-[#6B7280]">
-                <summary className="flex cursor-pointer list-none items-center gap-1.5 text-[10px] font-black uppercase tracking-[0.1em] text-[#0A0A0A]">
-                  <IconInfoCircle size={13} stroke={2} />
-                  {sortHelp.title}
-                </summary>
-                <p className="mt-2">{sortHelp.text}</p>
-                <Link href={methodologyPath(locale)} className="mt-2 inline-flex text-[10px] font-black uppercase tracking-[0.1em] text-[#0A0A0A] hover:opacity-65">
+              <div className="ml-auto flex items-center gap-2 text-[11px] text-white/30">
+                <span>{sortHelp.text}</span>
+                <Link href={methodologyPath(locale)} className="text-white/45 underline underline-offset-2 hover:text-[#FFCC00]">
                   {sortHelp.link}
                 </Link>
-              </details>
-            </div>
-          </div>
-        </aside>
+              </div>
+        </div>
+      </div>
 
-        <ol className="grid gap-2.5">
+      <div className="mx-auto mt-8 max-w-7xl px-4 sm:px-6 lg:px-8">
+        <ol className="grid gap-px bg-white/[0.08]">
           {visibleBusinesses.map((business, index) => {
             const isAllMode = facets.length === 0;
             return (
@@ -389,14 +407,27 @@ export function TopRankingExplorer({
         </ol>
       </div>
 
+      <div className="hidden">
+              <details className="rounded-md border border-[#E5E7EB] bg-[#F9FAFB] p-3 text-xs leading-5 text-[#6B7280]">
+                <summary className="flex cursor-pointer list-none items-center gap-1.5 text-[10px] font-black uppercase tracking-[0.1em] text-[#0A0A0A]">
+                  <IconInfoCircle size={13} stroke={2} />
+                  {sortHelp.title}
+                </summary>
+                <p className="mt-2">{sortHelp.text}</p>
+                <Link href={methodologyPath(locale)} className="mt-2 inline-flex text-[10px] font-black uppercase tracking-[0.1em] text-[#0A0A0A] hover:opacity-65">
+                  {sortHelp.link}
+                </Link>
+              </details>
+      </div>
+
       {filtered.length > PAGE_SIZE && (
         <div className="mt-8 flex flex-col items-center gap-3">
-          <p className="text-[11px] font-black uppercase tracking-[0.1em] text-[#0A0A0A]">{loadCopy.showing(shownCount, totalCount)}</p>
+          <p className="text-[11px] font-black uppercase tracking-[0.1em] text-white/35">{loadCopy.showing(shownCount, totalCount)}</p>
           {hasMore && (
             <button
               type="button"
               onClick={() => setVisibleCount((value) => Math.min(value + PAGE_SIZE, filtered.length))}
-              className="min-h-11 rounded-md border border-[#0A0A0A] bg-[#0A0A0A] px-6 text-[11px] font-black uppercase tracking-[0.1em] text-[#FFFFFF] shadow-[0_14px_30px_rgba(10,10,10,0.18)] transition hover:-translate-y-0.5 hover:bg-[#262626]"
+              className="min-h-11 rounded-sm bg-[#FFCC00] px-6 text-[11px] font-black uppercase tracking-[0.1em] text-[#0A0A0A] transition hover:-translate-y-0.5 hover:bg-white"
             >
               {loadCopy.loadMore}
             </button>
@@ -405,12 +436,12 @@ export function TopRankingExplorer({
       )}
 
       {!filtered.length && (
-        <div className="mt-6 rounded-lg border border-[#E5E7EB] bg-white/85 p-5 text-sm text-olive sm:mt-8 sm:p-6">
+        <div className="mx-auto mt-6 max-w-7xl rounded-sm border border-white/[0.08] bg-[#111111] p-5 text-sm text-white/50 sm:mt-8 sm:p-6">
           <p>{copy.filters.noResults}</p>
           <button
             type="button"
             onClick={clearFilters}
-            className="mt-4 min-h-10 rounded-md border border-[#E5E7EB] bg-white px-4 text-[11px] font-bold uppercase tracking-[0.1em] text-ink transition hover:border-[#0A0A0A] hover:text-[#0A0A0A]"
+            className="mt-4 min-h-10 rounded-sm bg-[#FFCC00] px-4 text-[11px] font-bold uppercase tracking-[0.1em] text-[#0A0A0A] transition hover:bg-white"
           >
             {loadCopy.clearFilters}
           </button>

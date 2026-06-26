@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { GuideCard } from "@/components/GuideCard";
 import { JsonLd } from "@/components/JsonLd";
 import { TopRankingExplorer } from "@/components/TopRankingExplorer";
@@ -56,14 +55,20 @@ export default async function TopCategoryPage({ params }: { params: Promise<{ lo
   ];
 
   return (
-    <main className="bg-[linear-gradient(180deg,#FFFFFF_0%,#FFFFFF_48%,#FFFFFF_100%)]">
-      <section className="px-4 py-7 sm:px-6 sm:py-9 lg:px-8">
+    <main className="bg-[#0A0A0A] text-white">
+      <section className="border-b border-white/[0.08] bg-[#111111] px-4 py-10 sm:px-6 sm:py-12 lg:px-8">
         <div className="mx-auto max-w-7xl">
-          <Breadcrumbs items={[{ label: copy.category.breadcrumbHome, href: `/${safeLocale}` }, { label: "Rankings", href: `/${safeLocale}/top/restaurants` }, { label: config.label, href: `/${safeLocale}/top/${category}` }]} />
-          <div className="mt-5 max-w-3xl sm:mt-6">
-            <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-[#0A0A0A]">{copy.category.rankingByCategory}</p>
-            <h1 className="mt-3 font-sans text-3xl font-black leading-[1.05] text-ink sm:text-5xl">{title}</h1>
-            <p className="mt-4 max-w-xl text-sm leading-6 text-olive sm:line-clamp-2">{copy.category.signalLine}</p>
+          <div className="flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.08em] text-white/25">
+            <Link href={`/${safeLocale}`} className="transition-colors hover:text-[#FFCC00]">{copy.category.breadcrumbHome}</Link>
+            <span>/</span>
+            <Link href={`/${safeLocale}/top/restaurants`} className="transition-colors hover:text-[#FFCC00]">Rankings</Link>
+            <span>/</span>
+            <span className="text-white/65">{config.label}</span>
+          </div>
+          <div className="mt-7 max-w-4xl">
+            <p className="inline-flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.16em] text-[#FFCC00] before:h-px before:w-4 before:bg-[#FFCC00]">{copy.category.rankingByCategory}</p>
+            <h1 className="font-display mt-3 text-5xl font-black leading-none text-white sm:text-6xl">{title}</h1>
+            <p className="mt-4 max-w-2xl text-sm leading-7 text-white/42">{copy.category.signalLine}</p>
           </div>
         </div>
       </section>
@@ -72,11 +77,11 @@ export default async function TopCategoryPage({ params }: { params: Promise<{ lo
 
       {relatedGuides.length > 0 && (
         <section className="mx-auto max-w-7xl px-4 pb-14 sm:px-6 lg:px-8">
-          <div className="border-t border-[#E5E7EB] pt-10">
-            <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-[#0A0A0A]">{copy.category.relatedGuidesEyebrow}</p>
+          <div className="border-t border-white/[0.08] pt-10">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-[#FFCC00]">{copy.category.relatedGuidesEyebrow}</p>
             <div className="mt-3 flex items-end justify-between gap-4">
-              <h2 className="text-2xl font-black text-ink sm:text-3xl">{copy.category.relatedGuidesTitle(config.label)}</h2>
-              <Link href={`/${safeLocale}/guides`} className="shrink-0 text-[11px] font-bold uppercase tracking-[0.08em] text-[#0A0A0A] opacity-60 hover:opacity-100">
+              <h2 className="font-display text-3xl font-bold text-white">{copy.category.relatedGuidesTitle(config.label)}</h2>
+              <Link href={`/${safeLocale}/guides`} className="shrink-0 text-[11px] font-bold uppercase tracking-[0.08em] text-white/40 hover:text-[#FFCC00]">
                 {copy.category.viewAllGuides} →
               </Link>
             </div>
