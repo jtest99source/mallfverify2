@@ -130,20 +130,16 @@ function RankingBusinessRow({
 
   return (
     <article className="group overflow-hidden rounded-md border border-[#0A0A0A] bg-white shadow-[0_12px_30px_rgba(10,10,10,0.07)] transition-all duration-150 hover:-translate-y-0.5 hover:shadow-[0_20px_44px_rgba(10,10,10,0.13)]">
-      <Link href={`/${locale}/${categorySlug}/${business.slug}`} className="grid min-h-[124px] grid-cols-[82px_minmax(0,1fr)] sm:grid-cols-[46px_220px_minmax(0,1fr)] lg:grid-cols-[50px_250px_minmax(0,1fr)]">
-        <div className="relative min-h-[124px] overflow-hidden sm:order-2">
+      <Link href={`/${locale}/${categorySlug}/${business.slug}`} className="grid min-h-[124px] grid-cols-[82px_minmax(0,1fr)] sm:grid-cols-[220px_minmax(0,1fr)] lg:grid-cols-[250px_minmax(0,1fr)]">
+        <div className="relative min-h-[124px] overflow-hidden">
           <BusinessImage business={business} category={business.category} variant="card" className="h-full min-h-[124px] p-0" />
-          <span className="absolute left-2 top-2 inline-flex h-7 min-w-7 items-center justify-center rounded-sm bg-[#0A0A0A] px-2 text-[11px] font-black text-white ring-1 ring-white/20 sm:hidden">#{rank}</span>
+          <span className="absolute left-2 top-2 inline-flex h-7 min-w-7 items-center justify-center rounded-sm bg-[#0A0A0A] px-2 text-[11px] font-black text-white ring-1 ring-white/20">#{rank}</span>
           <div className="absolute bottom-2 left-2 hidden sm:block">
             <RatingBadge rating={business.rating} reviewsCount={business.reviewsCount} locale={locale} compact />
           </div>
         </div>
 
-        <div className="hidden items-start justify-center bg-[#0A0A0A] px-2 py-4 sm:order-1 sm:flex">
-          <span className="inline-flex h-7 min-w-7 items-center justify-center rounded-sm bg-white px-2 text-[11px] font-black text-[#0A0A0A]">#{rank}</span>
-        </div>
-
-        <div className="min-w-0 p-4 sm:order-3 sm:p-4 lg:px-5">
+        <div className="min-w-0 p-4 sm:p-4 lg:px-5">
           <div className="flex min-w-0 flex-wrap items-center gap-2">
             {showCategory && categoryLabel && (
               <span className="rounded-full border border-[#E5E7EB] bg-[#F9FAFB] px-2.5 py-1 text-[9px] font-black uppercase tracking-[0.08em] text-[#0A0A0A]">

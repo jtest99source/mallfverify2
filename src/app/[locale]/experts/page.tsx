@@ -13,6 +13,7 @@ import {
   IconTools,
   IconWorld
 } from "@tabler/icons-react";
+import { ExpertHeroSearch } from "@/components/ExpertHeroSearch";
 import { ExpertsFilters } from "@/components/ExpertsFilters";
 import { JsonLd } from "@/components/JsonLd";
 import { RatingBadge } from "@/components/RatingBadge";
@@ -624,32 +625,39 @@ export default async function ExpertsPage({
 
   return (
     <main className="bg-[linear-gradient(180deg,#FFFFFF_0%,#FFFFFF_44%,#FFFFFF_100%)]">
-      <section className="px-4 py-10 sm:px-6 sm:py-14 lg:px-8">
+      <section className="bg-[#0A0A0A] px-4 py-10 text-white sm:px-6 sm:py-16 lg:px-8">
         <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[minmax(0,1fr)_360px] lg:items-center">
           <div>
-          <p className="inline-flex items-center gap-2 text-[11px] font-black uppercase tracking-[0.18em] text-[#0A0A0A]">
+          <p className="inline-flex items-center gap-2 text-[11px] font-black uppercase tracking-[0.18em] text-[#FFCC00]">
             <IconShieldCheck size={15} stroke={2} />
             {copy.eyebrow}
           </p>
-          <h1 className="mt-3 max-w-4xl font-display text-4xl font-black leading-[0.98] text-[#0A0A0A] sm:text-5xl lg:text-6xl">
+          <h1 className="mt-3 max-w-4xl font-display text-4xl font-black leading-[0.98] text-white sm:text-5xl lg:text-6xl">
             {copy.title}
           </h1>
-          <p className="mt-5 max-w-2xl text-base leading-8 text-[#6B7280]">{heroIntro}</p>
-          <div className="mt-5 hidden flex-wrap gap-x-6 gap-y-2 text-[12px] font-semibold text-[#6B7280] sm:flex">
+          <p className="mt-5 max-w-2xl text-base leading-8 text-white/70">{heroIntro}</p>
+          <ExpertHeroSearch
+            locale={safeLocale}
+            categories={copy.categories.map(({ slug, title }) => ({ slug, title }))}
+            initialQuery={query}
+            initialVertical={activeVertical}
+            initialLanguage={langFilter}
+          />
+          <div className="mt-5 hidden flex-wrap gap-x-6 gap-y-2 text-[12px] font-semibold text-white/65 sm:flex">
             <span className="inline-flex items-center gap-2">
-              <IconLanguage size={14} className="shrink-0 text-[#0A0A0A]" />
+              <IconLanguage size={14} className="shrink-0 text-[#FFCC00]" />
               {safeLocale === "de" ? "Deutsch, Englisch, Spanisch" : safeLocale === "en" ? "English, Deutsch, Español" : "Español, English, Deutsch"}
             </span>
             <span className="inline-flex items-center gap-2">
-              <IconChecklist size={14} className="shrink-0 text-[#0A0A0A]" />
+              <IconChecklist size={14} className="shrink-0 text-[#FFCC00]" />
               {safeLocale === "de" ? "Öffentliche Signale und redaktionelle Prüfung" : safeLocale === "en" ? "Public signals and editorial checks" : "Señales públicas y revisión editorial"}
             </span>
             <span className="inline-flex items-center gap-2">
-              <IconShieldCheck size={14} className="shrink-0 text-[#0A0A0A]" />
+              <IconShieldCheck size={14} className="shrink-0 text-[#FFCC00]" />
               {safeLocale === "de" ? "Keine bezahlten Platzierungen" : safeLocale === "en" ? "No paid placements" : "Sin posiciones de pago"}
             </span>
           </div>
-          <Link href={copy.methodologyPath} className="mt-7 inline-flex min-h-11 items-center justify-center rounded-md border border-[#0A0A0A] bg-[#0A0A0A] px-5 text-[11px] font-black uppercase tracking-[0.1em] text-[#FFFFFF] shadow-[0_14px_30px_rgba(10,10,10,0.16)] hover:bg-[#262626]">
+          <Link href={copy.methodologyPath} className="mt-7 inline-flex min-h-11 items-center justify-center rounded-md border border-white/20 bg-white px-5 text-[11px] font-black uppercase tracking-[0.1em] text-[#0A0A0A] shadow-[0_14px_30px_rgba(0,0,0,0.22)] hover:bg-[#FFCC00]">
             {copy.secondaryCta}
           </Link>
           </div>

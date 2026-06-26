@@ -15,17 +15,17 @@ type BusinessImageProps = {
 
 const abstractBackgrounds: Partial<Record<BusinessCategory, string>> = {
   restaurant:
-    "radial-gradient(circle at 20% 20%, rgba(255,204,0,0.10), transparent 30%), linear-gradient(135deg, #0A0A0A 0%, #262626 100%)",
+    "radial-gradient(circle at 20% 18%, rgba(255,204,0,0.24), transparent 28%), linear-gradient(135deg, #FFFFFF 0%, #F3F4F6 100%)",
   hotel:
-    "radial-gradient(circle at 80% 20%, rgba(255,204,0,0.08), transparent 25%), linear-gradient(135deg, #171717 0%, #0A0A0A 100%)",
+    "radial-gradient(circle at 80% 18%, rgba(255,204,0,0.20), transparent 28%), linear-gradient(135deg, #FFFFFF 0%, #F3F4F6 100%)",
   "beach-club":
-    "radial-gradient(circle at 70% 30%, rgba(255,204,0,0.12), transparent 35%), linear-gradient(135deg, #0A0A0A 0%, #262626 100%)",
+    "radial-gradient(circle at 70% 30%, rgba(255,204,0,0.22), transparent 35%), linear-gradient(135deg, #FFFFFF 0%, #F3F4F6 100%)",
   "boat-rental":
-    "radial-gradient(circle at 25% 75%, rgba(255,204,0,0.12), transparent 30%), linear-gradient(135deg, #171717 0%, #0A0A0A 100%)",
+    "radial-gradient(circle at 25% 75%, rgba(255,204,0,0.22), transparent 30%), linear-gradient(135deg, #FFFFFF 0%, #F3F4F6 100%)",
   activity:
-    "radial-gradient(circle at 78% 18%, rgba(255,204,0,0.10), transparent 25%), linear-gradient(135deg, #0A0A0A 0%, #262626 100%)",
+    "radial-gradient(circle at 78% 18%, rgba(255,204,0,0.20), transparent 25%), linear-gradient(135deg, #FFFFFF 0%, #F3F4F6 100%)",
   beach:
-    "radial-gradient(circle at 60% 15%, rgba(255,204,0,0.14), transparent 32%), linear-gradient(160deg, #171717 0%, #0A0A0A 100%)"
+    "radial-gradient(circle at 60% 15%, rgba(255,204,0,0.20), transparent 32%), linear-gradient(160deg, #FFFFFF 0%, #F3F4F6 100%)"
 };
 
 const variantClasses: Record<BusinessImageVariant, string> = {
@@ -85,20 +85,24 @@ export function BusinessImage({ business, category, variant, className = "", chi
   const backgroundImage = imageUrl
     ? `${imageOverlays[variant]}, url(${imageUrl})`
     : abstractBackgrounds[category] ?? abstractBackgrounds.activity;
+  const childClassName = imageUrl
+    ? "relative z-10 w-full [text-shadow:_0_2px_14px_rgba(0,0,0,0.82)]"
+    : "relative z-10 w-full [text-shadow:none] [&_.text-white]:!text-[#0A0A0A]";
 
   return (
     <div
       aria-label={imageUrl ? imageLabel : `Imagen editorial de ${categoryLabel} en ${location}, Mallorca`}
-      className={`editorial-texture flex items-end overflow-hidden bg-[#0A0A0A] ${variantClasses[variant]} ${className}`}
+      className={`editorial-texture flex items-end overflow-hidden ${imageUrl ? "bg-[#0A0A0A]" : "bg-[#F3F4F6]"} ${variantClasses[variant]} ${className}`}
       style={{ backgroundImage, backgroundSize: "cover", backgroundPosition: "center" }}
     >
       {!imageUrl && (
         <>
-          <div className="absolute left-6 top-6 h-16 w-16 border border-gold/35" />
-          <div className="absolute bottom-6 right-6 h-24 w-24 border border-sage/30" />
+          <div className="absolute left-5 top-5 h-12 w-12 border border-[#0A0A0A]/15" />
+          <div className="absolute bottom-5 right-5 h-20 w-20 border border-[#0A0A0A]/10" />
+          <div className="absolute inset-x-0 bottom-0 h-1 bg-[#FFCC00]" />
         </>
       )}
-      {children && <div className="relative z-10 w-full [text-shadow:_0_2px_14px_rgba(0,0,0,0.82)]">{children}</div>}
+      {children && <div className={childClassName}>{children}</div>}
     </div>
   );
 }

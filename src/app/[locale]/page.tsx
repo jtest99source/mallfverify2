@@ -389,7 +389,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
   return (
     <main className="bg-white">
       <section className="relative z-20 overflow-visible bg-[#0A0A0A] px-4 pb-8 pt-10 text-white sm:pb-12 sm:pt-14 sm:px-6 lg:px-8">
-        <div className="relative z-10 mx-auto max-w-7xl">
+        <div className="relative z-10 mx-auto grid max-w-7xl gap-9 lg:grid-cols-[minmax(0,0.95fr)_minmax(360px,0.55fr)] lg:items-end">
           <div className="max-w-3xl">
             <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.08em] text-[#FFCC00]">
               <IconShieldCheck size={15} stroke={2} />
@@ -412,7 +412,43 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
             </div>
           </div>
 
-          <div className="mt-6 grid grid-cols-2 gap-2 sm:mt-10 sm:grid-cols-4 sm:gap-4">
+          {restaurantsPalma.length > 0 && (
+            <aside className="hidden rounded-lg border border-white/14 bg-white/[0.06] p-3 shadow-[0_30px_90px_rgba(0,0,0,0.28)] lg:block">
+              <div className="flex items-end justify-between border-b border-white/10 px-2 pb-3">
+                <div>
+                  <p className="text-[10px] font-black uppercase tracking-[0.18em] text-[#FFCC00]">
+                    {safeLocale === "de" ? "Live Auswahl" : safeLocale === "en" ? "Live Selection" : "Seleccion editorial"}
+                  </p>
+                  <h2 className="mt-1 text-2xl font-black leading-none text-white">
+                    {safeLocale === "de" ? "Palma, jetzt" : safeLocale === "en" ? "Palma, right now" : "Palma, ahora"}
+                  </h2>
+                </div>
+                <Link href={`/${safeLocale}/top/restaurants?area=Palma`} className="text-[10px] font-black uppercase tracking-[0.1em] text-white/55 hover:text-white">
+                  {safeLocale === "de" ? "Alle" : safeLocale === "en" ? "All" : "Todo"} {"\u2192"}
+                </Link>
+              </div>
+              <div className="divide-y divide-white/10">
+                {restaurantsPalma.slice(0, 4).map((business, index) => (
+                  <Link key={business.id} href={businessHref(safeLocale, business)} className="grid grid-cols-[42px_minmax(0,1fr)] gap-3 px-2 py-4 transition hover:bg-white/[0.06]">
+                    <span className="flex h-8 w-8 items-center justify-center rounded-sm bg-white text-[11px] font-black text-[#0A0A0A]">#{index + 1}</span>
+                    <span className="min-w-0">
+                      <span className="block truncate text-base font-black leading-tight text-white">{getBusinessPublicName(business)}</span>
+                      <span className="mt-1 flex min-w-0 items-center gap-2 text-[12px] font-semibold text-white/55">
+                        <IconMapPin size={13} className="shrink-0 text-[#FFCC00]" />
+                        <span className="truncate">{businessLocation(business)}</span>
+                      </span>
+                      <span className="mt-2 inline-flex items-center gap-2 rounded-full bg-black px-2.5 py-1 text-[11px] font-bold text-white">
+                        <span className="text-[#FFCC00]">★ {typeof business.rating === "number" ? business.rating.toLocaleString(numberLocale(safeLocale), { minimumFractionDigits: 1, maximumFractionDigits: 1 }) : ""}</span>
+                        {typeof business.reviewsCount === "number" && <span className="text-white/45">{business.reviewsCount.toLocaleString(numberLocale(safeLocale))}</span>}
+                      </span>
+                    </span>
+                  </Link>
+                ))}
+              </div>
+            </aside>
+          )}
+
+          <div className="grid grid-cols-2 gap-2 sm:grid-cols-4 sm:gap-4 lg:col-span-2">
             {[
               { value: formatIntegerMetric(stats.publishedBusinesses, safeLocale), label: copy.home.verifiedBusinesses },
               { value: formatMillionMetric(stats.analyzedReviews, safeLocale), label: copy.home.analyzedReviews },
@@ -426,7 +462,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
             ))}
           </div>
 
-          <div className="mt-4 hidden flex-wrap gap-x-5 gap-y-2 text-[11px] font-bold uppercase tracking-[0.08em] text-white/65 sm:flex">
+          <div className="hidden flex-wrap gap-x-5 gap-y-2 text-[11px] font-bold uppercase tracking-[0.08em] text-white/65 sm:flex lg:col-span-2">
             {copy.home.signals.map((item) => (
               <span key={item} className="inline-flex items-center gap-2"><IconCircleCheckFilled size={14} className="text-[#FFCC00]" />{item}</span>
             ))}
@@ -434,17 +470,21 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         </div>
       </section>
 
-      <section className="mx-auto max-w-[1360px] px-4 py-10 sm:px-6 sm:py-14 lg:px-8">
-        <div className="mb-2 max-w-3xl">
-          <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-[#0A0A0A]">{copy.home.selection}</p>
-          <h2 className="font-display mt-2 text-3xl font-black text-ink sm:text-5xl">
+      <section className="border-b border-[#E5E7EB] bg-[#F7F7F5] px-4 py-10 sm:px-6 sm:py-14 lg:px-8">
+        <div className="mx-auto grid max-w-[1360px] gap-8 lg:grid-cols-[300px_minmax(0,1fr)]">
+        <div className="lg:sticky lg:top-24 lg:self-start">
+          <p className="text-[11px] font-black uppercase tracking-[0.18em] text-[#0A0A0A]">{copy.home.selection}</p>
+          <h2 className="font-display mt-3 text-4xl font-black leading-[0.96] text-ink sm:text-5xl">
             {safeLocale === "de" ? "Mallorca-Rankings nach Kategorie" : safeLocale === "en" ? "Mallorca rankings, by category" : "Rankings de Mallorca por categoría"}
           </h2>
-          <p className="mt-3 text-sm leading-7 text-[#6B7280]">
+          <p className="mt-5 text-sm leading-7 text-[#4B5563]">
             {copy.home.bestThisWeekIntro}
           </p>
+          <Link href={`/${safeLocale}/top/restaurants`} className="mt-6 inline-flex min-h-11 items-center justify-center rounded-md bg-[#0A0A0A] px-5 text-[11px] font-black uppercase tracking-[0.1em] text-white transition hover:bg-[#FFCC00] hover:text-[#0A0A0A]">
+            {safeLocale === "de" ? "Alle Rankings" : safeLocale === "en" ? "All rankings" : "Todos los rankings"} {"\u2192"}
+          </Link>
         </div>
-        <div className="divide-y divide-[#E5E7EB]">
+        <div className="min-w-0 divide-y divide-[#DADDE2] border-t border-[#0A0A0A]">
           {editorialRankingModules.slice(0, 6).map((module) => (
             <EditorialRankingCarousel
               key={module.key}
@@ -456,28 +496,35 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
             />
           ))}
         </div>
-        <div className="mt-2">
-          <Link href={`/${safeLocale}/top/restaurants`} className="inline-flex items-center gap-2 text-[11px] font-black uppercase tracking-[0.1em] text-[#0A0A0A] transition-opacity hover:opacity-65">
-            {safeLocale === "de" ? "Alle Rankings ansehen" : safeLocale === "en" ? "View all rankings" : "Ver todos los rankings"}{" "}
-            <span aria-hidden="true">{"\u2192"}</span>
-          </Link>
         </div>
       </section>
 
-      <section className="px-4 py-8 sm:px-6 lg:px-8">
-        <div className="mx-auto grid max-w-7xl items-stretch gap-5 md:grid-cols-3">
-          {methodology.items.map(({ Icon, title, text }) => (
-            <div key={title} className="flex h-full min-h-[180px] flex-col rounded-lg border border-[#E5E7EB] bg-white p-7 shadow-[0_16px_38px_rgba(10,10,10,0.035)]">
-              <Icon size={28} stroke={1.8} className="text-[#0A0A0A]" />
-              <h2 className="mt-5 text-xl font-black leading-tight text-ink">{title}</h2>
-              <p className="mt-3 text-sm leading-7 text-[#6B7280]">{text}</p>
-            </div>
-          ))}
-        </div>
-        <div className="mx-auto mt-5 max-w-7xl">
-          <Link href={methodologyPath(safeLocale)} className="text-[11px] font-bold uppercase tracking-[0.1em] text-ink transition-opacity hover:opacity-65">
-            {methodology.link}
-          </Link>
+      <section className="px-4 py-12 sm:px-6 lg:px-8">
+        <div className="mx-auto grid max-w-7xl border-y border-[#0A0A0A] lg:grid-cols-[320px_minmax(0,1fr)]">
+          <div className="bg-[#0A0A0A] p-7 text-white lg:p-8">
+            <p className="text-[11px] font-black uppercase tracking-[0.18em] text-[#FFCC00]">
+              {safeLocale === "de" ? "Methode" : safeLocale === "en" ? "Method" : "Metodo"}
+            </p>
+            <h2 className="font-display mt-4 text-4xl font-black leading-none">
+              {safeLocale === "de" ? "Warum diese Reihenfolge?" : safeLocale === "en" ? "Why this order?" : "Por que este orden?"}
+            </h2>
+            <Link href={methodologyPath(safeLocale)} className="mt-7 inline-flex text-[11px] font-black uppercase tracking-[0.1em] text-white underline decoration-[#FFCC00] decoration-2 underline-offset-4">
+              {methodology.link}
+            </Link>
+          </div>
+          <div className="divide-y divide-[#E5E7EB] bg-white">
+            {methodology.items.map(({ Icon, title, text }) => (
+              <div key={title} className="grid gap-4 p-6 sm:grid-cols-[44px_minmax(0,1fr)] sm:p-7">
+                <span className="flex h-11 w-11 items-center justify-center rounded-md bg-[#0A0A0A] text-[#FFCC00]">
+                  <Icon size={24} stroke={1.8} />
+                </span>
+                <div>
+                  <h2 className="text-xl font-black leading-tight text-ink">{title}</h2>
+                  <p className="mt-2 max-w-2xl text-sm leading-7 text-[#4B5563]">{text}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
