@@ -62,7 +62,6 @@ export function Header({ locale }: { locale: Locale }) {
           </nav>
 
           <div className="hidden flex-1 items-center justify-end gap-3 lg:flex">
-            <SearchBox locale={locale} variant="navbar" />
             <Link href={`/${locale}/business`} className="rounded-sm bg-[#FFCC00] px-4 py-2 text-[10px] font-black uppercase tracking-[0.1em] text-[#0A0A0A] transition-all duration-150 hover:bg-white">
               {copy.nav.forBusinesses}
             </Link>

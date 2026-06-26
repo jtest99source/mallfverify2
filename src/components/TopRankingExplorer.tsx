@@ -173,11 +173,10 @@ function RankingBusinessRow({
         <div className="hidden items-center justify-center p-4 text-center sm:flex">
           <div>
             {typeof business.rating === "number" && (
-              <div className="font-display inline-flex items-baseline gap-1 text-4xl font-black leading-none text-[#FFCC00] before:text-lg before:content-['★']">
+              <div className="font-display inline-flex items-baseline gap-1 text-4xl font-black leading-none text-[#FFCC00] ">
                 {business.rating.toLocaleString(numberLocale(locale), { minimumFractionDigits: 1, maximumFractionDigits: 1 })}
               </div>
             )}
-            <div className="mt-1 text-[12px] text-[#FFCC00]/70">★</div>
             {typeof business.reviewsCount === "number" && (
               <div className="mt-1 text-[10px] font-semibold uppercase tracking-[0.06em] text-white/30">
                 {business.reviewsCount.toLocaleString(numberLocale(locale))} {locale === "es" ? "reseñas" : locale === "de" ? "Rezensionen" : "reviews"}
@@ -295,15 +294,15 @@ export function TopRankingExplorer({
   }, [facetSlug, place, query, sort]);
 
   return (
-    <section className="pb-14">
-      <div className="border-b border-white/[0.08] bg-[#1A1A1A] px-4 py-3 sm:px-6 lg:px-8">
-      <div className="relative mx-auto max-w-7xl">
+    <section className="relative bg-[#0A0A0A] pb-14">
+      <div className="mx-auto -mt-10 max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="relative">
         <IconSearch size={16} stroke={1.8} className="absolute left-4 top-1/2 -translate-y-1/2 text-white/25" />
         <input
           value={query}
           onChange={(event) => updateParam("q", event.target.value)}
           placeholder={scopedSearchPlaceholder}
-          className="h-11 w-full max-w-[440px] rounded-sm border border-white/[0.12] bg-[#242424] pl-11 pr-4 text-sm text-white placeholder:text-white/25 focus:border-[#FFCC00] focus:outline-none focus:ring-1 focus:ring-[#FFCC00]"
+          className="h-12 w-full max-w-[520px] rounded-sm border border-white/[0.14] bg-[#0F0F0F] pl-11 pr-4 text-sm text-white placeholder:text-white/28 shadow-[0_20px_60px_rgba(0,0,0,0.25)] focus:border-[#FFCC00] focus:outline-none focus:ring-1 focus:ring-[#FFCC00]"
         />
       </div>
       </div>
@@ -350,8 +349,8 @@ export function TopRankingExplorer({
         </Link>
       </div>
 
-      <div className="hidden border-b border-white/[0.08] bg-[#1A1A1A] px-4 py-4 lg:block lg:px-8">
-        <div className="mx-auto flex max-w-7xl items-center gap-6">
+      <div className="hidden px-4 py-5 lg:block lg:px-8">
+        <div className="mx-auto flex max-w-7xl items-center gap-6 border-y border-white/[0.08] py-4">
           <div className="shrink-0">
             <div className="font-display text-xl font-bold text-white">{totalCount}</div>
             <div className="text-[11px] text-white/30">{copy.filters.results}</div>
@@ -359,7 +358,7 @@ export function TopRankingExplorer({
           <div className="h-8 w-px bg-white/[0.08]" />
           <label className="flex items-center gap-3 text-[10px] font-black uppercase tracking-[0.12em] text-white/30">
                 {copy.filters.sortBy}
-                <select value={sort} onChange={(event) => updateParam("sort", event.target.value)} className="h-9 rounded-sm border border-white/[0.12] bg-[#242424] px-3 text-sm font-normal normal-case tracking-normal text-white focus:border-[#FFCC00] focus:outline-none focus:ring-1 focus:ring-[#FFCC00]">
+                <select value={sort} onChange={(event) => updateParam("sort", event.target.value)} className="h-9 rounded-sm border border-white/[0.12] bg-[#0F0F0F] px-3 text-sm font-normal normal-case tracking-normal text-white focus:border-[#FFCC00] focus:outline-none focus:ring-1 focus:ring-[#FFCC00]">
                   {sortOptions.map((option) => (
                     <option key={option.value} value={option.value}>{option.label}</option>
                   ))}
@@ -368,7 +367,7 @@ export function TopRankingExplorer({
               {SHOW_TYPE_FILTER && facets.length > 0 && (
                 <label className="flex items-center gap-3 text-[10px] font-black uppercase tracking-[0.12em] text-white/30">
                   {copy.filters.type}
-                  <select value={facetSlug} onChange={(event) => updateParam("type", event.target.value)} className="h-9 rounded-sm border border-white/[0.12] bg-[#242424] px-3 text-sm font-normal normal-case tracking-normal text-white focus:border-[#FFCC00] focus:outline-none focus:ring-1 focus:ring-[#FFCC00]">
+                  <select value={facetSlug} onChange={(event) => updateParam("type", event.target.value)} className="h-9 rounded-sm border border-white/[0.12] bg-[#0F0F0F] px-3 text-sm font-normal normal-case tracking-normal text-white focus:border-[#FFCC00] focus:outline-none focus:ring-1 focus:ring-[#FFCC00]">
                     <option value={ALL}>{copy.filters.all}</option>
                     {facets.map((facet) => (
                       <option key={facet.slug} value={facet.slug}>{getLocalizedFacetLabel(facet.slug, facet.label, locale)} ({facet.count})</option>
@@ -378,7 +377,7 @@ export function TopRankingExplorer({
               )}
               <label className="flex items-center gap-3 text-[10px] font-black uppercase tracking-[0.12em] text-white/30">
                 {copy.filters.place}
-                <select value={place} onChange={(event) => updateParam("area", event.target.value)} className="h-9 rounded-sm border border-white/[0.12] bg-[#242424] px-3 text-sm font-normal normal-case tracking-normal text-white focus:border-[#FFCC00] focus:outline-none focus:ring-1 focus:ring-[#FFCC00]">
+                <select value={place} onChange={(event) => updateParam("area", event.target.value)} className="h-9 rounded-sm border border-white/[0.12] bg-[#0F0F0F] px-3 text-sm font-normal normal-case tracking-normal text-white focus:border-[#FFCC00] focus:outline-none focus:ring-1 focus:ring-[#FFCC00]">
                   <option value={ALL}>{copy.filters.allPlaces}</option>
                   {places.map((item) => (
                     <option key={item} value={item}>{item}</option>
