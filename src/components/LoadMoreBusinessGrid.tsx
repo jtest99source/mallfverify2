@@ -63,12 +63,12 @@ export function LoadMoreBusinessGrid({
 
       {businesses.length > PAGE_SIZE && (
         <div className="mt-8 flex flex-col items-center gap-3">
-          <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-sage">{c.showing(shown, total)}</p>
+          <p className="text-[11px] font-black uppercase tracking-[0.1em] text-[#0A0A0A]">{c.showing(shown, total)}</p>
           {hasMore && (
             <button
               type="button"
               onClick={() => setVisibleCount((value) => Math.min(value + PAGE_SIZE, businesses.length))}
-              className="min-h-11 rounded-md border border-[#E7DED0] bg-white px-6 text-[11px] font-bold uppercase tracking-[0.1em] text-ink shadow-sm transition hover:border-[#0E8F72] hover:text-[#0E8F72]"
+              className="min-h-11 rounded-md border border-[#0A0A0A] bg-[#0A0A0A] px-6 text-[11px] font-black uppercase tracking-[0.1em] text-[#FFFFFF] shadow-[0_14px_30px_rgba(10,10,10,0.18)] transition hover:-translate-y-0.5 hover:bg-[#262626]"
             >
               {c.loadMore}
             </button>

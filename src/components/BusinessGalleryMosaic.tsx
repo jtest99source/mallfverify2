@@ -32,8 +32,8 @@ export function BusinessGalleryMosaic({ images, businessName }: BusinessGalleryM
 
   return (
     <section className="bg-paper py-4">
-      <div className="mx-auto max-w-[1200px] px-4 sm:px-8">
-        <div className="flex gap-2 overflow-x-auto sm:grid sm:h-80 sm:grid-cols-[2fr_1fr_1fr] sm:grid-rows-2 sm:gap-1 sm:overflow-hidden sm:rounded-lg">
+      <div className="mx-auto max-w-[1440px] px-4 sm:px-8">
+        <div className="flex gap-2 overflow-x-auto sm:grid sm:h-96 sm:grid-cols-[2fr_1fr_1fr] sm:grid-rows-2 sm:gap-1 sm:overflow-hidden sm:rounded-lg">
           {visibleImages.map((image, imageIndex) => {
             const isMain = imageIndex === 0;
             const isLastVisible = imageIndex === visibleImages.length - 1;

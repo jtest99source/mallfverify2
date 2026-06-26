@@ -97,7 +97,7 @@ function CardBodyText({ business, locale }: { business: Business; locale: Locale
     <div className="mt-3 text-sm leading-6 text-olive">
       {address ? (
         <p className="flex gap-1.5 leading-6">
-          <IconRoad size={14} stroke={2} className="mt-1 shrink-0 text-[#C4933F]" />
+          <IconRoad size={14} stroke={2} className="mt-1 shrink-0 text-[#6B7280]" />
           <span className="line-clamp-2">{address}</span>
         </p>
       ) : (
@@ -106,7 +106,6 @@ function CardBodyText({ business, locale }: { business: Business; locale: Locale
     </div>
   );
 }
-
 export function BusinessCard({ business, locale }: { business: Business; locale: Locale }) {
   const copy = t(locale);
   const categorySlug = getCategorySlugFromBusiness(business.category);
@@ -115,7 +114,7 @@ export function BusinessCard({ business, locale }: { business: Business; locale:
   const badges = usefulBadges(business, locale);
 
   return (
-    <article className="group flex h-full min-h-[360px] flex-col overflow-hidden rounded-lg border border-borderline bg-white shadow-sm transition-all duration-150 hover:-translate-y-0.5 hover:border-[#C4933F] hover:shadow-md">
+    <article className="group flex h-full min-h-[360px] flex-col overflow-hidden rounded-lg border border-borderline bg-white shadow-sm transition-all duration-150 hover:-translate-y-0.5 hover:border-[#0A0A0A] hover:shadow-[0_6px_28px_rgba(10,10,10,0.14)]">
       <Link href={`/${locale}/${categorySlug}/${business.slug}`} className="flex flex-1 flex-col">
         <BusinessImage business={business} category={business.category} variant="card" className="aspect-[4/3] min-h-0 shrink-0">
           <div className="flex h-full flex-col justify-between">
@@ -124,7 +123,7 @@ export function BusinessCard({ business, locale }: { business: Business; locale:
                 <IconMapPin size={12} stroke={2} />
                 {business.area || business.city || "Mallorca"}
               </span>
-              <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-black/45 text-white backdrop-blur transition-all duration-150 group-hover:bg-[#0E8F72]">
+              <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-black/45 text-white backdrop-blur transition-all duration-150 group-hover:bg-[#262626]">
                 <IconArrowUpRight size={15} stroke={2} />
               </span>
             </div>
@@ -134,12 +133,12 @@ export function BusinessCard({ business, locale }: { business: Business; locale:
 
         <div className="flex flex-1 flex-col p-5 pb-4">
           <div className="flex flex-wrap items-center justify-between gap-3">
-            <p className="text-[10px] font-black uppercase tracking-[0.12em] text-sea">{categoryLabel}</p>
+            <p className="text-[10px] font-black uppercase tracking-[0.12em] text-[#0A0A0A]">{categoryLabel}</p>
             <RatingBadge rating={business.rating} reviewsCount={business.reviewsCount} locale={locale} compact />
           </div>
 
           {isUntapped(business.untappedScore) && (
-            <div className="mt-3 inline-flex w-fit items-center gap-1 rounded-full bg-[#FEF3C7] px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.08em] text-[#92400E]">
+            <div className="mt-3 inline-flex w-fit items-center gap-1 rounded-full bg-[#F9FAFB] px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.08em] text-[#0A0A0A]">
               <IconDiamond size={12} stroke={2} />
               {copy.business.hiddenGem}
             </div>
@@ -150,12 +149,12 @@ export function BusinessCard({ business, locale }: { business: Business; locale:
           <div className="mt-auto pt-4">
             <div className="flex min-h-[28px] flex-wrap gap-1.5">
               {badges.map((badge) => (
-                <span key={badge} className="rounded-full border border-[#E7DED0] bg-[#FFF8EC] px-2.5 py-1 text-[10px] font-semibold text-olive">
+                <span key={badge} className="rounded-full border border-[#E5E7EB] bg-[#F9FAFB] px-2.5 py-1 text-[10px] font-semibold text-[#0A0A0A]">
                   {badge}
                 </span>
               ))}
             </div>
-            <span className="mt-4 inline-flex items-center gap-1 text-[11px] font-black uppercase tracking-[0.1em] text-[#B86B1D] transition-all duration-150 group-hover:text-[#0E8F72]">
+            <span className="mt-4 inline-flex items-center gap-1 text-[11px] font-black uppercase tracking-[0.1em] text-[#0A0A0A] transition-all duration-150 group-hover:opacity-60">
               {copy.business.viewDataReviews}
               <IconArrowUpRight size={14} stroke={2} />
             </span>

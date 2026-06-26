@@ -1,21 +1,28 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
-import { IconSearch } from "@tabler/icons-react";
+import { IconArrowUpRight, IconInfoCircle, IconMapPin, IconSearch } from "@tabler/icons-react";
 import type { Business } from "@/types/business";
 import type { Locale } from "@/lib/i18n";
 import type { CategorySlug } from "@/lib/data";
-import { t } from "@/lib/i18n-copy";
-import { BusinessCard } from "@/components/BusinessCard";
-import { businessMatchesFacet, type RankingFacet } from "@/lib/taxonomy";
+import { getCategorySlugFromBusiness } from "@/lib/data";
+import { t, getCategoryCopy } from "@/lib/i18n-copy";
+import { methodologyPath } from "@/lib/methodology";
+import { BusinessImage } from "@/components/BusinessImage";
+import { RatingBadge } from "@/components/RatingBadge";
+import { businessMatchesFacet, getLocalizedFacetLabel, type RankingFacet } from "@/lib/taxonomy";
 import { getBusinessPublicName } from "@/lib/business-name-normalizer";
 
 type FacetWithCount = RankingFacet & { count: number };
 type SortKey = "ratio" | "reviews" | "rating" | "hidden";
 
+
 const ALL = "all";
 const PAGE_SIZE = 24;
+const CAPPED_RESULT_THRESHOLD = 1000;
+const SHOW_TYPE_FILTER = false;
 
 const loadMoreCopy = {
   es: {
@@ -34,6 +41,27 @@ const loadMoreCopy = {
     showing: (shown: string, total: string) => `${shown} von ${total} angezeigt`
   }
 } as const;
+
+const sortHelpCopy = {
+  es: {
+    title: "Por qué este orden",
+    text: "Mejor equilibrio combina valoración y volumen de reseñas para que un 5,0 con muy pocas opiniones no pase por delante de un sitio más probado.",
+    link: "Ver metodología"
+  },
+  en: {
+    title: "Why this order",
+    text: "Best overall balances rating and review volume, so a tiny 5.0 does not outrank a broadly trusted place by default.",
+    link: "Read methodology"
+  },
+  de: {
+    title: "Warum diese Reihenfolge",
+    text: "Beste Gesamtwertung kombiniert Bewertung und Anzahl der Rezensionen, damit kleine 5,0-Profile nicht automatisch vor bewährten Orten stehen.",
+    link: "Methodik lesen"
+  }
+} as const;
+
+const placeholderDescriptionPattern =
+  /(Google Places|datos de Google|importad[oa] desde Google|pendiente de revisi[oó]n|revision editorial|revisi[oó]n editorial|perfil encaja)/i;
 
 function numberLocale(locale: Locale) {
   return locale === "de" ? "de-DE" : locale === "en" ? "en-US" : "es-ES";
@@ -54,6 +82,21 @@ function ratioScore(business: Business) {
   return (business.rating ?? 0) * Math.log((business.reviewsCount ?? 0) + 1);
 }
 
+function compactAddress(address?: string) {
+  if (!address) return null;
+  return address
+    .replace(/\s*,?\s*(Illes Balears|Islas Baleares|Balearic Islands|Spain|España)\s*$/i, "")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function summaryFor(business: Business) {
+  const text = business.editorialDescription || business.aiDescription || business.shortDescription || business.description;
+  if (!text) return null;
+  const cleaned = text.replace(/\s+/g, " ").trim();
+  return placeholderDescriptionPattern.test(cleaned) ? null : cleaned;
+}
+
 function sortBusinesses(businesses: Business[], sort: SortKey) {
   return businesses.slice().sort((a, b) => {
     if (sort === "reviews") return (b.reviewsCount ?? 0) - (a.reviewsCount ?? 0);
@@ -69,10 +112,77 @@ function sortBusinesses(businesses: Business[], sort: SortKey) {
   });
 }
 
+function RankingBusinessRow({
+  business,
+  rank,
+  locale,
+  showCategory
+}: {
+  business: Business;
+  rank: number;
+  locale: Locale;
+  showCategory: boolean;
+}) {
+  const categorySlug = getCategorySlugFromBusiness(business.category);
+  const categoryLabel = categorySlug ? getCategoryCopy(categorySlug, locale).label : null;
+  const address = compactAddress(business.address);
+  const summary = summaryFor(business);
+
+  return (
+    <article className="group overflow-hidden rounded-lg border border-[#0A0A0A] bg-white shadow-[0_14px_34px_rgba(10,10,10,0.08)] transition-all duration-150 hover:-translate-y-0.5 hover:shadow-[0_20px_44px_rgba(10,10,10,0.14)]">
+      <Link href={`/${locale}/${categorySlug}/${business.slug}`} className="grid min-h-[134px] grid-cols-[42px_minmax(0,1fr)] sm:grid-cols-[50px_210px_minmax(0,1fr)] lg:grid-cols-[54px_250px_minmax(0,1fr)]">
+        <div className="flex items-start justify-center bg-[#111111] px-2 py-4">
+            <span className="inline-flex h-7 min-w-7 items-center justify-center rounded bg-[#0A0A0A] px-2 text-[11px] font-black text-white ring-1 ring-white/15">#{rank}</span>
+        </div>
+
+        <div className="relative hidden min-h-[134px] overflow-hidden sm:block">
+          <BusinessImage business={business} category={business.category} variant="card" className="h-full min-h-[134px] p-0" />
+          <div className="absolute right-2 top-2 hidden sm:block">
+            <RatingBadge rating={business.rating} reviewsCount={business.reviewsCount} locale={locale} compact />
+          </div>
+        </div>
+
+        <div className="min-w-0 p-4 sm:p-4 lg:px-5">
+          <div className="flex min-w-0 flex-wrap items-center gap-2">
+            {showCategory && categoryLabel && (
+              <span className="rounded-full border border-[#E5E7EB] bg-[#F9FAFB] px-2.5 py-1 text-[9px] font-black uppercase tracking-[0.08em] text-[#0A0A0A]">
+                {categoryLabel}
+              </span>
+            )}
+            <span className="inline-flex min-w-0 items-center gap-1 text-[11px] font-bold text-[#6B7280]">
+              <IconMapPin size={13} stroke={2} />
+              <span className="truncate">{businessPlace(business)}</span>
+            </span>
+          </div>
+
+          <h2 className="mt-2 line-clamp-2 text-lg font-black leading-tight text-[#0A0A0A] sm:text-xl">{getBusinessPublicName(business)}</h2>
+          {summary && <p className="mt-1.5 hidden max-w-2xl text-sm leading-6 text-[#6B7280] lg:line-clamp-1">{summary}</p>}
+          {address && (
+            <p className="mt-2 flex max-w-2xl gap-1.5 text-xs leading-5 text-[#6B7280] sm:text-sm">
+              <IconMapPin size={14} stroke={2} className="mt-0.5 shrink-0 text-[#6B7280]" />
+              <span className="line-clamp-1">{address}</span>
+            </p>
+          )}
+
+          <div className="mt-3 flex flex-wrap items-center gap-3">
+            <div className="sm:hidden">
+              <RatingBadge rating={business.rating} reviewsCount={business.reviewsCount} locale={locale} compact />
+            </div>
+            <span className="inline-flex items-center gap-1 text-[10px] font-black uppercase tracking-[0.1em] text-[#0A0A0A] transition-opacity group-hover:opacity-65">
+              {locale === "de" ? "Ansehen" : locale === "en" ? "View details" : "Ver ficha"}
+              <IconArrowUpRight size={14} stroke={2} />
+            </span>
+          </div>
+        </div>
+      </Link>
+    </article>
+  );
+}
+
 export function TopRankingExplorer({
   businesses,
   locale,
-  category: _category,
+  category,
   facets
 }: {
   businesses: Business[];
@@ -154,8 +264,16 @@ export function TopRankingExplorer({
   const visibleBusinesses = filtered.slice(0, visibleCount);
   const hasMore = visibleCount < filtered.length;
   const shownCount = Math.min(visibleCount, filtered.length).toLocaleString(numberLocale(locale));
-  const totalCount = filtered.length.toLocaleString(numberLocale(locale));
+  const isCappedResultSet = businesses.length >= CAPPED_RESULT_THRESHOLD && filtered.length >= CAPPED_RESULT_THRESHOLD;
+  const totalCount = `${filtered.length.toLocaleString(numberLocale(locale))}${isCappedResultSet ? "+" : ""}`;
   const loadCopy = loadMoreCopy[locale];
+  const sortHelp = sortHelpCopy[locale];
+  const scopedSearchPlaceholder =
+    locale === "de"
+      ? `${getCategoryCopy(category, locale).label} nach Name oder Ort suchen...`
+      : locale === "en"
+        ? `Search ${getCategoryCopy(category, locale).label.toLowerCase()} by name or area...`
+        : `Buscar ${getCategoryCopy(category, locale).label.toLowerCase()} por nombre o zona...`;
 
   useEffect(() => {
     setVisibleCount(PAGE_SIZE);
@@ -163,13 +281,13 @@ export function TopRankingExplorer({
 
   return (
     <section className="mx-auto max-w-7xl px-4 pb-14 sm:px-6 lg:px-8">
-      <div className="relative mb-3">
-        <IconSearch size={16} stroke={1.8} className="absolute left-4 top-1/2 -translate-y-1/2 text-sage" />
+      <div className="relative mb-3 max-w-4xl">
+        <IconSearch size={16} stroke={1.8} className="absolute left-4 top-1/2 -translate-y-1/2 text-[#0A0A0A]" />
         <input
           value={query}
           onChange={(event) => updateParam("q", event.target.value)}
-          placeholder={copy.filters.searchPlaceholder}
-          className="h-12 w-full rounded-lg border border-[#E7DED0] bg-white pl-11 pr-4 text-sm text-ink shadow-sm focus:border-[#0E8F72] focus:outline-none focus:ring-1 focus:ring-[#0E8F72]"
+          placeholder={scopedSearchPlaceholder}
+          className="h-12 w-full rounded-md border border-[#E5E7EB] bg-white pl-11 pr-4 text-sm text-ink shadow-sm focus:border-[#0A0A0A] focus:outline-none focus:ring-1 focus:ring-[#0A0A0A]"
         />
       </div>
       {/* Mobile filters: sort chips + compact 2-col dropdowns */}
@@ -183,84 +301,105 @@ export function TopRankingExplorer({
               className={`shrink-0 rounded-full px-3.5 py-2 text-[11px] font-bold uppercase tracking-[0.06em] transition-colors ${
                 sort === option.value
                   ? "bg-ink text-white"
-                  : "border border-[#E7DED0] bg-white text-ink"
+                  : "border border-[#E5E7EB] bg-white text-ink"
               }`}
             >
               {option.label}
             </button>
           ))}
         </div>
-        <div className="mt-2 grid grid-cols-2 gap-2">
-          <select value={facetSlug} onChange={(event) => updateParam("type", event.target.value)} className="h-10 rounded-md border border-[#E7DED0] bg-[#FFFDF7] px-2 text-xs text-ink focus:border-[#0E8F72] focus:ring-[#0E8F72]">
-            <option value={ALL}>{copy.filters.type}: {copy.filters.all}</option>
-            {facets.map((facet) => (
-              <option key={facet.slug} value={facet.slug}>{facet.label} ({facet.count})</option>
-            ))}
-          </select>
-          <select value={place} onChange={(event) => updateParam("area", event.target.value)} className="h-10 rounded-md border border-[#E7DED0] bg-[#FFFDF7] px-2 text-xs text-ink focus:border-[#0E8F72] focus:ring-[#0E8F72]">
+        <div className={`mt-2 grid gap-2 ${SHOW_TYPE_FILTER && facets.length > 0 ? "grid-cols-2" : "grid-cols-1"}`}>
+          {SHOW_TYPE_FILTER && facets.length > 0 && (
+            <select value={facetSlug} onChange={(event) => updateParam("type", event.target.value)} className="h-10 rounded-md border border-[#E5E7EB] bg-[#FFFFFF] px-2 text-xs text-ink focus:border-[#0A0A0A] focus:ring-[#0A0A0A]">
+              <option value={ALL}>{copy.filters.type}: {copy.filters.all}</option>
+              {facets.map((facet) => (
+                <option key={facet.slug} value={facet.slug}>{getLocalizedFacetLabel(facet.slug, facet.label, locale)} ({facet.count})</option>
+              ))}
+            </select>
+          )}
+          <select value={place} onChange={(event) => updateParam("area", event.target.value)} className="h-10 rounded-md border border-[#E5E7EB] bg-[#FFFFFF] px-2 text-xs text-ink focus:border-[#0A0A0A] focus:ring-[#0A0A0A]">
             <option value={ALL}>{copy.filters.place}: {copy.filters.allPlaces}</option>
             {places.map((item) => (
               <option key={item} value={item}>{item}</option>
             ))}
           </select>
         </div>
-        <p className="mt-2 text-[11px] font-bold uppercase tracking-[0.1em] text-sage">
-          {filtered.length.toLocaleString(numberLocale(locale))} {copy.filters.results}
+        <p className="mt-2 text-[11px] font-black uppercase tracking-[0.1em] text-[#0A0A0A]">
+          {totalCount} {copy.filters.results}
         </p>
+        <Link href={methodologyPath(locale)} className="mt-2 inline-flex items-center gap-1 text-[10px] font-black uppercase tracking-[0.1em] text-[#0A0A0A]">
+          <IconInfoCircle size={13} stroke={2} />
+          {sortHelp.link}
+        </Link>
       </div>
 
-      {/* Desktop filters: existing 3-col grid */}
-      <div className="hidden rounded-lg border border-[#E7DED0] bg-white/85 p-4 shadow-[0_18px_45px_rgba(27,46,75,0.035)] sm:block">
-        <div className="grid gap-3 sm:grid-cols-[1fr_1fr_1fr_auto] sm:items-end">
-          <label className="grid gap-1 text-[10px] font-bold uppercase tracking-[0.12em] text-sage">
-            {copy.filters.sortBy}
-            <select value={sort} onChange={(event) => updateParam("sort", event.target.value)} className="h-11 rounded-sm border-[#E7DED0] bg-[#FFFDF7] text-sm font-normal normal-case tracking-normal text-ink focus:border-[#0E8F72] focus:ring-[#0E8F72]">
-              {sortOptions.map((option) => (
-                <option key={option.value} value={option.value}>{option.label}</option>
-              ))}
-            </select>
-          </label>
-          <label className="grid gap-1 text-[10px] font-bold uppercase tracking-[0.12em] text-sage">
-            {copy.filters.type}
-            <select value={facetSlug} onChange={(event) => updateParam("type", event.target.value)} className="h-11 rounded-sm border-[#E7DED0] bg-[#FFFDF7] text-sm font-normal normal-case tracking-normal text-ink focus:border-[#0E8F72] focus:ring-[#0E8F72]">
-              <option value={ALL}>{copy.filters.all}</option>
-              {facets.map((facet) => (
-                <option key={facet.slug} value={facet.slug}>{facet.label} ({facet.count})</option>
-              ))}
-            </select>
-          </label>
-          <label className="grid gap-1 text-[10px] font-bold uppercase tracking-[0.12em] text-sage">
-            {copy.filters.place}
-            <select value={place} onChange={(event) => updateParam("area", event.target.value)} className="h-11 rounded-sm border-[#E7DED0] bg-[#FFFDF7] text-sm font-normal normal-case tracking-normal text-ink focus:border-[#0E8F72] focus:ring-[#0E8F72]">
-              <option value={ALL}>{copy.filters.allPlaces}</option>
-              {places.map((item) => (
-                <option key={item} value={item}>{item}</option>
-              ))}
-            </select>
-          </label>
-          <div className="text-[11px] font-bold uppercase tracking-[0.1em] text-sage sm:pb-3">
-            {filtered.length.toLocaleString(numberLocale(locale))} {copy.filters.results}
+      <div className="mt-6 grid gap-6 lg:grid-cols-[240px_minmax(0,820px)]">
+        <aside className="hidden lg:block">
+          <div className="sticky top-20 rounded-md border border-[#E5E7EB] bg-white p-4 shadow-[0_14px_36px_rgba(10,10,10,0.035)]">
+            <p className="text-[11px] font-black uppercase tracking-[0.12em] text-[#0A0A0A]">{totalCount} {copy.filters.results}</p>
+            <div className="grid gap-3">
+              <label className="grid gap-1.5 text-[10px] font-black uppercase tracking-[0.12em] text-[#0A0A0A]">
+                {copy.filters.sortBy}
+                <select value={sort} onChange={(event) => updateParam("sort", event.target.value)} className="h-11 rounded-md border border-[#E5E7EB] bg-[#FFFFFF] px-3 text-sm font-normal normal-case tracking-normal text-ink focus:border-[#0A0A0A] focus:outline-none focus:ring-1 focus:ring-[#0A0A0A]">
+                  {sortOptions.map((option) => (
+                    <option key={option.value} value={option.value}>{option.label}</option>
+                  ))}
+                </select>
+              </label>
+              {SHOW_TYPE_FILTER && facets.length > 0 && (
+                <label className="grid gap-1.5 text-[10px] font-black uppercase tracking-[0.12em] text-[#0A0A0A]">
+                  {copy.filters.type}
+                  <select value={facetSlug} onChange={(event) => updateParam("type", event.target.value)} className="h-11 rounded-md border border-[#E5E7EB] bg-[#FFFFFF] px-3 text-sm font-normal normal-case tracking-normal text-ink focus:border-[#0A0A0A] focus:outline-none focus:ring-1 focus:ring-[#0A0A0A]">
+                    <option value={ALL}>{copy.filters.all}</option>
+                    {facets.map((facet) => (
+                      <option key={facet.slug} value={facet.slug}>{getLocalizedFacetLabel(facet.slug, facet.label, locale)} ({facet.count})</option>
+                    ))}
+                  </select>
+                </label>
+              )}
+              <label className="grid gap-1.5 text-[10px] font-black uppercase tracking-[0.12em] text-[#0A0A0A]">
+                {copy.filters.place}
+                <select value={place} onChange={(event) => updateParam("area", event.target.value)} className="h-11 rounded-md border border-[#E5E7EB] bg-[#FFFFFF] px-3 text-sm font-normal normal-case tracking-normal text-ink focus:border-[#0A0A0A] focus:outline-none focus:ring-1 focus:ring-[#0A0A0A]">
+                  <option value={ALL}>{copy.filters.allPlaces}</option>
+                  {places.map((item) => (
+                    <option key={item} value={item}>{item}</option>
+                  ))}
+                </select>
+              </label>
+              <details className="rounded-md border border-[#E5E7EB] bg-[#F9FAFB] p-3 text-xs leading-5 text-[#6B7280]">
+                <summary className="flex cursor-pointer list-none items-center gap-1.5 text-[10px] font-black uppercase tracking-[0.1em] text-[#0A0A0A]">
+                  <IconInfoCircle size={13} stroke={2} />
+                  {sortHelp.title}
+                </summary>
+                <p className="mt-2">{sortHelp.text}</p>
+                <Link href={methodologyPath(locale)} className="mt-2 inline-flex text-[10px] font-black uppercase tracking-[0.1em] text-[#0A0A0A] hover:opacity-65">
+                  {sortHelp.link}
+                </Link>
+              </details>
+            </div>
           </div>
-        </div>
-      </div>
+        </aside>
 
-      <ol className="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-        {visibleBusinesses.map((business, index) => (
-          <li key={business.id} className="relative h-full">
-            <div className="absolute left-3 top-3 z-10 rounded-sm bg-ink px-3 py-1 text-xs font-bold text-white">#{index + 1}</div>
-            <BusinessCard business={business} locale={locale} />
-          </li>
-        ))}
-      </ol>
+        <ol className="grid gap-2.5">
+          {visibleBusinesses.map((business, index) => {
+            const isAllMode = facets.length === 0;
+            return (
+              <li key={business.id} className="relative">
+                <RankingBusinessRow business={business} rank={index + 1} locale={locale} showCategory={isAllMode} />
+              </li>
+            );
+          })}
+        </ol>
+      </div>
 
       {filtered.length > PAGE_SIZE && (
         <div className="mt-8 flex flex-col items-center gap-3">
-          <p className="text-[11px] font-bold uppercase tracking-[0.1em] text-sage">{loadCopy.showing(shownCount, totalCount)}</p>
+          <p className="text-[11px] font-black uppercase tracking-[0.1em] text-[#0A0A0A]">{loadCopy.showing(shownCount, totalCount)}</p>
           {hasMore && (
             <button
               type="button"
               onClick={() => setVisibleCount((value) => Math.min(value + PAGE_SIZE, filtered.length))}
-              className="min-h-11 rounded-md border border-[#E7DED0] bg-white px-6 text-[11px] font-bold uppercase tracking-[0.1em] text-ink shadow-sm transition hover:border-[#0E8F72] hover:text-[#0E8F72]"
+              className="min-h-11 rounded-md border border-[#0A0A0A] bg-[#0A0A0A] px-6 text-[11px] font-black uppercase tracking-[0.1em] text-[#FFFFFF] shadow-[0_14px_30px_rgba(10,10,10,0.18)] transition hover:-translate-y-0.5 hover:bg-[#262626]"
             >
               {loadCopy.loadMore}
             </button>
@@ -269,12 +408,12 @@ export function TopRankingExplorer({
       )}
 
       {!filtered.length && (
-        <div className="mt-6 rounded-lg border border-[#E7DED0] bg-white/85 p-5 text-sm text-olive sm:mt-8 sm:p-6">
+        <div className="mt-6 rounded-lg border border-[#E5E7EB] bg-white/85 p-5 text-sm text-olive sm:mt-8 sm:p-6">
           <p>{copy.filters.noResults}</p>
           <button
             type="button"
             onClick={clearFilters}
-            className="mt-4 min-h-10 rounded-md border border-[#E7DED0] bg-white px-4 text-[11px] font-bold uppercase tracking-[0.1em] text-ink transition hover:border-[#0E8F72] hover:text-[#0E8F72]"
+            className="mt-4 min-h-10 rounded-md border border-[#E5E7EB] bg-white px-4 text-[11px] font-bold uppercase tracking-[0.1em] text-ink transition hover:border-[#0A0A0A] hover:text-[#0A0A0A]"
           >
             {loadCopy.clearFilters}
           </button>

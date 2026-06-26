@@ -196,7 +196,7 @@ function madridNow() {
 
 function getOpenState(rows: HoursRow[], todayIndex: number, nowMinutes: number, locale: Locale) {
   const copy = COPY[locale];
-  const ordered = [...rows].sort((a, b) => a.dayIndex - b.dayIndex);
+  const ordered = [...rows].sort((a, b) => ((a.dayIndex - todayIndex + 7) % 7) - ((b.dayIndex - todayIndex + 7) % 7));
   const today = ordered.find((row) => row.dayIndex === todayIndex);
 
   if (today?.open24h) return { open: true, text: copy.open24h };
