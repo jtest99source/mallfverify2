@@ -367,7 +367,7 @@ export function TopRankingExplorer({
           <div className="h-8 w-px bg-white/[0.08]" />
           <label className="flex items-center gap-3 text-[10px] font-black uppercase tracking-[0.12em] text-white/30">
                 {copy.filters.sortBy}
-                <select value={sort} onChange={(event) => updateParam("sort", event.target.value)} className="h-9 rounded-sm border border-white/[0.12] bg-[#0F0F0F] px-3 text-sm font-normal normal-case tracking-normal text-white focus:border-[#FFCC00] focus:outline-none focus:ring-1 focus:ring-[#FFCC00]">
+                <select value={sort} onChange={(event) => updateParam("sort", event.target.value)} className="h-9 rounded-sm border border-white/[0.12] bg-[#0F0F0F] pl-4 pr-8 text-sm font-normal normal-case tracking-normal text-white focus:border-[#FFCC00] focus:outline-none focus:ring-1 focus:ring-[#FFCC00]">
                   {sortOptions.map((option) => (
                     <option key={option.value} value={option.value}>{option.label}</option>
                   ))}
@@ -376,7 +376,7 @@ export function TopRankingExplorer({
               {SHOW_TYPE_FILTER && facets.length > 0 && (
                 <label className="flex items-center gap-3 text-[10px] font-black uppercase tracking-[0.12em] text-white/30">
                   {copy.filters.type}
-                  <select value={facetSlug} onChange={(event) => updateParam("type", event.target.value)} className="h-9 rounded-sm border border-white/[0.12] bg-[#0F0F0F] px-3 text-sm font-normal normal-case tracking-normal text-white focus:border-[#FFCC00] focus:outline-none focus:ring-1 focus:ring-[#FFCC00]">
+                  <select value={facetSlug} onChange={(event) => updateParam("type", event.target.value)} className="h-9 rounded-sm border border-white/[0.12] bg-[#0F0F0F] pl-4 pr-8 text-sm font-normal normal-case tracking-normal text-white focus:border-[#FFCC00] focus:outline-none focus:ring-1 focus:ring-[#FFCC00]">
                     <option value={ALL}>{copy.filters.all}</option>
                     {facets.map((facet) => (
                       <option key={facet.slug} value={facet.slug}>{getLocalizedFacetLabel(facet.slug, facet.label, locale)} ({facet.count})</option>
@@ -386,7 +386,7 @@ export function TopRankingExplorer({
               )}
               <label className="flex items-center gap-3 text-[10px] font-black uppercase tracking-[0.12em] text-white/30">
                 {copy.filters.place}
-                <select value={place} onChange={(event) => updateParam("area", event.target.value)} className="h-9 rounded-sm border border-white/[0.12] bg-[#0F0F0F] px-3 text-sm font-normal normal-case tracking-normal text-white focus:border-[#FFCC00] focus:outline-none focus:ring-1 focus:ring-[#FFCC00]">
+                <select value={place} onChange={(event) => updateParam("area", event.target.value)} className="h-9 rounded-sm border border-white/[0.12] bg-[#0F0F0F] pl-4 pr-8 text-sm font-normal normal-case tracking-normal text-white focus:border-[#FFCC00] focus:outline-none focus:ring-1 focus:ring-[#FFCC00]">
                   <option value={ALL}>{copy.filters.allPlaces}</option>
                   {places.map((item) => (
                     <option key={item} value={item}>{item}</option>

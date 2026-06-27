@@ -411,13 +411,6 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
     "linear-gradient(160deg,#101b1f,#070707)"
   ];
   const heroPanels = Array.from({ length: 4 }, (_, index) => heroBusinesses[index] ?? null);
-  const heroChips = [
-    { href: `/${safeLocale}/top/restaurants?area=Palma`, label: safeLocale === "de" ? "Restaurants in Palma" : safeLocale === "en" ? "Restaurants in Palma" : "Restaurantes en Palma" },
-    { href: `/${safeLocale}/top/beach-clubs`, label: safeLocale === "de" ? "Beachclubs" : safeLocale === "en" ? "Beach clubs" : "Beach clubs" },
-    { href: `/${safeLocale}/top/hotels`, label: safeLocale === "de" ? "Hotels" : safeLocale === "en" ? "Hotels" : "Hoteles" },
-    { href: `/${safeLocale}/experts`, label: safeLocale === "de" ? "Experts" : safeLocale === "en" ? "Experts" : "Expertos" }
-  ];
-
   return (
     <main className="bg-[#0A0A0A] text-white">
       <section className="relative z-20 flex min-h-[96vh] items-center justify-center overflow-visible bg-[#0A0A0A] px-4 py-20 text-center text-white sm:px-6 lg:px-8">
@@ -450,18 +443,34 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         <div className="relative z-10 flex w-full max-w-[780px] flex-col items-center">
           <div className="w-full max-w-[780px]">
             <div className="mb-6 inline-flex items-center gap-3 text-[10px] font-semibold uppercase tracking-[0.16em] text-[#FFCC00] before:h-px before:w-6 before:bg-[#FFCC00] after:h-px after:w-6 after:bg-[#FFCC00]">
-              <IconShieldCheck size={15} stroke={2} />
-              {copy.home.eyebrow}
+              {safeLocale === "de" ? "Echte Daten · Keine bezahlten Platzierungen" : safeLocale === "en" ? "Real data · No paid placements" : "Datos reales · Sin posiciones de pago"}
             </div>
             <h1 className="font-display mx-auto max-w-4xl text-balance text-5xl font-black leading-[0.92] text-white sm:text-7xl lg:text-[88px]">
-              {copy.home.title}
+              {safeLocale === "de" ? (
+                <>Finde das <em className="italic text-[#FFCC00]">Beste</em><br className="hidden sm:block" /> auf Mallorca.</>
+              ) : safeLocale === "en" ? (
+                <>Find the <em className="italic text-[#FFCC00]">best</em><br className="hidden sm:block" /> in Mallorca.</>
+              ) : (
+                <>Encuentra lo <em className="italic text-[#FFCC00]">mejor</em><br className="hidden sm:block" /> en Mallorca.</>
+              )}
             </h1>
-            <p className="mx-auto mt-6 max-w-[520px] text-base font-light leading-8 text-white/72 sm:text-[17px]">
-              {copy.home.intro}
+            <p className="mx-auto mt-6 max-w-[480px] text-base font-light leading-8 text-white/60 sm:text-[17px]">
+              {safeLocale === "de"
+                ? "Jedes Unternehmen hat eine echte Google-Bewertungsschwelle überschritten. Rankings basieren auf Daten — keine Werbung, keine Gebühren."
+                : safeLocale === "en"
+                ? "Every business cleared a real Google review threshold. Rankings built on data — not ads, not fees."
+                : "Cada negocio supera un umbral real de reseñas de Google. Rankings basados en datos — sin anuncios, sin cuotas."}
             </p>
             <HomePlaceSearch locale={safeLocale} categories={[...publicCategorySlugs]} locations={homepageSearchLocations} />
             <div className="mt-4 flex flex-wrap justify-center gap-2">
-              {heroChips.map((chip) => (
+              {([
+                { href: `/${safeLocale}/top/restaurants`, label: safeLocale === "de" ? "Restaurants" : safeLocale === "en" ? "Restaurants" : "Restaurantes" },
+                { href: `/${safeLocale}/top/hotels`, label: "Hotels" },
+                { href: `/${safeLocale}/top/beach-clubs`, label: safeLocale === "de" ? "Beachclubs" : "Beach clubs" },
+                { href: `/${safeLocale}/top/healthcare`, label: safeLocale === "de" ? "Ärzte" : safeLocale === "en" ? "Doctors" : "Médicos" },
+                { href: `/${safeLocale}/top/real-estate`, label: safeLocale === "de" ? "Immobilien" : safeLocale === "en" ? "Real estate" : "Inmobiliarias" },
+                { href: `/${safeLocale}/top/boats`, label: safeLocale === "de" ? "Boote" : "Boats" }
+              ] as const).map((chip) => (
                 <Link key={chip.href} href={chip.href} className="rounded-full border border-white/15 px-3.5 py-1.5 text-[11px] font-medium text-white/45 backdrop-blur transition hover:border-[#FFCC00] hover:text-[#FFCC00]">
                   {chip.label}
                 </Link>
