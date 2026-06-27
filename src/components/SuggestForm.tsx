@@ -66,17 +66,17 @@ export function SuggestForm({ locale }: { locale: Locale }) {
 
   if (status === "success") {
     return (
-      <div className="flex min-h-[180px] items-center justify-center rounded-lg border border-[#E5E7EB] bg-[#F9FAFB] px-8 py-10 text-center">
+      <div className="flex min-h-[180px] items-center justify-center rounded-sm border border-[#FFCC00]/40 bg-[#FFCC00]/10 px-8 py-10 text-center">
         <div>
-          <p className="text-2xl">✓</p>
-          <p className="mt-3 text-base font-semibold text-[#0A0A0A]">{c.success}</p>
+          <p className="text-2xl text-[#FFCC00]">✓</p>
+          <p className="mt-3 text-base font-semibold text-white">{c.success}</p>
         </div>
       </div>
     );
   }
 
   const inputClass =
-    "w-full rounded-md border border-[#E5E7EB] bg-white px-4 py-3 text-sm text-ink placeholder:text-ink/35 outline-none transition-colors focus:border-[#0A0A0A] focus:ring-1 focus:ring-[#0A0A0A]";
+    "w-full rounded-sm border border-white/[0.12] bg-[#0A0A0A] px-4 py-3 text-sm text-white placeholder:text-white/30 outline-none transition-colors focus:border-[#FFCC00]/60 focus:ring-1 focus:ring-[#FFCC00]/30";
 
   return (
     <form onSubmit={handleSubmit} className="grid gap-3">
@@ -89,7 +89,7 @@ export function SuggestForm({ locale }: { locale: Locale }) {
       <button
         type="submit"
         disabled={status === "loading"}
-        className="mt-1 rounded-md bg-ink px-6 py-3.5 text-[11px] font-bold uppercase tracking-[0.1em] text-white transition-colors hover:bg-[#262626] disabled:opacity-60"
+        className="mt-1 rounded-sm bg-[#FFCC00] px-6 py-3.5 text-[11px] font-bold uppercase tracking-[0.1em] text-[#0A0A0A] transition-colors hover:bg-white disabled:opacity-60"
       >
         {status === "loading" ? c.sending : c.submit}
       </button>
