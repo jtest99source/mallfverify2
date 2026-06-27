@@ -166,10 +166,6 @@ export function createLocalBusinessSchema(business: Business, locale = "es") {
     areaServed: business.area,
     inLanguage: locale,
     openingHoursSpecification: openingHoursSpecification(business.openingHours),
-    speakable: {
-      "@type": "SpeakableSpecification",
-      cssSelector: ["h1", ".rating-summary", ".business-contact-summary"]
-    },
     aggregateRating:
       typeof business.rating === "number" && typeof business.reviewsCount === "number"
         ? {

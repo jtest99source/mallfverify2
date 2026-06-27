@@ -7,36 +7,36 @@ const pageCopy = {
     metaTitle: "Solicitar auditoría de visibilidad | Mallorca Verified",
     metaDescription: "Auditamos tu visibilidad en Google, ChatGPT y Google AI sin coste. Somos los creadores de Mallorca Verified — sabemos qué funciona para negocios locales en Mallorca.",
     eyebrow: "Auditoría gratuita",
-    title: "¿Cómo de visible eres en Google y en los sistemas de IA?",
-    description: "Analizamos tu presencia local sin coste: cómo apareces en Google, qué citan ChatGPT y Perplexity cuando alguien busca tu categoría en Mallorca, y qué está frenando tu visibilidad. Sin compromiso.",
+    title: "¿Apareces cuando alguien busca tu categoría en Mallorca?",
+    description: "Analizamos tu presencia local sin coste: cómo apareces en Google, qué citan ChatGPT y Perplexity cuando alguien busca tu categoría, y qué frena tu visibilidad ahora mismo.",
     trust: [
       "Sin coste ni compromiso",
       "Respuesta en menos de 48h",
-      "Creamos el directorio de referencia para residentes internacionales en Mallorca"
+      "Somos los creadores de Mallorca Verified"
     ]
   },
   en: {
     metaTitle: "Request a visibility audit | Mallorca Verified",
     metaDescription: "We audit your visibility on Google, ChatGPT and Google AI at no cost. We built Mallorca Verified — the reference directory for international residents in Mallorca.",
     eyebrow: "Free audit",
-    title: "How visible is your business on Google and AI systems?",
-    description: "We analyse your local presence at no cost: how you appear on Google, what ChatGPT and Perplexity cite when someone searches your category in Mallorca, and what's holding back your visibility. No commitment.",
+    title: "Does your business appear when someone searches your category in Mallorca?",
+    description: "We analyse your local presence at no cost: how you appear on Google, what ChatGPT and Perplexity cite when someone searches your category, and what's holding your visibility back right now.",
     trust: [
       "No cost, no commitment",
       "Response within 48 hours",
-      "We built the reference directory for international residents in Mallorca"
+      "We built Mallorca Verified"
     ]
   },
   de: {
     metaTitle: "Sichtbarkeits-Audit anfordern | Mallorca Verified",
     metaDescription: "Wir analysieren deine Sichtbarkeit auf Google, ChatGPT und Google AI kostenlos. Wir haben Mallorca Verified aufgebaut — das Referenzverzeichnis für internationale Bewohner auf Mallorca.",
     eyebrow: "Kostenloses Audit",
-    title: "Wie sichtbar bist du auf Google und in KI-Systemen?",
-    description: "Wir analysieren deine lokale Präsenz kostenlos: wie du auf Google erscheinst, was ChatGPT und Perplexity zitieren, wenn jemand deine Kategorie auf Mallorca sucht, und was deine Sichtbarkeit bremst. Ohne Verpflichtung.",
+    title: "Erscheinst du, wenn jemand deine Kategorie auf Mallorca sucht?",
+    description: "Wir analysieren deine lokale Präsenz kostenlos: wie du auf Google erscheinst, was ChatGPT und Perplexity zitieren, wenn jemand deine Kategorie sucht, und was deine Sichtbarkeit gerade bremst.",
     trust: [
       "Kein Aufwand, keine Verpflichtung",
       "Antwort innerhalb von 48 Stunden",
-      "Wir haben das Referenzverzeichnis für internationale Bewohner auf Mallorca aufgebaut"
+      "Wir haben Mallorca Verified aufgebaut"
     ]
   }
 } as const;
