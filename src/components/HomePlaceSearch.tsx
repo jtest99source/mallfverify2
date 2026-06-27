@@ -88,10 +88,7 @@ export function HomePlaceSearch({ locale, categories, locations }: HomePlaceSear
     >
       <div className="grid sm:grid-cols-2 sm:items-stretch">
         {/* WHAT */}
-        <div className="relative z-40 px-5 py-3.5 sm:border-r sm:border-white/10">
-          <span className="mb-1.5 block text-[9px] font-black uppercase tracking-[0.14em] text-white/45">
-            {labels.category}
-          </span>
+        <div className="relative z-40 px-5 py-4 sm:border-r sm:border-white/10">
           <button
             type="button"
             onPointerDown={(event) => {
@@ -134,10 +131,7 @@ export function HomePlaceSearch({ locale, categories, locations }: HomePlaceSear
         </div>
 
         {/* WHERE */}
-        <div className="relative z-40 border-t border-white/10 px-5 py-3.5 sm:border-t-0">
-          <span className="mb-1.5 block text-[9px] font-black uppercase tracking-[0.14em] text-white/45">
-            {labels.location}
-          </span>
+        <div className="relative z-40 border-t border-white/10 px-5 py-4 sm:border-t-0">
           <button
             type="button"
             onPointerDown={(event) => {

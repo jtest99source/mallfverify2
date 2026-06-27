@@ -478,12 +478,12 @@ function BusinessRankingCard({
         : `Position in ${rankingScopeLabel(primary, category, locale)}`;
 
   return (
-    <section className="rounded-md bg-[#FFCC00] p-5 text-[#0A0A0A] shadow-[0_18px_36px_rgba(255,204,0,0.18)]">
-      <p className="text-[10px] font-black uppercase tracking-[0.14em] text-[#0A0A0A]/60">{heading}</p>
-      <div className="mt-2 font-display text-6xl font-black leading-none">#{primary.position}</div>
-      <p className="mt-1 text-xs font-semibold text-[#0A0A0A]/70">{rankingTotalLabel(primary, locale)}</p>
+    <section className="rounded-sm border border-white/[0.12] bg-[#181818] p-5">
+      <p className="text-[10px] font-black uppercase tracking-[0.12em] text-white/40">{heading}</p>
+      <div className="mt-2 font-display text-6xl font-black leading-none text-[#FFCC00]">#{primary.position}</div>
+      <p className="mt-1 text-xs font-semibold text-white/50">{rankingTotalLabel(primary, locale)}</p>
       {showSecondaryIsland && (
-        <div className="mt-4 border-t border-[#0A0A0A]/18 pt-3 text-xs font-black uppercase tracking-[0.08em] text-[#0A0A0A]/70">
+        <div className="mt-4 border-t border-white/[0.08] pt-3 text-xs font-black uppercase tracking-[0.08em] text-white/40">
           {rankingSecondaryLine(island, category, locale)}
         </div>
       )}

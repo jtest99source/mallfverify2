@@ -462,20 +462,6 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
                 : "Cada negocio supera un umbral real de reseñas de Google. Rankings basados en datos — sin anuncios, sin cuotas."}
             </p>
             <HomePlaceSearch locale={safeLocale} categories={[...publicCategorySlugs]} locations={homepageSearchLocations} />
-            <div className="mt-4 flex flex-wrap justify-center gap-2">
-              {([
-                { href: `/${safeLocale}/top/restaurants`, label: safeLocale === "de" ? "Restaurants" : safeLocale === "en" ? "Restaurants" : "Restaurantes" },
-                { href: `/${safeLocale}/top/hotels`, label: "Hotels" },
-                { href: `/${safeLocale}/top/beach-clubs`, label: safeLocale === "de" ? "Beachclubs" : "Beach clubs" },
-                { href: `/${safeLocale}/top/healthcare`, label: safeLocale === "de" ? "Ärzte" : safeLocale === "en" ? "Doctors" : "Médicos" },
-                { href: `/${safeLocale}/top/real-estate`, label: safeLocale === "de" ? "Immobilien" : safeLocale === "en" ? "Real estate" : "Inmobiliarias" },
-                { href: `/${safeLocale}/top/boats`, label: safeLocale === "de" ? "Boote" : "Boats" }
-              ] as const).map((chip) => (
-                <Link key={chip.href} href={chip.href} className="rounded-full border border-white/15 px-3.5 py-1.5 text-[11px] font-medium text-white/45 backdrop-blur transition hover:border-[#FFCC00] hover:text-[#FFCC00]">
-                  {chip.label}
-                </Link>
-              ))}
-            </div>
           </div>
 
           {restaurantsPalma.length > 0 && (
