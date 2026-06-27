@@ -119,11 +119,11 @@ export function BusinessCard({ business, locale }: { business: Business; locale:
         <BusinessImage business={business} category={business.category} variant="card" className="aspect-[16/10] min-h-0 shrink-0">
           <div className="flex h-full flex-col justify-between">
             <div className="flex items-start justify-between gap-2">
-              <span className="inline-flex items-center gap-1 rounded-full bg-black/50 px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.12em] text-white backdrop-blur">
+              <span className="inline-flex items-center gap-1 rounded-full bg-[#07101F]/68 px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.12em] text-white backdrop-blur">
                 <IconMapPin size={12} stroke={2} />
                 {business.area || business.city || "Mallorca"}
               </span>
-              <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-black/45 text-white backdrop-blur transition-all duration-150 group-hover:bg-[#262626]">
+              <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-[#07101F]/62 text-white backdrop-blur transition-all duration-150 group-hover:bg-[#0C1A2E]">
                 <IconArrowUpRight size={15} stroke={2} />
               </span>
             </div>

@@ -217,12 +217,12 @@ function CategoryRankingCard({ category, businesses, locale }: { category: Categ
 
 function CarouselBusinessCard({ business, index, locale }: { business: Business; index: number; locale: Locale }) {
   return (
-    <Link href={businessHref(locale, business)} className="group block w-[78vw] max-w-[330px] shrink-0 snap-start overflow-hidden bg-[#111111] ring-1 ring-white/[0.08] transition-all duration-200 hover:bg-[#1A1A1A] sm:w-[310px]">
+    <Link href={businessHref(locale, business)} className="group block w-[78vw] max-w-[330px] shrink-0 snap-start overflow-hidden bg-[#0C1A2E] ring-1 ring-white/[0.08] transition-all duration-200 hover:bg-[#0C1A2E] sm:w-[310px]">
       <BusinessImage business={business} category={business.category} variant="card" className="h-[200px] min-h-[200px] rounded-none p-3">
         <div className="flex h-full flex-col justify-between">
           <span className="font-display inline-flex text-xl font-black leading-none text-[#00C37A]">#{index + 1}</span>
           <div>
-            <p className="inline-flex items-center gap-1 bg-black/55 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.08em] text-white/75 backdrop-blur">
+            <p className="inline-flex items-center gap-1 bg-[#07101F]/70 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.08em] text-white/75 backdrop-blur">
               <IconMapPin size={12} stroke={2} />
               {businessLocation(business)}
             </p>
@@ -418,7 +418,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           {heroPanels.map((business, index) => (
             <div
               key={business?.id ?? `fallback-${index}`}
-              className="relative h-full min-h-full overflow-hidden bg-[#111111]"
+              className="relative h-full min-h-full overflow-hidden bg-[#0C1A2E]"
               style={{
                 backgroundImage: business
                   ? `linear-gradient(180deg,rgba(10,10,10,0.1),rgba(10,10,10,0.34)), url(${getBusinessImageUrl(business)})`
@@ -431,7 +431,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
               {business && (
                 <>
                   <div className="absolute left-4 top-4 font-display text-xl font-black text-[#00C37A]">#{index + 1}</div>
-                  <div className="absolute bottom-4 left-1/2 -translate-x-1/2 whitespace-nowrap bg-black/50 px-2.5 py-1 text-[9px] font-bold uppercase tracking-[0.1em] text-white/45 backdrop-blur">
+                  <div className="absolute bottom-4 left-1/2 -translate-x-1/2 whitespace-nowrap bg-[#07101F]/68 px-2.5 py-1 text-[9px] font-bold uppercase tracking-[0.1em] text-white/45 backdrop-blur">
                     {businessLocation(business)}
                   </div>
                 </>
@@ -489,7 +489,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
                         <IconMapPin size={13} className="shrink-0 text-[#00C37A]" />
                         <span className="truncate">{businessLocation(business)}</span>
                       </span>
-                      <span className="mt-2 inline-flex items-center gap-2 rounded-full bg-black px-2.5 py-1 text-[11px] font-bold text-white">
+                      <span className="mt-2 inline-flex items-center gap-2 rounded-full bg-[#040D1A] px-2.5 py-1 text-[11px] font-bold text-white">
                         <span className="text-[#00C37A]">★ {typeof business.rating === "number" ? business.rating.toLocaleString(numberLocale(safeLocale), { minimumFractionDigits: 1, maximumFractionDigits: 1 }) : ""}</span>
                         {typeof business.reviewsCount === "number" && <span className="text-white/45">{business.reviewsCount.toLocaleString(numberLocale(safeLocale))}</span>}
                       </span>
@@ -551,7 +551,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         </div>
       </section>
 
-      <section className="bg-[#111111] px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
+      <section className="bg-[#0C1A2E] px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <div className="mb-8 flex items-end justify-between gap-6">
           <div>

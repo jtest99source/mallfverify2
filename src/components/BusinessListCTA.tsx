@@ -30,7 +30,7 @@ export function BusinessListCTA({ locale }: { locale: Locale }) {
       </div>
       <Link
         href={`/${locale}/suggest`}
-        className="shrink-0 rounded-md bg-[#07101F] px-5 py-3 text-[11px] font-bold uppercase tracking-[0.08em] text-white shadow-[0_4px_14px_rgba(10,10,10,0.18)] transition-all duration-150 hover:bg-[#262626]"
+        className="shrink-0 rounded-md bg-[#07101F] px-5 py-3 text-[11px] font-bold uppercase tracking-[0.08em] text-white shadow-[0_4px_14px_rgba(10,10,10,0.18)] transition-all duration-150 hover:bg-[#0C1A2E]"
       >
         {text.cta}
       </Link>

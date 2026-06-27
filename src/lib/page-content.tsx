@@ -428,7 +428,7 @@ function MobileBusinessActions({
               href={href}
               target={external ? "_blank" : undefined}
               rel={external ? "noreferrer" : undefined}
-              className="inline-flex min-h-11 min-w-0 items-center justify-center gap-2 rounded-sm border border-white/[0.12] bg-[#111111] px-3 text-center text-[11px] font-bold leading-tight text-white shadow-sm"
+              className="inline-flex min-h-11 min-w-0 items-center justify-center gap-2 rounded-sm border border-white/[0.12] bg-[#0C1A2E] px-3 text-center text-[11px] font-bold leading-tight text-white shadow-sm"
             >
               <Icon aria-hidden="true" size={14} stroke={2} className="text-[#00C37A]" />
               <span className="truncate">{label}</span>

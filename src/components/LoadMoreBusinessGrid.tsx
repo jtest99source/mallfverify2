@@ -68,7 +68,7 @@ export function LoadMoreBusinessGrid({
             <button
               type="button"
               onClick={() => setVisibleCount((value) => Math.min(value + PAGE_SIZE, businesses.length))}
-              className="min-h-11 rounded-md border border-[#07101F] bg-[#07101F] px-6 text-[11px] font-black uppercase tracking-[0.1em] text-[#FFFFFF] shadow-[0_14px_30px_rgba(10,10,10,0.18)] transition hover:-translate-y-0.5 hover:bg-[#262626]"
+              className="min-h-11 rounded-md border border-[#07101F] bg-[#07101F] px-6 text-[11px] font-black uppercase tracking-[0.1em] text-[#FFFFFF] shadow-[0_14px_30px_rgba(10,10,10,0.18)] transition hover:-translate-y-0.5 hover:bg-[#0C1A2E]"
             >
               {c.loadMore}
             </button>

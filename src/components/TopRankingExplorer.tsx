@@ -129,7 +129,7 @@ function RankingBusinessRow({
   const summary = summaryFor(business);
 
   return (
-    <article className="group bg-[#111111] ring-1 ring-white/[0.08] transition-colors duration-150 hover:bg-[#1A1A1A]">
+    <article className="group bg-[#0C1A2E] ring-1 ring-white/[0.08] transition-colors duration-150 hover:bg-[#0C1A2E]">
       <Link href={`/${locale}/${categorySlug}/${business.slug}`} className="grid min-h-[118px] grid-cols-[52px_minmax(0,1fr)] sm:grid-cols-[64px_156px_minmax(0,1fr)_136px]">
         <div className="flex items-center justify-center border-r border-white/[0.08]">
           <span className="font-display text-2xl font-black text-[#00C37A]">#{rank}</span>
@@ -137,7 +137,7 @@ function RankingBusinessRow({
 
         <div className="relative hidden min-h-[118px] overflow-hidden sm:block">
           <BusinessImage business={business} category={business.category} variant="card" className="h-full min-h-[118px] rounded-none p-0" />
-          <span className="absolute bottom-2 left-2 inline-flex items-center gap-1 bg-black/55 px-2 py-1 text-[10px] font-semibold uppercase tracking-[0.08em] text-white/70 backdrop-blur">
+          <span className="absolute bottom-2 left-2 inline-flex items-center gap-1 bg-[#07101F]/70 px-2 py-1 text-[10px] font-semibold uppercase tracking-[0.08em] text-white/70 backdrop-blur">
             <IconMapPin size={12} stroke={2} />
             {businessPlace(business)}
           </span>
@@ -311,7 +311,7 @@ export function TopRankingExplorer({
           value={query}
           onChange={(event) => updateParam("q", event.target.value)}
           placeholder={scopedSearchPlaceholder}
-          className="h-12 w-full max-w-[520px] rounded-sm border border-white/[0.14] bg-[#0F0F0F] pl-11 pr-4 text-sm text-white placeholder:text-white/28 shadow-[0_20px_60px_rgba(0,0,0,0.25)] focus:border-[#00C37A] focus:outline-none focus:ring-1 focus:ring-[#00C37A]"
+          className="h-12 w-full max-w-[520px] rounded-sm border border-white/[0.14] bg-[#0C1A2E] pl-11 pr-4 text-sm text-white placeholder:text-white/28 shadow-[0_20px_60px_rgba(0,0,0,0.25)] focus:border-[#00C37A] focus:outline-none focus:ring-1 focus:ring-[#00C37A]"
         />
       </div>
       </div>
@@ -326,7 +326,7 @@ export function TopRankingExplorer({
               className={`shrink-0 rounded-full px-3.5 py-2 text-[11px] font-bold uppercase tracking-[0.06em] transition-colors ${
                 sort === option.value
                   ? "bg-[#00C37A] text-[#0A0A0A]"
-                  : "border border-white/[0.12] bg-[#111111] text-white/55"
+                  : "border border-white/[0.12] bg-[#0C1A2E] text-white/55"
               }`}
             >
               {option.label}
@@ -335,14 +335,14 @@ export function TopRankingExplorer({
         </div>
         <div className={`mt-2 grid gap-2 ${SHOW_TYPE_FILTER && facets.length > 0 ? "grid-cols-2" : "grid-cols-1"}`}>
           {SHOW_TYPE_FILTER && facets.length > 0 && (
-            <select value={facetSlug} onChange={(event) => updateParam("type", event.target.value)} className="h-10 rounded-sm border border-white/[0.12] bg-[#111111] px-2 text-xs text-white focus:border-[#00C37A] focus:ring-[#00C37A]">
+            <select value={facetSlug} onChange={(event) => updateParam("type", event.target.value)} className="h-10 rounded-sm border border-white/[0.12] bg-[#0C1A2E] px-2 text-xs text-white focus:border-[#00C37A] focus:ring-[#00C37A]">
               <option value={ALL}>{copy.filters.type}: {copy.filters.all}</option>
               {facets.map((facet) => (
                 <option key={facet.slug} value={facet.slug}>{getLocalizedFacetLabel(facet.slug, facet.label, locale)} ({facet.count})</option>
               ))}
             </select>
           )}
-          <select value={place} onChange={(event) => updateParam("area", event.target.value)} className="h-10 rounded-sm border border-white/[0.12] bg-[#111111] px-2 text-xs text-white focus:border-[#00C37A] focus:ring-[#00C37A]">
+          <select value={place} onChange={(event) => updateParam("area", event.target.value)} className="h-10 rounded-sm border border-white/[0.12] bg-[#0C1A2E] px-2 text-xs text-white focus:border-[#00C37A] focus:ring-[#00C37A]">
             <option value={ALL}>{copy.filters.place}: {copy.filters.allPlaces}</option>
             {places.map((item) => (
               <option key={item} value={item}>{item}</option>
@@ -367,7 +367,7 @@ export function TopRankingExplorer({
           <div className="h-8 w-px bg-white/[0.08]" />
           <label className="flex items-center gap-3 text-[10px] font-black uppercase tracking-[0.12em] text-white/30">
                 {copy.filters.sortBy}
-                <select value={sort} onChange={(event) => updateParam("sort", event.target.value)} className="h-9 rounded-sm border border-white/[0.12] bg-[#0F0F0F] pl-4 pr-8 text-sm font-normal normal-case tracking-normal text-white focus:border-[#00C37A] focus:outline-none focus:ring-1 focus:ring-[#00C37A]">
+                <select value={sort} onChange={(event) => updateParam("sort", event.target.value)} className="h-9 rounded-sm border border-white/[0.12] bg-[#0C1A2E] pl-4 pr-8 text-sm font-normal normal-case tracking-normal text-white focus:border-[#00C37A] focus:outline-none focus:ring-1 focus:ring-[#00C37A]">
                   {sortOptions.map((option) => (
                     <option key={option.value} value={option.value}>{option.label}</option>
                   ))}
@@ -376,7 +376,7 @@ export function TopRankingExplorer({
               {SHOW_TYPE_FILTER && facets.length > 0 && (
                 <label className="flex items-center gap-3 text-[10px] font-black uppercase tracking-[0.12em] text-white/30">
                   {copy.filters.type}
-                  <select value={facetSlug} onChange={(event) => updateParam("type", event.target.value)} className="h-9 rounded-sm border border-white/[0.12] bg-[#0F0F0F] pl-4 pr-8 text-sm font-normal normal-case tracking-normal text-white focus:border-[#00C37A] focus:outline-none focus:ring-1 focus:ring-[#00C37A]">
+                  <select value={facetSlug} onChange={(event) => updateParam("type", event.target.value)} className="h-9 rounded-sm border border-white/[0.12] bg-[#0C1A2E] pl-4 pr-8 text-sm font-normal normal-case tracking-normal text-white focus:border-[#00C37A] focus:outline-none focus:ring-1 focus:ring-[#00C37A]">
                     <option value={ALL}>{copy.filters.all}</option>
                     {facets.map((facet) => (
                       <option key={facet.slug} value={facet.slug}>{getLocalizedFacetLabel(facet.slug, facet.label, locale)} ({facet.count})</option>
@@ -386,7 +386,7 @@ export function TopRankingExplorer({
               )}
               <label className="flex items-center gap-3 text-[10px] font-black uppercase tracking-[0.12em] text-white/30">
                 {copy.filters.place}
-                <select value={place} onChange={(event) => updateParam("area", event.target.value)} className="h-9 rounded-sm border border-white/[0.12] bg-[#0F0F0F] pl-4 pr-8 text-sm font-normal normal-case tracking-normal text-white focus:border-[#00C37A] focus:outline-none focus:ring-1 focus:ring-[#00C37A]">
+                <select value={place} onChange={(event) => updateParam("area", event.target.value)} className="h-9 rounded-sm border border-white/[0.12] bg-[#0C1A2E] pl-4 pr-8 text-sm font-normal normal-case tracking-normal text-white focus:border-[#00C37A] focus:outline-none focus:ring-1 focus:ring-[#00C37A]">
                   <option value={ALL}>{copy.filters.allPlaces}</option>
                   {places.map((item) => (
                     <option key={item} value={item}>{item}</option>
@@ -444,7 +444,7 @@ export function TopRankingExplorer({
       )}
 
       {!filtered.length && (
-        <div className="mx-auto mt-6 max-w-7xl rounded-sm border border-white/[0.08] bg-[#111111] p-5 text-sm text-white/50 sm:mt-8 sm:p-6">
+        <div className="mx-auto mt-6 max-w-7xl rounded-sm border border-white/[0.08] bg-[#0C1A2E] p-5 text-sm text-white/50 sm:mt-8 sm:p-6">
           <p>{copy.filters.noResults}</p>
           <button
             type="button"
