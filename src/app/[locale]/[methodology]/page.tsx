@@ -527,43 +527,43 @@ function MethodologyPage({ locale, canonical, stats }: { locale: Locale; canonic
   const pageSections = methodologyPageSections(locale);
 
   return (
-    <main className="bg-paper">
+    <main className="bg-[#0A0A0A]">
       <section className="bg-[#FFFFFF] px-4 py-14 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <Breadcrumbs items={[{ label: c.home, href: `/${locale}` }, { label: c.label, href: methodologyPath(locale) }]} />
           <div className="mt-8 max-w-4xl">
-            <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-[#E5E7EB] bg-[#FFFFFF] px-3 py-1 text-[11px] font-bold uppercase tracking-[0.08em] text-[#0A0A0A]">
+            <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/[0.06] px-3 py-1 text-[11px] font-bold uppercase tracking-[0.08em] text-white">
               <IconShieldCheck size={15} stroke={2} />
               {c.badge}
             </div>
-            <h1 className="font-display text-balance text-3xl font-black leading-[1.03] text-ink sm:text-5xl lg:text-6xl">{c.title}</h1>
-            <p className="mt-5 max-w-2xl text-base leading-8 text-olive">{c.intro}</p>
+            <h1 className="font-display text-balance text-3xl font-black leading-[1.03] text-white sm:text-5xl lg:text-6xl">{c.title}</h1>
+            <p className="mt-5 max-w-2xl text-base leading-8 text-white/60">{c.intro}</p>
           </div>
         </div>
       </section>
 
       <article className="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8">
-        <section className="border-b border-borderline pb-10">
-          <p className="mb-2 text-[11px] font-black uppercase tracking-[0.18em] text-[#0A0A0A]/30">01</p>
+        <section className="border-b border-white/[0.08] pb-10">
+          <p className="mb-2 text-[11px] font-black uppercase tracking-[0.18em] text-white/30">01</p>
           <h2 className="font-sans text-2xl font-black leading-tight sm:text-3xl">{c.whyTitle}</h2>
-          <p className="mt-5 text-base leading-8 text-ink/75">{c.whyText}</p>
+          <p className="mt-5 text-base leading-8 text-white/65">{c.whyText}</p>
         </section>
 
-        <section className="border-b border-borderline py-10">
-          <p className="mb-2 text-[11px] font-black uppercase tracking-[0.18em] text-[#0A0A0A]/30">02</p>
+        <section className="border-b border-white/[0.08] py-10">
+          <p className="mb-2 text-[11px] font-black uppercase tracking-[0.18em] text-white/30">02</p>
           <h2 className="font-sans text-2xl font-black leading-tight sm:text-3xl">{c.factorsTitle}</h2>
-          <p className="mt-5 text-base leading-8 text-ink/75">{c.factorsIntro}</p>
+          <p className="mt-5 text-base leading-8 text-white/65">{c.factorsIntro}</p>
           <div className="mt-7 grid gap-4">
             {c.factors.map(([eyebrow, title, text], index) => {
               const Icon = index === 0 ? IconStar : index === 1 ? IconMessages : IconDiamond;
               return (
-                <div key={title} className="rounded-lg border border-borderline bg-[#FFFFFF] p-5 shadow-[0_12px_28px_rgba(10,10,10,0.04)]">
+                <div key={title} className="rounded-lg border border-white/[0.08] bg-[#101010] p-5 shadow-none">
                   <div className="flex gap-4">
-                    <Icon size={26} stroke={1.8} className="mt-1 shrink-0 text-[#0A0A0A]" />
+                    <Icon size={26} stroke={1.8} className="mt-1 shrink-0 text-[#FFCC00]" />
                     <div>
-                      <p className="text-[10px] font-bold uppercase tracking-[0.12em] text-[#0A0A0A]">{eyebrow}</p>
-                      <h3 className="mt-1 font-sans text-xl font-bold text-ink">{title}</h3>
-                      <p className="mt-3 text-sm leading-7 text-olive">{text}</p>
+                      <p className="text-[10px] font-bold uppercase tracking-[0.12em] text-[#FFCC00]">{eyebrow}</p>
+                      <h3 className="mt-1 font-sans text-xl font-bold text-white">{title}</h3>
+                      <p className="mt-3 text-sm leading-7 text-white/60">{text}</p>
                     </div>
                   </div>
                 </div>
@@ -572,26 +572,26 @@ function MethodologyPage({ locale, canonical, stats }: { locale: Locale; canonic
           </div>
         </section>
 
-        <section className="border-b border-borderline py-10">
-          <p className="mb-2 text-[11px] font-black uppercase tracking-[0.18em] text-[#0A0A0A]/30">03</p>
+        <section className="border-b border-white/[0.08] py-10">
+          <p className="mb-2 text-[11px] font-black uppercase tracking-[0.18em] text-white/30">03</p>
           <h2 className="font-sans text-2xl font-black leading-tight sm:text-3xl">{c.neverTitle}</h2>
           <div className="mt-6 grid gap-4">
             {c.never.map(([title, text]) => (
-              <div key={title} className="flex gap-4 rounded-lg border border-borderline bg-[#FFFFFF] p-5">
-                <IconShieldCheck size={22} stroke={2} className="mt-1 shrink-0 text-[#0A0A0A]" />
+              <div key={title} className="flex gap-4 rounded-lg border border-white/[0.08] bg-[#101010] p-5">
+                <IconShieldCheck size={22} stroke={2} className="mt-1 shrink-0 text-[#FFCC00]" />
                 <div>
-                  <h3 className="font-sans text-lg font-bold text-ink">{title}</h3>
-                  <p className="mt-2 text-sm leading-7 text-olive">{text}</p>
+                  <h3 className="font-sans text-lg font-bold text-white">{title}</h3>
+                  <p className="mt-2 text-sm leading-7 text-white/60">{text}</p>
                 </div>
               </div>
             ))}
           </div>
         </section>
 
-        <section className="border-b border-borderline py-10">
-          <p className="mb-2 text-[11px] font-black uppercase tracking-[0.18em] text-[#0A0A0A]/30">04</p>
+        <section className="border-b border-white/[0.08] py-10">
+          <p className="mb-2 text-[11px] font-black uppercase tracking-[0.18em] text-white/30">04</p>
           <h2 className="font-sans text-2xl font-black leading-tight sm:text-3xl">{c.dataTitle}</h2>
-          <p className="mt-5 text-base leading-8 text-ink/75">{c.dataText}</p>
+          <p className="mt-5 text-base leading-8 text-white/65">{c.dataText}</p>
           <div className="mt-8 grid gap-4 sm:grid-cols-3">
             {[
               { value: formatIntegerMetric(stats.publishedBusinesses, locale), label: c.published },
@@ -606,8 +606,8 @@ function MethodologyPage({ locale, canonical, stats }: { locale: Locale; canonic
           </div>
         </section>
 
-        <section className="border-b border-borderline py-10">
-          <p className="mb-2 text-[11px] font-black uppercase tracking-[0.18em] text-[#0A0A0A]/30">05</p>
+        <section className="border-b border-white/[0.08] py-10">
+          <p className="mb-2 text-[11px] font-black uppercase tracking-[0.18em] text-white/30">05</p>
           <h2 className="font-sans text-2xl font-black leading-tight sm:text-3xl">
             {locale === "en" ? "How each page works" : locale === "de" ? "Wie jede Seite funktioniert" : "Cómo funciona cada página"}
           </h2>
@@ -615,10 +615,10 @@ function MethodologyPage({ locale, canonical, stats }: { locale: Locale; canonic
             {pageSections.map((item, index) => {
               const PageIcon = index === 0 ? IconChartBar : index === 1 ? IconStar : index === 2 ? IconUsers : IconDiamond;
               return (
-              <div key={item.title} className="rounded-lg border border-[#E5E7EB] bg-[#FFFFFF] p-5 shadow-[0_12px_28px_rgba(10,10,10,0.04)]">
-                <PageIcon size={22} stroke={1.8} className="text-[#0A0A0A]" />
-                <h3 className="mt-3 font-sans text-lg font-black text-ink">{item.title}</h3>
-                <p className="mt-2 text-sm leading-7 text-olive">{item.text}</p>
+              <div key={item.title} className="rounded-lg border border-[#E5E7EB] bg-[#101010] p-5 shadow-none">
+                <PageIcon size={22} stroke={1.8} className="text-[#FFCC00]" />
+                <h3 className="mt-3 font-sans text-lg font-black text-white">{item.title}</h3>
+                <p className="mt-2 text-sm leading-7 text-white/60">{item.text}</p>
               </div>
               );
             })}
@@ -626,16 +626,16 @@ function MethodologyPage({ locale, canonical, stats }: { locale: Locale; canonic
         </section>
 
         <section className="pt-10">
-          <p className="mb-2 text-[11px] font-black uppercase tracking-[0.18em] text-[#0A0A0A]/30">06</p>
+          <p className="mb-2 text-[11px] font-black uppercase tracking-[0.18em] text-white/30">06</p>
           <h2 className="font-sans text-2xl font-black leading-tight sm:text-3xl">{c.faqTitle}</h2>
-          <div className="mt-6 divide-y divide-borderline overflow-hidden rounded-lg border border-borderline bg-[#FFFFFF]">
+          <div className="mt-6 divide-y divide-white/[0.08] overflow-hidden rounded-lg border border-white/[0.08] bg-[#FFFFFF]">
             {c.faqs.map(([question, answer]) => (
               <details key={question} className="group p-5">
-                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-sans text-lg font-bold text-ink">
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-sans text-lg font-bold text-white">
                   <span>{question}</span>
-                  <span className="text-[#0A0A0A] transition group-open:rotate-45">+</span>
+                  <span className="text-[#FFCC00] transition group-open:rotate-45">+</span>
                 </summary>
-                <p className="mt-4 text-sm leading-7 text-olive">{answer}</p>
+                <p className="mt-4 text-sm leading-7 text-white/60">{answer}</p>
               </details>
             ))}
           </div>
@@ -673,49 +673,49 @@ function AboutPage({ locale, canonical, stats }: { locale: Locale; canonical: st
   };
 
   return (
-    <main className="bg-paper">
-      <section className="border-b border-borderline bg-[#FFFFFF] px-4 py-14 sm:px-6 lg:px-8">
+    <main className="bg-[#0A0A0A]">
+      <section className="border-b border-white/[0.08] border-b border-white/[0.08] px-4 py-14 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <Breadcrumbs items={[{ label: c.home, href: `/${locale}` }, { label: c.label, href: canonical }]} />
           <div className="mt-8 max-w-3xl">
-            <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-[#E5E7EB] bg-white px-3 py-1 text-[11px] font-bold uppercase tracking-[0.08em] text-[#0A0A0A]">
+            <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/[0.06] px-3 py-1 text-[11px] font-bold uppercase tracking-[0.08em] text-white">
               <IconUsers size={15} stroke={2} />
               {c.badge}
             </div>
-            <h1 className="font-display text-balance text-3xl font-black leading-[1.03] text-ink sm:text-5xl lg:text-6xl">{c.title}</h1>
-            <p className="mt-5 max-w-2xl text-base leading-8 text-olive">{c.intro}</p>
+            <h1 className="font-display text-balance text-3xl font-black leading-[1.03] text-white sm:text-5xl lg:text-6xl">{c.title}</h1>
+            <p className="mt-5 max-w-2xl text-base leading-8 text-white/60">{c.intro}</p>
           </div>
         </div>
       </section>
 
       <article className="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8">
-        <section className="border-b border-borderline pb-10">
+        <section className="border-b border-white/[0.08] pb-10">
           <h2 className="font-sans text-2xl font-black leading-tight sm:text-3xl">{c.whyTitle}</h2>
-          <p className="mt-5 text-base leading-8 text-ink/75">{c.whyText}</p>
+          <p className="mt-5 text-base leading-8 text-white/65">{c.whyText}</p>
         </section>
 
-        <section className="border-b border-borderline py-10">
+        <section className="border-b border-white/[0.08] py-10">
           <h2 className="font-sans text-2xl font-black leading-tight sm:text-3xl">{c.teamTitle}</h2>
-          <p className="mt-5 text-base leading-8 text-ink/75">{c.teamText}</p>
+          <p className="mt-5 text-base leading-8 text-white/65">{c.teamText}</p>
         </section>
 
-        <section className="border-b border-borderline py-10">
+        <section className="border-b border-white/[0.08] py-10">
           <h2 className="font-sans text-2xl font-black leading-tight sm:text-3xl">{c.principlesTitle}</h2>
           <div className="mt-7 grid gap-4 sm:grid-cols-2">
             {c.principles.map(([title, text], index) => {
               const Icon = principleIcons[index] ?? IconShieldCheck;
               return (
-                <div key={title} className="rounded-lg border border-borderline bg-white p-5 shadow-[0_12px_28px_rgba(10,10,10,0.04)]">
-                  <Icon size={24} stroke={1.8} className="text-[#0A0A0A]" />
-                  <h3 className="mt-3 font-sans text-lg font-bold text-ink">{title}</h3>
-                  <p className="mt-2 text-sm leading-7 text-olive">{text}</p>
+                <div key={title} className="rounded-lg border border-white/[0.08] bg-[#101010] p-5 shadow-none">
+                  <Icon size={24} stroke={1.8} className="text-[#FFCC00]" />
+                  <h3 className="mt-3 font-sans text-lg font-bold text-white">{title}</h3>
+                  <p className="mt-2 text-sm leading-7 text-white/60">{text}</p>
                 </div>
               );
             })}
           </div>
         </section>
 
-        <section className="border-b border-borderline py-10">
+        <section className="border-b border-white/[0.08] py-10">
           <div className="grid gap-4 sm:grid-cols-3">
             {[
               { value: formatIntegerMetric(stats.publishedBusinesses, locale), label: c.published },
@@ -731,15 +731,15 @@ function AboutPage({ locale, canonical, stats }: { locale: Locale; canonical: st
         </section>
 
         <section className="pt-10">
-          <div className="rounded-lg border border-[#E5E7EB] bg-white p-6 shadow-[0_4px_18px_rgba(10,10,10,0.06)]">
-            <IconMail size={28} stroke={1.8} className="text-[#0A0A0A]" />
-            <h2 className="mt-3 font-sans text-2xl font-black leading-tight text-ink">{c.contactTitle}</h2>
-            <p className="mt-3 text-sm leading-7 text-olive">{c.contactText}</p>
-            <a href={`mailto:${c.contactCta}`} className="mt-4 inline-flex min-h-11 items-center justify-center rounded-sm bg-[#262626] px-5 text-[11px] font-bold uppercase tracking-[0.1em] text-white hover:bg-[#262626]">
+          <div className="rounded-lg border border-[#E5E7EB] bg-[#101010] p-6 shadow-none">
+            <IconMail size={28} stroke={1.8} className="text-[#FFCC00]" />
+            <h2 className="mt-3 font-sans text-2xl font-black leading-tight text-white">{c.contactTitle}</h2>
+            <p className="mt-3 text-sm leading-7 text-white/60">{c.contactText}</p>
+            <a href={`mailto:${c.contactCta}`} className="mt-4 inline-flex min-h-11 items-center justify-center rounded-sm bg-[#FFCC00] px-5 text-[11px] font-bold uppercase tracking-[0.1em] text-[#0A0A0A] hover:bg-white">
               {c.contactCta}
             </a>
             <div className="mt-4">
-              <Link href={editorialPath(locale)} className="text-sm font-semibold text-[#0A0A0A] hover:underline">
+              <Link href={editorialPath(locale)} className="text-sm font-semibold text-[#FFCC00]/80 hover:text-[#FFCC00]">
                 {c.editorialLinkText}
               </Link>
             </div>
@@ -777,76 +777,76 @@ function EditorialPage({ locale, canonical }: { locale: Locale; canonical: strin
   };
 
   return (
-    <main className="bg-paper">
-      <section className="border-b border-borderline bg-[#FFFFFF] px-4 py-14 sm:px-6 lg:px-8">
+    <main className="bg-[#0A0A0A]">
+      <section className="border-b border-white/[0.08] border-b border-white/[0.08] px-4 py-14 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <Breadcrumbs items={[{ label: c.home, href: `/${locale}` }, { label: c.label, href: canonical }]} />
           <div className="mt-8 max-w-3xl">
-            <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-[#E5E7EB] bg-white px-3 py-1 text-[11px] font-bold uppercase tracking-[0.08em] text-[#0A0A0A]">
+            <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/[0.06] px-3 py-1 text-[11px] font-bold uppercase tracking-[0.08em] text-white">
               <IconShieldCheck size={15} stroke={2} />
               {c.badge}
             </div>
-            <h1 className="font-display text-balance text-3xl font-black leading-[1.03] text-ink sm:text-5xl lg:text-6xl">{c.title}</h1>
-            <p className="mt-5 max-w-2xl text-base leading-8 text-olive">{c.intro}</p>
+            <h1 className="font-display text-balance text-3xl font-black leading-[1.03] text-white sm:text-5xl lg:text-6xl">{c.title}</h1>
+            <p className="mt-5 max-w-2xl text-base leading-8 text-white/60">{c.intro}</p>
           </div>
         </div>
       </section>
 
       <article className="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8">
-        <section className="border-b border-borderline pb-10">
+        <section className="border-b border-white/[0.08] pb-10">
           <h2 className="font-sans text-2xl font-black leading-tight sm:text-3xl">{c.criteriaTitle}</h2>
           <div className="mt-6 grid gap-4">
             {c.criteria.map(([title, text]) => (
-              <div key={title} className="rounded-lg border border-borderline bg-white p-5 shadow-[0_4px_18px_rgba(10,10,10,0.04)]">
-                <h3 className="font-sans text-lg font-bold text-ink">{title}</h3>
-                <p className="mt-2 text-sm leading-7 text-olive">{text}</p>
+              <div key={title} className="rounded-lg border border-white/[0.08] bg-[#101010] p-5 shadow-[0_4px_18px_rgba(10,10,10,0.04)]">
+                <h3 className="font-sans text-lg font-bold text-white">{title}</h3>
+                <p className="mt-2 text-sm leading-7 text-white/60">{text}</p>
               </div>
             ))}
           </div>
         </section>
 
-        <section className="border-b border-borderline py-10">
+        <section className="border-b border-white/[0.08] py-10">
           <h2 className="font-sans text-2xl font-black leading-tight sm:text-3xl">{c.sourcesTitle}</h2>
-          <p className="mt-5 text-base leading-8 text-ink/75">{c.sourcesText}</p>
+          <p className="mt-5 text-base leading-8 text-white/65">{c.sourcesText}</p>
           <div className="mt-6 grid gap-4">
             {c.sources.map(([title, text]) => (
-              <div key={title} className="flex gap-4 rounded-lg border border-borderline bg-white p-5">
-                <IconChartBar size={22} stroke={1.8} className="mt-1 shrink-0 text-[#0A0A0A]" />
+              <div key={title} className="flex gap-4 rounded-lg border border-white/[0.08] bg-[#101010] p-5">
+                <IconChartBar size={22} stroke={1.8} className="mt-1 shrink-0 text-[#FFCC00]" />
                 <div>
-                  <h3 className="font-sans text-lg font-bold text-ink">{title}</h3>
-                  <p className="mt-2 text-sm leading-7 text-olive">{text}</p>
+                  <h3 className="font-sans text-lg font-bold text-white">{title}</h3>
+                  <p className="mt-2 text-sm leading-7 text-white/60">{text}</p>
                 </div>
               </div>
             ))}
           </div>
         </section>
 
-        <section className="border-b border-borderline py-10">
+        <section className="border-b border-white/[0.08] py-10">
           <h2 className="font-sans text-2xl font-black leading-tight sm:text-3xl">{c.updateTitle}</h2>
-          <p className="mt-5 text-base leading-8 text-ink/75">{c.updateText}</p>
+          <p className="mt-5 text-base leading-8 text-white/65">{c.updateText}</p>
           <div className="mt-6 grid gap-4">
             {c.updates.map(([title, text]) => (
-              <div key={title} className="flex gap-4 rounded-lg border border-borderline bg-white p-5">
-                <IconRefresh size={22} stroke={1.8} className="mt-1 shrink-0 text-[#0A0A0A]" />
+              <div key={title} className="flex gap-4 rounded-lg border border-white/[0.08] bg-[#101010] p-5">
+                <IconRefresh size={22} stroke={1.8} className="mt-1 shrink-0 text-[#FFCC00]" />
                 <div>
-                  <h3 className="font-sans text-lg font-bold text-ink">{title}</h3>
-                  <p className="mt-2 text-sm leading-7 text-olive">{text}</p>
+                  <h3 className="font-sans text-lg font-bold text-white">{title}</h3>
+                  <p className="mt-2 text-sm leading-7 text-white/60">{text}</p>
                 </div>
               </div>
             ))}
           </div>
         </section>
 
-        <section className="border-b border-borderline py-10">
+        <section className="border-b border-white/[0.08] py-10">
           <h2 className="font-sans text-2xl font-black leading-tight sm:text-3xl">{c.separationTitle}</h2>
-          <p className="mt-5 text-base leading-8 text-ink/75">{c.separationText}</p>
+          <p className="mt-5 text-base leading-8 text-white/65">{c.separationText}</p>
           <div className="mt-6 grid gap-4">
             {c.separations.map(([title, text]) => (
-              <div key={title} className="flex gap-4 rounded-lg border border-borderline bg-white p-5">
-                <IconX size={22} stroke={2} className="mt-1 shrink-0 text-[#0A0A0A]" />
+              <div key={title} className="flex gap-4 rounded-lg border border-white/[0.08] bg-[#101010] p-5">
+                <IconX size={22} stroke={2} className="mt-1 shrink-0 text-[#FFCC00]" />
                 <div>
-                  <h3 className="font-sans text-lg font-bold text-ink">{title}</h3>
-                  <p className="mt-2 text-sm leading-7 text-olive">{text}</p>
+                  <h3 className="font-sans text-lg font-bold text-white">{title}</h3>
+                  <p className="mt-2 text-sm leading-7 text-white/60">{text}</p>
                 </div>
               </div>
             ))}
@@ -854,15 +854,15 @@ function EditorialPage({ locale, canonical }: { locale: Locale; canonical: strin
         </section>
 
         <section className="pt-10">
-          <div className="rounded-lg border border-[#E5E7EB] bg-white p-6 shadow-[0_4px_18px_rgba(10,10,10,0.06)]">
-            <IconMail size={28} stroke={1.8} className="text-[#0A0A0A]" />
-            <h2 className="mt-3 font-sans text-2xl font-black leading-tight text-ink">{c.correctionsTitle}</h2>
-            <p className="mt-3 text-sm leading-7 text-olive">{c.correctionsText}</p>
-            <a href={`mailto:${c.correctionsCta}`} className="mt-4 inline-flex min-h-11 items-center justify-center rounded-sm bg-[#262626] px-5 text-[11px] font-bold uppercase tracking-[0.1em] text-white hover:bg-[#262626]">
+          <div className="rounded-lg border border-[#E5E7EB] bg-[#101010] p-6 shadow-none">
+            <IconMail size={28} stroke={1.8} className="text-[#FFCC00]" />
+            <h2 className="mt-3 font-sans text-2xl font-black leading-tight text-white">{c.correctionsTitle}</h2>
+            <p className="mt-3 text-sm leading-7 text-white/60">{c.correctionsText}</p>
+            <a href={`mailto:${c.correctionsCta}`} className="mt-4 inline-flex min-h-11 items-center justify-center rounded-sm bg-[#FFCC00] px-5 text-[11px] font-bold uppercase tracking-[0.1em] text-[#0A0A0A] hover:bg-white">
               {c.correctionsCta}
             </a>
             <div className="mt-4">
-              <Link href={aboutPath(locale)} className="text-sm font-semibold text-[#0A0A0A] hover:underline">
+              <Link href={aboutPath(locale)} className="text-sm font-semibold text-[#FFCC00]/80 hover:text-[#FFCC00]">
                 {c.aboutLinkText}
               </Link>
             </div>

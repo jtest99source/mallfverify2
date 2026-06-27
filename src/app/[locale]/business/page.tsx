@@ -141,24 +141,24 @@ export default async function BusinessPage({ params }: { params: Promise<{ local
   ];
 
   return (
-    <main className="bg-[linear-gradient(180deg,#FFFFFF_0%,#FFFFFF_48%,#FFFFFF_100%)]">
-      <section className="border-b border-[#E5E7EB] px-4 py-14 sm:px-6 lg:px-8">
+    <main className="bg-[#0A0A0A] text-white">
+      <section className="border-b border-white/[0.08] px-4 py-14 sm:px-6 lg:px-8">
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1fr_360px] lg:items-end">
           <div>
-            <p className="text-[11px] font-black uppercase tracking-[0.18em] text-[#0A0A0A]">{copy.eyebrow}</p>
-            <h1 className="mt-4 max-w-4xl text-4xl font-black leading-[0.96] text-[#0A0A0A] sm:text-5xl lg:text-7xl">{copy.title}</h1>
-            <p className="mt-6 max-w-2xl text-base leading-8 text-[#6B7280]">{copy.intro}</p>
-            <div className="mt-7 max-w-2xl rounded-lg border border-[#E5E7EB] bg-[#F9FAFB] p-5 shadow-[0_18px_45px_rgba(10,10,10,0.06)]">
-              <p className="text-sm font-bold leading-7 text-[#0A0A0A]">
-                <span className="rounded-full bg-[#0A0A0A] px-3 py-1 text-[10px] font-black uppercase tracking-[0.12em] text-[#FFCC00]">GEO + SEO</span>
+            <p className="text-[11px] font-black uppercase tracking-[0.18em] text-[#FFCC00]">{copy.eyebrow}</p>
+            <h1 className="mt-4 max-w-4xl font-display text-4xl font-black leading-[0.96] text-white sm:text-5xl lg:text-7xl">{copy.title}</h1>
+            <p className="mt-6 max-w-2xl text-base leading-8 text-white/60">{copy.intro}</p>
+            <div className="mt-7 max-w-2xl rounded-sm border border-white/[0.10] bg-[#101010] p-5">
+              <p className="text-sm font-bold leading-7 text-white">
+                <span className="rounded-full bg-[#FFCC00] px-3 py-1 text-[10px] font-black uppercase tracking-[0.12em] text-[#0A0A0A]">GEO + SEO</span>
                 <span className="ml-3">{copy.proofLine}</span>
               </p>
             </div>
           </div>
-          <div className="rounded-lg border border-[#E5E7EB] bg-[#FFFFFF] p-6 shadow-[0_18px_45px_rgba(10,10,10,0.06)]">
-            <p className="text-[10px] font-black uppercase tracking-[0.14em] text-[#0A0A0A]">{copy.contactEyebrow}</p>
-            <p className="mt-4 text-sm leading-7 text-[#6B7280]">{copy.contactText}</p>
-            <Link href={`/${safeLocale}/contact`} className="mt-6 block rounded-md bg-[#0A0A0A] px-5 py-4 text-center text-[11px] font-black uppercase tracking-[0.1em] text-white transition-all duration-150 hover:bg-[#262626]">{copy.contactCta}</Link>
+          <div className="rounded-sm border border-white/[0.10] bg-[#101010] p-6">
+            <p className="text-[10px] font-black uppercase tracking-[0.14em] text-[#FFCC00]">{copy.contactEyebrow}</p>
+            <p className="mt-4 text-sm leading-7 text-white/60">{copy.contactText}</p>
+            <Link href={`/${safeLocale}/contact`} className="mt-6 block rounded-sm bg-[#FFCC00] px-5 py-4 text-center text-[11px] font-black uppercase tracking-[0.1em] text-[#0A0A0A] transition-all duration-150 hover:bg-white">{copy.contactCta}</Link>
           </div>
         </div>
       </section>
@@ -166,44 +166,44 @@ export default async function BusinessPage({ params }: { params: Promise<{ local
       <section className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 gap-3 md:grid-cols-4">
           {stats.map((item) => (
-            <div key={item.label} className="rounded-lg border border-[#E5E7EB] bg-[#F9FAFB] p-6 shadow-[0_14px_34px_rgba(10,10,10,0.05)]">
-              <p className="font-display text-4xl font-black text-[#0A0A0A]">{item.value}</p>
-              <p className="mt-2 text-[11px] font-bold uppercase tracking-[0.1em] text-[#6B7280]">{item.label}</p>
+            <div key={item.label} className="rounded-sm border border-white/[0.10] bg-[#101010] p-6">
+              <p className="font-display text-4xl font-black text-[#FFCC00]">{item.value}</p>
+              <p className="mt-2 text-[11px] font-bold uppercase tracking-[0.1em] text-white/50">{item.label}</p>
             </div>
           ))}
         </div>
 
         <div className="mt-12 grid gap-8 lg:grid-cols-[320px_1fr]">
           <div>
-            <p className="text-[11px] font-black uppercase tracking-[0.16em] text-[#0A0A0A]">{copy.workEyebrow}</p>
-            <h2 className="mt-3 text-4xl font-black text-[#0A0A0A]">{copy.workTitle}</h2>
-            <p className="mt-5 text-sm leading-7 text-[#6B7280]">{copy.workIntro}</p>
+            <p className="text-[11px] font-black uppercase tracking-[0.16em] text-[#FFCC00]">{copy.workEyebrow}</p>
+            <h2 className="mt-3 font-display text-4xl font-black text-white">{copy.workTitle}</h2>
+            <p className="mt-5 text-sm leading-7 text-white/60">{copy.workIntro}</p>
           </div>
           <div className="grid gap-5 sm:grid-cols-2">
             {copy.products.map(([title, text], index) => (
-              <article key={title} className="rounded-lg border border-[#E5E7EB] bg-[#F9FAFB] p-6 shadow-[0_14px_34px_rgba(10,10,10,0.05)] transition-all duration-150 hover:-translate-y-1 hover:border-[#0A0A0A]">
-                <div className="mb-5 flex h-9 w-9 items-center justify-center rounded-full bg-[#0A0A0A] text-xs font-black text-[#FFCC00]">0{index + 1}</div>
-                <h3 className="text-2xl font-black text-[#0A0A0A]">{title}</h3>
-                <p className="mt-3 text-sm leading-7 text-[#6B7280]">{text}</p>
+              <article key={title} className="rounded-sm border border-white/[0.10] bg-[#101010] p-6 transition-all duration-150 hover:-translate-y-0.5 hover:border-white/25">
+                <div className="mb-5 flex h-9 w-9 items-center justify-center rounded-full bg-[#FFCC00] text-xs font-black text-[#0A0A0A]">0{index + 1}</div>
+                <h3 className="text-2xl font-black text-white">{title}</h3>
+                <p className="mt-3 text-sm leading-7 text-white/60">{text}</p>
               </article>
             ))}
           </div>
         </div>
 
-        <section className="mt-12 rounded-lg border border-[#E5E7EB] bg-[#FFFFFF] p-6">
-          <div className="flex flex-wrap items-end justify-between gap-4 border-b border-[#E5E7EB] pb-4">
+        <section className="mt-12 rounded-sm border border-white/[0.10] bg-[#101010] p-6">
+          <div className="flex flex-wrap items-end justify-between gap-4 border-b border-white/[0.08] pb-4">
             <div>
-              <p className="text-[11px] font-black uppercase tracking-[0.16em] text-[#0A0A0A]">{copy.localContext}</p>
-              <h2 className="mt-2 text-3xl font-black text-[#0A0A0A]">{copy.areaTitle}</h2>
-              <p className="mt-1.5 text-sm text-[#6B7280]">{copy.areaNote}</p>
+              <p className="text-[11px] font-black uppercase tracking-[0.16em] text-[#FFCC00]">{copy.localContext}</p>
+              <h2 className="mt-2 text-3xl font-black text-white">{copy.areaTitle}</h2>
+              <p className="mt-1.5 text-sm text-white/55">{copy.areaNote}</p>
             </div>
-            <Link href={`/${safeLocale}/contact`} className="rounded-md bg-[#0A0A0A] px-4 py-3 text-[11px] font-black uppercase tracking-[0.1em] text-white transition-all duration-150 hover:bg-[#262626]">{copy.contactCta}</Link>
+            <Link href={`/${safeLocale}/contact`} className="rounded-sm bg-[#FFCC00] px-4 py-3 text-[11px] font-black uppercase tracking-[0.1em] text-[#0A0A0A] transition-all duration-150 hover:bg-white">{copy.contactCta}</Link>
           </div>
           <div className="mt-5 grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
             {areaPages.slice(0, 9).map((page) => (
-              <a key={`${page.areaSlug}-${page.category}`} href={`/${safeLocale}/areas/${page.areaSlug}/${page.category}`} className="rounded-md border border-[#E5E7EB] bg-[#FFFFFF] p-4 transition-all duration-150 hover:border-[#0A0A0A] hover:bg-white">
-                <p className="text-sm font-bold text-[#0A0A0A]">{getCategoryCopy(page.category, safeLocale).label} · {page.area}</p>
-                <p className="mt-1 text-xs font-semibold text-[#6B7280]">{page.count} {copy.profiles}</p>
+              <a key={`${page.areaSlug}-${page.category}`} href={`/${safeLocale}/areas/${page.areaSlug}/${page.category}`} className="rounded-sm border border-white/[0.10] bg-[#0A0A0A] p-4 transition-all duration-150 hover:border-white/25">
+                <p className="text-sm font-bold text-white">{getCategoryCopy(page.category, safeLocale).label} · {page.area}</p>
+                <p className="mt-1 text-xs font-semibold text-white/50">{page.count} {copy.profiles}</p>
               </a>
             ))}
           </div>

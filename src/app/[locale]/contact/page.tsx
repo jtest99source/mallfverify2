@@ -59,25 +59,25 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
   const copy = pageCopy[safeLocale];
 
   return (
-    <main className="bg-[linear-gradient(180deg,#FFFFFF_0%,#FFFFFF_50%,#FFFFFF_100%)] min-h-screen">
+    <main className="min-h-screen bg-[#0A0A0A] text-white">
       <section className="mx-auto max-w-5xl px-4 py-14 sm:px-6 sm:py-20 lg:px-8">
         <div className="grid gap-12 lg:grid-cols-[1fr_480px] lg:items-start">
 
           <div>
-            <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#0A0A0A]">{copy.eyebrow}</p>
-            <h1 className="mt-4 font-sans text-4xl font-black leading-tight text-ink sm:text-5xl">{copy.title}</h1>
-            <p className="mt-5 max-w-lg text-base leading-7 text-ink/65">{copy.description}</p>
+            <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#FFCC00]">{copy.eyebrow}</p>
+            <h1 className="mt-4 font-display text-4xl font-black leading-tight text-white sm:text-5xl">{copy.title}</h1>
+            <p className="mt-5 max-w-lg text-base leading-7 text-white/60">{copy.description}</p>
             <ul className="mt-8 space-y-3">
               {copy.trust.map((item) => (
-                <li key={item} className="flex items-start gap-3 text-sm text-ink/70">
-                  <span className="mt-0.5 shrink-0 text-[#0A0A0A]">✓</span>
+                <li key={item} className="flex items-start gap-3 text-sm text-white/65">
+                  <span className="mt-0.5 shrink-0 text-[#FFCC00]">✓</span>
                   {item}
                 </li>
               ))}
             </ul>
           </div>
 
-          <div className="rounded-lg border border-[#E5E7EB] bg-white p-6 shadow-[0_18px_45px_rgba(10,10,10,0.06)] sm:p-8">
+          <div className="rounded-sm border border-white/[0.10] bg-[#101010] p-6 sm:p-8">
             <ContactForm locale={safeLocale} />
           </div>
 
