@@ -481,7 +481,7 @@ function BusinessRankingCard({
     <section className="rounded-sm border border-white/[0.12] bg-[#181818] p-5">
       <p className="text-[10px] font-black uppercase tracking-[0.12em] text-white/40">{heading}</p>
       <div className="mt-2 font-display text-6xl font-black leading-none text-[#FFCC00]">#{primary.position}</div>
-      <p className="mt-1 text-xs font-semibold text-white/50">{rankingTotalLabel(primary, locale)}</p>
+      <p className="mt-3 text-xs font-semibold text-white/50">{rankingTotalLabel(primary, locale)}</p>
       {showSecondaryIsland && (
         <div className="mt-4 border-t border-white/[0.08] pt-3 text-xs font-black uppercase tracking-[0.08em] text-white/40">
           {rankingSecondaryLine(island, category, locale)}
