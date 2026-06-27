@@ -167,11 +167,13 @@ export function createLocalBusinessSchema(business: Business, locale = "es") {
     inLanguage: locale,
     openingHoursSpecification: openingHoursSpecification(business.openingHours),
     aggregateRating:
-      typeof business.rating === "number" && typeof business.reviewsCount === "number"
+      typeof business.rating === "number" && typeof business.reviewsCount === "number" && business.reviewsCount > 0
         ? {
             "@type": "AggregateRating",
             ratingValue: business.rating,
-            reviewCount: business.reviewsCount
+            reviewCount: business.reviewsCount,
+            bestRating: 5,
+            worstRating: 1
           }
         : undefined,
     geo:
