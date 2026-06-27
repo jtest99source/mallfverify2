@@ -72,12 +72,6 @@ function DirectoryCard({
 
         <h3 className="mt-4 text-xl font-black leading-[1.05] text-white">{profile.name}</h3>
 
-        {editorialNote ? (
-          <p className="mt-3 line-clamp-2 border-l-2 border-[#FFCC00] bg-white/[0.04] px-3 py-2 text-xs font-semibold leading-5 text-white/64">
-            {editorialNote}
-          </p>
-        ) : null}
-
         <dl className="mt-4 grid gap-3 sm:grid-cols-2">
           <div>
             <dt className="text-[10px] font-black uppercase tracking-[0.12em] text-white/48">{labels.languages}</dt>

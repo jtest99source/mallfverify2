@@ -2,8 +2,8 @@
 
 import { useRouter } from "next/navigation";
 import type { FormEvent } from "react";
-import { useState } from "react";
-import { IconLanguage, IconSearch, IconShieldCheck } from "@tabler/icons-react";
+import { useEffect, useRef, useState } from "react";
+import { IconChevronDown, IconSearch, IconShieldCheck } from "@tabler/icons-react";
 import type { Locale } from "@/lib/i18n";
 
 type ExpertHeroSearchProps = {
@@ -16,31 +16,28 @@ type ExpertHeroSearchProps = {
 
 const copy = {
   es: {
-    search: "Que necesitas",
-    vertical: "Especialidad",
-    language: "Idioma",
+    searchLabel: "Qué necesitas",
+    specialtyLabel: "Especialidad",
     allVerticals: "Todos los expertos",
-    allLanguages: "Cualquier idioma",
     placeholder: "Abogado, dentista, gestor, inmobiliaria...",
-    submit: "Buscar expertos"
+    submit: "Buscar expertos",
+    info: "La mayoría de expertos se concentran en Palma o cubren toda la isla."
   },
   en: {
-    search: "What you need",
-    vertical: "Specialism",
-    language: "Language",
+    searchLabel: "What you need",
+    specialtyLabel: "Specialism",
     allVerticals: "All experts",
-    allLanguages: "Any language",
     placeholder: "Lawyer, dentist, tax advisor, estate agent...",
-    submit: "Search experts"
+    submit: "Search experts",
+    info: "Most experts are based in Palma or cover the whole island."
   },
   de: {
-    search: "Was du brauchst",
-    vertical: "Fachgebiet",
-    language: "Sprache",
+    searchLabel: "Was du brauchst",
+    specialtyLabel: "Fachgebiet",
     allVerticals: "Alle Experten",
-    allLanguages: "Jede Sprache",
     placeholder: "Anwalt, Zahnarzt, Steuerberater, Immobilien...",
-    submit: "Experten suchen"
+    submit: "Experten suchen",
+    info: "Die meisten Experten sind in Palma oder decken die ganze Insel ab."
   }
 } as const;
 
@@ -49,85 +46,103 @@ export function ExpertHeroSearch({
   categories,
   initialQuery = "",
   initialVertical = null,
-  initialLanguage = null
 }: ExpertHeroSearchProps) {
   const router = useRouter();
   const c = copy[locale];
   const [query, setQuery] = useState(initialQuery);
   const [vertical, setVertical] = useState(initialVertical ?? "");
-  const [language, setLanguage] = useState(initialLanguage ?? "");
+  const [openMenu, setOpenMenu] = useState(false);
+  const rootRef = useRef<HTMLFormElement | null>(null);
+  const selectedLabel = categories.find((cat) => cat.slug === vertical)?.title ?? c.allVerticals;
+
+  useEffect(() => {
+    function onPointerDown(event: PointerEvent) {
+      if (!rootRef.current?.contains(event.target as Node)) {
+        setOpenMenu(false);
+      }
+    }
+    document.addEventListener("pointerdown", onPointerDown);
+    return () => document.removeEventListener("pointerdown", onPointerDown);
+  }, []);
 
   function onSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const params = new URLSearchParams();
     if (query.trim()) params.set("q", query.trim());
     if (vertical) params.set("v", vertical);
-    if (language) params.set("l", language);
     const qs = params.toString();
     router.push(`/${locale}/experts${qs ? `?${qs}` : ""}`);
   }
 
   return (
-    <form
-      onSubmit={onSubmit}
-      className="mt-7 overflow-hidden rounded-lg border border-white/10 bg-[#0A0A0A]/70 p-1.5 shadow-[0_28px_80px_rgba(0,0,0,0.34)] backdrop-blur sm:mt-8"
-    >
-      <div className="grid gap-px sm:grid-cols-[minmax(0,1.25fr)_minmax(0,0.9fr)_minmax(0,0.75fr)_auto]">
-        <label className="grid gap-1 bg-[#0A0A0A] px-4 py-3">
-          <span className="text-[10px] font-black uppercase tracking-[0.14em] text-white/45">{c.search}</span>
-          <span className="flex items-center gap-3">
-            <IconSearch size={18} className="shrink-0 text-white/50" />
-            <input
-              value={query}
-              onChange={(event) => setQuery(event.target.value)}
-              placeholder={c.placeholder}
-              className="h-9 min-w-0 flex-1 border-0 bg-transparent p-0 text-base font-black text-white placeholder:text-white/35 focus:ring-0"
-            />
-          </span>
-        </label>
+    <div className="mx-auto w-full max-w-[650px]">
+      <form
+        ref={rootRef}
+        onSubmit={onSubmit}
+        className="relative z-30 overflow-visible rounded-md border border-white/20 bg-[#0A0A0A]/78 p-1 shadow-[0_28px_80px_rgba(0,0,0,0.58)] backdrop-blur-md"
+      >
+        <div className="grid sm:grid-cols-2 sm:items-stretch">
+          {/* SEARCH */}
+          <div className="px-5 py-4 sm:border-r sm:border-white/10">
+            <div className="flex h-10 w-full items-center gap-3">
+              <IconSearch aria-hidden="true" size={18} className="shrink-0 text-white/55" />
+              <input
+                value={query}
+                onChange={(e) => setQuery(e.target.value)}
+                placeholder={c.placeholder}
+                className="min-w-0 flex-1 bg-transparent text-[15px] font-black text-white placeholder:font-normal placeholder:text-white/35 focus:outline-none"
+              />
+            </div>
+          </div>
 
-        <label className="grid gap-1 bg-[#0A0A0A] px-4 py-3">
-          <span className="text-[10px] font-black uppercase tracking-[0.14em] text-white/45">{c.vertical}</span>
-          <span className="flex items-center gap-3">
-            <IconShieldCheck size={18} className="shrink-0 text-white/50" />
-            <select
-              value={vertical}
-              onChange={(event) => setVertical(event.target.value)}
-              className="h-9 min-w-0 flex-1 border-0 bg-transparent p-0 text-base font-black text-white focus:ring-0 [&_option]:text-[#0A0A0A]"
+          {/* SPECIALTY */}
+          <div className="relative z-40 border-t border-white/10 px-5 py-4 sm:border-t-0">
+            <button
+              type="button"
+              onPointerDown={(e) => { e.preventDefault(); e.stopPropagation(); setOpenMenu((v) => !v); }}
+              className="flex h-10 w-full items-center gap-3 text-left"
+              aria-expanded={openMenu}
             >
-              <option value="">{c.allVerticals}</option>
-              {categories.map((category) => (
-                <option key={category.slug} value={category.slug}>
-                  {category.title}
-                </option>
-              ))}
-            </select>
-          </span>
-        </label>
-
-        <label className="grid gap-1 bg-[#0A0A0A] px-4 py-3">
-          <span className="text-[10px] font-black uppercase tracking-[0.14em] text-white/45">{c.language}</span>
-          <span className="flex items-center gap-3">
-            <IconLanguage size={18} className="shrink-0 text-white/50" />
-            <select
-              value={language}
-              onChange={(event) => setLanguage(event.target.value)}
-              className="h-9 min-w-0 flex-1 border-0 bg-transparent p-0 text-base font-black text-white focus:ring-0 [&_option]:text-[#0A0A0A]"
-            >
-              <option value="">{c.allLanguages}</option>
-              <option value="English">English</option>
-              <option value="Deutsch">Deutsch</option>
-            </select>
-          </span>
-        </label>
+              <IconShieldCheck aria-hidden="true" size={18} className="shrink-0 text-white/55" />
+              <span className="min-w-0 flex-1 truncate text-[15px] font-black text-white">{selectedLabel}</span>
+              <IconChevronDown aria-hidden="true" size={17} className={`shrink-0 text-white/40 transition-transform ${openMenu ? "rotate-180" : ""}`} />
+            </button>
+            {openMenu && (
+              <div className="absolute left-0 top-[calc(100%+8px)] z-[90] max-h-72 w-full min-w-56 overflow-y-auto rounded-md border border-[#E5E7EB] bg-[#FFFFFF] p-1 shadow-[0_22px_60px_rgba(0,0,0,0.35)]">
+                <button
+                  type="button"
+                  onPointerDown={(e) => { e.preventDefault(); e.stopPropagation(); setVertical(""); setOpenMenu(false); }}
+                  className={`block w-full rounded-sm px-3 py-2.5 text-left text-sm font-bold transition ${vertical === "" ? "bg-[#0A0A0A] text-white" : "text-[#0A0A0A] hover:bg-[#FFCC00]/18"}`}
+                >
+                  {c.allVerticals}
+                </button>
+                {categories.map((cat) => (
+                  <button
+                    key={cat.slug}
+                    type="button"
+                    onPointerDown={(e) => { e.preventDefault(); e.stopPropagation(); setVertical(cat.slug); setOpenMenu(false); }}
+                    className={`block w-full rounded-sm px-3 py-2.5 text-left text-sm font-bold transition ${cat.slug === vertical ? "bg-[#0A0A0A] text-white" : "text-[#0A0A0A] hover:bg-[#FFCC00]/18"}`}
+                  >
+                    {cat.title}
+                  </button>
+                ))}
+              </div>
+            )}
+          </div>
+        </div>
 
         <button
           type="submit"
-          className="min-h-14 rounded-md bg-[#FFCC00] px-8 text-[12px] font-black uppercase tracking-[0.14em] text-[#0A0A0A] transition hover:bg-white sm:min-h-full"
+          className="mt-1 flex min-h-12 w-full items-center justify-center rounded-sm bg-[#FFCC00] text-[11px] font-black uppercase tracking-[0.14em] text-[#0A0A0A] transition-all duration-150 hover:bg-white"
         >
           {c.submit}
         </button>
-      </div>
-    </form>
+      </form>
+
+      <p className="mt-4 text-center text-[11px] text-white/35">
+        <span className="mr-1 text-[#FFCC00]/70">ℹ</span>
+        {c.info}
+      </p>
+    </div>
   );
 }
