@@ -84,7 +84,7 @@ export function HomePlaceSearch({ locale, categories, locations }: HomePlaceSear
     <form
       ref={rootRef}
       onSubmit={onSubmit}
-      className="relative z-30 mx-auto mt-8 w-full max-w-[650px] overflow-visible rounded-md border border-white/20 bg-[#0A0A0A]/78 p-1 shadow-[0_28px_80px_rgba(0,0,0,0.58)] backdrop-blur-md"
+      className="relative z-30 mx-auto mt-8 w-full max-w-[650px] overflow-visible rounded-md border border-white/20 bg-[#07101F]/78 p-1 shadow-[0_28px_80px_rgba(0,0,0,0.58)] backdrop-blur-md"
     >
       <div className="grid sm:grid-cols-2 sm:items-stretch">
         {/* WHAT */}
@@ -120,7 +120,7 @@ export function HomePlaceSearch({ locale, categories, locations }: HomePlaceSear
                     setOpenMenu(null);
                   }}
                   className={`block w-full rounded-sm px-3 py-2.5 text-left text-sm font-bold transition ${
-                    option.slug === category ? "bg-[#0A0A0A] text-white" : "text-[#0A0A0A] hover:bg-[#FFCC00]/18"
+                    option.slug === category ? "bg-[#07101F] text-white" : "text-[#0A0A0A] hover:bg-[#00C37A]/18"
                   }`}
                 >
                   {option.label}
@@ -161,7 +161,7 @@ export function HomePlaceSearch({ locale, categories, locations }: HomePlaceSear
                   setOpenMenu(null);
                 }}
                 className={`block w-full rounded-sm px-3 py-2.5 text-left text-sm font-bold transition ${
-                  location === "" ? "bg-[#0A0A0A] text-white" : "text-[#0A0A0A] hover:bg-[#FFCC00]/18"
+                  location === "" ? "bg-[#07101F] text-white" : "text-[#0A0A0A] hover:bg-[#00C37A]/18"
                 }`}
               >
                 {labels.allMallorca}
@@ -177,7 +177,7 @@ export function HomePlaceSearch({ locale, categories, locations }: HomePlaceSear
                     setOpenMenu(null);
                   }}
                   className={`block w-full rounded-sm px-3 py-2.5 text-left text-sm font-bold transition ${
-                    item.value === location ? "bg-[#0A0A0A] text-white" : "text-[#0A0A0A] hover:bg-[#FFCC00]/18"
+                    item.value === location ? "bg-[#07101F] text-white" : "text-[#0A0A0A] hover:bg-[#00C37A]/18"
                   }`}
                 >
                   {item.label}
@@ -192,7 +192,7 @@ export function HomePlaceSearch({ locale, categories, locations }: HomePlaceSear
       {/* SUBMIT */}
       <button
         type="submit"
-        className="mt-1 flex min-h-12 w-full items-center justify-center rounded-sm bg-[#FFCC00] text-[11px] font-black uppercase tracking-[0.14em] text-[#0A0A0A] transition-all duration-150 hover:bg-white"
+        className="mt-1 flex min-h-12 w-full items-center justify-center rounded-sm bg-[#00C37A] text-[11px] font-black uppercase tracking-[0.14em] text-[#0A0A0A] transition-all duration-150 hover:bg-white"
       >
         {labels.submit}
       </button>

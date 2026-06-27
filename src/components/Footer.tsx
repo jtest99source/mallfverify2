@@ -11,27 +11,27 @@ export function Footer({ locale }: { locale: Locale }) {
   const copy = t(locale);
 
   return (
-    <footer className="border-t border-[#0A0A0A] bg-[#0A0A0A] text-white">
+    <footer className="border-t border-[#07101F] bg-[#07101F] text-white">
       <div className="mx-auto grid max-w-7xl gap-6 px-4 py-8 sm:gap-10 sm:px-6 sm:py-12 md:grid-cols-[1.4fr_1fr] lg:px-8">
         <div className="text-center md:text-left">
-          <p className="font-display text-lg font-bold tracking-tight text-[#FFCC00] sm:text-2xl">{siteConfig.name}</p>
+          <p className="font-display text-lg font-bold tracking-tight text-[#00C37A] sm:text-2xl">{siteConfig.name}</p>
           <p className="mt-3 line-clamp-2 text-sm leading-6 text-white/60 sm:mt-4 sm:line-clamp-none sm:leading-7">{copy.footer.description}</p>
-          <a href={`mailto:${siteConfig.contactEmail}`} className="mt-3 inline-block text-sm text-[#FFCC00]/80 hover:text-[#FFCC00] sm:mt-4">{siteConfig.contactEmail}</a>
+          <a href={`mailto:${siteConfig.contactEmail}`} className="mt-3 inline-block text-sm text-[#00C37A]/80 hover:text-[#00C37A] sm:mt-4">{siteConfig.contactEmail}</a>
           <p className="mt-2 text-xs text-white/35 sm:mt-5">© {new Date().getFullYear()} Mallorca Verified</p>
         </div>
 
         <div className="grid grid-cols-2 gap-5 sm:gap-8">
           <div>
-            <p className="mb-3 text-[10px] font-black uppercase tracking-[0.14em] text-[#FFCC00] sm:mb-4">{copy.footer.categories}</p>
+            <p className="mb-3 text-[10px] font-black uppercase tracking-[0.14em] text-[#00C37A] sm:mb-4">{copy.footer.categories}</p>
             <div className="grid gap-2 text-[12px] font-medium text-white/60 sm:gap-2.5">
               {footerCategories.map((slug) => (
                 <Link key={slug} href={`/${locale}/top/${slug}`} className="hover:text-white">{getCategoryCopy(slug, locale).label}</Link>
               ))}
-              <Link href={`/${locale}/top/restaurants`} className="mt-1 font-bold text-[#FFCC00]/80 hover:text-[#FFCC00]">{copy.footer.allCategories} →</Link>
+              <Link href={`/${locale}/top/restaurants`} className="mt-1 font-bold text-[#00C37A]/80 hover:text-[#00C37A]">{copy.footer.allCategories} →</Link>
             </div>
           </div>
           <div>
-            <p className="mb-3 text-[10px] font-black uppercase tracking-[0.14em] text-[#FFCC00] sm:mb-4">{copy.footer.site}</p>
+            <p className="mb-3 text-[10px] font-black uppercase tracking-[0.14em] text-[#00C37A] sm:mb-4">{copy.footer.site}</p>
             <div className="grid gap-2 text-[12px] font-medium text-white/60 sm:gap-2.5">
               <Link href={`/${locale}/top/restaurants`} className="hover:text-white">Rankings</Link>
               {locale !== "de" && <Link href={`/${locale}/guides`} className="hover:text-white">{copy.nav.guides}</Link>}

@@ -527,7 +527,7 @@ function MethodologyPage({ locale, canonical, stats }: { locale: Locale; canonic
   const pageSections = methodologyPageSections(locale);
 
   return (
-    <main className="bg-[#0A0A0A]">
+    <main className="bg-[#07101F]">
       <section className="bg-[#FFFFFF] px-4 py-14 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <Breadcrumbs items={[{ label: c.home, href: `/${locale}` }, { label: c.label, href: methodologyPath(locale) }]} />
@@ -557,11 +557,11 @@ function MethodologyPage({ locale, canonical, stats }: { locale: Locale; canonic
             {c.factors.map(([eyebrow, title, text], index) => {
               const Icon = index === 0 ? IconStar : index === 1 ? IconMessages : IconDiamond;
               return (
-                <div key={title} className="rounded-lg border border-white/[0.08] bg-[#101010] p-5 shadow-none">
+                <div key={title} className="rounded-lg border border-white/[0.08] bg-[#0C1A2E] p-5 shadow-none">
                   <div className="flex gap-4">
-                    <Icon size={26} stroke={1.8} className="mt-1 shrink-0 text-[#FFCC00]" />
+                    <Icon size={26} stroke={1.8} className="mt-1 shrink-0 text-[#00C37A]" />
                     <div>
-                      <p className="text-[10px] font-bold uppercase tracking-[0.12em] text-[#FFCC00]">{eyebrow}</p>
+                      <p className="text-[10px] font-bold uppercase tracking-[0.12em] text-[#00C37A]">{eyebrow}</p>
                       <h3 className="mt-1 font-sans text-xl font-bold text-white">{title}</h3>
                       <p className="mt-3 text-sm leading-7 text-white/60">{text}</p>
                     </div>
@@ -577,8 +577,8 @@ function MethodologyPage({ locale, canonical, stats }: { locale: Locale; canonic
           <h2 className="font-sans text-2xl font-black leading-tight sm:text-3xl">{c.neverTitle}</h2>
           <div className="mt-6 grid gap-4">
             {c.never.map(([title, text]) => (
-              <div key={title} className="flex gap-4 rounded-lg border border-white/[0.08] bg-[#101010] p-5">
-                <IconShieldCheck size={22} stroke={2} className="mt-1 shrink-0 text-[#FFCC00]" />
+              <div key={title} className="flex gap-4 rounded-lg border border-white/[0.08] bg-[#0C1A2E] p-5">
+                <IconShieldCheck size={22} stroke={2} className="mt-1 shrink-0 text-[#00C37A]" />
                 <div>
                   <h3 className="font-sans text-lg font-bold text-white">{title}</h3>
                   <p className="mt-2 text-sm leading-7 text-white/60">{text}</p>
@@ -598,8 +598,8 @@ function MethodologyPage({ locale, canonical, stats }: { locale: Locale; canonic
               { value: formatMillionMetric(stats.analyzedReviews, locale), label: c.reviews },
               { value: formatIntegerMetric(publicCategorySlugs.length, locale), label: c.categories }
             ].map((stat) => (
-              <div key={stat.label} className="rounded-lg border border-[#FFCC00]/60 bg-[linear-gradient(135deg,#0A0A0A_0%,#262626_58%,#0A0A0A_100%)] px-6 py-5 text-white">
-                <div className="font-sans text-4xl font-black leading-none text-[#FFCC00]">{stat.value}</div>
+              <div key={stat.label} className="rounded-lg border border-[#00C37A]/60 bg-[linear-gradient(135deg,#0A0A0A_0%,#262626_58%,#0A0A0A_100%)] px-6 py-5 text-white">
+                <div className="font-sans text-4xl font-black leading-none text-[#00C37A]">{stat.value}</div>
                 <div className="mt-2 text-[10px] font-bold uppercase tracking-[0.12em] text-white/75">{stat.label}</div>
               </div>
             ))}
@@ -615,8 +615,8 @@ function MethodologyPage({ locale, canonical, stats }: { locale: Locale; canonic
             {pageSections.map((item, index) => {
               const PageIcon = index === 0 ? IconChartBar : index === 1 ? IconStar : index === 2 ? IconUsers : IconDiamond;
               return (
-              <div key={item.title} className="rounded-lg border border-[#E5E7EB] bg-[#101010] p-5 shadow-none">
-                <PageIcon size={22} stroke={1.8} className="text-[#FFCC00]" />
+              <div key={item.title} className="rounded-lg border border-[#E5E7EB] bg-[#0C1A2E] p-5 shadow-none">
+                <PageIcon size={22} stroke={1.8} className="text-[#00C37A]" />
                 <h3 className="mt-3 font-sans text-lg font-black text-white">{item.title}</h3>
                 <p className="mt-2 text-sm leading-7 text-white/60">{item.text}</p>
               </div>
@@ -633,7 +633,7 @@ function MethodologyPage({ locale, canonical, stats }: { locale: Locale; canonic
               <details key={question} className="group p-5">
                 <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-sans text-lg font-bold text-white">
                   <span>{question}</span>
-                  <span className="text-[#FFCC00] transition group-open:rotate-45">+</span>
+                  <span className="text-[#00C37A] transition group-open:rotate-45">+</span>
                 </summary>
                 <p className="mt-4 text-sm leading-7 text-white/60">{answer}</p>
               </details>
@@ -673,7 +673,7 @@ function AboutPage({ locale, canonical, stats }: { locale: Locale; canonical: st
   };
 
   return (
-    <main className="bg-[#0A0A0A]">
+    <main className="bg-[#07101F]">
       <section className="border-b border-white/[0.08] border-b border-white/[0.08] px-4 py-14 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <Breadcrumbs items={[{ label: c.home, href: `/${locale}` }, { label: c.label, href: canonical }]} />
@@ -705,8 +705,8 @@ function AboutPage({ locale, canonical, stats }: { locale: Locale; canonical: st
             {c.principles.map(([title, text], index) => {
               const Icon = principleIcons[index] ?? IconShieldCheck;
               return (
-                <div key={title} className="rounded-lg border border-white/[0.08] bg-[#101010] p-5 shadow-none">
-                  <Icon size={24} stroke={1.8} className="text-[#FFCC00]" />
+                <div key={title} className="rounded-lg border border-white/[0.08] bg-[#0C1A2E] p-5 shadow-none">
+                  <Icon size={24} stroke={1.8} className="text-[#00C37A]" />
                   <h3 className="mt-3 font-sans text-lg font-bold text-white">{title}</h3>
                   <p className="mt-2 text-sm leading-7 text-white/60">{text}</p>
                 </div>
@@ -722,8 +722,8 @@ function AboutPage({ locale, canonical, stats }: { locale: Locale; canonical: st
               { value: formatMillionMetric(stats.analyzedReviews, locale), label: c.reviews },
               { value: formatIntegerMetric(publicCategorySlugs.length, locale), label: c.categories }
             ].map((stat) => (
-              <div key={stat.label} className="rounded-lg border border-[#FFCC00]/60 bg-[linear-gradient(135deg,#0A0A0A_0%,#262626_58%,#0A0A0A_100%)] px-6 py-5 text-white">
-                <div className="font-sans text-4xl font-black leading-none text-[#FFCC00]">{stat.value}</div>
+              <div key={stat.label} className="rounded-lg border border-[#00C37A]/60 bg-[linear-gradient(135deg,#0A0A0A_0%,#262626_58%,#0A0A0A_100%)] px-6 py-5 text-white">
+                <div className="font-sans text-4xl font-black leading-none text-[#00C37A]">{stat.value}</div>
                 <div className="mt-2 text-[10px] font-bold uppercase tracking-[0.12em] text-white/75">{stat.label}</div>
               </div>
             ))}
@@ -731,15 +731,15 @@ function AboutPage({ locale, canonical, stats }: { locale: Locale; canonical: st
         </section>
 
         <section className="pt-10">
-          <div className="rounded-lg border border-[#E5E7EB] bg-[#101010] p-6 shadow-none">
-            <IconMail size={28} stroke={1.8} className="text-[#FFCC00]" />
+          <div className="rounded-lg border border-[#E5E7EB] bg-[#0C1A2E] p-6 shadow-none">
+            <IconMail size={28} stroke={1.8} className="text-[#00C37A]" />
             <h2 className="mt-3 font-sans text-2xl font-black leading-tight text-white">{c.contactTitle}</h2>
             <p className="mt-3 text-sm leading-7 text-white/60">{c.contactText}</p>
-            <a href={`mailto:${c.contactCta}`} className="mt-4 inline-flex min-h-11 items-center justify-center rounded-sm bg-[#FFCC00] px-5 text-[11px] font-bold uppercase tracking-[0.1em] text-[#0A0A0A] hover:bg-white">
+            <a href={`mailto:${c.contactCta}`} className="mt-4 inline-flex min-h-11 items-center justify-center rounded-sm bg-[#00C37A] px-5 text-[11px] font-bold uppercase tracking-[0.1em] text-[#0A0A0A] hover:bg-white">
               {c.contactCta}
             </a>
             <div className="mt-4">
-              <Link href={editorialPath(locale)} className="text-sm font-semibold text-[#FFCC00]/80 hover:text-[#FFCC00]">
+              <Link href={editorialPath(locale)} className="text-sm font-semibold text-[#00C37A]/80 hover:text-[#00C37A]">
                 {c.editorialLinkText}
               </Link>
             </div>
@@ -777,7 +777,7 @@ function EditorialPage({ locale, canonical }: { locale: Locale; canonical: strin
   };
 
   return (
-    <main className="bg-[#0A0A0A]">
+    <main className="bg-[#07101F]">
       <section className="border-b border-white/[0.08] border-b border-white/[0.08] px-4 py-14 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <Breadcrumbs items={[{ label: c.home, href: `/${locale}` }, { label: c.label, href: canonical }]} />
@@ -797,7 +797,7 @@ function EditorialPage({ locale, canonical }: { locale: Locale; canonical: strin
           <h2 className="font-sans text-2xl font-black leading-tight sm:text-3xl">{c.criteriaTitle}</h2>
           <div className="mt-6 grid gap-4">
             {c.criteria.map(([title, text]) => (
-              <div key={title} className="rounded-lg border border-white/[0.08] bg-[#101010] p-5 shadow-[0_4px_18px_rgba(10,10,10,0.04)]">
+              <div key={title} className="rounded-lg border border-white/[0.08] bg-[#0C1A2E] p-5 shadow-[0_4px_18px_rgba(10,10,10,0.04)]">
                 <h3 className="font-sans text-lg font-bold text-white">{title}</h3>
                 <p className="mt-2 text-sm leading-7 text-white/60">{text}</p>
               </div>
@@ -810,8 +810,8 @@ function EditorialPage({ locale, canonical }: { locale: Locale; canonical: strin
           <p className="mt-5 text-base leading-8 text-white/65">{c.sourcesText}</p>
           <div className="mt-6 grid gap-4">
             {c.sources.map(([title, text]) => (
-              <div key={title} className="flex gap-4 rounded-lg border border-white/[0.08] bg-[#101010] p-5">
-                <IconChartBar size={22} stroke={1.8} className="mt-1 shrink-0 text-[#FFCC00]" />
+              <div key={title} className="flex gap-4 rounded-lg border border-white/[0.08] bg-[#0C1A2E] p-5">
+                <IconChartBar size={22} stroke={1.8} className="mt-1 shrink-0 text-[#00C37A]" />
                 <div>
                   <h3 className="font-sans text-lg font-bold text-white">{title}</h3>
                   <p className="mt-2 text-sm leading-7 text-white/60">{text}</p>
@@ -826,8 +826,8 @@ function EditorialPage({ locale, canonical }: { locale: Locale; canonical: strin
           <p className="mt-5 text-base leading-8 text-white/65">{c.updateText}</p>
           <div className="mt-6 grid gap-4">
             {c.updates.map(([title, text]) => (
-              <div key={title} className="flex gap-4 rounded-lg border border-white/[0.08] bg-[#101010] p-5">
-                <IconRefresh size={22} stroke={1.8} className="mt-1 shrink-0 text-[#FFCC00]" />
+              <div key={title} className="flex gap-4 rounded-lg border border-white/[0.08] bg-[#0C1A2E] p-5">
+                <IconRefresh size={22} stroke={1.8} className="mt-1 shrink-0 text-[#00C37A]" />
                 <div>
                   <h3 className="font-sans text-lg font-bold text-white">{title}</h3>
                   <p className="mt-2 text-sm leading-7 text-white/60">{text}</p>
@@ -842,8 +842,8 @@ function EditorialPage({ locale, canonical }: { locale: Locale; canonical: strin
           <p className="mt-5 text-base leading-8 text-white/65">{c.separationText}</p>
           <div className="mt-6 grid gap-4">
             {c.separations.map(([title, text]) => (
-              <div key={title} className="flex gap-4 rounded-lg border border-white/[0.08] bg-[#101010] p-5">
-                <IconX size={22} stroke={2} className="mt-1 shrink-0 text-[#FFCC00]" />
+              <div key={title} className="flex gap-4 rounded-lg border border-white/[0.08] bg-[#0C1A2E] p-5">
+                <IconX size={22} stroke={2} className="mt-1 shrink-0 text-[#00C37A]" />
                 <div>
                   <h3 className="font-sans text-lg font-bold text-white">{title}</h3>
                   <p className="mt-2 text-sm leading-7 text-white/60">{text}</p>
@@ -854,15 +854,15 @@ function EditorialPage({ locale, canonical }: { locale: Locale; canonical: strin
         </section>
 
         <section className="pt-10">
-          <div className="rounded-lg border border-[#E5E7EB] bg-[#101010] p-6 shadow-none">
-            <IconMail size={28} stroke={1.8} className="text-[#FFCC00]" />
+          <div className="rounded-lg border border-[#E5E7EB] bg-[#0C1A2E] p-6 shadow-none">
+            <IconMail size={28} stroke={1.8} className="text-[#00C37A]" />
             <h2 className="mt-3 font-sans text-2xl font-black leading-tight text-white">{c.correctionsTitle}</h2>
             <p className="mt-3 text-sm leading-7 text-white/60">{c.correctionsText}</p>
-            <a href={`mailto:${c.correctionsCta}`} className="mt-4 inline-flex min-h-11 items-center justify-center rounded-sm bg-[#FFCC00] px-5 text-[11px] font-bold uppercase tracking-[0.1em] text-[#0A0A0A] hover:bg-white">
+            <a href={`mailto:${c.correctionsCta}`} className="mt-4 inline-flex min-h-11 items-center justify-center rounded-sm bg-[#00C37A] px-5 text-[11px] font-bold uppercase tracking-[0.1em] text-[#0A0A0A] hover:bg-white">
               {c.correctionsCta}
             </a>
             <div className="mt-4">
-              <Link href={aboutPath(locale)} className="text-sm font-semibold text-[#FFCC00]/80 hover:text-[#FFCC00]">
+              <Link href={aboutPath(locale)} className="text-sm font-semibold text-[#00C37A]/80 hover:text-[#00C37A]">
                 {c.aboutLinkText}
               </Link>
             </div>

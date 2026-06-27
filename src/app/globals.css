@@ -60,7 +60,7 @@ body {
 }
 
 .open-now.open .dot {
-  background: #FFCC00;
+  background: #00C37A;
 }
 
 .open-now.closed .dot {
@@ -172,12 +172,12 @@ body {
   font-family: var(--font-sans), sans-serif;
   font-size: 52px;
   font-weight: 900;
-  color: #FFCC00;
+  color: #00C37A;
   line-height: 0.9;
 }
 
 .rv-rating-big .stars {
-  color: #FFCC00;
+  color: #00C37A;
   font-size: 14px;
   letter-spacing: 1px;
   margin-top: 4px;
@@ -258,7 +258,7 @@ body {
 .rv-pc.pros {
   background: rgba(255,255,255,0.06);
   border: 1px solid rgba(255,255,255,0.10);
-  border-left: 4px solid #FFCC00;
+  border-left: 4px solid #00C37A;
 }
 
 .rv-pc.cons {
@@ -301,7 +301,7 @@ body {
 }
 
 .rv-pc.pros .rv-pc-item span {
-  color: #FFCC00;
+  color: #00C37A;
 }
 
 .rv-pc.cons .rv-pc-item span {
@@ -311,7 +311,7 @@ body {
 .rv-review {
   background: rgba(255,255,255,0.045);
   border: 1px solid rgba(255,255,255,0.10);
-  border-left: 4px solid #FFCC00;
+  border-left: 4px solid #00C37A;
   border-radius: 2px;
   padding: 1rem 1.2rem;
   margin-bottom: 10px;
@@ -362,7 +362,7 @@ body {
 }
 
 .rv-review-stars {
-  color: #FFCC00;
+  color: #00C37A;
   font-size: 11px;
   white-space: nowrap;
 }
@@ -393,7 +393,7 @@ body {
 
 .rv-google-cta {
   align-items: center;
-  color: #FFCC00;
+  color: #00C37A;
   display: flex;
   font-size: 11px;
   font-weight: 800;
@@ -405,7 +405,7 @@ body {
 }
 
 .rv-google-cta:hover {
-  color: #FFCC00;
+  color: #00C37A;
   opacity: 0.65;
 }
 
@@ -429,7 +429,7 @@ body {
 }
 
 .rv-service span {
-  color: #FFCC00;
+  color: #00C37A;
   font-size: 14px;
   min-width: 14px;
   text-align: center;
@@ -454,7 +454,7 @@ body {
   position: absolute;
   top: -9px;
   left: 16px;
-  background: #FFCC00;
+  background: #00C37A;
   color: #0A0A0A;
   font-size: 9px;
   padding: 3px 10px;

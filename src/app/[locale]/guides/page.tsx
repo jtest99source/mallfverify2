@@ -27,16 +27,16 @@ export default async function GuidesPage({ params }: { params: Promise<{ locale:
   const guideImages = await Promise.all(guides.map((guide) => (guide.heroImageUrl ? Promise.resolve(null) : getEditorialImageForGuide(guide.title))));
 
   return (
-    <main className="bg-[#0A0A0A]">
+    <main className="bg-[#07101F]">
       <section className="px-4 py-9 sm:px-6 sm:py-12 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <div className="max-w-4xl">
-            <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-[#FFCC00]">{copy.eyebrow}</p>
+            <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-[#00C37A]">{copy.eyebrow}</p>
             <h1 className="font-display mt-3 text-4xl font-black leading-[1.02] text-white sm:text-6xl">{copy.title}</h1>
             <p className="mt-5 max-w-2xl text-sm leading-7 text-white/55 sm:text-base sm:leading-8">{copy.description}</p>
           </div>
           <div className="mt-7 flex flex-wrap gap-3">
-            <Link href={`/${safeLocale}/top/restaurants`} className="inline-flex min-h-11 items-center justify-center rounded-sm bg-[#FFCC00] px-5 text-[11px] font-bold uppercase tracking-[0.1em] text-[#0A0A0A] hover:bg-white">
+            <Link href={`/${safeLocale}/top/restaurants`} className="inline-flex min-h-11 items-center justify-center rounded-sm bg-[#00C37A] px-5 text-[11px] font-bold uppercase tracking-[0.1em] text-[#0A0A0A] hover:bg-white">
               {copy.viewRankings}
             </Link>
             <Link href={`/${safeLocale}`} className="inline-flex min-h-11 items-center justify-center rounded-sm border border-white/20 px-5 text-[11px] font-bold uppercase tracking-[0.1em] text-white/60 hover:border-white/40 hover:text-white">

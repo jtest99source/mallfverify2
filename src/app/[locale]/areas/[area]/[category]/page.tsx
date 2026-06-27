@@ -73,7 +73,7 @@ export default async function AreaCategoryPage({ params }: { params: Promise<{ l
         <div className="mb-6 flex flex-wrap items-center justify-between gap-4 rounded-lg border border-[#E5E7EB] bg-white/80 p-4 shadow-[0_18px_45px_rgba(10,10,10,0.035)]">
           <p className="text-sm font-semibold text-olive">{businesses.length.toLocaleString(numberLocale(safeLocale))} {copy.filters.results}</p>
           <div className="flex flex-wrap gap-3">
-            <Link href={`/${safeLocale}/top/${category}`} className="rounded-sm border border-[#E5E7EB] bg-white px-4 py-2 text-[11px] font-bold uppercase tracking-[0.1em] text-ink hover:border-[#0A0A0A] hover:text-[#0A0A0A]">{copy.category.fullRanking}</Link>
+            <Link href={`/${safeLocale}/top/${category}`} className="rounded-sm border border-[#E5E7EB] bg-white px-4 py-2 text-[11px] font-bold uppercase tracking-[0.1em] text-ink hover:border-[#07101F] hover:text-[#0A0A0A]">{copy.category.fullRanking}</Link>
             <a href="mailto:hola@mallorcaverified.com?subject=Business profile on Mallorca Verified" className="rounded-sm bg-ink px-4 py-2 text-[11px] font-bold uppercase tracking-[0.1em] text-white hover:bg-[#262626]">{copy.nav.forBusinesses} →</a>
           </div>
         </div>

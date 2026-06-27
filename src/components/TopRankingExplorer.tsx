@@ -132,7 +132,7 @@ function RankingBusinessRow({
     <article className="group bg-[#111111] ring-1 ring-white/[0.08] transition-colors duration-150 hover:bg-[#1A1A1A]">
       <Link href={`/${locale}/${categorySlug}/${business.slug}`} className="grid min-h-[118px] grid-cols-[52px_minmax(0,1fr)] sm:grid-cols-[64px_156px_minmax(0,1fr)_136px]">
         <div className="flex items-center justify-center border-r border-white/[0.08]">
-          <span className="font-display text-2xl font-black text-[#FFCC00]">#{rank}</span>
+          <span className="font-display text-2xl font-black text-[#00C37A]">#{rank}</span>
         </div>
 
         <div className="relative hidden min-h-[118px] overflow-hidden sm:block">
@@ -173,12 +173,12 @@ function RankingBusinessRow({
         <div className="hidden items-center justify-center p-4 text-center sm:flex">
           <div>
             {typeof business.rating === "number" && (
-              <div className="font-display text-4xl font-black leading-none text-[#FFCC00]">
+              <div className="font-display text-4xl font-black leading-none text-[#00C37A]">
                 {business.rating.toLocaleString(numberLocale(locale), { minimumFractionDigits: 1, maximumFractionDigits: 1 })}
               </div>
             )}
             {typeof business.rating === "number" && (
-              <div className="mt-1 flex justify-center gap-0.5 text-[10px] leading-none text-[#FFCC00]">
+              <div className="mt-1 flex justify-center gap-0.5 text-[10px] leading-none text-[#00C37A]">
                 {Array.from({ length: 5 }, (_, starIndex) => (
                   <span key={starIndex} className={starIndex < Math.round(business.rating ?? 0) ? "opacity-100" : "opacity-22"}>
                     ★
@@ -191,7 +191,7 @@ function RankingBusinessRow({
                 {business.reviewsCount.toLocaleString(numberLocale(locale))} {locale === "es" ? "reseñas" : locale === "de" ? "Rezensionen" : "reviews"}
               </div>
             )}
-            <span className="mt-3 inline-flex items-center gap-1 rounded-sm border border-white/[0.12] px-3 py-1.5 text-[10px] font-black uppercase tracking-[0.08em] text-white/35 transition-colors group-hover:border-[#FFCC00] group-hover:text-[#FFCC00]">
+            <span className="mt-3 inline-flex items-center gap-1 rounded-sm border border-white/[0.12] px-3 py-1.5 text-[10px] font-black uppercase tracking-[0.08em] text-white/35 transition-colors group-hover:border-[#00C37A] group-hover:text-[#00C37A]">
               {locale === "de" ? "Details" : locale === "en" ? "Details" : "Ficha"}
               <IconArrowUpRight size={13} stroke={2} />
             </span>
@@ -303,7 +303,7 @@ export function TopRankingExplorer({
   }, [facetSlug, place, query, sort]);
 
   return (
-    <section className="relative bg-[#0A0A0A] pb-14">
+    <section className="relative bg-[#07101F] pb-14">
       <div className="mx-auto -mt-10 max-w-7xl px-4 sm:px-6 lg:px-8">
       <div className="relative">
         <IconSearch size={16} stroke={1.8} className="absolute left-4 top-1/2 -translate-y-1/2 text-white/25" />
@@ -311,7 +311,7 @@ export function TopRankingExplorer({
           value={query}
           onChange={(event) => updateParam("q", event.target.value)}
           placeholder={scopedSearchPlaceholder}
-          className="h-12 w-full max-w-[520px] rounded-sm border border-white/[0.14] bg-[#0F0F0F] pl-11 pr-4 text-sm text-white placeholder:text-white/28 shadow-[0_20px_60px_rgba(0,0,0,0.25)] focus:border-[#FFCC00] focus:outline-none focus:ring-1 focus:ring-[#FFCC00]"
+          className="h-12 w-full max-w-[520px] rounded-sm border border-white/[0.14] bg-[#0F0F0F] pl-11 pr-4 text-sm text-white placeholder:text-white/28 shadow-[0_20px_60px_rgba(0,0,0,0.25)] focus:border-[#00C37A] focus:outline-none focus:ring-1 focus:ring-[#00C37A]"
         />
       </div>
       </div>
@@ -325,7 +325,7 @@ export function TopRankingExplorer({
               onClick={() => updateParam("sort", option.value)}
               className={`shrink-0 rounded-full px-3.5 py-2 text-[11px] font-bold uppercase tracking-[0.06em] transition-colors ${
                 sort === option.value
-                  ? "bg-[#FFCC00] text-[#0A0A0A]"
+                  ? "bg-[#00C37A] text-[#0A0A0A]"
                   : "border border-white/[0.12] bg-[#111111] text-white/55"
               }`}
             >
@@ -335,14 +335,14 @@ export function TopRankingExplorer({
         </div>
         <div className={`mt-2 grid gap-2 ${SHOW_TYPE_FILTER && facets.length > 0 ? "grid-cols-2" : "grid-cols-1"}`}>
           {SHOW_TYPE_FILTER && facets.length > 0 && (
-            <select value={facetSlug} onChange={(event) => updateParam("type", event.target.value)} className="h-10 rounded-sm border border-white/[0.12] bg-[#111111] px-2 text-xs text-white focus:border-[#FFCC00] focus:ring-[#FFCC00]">
+            <select value={facetSlug} onChange={(event) => updateParam("type", event.target.value)} className="h-10 rounded-sm border border-white/[0.12] bg-[#111111] px-2 text-xs text-white focus:border-[#00C37A] focus:ring-[#00C37A]">
               <option value={ALL}>{copy.filters.type}: {copy.filters.all}</option>
               {facets.map((facet) => (
                 <option key={facet.slug} value={facet.slug}>{getLocalizedFacetLabel(facet.slug, facet.label, locale)} ({facet.count})</option>
               ))}
             </select>
           )}
-          <select value={place} onChange={(event) => updateParam("area", event.target.value)} className="h-10 rounded-sm border border-white/[0.12] bg-[#111111] px-2 text-xs text-white focus:border-[#FFCC00] focus:ring-[#FFCC00]">
+          <select value={place} onChange={(event) => updateParam("area", event.target.value)} className="h-10 rounded-sm border border-white/[0.12] bg-[#111111] px-2 text-xs text-white focus:border-[#00C37A] focus:ring-[#00C37A]">
             <option value={ALL}>{copy.filters.place}: {copy.filters.allPlaces}</option>
             {places.map((item) => (
               <option key={item} value={item}>{item}</option>
@@ -352,7 +352,7 @@ export function TopRankingExplorer({
         <p className="mt-2 text-[11px] font-black uppercase tracking-[0.1em] text-white/55">
           {totalCount} {copy.filters.results}
         </p>
-        <Link href={methodologyPath(locale)} className="mt-2 inline-flex items-center gap-1 text-[10px] font-black uppercase tracking-[0.1em] text-[#FFCC00]">
+        <Link href={methodologyPath(locale)} className="mt-2 inline-flex items-center gap-1 text-[10px] font-black uppercase tracking-[0.1em] text-[#00C37A]">
           <IconInfoCircle size={13} stroke={2} />
           {sortHelp.link}
         </Link>
@@ -367,7 +367,7 @@ export function TopRankingExplorer({
           <div className="h-8 w-px bg-white/[0.08]" />
           <label className="flex items-center gap-3 text-[10px] font-black uppercase tracking-[0.12em] text-white/30">
                 {copy.filters.sortBy}
-                <select value={sort} onChange={(event) => updateParam("sort", event.target.value)} className="h-9 rounded-sm border border-white/[0.12] bg-[#0F0F0F] pl-4 pr-8 text-sm font-normal normal-case tracking-normal text-white focus:border-[#FFCC00] focus:outline-none focus:ring-1 focus:ring-[#FFCC00]">
+                <select value={sort} onChange={(event) => updateParam("sort", event.target.value)} className="h-9 rounded-sm border border-white/[0.12] bg-[#0F0F0F] pl-4 pr-8 text-sm font-normal normal-case tracking-normal text-white focus:border-[#00C37A] focus:outline-none focus:ring-1 focus:ring-[#00C37A]">
                   {sortOptions.map((option) => (
                     <option key={option.value} value={option.value}>{option.label}</option>
                   ))}
@@ -376,7 +376,7 @@ export function TopRankingExplorer({
               {SHOW_TYPE_FILTER && facets.length > 0 && (
                 <label className="flex items-center gap-3 text-[10px] font-black uppercase tracking-[0.12em] text-white/30">
                   {copy.filters.type}
-                  <select value={facetSlug} onChange={(event) => updateParam("type", event.target.value)} className="h-9 rounded-sm border border-white/[0.12] bg-[#0F0F0F] pl-4 pr-8 text-sm font-normal normal-case tracking-normal text-white focus:border-[#FFCC00] focus:outline-none focus:ring-1 focus:ring-[#FFCC00]">
+                  <select value={facetSlug} onChange={(event) => updateParam("type", event.target.value)} className="h-9 rounded-sm border border-white/[0.12] bg-[#0F0F0F] pl-4 pr-8 text-sm font-normal normal-case tracking-normal text-white focus:border-[#00C37A] focus:outline-none focus:ring-1 focus:ring-[#00C37A]">
                     <option value={ALL}>{copy.filters.all}</option>
                     {facets.map((facet) => (
                       <option key={facet.slug} value={facet.slug}>{getLocalizedFacetLabel(facet.slug, facet.label, locale)} ({facet.count})</option>
@@ -386,7 +386,7 @@ export function TopRankingExplorer({
               )}
               <label className="flex items-center gap-3 text-[10px] font-black uppercase tracking-[0.12em] text-white/30">
                 {copy.filters.place}
-                <select value={place} onChange={(event) => updateParam("area", event.target.value)} className="h-9 rounded-sm border border-white/[0.12] bg-[#0F0F0F] pl-4 pr-8 text-sm font-normal normal-case tracking-normal text-white focus:border-[#FFCC00] focus:outline-none focus:ring-1 focus:ring-[#FFCC00]">
+                <select value={place} onChange={(event) => updateParam("area", event.target.value)} className="h-9 rounded-sm border border-white/[0.12] bg-[#0F0F0F] pl-4 pr-8 text-sm font-normal normal-case tracking-normal text-white focus:border-[#00C37A] focus:outline-none focus:ring-1 focus:ring-[#00C37A]">
                   <option value={ALL}>{copy.filters.allPlaces}</option>
                   {places.map((item) => (
                     <option key={item} value={item}>{item}</option>
@@ -395,7 +395,7 @@ export function TopRankingExplorer({
               </label>
               <div className="ml-auto flex items-center gap-2 text-[11px] text-white/30">
                 <span>{sortHelp.text}</span>
-                <Link href={methodologyPath(locale)} className="text-white/45 underline underline-offset-2 hover:text-[#FFCC00]">
+                <Link href={methodologyPath(locale)} className="text-white/45 underline underline-offset-2 hover:text-[#00C37A]">
                   {sortHelp.link}
                 </Link>
               </div>
@@ -435,7 +435,7 @@ export function TopRankingExplorer({
             <button
               type="button"
               onClick={() => setVisibleCount((value) => Math.min(value + PAGE_SIZE, filtered.length))}
-              className="min-h-11 rounded-sm bg-[#FFCC00] px-6 text-[11px] font-black uppercase tracking-[0.1em] text-[#0A0A0A] transition hover:-translate-y-0.5 hover:bg-white"
+              className="min-h-11 rounded-sm bg-[#00C37A] px-6 text-[11px] font-black uppercase tracking-[0.1em] text-[#0A0A0A] transition hover:-translate-y-0.5 hover:bg-white"
             >
               {loadCopy.loadMore}
             </button>
@@ -449,7 +449,7 @@ export function TopRankingExplorer({
           <button
             type="button"
             onClick={clearFilters}
-            className="mt-4 min-h-10 rounded-sm bg-[#FFCC00] px-4 text-[11px] font-bold uppercase tracking-[0.1em] text-[#0A0A0A] transition hover:bg-white"
+            className="mt-4 min-h-10 rounded-sm bg-[#00C37A] px-4 text-[11px] font-bold uppercase tracking-[0.1em] text-[#0A0A0A] transition hover:bg-white"
           >
             {loadCopy.clearFilters}
           </button>

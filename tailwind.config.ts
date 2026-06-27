@@ -15,7 +15,7 @@ const config: Config = {
         olive: "#6B7280",
         earth: "#0A0A0A",
         coral: "#0A0A0A",
-        gold: "#FFCC00",
+        gold: "#00C37A",
         turquesa: "#0A0A0A",
         verified: "#0A0A0A",
         star: "#FFCC00",

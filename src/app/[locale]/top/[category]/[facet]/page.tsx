@@ -116,7 +116,7 @@ export default async function TopFacetPage({ params }: { params: Promise<{ local
         <section className="mx-auto max-w-7xl px-4 pb-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap gap-2">
             {relatedFacets.map((item) => (
-              <Link key={item.slug} href={facetPath(safeLocale, category, item.slug)} className="rounded-full border border-[#E5E7EB] bg-white px-3 py-2 text-[11px] font-bold uppercase tracking-[0.06em] text-ink hover:border-[#0A0A0A] hover:text-[#0A0A0A]">
+              <Link key={item.slug} href={facetPath(safeLocale, category, item.slug)} className="rounded-full border border-[#E5E7EB] bg-white px-3 py-2 text-[11px] font-bold uppercase tracking-[0.06em] text-ink hover:border-[#07101F] hover:text-[#0A0A0A]">
                 {item.label} · {item.count.toLocaleString(numberLocale(safeLocale))}
               </Link>
             ))}

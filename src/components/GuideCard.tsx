@@ -24,7 +24,7 @@ export function GuideCard({ guide, locale, editorialImage }: { guide: Guide; loc
   const copy = t(locale).guides;
 
   return (
-    <article className="flex h-full flex-col overflow-hidden rounded-md border border-[#E5E7EB] bg-white shadow-[0_6px_22px_rgba(10,10,10,0.06)] transition hover:-translate-y-0.5 hover:border-[#0A0A0A] hover:shadow-[0_14px_34px_rgba(10,10,10,0.11)]">
+    <article className="flex h-full flex-col overflow-hidden rounded-md border border-[#E5E7EB] bg-white shadow-[0_6px_22px_rgba(10,10,10,0.06)] transition hover:-translate-y-0.5 hover:border-[#07101F] hover:shadow-[0_14px_34px_rgba(10,10,10,0.11)]">
       {imageUrl && (
         <div
           className="h-40 bg-[#F3F4F6] sm:h-44"
@@ -38,7 +38,7 @@ export function GuideCard({ guide, locale, editorialImage }: { guide: Guide; loc
         />
       )}
       <div className="flex flex-1 flex-col p-5 sm:p-6">
-        <p className="border-l-2 border-[#FFCC00] pl-3 text-[10px] font-black uppercase tracking-[0.14em] text-[#0A0A0A]">
+        <p className="border-l-2 border-[#00C37A] pl-3 text-[10px] font-black uppercase tracking-[0.14em] text-[#0A0A0A]">
           Guia · {formatGuideDate(guide.updatedAt, locale)}
         </p>
         <h2 className="mt-4 text-[22px] font-black leading-[1.05] text-ink sm:text-2xl">{guide.title}</h2>

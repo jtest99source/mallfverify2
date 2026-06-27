@@ -177,8 +177,8 @@ function RankingItem({ business, index, locale }: { business: Business; index: n
         </span>
       </span>
       <span className="col-start-2 min-w-0 sm:col-auto">
-        <div className={`inline-flex min-w-0 items-center gap-1 rounded-full px-2.5 py-1 text-[10px] leading-none sm:whitespace-nowrap sm:text-[11px] ${isFirst ? "bg-[#0A0A0A] text-white" : "bg-[#F9FAFB] text-[#0A0A0A]"}`}>
-          <span className={`font-extrabold ${isFirst ? "text-[#FFCC00]" : "text-[#C9A800]"}`}>★ {typeof business.rating === "number" ? business.rating.toLocaleString(locale === "de" ? "de-DE" : locale === "en" ? "en-US" : "es-ES", { minimumFractionDigits: 1, maximumFractionDigits: 1 }) : ""}</span>
+        <div className={`inline-flex min-w-0 items-center gap-1 rounded-full px-2.5 py-1 text-[10px] leading-none sm:whitespace-nowrap sm:text-[11px] ${isFirst ? "bg-[#07101F] text-white" : "bg-[#F9FAFB] text-[#0A0A0A]"}`}>
+          <span className={`font-extrabold ${isFirst ? "text-[#00C37A]" : "text-[#C9A800]"}`}>★ {typeof business.rating === "number" ? business.rating.toLocaleString(locale === "de" ? "de-DE" : locale === "en" ? "en-US" : "es-ES", { minimumFractionDigits: 1, maximumFractionDigits: 1 }) : ""}</span>
           {typeof business.reviewsCount === "number" && <span className={isFirst ? "text-white/50" : "text-[#0A0A0A]/40"}>·</span>}
           {typeof business.reviewsCount === "number" && <span className="truncate">{business.reviewsCount.toLocaleString(locale === "de" ? "de-DE" : locale === "en" ? "en-US" : "es-ES")}</span>}
         </div>
@@ -194,10 +194,10 @@ function CategoryRankingCard({ category, businesses, locale }: { category: Categ
   const ariaLabel = locale === "es" ? `Ver ranking de ${label}` : locale === "de" ? `Rangliste für ${label} ansehen` : `View ${label} ranking`;
 
   return (
-    <section className="group flex h-full min-w-0 flex-col rounded-lg border border-[#E5E7EB] bg-white p-4 shadow-[0_18px_45px_rgba(10,10,10,0.05)] transition-all duration-200 hover:-translate-y-1 hover:border-[#0A0A0A] hover:shadow-[0_26px_70px_rgba(10,10,10,0.10)] sm:p-5">
+    <section className="group flex h-full min-w-0 flex-col rounded-lg border border-[#E5E7EB] bg-white p-4 shadow-[0_18px_45px_rgba(10,10,10,0.05)] transition-all duration-200 hover:-translate-y-1 hover:border-[#07101F] hover:shadow-[0_26px_70px_rgba(10,10,10,0.10)] sm:p-5">
       <div className="mb-3 flex items-center justify-between gap-4">
         <div className="flex items-center gap-3">
-          <div className="inline-flex h-8 w-8 items-center justify-center rounded-md bg-[#0A0A0A] text-[#FFCC00]">
+          <div className="inline-flex h-8 w-8 items-center justify-center rounded-md bg-[#07101F] text-[#00C37A]">
             <Icon size={16} stroke={1.8} />
           </div>
           <h2 className="text-lg font-black leading-tight text-ink">{label}</h2>
@@ -220,7 +220,7 @@ function CarouselBusinessCard({ business, index, locale }: { business: Business;
     <Link href={businessHref(locale, business)} className="group block w-[78vw] max-w-[330px] shrink-0 snap-start overflow-hidden bg-[#111111] ring-1 ring-white/[0.08] transition-all duration-200 hover:bg-[#1A1A1A] sm:w-[310px]">
       <BusinessImage business={business} category={business.category} variant="card" className="h-[200px] min-h-[200px] rounded-none p-3">
         <div className="flex h-full flex-col justify-between">
-          <span className="font-display inline-flex text-xl font-black leading-none text-[#FFCC00]">#{index + 1}</span>
+          <span className="font-display inline-flex text-xl font-black leading-none text-[#00C37A]">#{index + 1}</span>
           <div>
             <p className="inline-flex items-center gap-1 bg-black/55 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.08em] text-white/75 backdrop-blur">
               <IconMapPin size={12} stroke={2} />
@@ -234,7 +234,7 @@ function CarouselBusinessCard({ business, index, locale }: { business: Business;
           <RatingBadge rating={business.rating} reviewsCount={business.reviewsCount} locale={locale} compact />
         </div>
         <h3 className="font-display line-clamp-2 text-xl font-bold leading-tight text-white">{getBusinessPublicName(business)}</h3>
-        <div className="mt-4 border-t border-white/[0.08] pt-3 text-[10px] font-bold uppercase tracking-[0.1em] text-white/35 transition-colors group-hover:text-[#FFCC00]">
+        <div className="mt-4 border-t border-white/[0.08] pt-3 text-[10px] font-bold uppercase tracking-[0.1em] text-white/35 transition-colors group-hover:text-[#00C37A]">
           {locale === "de" ? "Ansehen" : locale === "en" ? "View details" : "Ver ficha"}
           <IconArrowUpRight size={13} stroke={2} className="ml-1 inline" />
         </div>
@@ -262,10 +262,10 @@ function EditorialRankingCarousel({
     <section className="border-t border-white/[0.08] py-10 first:border-t-0">
       <div className="mb-4 flex items-end justify-between gap-4">
         <div>
-          <p className="inline-flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.16em] text-[#FFCC00] before:h-px before:w-4 before:bg-[#FFCC00]">{eyebrow}</p>
+          <p className="inline-flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.16em] text-[#00C37A] before:h-px before:w-4 before:bg-[#00C37A]">{eyebrow}</p>
           <h3 className="font-display mt-2 text-3xl font-bold leading-tight text-white sm:text-4xl">{title}</h3>
         </div>
-        <Link href={href} className="hidden shrink-0 text-[12px] font-semibold tracking-[0.04em] text-white/40 transition-colors hover:text-[#FFCC00] sm:inline-flex">
+        <Link href={href} className="hidden shrink-0 text-[12px] font-semibold tracking-[0.04em] text-white/40 transition-colors hover:text-[#00C37A] sm:inline-flex">
           {locale === "de" ? "Alle ansehen" : locale === "en" ? "View all" : "Ver todos"} →
         </Link>
       </div>
@@ -412,8 +412,8 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
   ];
   const heroPanels = Array.from({ length: 4 }, (_, index) => heroBusinesses[index] ?? null);
   return (
-    <main className="bg-[#0A0A0A] text-white">
-      <section className="relative z-20 flex min-h-[96vh] items-center justify-center overflow-visible bg-[#0A0A0A] px-4 py-20 text-center text-white sm:px-6 lg:px-8">
+    <main className="bg-[#07101F] text-white">
+      <section className="relative z-20 flex min-h-[96vh] items-center justify-center overflow-visible bg-[#07101F] px-4 py-20 text-center text-white sm:px-6 lg:px-8">
         <div className="absolute inset-0 grid grid-cols-2 gap-px opacity-95 md:grid-cols-4">
           {heroPanels.map((business, index) => (
             <div
@@ -427,10 +427,10 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
                 backgroundPosition: "center"
               }}
             >
-              <div className="absolute inset-0 bg-[#0A0A0A]/10" />
+              <div className="absolute inset-0 bg-[#07101F]/10" />
               {business && (
                 <>
-                  <div className="absolute left-4 top-4 font-display text-xl font-black text-[#FFCC00]">#{index + 1}</div>
+                  <div className="absolute left-4 top-4 font-display text-xl font-black text-[#00C37A]">#{index + 1}</div>
                   <div className="absolute bottom-4 left-1/2 -translate-x-1/2 whitespace-nowrap bg-black/50 px-2.5 py-1 text-[9px] font-bold uppercase tracking-[0.1em] text-white/45 backdrop-blur">
                     {businessLocation(business)}
                   </div>
@@ -442,16 +442,16 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_72%_72%_at_50%_43%,rgba(10,10,10,0.9)_0%,rgba(10,10,10,0.76)_48%,rgba(10,10,10,0.88)_100%),linear-gradient(to_bottom,rgba(10,10,10,0.78)_0%,rgba(10,10,10,0.42)_42%,rgba(10,10,10,0.95)_100%)]" />
         <div className="relative z-10 flex w-full max-w-[780px] flex-col items-center">
           <div className="w-full max-w-[780px]">
-            <div className="mb-6 inline-flex items-center gap-3 text-[10px] font-semibold uppercase tracking-[0.16em] text-[#FFCC00] before:h-px before:w-6 before:bg-[#FFCC00] after:h-px after:w-6 after:bg-[#FFCC00]">
+            <div className="mb-6 inline-flex items-center gap-3 text-[10px] font-semibold uppercase tracking-[0.16em] text-[#00C37A] before:h-px before:w-6 before:bg-[#00C37A] after:h-px after:w-6 after:bg-[#00C37A]">
               {safeLocale === "de" ? "Echte Daten · Keine bezahlten Platzierungen" : safeLocale === "en" ? "Real data · No paid placements" : "Datos reales · Sin posiciones de pago"}
             </div>
             <h1 className="font-display mx-auto max-w-4xl text-balance text-5xl font-black leading-[0.92] text-white sm:text-7xl lg:text-[88px]">
               {safeLocale === "de" ? (
-                <>Finde das <em className="italic text-[#FFCC00]">Beste</em><br className="hidden sm:block" /> auf Mallorca.</>
+                <>Finde das <em className="italic text-[#00C37A]">Beste</em><br className="hidden sm:block" /> auf Mallorca.</>
               ) : safeLocale === "en" ? (
-                <>Find the <em className="italic text-[#FFCC00]">best</em><br className="hidden sm:block" /> in Mallorca.</>
+                <>Find the <em className="italic text-[#00C37A]">best</em><br className="hidden sm:block" /> in Mallorca.</>
               ) : (
-                <>Encuentra lo <em className="italic text-[#FFCC00]">mejor</em><br className="hidden sm:block" /> en Mallorca.</>
+                <>Encuentra lo <em className="italic text-[#00C37A]">mejor</em><br className="hidden sm:block" /> en Mallorca.</>
               )}
             </h1>
             <p className="mx-auto mt-6 max-w-[480px] text-base font-light leading-8 text-white/60 sm:text-[17px]">
@@ -468,7 +468,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
             <aside className="hidden">
               <div className="flex items-end justify-between border-b border-white/10 px-2 pb-3">
                 <div>
-                  <p className="text-[10px] font-black uppercase tracking-[0.18em] text-[#FFCC00]">
+                  <p className="text-[10px] font-black uppercase tracking-[0.18em] text-[#00C37A]">
                     {safeLocale === "de" ? "Live Auswahl" : safeLocale === "en" ? "Live Selection" : "Seleccion editorial"}
                   </p>
                   <h2 className="mt-1 text-2xl font-black leading-none text-white">
@@ -486,11 +486,11 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
                     <span className="min-w-0">
                       <span className="block truncate text-base font-black leading-tight text-white">{getBusinessPublicName(business)}</span>
                       <span className="mt-1 flex min-w-0 items-center gap-2 text-[12px] font-semibold text-white/55">
-                        <IconMapPin size={13} className="shrink-0 text-[#FFCC00]" />
+                        <IconMapPin size={13} className="shrink-0 text-[#00C37A]" />
                         <span className="truncate">{businessLocation(business)}</span>
                       </span>
                       <span className="mt-2 inline-flex items-center gap-2 rounded-full bg-black px-2.5 py-1 text-[11px] font-bold text-white">
-                        <span className="text-[#FFCC00]">★ {typeof business.rating === "number" ? business.rating.toLocaleString(numberLocale(safeLocale), { minimumFractionDigits: 1, maximumFractionDigits: 1 }) : ""}</span>
+                        <span className="text-[#00C37A]">★ {typeof business.rating === "number" ? business.rating.toLocaleString(numberLocale(safeLocale), { minimumFractionDigits: 1, maximumFractionDigits: 1 }) : ""}</span>
                         {typeof business.reviewsCount === "number" && <span className="text-white/45">{business.reviewsCount.toLocaleString(numberLocale(safeLocale))}</span>}
                       </span>
                     </span>
@@ -508,7 +508,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
               { value: formatIntegerMetric(approvedExperts.length, safeLocale), label: expertMetricLabel }
             ].map((stat) => (
               <div key={stat.label} className="border-white/10 px-3 py-2 sm:border-r last:border-r-0">
-                <div className="font-display text-3xl font-black leading-none text-[#FFCC00]">{stat.value}</div>
+                <div className="font-display text-3xl font-black leading-none text-[#00C37A]">{stat.value}</div>
                 <div className="mt-2 text-[10px] font-medium uppercase leading-tight tracking-[0.08em] text-white/30">{stat.label}</div>
               </div>
             ))}
@@ -516,23 +516,23 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
 
           <div className="mt-5 hidden flex-wrap justify-center gap-x-5 gap-y-2 text-[11px] font-bold uppercase tracking-[0.08em] text-white/45 sm:flex">
             {copy.home.signals.map((item) => (
-              <span key={item} className="inline-flex items-center gap-2"><IconCircleCheckFilled size={14} className="text-[#FFCC00]" />{item}</span>
+              <span key={item} className="inline-flex items-center gap-2"><IconCircleCheckFilled size={14} className="text-[#00C37A]" />{item}</span>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="border-b border-white/[0.08] bg-[#0A0A0A] px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
+      <section className="border-b border-white/[0.08] bg-[#07101F] px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
         <div className="mx-auto grid max-w-[1360px] gap-8 lg:grid-cols-[300px_minmax(0,1fr)]">
         <div className="lg:sticky lg:top-24 lg:self-start">
-          <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#FFCC00]">{copy.home.selection}</p>
+          <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#00C37A]">{copy.home.selection}</p>
           <h2 className="font-display mt-3 text-4xl font-bold leading-[0.96] text-white sm:text-5xl">
             {safeLocale === "de" ? "Mallorca-Rankings nach Kategorie" : safeLocale === "en" ? "Mallorca rankings, by category" : "Rankings de Mallorca por categoría"}
           </h2>
           <p className="mt-5 text-sm leading-7 text-white/45">
             {copy.home.bestThisWeekIntro}
           </p>
-          <Link href={`/${safeLocale}/top/restaurants`} className="mt-6 inline-flex min-h-11 items-center justify-center rounded-sm bg-[#FFCC00] px-5 text-[11px] font-black uppercase tracking-[0.1em] text-[#0A0A0A] transition hover:bg-white">
+          <Link href={`/${safeLocale}/top/restaurants`} className="mt-6 inline-flex min-h-11 items-center justify-center rounded-sm bg-[#00C37A] px-5 text-[11px] font-black uppercase tracking-[0.1em] text-[#0A0A0A] transition hover:bg-white">
             {safeLocale === "de" ? "Alle Rankings" : safeLocale === "en" ? "All rankings" : "Todos los rankings"} {"\u2192"}
           </Link>
         </div>
@@ -555,21 +555,21 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         <div className="mx-auto max-w-7xl">
           <div className="mb-8 flex items-end justify-between gap-6">
           <div>
-            <p className="text-[11px] font-black uppercase tracking-[0.18em] text-[#FFCC00]">
+            <p className="text-[11px] font-black uppercase tracking-[0.18em] text-[#00C37A]">
               {safeLocale === "de" ? "Methode" : safeLocale === "en" ? "Method" : "Metodo"}
             </p>
             <h2 className="font-display mt-3 text-4xl font-bold leading-none text-white">
               {safeLocale === "de" ? "Warum diese Reihenfolge?" : safeLocale === "en" ? "Why this order?" : "Por que este orden?"}
             </h2>
           </div>
-            <Link href={methodologyPath(safeLocale)} className="hidden text-[12px] font-semibold tracking-[0.04em] text-white/40 transition-colors hover:text-[#FFCC00] sm:inline-flex">
+            <Link href={methodologyPath(safeLocale)} className="hidden text-[12px] font-semibold tracking-[0.04em] text-white/40 transition-colors hover:text-[#00C37A] sm:inline-flex">
               {methodology.link}
             </Link>
           </div>
           <div className="grid border border-white/[0.08] md:grid-cols-3">
             {methodology.items.map(({ title, text }, index) => (
               <div key={title} className="border-b border-white/[0.08] p-8 last:border-b-0 md:border-b-0 md:border-r md:last:border-r-0">
-                <div className="font-display text-5xl font-black leading-none text-[#FFCC00]/30">{String(index + 1).padStart(2, "0")}</div>
+                <div className="font-display text-5xl font-black leading-none text-[#00C37A]/30">{String(index + 1).padStart(2, "0")}</div>
                 <h2 className="font-display mt-5 text-2xl font-bold leading-tight text-white">{title}</h2>
                 <p className="mt-3 text-sm font-light leading-7 text-white/42">{text}</p>
               </div>
@@ -581,7 +581,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
       {safeLocale === "es" && latestGuides.length > 0 && (
         <section className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
           <div className="mb-6 pb-3">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-[#FFCC00]">{copy.home.guidesEyebrow}</p>
+            <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-[#00C37A]">{copy.home.guidesEyebrow}</p>
             <h2 className="font-display mt-2 text-3xl font-bold text-white">{copy.home.guidesTitle}</h2>
             <p className="mt-3 max-w-2xl text-sm leading-7 text-white/45">{copy.home.guidesIntro}</p>
           </div>
@@ -609,7 +609,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         }
       ]} />
 
-      <section className="bg-[#FFCC00] px-4 py-8 text-[#0A0A0A] sm:px-6 lg:px-8">
+      <section className="bg-[#00C37A] px-4 py-8 text-[#0A0A0A] sm:px-6 lg:px-8">
         <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-8 sm:flex-row sm:items-center">
           <div>
             <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-black/55">
@@ -626,7 +626,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
                   : "Abogados, agentes inmobiliarios, médicos y más - seleccionados por criterio editorial, no por tarifas."}
             </p>
           </div>
-          <Link href={`/${safeLocale}/experts`} className="group inline-flex min-h-12 shrink-0 items-center gap-3 rounded-sm bg-[#0A0A0A] px-7 text-[12px] font-black uppercase tracking-[0.1em] text-[#FFCC00] transition-all duration-200 hover:bg-white hover:text-[#0A0A0A]">
+          <Link href={`/${safeLocale}/experts`} className="group inline-flex min-h-12 shrink-0 items-center gap-3 rounded-sm bg-[#07101F] px-7 text-[12px] font-black uppercase tracking-[0.1em] text-[#00C37A] transition-all duration-200 hover:bg-white hover:text-[#0A0A0A]">
             {safeLocale === "de" ? "Experten ansehen" : safeLocale === "en" ? "View experts" : "Ver expertos"}
             <span className="text-xl leading-none transition-transform duration-200 group-hover:translate-x-1">→</span>
           </Link>
@@ -636,12 +636,12 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
       <section className="px-4 py-20 sm:px-6 lg:px-8">
         <div className="mx-auto grid max-w-7xl gap-12 md:grid-cols-[minmax(0,1fr)_360px] md:items-center">
           <div>
-          <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-[#FFCC00]">
+          <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-[#00C37A]">
             {safeLocale === "de" ? "Fuer Unternehmen" : safeLocale === "en" ? "For businesses" : "Para negocios"}
           </p>
           <h2 className="font-display mt-3 max-w-2xl text-4xl font-bold leading-tight text-white sm:text-5xl">{copy.home.businessTitle}</h2>
           <p className="mt-5 max-w-2xl text-base leading-8 text-white/45">{copy.home.businessIntro}</p>
-          <Link href={`/${safeLocale}/business`} className="mt-8 inline-flex min-h-12 items-center justify-center rounded-sm bg-[#FFCC00] px-7 text-[12px] font-bold uppercase tracking-[0.1em] text-[#0A0A0A] hover:bg-white">
+          <Link href={`/${safeLocale}/business`} className="mt-8 inline-flex min-h-12 items-center justify-center rounded-sm bg-[#00C37A] px-7 text-[12px] font-bold uppercase tracking-[0.1em] text-[#0A0A0A] hover:bg-white">
             {copy.home.businessCta}
           </Link>
           </div>
@@ -653,7 +653,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
               { value: formatIntegerMetric(approvedExperts.length, safeLocale), label: expertMetricLabel }
             ].map((stat) => (
               <div key={stat.label} className="flex items-baseline gap-3">
-                <div className="font-display text-4xl font-black leading-none text-[#FFCC00]">{stat.value}</div>
+                <div className="font-display text-4xl font-black leading-none text-[#00C37A]">{stat.value}</div>
                 <div className="text-sm text-white/35">{stat.label}</div>
               </div>
             ))}

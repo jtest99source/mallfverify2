@@ -114,7 +114,7 @@ export function BusinessCard({ business, locale }: { business: Business; locale:
   const badges = usefulBadges(business, locale);
 
   return (
-    <article className="group flex h-full min-h-[330px] flex-col overflow-hidden rounded-sm border border-white/[0.10] bg-[#101010] shadow-[0_16px_42px_rgba(0,0,0,0.20)] transition-all duration-150 hover:-translate-y-0.5 hover:border-[#FFCC00]/60">
+    <article className="group flex h-full min-h-[330px] flex-col overflow-hidden rounded-sm border border-white/[0.10] bg-[#0C1A2E] shadow-[0_16px_42px_rgba(0,0,0,0.20)] transition-all duration-150 hover:-translate-y-0.5 hover:border-[#00C37A]/60">
       <Link href={`/${locale}/${categorySlug}/${business.slug}`} className="flex flex-1 flex-col">
         <BusinessImage business={business} category={business.category} variant="card" className="aspect-[16/10] min-h-0 shrink-0">
           <div className="flex h-full flex-col justify-between">
@@ -133,7 +133,7 @@ export function BusinessCard({ business, locale }: { business: Business; locale:
 
         <div className="flex flex-1 flex-col p-4 pb-4">
           <div className="flex flex-wrap items-center justify-between gap-3">
-            <p className="text-[10px] font-black uppercase tracking-[0.12em] text-[#FFCC00]">{categoryLabel}</p>
+            <p className="text-[10px] font-black uppercase tracking-[0.12em] text-[#00C37A]">{categoryLabel}</p>
             <RatingBadge rating={business.rating} reviewsCount={business.reviewsCount} locale={locale} compact />
           </div>
 
@@ -154,7 +154,7 @@ export function BusinessCard({ business, locale }: { business: Business; locale:
                 </span>
               ))}
             </div>
-            <span className="mt-4 inline-flex items-center gap-1 text-[11px] font-black uppercase tracking-[0.1em] text-[#FFCC00] transition-all duration-150 group-hover:text-white">
+            <span className="mt-4 inline-flex items-center gap-1 text-[11px] font-black uppercase tracking-[0.1em] text-[#00C37A] transition-all duration-150 group-hover:text-white">
               {copy.business.viewDataReviews}
               <IconArrowUpRight size={14} stroke={2} />
             </span>

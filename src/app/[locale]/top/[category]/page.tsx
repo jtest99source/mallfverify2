@@ -55,18 +55,18 @@ export default async function TopCategoryPage({ params }: { params: Promise<{ lo
   ];
 
   return (
-    <main className="bg-[#0A0A0A] text-white">
-      <section className="bg-[#0A0A0A] px-4 py-10 sm:px-6 sm:py-12 lg:px-8">
+    <main className="bg-[#07101F] text-white">
+      <section className="bg-[#07101F] px-4 py-10 sm:px-6 sm:py-12 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <div className="flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.08em] text-white/25">
-            <Link href={`/${safeLocale}`} className="transition-colors hover:text-[#FFCC00]">{copy.category.breadcrumbHome}</Link>
+            <Link href={`/${safeLocale}`} className="transition-colors hover:text-[#00C37A]">{copy.category.breadcrumbHome}</Link>
             <span>/</span>
-            <Link href={`/${safeLocale}/top/restaurants`} className="transition-colors hover:text-[#FFCC00]">Rankings</Link>
+            <Link href={`/${safeLocale}/top/restaurants`} className="transition-colors hover:text-[#00C37A]">Rankings</Link>
             <span>/</span>
             <span className="text-white/65">{config.label}</span>
           </div>
           <div className="mt-7 max-w-4xl">
-            <p className="inline-flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.16em] text-[#FFCC00] before:h-px before:w-4 before:bg-[#FFCC00]">{copy.category.rankingByCategory}</p>
+            <p className="inline-flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.16em] text-[#00C37A] before:h-px before:w-4 before:bg-[#00C37A]">{copy.category.rankingByCategory}</p>
             <h1 className="font-display mt-3 text-5xl font-black leading-none text-white sm:text-6xl">{title}</h1>
             <p className="mt-4 max-w-2xl text-sm leading-7 text-white/42">{copy.category.signalLine}</p>
           </div>
@@ -78,10 +78,10 @@ export default async function TopCategoryPage({ params }: { params: Promise<{ lo
       {relatedGuides.length > 0 && (
         <section className="mx-auto max-w-7xl px-4 pb-14 sm:px-6 lg:px-8">
           <div className="border-t border-white/[0.08] pt-10">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-[#FFCC00]">{copy.category.relatedGuidesEyebrow}</p>
+            <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-[#00C37A]">{copy.category.relatedGuidesEyebrow}</p>
             <div className="mt-3 flex items-end justify-between gap-4">
               <h2 className="font-display text-3xl font-bold text-white">{copy.category.relatedGuidesTitle(config.label)}</h2>
-              <Link href={`/${safeLocale}/guides`} className="shrink-0 text-[11px] font-bold uppercase tracking-[0.08em] text-white/40 hover:text-[#FFCC00]">
+              <Link href={`/${safeLocale}/guides`} className="shrink-0 text-[11px] font-bold uppercase tracking-[0.08em] text-white/40 hover:text-[#00C37A]">
                 {copy.category.viewAllGuides} →
               </Link>
             </div>

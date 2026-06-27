@@ -223,7 +223,7 @@ export function CategoryFilter({ businesses, locale }: { businesses: Business[];
 
   return (
     <div>
-      <div className="rounded-sm border border-white/[0.10] bg-[#101010] p-4 shadow-[0_18px_45px_rgba(0,0,0,0.22)]">
+      <div className="rounded-sm border border-white/[0.10] bg-[#0C1A2E] p-4 shadow-[0_18px_45px_rgba(0,0,0,0.22)]">
         <div className="mb-4 flex flex-wrap items-center gap-2">
           <span className="mr-2 text-[11px] font-black uppercase tracking-[0.12em] text-white/52">{c.orderedBy}</span>
           {(Object.keys(c.sort) as SortKey[]).map((key) => {
@@ -234,7 +234,7 @@ export function CategoryFilter({ businesses, locale }: { businesses: Business[];
                 key={key}
                 type="button"
                 onClick={() => updateParam("sort", key)}
-                className={`inline-flex min-h-10 items-center gap-2 rounded-sm border px-3 text-[11px] font-black uppercase tracking-[0.08em] transition ${active ? "border-[#FFCC00] bg-[#FFCC00] text-[#0A0A0A]" : "border-white/[0.10] bg-[#050505] text-white/70 hover:border-[#FFCC00]/70 hover:text-white"}`}
+                className={`inline-flex min-h-10 items-center gap-2 rounded-sm border px-3 text-[11px] font-black uppercase tracking-[0.08em] transition ${active ? "border-[#00C37A] bg-[#00C37A] text-[#0A0A0A]" : "border-white/[0.10] bg-[#040D1A] text-white/70 hover:border-[#00C37A]/70 hover:text-white"}`}
               >
                 <Icon size={15} stroke={1.8} />
                 {c.sort[key]}
@@ -251,7 +251,7 @@ export function CategoryFilter({ businesses, locale }: { businesses: Business[];
                 key={item}
                 type="button"
                 onClick={() => updateParam("area", item)}
-                  className={`shrink-0 rounded-sm border px-3 py-2 text-[11px] font-bold ${active ? "border-[#FFCC00] bg-[#FFCC00] text-[#0A0A0A]" : "border-white/[0.10] bg-[#050505] text-white/64 hover:border-[#FFCC00]/70 hover:text-white"}`}
+                  className={`shrink-0 rounded-sm border px-3 py-2 text-[11px] font-bold ${active ? "border-[#00C37A] bg-[#00C37A] text-[#0A0A0A]" : "border-white/[0.10] bg-[#040D1A] text-white/64 hover:border-[#00C37A]/70 hover:text-white"}`}
               >
                 {item === ALL_AREAS ? c.allAreas : item}
               </button>
@@ -266,12 +266,12 @@ export function CategoryFilter({ businesses, locale }: { businesses: Business[];
               value={query}
               onChange={(event) => updateParam("q", event.target.value)}
               placeholder={c.searchPlaceholder}
-              className="border-white/[0.12] bg-[#050505] text-sm font-normal normal-case tracking-normal text-white placeholder:text-white/34 focus:border-[#FFCC00] focus:ring-[#FFCC00]"
+              className="border-white/[0.12] bg-[#040D1A] text-sm font-normal normal-case tracking-normal text-white placeholder:text-white/34 focus:border-[#00C37A] focus:ring-[#00C37A]"
             />
           </label>
           <label className="grid gap-1 text-[11px] font-black uppercase tracking-[0.1em] text-white/52">
             {c.style}
-            <select value={tag} onChange={(event) => updateParam("tag", event.target.value)} className="border-white/[0.12] bg-[#050505] text-sm font-normal normal-case tracking-normal text-white focus:border-[#FFCC00] focus:ring-[#FFCC00] [&_option]:text-[#0A0A0A]">
+            <select value={tag} onChange={(event) => updateParam("tag", event.target.value)} className="border-white/[0.12] bg-[#040D1A] text-sm font-normal normal-case tracking-normal text-white focus:border-[#00C37A] focus:ring-[#00C37A] [&_option]:text-[#0A0A0A]">
               <option value={ALL_TAGS}>{c.allStyles}</option>
               {tags.map((item) => <option key={item} value={item}>{item}</option>)}
             </select>
@@ -281,11 +281,11 @@ export function CategoryFilter({ businesses, locale }: { businesses: Business[];
       </div>
 
       {top && (
-        <section className="mt-8 grid overflow-hidden rounded-sm border border-white/[0.10] bg-[#101010] shadow-[0_18px_45px_rgba(0,0,0,0.24)] lg:grid-cols-[1.15fr_1fr]">
+        <section className="mt-8 grid overflow-hidden rounded-sm border border-white/[0.10] bg-[#0C1A2E] shadow-[0_18px_45px_rgba(0,0,0,0.24)] lg:grid-cols-[1.15fr_1fr]">
           <Link href={`/${locale}/${getCategorySlugFromBusiness(top.category)}/${top.slug}`} className="block">
             <BusinessImage business={top} category={top.category} variant="hero" className="min-h-[220px] sm:min-h-[280px]">
               <div className="flex flex-wrap gap-2">
-                <span className="bg-[#0A0A0A] px-3 py-1 text-[9px] font-black uppercase tracking-[0.14em] text-[#FFCC00]">{c.bestResult}</span>
+                <span className="bg-[#07101F] px-3 py-1 text-[9px] font-black uppercase tracking-[0.14em] text-[#00C37A]">{c.bestResult}</span>
                 {isUntapped(top.untappedScore) && <span className="inline-flex items-center gap-1 bg-[#F9FAFB] px-3 py-1 text-[9px] font-bold uppercase tracking-[0.14em] text-[#0A0A0A]"><IconDiamond size={12} /> {c.hiddenGem}</span>}
               </div>
               <h2 className="mt-4 font-sans text-4xl font-black leading-tight text-white">{getBusinessPublicName(top)}</h2>
@@ -293,28 +293,28 @@ export function CategoryFilter({ businesses, locale }: { businesses: Business[];
             </BusinessImage>
           </Link>
           <div className="flex flex-col p-8">
-            <p className="text-[10px] font-black uppercase tracking-[0.14em] text-[#FFCC00]">{businessArea(top)}</p>
+            <p className="text-[10px] font-black uppercase tracking-[0.14em] text-[#00C37A]">{businessArea(top)}</p>
             <p className="mt-4 flex-1 text-sm leading-7 text-white/66">{descriptionFor(top)}</p>
             <div className="mt-5 flex flex-wrap gap-2">
               {getBusinessTags(top).filter(isUsefulPublicTag).slice(0, 4).map((item) => <span key={item} className="rounded-sm border border-white/[0.10] bg-white/[0.04] px-3 py-1 text-[10px] font-bold text-white/74">{item}</span>)}
             </div>
-            <Link href={`/${locale}/${getCategorySlugFromBusiness(top.category)}/${top.slug}`} className="mt-6 w-fit rounded-sm bg-[#FFCC00] px-5 py-3 text-[11px] font-bold uppercase tracking-[0.1em] text-[#0A0A0A] hover:bg-white">{c.viewProfile}</Link>
+            <Link href={`/${locale}/${getCategorySlugFromBusiness(top.category)}/${top.slug}`} className="mt-6 w-fit rounded-sm bg-[#00C37A] px-5 py-3 text-[11px] font-bold uppercase tracking-[0.1em] text-[#0A0A0A] hover:bg-white">{c.viewProfile}</Link>
           </div>
         </section>
       )}
 
-      <div className="mt-10 pb-3 text-[10px] font-black uppercase tracking-[0.14em] text-[#FFCC00]">{c.allResults}</div>
+      <div className="mt-10 pb-3 text-[10px] font-black uppercase tracking-[0.14em] text-[#00C37A]">{c.allResults}</div>
       {filtered.length > 0 ? (
         <div className="mt-3 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {visibleBusinesses.map((business) => <BusinessCard key={business.id} business={business} locale={locale} />)}
         </div>
       ) : (
-        <div className="mt-3 rounded-sm border border-white/[0.10] bg-[#101010] p-5 text-sm text-white/68">
+        <div className="mt-3 rounded-sm border border-white/[0.10] bg-[#0C1A2E] p-5 text-sm text-white/68">
           <p>{c.noResults}</p>
           <button
             type="button"
             onClick={clearFilters}
-            className="mt-4 min-h-10 rounded-sm border border-[#FFCC00] bg-[#FFCC00] px-4 text-[11px] font-bold uppercase tracking-[0.1em] text-[#0A0A0A] transition hover:bg-white"
+            className="mt-4 min-h-10 rounded-sm border border-[#00C37A] bg-[#00C37A] px-4 text-[11px] font-bold uppercase tracking-[0.1em] text-[#0A0A0A] transition hover:bg-white"
           >
             {c.clearFilters}
           </button>
@@ -328,7 +328,7 @@ export function CategoryFilter({ businesses, locale }: { businesses: Business[];
             <button
               type="button"
               onClick={() => setVisibleCount((value) => Math.min(value + PAGE_SIZE, filtered.length))}
-              className="min-h-11 rounded-sm border border-[#FFCC00] bg-[#FFCC00] px-6 text-[11px] font-black uppercase tracking-[0.1em] text-[#0A0A0A] shadow-[0_14px_30px_rgba(255,204,0,0.12)] transition hover:-translate-y-0.5 hover:bg-white"
+              className="min-h-11 rounded-sm border border-[#00C37A] bg-[#00C37A] px-6 text-[11px] font-black uppercase tracking-[0.1em] text-[#0A0A0A] shadow-[0_14px_30px_rgba(0,195,122,0.12)] transition hover:-translate-y-0.5 hover:bg-white"
             >
               {c.loadMore}
             </button>

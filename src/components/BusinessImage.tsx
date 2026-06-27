@@ -15,17 +15,17 @@ type BusinessImageProps = {
 
 const abstractBackgrounds: Partial<Record<BusinessCategory, string>> = {
   restaurant:
-    "radial-gradient(circle at 20% 18%, rgba(255,204,0,0.24), transparent 28%), linear-gradient(135deg, #FFFFFF 0%, #F3F4F6 100%)",
+    "radial-gradient(circle at 20% 18%, rgba(0,195,122,0.24), transparent 28%), linear-gradient(135deg, #FFFFFF 0%, #F3F4F6 100%)",
   hotel:
-    "radial-gradient(circle at 80% 18%, rgba(255,204,0,0.20), transparent 28%), linear-gradient(135deg, #FFFFFF 0%, #F3F4F6 100%)",
+    "radial-gradient(circle at 80% 18%, rgba(0,195,122,0.20), transparent 28%), linear-gradient(135deg, #FFFFFF 0%, #F3F4F6 100%)",
   "beach-club":
-    "radial-gradient(circle at 70% 30%, rgba(255,204,0,0.22), transparent 35%), linear-gradient(135deg, #FFFFFF 0%, #F3F4F6 100%)",
+    "radial-gradient(circle at 70% 30%, rgba(0,195,122,0.22), transparent 35%), linear-gradient(135deg, #FFFFFF 0%, #F3F4F6 100%)",
   "boat-rental":
-    "radial-gradient(circle at 25% 75%, rgba(255,204,0,0.22), transparent 30%), linear-gradient(135deg, #FFFFFF 0%, #F3F4F6 100%)",
+    "radial-gradient(circle at 25% 75%, rgba(0,195,122,0.22), transparent 30%), linear-gradient(135deg, #FFFFFF 0%, #F3F4F6 100%)",
   activity:
-    "radial-gradient(circle at 78% 18%, rgba(255,204,0,0.20), transparent 25%), linear-gradient(135deg, #FFFFFF 0%, #F3F4F6 100%)",
+    "radial-gradient(circle at 78% 18%, rgba(0,195,122,0.20), transparent 25%), linear-gradient(135deg, #FFFFFF 0%, #F3F4F6 100%)",
   beach:
-    "radial-gradient(circle at 60% 15%, rgba(255,204,0,0.20), transparent 32%), linear-gradient(160deg, #FFFFFF 0%, #F3F4F6 100%)"
+    "radial-gradient(circle at 60% 15%, rgba(0,195,122,0.20), transparent 32%), linear-gradient(160deg, #FFFFFF 0%, #F3F4F6 100%)"
 };
 
 const variantClasses: Record<BusinessImageVariant, string> = {
@@ -105,14 +105,14 @@ export function BusinessImage({ business, category, variant, className = "", chi
   return (
     <div
       aria-label={imageUrl ? imageLabel : `Imagen editorial de ${categoryLabel} en ${location}, Mallorca`}
-      className={`editorial-texture flex items-end overflow-hidden ${imageUrl ? "bg-[#0A0A0A]" : "bg-[#F3F4F6]"} ${variantClasses[variant]} ${className}`}
+      className={`editorial-texture flex items-end overflow-hidden ${imageUrl ? "bg-[#07101F]" : "bg-[#F3F4F6]"} ${variantClasses[variant]} ${className}`}
       style={{ backgroundImage, backgroundSize: "cover", backgroundPosition: "center" }}
     >
       {!imageUrl && (
         <>
-          <div className="absolute left-5 top-5 h-12 w-12 border border-[#0A0A0A]/15" />
-          <div className="absolute bottom-5 right-5 h-20 w-20 border border-[#0A0A0A]/10" />
-          <div className="absolute inset-x-0 bottom-0 h-1 bg-[#FFCC00]" />
+          <div className="absolute left-5 top-5 h-12 w-12 border border-[#07101F]/15" />
+          <div className="absolute bottom-5 right-5 h-20 w-20 border border-[#07101F]/10" />
+          <div className="absolute inset-x-0 bottom-0 h-1 bg-[#00C37A]" />
         </>
       )}
       {children && <div className={childClassName}>{children}</div>}

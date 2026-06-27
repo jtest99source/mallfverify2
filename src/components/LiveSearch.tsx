@@ -198,10 +198,10 @@ export function SearchBox({ locale, variant = "navbar", className = "" }: Search
   const results = useMemo(() => search(debouncedQuery, 8, locale), [search, debouncedQuery, locale]);
   const showDropdown = open && normalize(query).length >= 2;
   const inputClass = isHero
-    ? "h-14 w-full rounded-md border border-borderline bg-white px-12 text-base text-ink shadow-soft outline-none placeholder:text-[#525252] focus:border-[#0A0A0A]"
+    ? "h-14 w-full rounded-md border border-borderline bg-white px-12 text-base text-ink shadow-soft outline-none placeholder:text-[#525252] focus:border-[#07101F]"
     : isNav
       ? "h-11 w-full rounded-md border border-borderline bg-linen px-10 text-sm text-ink outline-none placeholder:text-[#525252] focus:border-ink focus:bg-white"
-      : "h-9 w-[220px] rounded-sm border border-white/[0.12] bg-[#111111] px-9 text-[12px] text-white outline-none placeholder:text-white/35 transition-all duration-200 focus:w-[300px] focus:border-[#FFCC00] focus:bg-[#111111]";
+      : "h-9 w-[220px] rounded-sm border border-white/[0.12] bg-[#111111] px-9 text-[12px] text-white outline-none placeholder:text-white/35 transition-all duration-200 focus:w-[300px] focus:border-[#00C37A] focus:bg-[#111111]";
   const iconClass = isHero || isNav ? "text-[#0A0A0A]" : "text-white/45";
 
   return (

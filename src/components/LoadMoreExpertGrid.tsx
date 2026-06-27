@@ -54,16 +54,16 @@ function DirectoryCard({
 
   return (
     <article
-      className="group flex min-h-[260px] flex-col overflow-hidden rounded-sm border border-l-4 border-white/[0.10] bg-[#101010] shadow-[0_18px_45px_rgba(0,0,0,0.18)] transition-all duration-150 hover:-translate-y-0.5 hover:border-white/[0.22]"
+      className="group flex min-h-[260px] flex-col overflow-hidden rounded-sm border border-l-4 border-white/[0.10] bg-[#0C1A2E] shadow-[0_18px_45px_rgba(0,0,0,0.18)] transition-all duration-150 hover:-translate-y-0.5 hover:border-white/[0.22]"
       style={{ borderLeftColor: verticalColor }}
     >
       <div className="flex flex-1 flex-col p-5">
         <div className={`flex flex-wrap items-center gap-2 ${!hideVertical && verticalLabel ? "justify-between" : "justify-end"}`}>
-          <span className="inline-flex h-7 min-w-7 items-center justify-center rounded-sm border border-white/[0.10] bg-[#050505] px-2 text-[10px] font-black text-[#FFCC00]">
+          <span className="inline-flex h-7 min-w-7 items-center justify-center rounded-sm border border-white/[0.10] bg-[#040D1A] px-2 text-[10px] font-black text-[#00C37A]">
             #{position}
           </span>
           {!hideVertical && verticalLabel ? (
-            <span className="rounded-full bg-[#FFCC00] px-2.5 py-1 text-[9px] font-black uppercase tracking-[0.12em] text-[#0A0A0A]">
+            <span className="rounded-full bg-[#00C37A] px-2.5 py-1 text-[9px] font-black uppercase tracking-[0.12em] text-[#0A0A0A]">
               {verticalLabel}
             </span>
           ) : null}
@@ -99,7 +99,7 @@ function DirectoryCard({
           {profile.phone ? (
             <a
               href={`tel:${profile.phone.replace(/\s+/g, "")}`}
-              className="inline-flex items-center gap-1.5 rounded-sm border border-white/[0.12] px-3 py-1.5 text-[10px] font-black uppercase tracking-[0.1em] text-white/72 hover:border-[#FFCC00]/70 hover:text-white"
+              className="inline-flex items-center gap-1.5 rounded-sm border border-white/[0.12] px-3 py-1.5 text-[10px] font-black uppercase tracking-[0.1em] text-white/72 hover:border-[#00C37A]/70 hover:text-white"
             >
               <IconPhone size={13} stroke={1.8} />
               {labels.phone}
@@ -110,7 +110,7 @@ function DirectoryCard({
               href={profile.website}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-1.5 rounded-sm border border-white/[0.12] px-3 py-1.5 text-[10px] font-black uppercase tracking-[0.1em] text-white/72 hover:border-[#FFCC00]/70 hover:text-white"
+              className="inline-flex items-center gap-1.5 rounded-sm border border-white/[0.12] px-3 py-1.5 text-[10px] font-black uppercase tracking-[0.1em] text-white/72 hover:border-[#00C37A]/70 hover:text-white"
             >
               {labels.website}
               <IconExternalLink size={13} stroke={1.8} />
@@ -118,7 +118,7 @@ function DirectoryCard({
           ) : null}
           <Link
             href={`/${locale}/experts/${profile.verticalSlug}/${profile.slug}`}
-            className="inline-flex items-center gap-1.5 rounded-sm bg-[#FFCC00] px-3 py-1.5 text-[10px] font-black uppercase tracking-[0.1em] text-[#0A0A0A] hover:bg-white"
+            className="inline-flex items-center gap-1.5 rounded-sm bg-[#00C37A] px-3 py-1.5 text-[10px] font-black uppercase tracking-[0.1em] text-[#0A0A0A] hover:bg-white"
           >
             {labels.details}
             <IconExternalLink size={13} stroke={1.8} />
@@ -177,7 +177,7 @@ export function LoadMoreExpertGrid({
             <button
               type="button"
               onClick={() => setVisibleCount((value) => Math.min(value + PAGE_SIZE, profiles.length))}
-              className="min-h-11 rounded-sm border border-[#FFCC00] bg-[#FFCC00] px-6 text-[11px] font-black uppercase tracking-[0.1em] text-[#0A0A0A] shadow-[0_14px_30px_rgba(255,204,0,0.12)] transition hover:-translate-y-0.5 hover:bg-white"
+              className="min-h-11 rounded-sm border border-[#00C37A] bg-[#00C37A] px-6 text-[11px] font-black uppercase tracking-[0.1em] text-[#0A0A0A] shadow-[0_14px_30px_rgba(0,195,122,0.12)] transition hover:-translate-y-0.5 hover:bg-white"
             >
               {c.loadMore}
             </button>

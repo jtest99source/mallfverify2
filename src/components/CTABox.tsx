@@ -35,7 +35,7 @@ export function CTABox({ locale = "es" }: { locale?: Locale }) {
         </div>
         <Link
           href={`/${locale}/contact`}
-          className="shrink-0 rounded-sm bg-[#FFCC00] px-7 py-4 text-[11px] font-black uppercase tracking-[0.1em] text-[#0A0A0A] transition-all duration-150 hover:bg-white"
+          className="shrink-0 rounded-sm bg-[#00C37A] px-7 py-4 text-[11px] font-black uppercase tracking-[0.1em] text-[#0A0A0A] transition-all duration-150 hover:bg-white"
         >
           {c.cta}
         </Link>

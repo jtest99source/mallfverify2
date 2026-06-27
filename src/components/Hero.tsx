@@ -16,7 +16,7 @@ export function Hero({ locale }: { locale: Locale }) {
         </p>
         <div className="mt-8 flex max-w-2xl flex-col gap-3 rounded-md bg-white p-2 shadow-soft sm:flex-row">
           <input className="min-h-12 flex-1 rounded border-0 px-4 text-ink placeholder:text-ink/55 focus:ring-2 focus:ring-[#0A0A0A]" placeholder="Busca Palma, Deià, barcos, beach clubs..." />
-          <Link href={`/${locale}/top/restaurants`} className="inline-flex min-h-12 items-center justify-center rounded bg-[#0A0A0A] px-5 text-sm font-semibold text-[#FFFFFF]">
+          <Link href={`/${locale}/top/restaurants`} className="inline-flex min-h-12 items-center justify-center rounded bg-[#07101F] px-5 text-sm font-semibold text-[#FFFFFF]">
             Explorar rankings
           </Link>
         </div>
