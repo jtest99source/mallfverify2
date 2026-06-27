@@ -114,7 +114,7 @@ export function BusinessCategoryAttributes({ category, attributes }: { category:
   if (!rows.length) return null;
 
   return (
-    <section className="mt-10 rounded-md border border-borderline bg-white p-5 shadow-[0_12px_35px_rgba(28,28,24,0.035)]">
+    <section className="mt-10 rounded-md border border-white/[0.10] bg-[#0C1A2E] p-5 shadow-[0_12px_35px_rgba(0,0,0,0.22)]">
       <h2 className="border-b border-borderline pb-3 font-sans text-2xl font-bold leading-tight text-ink sm:text-3xl">
         {titleByCategory[category] ?? "Información útil"}
       </h2>

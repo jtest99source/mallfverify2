@@ -528,7 +528,7 @@ function MethodologyPage({ locale, canonical, stats }: { locale: Locale; canonic
 
   return (
     <main className="bg-[#07101F]">
-      <section className="bg-[#FFFFFF] px-4 py-14 sm:px-6 lg:px-8">
+      <section className="bg-[#0C1A2E] px-4 py-14 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <Breadcrumbs items={[{ label: c.home, href: `/${locale}` }, { label: c.label, href: methodologyPath(locale) }]} />
           <div className="mt-8 max-w-4xl">
@@ -598,7 +598,7 @@ function MethodologyPage({ locale, canonical, stats }: { locale: Locale; canonic
               { value: formatMillionMetric(stats.analyzedReviews, locale), label: c.reviews },
               { value: formatIntegerMetric(publicCategorySlugs.length, locale), label: c.categories }
             ].map((stat) => (
-              <div key={stat.label} className="rounded-lg border border-[#00C37A]/60 bg-[linear-gradient(135deg,#0A0A0A_0%,#262626_58%,#0A0A0A_100%)] px-6 py-5 text-white">
+              <div key={stat.label} className="rounded-lg border border-[#00C37A]/60 bg-[linear-gradient(135deg,#07101F_0%,#0F2035_58%,#07101F_100%)] px-6 py-5 text-white">
                 <div className="font-sans text-4xl font-black leading-none text-[#00C37A]">{stat.value}</div>
                 <div className="mt-2 text-[10px] font-bold uppercase tracking-[0.12em] text-white/75">{stat.label}</div>
               </div>
@@ -628,7 +628,7 @@ function MethodologyPage({ locale, canonical, stats }: { locale: Locale; canonic
         <section className="pt-10">
           <p className="mb-2 text-[11px] font-black uppercase tracking-[0.18em] text-white/30">06</p>
           <h2 className="font-sans text-2xl font-black leading-tight sm:text-3xl">{c.faqTitle}</h2>
-          <div className="mt-6 divide-y divide-white/[0.08] overflow-hidden rounded-lg border border-white/[0.08] bg-[#FFFFFF]">
+          <div className="mt-6 divide-y divide-white/[0.08] overflow-hidden rounded-lg border border-white/[0.08] bg-[#0C1A2E]">
             {c.faqs.map(([question, answer]) => (
               <details key={question} className="group p-5">
                 <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-sans text-lg font-bold text-white">
@@ -722,7 +722,7 @@ function AboutPage({ locale, canonical, stats }: { locale: Locale; canonical: st
               { value: formatMillionMetric(stats.analyzedReviews, locale), label: c.reviews },
               { value: formatIntegerMetric(publicCategorySlugs.length, locale), label: c.categories }
             ].map((stat) => (
-              <div key={stat.label} className="rounded-lg border border-[#00C37A]/60 bg-[linear-gradient(135deg,#0A0A0A_0%,#262626_58%,#0A0A0A_100%)] px-6 py-5 text-white">
+              <div key={stat.label} className="rounded-lg border border-[#00C37A]/60 bg-[linear-gradient(135deg,#07101F_0%,#0F2035_58%,#07101F_100%)] px-6 py-5 text-white">
                 <div className="font-sans text-4xl font-black leading-none text-[#00C37A]">{stat.value}</div>
                 <div className="mt-2 text-[10px] font-bold uppercase tracking-[0.12em] text-white/75">{stat.label}</div>
               </div>

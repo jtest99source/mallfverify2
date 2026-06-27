@@ -26,7 +26,7 @@ export function CTABox({ locale = "es" }: { locale?: Locale }) {
   const c = copy[locale];
 
   return (
-    <section className="overflow-hidden rounded-sm border border-white/[0.10] bg-[linear-gradient(135deg,#0A0A0A_0%,#181818_58%,#0A0A0A_100%)] px-6 py-10 text-white shadow-[0_18px_45px_rgba(0,0,0,0.24)] sm:px-8">
+    <section className="overflow-hidden rounded-sm border border-white/[0.10] bg-[linear-gradient(135deg,#07101F_0%,#0C1A2E_58%,#07101F_100%)] px-6 py-10 text-white shadow-[0_18px_45px_rgba(0,0,0,0.24)] sm:px-8">
       <div className="grid gap-6 lg:grid-cols-[1fr_auto] lg:items-center">
         <div>
           <p className="text-3xl font-black leading-tight">{c.title}</p>

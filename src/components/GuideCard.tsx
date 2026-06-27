@@ -24,7 +24,7 @@ export function GuideCard({ guide, locale, editorialImage }: { guide: Guide; loc
   const copy = t(locale).guides;
 
   return (
-    <article className="flex h-full flex-col overflow-hidden rounded-md border border-[#E5E7EB] bg-white shadow-[0_6px_22px_rgba(10,10,10,0.06)] transition hover:-translate-y-0.5 hover:border-[#07101F] hover:shadow-[0_14px_34px_rgba(10,10,10,0.11)]">
+    <article className="flex h-full flex-col overflow-hidden rounded-md border border-white/[0.10] bg-[#0C1A2E] shadow-[0_6px_22px_rgba(0,0,0,0.18)] transition hover:-translate-y-0.5 hover:border-white/25 hover:shadow-[0_14px_34px_rgba(10,10,10,0.11)]">
       {imageUrl && (
         <div
           className="h-40 bg-[#F3F4F6] sm:h-44"

@@ -194,7 +194,7 @@ function CategoryRankingCard({ category, businesses, locale }: { category: Categ
   const ariaLabel = locale === "es" ? `Ver ranking de ${label}` : locale === "de" ? `Rangliste für ${label} ansehen` : `View ${label} ranking`;
 
   return (
-    <section className="group flex h-full min-w-0 flex-col rounded-lg border border-[#E5E7EB] bg-white p-4 shadow-[0_18px_45px_rgba(10,10,10,0.05)] transition-all duration-200 hover:-translate-y-1 hover:border-[#07101F] hover:shadow-[0_26px_70px_rgba(10,10,10,0.10)] sm:p-5">
+    <section className="group flex h-full min-w-0 flex-col rounded-lg border border-white/[0.10] bg-[#0C1A2E] p-4 shadow-[0_18px_45px_rgba(0,0,0,0.22)] transition-all duration-200 hover:-translate-y-1 hover:border-white/25 hover:shadow-[0_26px_70px_rgba(0,0,0,0.32)] sm:p-5">
       <div className="mb-3 flex items-center justify-between gap-4">
         <div className="flex items-center gap-3">
           <div className="inline-flex h-8 w-8 items-center justify-center rounded-md bg-[#07101F] text-[#00C37A]">
@@ -482,7 +482,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
               <div className="divide-y divide-white/10">
                 {restaurantsPalma.slice(0, 4).map((business, index) => (
                   <Link key={business.id} href={businessHref(safeLocale, business)} className="grid grid-cols-[42px_minmax(0,1fr)] gap-3 px-2 py-4 transition hover:bg-white/[0.06]">
-                    <span className="flex h-8 w-8 items-center justify-center rounded-sm bg-white text-[11px] font-black text-[#0A0A0A]">#{index + 1}</span>
+                    <span className="flex h-8 w-8 items-center justify-center rounded-sm bg-[#00C37A] text-[11px] font-black text-[#0A0A0A]">#{index + 1}</span>
                     <span className="min-w-0">
                       <span className="block truncate text-base font-black leading-tight text-white">{getBusinessPublicName(business)}</span>
                       <span className="mt-1 flex min-w-0 items-center gap-2 text-[12px] font-semibold text-white/55">

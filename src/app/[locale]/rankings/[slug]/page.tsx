@@ -121,7 +121,7 @@ export default async function RankingDetailPage({ params }: { params: Promise<{ 
   return (
     <main>
       <section
-        className="border-b border-borderline bg-white px-4 py-10 sm:px-6 lg:px-8"
+        className="border-b border-white/[0.08] bg-[#07101F] px-4 py-10 sm:px-6 lg:px-8"
         data-attribution={rankingEditorialImage?.attribution}
         data-image-alt={rankingEditorialImage?.alt}
       >
@@ -150,7 +150,7 @@ export default async function RankingDetailPage({ params }: { params: Promise<{ 
             const why = fallbackWhy(item, business);
 
             return (
-              <li key={item.position} className="grid gap-4 border-b border-linen bg-white py-6 last:border-b-0 md:grid-cols-[64px_120px_1fr]">
+              <li key={item.position} className="grid gap-4 border-b border-white/[0.08] bg-[#07101F] py-6 last:border-b-0 md:grid-cols-[64px_120px_1fr]">
                 <div className="font-sans text-4xl font-black leading-none text-borderline">#{item.position}</div>
                 <RankingBusinessImage business={business} name={publicName} />
                 <div className="min-w-0">

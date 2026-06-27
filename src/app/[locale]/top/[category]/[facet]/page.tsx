@@ -104,7 +104,7 @@ export default async function TopFacetPage({ params }: { params: Promise<{ local
             <div className="rounded-lg border border-[#E5E7EB] bg-white/80 p-5 shadow-[0_18px_45px_rgba(10,10,10,0.04)]">
               <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-[#0A0A0A]">{localCopy.methodologyTitle}</p>
               <p className="mt-2 text-sm leading-7 text-olive">{localCopy.methodologyText}</p>
-              <Link href={methodologyPath(safeLocale)} className="mt-4 inline-flex min-h-11 items-center justify-center rounded-sm bg-ink px-5 text-[11px] font-bold uppercase tracking-[0.1em] text-white hover:bg-[#262626]">
+              <Link href={methodologyPath(safeLocale)} className="mt-4 inline-flex min-h-11 items-center justify-center rounded-sm bg-ink px-5 text-[11px] font-bold uppercase tracking-[0.1em] text-white hover:bg-[#0C1A2E]">
                 {localCopy.methodologyCta}
               </Link>
             </div>
@@ -116,7 +116,7 @@ export default async function TopFacetPage({ params }: { params: Promise<{ local
         <section className="mx-auto max-w-7xl px-4 pb-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap gap-2">
             {relatedFacets.map((item) => (
-              <Link key={item.slug} href={facetPath(safeLocale, category, item.slug)} className="rounded-full border border-[#E5E7EB] bg-white px-3 py-2 text-[11px] font-bold uppercase tracking-[0.06em] text-ink hover:border-[#07101F] hover:text-[#0A0A0A]">
+              <Link key={item.slug} href={facetPath(safeLocale, category, item.slug)} className="rounded-full border border-white/[0.12] bg-[#0C1A2E] px-3 py-2 text-[11px] font-bold uppercase tracking-[0.06em] text-white/70 hover:border-white/30 hover:text-white">
                 {item.label} · {item.count.toLocaleString(numberLocale(safeLocale))}
               </Link>
             ))}
