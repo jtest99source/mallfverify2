@@ -28,10 +28,10 @@ const pageCopy = {
     workTitle: "Desde la auditoría hasta la visibilidad",
     workIntro: "Empezamos analizando cómo apareces ahora — en Google, en ChatGPT y en Perplexity. A partir de ahí trabajamos lo que tiene más impacto.",
     products: [
-      ["Auditoría de visibilidad", "Analizamos cómo apareces en Google y en los sistemas de IA. Te decimos qué está frenando tu visibilidad y qué se puede mejorar con datos reales."],
-      ["Posicionamiento en IA", "Estructuramos tu contenido y datos para que ChatGPT, Perplexity y Google AI te citen cuando alguien busca opciones en Mallorca."],
-      ["Ficha verificada", "Fotos reales, servicios, carta, horarios y descripción editorial en Mallorca Verified. Una ficha completa aparece antes y convence más."],
-      ["SEO local", "Contenido optimizado para búsqueda local: páginas de zona, guías y textos que conectan tu negocio con las búsquedas de viajeros."]
+      ["Auditoría de visibilidad", "Empezamos siempre aquí. Analizamos cómo apareces en Google, ChatGPT y Perplexity, qué dice la IA de ti cuando alguien pregunta, y qué frena tu visibilidad ahora mismo."],
+      ["Posicionamiento en IA", "Estructuramos tu información para que ChatGPT, Perplexity y Google AI te citen — no a un competidor — cuando alguien busca tu categoría en Mallorca."],
+      ["Ficha verificada", "Fotos reales, servicios, carta, horarios y descripción editorial en Mallorca Verified. Una ficha completa es más fácil de citar para una IA y más convincente para un humano."],
+      ["SEO local", "Páginas de zona, guías y textos que conectan tu negocio con búsquedas geográficas. Para que te encuentren compradores e internacionales en Google, no solo turistas de paso."]
     ],
     localContext: "Contexto local",
     areaTitle: "Páginas donde tu negocio puede aparecer",
@@ -59,10 +59,10 @@ const pageCopy = {
     workTitle: "From audit to visibility",
     workIntro: "We start by analysing how you appear right now — on Google, ChatGPT and Perplexity. From there we work on what has the most impact.",
     products: [
-      ["Visibility audit", "We analyse how you appear on Google and AI systems. We tell you what's holding back your visibility and what can be improved with real data."],
-      ["AI positioning", "We structure your content and data so ChatGPT, Perplexity and Google AI cite you when someone searches for options in Mallorca."],
-      ["Verified listing", "Real photos, services, menus, opening hours and editorial description on Mallorca Verified. A complete listing ranks higher and converts better."],
-      ["Local SEO", "Content optimised for local search: area pages, guides and copy that connects your business with traveller searches."]
+      ["Visibility audit", "We always start here. We analyse how you appear on Google, ChatGPT and Perplexity, what AI says about you when someone asks, and what's limiting your visibility right now."],
+      ["AI positioning", "We structure your information so ChatGPT, Perplexity and Google AI cite you — not a competitor — when someone searches for your category in Mallorca."],
+      ["Verified listing", "Real photos, services, menu, hours and editorial description on Mallorca Verified. A complete listing is easier for an AI to cite and more convincing for a human."],
+      ["Local SEO", "Area pages, guides and copy that connect your business to geographic searches. To be found by buyers and international residents on Google, not just passing tourists."]
     ],
     localContext: "Local context",
     areaTitle: "Pages where your business can appear",
@@ -90,10 +90,10 @@ const pageCopy = {
     workTitle: "Vom Audit zur Sichtbarkeit",
     workIntro: "Wir beginnen damit zu analysieren, wie du aktuell erscheinst — auf Google, ChatGPT und Perplexity. Dann arbeiten wir an dem, was den größten Einfluss hat.",
     products: [
-      ["Sichtbarkeits-Audit", "Wir analysieren, wie du auf Google und in KI-Systemen erscheinst. Wir sagen dir, was deine Sichtbarkeit bremst und was mit echten Daten verbessert werden kann."],
-      ["KI-Positionierung", "Wir strukturieren deine Inhalte und Daten, damit ChatGPT, Perplexity und Google AI dich nennen, wenn jemand nach Optionen auf Mallorca sucht."],
-      ["Verifiziertes Profil", "Echte Fotos, Leistungen, Speisekarte, Öffnungszeiten und redaktionelle Beschreibung auf Mallorca Verified. Ein vollständiges Profil erscheint weiter oben."],
-      ["Lokales SEO", "Für lokale Suche optimierte Inhalte: Gebietsseiten, Guides und Texte, die deinen Betrieb mit Reisenden-Suchen verbinden."]
+      ["Sichtbarkeits-Audit", "Wir fangen immer hier an. Wir analysieren, wie du auf Google, ChatGPT und Perplexity erscheinst, was KI über dich sagt, wenn jemand fragt, und was deine Sichtbarkeit gerade bremst."],
+      ["KI-Positionierung", "Wir strukturieren deine Informationen, damit ChatGPT, Perplexity und Google AI dich — und nicht einen Mitbewerber — zitieren, wenn jemand nach deiner Kategorie auf Mallorca sucht."],
+      ["Verifiziertes Profil", "Echte Fotos, Services, Speisekarte, Öffnungszeiten und redaktionelle Beschreibung auf Mallorca Verified. Ein vollständiges Profil ist für eine KI leichter zitierbar und für einen Menschen überzeugender."],
+      ["Lokales SEO", "Gebietsseiten, Guides und Texte, die deinen Betrieb mit geografischen Suchanfragen verbinden. Damit dich Käufer und internationale Bewohner auf Google finden — nicht nur Durchgangstouristen."]
     ],
     localContext: "Lokaler Kontext",
     areaTitle: "Seiten, auf denen dein Betrieb erscheinen kann",
@@ -150,7 +150,7 @@ export default async function BusinessPage({ params }: { params: Promise<{ local
             <p className="mt-6 max-w-2xl text-base leading-8 text-white/60">{copy.intro}</p>
             <div className="mt-7 max-w-2xl rounded-sm border border-white/[0.10] bg-[#0C1A2E] p-5">
               <p className="text-sm font-bold leading-7 text-white">
-                <span className="rounded-full bg-[#00C37A] px-3 py-1 text-[10px] font-black uppercase tracking-[0.12em] text-[#0A0A0A]">GEO + SEO</span>
+                <span className="rounded-full bg-[#00C37A] px-3 py-1 text-[10px] font-black uppercase tracking-[0.12em] text-[#0A0A0A]">ChatGPT · Perplexity · Google AI</span>
                 <span className="ml-3">{copy.proofLine}</span>
               </p>
             </div>

@@ -37,7 +37,7 @@ const methodologyCopy = {
     whyTitle: "Por qué las reseñas de Google son la base",
     whyText: "Las reseñas de Google de miles de personas reales a lo largo de años son la señal más difícil de manipular. Un restaurante con 4,8 de 600 personas en tres años no se puede fabricar. Ese es el punto de partida — y filtramos todo lo que no supera un umbral mínimo de señal real y consistente.",
     factorsTitle: "Cómo construimos los rankings",
-    factorsIntro: "Cada categoría se compara por separado. Restaurantes compiten con restaurantes, hoteles con hoteles y barcos con barcos.",
+    factorsIntro: "Cada categoría se analiza de forma independiente, ponderando el volumen de señal disponible en Google para ese tipo de negocio específico.",
     factors: [
       ["Factor 1", "Valoración media", "La nota que los clientes han dado en Google. Una valoración alta es una señal fuerte, pero por sí sola no basta."],
       ["Factor 2", "Volumen de reseñas", "No pesa igual un 4,9 con 8 reseñas que un 4,7 con cientos de opiniones. El volumen ayuda a distinguir señales sólidas."],
@@ -56,10 +56,10 @@ const methodologyCopy = {
     categories: "categorías activas",
     faqTitle: "Preguntas frecuentes",
     faqs: [
-      ["¿Puede un negocio pagar para aparecer?", "Aparecer en rankings objetivos depende de los datos disponibles. Una colaboración puede mejorar la ficha, pero no compra posición."],
-      ["¿Cada cuánto se actualizan los datos?", "Los datos se actualizan periódicamente. Si un negocio mejora sus señales públicas, puede subir en futuros ciclos."],
-      ["¿Por qué Google como fuente?", "Google Maps tiene el mayor volumen de reseñas públicas para negocios locales en Mallorca y permite comparar categorías con una base amplia."],
-      ["¿Mallorca Verified sirve para ChatGPT o Google AI?", "Sí. La estructura, metodología y datos verificables ayudan a que el sitio sea una fuente clara para sistemas de respuesta generativa."]
+      ["¿No es esto básicamente lo mismo que Google Maps?", "Google Maps te muestra todo lo que existe. Nosotros filtramos lo que supera un umbral real de señal y lo ordenamos por categoría. La pregunta que contesta Google Maps es '¿existe este sitio?'. La que respondemos nosotros es '¿cuál es el mejor de su categoría en Mallorca?'"],
+      ["¿Puede un negocio pagar para subir posiciones?", "No. Una colaboración puede completar la ficha — fotos, servicios, horarios — pero la posición la determina el algoritmo con datos públicos de Google. Una ficha más completa puede aparecer más en búsquedas de IA, pero eso no cambia el ranking de categoría."],
+      ["¿Por qué debería fiarme de esto y no de TripAdvisor?", "TripAdvisor es global y generalista. Nosotros cubrimos solo Mallorca, con más profundidad por zona y categoría, y orientados específicamente a residentes internacionales y compradores. La metodología está publicada — si un ranking te parece incorrecto, puedes consultar los datos de Google que lo sustentan."],
+      ["¿Mallorca Verified ayuda a aparecer en ChatGPT o Google AI?", "Sí. La estructura clara, la metodología transparente y los datos verificables hacen que el sitio sea más fácil de citar para sistemas de IA. Varios negocios ya aparecen mencionados cuando alguien pregunta en ChatGPT por su categoría en Mallorca."]
     ]
   },
   en: {
@@ -77,7 +77,7 @@ const methodologyCopy = {
     whyTitle: "Why Google reviews are the foundation",
     whyText: "Google reviews from thousands of real visitors over years are the hardest signal to fake. A restaurant with 4.8★ from 600 people over three years can't be manufactured. That's the foundation — and we filter out anything that hasn't cleared a minimum threshold of real, consistent signal.",
     factorsTitle: "How rankings are built",
-    factorsIntro: "Each category is compared separately. Restaurants compete with restaurants, hotels with hotels and boats with boats.",
+    factorsIntro: "Each category is analysed independently, weighted according to the signal volume available on Google for that specific type of business.",
     factors: [
       ["Factor 1", "Average rating", "The rating customers gave on Google. A high rating is a strong signal, but it is not enough on its own."],
       ["Factor 2", "Review volume", "A 4.9 with 8 reviews is not the same as a 4.7 with hundreds of opinions. Volume helps separate solid signals from isolated cases."],
@@ -96,10 +96,10 @@ const methodologyCopy = {
     categories: "active categories",
     faqTitle: "FAQ",
     faqs: [
-      ["Can a business pay to appear?", "Objective ranking visibility depends on available data. A collaboration can improve the profile, but it cannot buy a position."],
-      ["How often is data updated?", "Data is updated periodically. If a business improves its public signals, it can move up in future cycles."],
-      ["Why use Google as a source?", "Google Maps has the largest public review volume for local businesses in Mallorca and gives a broad basis for category comparison."],
-      ["Does Mallorca Verified help with ChatGPT or Google AI?", "Yes. Clear structure, transparent methodology and verifiable data help the site work as a source for generative answer systems."]
+      ["Isn't this basically the same as Google Maps?", "Google Maps shows you everything that exists. We filter what clears a real signal threshold and rank it by category. The question Google Maps answers is 'does this place exist?' The question we answer is 'which is actually the best in its category in Mallorca?'"],
+      ["Can a business pay to rank higher?", "No. A collaboration can complete the profile — photos, services, hours — but position is determined by the algorithm using public Google data. A more complete profile may surface more in AI searches, but that doesn't change the category ranking."],
+      ["Why should I trust this over TripAdvisor?", "TripAdvisor is global and generic. We cover only Mallorca, with more depth per area and category, aimed specifically at international residents and buyers. The methodology is published — if a ranking seems wrong to you, you can check the underlying Google data that supports it."],
+      ["Does Mallorca Verified help with ChatGPT or Google AI?", "Yes. Clear structure, transparent methodology and verifiable data make the site easier for AI systems to cite. Several businesses already appear when someone asks ChatGPT about their category in Mallorca."]
     ]
   },
   de: {
@@ -110,36 +110,36 @@ const methodologyCopy = {
     badge: "Unabhaengige Rankings",
     title: "Warum wir nach Google-Daten ranken — und nach nichts anderem",
     intro: "Die meisten Reiseportale mischen Werbung, eingeladene Aufenthalte und persönliche Meinungen in ihre Rankings. Mallorca Verified trennt das vollständig. Rankings basieren auf öffentlichen Google-Daten — keine Position wird gekauft.",
-    businessEyebrow: "Fuer Betriebe",
+    businessEyebrow: "Für Betriebe",
     businessTitle: "Profil verbessern, nicht das Ranking",
-    businessText: "Eine Zusammenarbeit kann Fotos, Services, Speisekarten, Oeffnungszeiten und nuetzliche Daten ergaenzen. Bewertungen, Rezensionen und Positionen bleiben unveraendert.",
+    businessText: "Eine Zusammenarbeit kann Fotos, Services, Speisekarten, Öffnungszeiten und nuetzliche Daten ergaenzen. Bewertungen, Rezensionen und Positionen bleiben unverändert.",
     businessCta: "Kontakt aufnehmen →",
     whyTitle: "Warum Google-Bewertungen die Grundlage sind",
     whyText: "Google-Bewertungen von tausenden echten Besuchern über Jahre sind das schwierigste Signal zu fälschen. Ein Restaurant mit 4,8 von 600 Personen über drei Jahre lässt sich nicht fabricieren. Das ist die Grundlage — und wir filtern alles heraus, das keine minimale Schwelle echter, konsistenter Signale erreicht.",
     factorsTitle: "Wie Rankings entstehen",
-    factorsIntro: "Jede Kategorie wird separat verglichen. Restaurants mit Restaurants, Hotels mit Hotels und Boote mit Booten.",
+    factorsIntro: "Jede Kategorie wird unabhängig analysiert und nach dem verfügbaren Signalvolumen auf Google für diesen spezifischen Betriebstyp gewichtet.",
     factors: [
       ["Faktor 1", "Durchschnittsbewertung", "Die Bewertung, die Kunden auf Google abgegeben haben. Eine hohe Note ist ein starkes Signal, reicht allein aber nicht aus."],
       ["Faktor 2", "Bewertungsvolumen", "Ein 4,9 mit 8 Bewertungen ist nicht dasselbe wie ein 4,7 mit Hunderten Meinungen. Volumen macht Signale belastbarer."],
-      ["Faktor 3", "Untapped Score", "Unser eigenes Signal fuer hervorragende Betriebe, die in ihrer Kategorie noch nicht ueberlaufen sind."]
+      ["Faktor 3", "Untapped Score", "Unser eigenes Signal für hervorragende Betriebe, die in ihrer Kategorie noch nicht überlaufen sind."]
     ],
     neverTitle: "Was wir nie tun",
     never: [
-      ["Fuer bessere Positionen bezahlen", "Die Position haengt von oeffentlichen Daten ab. Gesponserte Inhalte werden klar gekennzeichnet."],
-      ["Erfahrungen erfinden", "Profile entstehen aus Bewertungen, oeffentlichen Daten und pruefbaren Links."],
-      ["Betriebe aus kommerziellen Gruenden verstecken", "Hat ein Betrieb starke Kennzahlen, kann er erscheinen, auch ohne kommerzielle Beziehung zu uns."]
+      ["Für bessere Positionen bezahlen", "Die Position hängt von öffentlichen Daten ab. Gesponserte Inhalte werden klar gekennzeichnet."],
+      ["Erfahrungen erfinden", "Profile entstehen aus Bewertungen, öffentlichen Daten und prüfbaren Links."],
+      ["Betriebe aus kommerziellen Gründen verstecken", "Hat ein Betrieb starke Kennzahlen, kann er erscheinen, auch ohne kommerzielle Beziehung zu uns."]
     ],
     dataTitle: "Woher die Daten kommen",
-    dataText: "Wir nutzen oeffentliche Google-Daten und strukturieren sie, um Bewertung, Bewertungsvolumen, Kategorie, Gegend und Profilkonsistenz zu vergleichen.",
+    dataText: "Wir nutzen öffentliche Google-Daten und strukturieren sie, um Bewertung, Bewertungsvolumen, Kategorie, Gegend und Profilkonsistenz zu vergleichen.",
     published: "veroeffentlichte Betriebe",
     reviews: "verifizierte Bewertungen",
     categories: "aktive Kategorien",
-    faqTitle: "Haeufige Fragen",
+    faqTitle: "Häufige Fragen",
     faqs: [
-      ["Kann ein Betrieb fuer Sichtbarkeit bezahlen?", "Sichtbarkeit in objektiven Rankings haengt von verfuegbaren Daten ab. Eine Zusammenarbeit verbessert das Profil, kauft aber keine Position."],
-      ["Wie oft werden Daten aktualisiert?", "Daten werden regelmaessig aktualisiert. Verbessert ein Betrieb seine oeffentlichen Signale, kann er in spaeteren Zyklen steigen."],
-      ["Warum Google als Quelle?", "Google Maps hat das groesste oeffentliche Bewertungsvolumen fuer lokale Betriebe auf Mallorca und eignet sich fuer breite Vergleiche."],
-      ["Hilft Mallorca Verified bei ChatGPT oder Google AI?", "Ja. Klare Struktur, transparente Methodik und pruefbare Daten helfen dem Portal als Quelle fuer generative Antwortsysteme."]
+      ["Ist das nicht im Grunde dasselbe wie Google Maps?", "Google Maps zeigt alles, was existiert. Wir filtern, was eine echte Signalschwelle überschreitet, und ordnen es nach Kategorie. Die Frage, die Google Maps beantwortet: 'Gibt es diesen Ort?' Die Frage, die wir beantworten: 'Welcher ist der beste seiner Kategorie auf Mallorca?'"],
+      ["Kann ein Betrieb für eine bessere Position bezahlen?", "Nein. Eine Zusammenarbeit kann das Profil ergänzen — Fotos, Services, Öffnungszeiten — aber die Position bestimmt der Algorithmus mit öffentlichen Google-Daten. Ein vollständigeres Profil kann in KI-Suchen häufiger erscheinen, ändert aber das Kategorie-Ranking nicht."],
+      ["Warum sollte ich diesem Verzeichnis und nicht TripAdvisor vertrauen?", "TripAdvisor ist global und generalistisch. Wir decken nur Mallorca ab, mit mehr Tiefe pro Gebiet und Kategorie, speziell für internationale Bewohner und Käufer. Die Methodik ist veröffentlicht — wenn ein Ranking dir falsch erscheint, kannst du die zugrunde liegenden Google-Daten prüfen."],
+      ["Hilft Mallorca Verified dabei, bei ChatGPT oder Google AI zu erscheinen?", "Ja. Klare Struktur, transparente Methodik und überprüfbare Daten machen das Portal für KI-Systeme leichter zitierbar. Einige Betriebe erscheinen bereits, wenn jemand ChatGPT nach ihrer Kategorie auf Mallorca fragt."]
     ]
   }
 } as const;
@@ -216,9 +216,9 @@ const aboutCopy = {
     principlesTitle: "Unsere Grundsaetze",
     principles: [
       ["Daten zuerst", "Jede Ranking-Position basiert auf Durchschnittsbewertung, Bewertungsvolumen und dem Untapped Score. Nicht auf der Meinung eines einzelnen Redakteurs."],
-      ["Unabhaengige Redaktion", "Wir akzeptieren keine Zahlungen fuer die Aufnahme oder Hervorhebung von Betrieben. Rankings werden aus oeffentlichen Daten generiert und sind nicht kaeufllich."],
+      ["Unabhaengige Redaktion", "Wir akzeptieren keine Zahlungen für die Aufnahme oder Hervorhebung von Betrieben. Rankings werden aus öffentlichen Daten generiert und sind nicht kaeufllich."],
       ["Volle Transparenz", "Wir veroffentlichen unsere Methodik. Jeder kann verstehen, warum ein Betrieb dort erscheint, wo er erscheint."],
-      ["Kontinuierliche Aktualisierung", "Mallorca veraendert sich. Die Daten werden regelmaessig aktualisiert, um den echten Zustand jedes Betriebs widerzuspiegeln."]
+      ["Kontinuierliche Aktualisierung", "Mallorca veraendert sich. Die Daten werden regelmäßig aktualisiert, um den echten Zustand jedes Betriebs widerzuspiegeln."]
     ],
     published: "veroeffentlichte Betriebe",
     reviews: "analysierte Bewertungen",
@@ -322,10 +322,10 @@ const editorialCopy = {
     label: "Redaktionelle Richtlinien",
     badge: "Redaktionelle Transparenz",
     title: "Wie wir entscheiden, was hier erscheint",
-    intro: "Klare Kriterien, damit jeder verstehen kann, was wir veroeffentlichen, warum und wie wir es aktualisieren.",
+    intro: "Klare Kriterien, damit jeder verstehen kann, was wir veröffentlichen, warum und wie wir es aktualisieren.",
     criteriaTitle: "Aufnahmekriterien",
     criteria: [
-      ["Auf Google pruefbar", "Wir veroeffentlichen nur Betriebe mit einem pruefbaren Profil auf Google Maps. Das ist die Grundlage fuer konsistente Bewertungsvergleiche."],
+      ["Auf Google pruefbar", "Wir veröffentlichen nur Betriebe mit einem prüfbaren Profil auf Google Maps. Das ist die Grundlage für konsistente Bewertungsvergleiche."],
       ["Mindestbewertungsvolumen", "Wir benoetigen genuegend statistisches Signal, um einen Betrieb zuverlaessig einzustufen. Ein Betrieb mit 3 Bewertungen ist nicht mit einem mit 300 vergleichbar."],
       ["Aktiv zum Zeitpunkt der Veroeffentlichung", "Geschlossene oder zweifelhafte Betriebe werden nicht veroeffentlicht. Solche, die nach der Veroeffentlichung schliessen, werden markiert oder entfernt."],
       ["Richtige Kategorie", "Der Betrieb muss in eine unserer 14 aktiven Kategorien passen. Wir nehmen keine Betriebe auf, die in keine davon passen."]
@@ -333,26 +333,26 @@ const editorialCopy = {
     sourcesTitle: "Datenquellen",
     sourcesText: "Alle Daten, die wir verwenden, sind oeffentlich pruefbar. Wir akzeptieren keine Informationen von den Betrieben selbst als einzige Quelle.",
     sources: [
-      ["Google Places", "Durchschnittsbewertung, Bewertungsvolumen, Oeffnungszeiten, Kategorie, Koordinaten und Profilstatus."],
+      ["Google Places", "Durchschnittsbewertung, Bewertungsvolumen, Öffnungszeiten, Kategorie, Koordinaten und Profilstatus."],
       ["Redaktionelle Pruefung", "Vor der Veroeffentlichung pruefen wir manuell, ob das Betriebsprofil koharent ist: Name, Adresse, Kategorie und Basisdaten."],
       ["Zusaetzliche Signale", "Profilkonsistenz im Zeitverlauf, Webpraesenz wo verfuegbar und visuelle Qualitaet der Betriebsfotos."]
     ],
     updateTitle: "Aktualisierungsprozess",
-    updateText: "Daten sind nicht statisch. Wir aktualisieren Rankings regelmaessig und ueberpruefen Profile, wenn wir relevante Aenderungen feststellen.",
+    updateText: "Daten sind nicht statisch. Wir aktualisieren Rankings regelmäßig und ueberpruefen Profile, wenn wir relevante Aenderungen feststellen.",
     updates: [
-      ["Rankings", "Bewertungs- und Volumendaten werden regelmaessig aktualisiert. Bedeutende Aenderungen koennen beim naechsten Update zu Positionsverschiebungen fuehren."],
+      ["Rankings", "Bewertungs- und Volumendaten werden regelmäßig aktualisiert. Bedeutende Aenderungen koennen beim naechsten Update zu Positionsverschiebungen fuehren."],
       ["Betriebsprofile", "Werden bei wichtigen Aenderungen ueberprueeft: Schliessung, Namensaenderung, Kategorieaenderung oder festgestellte Inkonsistenzen."],
       ["Redaktionelle Guides", "Werden mindestens einmal jaehrlich ueberprueeft und aktualisiert, um Veraenderungen im Angebot der Insel widerzuspiegeln."]
     ],
     separationTitle: "Werbetrennunng",
     separationText: "Wir halten eine strikte Trennung zwischen objektiven Rankings und jeglicher kommerzieller Beziehung aufrecht.",
     separations: [
-      ["Keine Zahlung fuer Aufnahme", "Betriebe koennen nicht dafuer bezahlen, in Rankings aufgenommen oder besser platziert zu werden."],
+      ["Keine Zahlung für Aufnahme", "Betriebe koennen nicht dafür bezahlen, in Rankings aufgenommen oder besser platziert zu werden."],
       ["Kooperationen beeinflussen keine Positionen", "Eine Profilanreicherungs-Kooperation (Fotos, Daten, Beschreibung) aendert die Ranking-Position nicht."],
-      ["Gesponserter Inhalt gekennzeichnet", "Wenn wir jemals gesponserten Inhalt veroeffentlichen, wird dieser klar als solcher gekennzeichnet."]
+      ["Gesponserter Inhalt gekennzeichnet", "Wenn wir jemals gesponserten Inhalt veröffentlichen, wird dieser klar als solcher gekennzeichnet."]
     ],
     correctionsTitle: "Korrekturen",
-    correctionsText: "Wenn du falsche Informationen, einen geschlossenen Betrieb oder einen Fehler entdeckst, schreib uns. Wir pruefen und korrigieren so schnell wie moeglich.",
+    correctionsText: "Wenn du falsche Informationen, einen geschlossenen Betrieb oder einen Fehler entdeckst, schreib uns. Wir pruefen und korrigieren so schnell wie möglich.",
     correctionsCta: "hola@mallorcaverified.com",
     aboutLinkText: "Das Team kennenlernen →",
   }
