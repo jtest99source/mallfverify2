@@ -524,7 +524,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
 
       <section className="border-b border-white/[0.08] bg-[#07101F] px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
         <div className="mx-auto grid max-w-[1360px] gap-8 lg:grid-cols-[300px_minmax(0,1fr)]">
-        <div className="lg:sticky lg:top-24 lg:self-start">
+        <div className="text-center lg:sticky lg:top-24 lg:self-start lg:text-left">
           <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#00C37A]">{copy.home.selection}</p>
           <h2 className="font-display mt-3 text-4xl font-bold leading-[0.96] text-white sm:text-5xl">
             {safeLocale === "de" ? "Mallorca-Rankings nach Kategorie" : safeLocale === "en" ? "Mallorca rankings, by category" : "Rankings de Mallorca por categoría"}
@@ -554,7 +554,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
       <section className="bg-[#0C1A2E] px-4 py-10 sm:px-6 sm:py-20 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <div className="mb-8 flex items-end justify-between gap-6">
-          <div>
+          <div className="text-center lg:text-left">
             <p className="text-[11px] font-black uppercase tracking-[0.18em] text-[#00C37A]">
               {safeLocale === "de" ? "Methode" : safeLocale === "en" ? "Method" : "Método"}
             </p>
@@ -635,7 +635,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
 
       <section className="px-4 py-12 sm:px-6 sm:py-20 lg:px-8">
         <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-[minmax(0,1fr)_360px] md:items-center md:gap-12">
-          <div>
+          <div className="text-center md:text-left">
           <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-[#00C37A]">
             {safeLocale === "de" ? "Für Unternehmen" : safeLocale === "en" ? "For businesses" : "Para negocios"}
           </p>
