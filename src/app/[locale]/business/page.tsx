@@ -144,15 +144,13 @@ export default async function BusinessPage({ params }: { params: Promise<{ local
     <main className="bg-[#07101F] text-white">
       <section className="border-b border-white/[0.08] px-4 py-14 sm:px-6 lg:px-8">
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1fr_360px] lg:items-end">
-          <div>
+          <div className="text-center sm:text-left">
             <p className="text-[11px] font-black uppercase tracking-[0.18em] text-[#00C37A]">{copy.eyebrow}</p>
             <h1 className="mt-4 max-w-4xl font-display text-4xl font-black leading-[0.96] text-white sm:text-5xl lg:text-7xl">{copy.title}</h1>
             <p className="mt-6 max-w-2xl text-base leading-8 text-white/75">{copy.intro}</p>
-            <div className="mt-7 max-w-2xl rounded-sm border border-white/[0.10] bg-[#0C1A2E] p-5">
-              <p className="text-sm font-bold leading-7 text-white">
-                <span className="rounded-full bg-[#00C37A] px-3 py-1 text-[10px] font-black uppercase tracking-[0.12em] text-[#0A0A0A]">ChatGPT · Perplexity · Google AI</span>
-                <span className="ml-3">{copy.proofLine}</span>
-              </p>
+            <div className="mx-auto mt-7 max-w-2xl rounded-sm border border-white/[0.10] bg-[#0C1A2E] p-5 sm:mx-0">
+              <span className="inline-block rounded-full bg-[#00C37A] px-3 py-1 text-[10px] font-black uppercase tracking-[0.12em] text-[#0A0A0A]">ChatGPT · Perplexity · Google AI</span>
+              <p className="mt-3 text-sm font-bold leading-7 text-white">{copy.proofLine}</p>
             </div>
           </div>
           <div className="rounded-sm border border-white/[0.10] bg-[#0C1A2E] p-6">
@@ -181,10 +179,10 @@ export default async function BusinessPage({ params }: { params: Promise<{ local
           </div>
           <div className="grid gap-5 sm:grid-cols-2">
             {copy.products.map(([title, text], index) => (
-              <article key={title} className="rounded-sm border border-white/[0.10] bg-[#0C1A2E] p-6 transition-all duration-150 hover:-translate-y-0.5 hover:border-white/25">
-                <div className="mb-5 flex h-9 w-9 items-center justify-center rounded-full bg-[#00C37A] text-xs font-black text-[#0A0A0A]">0{index + 1}</div>
-                <h3 className="text-2xl font-black text-white">{title}</h3>
-                <p className="mt-3 text-sm leading-7 text-white/70">{text}</p>
+              <article key={title} className="rounded-sm border border-white/[0.10] border-t-[#00C37A]/50 border-t-2 bg-[#0C1A2E] p-6 transition-all duration-150 hover:-translate-y-0.5 hover:border-white/25 hover:border-t-[#00C37A]">
+                <div className="mb-4 flex h-7 w-7 items-center justify-center rounded-full bg-[#00C37A]/15 text-[10px] font-black text-[#00C37A]">0{index + 1}</div>
+                <h3 className="text-lg font-black text-white">{title}</h3>
+                <p className="mt-2 text-sm leading-7 text-white/70">{text}</p>
               </article>
             ))}
           </div>
@@ -201,9 +199,12 @@ export default async function BusinessPage({ params }: { params: Promise<{ local
           </div>
           <div className="mt-5 grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
             {areaPages.slice(0, 9).map((page) => (
-              <a key={`${page.areaSlug}-${page.category}`} href={`/${safeLocale}/areas/${page.areaSlug}/${page.category}`} className="rounded-sm border border-white/[0.10] bg-[#07101F] p-4 transition-all duration-150 hover:border-white/25">
-                <p className="text-sm font-bold text-white">{getCategoryCopy(page.category, safeLocale).label} · {page.area}</p>
-                <p className="mt-1 text-xs font-semibold text-white/50">{page.count} {copy.profiles}</p>
+              <a key={`${page.areaSlug}-${page.category}`} href={`/${safeLocale}/areas/${page.areaSlug}/${page.category}`} className="group flex items-center justify-between rounded-sm border border-white/[0.10] bg-[#07101F] p-4 transition-all duration-150 hover:border-[#00C37A]/40">
+                <div>
+                  <p className="text-sm font-bold text-white group-hover:text-[#00C37A]">{getCategoryCopy(page.category, safeLocale).label} · {page.area}</p>
+                  <p className="mt-0.5 text-xs font-semibold text-white/50">{page.count} {copy.profiles}</p>
+                </div>
+                <span className="text-[#00C37A] opacity-0 transition-opacity group-hover:opacity-100">→</span>
               </a>
             ))}
           </div>
