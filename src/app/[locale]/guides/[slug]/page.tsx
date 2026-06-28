@@ -39,8 +39,8 @@ function renderBody(text: string) {
   return text.split(/\n\n+/).map((para, i) => {
     const parts = para.split(/\*\*(.+?)\*\*/g);
     return (
-      <p key={i} className="mt-4 text-base leading-7 text-ink/75">
-        {parts.map((part, j) => j % 2 === 1 ? <strong key={j}>{part}</strong> : part)}
+      <p key={i} className="mt-4 text-[15px] leading-7 text-white/68 sm:text-base sm:leading-8">
+        {parts.map((part, j) => j % 2 === 1 ? <strong key={j} className="font-bold text-white/90">{part}</strong> : part)}
       </p>
     );
   });
@@ -67,20 +67,26 @@ function HotelCard({ business, locale }: { business: Business; locale: Locale })
   const nloc = locale === "de" ? "de-DE" : locale === "en" ? "en-GB" : "es-ES";
 
   return (
-    <Link href={href} className="group grid grid-rows-[120px_1fr] rounded-md border border-borderline bg-white transition hover:-translate-y-0.5 hover:shadow-soft">
+    <Link href={href} className="group grid grid-rows-[130px_1fr] rounded-sm border border-white/[0.10] bg-[#0C1A2E] transition hover:-translate-y-0.5 hover:border-[#00C37A]/40">
       <div
-        className="rounded-t-md bg-sea bg-cover bg-center"
-        style={image ? { backgroundImage: `linear-gradient(180deg, rgba(28,28,24,0.02), rgba(28,28,24,0.22)), url(${image})` } : { backgroundImage: "linear-gradient(135deg, #0A0A0A, #262626)" }}
+        className="rounded-t-sm bg-[#040D1A] bg-cover bg-center"
+        style={image ? { backgroundImage: `url(${image})` } : undefined}
       />
       <div className="p-4">
-        <p className="text-[9px] font-bold uppercase tracking-[0.14em] text-turquesa">{categoryConfigs[getCategorySlugFromBusiness(business.category)].singular}</p>
-        <h3 className="mt-2 line-clamp-2 font-sans text-lg font-bold leading-tight text-ink">{getBusinessPublicName(business)}</h3>
-        <p className="mt-2 text-[10px] font-semibold uppercase tracking-[0.08em] text-sage">{business.city || business.area || "Mallorca"}</p>
-        <div className="mt-3 text-[11px] text-sage">
-          {typeof business.rating === "number" && <span className="font-bold text-coral">★ {business.rating.toLocaleString(nloc, { minimumFractionDigits: 1, maximumFractionDigits: 1 })}</span>}
-          {typeof business.reviewsCount === "number" && <span> · {business.reviewsCount.toLocaleString(nloc)} {gCopy.reviews}</span>}
+        <p className="text-[9px] font-bold uppercase tracking-[0.14em] text-[#00C37A]">
+          {categoryConfigs[getCategorySlugFromBusiness(business.category)]?.singular}
+        </p>
+        <h3 className="mt-2 line-clamp-2 text-[15px] font-black leading-tight text-white">{getBusinessPublicName(business)}</h3>
+        <p className="mt-1.5 text-[10px] font-semibold uppercase tracking-[0.08em] text-white/45">{business.city || business.area || "Mallorca"}</p>
+        <div className="mt-2 text-[11px] text-white/55">
+          {typeof business.rating === "number" && (
+            <span className="font-bold text-[#FFCC00]">★ {business.rating.toLocaleString(nloc, { minimumFractionDigits: 1, maximumFractionDigits: 1 })}</span>
+          )}
+          {typeof business.reviewsCount === "number" && (
+            <span> · {business.reviewsCount.toLocaleString(nloc)} {gCopy.reviews}</span>
+          )}
         </div>
-        <span className="mt-4 inline-flex text-[10px] font-bold uppercase tracking-[0.1em] text-coral">{gCopy.viewProfile}</span>
+        <span className="mt-4 inline-flex text-[10px] font-black uppercase tracking-[0.1em] text-[#00C37A]">{gCopy.viewProfile} →</span>
       </div>
     </Link>
   );
@@ -109,24 +115,24 @@ function RelatedGuides({ guides, locale, label }: { guides: Guide[]; locale: Loc
   if (!guides.length) return null;
   return (
     <aside className="mx-auto max-w-4xl px-4 pb-12 sm:px-6 lg:px-8">
-      <div className="border-t border-borderline pt-10">
-        <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-coral">{label}</p>
+      <div className="border-t border-white/[0.08] pt-10">
+        <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-[#00C37A]">{label}</p>
         <div className="mt-5 grid gap-4 sm:grid-cols-3">
           {guides.map((guide) => (
             <Link
               key={guide.slug}
               href={`/${locale}/guides/${guide.slug}`}
-              className="group flex flex-col rounded-lg border border-borderline bg-white p-5 shadow-[0_4px_18px_rgba(10,10,10,0.05)] transition hover:shadow-[0_8px_28px_rgba(10,10,10,0.10)]"
+              className="group flex flex-col rounded-sm border border-white/[0.10] bg-[#0C1A2E] p-4 transition hover:-translate-y-0.5 hover:border-[#00C37A]/40"
             >
               {guide.heroImageUrl && (
                 <div
-                  className="mb-4 h-28 rounded-md bg-sea bg-cover bg-center"
-                  style={{ backgroundImage: `linear-gradient(180deg,rgba(28,28,24,.04),rgba(28,28,24,.2)),url(${guide.heroImageUrl})` }}
+                  className="mb-4 h-28 rounded-sm bg-[#040D1A] bg-cover bg-center"
+                  style={{ backgroundImage: `url(${guide.heroImageUrl})` }}
                 />
               )}
-              <p className="line-clamp-2 font-sans text-[15px] font-bold leading-snug text-ink group-hover:text-[#0A0A0A]">{guide.title}</p>
-              <p className="mt-2 line-clamp-2 text-[12px] leading-5 text-olive">{guide.excerpt}</p>
-              <span className="mt-auto pt-4 text-[10px] font-bold uppercase tracking-[0.1em] text-coral">
+              <p className="line-clamp-2 text-[14px] font-black leading-snug text-white">{guide.title}</p>
+              <p className="mt-2 line-clamp-2 text-[12px] leading-5 text-white/55">{guide.excerpt}</p>
+              <span className="mt-auto pt-4 text-[10px] font-black uppercase tracking-[0.1em] text-[#00C37A]">
                 {locale === "de" ? "Guide lesen →" : locale === "en" ? "Read guide →" : "Leer guía →"}
               </span>
             </Link>
@@ -193,16 +199,16 @@ export default async function GuideDetailPage({ params }: { params: Promise<{ lo
   ];
 
   return (
-    <main className="bg-[linear-gradient(180deg,#FFFFFF_0%,#FFFFFF_46%,#FFFFFF_100%)]">
+    <main className="bg-[#07101F] text-white">
       <article className="mx-auto max-w-4xl px-4 pb-10 pt-8 sm:px-6 sm:pt-12 lg:px-8">
         <Breadcrumbs items={[{ label: copy.category.breadcrumbHome, href: `/${safeLocale}` }, { label: copy.nav.guides, href: `/${safeLocale}/guides` }, { label: guide.title, href: `/${safeLocale}/guides/${guide.slug}` }]} />
-        <p className="mt-6 text-[11px] font-semibold uppercase tracking-[0.2em] text-[#0A0A0A]">{copy.guides.updatedLabel} {formatDate(guide.updatedAt, safeLocale)}</p>
-        <h1 className="mt-3 font-sans text-3xl font-black text-[#0A0A0A] sm:text-5xl">{guide.title}</h1>
-        <p className="mt-4 max-w-3xl text-base leading-7 text-[#6B7280] sm:text-xl sm:leading-8">{guide.intro}</p>
+        <p className="mt-6 text-[11px] font-semibold uppercase tracking-[0.2em] text-white/40">{copy.guides.updatedLabel} {formatDate(guide.updatedAt, safeLocale)}</p>
+        <h1 className="mt-3 font-display text-3xl font-black leading-tight text-white sm:text-5xl">{guide.title}</h1>
+        <p className="mt-4 max-w-3xl text-base leading-7 text-white/60 sm:text-lg sm:leading-8">{guide.intro}</p>
 
-        <div className="mt-6 rounded-md border border-[#E5E7EB] border-l-4 border-l-[#0A0A0A] bg-[#FFFFFF] px-5 py-4 text-base leading-7 text-[#6B7280] shadow-[0_14px_34px_rgba(10,10,10,0.04)] sm:mt-8 sm:px-6 sm:py-5 sm:text-lg sm:leading-8">
+        <blockquote className="mt-6 border-l-2 border-[#00C37A] py-1 pl-5 text-[15px] leading-7 text-white/60 sm:mt-8 sm:text-base sm:leading-8">
           {guide.excerpt}
-        </div>
+        </blockquote>
 
         <div className="mt-12 space-y-12">
           {guide.sections.map((section) => {
@@ -211,13 +217,13 @@ export default async function GuideDetailPage({ params }: { params: Promise<{ lo
               .filter((business): business is Business => Boolean(business));
 
             return (
-              <section key={section.heading} className="border-b border-borderline pb-10 last:border-b-0">
-                <h2 className="font-sans text-2xl font-semibold leading-tight sm:text-3xl">{section.heading}</h2>
+              <section key={section.heading} className="border-b border-white/[0.08] pb-10 last:border-b-0">
+                <h2 className="font-display text-2xl font-bold leading-tight text-white sm:text-3xl">{section.heading}</h2>
                 {renderBody(section.body)}
                 {section.best_for?.length ? (
                   <div className="mt-5 flex flex-wrap gap-2">
                     {section.best_for.map((tag) => (
-                      <span key={tag} className="rounded-full border border-borderline bg-paper px-3 py-1 text-[10px] font-bold uppercase tracking-[0.08em] text-olive">
+                      <span key={tag} className="rounded-full border border-white/[0.10] bg-white/[0.04] px-3 py-1 text-[10px] font-bold uppercase tracking-[0.08em] text-white/55">
                         {tag}
                       </span>
                     ))}
@@ -225,7 +231,7 @@ export default async function GuideDetailPage({ params }: { params: Promise<{ lo
                 ) : null}
                 {sectionHotels.length > 0 && (
                   <div className="mt-7">
-                    <p className="text-[9px] font-bold uppercase tracking-[0.14em] text-coral">
+                    <p className="text-[9px] font-bold uppercase tracking-[0.14em] text-[#00C37A]">
                       {categoryConfigs[getCategorySlugFromBusiness(sectionHotels[0].category)]?.label ?? copy.guides.recommended}
                     </p>
                     <div className="mt-3 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
