@@ -445,7 +445,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
             <div className="mb-6 inline-flex items-center gap-3 text-[10px] font-semibold uppercase tracking-[0.16em] text-[#00C37A] before:h-px before:w-6 before:bg-[#00C37A] after:h-px after:w-6 after:bg-[#00C37A]">
               {safeLocale === "de" ? "Echte Daten · Keine bezahlten Platzierungen" : safeLocale === "en" ? "Real data · No paid placements" : "Datos reales · Sin posiciones de pago"}
             </div>
-            <h1 className="font-display mx-auto max-w-4xl text-balance text-5xl font-black leading-[0.92] text-white sm:text-7xl lg:text-[88px]">
+            <h1 className="font-display mx-auto max-w-4xl text-balance text-[2.6rem] font-black leading-[0.92] text-white sm:text-7xl lg:text-[88px]">
               {safeLocale === "de" ? (
                 <>Finde das <em className="italic text-[#00C37A]">Beste</em><br className="hidden sm:block" /> auf Mallorca.</>
               ) : safeLocale === "en" ? (
@@ -514,7 +514,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
             ))}
           </div>
 
-          <div className="mt-5 hidden flex-wrap justify-center gap-x-5 gap-y-2 text-[11px] font-bold uppercase tracking-[0.08em] text-white/45 sm:flex">
+          <div className="mt-5 flex flex-wrap justify-center gap-x-5 gap-y-2 text-[11px] font-bold uppercase tracking-[0.08em] text-white/45">
             {copy.home.signals.map((item) => (
               <span key={item} className="inline-flex items-center gap-2"><IconCircleCheckFilled size={14} className="text-[#00C37A]" />{item}</span>
             ))}

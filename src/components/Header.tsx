@@ -48,6 +48,9 @@ export function Header({ locale }: { locale: Locale }) {
           <NavLogo locale={locale} />
 
           <nav className="hidden items-center gap-8 lg:flex">
+            <Link href={`/${locale}`} className="inline-flex h-9 items-center gap-1.5 text-[11px] font-semibold uppercase tracking-[0.1em] text-white/45 transition-colors duration-150 hover:text-white">
+              {locale === "de" ? "Start" : locale === "en" ? "Home" : "Inicio"}
+            </Link>
             <Link href={`/${locale}/experts`} className="inline-flex h-9 items-center gap-1.5 text-[11px] font-semibold uppercase tracking-[0.1em] text-white/45 transition-colors duration-150 hover:text-white">
               {expertsLabel(locale)}
             </Link>
@@ -102,6 +105,10 @@ export function Header({ locale }: { locale: Locale }) {
             <SearchBox locale={locale} variant="nav" />
           </div>
           <nav className="shrink-0 border-b border-white/[0.08] px-4 py-3">
+            <Link href={`/${locale}`} onClick={() => setMobileOpen(false)} className="group flex min-h-[44px] items-center gap-3 rounded-sm px-3 text-sm font-bold text-white/75 hover:bg-white/[0.08] hover:text-white">
+              <IconMenu2 size={15} stroke={1.8} className="shrink-0 text-[#00C37A]" />
+              {locale === "de" ? "Start" : locale === "en" ? "Home" : "Inicio"}
+            </Link>
             <Link href={`/${locale}/experts`} onClick={() => setMobileOpen(false)} className="group flex min-h-[44px] items-center gap-3 rounded-sm px-3 text-sm font-bold text-white/75 hover:bg-white/[0.08] hover:text-white">
               <IconShieldCheck size={15} stroke={1.8} className="shrink-0 text-[#00C37A]" />
               {expertsLabel(locale)}
@@ -118,9 +125,7 @@ export function Header({ locale }: { locale: Locale }) {
             </Link>
           </nav>
 
-          <div className="min-h-0 flex-1 px-4 py-5 text-sm leading-6 text-white/45">
-            {homeSearchHint(locale)}
-          </div>
+          <div className="min-h-0 flex-1" />
 
           <div className="shrink-0 border-t border-white/[0.08] px-4 pb-[max(1rem,env(safe-area-inset-bottom))] pt-4">
             <Link href={`/${locale}/business`} onClick={() => setMobileOpen(false)} className="block rounded-sm bg-[#00C37A] px-4 py-3 text-center text-[11px] font-black uppercase tracking-[0.1em] text-[#0A0A0A] transition-all duration-150 hover:bg-white">

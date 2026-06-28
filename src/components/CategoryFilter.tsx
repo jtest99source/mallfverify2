@@ -292,7 +292,7 @@ export function CategoryFilter({ businesses, locale }: { businesses: Business[];
               <div className="mt-3"><RatingBadge rating={top.rating} reviewsCount={top.reviewsCount} locale={locale} compact /></div>
             </BusinessImage>
           </Link>
-          <div className="flex flex-col p-8">
+          <div className="flex flex-col p-5 sm:p-8">
             <p className="text-[10px] font-black uppercase tracking-[0.14em] text-[#00C37A]">{businessArea(top)}</p>
             <p className="mt-4 flex-1 text-sm leading-7 text-white/66">{descriptionFor(top)}</p>
             <div className="mt-5 flex flex-wrap gap-2">
