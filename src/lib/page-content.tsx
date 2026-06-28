@@ -419,7 +419,7 @@ function MobileBusinessActions({
   if (!actions.length) return null;
 
   return (
-    <section className="bg-[#040D1A] px-4 pt-3 lg:hidden">
+    <section className="bg-[#040D1A] px-4 pb-5 pt-3 lg:hidden">
       <div className="relative mx-auto max-w-[1440px]">
         <div className="grid grid-cols-3 gap-2">
           {actions.map(({ href, label, Icon, external }) => (
