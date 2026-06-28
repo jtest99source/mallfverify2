@@ -405,6 +405,53 @@ function localizedList(list: Partial<Record<Locale, string[]>>, locale: Locale):
   return list[locale] ?? list.es ?? list.en ?? list.de ?? [];
 }
 
+function ExpertCarouselCard({
+  profile,
+  position,
+  locale,
+  labels
+}: {
+  profile: ExpertProfile;
+  position: number;
+  locale: Locale;
+  labels: { languages: string; specialties: string; website: string; phone: string; details: string };
+}) {
+  const specialties = localizedList(profile.specialties ?? {}, locale).slice(0, 2);
+  return (
+    <Link
+      href={`/${locale}/experts/${profile.verticalSlug}/${profile.slug}`}
+      className="group flex w-[76vw] max-w-[260px] shrink-0 snap-start flex-col rounded-sm border border-white/[0.10] bg-[#0C1A2E] p-4 transition-all hover:border-[#00C37A]/40 sm:w-[240px]"
+    >
+      <div className="flex items-center justify-between gap-2">
+        <span className="inline-flex h-6 items-center justify-center rounded-sm border border-white/[0.10] bg-[#040D1A] px-2 text-[10px] font-black text-[#00C37A]">
+          #{position}
+        </span>
+        <RatingBadge rating={profile.rating} reviewsCount={profile.reviewsCount} locale={locale} compact />
+      </div>
+      <h3 className="mt-3 text-sm font-black leading-tight text-white">{profile.name}</h3>
+      <div className="mt-2 flex flex-wrap gap-1">
+        {profile.languages.map((lang) => (
+          <span key={lang} className="rounded-full border border-white/[0.12] px-2 py-0.5 text-[10px] font-bold text-white/70">
+            {lang}
+          </span>
+        ))}
+      </div>
+      {specialties.length > 0 && (
+        <div className="mt-1.5 flex flex-wrap gap-1">
+          {specialties.map((s) => (
+            <span key={s} className="rounded-full border border-white/[0.06] bg-white/[0.03] px-2 py-0.5 text-[10px] text-white/50">
+              {s}
+            </span>
+          ))}
+        </div>
+      )}
+      <span className="mt-auto pt-3 text-[10px] font-black uppercase tracking-[0.1em] text-[#00C37A]">
+        {labels.details} →
+      </span>
+    </Link>
+  );
+}
+
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const safeLocale = isLocale(locale) ? locale : "es";
@@ -573,33 +620,52 @@ export default async function ExpertsPage({
               />
             </>
           ) : (
-            <div className="space-y-16 py-4">
+            <div className="space-y-2 py-2">
               {copy.categories.map((cat) => {
                 const catProfiles = allApproved
                   .filter((p) => p.verticalSlug === cat.slug)
                   .sort((a, b) => (b.reviewsCount ?? 0) - (a.reviewsCount ?? 0))
-                  .slice(0, 3);
+                  .slice(0, 5);
                 if (!catProfiles.length) return null;
                 return (
-                  <div key={cat.slug}>
-                    <div className="mb-5 flex items-center justify-between gap-4">
-                      <p className="text-[11px] font-black uppercase tracking-[0.14em] text-[#00C37A]">{cat.title}</p>
+                  <section key={cat.slug} className="border-t border-white/[0.08] py-8 first:border-t-0 first:pt-0">
+                    <div className="mb-4 flex items-end justify-between gap-4">
+                      <div>
+                        <p className="inline-flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.16em] text-[#00C37A] before:h-px before:w-4 before:bg-[#00C37A]">
+                          {cat.title}
+                        </p>
+                        <p className="mt-1 line-clamp-1 max-w-[46ch] text-[13px] text-white/40">{cat.description}</p>
+                      </div>
                       <a
                         href={`/${safeLocale}/experts?v=${cat.slug}`}
-                        className="shrink-0 text-[11px] font-black uppercase tracking-[0.1em] text-white/35 hover:text-white"
+                        className="hidden shrink-0 text-[12px] font-semibold tracking-[0.04em] text-white/40 transition-colors hover:text-[#00C37A] sm:inline-flex"
                       >
-                        {safeLocale === "de" ? "Alle →" : safeLocale === "en" ? "See all →" : "Ver todos →"}
+                        {safeLocale === "de" ? "Alle ansehen" : safeLocale === "en" ? "View all" : "Ver todos"} →
                       </a>
                     </div>
-                    <LoadMoreExpertGrid
-                      profiles={catProfiles}
-                      locale={safeLocale}
-                      categories={copy.categories.map(({ slug, title }) => ({ slug, title }))}
-                      verticalColors={VERTICAL_COLORS}
-                      activeVertical={cat.slug}
-                      labels={copy.labels as { languages: string; specialties: string; website: string; phone: string; details: string }}
-                    />
-                  </div>
+                    <div className="-mx-4 overflow-x-auto px-4 pb-4 [scrollbar-width:none] sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8 [&::-webkit-scrollbar]:hidden">
+                      <div className="flex snap-x gap-3 pr-6">
+                        {catProfiles.map((profile, index) => (
+                          <ExpertCarouselCard
+                            key={profile.slug}
+                            profile={profile}
+                            position={index + 1}
+                            locale={safeLocale}
+                            labels={copy.labels as { languages: string; specialties: string; website: string; phone: string; details: string }}
+                          />
+                        ))}
+                        <a
+                          href={`/${safeLocale}/experts?v=${cat.slug}`}
+                          className="group flex w-[90px] shrink-0 snap-start flex-col items-center justify-center gap-2 rounded-sm border border-white/[0.08] bg-white/[0.02] text-center transition-all hover:border-[#00C37A]/40 hover:bg-white/[0.05]"
+                        >
+                          <span className="text-xl text-[#00C37A] transition-transform duration-200 group-hover:translate-x-1">→</span>
+                          <span className="text-[9px] font-black uppercase tracking-[0.1em] text-white/40 group-hover:text-[#00C37A]">
+                            {safeLocale === "de" ? "Alle" : safeLocale === "en" ? "All" : "Todos"}
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                  </section>
                 );
               })}
             </div>
