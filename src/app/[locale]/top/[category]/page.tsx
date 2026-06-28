@@ -4,7 +4,7 @@ import { GuideCard } from "@/components/GuideCard";
 import { JsonLd } from "@/components/JsonLd";
 import { TopRankingExplorer } from "@/components/TopRankingExplorer";
 import { getCategoryCopy, t } from "@/lib/i18n-copy";
-import { getCategoryGuideKeywords, getCategorySlugFromBusiness, isCategorySlug, isPublicCategorySlug, siteUrl, type CategorySlug } from "@/lib/data";
+import { getCategoryGuideKeywords, getCategorySlugFromBusiness, isCategorySlug, isPublicCategorySlug, publicCategorySlugs, siteUrl, type CategorySlug } from "@/lib/data";
 import { isLocale, type Locale } from "@/lib/i18n";
 import { getBusinessesForFacetScan, getRelatedGuides, getTopBusinessesByCategory } from "@/lib/repository";
 import { createBreadcrumbSchema, createSimpleItemListSchema } from "@/lib/schema";
