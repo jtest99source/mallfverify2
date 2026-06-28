@@ -11,9 +11,9 @@ import { SearchBox } from "@/components/LiveSearch";
 
 function NavLogo({ locale }: { locale: Locale }) {
   return (
-    <Link href={`/${locale}`} className="inline-flex shrink-0 flex-col leading-none text-[#FFCC00]" aria-label={siteConfig.name}>
-      <span className="font-display text-[17px] font-black uppercase tracking-[0.05em]">Mallorca</span>
-      <span className="font-display text-[17px] font-black uppercase tracking-[0.05em]">Verified</span>
+    <Link href={`/${locale}`} className="flex shrink-0 items-center gap-1.5 text-[#00C37A]" aria-label={siteConfig.name}>
+      <IconShieldCheck size={18} stroke={2.5} />
+      <span className="font-display text-[15px] font-bold tracking-[0.04em]">Mallorca Verified</span>
     </Link>
   );
 }
@@ -43,8 +43,8 @@ export function Header({ locale }: { locale: Locale }) {
 
   return (
     <>
-      <header className="sticky top-0 z-40 border-b border-white/[0.08] bg-[#0A0A0A] text-white shadow-[0_1px_0_rgba(255,255,255,0.04)]">
-        <div className="mx-auto flex h-14 max-w-[1440px] items-center gap-6 px-4 sm:px-6 lg:px-8">
+      <header className="sticky top-0 z-40 border-b border-white/[0.08] bg-[#07101F] text-white shadow-[0_1px_0_rgba(255,255,255,0.04)]">
+        <div className="flex h-14 items-center gap-6 px-6 sm:px-8 lg:px-10">
           <NavLogo locale={locale} />
 
           <nav className="hidden items-center gap-8 lg:flex">
@@ -62,7 +62,7 @@ export function Header({ locale }: { locale: Locale }) {
           </nav>
 
           <div className="hidden flex-1 items-center justify-end gap-3 lg:flex">
-            <Link href={`/${locale}/business`} className="rounded-sm bg-[#FFCC00] px-4 py-2 text-[10px] font-black uppercase tracking-[0.1em] text-[#0A0A0A] transition-all duration-150 hover:bg-white">
+            <Link href={`/${locale}/business`} className="rounded-sm bg-[#00C37A] px-4 py-2 text-[10px] font-black uppercase tracking-[0.1em] text-[#0A0A0A] transition-all duration-150 hover:bg-white">
               {copy.nav.forBusinesses}
             </Link>
             <div className="flex items-center gap-1 text-[10px]">
@@ -86,7 +86,7 @@ export function Header({ locale }: { locale: Locale }) {
       </header>
 
       {mobileOpen && (
-        <div className="fixed inset-0 z-50 flex h-dvh flex-col bg-[#0A0A0A] text-white lg:hidden">
+        <div className="fixed inset-0 z-50 flex h-dvh flex-col bg-[#07101F] text-white lg:hidden">
           <div className="flex shrink-0 items-center justify-between border-b border-white/[0.08] px-4 py-3">
             <NavLogo locale={locale} />
             <button
@@ -103,17 +103,17 @@ export function Header({ locale }: { locale: Locale }) {
           </div>
           <nav className="shrink-0 border-b border-white/[0.08] px-4 py-3">
             <Link href={`/${locale}/experts`} onClick={() => setMobileOpen(false)} className="group flex min-h-[44px] items-center gap-3 rounded-sm px-3 text-sm font-bold text-white/75 hover:bg-white/[0.08] hover:text-white">
-              <IconShieldCheck size={15} stroke={1.8} className="shrink-0 text-[#FFCC00]" />
+              <IconShieldCheck size={15} stroke={1.8} className="shrink-0 text-[#00C37A]" />
               {expertsLabel(locale)}
             </Link>
             {locale !== "de" && (
               <Link href={`/${locale}/guides`} onClick={() => setMobileOpen(false)} className="group flex min-h-[44px] items-center gap-3 rounded-sm px-3 text-sm font-bold text-white/75 hover:bg-white/[0.08] hover:text-white">
-                <IconBook2 size={15} stroke={1.8} className="shrink-0 text-[#FFCC00]" />
+                <IconBook2 size={15} stroke={1.8} className="shrink-0 text-[#00C37A]" />
                 {copy.nav.guides}
               </Link>
             )}
             <Link href={methodologyPath(locale)} onClick={() => setMobileOpen(false)} className="group flex min-h-[44px] items-center gap-3 rounded-sm px-3 text-sm font-bold text-white/75 hover:bg-white/[0.08] hover:text-white">
-              <IconInfoCircle size={15} stroke={1.8} className="shrink-0 text-[#FFCC00]" />
+              <IconInfoCircle size={15} stroke={1.8} className="shrink-0 text-[#00C37A]" />
               {copy.nav.methodology}
             </Link>
           </nav>
@@ -123,7 +123,7 @@ export function Header({ locale }: { locale: Locale }) {
           </div>
 
           <div className="shrink-0 border-t border-white/[0.08] px-4 pb-[max(1rem,env(safe-area-inset-bottom))] pt-4">
-            <Link href={`/${locale}/business`} onClick={() => setMobileOpen(false)} className="block rounded-sm bg-[#FFCC00] px-4 py-3 text-center text-[11px] font-black uppercase tracking-[0.1em] text-[#0A0A0A] transition-all duration-150 hover:bg-white">
+            <Link href={`/${locale}/business`} onClick={() => setMobileOpen(false)} className="block rounded-sm bg-[#00C37A] px-4 py-3 text-center text-[11px] font-black uppercase tracking-[0.1em] text-[#0A0A0A] transition-all duration-150 hover:bg-white">
               {copy.nav.forBusinesses}
             </Link>
             <div className="mt-3 flex gap-2">
