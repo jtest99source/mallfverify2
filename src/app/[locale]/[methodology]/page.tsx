@@ -537,7 +537,7 @@ function MethodologyPage({ locale, canonical, stats }: { locale: Locale; canonic
               {c.badge}
             </div>
             <h1 className="font-display text-balance text-3xl font-black leading-[1.03] text-white sm:text-5xl lg:text-6xl">{c.title}</h1>
-            <p className="mt-5 max-w-2xl text-base leading-8 text-white/60">{c.intro}</p>
+            <p className="mt-5 max-w-2xl text-base leading-8 text-white/75">{c.intro}</p>
           </div>
         </div>
       </section>
@@ -545,14 +545,14 @@ function MethodologyPage({ locale, canonical, stats }: { locale: Locale; canonic
       <article className="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8">
         <section className="border-b border-white/[0.08] pb-10">
           <p className="mb-2 text-[11px] font-black uppercase tracking-[0.18em] text-white/30">01</p>
-          <h2 className="font-sans text-2xl font-black leading-tight sm:text-3xl">{c.whyTitle}</h2>
-          <p className="mt-5 text-base leading-8 text-white/65">{c.whyText}</p>
+          <h2 className="font-sans text-2xl font-black leading-tight text-white sm:text-3xl">{c.whyTitle}</h2>
+          <p className="mt-5 text-base leading-8 text-white/70">{c.whyText}</p>
         </section>
 
         <section className="border-b border-white/[0.08] py-10">
           <p className="mb-2 text-[11px] font-black uppercase tracking-[0.18em] text-white/30">02</p>
-          <h2 className="font-sans text-2xl font-black leading-tight sm:text-3xl">{c.factorsTitle}</h2>
-          <p className="mt-5 text-base leading-8 text-white/65">{c.factorsIntro}</p>
+          <h2 className="font-sans text-2xl font-black leading-tight text-white sm:text-3xl">{c.factorsTitle}</h2>
+          <p className="mt-5 text-base leading-8 text-white/70">{c.factorsIntro}</p>
           <div className="mt-7 grid gap-4">
             {c.factors.map(([eyebrow, title, text], index) => {
               const Icon = index === 0 ? IconStar : index === 1 ? IconMessages : IconDiamond;
@@ -574,7 +574,7 @@ function MethodologyPage({ locale, canonical, stats }: { locale: Locale; canonic
 
         <section className="border-b border-white/[0.08] py-10">
           <p className="mb-2 text-[11px] font-black uppercase tracking-[0.18em] text-white/30">03</p>
-          <h2 className="font-sans text-2xl font-black leading-tight sm:text-3xl">{c.neverTitle}</h2>
+          <h2 className="font-sans text-2xl font-black leading-tight text-white sm:text-3xl">{c.neverTitle}</h2>
           <div className="mt-6 grid gap-4">
             {c.never.map(([title, text]) => (
               <div key={title} className="flex gap-4 rounded-lg border border-white/[0.08] bg-[#0C1A2E] p-5">
@@ -590,8 +590,8 @@ function MethodologyPage({ locale, canonical, stats }: { locale: Locale; canonic
 
         <section className="border-b border-white/[0.08] py-10">
           <p className="mb-2 text-[11px] font-black uppercase tracking-[0.18em] text-white/30">04</p>
-          <h2 className="font-sans text-2xl font-black leading-tight sm:text-3xl">{c.dataTitle}</h2>
-          <p className="mt-5 text-base leading-8 text-white/65">{c.dataText}</p>
+          <h2 className="font-sans text-2xl font-black leading-tight text-white sm:text-3xl">{c.dataTitle}</h2>
+          <p className="mt-5 text-base leading-8 text-white/70">{c.dataText}</p>
           <div className="mt-8 grid gap-4 sm:grid-cols-3">
             {[
               { value: formatIntegerMetric(stats.publishedBusinesses, locale), label: c.published },
@@ -608,14 +608,14 @@ function MethodologyPage({ locale, canonical, stats }: { locale: Locale; canonic
 
         <section className="border-b border-white/[0.08] py-10">
           <p className="mb-2 text-[11px] font-black uppercase tracking-[0.18em] text-white/30">05</p>
-          <h2 className="font-sans text-2xl font-black leading-tight sm:text-3xl">
+          <h2 className="font-sans text-2xl font-black leading-tight text-white sm:text-3xl">
             {locale === "en" ? "How each page works" : locale === "de" ? "Wie jede Seite funktioniert" : "Cómo funciona cada página"}
           </h2>
           <div className="mt-6 grid gap-4 sm:grid-cols-2">
             {pageSections.map((item, index) => {
               const PageIcon = index === 0 ? IconChartBar : index === 1 ? IconStar : index === 2 ? IconUsers : IconDiamond;
               return (
-              <div key={item.title} className="rounded-lg border border-[#E5E7EB] bg-[#0C1A2E] p-5 shadow-none">
+              <div key={item.title} className="rounded-lg border border-white/[0.10] bg-[#0C1A2E] p-5 shadow-none">
                 <PageIcon size={22} stroke={1.8} className="text-[#00C37A]" />
                 <h3 className="mt-3 font-sans text-lg font-black text-white">{item.title}</h3>
                 <p className="mt-2 text-sm leading-7 text-white/60">{item.text}</p>
@@ -627,7 +627,7 @@ function MethodologyPage({ locale, canonical, stats }: { locale: Locale; canonic
 
         <section className="pt-10">
           <p className="mb-2 text-[11px] font-black uppercase tracking-[0.18em] text-white/30">06</p>
-          <h2 className="font-sans text-2xl font-black leading-tight sm:text-3xl">{c.faqTitle}</h2>
+          <h2 className="font-sans text-2xl font-black leading-tight text-white sm:text-3xl">{c.faqTitle}</h2>
           <div className="mt-6 divide-y divide-white/[0.08] overflow-hidden rounded-lg border border-white/[0.08] bg-[#0C1A2E]">
             {c.faqs.map(([question, answer]) => (
               <details key={question} className="group p-5">
@@ -683,24 +683,24 @@ function AboutPage({ locale, canonical, stats }: { locale: Locale; canonical: st
               {c.badge}
             </div>
             <h1 className="font-display text-balance text-3xl font-black leading-[1.03] text-white sm:text-5xl lg:text-6xl">{c.title}</h1>
-            <p className="mt-5 max-w-2xl text-base leading-8 text-white/60">{c.intro}</p>
+            <p className="mt-5 max-w-2xl text-base leading-8 text-white/75">{c.intro}</p>
           </div>
         </div>
       </section>
 
       <article className="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8">
         <section className="border-b border-white/[0.08] pb-10">
-          <h2 className="font-sans text-2xl font-black leading-tight sm:text-3xl">{c.whyTitle}</h2>
-          <p className="mt-5 text-base leading-8 text-white/65">{c.whyText}</p>
+          <h2 className="font-sans text-2xl font-black leading-tight text-white sm:text-3xl">{c.whyTitle}</h2>
+          <p className="mt-5 text-base leading-8 text-white/70">{c.whyText}</p>
         </section>
 
         <section className="border-b border-white/[0.08] py-10">
-          <h2 className="font-sans text-2xl font-black leading-tight sm:text-3xl">{c.teamTitle}</h2>
-          <p className="mt-5 text-base leading-8 text-white/65">{c.teamText}</p>
+          <h2 className="font-sans text-2xl font-black leading-tight text-white sm:text-3xl">{c.teamTitle}</h2>
+          <p className="mt-5 text-base leading-8 text-white/70">{c.teamText}</p>
         </section>
 
         <section className="border-b border-white/[0.08] py-10">
-          <h2 className="font-sans text-2xl font-black leading-tight sm:text-3xl">{c.principlesTitle}</h2>
+          <h2 className="font-sans text-2xl font-black leading-tight text-white sm:text-3xl">{c.principlesTitle}</h2>
           <div className="mt-7 grid gap-4 sm:grid-cols-2">
             {c.principles.map(([title, text], index) => {
               const Icon = principleIcons[index] ?? IconShieldCheck;
@@ -731,7 +731,7 @@ function AboutPage({ locale, canonical, stats }: { locale: Locale; canonical: st
         </section>
 
         <section className="pt-10">
-          <div className="rounded-lg border border-[#E5E7EB] bg-[#0C1A2E] p-6 shadow-none">
+          <div className="rounded-lg border border-white/[0.10] bg-[#0C1A2E] p-6 shadow-none">
             <IconMail size={28} stroke={1.8} className="text-[#00C37A]" />
             <h2 className="mt-3 font-sans text-2xl font-black leading-tight text-white">{c.contactTitle}</h2>
             <p className="mt-3 text-sm leading-7 text-white/60">{c.contactText}</p>
@@ -787,14 +787,14 @@ function EditorialPage({ locale, canonical }: { locale: Locale; canonical: strin
               {c.badge}
             </div>
             <h1 className="font-display text-balance text-3xl font-black leading-[1.03] text-white sm:text-5xl lg:text-6xl">{c.title}</h1>
-            <p className="mt-5 max-w-2xl text-base leading-8 text-white/60">{c.intro}</p>
+            <p className="mt-5 max-w-2xl text-base leading-8 text-white/75">{c.intro}</p>
           </div>
         </div>
       </section>
 
       <article className="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8">
         <section className="border-b border-white/[0.08] pb-10">
-          <h2 className="font-sans text-2xl font-black leading-tight sm:text-3xl">{c.criteriaTitle}</h2>
+          <h2 className="font-sans text-2xl font-black leading-tight text-white sm:text-3xl">{c.criteriaTitle}</h2>
           <div className="mt-6 grid gap-4">
             {c.criteria.map(([title, text]) => (
               <div key={title} className="rounded-lg border border-white/[0.08] bg-[#0C1A2E] p-5 shadow-[0_4px_18px_rgba(10,10,10,0.04)]">
@@ -806,8 +806,8 @@ function EditorialPage({ locale, canonical }: { locale: Locale; canonical: strin
         </section>
 
         <section className="border-b border-white/[0.08] py-10">
-          <h2 className="font-sans text-2xl font-black leading-tight sm:text-3xl">{c.sourcesTitle}</h2>
-          <p className="mt-5 text-base leading-8 text-white/65">{c.sourcesText}</p>
+          <h2 className="font-sans text-2xl font-black leading-tight text-white sm:text-3xl">{c.sourcesTitle}</h2>
+          <p className="mt-5 text-base leading-8 text-white/70">{c.sourcesText}</p>
           <div className="mt-6 grid gap-4">
             {c.sources.map(([title, text]) => (
               <div key={title} className="flex gap-4 rounded-lg border border-white/[0.08] bg-[#0C1A2E] p-5">
@@ -822,8 +822,8 @@ function EditorialPage({ locale, canonical }: { locale: Locale; canonical: strin
         </section>
 
         <section className="border-b border-white/[0.08] py-10">
-          <h2 className="font-sans text-2xl font-black leading-tight sm:text-3xl">{c.updateTitle}</h2>
-          <p className="mt-5 text-base leading-8 text-white/65">{c.updateText}</p>
+          <h2 className="font-sans text-2xl font-black leading-tight text-white sm:text-3xl">{c.updateTitle}</h2>
+          <p className="mt-5 text-base leading-8 text-white/70">{c.updateText}</p>
           <div className="mt-6 grid gap-4">
             {c.updates.map(([title, text]) => (
               <div key={title} className="flex gap-4 rounded-lg border border-white/[0.08] bg-[#0C1A2E] p-5">
@@ -838,8 +838,8 @@ function EditorialPage({ locale, canonical }: { locale: Locale; canonical: strin
         </section>
 
         <section className="border-b border-white/[0.08] py-10">
-          <h2 className="font-sans text-2xl font-black leading-tight sm:text-3xl">{c.separationTitle}</h2>
-          <p className="mt-5 text-base leading-8 text-white/65">{c.separationText}</p>
+          <h2 className="font-sans text-2xl font-black leading-tight text-white sm:text-3xl">{c.separationTitle}</h2>
+          <p className="mt-5 text-base leading-8 text-white/70">{c.separationText}</p>
           <div className="mt-6 grid gap-4">
             {c.separations.map(([title, text]) => (
               <div key={title} className="flex gap-4 rounded-lg border border-white/[0.08] bg-[#0C1A2E] p-5">
@@ -854,7 +854,7 @@ function EditorialPage({ locale, canonical }: { locale: Locale; canonical: strin
         </section>
 
         <section className="pt-10">
-          <div className="rounded-lg border border-[#E5E7EB] bg-[#0C1A2E] p-6 shadow-none">
+          <div className="rounded-lg border border-white/[0.10] bg-[#0C1A2E] p-6 shadow-none">
             <IconMail size={28} stroke={1.8} className="text-[#00C37A]" />
             <h2 className="mt-3 font-sans text-2xl font-black leading-tight text-white">{c.correctionsTitle}</h2>
             <p className="mt-3 text-sm leading-7 text-white/60">{c.correctionsText}</p>
