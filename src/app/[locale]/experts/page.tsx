@@ -420,7 +420,7 @@ function ExpertCarouselCard({
   return (
     <Link
       href={`/${locale}/experts/${profile.verticalSlug}/${profile.slug}`}
-      className="group flex w-[76vw] max-w-[260px] shrink-0 snap-start flex-col rounded-sm border border-white/[0.10] bg-[#0C1A2E] p-4 transition-all hover:border-[#00C37A]/40 sm:w-[240px]"
+      className="group flex w-[68vw] max-w-[240px] shrink-0 snap-start flex-col rounded-sm border border-white/[0.10] bg-[#0C1A2E] p-4 transition-all hover:border-[#00C37A]/40 sm:w-[220px]"
     >
       <div className="flex items-center justify-between gap-2">
         <span className="inline-flex h-6 items-center justify-center rounded-sm border border-white/[0.10] bg-[#040D1A] px-2 text-[10px] font-black text-[#00C37A]">
@@ -620,7 +620,7 @@ export default async function ExpertsPage({
               />
             </>
           ) : (
-            <div className="space-y-2 py-2">
+            <div className="space-y-0 py-2">
               {copy.categories.map((cat) => {
                 const catProfiles = allApproved
                   .filter((p) => p.verticalSlug === cat.slug)
@@ -628,7 +628,7 @@ export default async function ExpertsPage({
                   .slice(0, 5);
                 if (!catProfiles.length) return null;
                 return (
-                  <section key={cat.slug} className="border-t border-white/[0.08] py-8 first:border-t-0 first:pt-0">
+                  <section key={cat.slug} className="border-t border-white/[0.08] py-6 first:border-t-0 first:pt-0">
                     <div className="mb-4 flex items-end justify-between gap-4">
                       <div>
                         <p className="inline-flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.16em] text-[#00C37A] before:h-px before:w-4 before:bg-[#00C37A]">
