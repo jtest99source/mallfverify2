@@ -274,6 +274,12 @@ function EditorialRankingCarousel({
           {businesses.slice(0, 5).map((business, index) => (
             <CarouselBusinessCard key={business.id} business={business} index={index} locale={locale} />
           ))}
+          <Link href={href} className="group flex w-[120px] shrink-0 snap-start flex-col items-center justify-center gap-3 rounded-sm border border-white/[0.08] bg-white/[0.02] text-center transition-all hover:border-[#00C37A]/40 hover:bg-white/[0.05]">
+            <span className="text-2xl text-[#00C37A] transition-transform duration-200 group-hover:translate-x-1">→</span>
+            <span className="text-[10px] font-black uppercase tracking-[0.1em] text-white/40 group-hover:text-[#00C37A]">
+              {locale === "de" ? "Alle" : locale === "en" ? "View all" : "Ver todos"}
+            </span>
+          </Link>
         </div>
       </div>
     </section>
@@ -568,7 +574,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           </div>
           <div className="grid border border-white/[0.08] md:grid-cols-3">
             {methodology.items.map(({ title, text }, index) => (
-              <div key={title} className="border-b border-white/[0.08] p-5 last:border-b-0 sm:p-8 md:border-b-0 md:border-r md:last:border-r-0">
+              <div key={title} className="border-b border-white/[0.08] p-5 text-center last:border-b-0 sm:p-8 md:border-b-0 md:border-r md:text-left md:last:border-r-0">
                 <div className="font-display text-5xl font-black leading-none text-[#00C37A]/30">{String(index + 1).padStart(2, "0")}</div>
                 <h2 className="font-display mt-5 text-2xl font-bold leading-tight text-white">{title}</h2>
                 <p className="mt-3 text-sm font-light leading-7 text-white/42">{text}</p>
@@ -610,7 +616,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
       ]} />
 
       <section className="bg-[#00C37A] px-4 py-8 text-[#0A0A0A] sm:px-6 lg:px-8">
-        <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-8 sm:flex-row sm:items-center">
+        <div className="mx-auto flex max-w-7xl flex-col items-center gap-6 text-center sm:flex-row sm:items-center sm:justify-between sm:text-left">
           <div>
             <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-black/55">
               {safeLocale === "de" ? "Experten-Verzeichnis" : safeLocale === "en" ? "Expert Directory" : "Directorio de Expertos"}
@@ -622,8 +628,8 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
               {safeLocale === "de"
                 ? "Anwälte, Immobilienmakler, Ärzte und mehr — kuratiert nach redaktionellen Kriterien, nicht nach Gebühren."
                 : safeLocale === "en"
-                  ? "Lawyers, estate agents, doctors and more - curated on editorial criteria, not fees."
-                  : "Abogados, agentes inmobiliarios, médicos y más - seleccionados por criterio editorial, no por tarifas."}
+                  ? "Lawyers, estate agents, doctors and more — curated on editorial criteria, not fees."
+                  : "Abogados, inmobiliarias, médicos y más — seleccionados por criterio editorial, no por tarifas."}
             </p>
           </div>
           <Link href={`/${safeLocale}/experts`} className="group inline-flex min-h-12 shrink-0 items-center gap-3 rounded-sm bg-[#07101F] px-7 text-[12px] font-black uppercase tracking-[0.1em] text-[#00C37A] transition-all duration-200 hover:bg-white hover:text-[#0A0A0A]">
