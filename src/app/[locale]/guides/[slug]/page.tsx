@@ -40,7 +40,7 @@ function renderBody(text: string) {
     const parts = para.split(/\*\*(.+?)\*\*/g);
     return (
       <p key={i} className="mt-4 text-[15px] leading-7 text-white/68 sm:text-base sm:leading-8">
-        {parts.map((part, j) => j % 2 === 1 ? <strong key={j} className="font-bold text-white/90">{part}</strong> : part)}
+        {parts.map((part, j) => j % 2 === 1 ? <strong key={j} className="font-bold text-[#00C37A]">{part}</strong> : part)}
       </p>
     );
   });
