@@ -35,10 +35,10 @@ const expertCopy = {
     metaDescription:
       "Abogados, estate agents, dentistas, médicos y profesionales en inglés y alemán para compradores, expats y residentes internacionales en Mallorca. Selección editorial, no pago por aparecer.",
     eyebrow: "Mallorca Verified Experts",
-    title: "Los profesionales que necesitas cuando Mallorca deja de ser solo unas vacaciones",
+    title: "Los profesionales que necesitas para vivir en Mallorca.",
     intro:
-      "Google Maps no te dice si un abogado ha cerrado 200 transacciones para compradores extranjeros o si habla inglés de verdad. Cada perfil aquí va más allá del nombre y el teléfono: especialidades reales, idiomas confirmados, zona cubierta e historial público. Selección editorial, no pago por aparecer.",
-    primaryCta: "Solicitar auditoría",
+      "Google Maps no te dice si un abogado ha cerrado 200 transacciones con compradores extranjeros, si habla inglés de verdad o si cubre tu zona. Cada perfil aquí va más allá del nombre y el teléfono: especialidades reales, idiomas confirmados y señales públicas verificables. Selección editorial, no pago por aparecer.",
+    primaryCta: "Buscar experto",
     secondaryCta: "Cómo verificamos",
     trustLine: "Sin posiciones de pago. Una ficha premium añade detalle — fotos, servicios, FAQ — pero nunca cambia la posición en el ranking.",
     pillarsEyebrow: "Primeras verticales",
@@ -61,56 +61,56 @@ const expertCopy = {
         icon: IconScale,
         title: "Abogados y fiscalistas",
         description:
-          "Especialistas en compraventa, due diligence, fiscalidad para no residentes, herencias, contratos y asesoría para extranjeros."
+          "Si compras, vendes, heredas o tienes un conflicto legal en Mallorca, necesitas a alguien que entienda el sistema español y te lo explique sin tecnicismos. Estos tienen historial real con clientes internacionales."
       },
       {
         slug: "architects-renovation-mallorca",
         icon: IconBuildingEstate,
         title: "Arquitectos y reformas",
         description:
-          "Estudios, interioristas, constructores y técnicos para reformar, legalizar o mejorar una vivienda en Mallorca."
+          "Para reformar o construir en Mallorca sin las sorpresas habituales: licencias, vecinos, presupuestos que no se disparan. Estudios con experiencia demostrable en la isla."
       },
       {
         slug: "property-managers-mallorca",
         icon: IconHomeCheck,
         title: "Property managers y relocation",
         description:
-          "Servicios para mudarse, gestionar propiedades, mantener villas, coordinar proveedores y resolver el día a día en la isla."
+          "Alguien que gestione lo que no puedes gestionar desde lejos — mantenimiento, proveedores, incidencias, coordinación. Para propiedades en Mallorca sin presencia constante."
       },
       {
         slug: "english-speaking-dentists-mallorca",
         icon: IconShieldCheck,
         title: "Dentistas",
         description:
-          "Clínicas dentales, ortodoncia y urgencias para expats, familias y residentes internacionales en Mallorca."
+          "Clínicas donde puedas describir el dolor en inglés, entender el presupuesto y no tener que traer traductor. Con pacientes internacionales habituales."
       },
       {
         slug: "english-speaking-doctors-mallorca",
         icon: IconShieldCheck,
         title: "Médicos y clínicas privadas",
         description:
-          "Centros médicos, GP y clínicas privadas con perfil útil para pacientes internacionales en Mallorca."
+          "Médicos y centros privados donde el diagnóstico se explica en inglés y los tiempos de espera no son los de la sanidad pública. Orientados a pacientes internacionales y familias expat."
       },
       {
         slug: "estate-agents-mallorca",
         icon: IconBuildingEstate,
         title: "Estate agents",
         description:
-          "Agencias inmobiliarias con señales sólidas para compradores extranjeros, vendedores e inversores."
+          "Agentes con track record demostrable en compradores extranjeros. No los que más publicidad tienen — los que más transacciones reales han cerrado con clientes internacionales."
       },
       {
         slug: "mortgage-brokers-mallorca",
         icon: IconChecklist,
         title: "Mortgage brokers",
         description:
-          "Brokers hipotecarios y asesores de financiación para compradores internacionales y no residentes."
+          "Brokers con experiencia real en hipotecas para no residentes en España — una categoría con requisitos, plazos y bancos distintos a los de cualquier otro país europeo."
       },
       {
         slug: "aesthetic-medicine-mallorca",
         icon: IconSparkles,
         title: "Medicina estética",
         description:
-          "Clínicas de medicina estética, dermatología estética y cirugía cosmética con atención en inglés y/o alemán en Mallorca."
+          "Clínicas donde puedas discutir el tratamiento en inglés o alemán, entender exactamente qué se va a hacer y no tener que adivinar precios ni resultados."
       }
     ],
     criteria: [
@@ -158,10 +158,10 @@ const expertCopy = {
     metaDescription:
       "Lawyers, estate agents, dentists, doctors and English and German-speaking professionals for buyers, expats and international residents in Mallorca. Editorial selection, not paid placement.",
     eyebrow: "Mallorca Verified Experts",
-    title: "The professionals you need when Mallorca stops being just a holiday",
+    title: "The professionals you need for life in Mallorca.",
     intro:
-      "Google Maps won't tell you if a lawyer has closed 200 transactions for foreign buyers or genuinely speaks English. Every profile here goes beyond a name and phone number: real specialisms, confirmed languages, coverage area and a public track record. Editorial selection, not paid placement.",
-    primaryCta: "Request an audit",
+      "Google Maps won't tell you if a lawyer has closed 200 transactions for foreign buyers, whether they genuinely speak English, or if they cover your area. Every profile here goes beyond a name and phone number: real specialisms, confirmed languages and verifiable public signals. Editorial selection, not paid placement.",
+    primaryCta: "Find an expert",
     secondaryCta: "How we verify",
     trustLine: "No paid placements. A premium profile adds detail — photos, services, FAQ — but never changes ranking position.",
     pillarsEyebrow: "First verticals",
@@ -184,56 +184,56 @@ const expertCopy = {
         icon: IconScale,
         title: "Lawyers and tax advisors",
         description:
-          "Specialists in property purchase, due diligence, non-resident tax, inheritance, contracts and advice for international clients."
+          "If you're buying, selling, inheriting or dealing with a legal issue in Mallorca, you need someone who understands Spanish law and explains it without jargon. These have a real track record with international clients."
       },
       {
         slug: "architects-renovation-mallorca",
         icon: IconBuildingEstate,
         title: "Architects and renovation",
         description:
-          "Architecture studios, interior designers, builders and technical experts for renovating, legalising or improving a home in Mallorca."
+          "For renovating or building in Mallorca without the usual surprises: permits, neighbours, budgets that don't spiral. Studios with demonstrable experience on the island."
       },
       {
         slug: "property-managers-mallorca",
         icon: IconHomeCheck,
         title: "Property managers and relocation",
         description:
-          "Services for moving to Mallorca, managing properties, maintaining villas, coordinating providers and handling daily island needs."
+          "Someone to handle what you can't manage from a distance — maintenance, contractors, incidents, coordination. For Mallorca properties without constant presence."
       },
       {
         slug: "english-speaking-dentists-mallorca",
         icon: IconShieldCheck,
         title: "Dentists",
         description:
-          "Dental clinics, orthodontics and emergency dentists for expats, families and international residents in Mallorca."
+          "Clinics where you can describe your symptoms in English, understand the quote and not need a translator. With verifiable records of international patients."
       },
       {
         slug: "english-speaking-doctors-mallorca",
         icon: IconShieldCheck,
         title: "Doctors and private clinics",
         description:
-          "Medical centres, GP practices and private clinics useful for international patients in Mallorca."
+          "Private doctors and clinics where the diagnosis is explained in English and waiting times are not those of the public system. Focused on international patients and expat families."
       },
       {
         slug: "estate-agents-mallorca",
         icon: IconBuildingEstate,
         title: "Estate agents",
         description:
-          "Estate agencies with solid public signals for foreign buyers, sellers and property investors."
+          "Agents with demonstrable track records with foreign buyers. Not the ones with the most advertising — the ones who have closed the most real transactions with international clients."
       },
       {
         slug: "mortgage-brokers-mallorca",
         icon: IconChecklist,
         title: "Mortgage brokers",
         description:
-          "Mortgage brokers and finance advisors for international buyers and non-residents purchasing in Mallorca."
+          "Brokers with real experience in non-resident mortgages in Spain — a category with different requirements, timelines and banks from anywhere else in Europe."
       },
       {
         slug: "aesthetic-medicine-mallorca",
         icon: IconSparkles,
         title: "Aesthetic medicine",
         description:
-          "Aesthetic medicine clinics, cosmetic dermatology and cosmetic surgery with English and/or German care in Mallorca."
+          "Clinics where you can discuss treatment in English or German, understand exactly what will be done and not have to guess at prices or results."
       }
     ],
     criteria: [
@@ -281,10 +281,10 @@ const expertCopy = {
     metaDescription:
       "Anwälte, Immobilienmakler, Zahnärzte, Ärzte und deutsch- und englischsprachige Profis für Käufer, Expats und internationale Bewohner auf Mallorca. Redaktionelle Auswahl, kein bezahltes Listing.",
     eyebrow: "Mallorca Verified Experts",
-    title: "Die Profis, die du brauchst, wenn Mallorca mehr als nur ein Urlaub wird",
+    title: "Die Profis, die du für das Leben auf Mallorca brauchst.",
     intro:
-      "Google Maps verrät dir nicht, ob ein Anwalt 200 Transaktionen für ausländische Käufer abgeschlossen hat oder wirklich Englisch spricht. Jedes Profil hier geht über Namen und Telefonnummer hinaus: echte Spezialgebiete, bestätigte Sprachen, Abdeckungsgebiet und öffentliche Referenzen. Redaktionelle Auswahl, kein bezahltes Listing.",
-    primaryCta: "Audit anfragen",
+      "Google Maps sagt dir nicht, ob ein Anwalt 200 Transaktionen für ausländische Käufer abgeschlossen hat, ob er wirklich Englisch spricht oder ob er deine Region abdeckt. Jedes Profil hier geht über Name und Telefonnummer hinaus: echte Spezialisierungen, bestätigte Sprachen und überprüfbare öffentliche Signale. Redaktionelle Auswahl, kein Bezahlen für Sichtbarkeit.",
+    primaryCta: "Experten finden",
     secondaryCta: "Wie wir prüfen",
     trustLine: "Positionen können nicht gekauft werden. Premium-Profile verbessern die Information, nicht das Ranking.",
     pillarsEyebrow: "Erste Bereiche",
@@ -405,109 +405,6 @@ function localizedList(list: Partial<Record<Locale, string[]>>, locale: Locale):
   return list[locale] ?? list.es ?? list.en ?? list.de ?? [];
 }
 
-function DirectoryCard({
-  profile,
-  locale,
-  verticalLabel,
-  verticalColor,
-  hideVertical,
-  labels
-}: {
-  profile: ExpertProfile;
-  locale: Locale;
-  verticalLabel: string;
-  verticalColor: string;
-  hideVertical: boolean;
-  labels: { languages: string; specialties: string; website: string; phone: string; details: string };
-}) {
-  const editorialNote = profile.editorialNote?.[locale];
-  const specialties = localizedList(profile.specialties, locale);
-  return (
-    <article
-      className="group flex min-h-[300px] flex-col overflow-hidden rounded-lg border border-l-4 border-[#E5E7EB] bg-white shadow-sm transition-all duration-150 hover:-translate-y-0.5 hover:shadow-md"
-      style={{ borderLeftColor: verticalColor }}
-    >
-      <div className="flex flex-1 flex-col p-5">
-        {/* Category + rating — same row, same as BusinessCard */}
-        <div className={`flex flex-wrap items-center gap-2 ${!hideVertical && verticalLabel ? "justify-between" : "justify-end"}`}>
-          {!hideVertical && verticalLabel ? (
-            <p className="text-[10px] font-black uppercase tracking-[0.14em]" style={{ color: verticalColor }}>
-              {verticalLabel}
-            </p>
-          ) : null}
-          <RatingBadge rating={profile.rating} reviewsCount={profile.reviewsCount} locale={locale} compact />
-        </div>
-
-        {/* Name + location */}
-        <h3 className="mt-2 text-2xl font-black leading-tight text-[#0A0A0A]">{profile.name}</h3>
-        <p className="mt-1.5 inline-flex items-center gap-1.5 text-xs font-semibold text-[#6B7280]">
-          <IconMapPin size={13} stroke={2} />
-          {profile.location}
-        </p>
-
-        {/* Editorial note when available */}
-        {editorialNote ? (
-          <div className="mt-3 rounded-md bg-[#F9FAFB] px-3 py-2.5">
-            <p className="mb-1 text-[9px] font-black uppercase tracking-[0.16em] text-[#0A0A0A]">Editorial</p>
-            <p className="line-clamp-2 text-xs leading-5 text-[#0A0A0A]">{editorialNote}</p>
-          </div>
-        ) : null}
-
-        {/* Languages + specialties */}
-        <dl className="mt-4 grid gap-3 sm:grid-cols-2">
-          <div>
-            <dt className="text-[10px] font-black uppercase tracking-[0.12em] text-[#6B7280]">{labels.languages}</dt>
-            <dd className="mt-1.5 flex flex-wrap gap-1.5">
-              {profile.languages.map((l) => (
-                <span key={l} className="rounded-full border border-[#E5E7EB] px-2.5 py-0.5 text-xs font-bold text-[#0A0A0A]">
-                  {l}
-                </span>
-              ))}
-            </dd>
-          </div>
-          <div>
-            <dt className="text-[10px] font-black uppercase tracking-[0.12em] text-[#6B7280]">{labels.specialties}</dt>
-            <dd className="mt-1.5 text-xs font-semibold leading-5 text-[#0A0A0A]">
-              {specialties.slice(0, 3).join(", ")}
-            </dd>
-          </div>
-        </dl>
-
-        {/* Actions pushed to bottom */}
-        <div className="mt-auto flex flex-wrap gap-2 pt-4">
-          {profile.website ? (
-            <a
-              href={profile.website}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-1.5 rounded border border-[#E5E7EB] px-3 py-1.5 text-[10px] font-black uppercase tracking-[0.1em] text-[#0A0A0A] hover:border-[#0A0A0A] hover:text-[#0A0A0A]"
-            >
-              <IconWorld size={13} stroke={1.8} />
-              {labels.website}
-            </a>
-          ) : null}
-          {profile.phone ? (
-            <a
-              href={`tel:${profile.phone.replace(/\s+/g, "")}`}
-              className="inline-flex items-center gap-1.5 rounded border border-[#E5E7EB] px-3 py-1.5 text-[10px] font-black uppercase tracking-[0.1em] text-[#0A0A0A] hover:border-[#0A0A0A] hover:text-[#0A0A0A]"
-            >
-              <IconPhone size={13} stroke={1.8} />
-              {labels.phone}
-            </a>
-          ) : null}
-          <Link
-            href={`/${locale}/experts/${profile.verticalSlug}/${profile.slug}`}
-            className="inline-flex items-center gap-1.5 rounded bg-[#0A0A0A] px-3 py-1.5 text-[10px] font-black uppercase tracking-[0.1em] text-white hover:bg-[#262626]"
-          >
-            {labels.details}
-            <IconExternalLink size={13} stroke={1.8} />
-          </Link>
-        </div>
-      </div>
-    </article>
-  );
-}
-
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const safeLocale = isLocale(locale) ? locale : "es";
@@ -567,36 +464,15 @@ export default async function ExpertsPage({
       if (sortKey === "name") return a.name.localeCompare(b.name);
       return (b.reviewsCount ?? 0) - (a.reviewsCount ?? 0);
     });
-  const heroIntro = langFilter === "Deutsch"
-    ? safeLocale === "de"
-      ? "Deutschsprachige Profis für Expats, Käufer und internationale Residenten auf Mallorca — Anwälte, Zahnärzte, Immobilienmakler, Hypothekenbroker, Architekten, Ärzte und Property Manager."
-      : safeLocale === "es"
-      ? "Profesionales que hablan alemán para expats, compradores y residentes en Mallorca — abogados, dentistas, estate agents, brokers hipotecarios, arquitectos, médicos y property managers."
-      : "German-speaking professionals for expats, buyers and residents in Mallorca — lawyers, dentists, estate agents, mortgage brokers, architects, doctors and property managers."
-    : copy.intro;
-  const faqIntro = {
-    es: {
-      title: "Preguntas frecuentes sobre Mallorca Verified Experts",
-      text: "Resolvemos las dudas principales sobre seleccion, perfiles premium y fiabilidad de los datos antes de contactar con un profesional."
-    },
-    en: {
-      title: "Frequently asked questions about Mallorca Verified Experts",
-      text: "Key answers about selection, premium profiles and data reliability before you contact a professional."
-    },
-    de: {
-      title: "Haeufige Fragen zu Mallorca Verified Experts",
-      text: "Die wichtigsten Antworten zu Auswahl, Premium-Profilen und Datenverlaesslichkeit, bevor du einen Experten kontaktierst."
-    }
-  }[safeLocale];
   const VERTICAL_COLORS: Record<string, string> = {
-    "english-speaking-lawyers-mallorca":  "#0A0A0A",
-    "architects-renovation-mallorca":     "#0A0A0A",
-    "property-managers-mallorca":         "#0A0A0A",
-    "english-speaking-dentists-mallorca": "#0A0A0A",
-    "english-speaking-doctors-mallorca":  "#0A0A0A",
-    "estate-agents-mallorca":             "#0A0A0A",
-    "mortgage-brokers-mallorca":          "#0A0A0A",
-    "aesthetic-medicine-mallorca":        "#0A0A0A",
+    "english-speaking-lawyers-mallorca":  "#00C37A",
+    "architects-renovation-mallorca":     "#00C37A",
+    "property-managers-mallorca":         "#00C37A",
+    "english-speaking-dentists-mallorca": "#00C37A",
+    "english-speaking-doctors-mallorca":  "#00C37A",
+    "estate-agents-mallorca":             "#00C37A",
+    "mortgage-brokers-mallorca":          "#00C37A",
+    "aesthetic-medicine-mallorca":        "#00C37A",
   };
   const verticalColor = (slug: string) => VERTICAL_COLORS[slug] ?? "#0A0A0A";
   const breadcrumbs = createBreadcrumbSchema([
@@ -623,112 +499,70 @@ export default async function ExpertsPage({
     }
   };
 
+  const hasActiveSearch = !!(query || activeVertical || langFilter);
+
   return (
-    <main className="bg-[linear-gradient(180deg,#FFFFFF_0%,#FFFFFF_44%,#FFFFFF_100%)]">
-      <section className="bg-[#0A0A0A] px-4 py-10 text-white sm:px-6 sm:py-16 lg:px-8">
-        <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[minmax(0,1fr)_360px] lg:items-center">
-          <div>
-          <p className="inline-flex items-center gap-2 text-[11px] font-black uppercase tracking-[0.18em] text-[#FFCC00]">
-            <IconShieldCheck size={15} stroke={2} />
+    <main className="bg-[#040D1A] text-white">
+      {/* ── HERO ── */}
+      <section className="border-b border-white/[0.08] bg-[#07101F] px-4 pb-12 pt-14 sm:px-6 sm:pt-20 lg:px-8">
+        <div className="mx-auto max-w-4xl text-center">
+          <p className="inline-flex items-center gap-2 text-[11px] font-black uppercase tracking-[0.18em] text-[#00C37A]">
+            <IconShieldCheck size={13} stroke={2} />
             {copy.eyebrow}
           </p>
-          <h1 className="mt-3 max-w-4xl font-display text-4xl font-black leading-[0.98] text-white sm:text-5xl lg:text-6xl">
-            {copy.title}
+          <h1 className="mt-4 font-display text-4xl font-black leading-[0.96] text-white sm:text-6xl lg:text-7xl">
+            {safeLocale === "de"
+              ? "Die richtigen Experten für dein Leben auf Mallorca."
+              : safeLocale === "en"
+              ? "The right experts for life in Mallorca."
+              : "Los expertos que necesitas para vivir en Mallorca."}
           </h1>
-          <p className="mt-5 max-w-2xl text-base leading-8 text-white/70">{heroIntro}</p>
-          <ExpertHeroSearch
-            locale={safeLocale}
-            categories={copy.categories.map(({ slug, title }) => ({ slug, title }))}
-            initialQuery={query}
-            initialVertical={activeVertical}
-            initialLanguage={langFilter}
-          />
-          <div className="mt-5 hidden flex-wrap gap-x-6 gap-y-2 text-[12px] font-semibold text-white/65 sm:flex">
-            <span className="inline-flex items-center gap-2">
-              <IconLanguage size={14} className="shrink-0 text-[#FFCC00]" />
-              {safeLocale === "de" ? "Deutsch, Englisch, Spanisch" : safeLocale === "en" ? "English, Deutsch, Español" : "Español, English, Deutsch"}
-            </span>
-            <span className="inline-flex items-center gap-2">
-              <IconChecklist size={14} className="shrink-0 text-[#FFCC00]" />
-              {safeLocale === "de" ? "Öffentliche Signale und redaktionelle Prüfung" : safeLocale === "en" ? "Public signals and editorial checks" : "Señales públicas y revisión editorial"}
-            </span>
-            <span className="inline-flex items-center gap-2">
-              <IconShieldCheck size={14} className="shrink-0 text-[#FFCC00]" />
-              {safeLocale === "de" ? "Keine bezahlten Platzierungen" : safeLocale === "en" ? "No paid placements" : "Sin posiciones de pago"}
-            </span>
+          <p className="mx-auto mt-5 max-w-xl text-base leading-8 text-white/55">
+            {safeLocale === "de"
+              ? "Anwälte, Zahnärzte, Estate Agents und mehr — ausgewählt nach Daten, nicht nach Zahlung."
+              : safeLocale === "en"
+              ? "Lawyers, dentists, estate agents and more — selected on data, not payment."
+              : "Abogados, dentistas, estate agents y más — seleccionados por datos, no por pago."}
+          </p>
+          <div className="mx-auto mt-8 max-w-2xl">
+            <ExpertHeroSearch
+              locale={safeLocale}
+              categories={copy.categories.map(({ slug, title }) => ({ slug, title }))}
+              initialQuery={query}
+              initialVertical={activeVertical}
+              initialLanguage={langFilter}
+            />
           </div>
-          <Link href={copy.methodologyPath} className="mt-7 inline-flex min-h-11 items-center justify-center rounded-md border border-white/20 bg-white px-5 text-[11px] font-black uppercase tracking-[0.1em] text-[#0A0A0A] shadow-[0_14px_30px_rgba(0,0,0,0.22)] hover:bg-[#FFCC00]">
-            {copy.secondaryCta}
-          </Link>
-          </div>
-          <aside className="hidden rounded-lg border border-[#E5E7EB] bg-white p-5 shadow-[0_22px_55px_rgba(10,10,10,0.09)] lg:block">
-            <div className="flex items-center gap-3">
-              <div className="flex h-12 w-12 items-center justify-center rounded-md bg-[#0A0A0A] text-[#FFCC00]">
-                <IconShieldCheck size={26} stroke={2} />
-              </div>
-              <div>
-                <p className="text-[10px] font-black uppercase tracking-[0.14em] text-[#0A0A0A]">
-                  {safeLocale === "de" ? "Verified layer" : safeLocale === "en" ? "Verified layer" : "Capa verificada"}
-                </p>
-                <h2 className="text-lg font-black leading-tight text-[#0A0A0A]">
-                  {safeLocale === "de" ? "Professionals with clear criteria" : safeLocale === "en" ? "Professionals with clear criteria" : "Profesionales con criterio claro"}
-                </h2>
-              </div>
-            </div>
-            <div className="mt-5 grid gap-3">
-              {[
-                safeLocale === "de" ? "Sprache, Spezialisierung und Gebiet werden klar angegeben." : safeLocale === "en" ? "Language, specialism and area are made explicit." : "Idioma, especialidad y zona aparecen de forma clara.",
-                safeLocale === "de" ? "Premium-Profile verbessern die Information, nicht die Position." : safeLocale === "en" ? "Premium profiles improve information, not position." : "Las fichas premium mejoran la información, no la posición.",
-                safeLocale === "de" ? "Unternehmensnamen werden nicht künstlich übersetzt." : safeLocale === "en" ? "Business names are not artificially translated." : "Los nombres de empresas no se traducen artificialmente."
-              ].map((item) => (
-                <p key={item} className="rounded-md border border-[#E5E7EB] bg-[#FFFFFF] px-4 py-3 text-sm font-semibold leading-6 text-[#6B7280]">
-                  {item}
-                </p>
-              ))}
-            </div>
-            <div className="mt-5 grid grid-cols-3 gap-2">
-              {[
-                { value: allApproved.length, label: safeLocale === "de" ? "Profile" : safeLocale === "en" ? "profiles" : "perfiles" },
-                { value: copy.categories.length, label: safeLocale === "de" ? "Bereiche" : safeLocale === "en" ? "verticals" : "verticales" },
-                { value: 3, label: safeLocale === "de" ? "Sprachen" : safeLocale === "en" ? "languages" : "idiomas" }
-              ].map((stat) => (
-                <div key={stat.label} className="rounded-md border border-[#FFCC00]/60 bg-[#0A0A0A] px-3 py-3 text-center">
-                  <div className="text-2xl font-black leading-none text-[#FFCC00]">{stat.value}</div>
-                  <div className="mt-1 text-[9px] font-black uppercase tracking-[0.1em] text-white/75">{stat.label}</div>
-                </div>
-              ))}
-            </div>
-          </aside>
         </div>
       </section>
 
-      <section className="px-4 pb-10 pt-2 sm:px-6 sm:pt-6 lg:px-8 lg:py-10">
+      {/* ── DIRECTORY ── */}
+      <section className="px-4 pb-10 pt-8 sm:px-6 sm:pt-10 lg:px-8 lg:py-12">
         <div className="mx-auto max-w-7xl">
-          <p className="text-[11px] font-black uppercase tracking-[0.16em] text-[#0A0A0A]">{copy.directoryEyebrow}</p>
-          <div className="mt-5 grid gap-6 lg:grid-cols-[280px_minmax(0,1fr)]">
-            <ExpertsFilters
-              locale={safeLocale}
-              sortKey={sortKey}
-              langFilter={langFilter}
-              activeVertical={activeVertical}
-              query={query}
-              count={displayedProfiles.length}
-              categories={copy.categories.map(({ slug, title }) => ({ slug, title }))}
-              copy={{
-                sortLabel: copy.sortLabel,
-                sortByReviews: copy.sortByReviews,
-                sortByRating: copy.sortByRating,
-                sortByName: copy.sortByName,
-                languageLabel: copy.languageLabel,
-                allFilter: copy.allFilter,
-                resultsLabel: copy.resultsLabel,
-                searchLabel: safeLocale === "de" ? "Suche" : safeLocale === "en" ? "Search" : "Buscar",
-                searchPlaceholder: safeLocale === "de" ? "Name, Ort oder Spezialgebiet..." : safeLocale === "en" ? "Name, area or specialism..." : "Nombre, zona o especialidad...",
-                categoryLabel: safeLocale === "de" ? "Bereich" : safeLocale === "en" ? "Vertical" : "Vertical",
-                clearFilters: safeLocale === "de" ? "Filter loeschen" : safeLocale === "en" ? "Clear filters" : "Limpiar filtros",
-              }}
-            />
-            <div className="min-w-0">
+          {hasActiveSearch ? (
+            <>
+              <ExpertsFilters
+                locale={safeLocale}
+                sortKey={sortKey}
+                langFilter={langFilter}
+                activeVertical={activeVertical}
+                query={query}
+                count={displayedProfiles.length}
+                categories={copy.categories.map(({ slug, title }) => ({ slug, title }))}
+                copy={{
+                  sortLabel: copy.sortLabel,
+                  sortByReviews: copy.sortByReviews,
+                  sortByRating: copy.sortByRating,
+                  sortByName: copy.sortByName,
+                  languageLabel: copy.languageLabel,
+                  allFilter: copy.allFilter,
+                  resultsLabel: copy.resultsLabel,
+                  searchLabel: safeLocale === "de" ? "Suche" : safeLocale === "en" ? "Search" : "Buscar",
+                  searchPlaceholder: safeLocale === "de" ? "Name, Ort oder Spezialgebiet..." : safeLocale === "en" ? "Name, area or specialism..." : "Nombre, zona o especialidad...",
+                  categoryLabel: safeLocale === "de" ? "Bereich" : safeLocale === "en" ? "Vertical" : "Vertical",
+                  clearFilters: safeLocale === "de" ? "Filter loeschen" : safeLocale === "en" ? "Clear filters" : "Limpiar filtros",
+                }}
+              />
               <LoadMoreExpertGrid
                 profiles={displayedProfiles}
                 locale={safeLocale}
@@ -737,60 +571,78 @@ export default async function ExpertsPage({
                 activeVertical={activeVertical}
                 labels={copy.labels as { languages: string; specialties: string; website: string; phone: string; details: string }}
               />
+            </>
+          ) : (
+            <div className="space-y-16 py-4">
+              {copy.categories.map((cat) => {
+                const catProfiles = allApproved
+                  .filter((p) => p.verticalSlug === cat.slug)
+                  .sort((a, b) => (b.reviewsCount ?? 0) - (a.reviewsCount ?? 0))
+                  .slice(0, 3);
+                if (!catProfiles.length) return null;
+                return (
+                  <div key={cat.slug}>
+                    <div className="mb-5 flex items-center justify-between gap-4">
+                      <p className="text-[11px] font-black uppercase tracking-[0.14em] text-[#00C37A]">{cat.title}</p>
+                      <a
+                        href={`/${safeLocale}/experts?v=${cat.slug}`}
+                        className="shrink-0 text-[11px] font-black uppercase tracking-[0.1em] text-white/35 hover:text-white"
+                      >
+                        {safeLocale === "de" ? "Alle →" : safeLocale === "en" ? "See all →" : "Ver todos →"}
+                      </a>
+                    </div>
+                    <LoadMoreExpertGrid
+                      profiles={catProfiles}
+                      locale={safeLocale}
+                      categories={copy.categories.map(({ slug, title }) => ({ slug, title }))}
+                      verticalColors={VERTICAL_COLORS}
+                      activeVertical={cat.slug}
+                      labels={copy.labels as { languages: string; specialties: string; website: string; phone: string; details: string }}
+                    />
+                  </div>
+                );
+              })}
             </div>
-          </div>
+          )}
         </div>
       </section>
 
-      <section className="border-y border-[#E5E7EB] bg-[#FFFFFF] px-4 py-14 sm:px-6 lg:px-8">
-        <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
-          <div>
-            <p className="text-[11px] font-black uppercase tracking-[0.16em] text-[#0A0A0A]">{copy.criteriaEyebrow}</p>
-            <h2 className="mt-2 font-display text-3xl font-black leading-tight text-[#0A0A0A] sm:text-5xl">{copy.criteriaTitle}</h2>
-            <p className="mt-5 text-sm leading-7 text-[#6B7280]">{copy.criteriaIntro}</p>
+      {/* ── CRITERIA + FAQ — no alternating backgrounds ── */}
+      <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+        <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+          <div className="text-center lg:text-left">
+            <p className="text-[11px] font-black uppercase tracking-[0.16em] text-[#00C37A]">{copy.criteriaEyebrow}</p>
+            <h2 className="mt-2 font-display text-3xl font-black leading-tight text-white sm:text-4xl">{copy.criteriaTitle}</h2>
+            <p className="mt-5 text-sm leading-7 text-white/60">{copy.criteriaIntro}</p>
           </div>
           <div className="grid gap-3">
             {copy.criteria.map((item, index) => (
-              <div key={item} className="flex gap-4 rounded-lg border border-[#E5E7EB] bg-[#F9FAFB] p-4 shadow-[0_12px_30px_rgba(10,10,10,0.05)]">
-                <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#0A0A0A] text-xs font-black text-[#FFCC00]">{index + 1}</span>
-                <p className="pt-1 text-sm font-semibold leading-6 text-[#0A0A0A]">{item}</p>
+              <div key={item} className="flex gap-4 rounded-sm border border-white/[0.08] p-4">
+                <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-sm bg-[#00C37A] text-xs font-black text-[#0A0A0A]">{index + 1}</span>
+                <p className="text-sm font-semibold leading-6 text-white/65">{item}</p>
               </div>
             ))}
           </div>
         </div>
-      </section>
 
-      <section className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-4xl text-center">
-          <p className="text-[11px] font-black uppercase tracking-[0.16em] text-[#0A0A0A]">FAQ</p>
-          <h2 className="mt-3 font-display text-3xl font-black leading-tight text-[#0A0A0A] sm:text-5xl">{faqIntro.title}</h2>
-          <p className="mx-auto mt-4 max-w-2xl text-sm leading-7 text-[#6B7280]">{faqIntro.text}</p>
-          <div className="mt-8 grid gap-4 text-left">
+        <div className="mx-auto mt-16 max-w-3xl">
+          <p className="text-center text-[11px] font-black uppercase tracking-[0.16em] text-[#00C37A]">FAQ</p>
+          <h2 className="mt-2 text-center font-display text-3xl font-black leading-tight text-white sm:text-4xl">{copy.faqs[0] ? (safeLocale === "de" ? "Häufige Fragen" : safeLocale === "en" ? "Frequently asked questions" : "Preguntas frecuentes") : ""}</h2>
+          <div className="mt-8 grid gap-3">
             {copy.faqs.map((item) => (
-              <details key={item.question} className="group rounded-lg border border-[#E5E7EB] bg-[#F9FAFB] shadow-[0_12px_30px_rgba(10,10,10,0.05)]">
-                <summary className="flex cursor-pointer items-center justify-between gap-4 px-5 py-5 text-sm font-black text-[#0A0A0A] marker:hidden [&::-webkit-details-marker]:hidden sm:px-6">
+              <details key={item.question} className="group rounded-sm border border-white/[0.08]">
+                <summary className="flex cursor-pointer items-center justify-between gap-4 px-5 py-4 text-sm font-black text-white marker:hidden [&::-webkit-details-marker]:hidden">
                   {item.question}
-                  <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#0A0A0A] text-[#FFCC00] transition-transform duration-200 group-open:rotate-45">+</span>
+                  <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-sm bg-[#00C37A] text-[#0A0A0A] transition-transform duration-200 group-open:rotate-45">+</span>
                 </summary>
-                <p className="border-t border-[#E5E7EB] px-5 py-5 text-sm leading-7 text-[#6B7280] sm:px-6">{item.answer}</p>
+                <p className="border-t border-white/[0.08] px-5 py-4 text-sm leading-7 text-white/60">{item.answer}</p>
               </details>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-        <div className="rounded-lg border border-[#E5E7EB] bg-[#0A0A0A] p-6 text-white shadow-[0_24px_60px_rgba(10,10,10,0.16)] sm:p-8 lg:p-10">
-          <p className="text-[11px] font-black uppercase tracking-[0.16em] text-[#FFCC00]">{copy.eyebrow}</p>
-          <h2 className="mt-3 max-w-3xl font-display text-3xl font-black leading-tight text-white sm:text-5xl">{copy.ctaTitle}</h2>
-          <p className="mt-5 max-w-3xl text-sm leading-7 text-white/75">{copy.ctaText}</p>
-          <Link href={`/${safeLocale}/contact`} className="mt-7 inline-flex min-h-12 items-center justify-center rounded-md bg-white px-6 text-[11px] font-black uppercase tracking-[0.1em] text-[#0A0A0A] transition-all duration-150 hover:bg-[#FFFFFF]">
-            {copy.ctaButton}
-          </Link>
-        </div>
-      </section>
-
-      <JsonLd data={[breadcrumbs, collectionSchema, createFAQSchema([...copy.faqs])]} />
+      <JsonLd data={[breadcrumbs, collectionSchema]} />
     </main>
   );
 }
