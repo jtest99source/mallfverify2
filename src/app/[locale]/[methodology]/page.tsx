@@ -674,10 +674,10 @@ function AboutPage({ locale, canonical, stats }: { locale: Locale; canonical: st
 
   return (
     <main className="bg-[#07101F]">
-      <section className="border-b border-white/[0.08] border-b border-white/[0.08] px-4 py-14 sm:px-6 lg:px-8">
+      <section className="bg-[#0C1A2E] px-4 py-14 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <Breadcrumbs items={[{ label: c.home, href: `/${locale}` }, { label: c.label, href: canonical }]} />
-          <div className="mt-8 max-w-3xl">
+          <div className="mt-8 max-w-3xl text-center sm:text-left">
             <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/[0.06] px-3 py-1 text-[11px] font-bold uppercase tracking-[0.08em] text-white">
               <IconUsers size={15} stroke={2} />
               {c.badge}
@@ -690,22 +690,25 @@ function AboutPage({ locale, canonical, stats }: { locale: Locale; canonical: st
 
       <article className="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8">
         <section className="border-b border-white/[0.08] pb-10">
+          <p className="mb-2 text-[11px] font-black uppercase tracking-[0.18em] text-[#00C37A]/50">01</p>
           <h2 className="font-sans text-2xl font-black leading-tight text-white sm:text-3xl">{c.whyTitle}</h2>
           <p className="mt-5 text-base leading-8 text-white/70">{c.whyText}</p>
         </section>
 
         <section className="border-b border-white/[0.08] py-10">
+          <p className="mb-2 text-[11px] font-black uppercase tracking-[0.18em] text-[#00C37A]/50">02</p>
           <h2 className="font-sans text-2xl font-black leading-tight text-white sm:text-3xl">{c.teamTitle}</h2>
           <p className="mt-5 text-base leading-8 text-white/70">{c.teamText}</p>
         </section>
 
         <section className="border-b border-white/[0.08] py-10">
+          <p className="mb-2 text-[11px] font-black uppercase tracking-[0.18em] text-[#00C37A]/50">03</p>
           <h2 className="font-sans text-2xl font-black leading-tight text-white sm:text-3xl">{c.principlesTitle}</h2>
           <div className="mt-7 grid gap-4 sm:grid-cols-2">
             {c.principles.map(([title, text], index) => {
               const Icon = principleIcons[index] ?? IconShieldCheck;
               return (
-                <div key={title} className="rounded-lg border border-white/[0.08] bg-[#0C1A2E] p-5 shadow-none">
+                <div key={title} className="rounded-lg border border-white/[0.10] border-t-2 border-t-[#00C37A]/50 bg-[#0C1A2E] p-5">
                   <Icon size={24} stroke={1.8} className="text-[#00C37A]" />
                   <h3 className="mt-3 font-sans text-lg font-bold text-white">{title}</h3>
                   <p className="mt-2 text-sm leading-7 text-white/70">{text}</p>
@@ -716,6 +719,7 @@ function AboutPage({ locale, canonical, stats }: { locale: Locale; canonical: st
         </section>
 
         <section className="border-b border-white/[0.08] py-10">
+          <p className="mb-6 text-[11px] font-black uppercase tracking-[0.18em] text-[#00C37A]/50">04</p>
           <div className="grid gap-4 sm:grid-cols-3">
             {[
               { value: formatIntegerMetric(stats.publishedBusinesses, locale), label: c.published },
@@ -778,10 +782,10 @@ function EditorialPage({ locale, canonical }: { locale: Locale; canonical: strin
 
   return (
     <main className="bg-[#07101F]">
-      <section className="border-b border-white/[0.08] border-b border-white/[0.08] px-4 py-14 sm:px-6 lg:px-8">
+      <section className="bg-[#0C1A2E] px-4 py-14 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <Breadcrumbs items={[{ label: c.home, href: `/${locale}` }, { label: c.label, href: canonical }]} />
-          <div className="mt-8 max-w-3xl">
+          <div className="mt-8 max-w-3xl text-center sm:text-left">
             <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/[0.06] px-3 py-1 text-[11px] font-bold uppercase tracking-[0.08em] text-white">
               <IconShieldCheck size={15} stroke={2} />
               {c.badge}
@@ -794,10 +798,11 @@ function EditorialPage({ locale, canonical }: { locale: Locale; canonical: strin
 
       <article className="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8">
         <section className="border-b border-white/[0.08] pb-10">
+          <p className="mb-2 text-[11px] font-black uppercase tracking-[0.18em] text-[#00C37A]/50">01</p>
           <h2 className="font-sans text-2xl font-black leading-tight text-white sm:text-3xl">{c.criteriaTitle}</h2>
           <div className="mt-6 grid gap-4">
             {c.criteria.map(([title, text]) => (
-              <div key={title} className="rounded-lg border border-white/[0.08] bg-[#0C1A2E] p-5 shadow-[0_4px_18px_rgba(10,10,10,0.04)]">
+              <div key={title} className="rounded-lg border border-white/[0.10] border-t-2 border-t-[#00C37A]/50 bg-[#0C1A2E] p-5">
                 <h3 className="font-sans text-lg font-bold text-white">{title}</h3>
                 <p className="mt-2 text-sm leading-7 text-white/70">{text}</p>
               </div>
@@ -806,6 +811,7 @@ function EditorialPage({ locale, canonical }: { locale: Locale; canonical: strin
         </section>
 
         <section className="border-b border-white/[0.08] py-10">
+          <p className="mb-2 text-[11px] font-black uppercase tracking-[0.18em] text-[#00C37A]/50">02</p>
           <h2 className="font-sans text-2xl font-black leading-tight text-white sm:text-3xl">{c.sourcesTitle}</h2>
           <p className="mt-5 text-base leading-8 text-white/70">{c.sourcesText}</p>
           <div className="mt-6 grid gap-4">
@@ -822,6 +828,7 @@ function EditorialPage({ locale, canonical }: { locale: Locale; canonical: strin
         </section>
 
         <section className="border-b border-white/[0.08] py-10">
+          <p className="mb-2 text-[11px] font-black uppercase tracking-[0.18em] text-[#00C37A]/50">03</p>
           <h2 className="font-sans text-2xl font-black leading-tight text-white sm:text-3xl">{c.updateTitle}</h2>
           <p className="mt-5 text-base leading-8 text-white/70">{c.updateText}</p>
           <div className="mt-6 grid gap-4">
@@ -838,6 +845,7 @@ function EditorialPage({ locale, canonical }: { locale: Locale; canonical: strin
         </section>
 
         <section className="border-b border-white/[0.08] py-10">
+          <p className="mb-2 text-[11px] font-black uppercase tracking-[0.18em] text-[#00C37A]/50">04</p>
           <h2 className="font-sans text-2xl font-black leading-tight text-white sm:text-3xl">{c.separationTitle}</h2>
           <p className="mt-5 text-base leading-8 text-white/70">{c.separationText}</p>
           <div className="mt-6 grid gap-4">
@@ -854,6 +862,7 @@ function EditorialPage({ locale, canonical }: { locale: Locale; canonical: strin
         </section>
 
         <section className="pt-10">
+          <p className="mb-6 text-[11px] font-black uppercase tracking-[0.18em] text-[#00C37A]/50">05</p>
           <div className="rounded-lg border border-white/[0.10] bg-[#0C1A2E] p-6 shadow-none">
             <IconMail size={28} stroke={1.8} className="text-[#00C37A]" />
             <h2 className="mt-3 font-sans text-2xl font-black leading-tight text-white">{c.correctionsTitle}</h2>
