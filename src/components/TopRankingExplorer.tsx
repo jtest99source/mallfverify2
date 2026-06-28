@@ -315,47 +315,28 @@ export function TopRankingExplorer({
           />
         </div>
       </div>
-      {/* Mobile filters: sort chips + compact 2-col dropdowns */}
+      {/* Mobile filters: 2 compact selects */}
       <div className="px-4 py-4 sm:hidden">
-        <div className="flex gap-2 overflow-x-auto pb-1 [&::-webkit-scrollbar]:hidden">
-          {sortOptions.map((option) => (
-            <button
-              key={option.value}
-              type="button"
-              onClick={() => updateParam("sort", option.value)}
-              className={`shrink-0 rounded-full px-3.5 py-2 text-[11px] font-bold uppercase tracking-[0.06em] transition-colors ${
-                sort === option.value
-                  ? "bg-[#00C37A] text-[#0A0A0A]"
-                  : "border border-white/[0.12] bg-[#0C1A2E] text-white/55"
-              }`}
-            >
-              {option.label}
-            </button>
-          ))}
-        </div>
-        <div className={`mt-2 grid gap-2 ${SHOW_TYPE_FILTER && facets.length > 0 ? "grid-cols-2" : "grid-cols-1"}`}>
-          {SHOW_TYPE_FILTER && facets.length > 0 && (
-            <select value={facetSlug} onChange={(event) => updateParam("type", event.target.value)} className="h-10 rounded-sm border border-white/[0.12] bg-[#0C1A2E] px-2 text-xs text-white focus:border-[#00C37A] focus:ring-[#00C37A]">
-              <option value={ALL}>{copy.filters.type}: {copy.filters.all}</option>
-              {facets.map((facet) => (
-                <option key={facet.slug} value={facet.slug}>{getLocalizedFacetLabel(facet.slug, facet.label, locale)} ({facet.count})</option>
-              ))}
-            </select>
-          )}
-          <select value={place} onChange={(event) => updateParam("area", event.target.value)} className="h-10 rounded-sm border border-white/[0.12] bg-[#0C1A2E] px-2 text-xs text-white focus:border-[#00C37A] focus:ring-[#00C37A]">
+        <div className="grid grid-cols-2 gap-2">
+          <select value={sort} onChange={(event) => updateParam("sort", event.target.value)} className="h-10 rounded-sm border border-white/[0.12] bg-[#0C1A2E] px-3 text-xs text-white focus:border-[#00C37A] focus:outline-none">
+            {sortOptions.map((option) => (
+              <option key={option.value} value={option.value}>{option.label}</option>
+            ))}
+          </select>
+          <select value={place} onChange={(event) => updateParam("area", event.target.value)} className="h-10 rounded-sm border border-white/[0.12] bg-[#0C1A2E] px-3 text-xs text-white focus:border-[#00C37A] focus:outline-none">
             <option value={ALL}>{copy.filters.place}: {copy.filters.allPlaces}</option>
             {places.map((item) => (
               <option key={item} value={item}>{item}</option>
             ))}
           </select>
         </div>
-        <p className="mt-2 text-[11px] font-black uppercase tracking-[0.1em] text-white/55">
-          {totalCount} {copy.filters.results}
-        </p>
-        <Link href={methodologyPath(locale)} className="mt-2 inline-flex items-center gap-1 text-[10px] font-black uppercase tracking-[0.1em] text-[#00C37A]">
-          <IconInfoCircle size={13} stroke={2} />
-          {sortHelp.link}
-        </Link>
+        <div className="mt-2 flex items-center justify-between">
+          <p className="text-[11px] font-black uppercase tracking-[0.1em] text-white/55">{totalCount} {copy.filters.results}</p>
+          <Link href={methodologyPath(locale)} className="inline-flex items-center gap-1 text-[10px] font-black uppercase tracking-[0.1em] text-[#00C37A]">
+            <IconInfoCircle size={13} stroke={2} />
+            {sortHelp.link}
+          </Link>
+        </div>
       </div>
 
       <div className="hidden px-4 py-5 lg:block lg:px-8">
