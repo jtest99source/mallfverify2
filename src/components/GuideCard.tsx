@@ -24,27 +24,25 @@ export function GuideCard({ guide, locale, editorialImage }: { guide: Guide; loc
   const copy = t(locale).guides;
 
   return (
-    <article className="flex h-full flex-col overflow-hidden rounded-md border border-white/[0.10] bg-[#0C1A2E] shadow-[0_6px_22px_rgba(0,0,0,0.18)] transition hover:-translate-y-0.5 hover:border-white/25 hover:shadow-[0_14px_34px_rgba(10,10,10,0.11)]">
-      {imageUrl && (
-        <div
-          className="h-40 bg-[#F3F4F6] sm:h-44"
-          data-attribution={editorialImage?.attribution}
-          data-image-alt={editorialImage?.alt}
-          style={{
-            backgroundImage: `linear-gradient(180deg, rgba(10,10,10,0), rgba(10,10,10,0.10)), url(${imageUrl})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center"
-          }}
-        />
-      )}
+    <article className="flex h-full flex-col overflow-hidden rounded-sm border border-white/[0.10] bg-[#0C1A2E] shadow-[0_6px_22px_rgba(0,0,0,0.18)] transition hover:-translate-y-0.5 hover:border-white/25">
+      <div
+        className="h-40 bg-[#040D1A] sm:h-44"
+        data-attribution={editorialImage?.attribution}
+        data-image-alt={editorialImage?.alt}
+        style={imageUrl ? {
+          backgroundImage: `linear-gradient(180deg, rgba(4,13,26,0), rgba(4,13,26,0.30)), url(${imageUrl})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center"
+        } : undefined}
+      />
       <div className="flex flex-1 flex-col p-5 sm:p-6">
-        <p className="border-l-2 border-[#00C37A] pl-3 text-[10px] font-black uppercase tracking-[0.14em] text-[#0A0A0A]">
-          Guia · {formatGuideDate(guide.updatedAt, locale)}
+        <p className="inline-flex items-center gap-2 text-[10px] font-black uppercase tracking-[0.14em] text-[#00C37A] before:h-px before:w-3 before:bg-[#00C37A]">
+          {locale === "de" ? "Guía" : locale === "en" ? "Guide" : "Guía"} · {formatGuideDate(guide.updatedAt, locale)}
         </p>
-        <h2 className="mt-4 text-[22px] font-black leading-[1.05] text-ink sm:text-2xl">{guide.title}</h2>
-        <p className="mt-3 line-clamp-3 text-sm leading-6 text-olive">{guide.excerpt}</p>
-        <Link href={`/${locale}/guides/${guide.slug}`} className="mt-auto inline-flex pt-5 text-[11px] font-black uppercase tracking-[0.1em] text-[#0A0A0A] hover:opacity-60">
-          {copy.readGuide}
+        <h2 className="mt-4 font-display text-[22px] font-black leading-[1.05] text-white sm:text-2xl">{guide.title}</h2>
+        <p className="mt-3 line-clamp-3 text-sm leading-6 text-white/55">{guide.excerpt}</p>
+        <Link href={`/${locale}/guides/${guide.slug}`} className="mt-auto inline-flex items-center gap-1.5 pt-5 text-[11px] font-black uppercase tracking-[0.1em] text-[#00C37A] hover:text-white">
+          {copy.readGuide} →
         </Link>
       </div>
     </article>
