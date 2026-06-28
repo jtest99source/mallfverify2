@@ -531,7 +531,7 @@ function MethodologyPage({ locale, canonical, stats }: { locale: Locale; canonic
       <section className="bg-[#0C1A2E] px-4 py-14 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <Breadcrumbs items={[{ label: c.home, href: `/${locale}` }, { label: c.label, href: methodologyPath(locale) }]} />
-          <div className="mt-8 max-w-4xl">
+          <div className="mt-8 max-w-4xl text-center sm:text-left">
             <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/[0.06] px-3 py-1 text-[11px] font-bold uppercase tracking-[0.08em] text-white">
               <IconShieldCheck size={15} stroke={2} />
               {c.badge}
@@ -544,13 +544,13 @@ function MethodologyPage({ locale, canonical, stats }: { locale: Locale; canonic
 
       <article className="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8">
         <section className="border-b border-white/[0.08] pb-10">
-          <p className="mb-2 text-[11px] font-black uppercase tracking-[0.18em] text-white/30">01</p>
+          <p className="mb-2 text-[11px] font-black uppercase tracking-[0.18em] text-[#00C37A]/50">01</p>
           <h2 className="font-sans text-2xl font-black leading-tight text-white sm:text-3xl">{c.whyTitle}</h2>
           <p className="mt-5 text-base leading-8 text-white/70">{c.whyText}</p>
         </section>
 
         <section className="border-b border-white/[0.08] py-10">
-          <p className="mb-2 text-[11px] font-black uppercase tracking-[0.18em] text-white/30">02</p>
+          <p className="mb-2 text-[11px] font-black uppercase tracking-[0.18em] text-[#00C37A]/50">02</p>
           <h2 className="font-sans text-2xl font-black leading-tight text-white sm:text-3xl">{c.factorsTitle}</h2>
           <p className="mt-5 text-base leading-8 text-white/70">{c.factorsIntro}</p>
           <div className="mt-7 grid gap-4">
@@ -563,7 +563,7 @@ function MethodologyPage({ locale, canonical, stats }: { locale: Locale; canonic
                     <div>
                       <p className="text-[10px] font-bold uppercase tracking-[0.12em] text-[#00C37A]">{eyebrow}</p>
                       <h3 className="mt-1 font-sans text-xl font-bold text-white">{title}</h3>
-                      <p className="mt-3 text-sm leading-7 text-white/60">{text}</p>
+                      <p className="mt-3 text-sm leading-7 text-white/70">{text}</p>
                     </div>
                   </div>
                 </div>
@@ -573,7 +573,7 @@ function MethodologyPage({ locale, canonical, stats }: { locale: Locale; canonic
         </section>
 
         <section className="border-b border-white/[0.08] py-10">
-          <p className="mb-2 text-[11px] font-black uppercase tracking-[0.18em] text-white/30">03</p>
+          <p className="mb-2 text-[11px] font-black uppercase tracking-[0.18em] text-[#00C37A]/50">03</p>
           <h2 className="font-sans text-2xl font-black leading-tight text-white sm:text-3xl">{c.neverTitle}</h2>
           <div className="mt-6 grid gap-4">
             {c.never.map(([title, text]) => (
@@ -581,7 +581,7 @@ function MethodologyPage({ locale, canonical, stats }: { locale: Locale; canonic
                 <IconShieldCheck size={22} stroke={2} className="mt-1 shrink-0 text-[#00C37A]" />
                 <div>
                   <h3 className="font-sans text-lg font-bold text-white">{title}</h3>
-                  <p className="mt-2 text-sm leading-7 text-white/60">{text}</p>
+                  <p className="mt-2 text-sm leading-7 text-white/70">{text}</p>
                 </div>
               </div>
             ))}
@@ -589,7 +589,7 @@ function MethodologyPage({ locale, canonical, stats }: { locale: Locale; canonic
         </section>
 
         <section className="border-b border-white/[0.08] py-10">
-          <p className="mb-2 text-[11px] font-black uppercase tracking-[0.18em] text-white/30">04</p>
+          <p className="mb-2 text-[11px] font-black uppercase tracking-[0.18em] text-[#00C37A]/50">04</p>
           <h2 className="font-sans text-2xl font-black leading-tight text-white sm:text-3xl">{c.dataTitle}</h2>
           <p className="mt-5 text-base leading-8 text-white/70">{c.dataText}</p>
           <div className="mt-8 grid gap-4 sm:grid-cols-3">
@@ -607,7 +607,7 @@ function MethodologyPage({ locale, canonical, stats }: { locale: Locale; canonic
         </section>
 
         <section className="border-b border-white/[0.08] py-10">
-          <p className="mb-2 text-[11px] font-black uppercase tracking-[0.18em] text-white/30">05</p>
+          <p className="mb-2 text-[11px] font-black uppercase tracking-[0.18em] text-[#00C37A]/50">05</p>
           <h2 className="font-sans text-2xl font-black leading-tight text-white sm:text-3xl">
             {locale === "en" ? "How each page works" : locale === "de" ? "Wie jede Seite funktioniert" : "Cómo funciona cada página"}
           </h2>
@@ -615,10 +615,10 @@ function MethodologyPage({ locale, canonical, stats }: { locale: Locale; canonic
             {pageSections.map((item, index) => {
               const PageIcon = index === 0 ? IconChartBar : index === 1 ? IconStar : index === 2 ? IconUsers : IconDiamond;
               return (
-              <div key={item.title} className="rounded-lg border border-white/[0.10] bg-[#0C1A2E] p-5 shadow-none">
+              <div key={item.title} className="rounded-lg border border-white/[0.10] border-t-2 border-t-[#00C37A]/50 bg-[#0C1A2E] p-5 shadow-none">
                 <PageIcon size={22} stroke={1.8} className="text-[#00C37A]" />
                 <h3 className="mt-3 font-sans text-lg font-black text-white">{item.title}</h3>
-                <p className="mt-2 text-sm leading-7 text-white/60">{item.text}</p>
+                <p className="mt-2 text-sm leading-7 text-white/70">{item.text}</p>
               </div>
               );
             })}
@@ -626,7 +626,7 @@ function MethodologyPage({ locale, canonical, stats }: { locale: Locale; canonic
         </section>
 
         <section className="pt-10">
-          <p className="mb-2 text-[11px] font-black uppercase tracking-[0.18em] text-white/30">06</p>
+          <p className="mb-2 text-[11px] font-black uppercase tracking-[0.18em] text-[#00C37A]/50">06</p>
           <h2 className="font-sans text-2xl font-black leading-tight text-white sm:text-3xl">{c.faqTitle}</h2>
           <div className="mt-6 divide-y divide-white/[0.08] overflow-hidden rounded-lg border border-white/[0.08] bg-[#0C1A2E]">
             {c.faqs.map(([question, answer]) => (
@@ -635,7 +635,7 @@ function MethodologyPage({ locale, canonical, stats }: { locale: Locale; canonic
                   <span>{question}</span>
                   <span className="text-[#00C37A] transition group-open:rotate-45">+</span>
                 </summary>
-                <p className="mt-4 text-sm leading-7 text-white/60">{answer}</p>
+                <p className="mt-4 text-sm leading-7 text-white/70">{answer}</p>
               </details>
             ))}
           </div>
@@ -708,7 +708,7 @@ function AboutPage({ locale, canonical, stats }: { locale: Locale; canonical: st
                 <div key={title} className="rounded-lg border border-white/[0.08] bg-[#0C1A2E] p-5 shadow-none">
                   <Icon size={24} stroke={1.8} className="text-[#00C37A]" />
                   <h3 className="mt-3 font-sans text-lg font-bold text-white">{title}</h3>
-                  <p className="mt-2 text-sm leading-7 text-white/60">{text}</p>
+                  <p className="mt-2 text-sm leading-7 text-white/70">{text}</p>
                 </div>
               );
             })}
@@ -734,7 +734,7 @@ function AboutPage({ locale, canonical, stats }: { locale: Locale; canonical: st
           <div className="rounded-lg border border-white/[0.10] bg-[#0C1A2E] p-6 shadow-none">
             <IconMail size={28} stroke={1.8} className="text-[#00C37A]" />
             <h2 className="mt-3 font-sans text-2xl font-black leading-tight text-white">{c.contactTitle}</h2>
-            <p className="mt-3 text-sm leading-7 text-white/60">{c.contactText}</p>
+            <p className="mt-3 text-sm leading-7 text-white/70">{c.contactText}</p>
             <a href={`mailto:${c.contactCta}`} className="mt-4 inline-flex min-h-11 items-center justify-center rounded-sm bg-[#00C37A] px-5 text-[11px] font-bold uppercase tracking-[0.1em] text-[#0A0A0A] hover:bg-white">
               {c.contactCta}
             </a>
@@ -799,7 +799,7 @@ function EditorialPage({ locale, canonical }: { locale: Locale; canonical: strin
             {c.criteria.map(([title, text]) => (
               <div key={title} className="rounded-lg border border-white/[0.08] bg-[#0C1A2E] p-5 shadow-[0_4px_18px_rgba(10,10,10,0.04)]">
                 <h3 className="font-sans text-lg font-bold text-white">{title}</h3>
-                <p className="mt-2 text-sm leading-7 text-white/60">{text}</p>
+                <p className="mt-2 text-sm leading-7 text-white/70">{text}</p>
               </div>
             ))}
           </div>
@@ -814,7 +814,7 @@ function EditorialPage({ locale, canonical }: { locale: Locale; canonical: strin
                 <IconChartBar size={22} stroke={1.8} className="mt-1 shrink-0 text-[#00C37A]" />
                 <div>
                   <h3 className="font-sans text-lg font-bold text-white">{title}</h3>
-                  <p className="mt-2 text-sm leading-7 text-white/60">{text}</p>
+                  <p className="mt-2 text-sm leading-7 text-white/70">{text}</p>
                 </div>
               </div>
             ))}
@@ -830,7 +830,7 @@ function EditorialPage({ locale, canonical }: { locale: Locale; canonical: strin
                 <IconRefresh size={22} stroke={1.8} className="mt-1 shrink-0 text-[#00C37A]" />
                 <div>
                   <h3 className="font-sans text-lg font-bold text-white">{title}</h3>
-                  <p className="mt-2 text-sm leading-7 text-white/60">{text}</p>
+                  <p className="mt-2 text-sm leading-7 text-white/70">{text}</p>
                 </div>
               </div>
             ))}
@@ -846,7 +846,7 @@ function EditorialPage({ locale, canonical }: { locale: Locale; canonical: strin
                 <IconX size={22} stroke={2} className="mt-1 shrink-0 text-[#00C37A]" />
                 <div>
                   <h3 className="font-sans text-lg font-bold text-white">{title}</h3>
-                  <p className="mt-2 text-sm leading-7 text-white/60">{text}</p>
+                  <p className="mt-2 text-sm leading-7 text-white/70">{text}</p>
                 </div>
               </div>
             ))}
@@ -857,7 +857,7 @@ function EditorialPage({ locale, canonical }: { locale: Locale; canonical: strin
           <div className="rounded-lg border border-white/[0.10] bg-[#0C1A2E] p-6 shadow-none">
             <IconMail size={28} stroke={1.8} className="text-[#00C37A]" />
             <h2 className="mt-3 font-sans text-2xl font-black leading-tight text-white">{c.correctionsTitle}</h2>
-            <p className="mt-3 text-sm leading-7 text-white/60">{c.correctionsText}</p>
+            <p className="mt-3 text-sm leading-7 text-white/70">{c.correctionsText}</p>
             <a href={`mailto:${c.correctionsCta}`} className="mt-4 inline-flex min-h-11 items-center justify-center rounded-sm bg-[#00C37A] px-5 text-[11px] font-bold uppercase tracking-[0.1em] text-[#0A0A0A] hover:bg-white">
               {c.correctionsCta}
             </a>
