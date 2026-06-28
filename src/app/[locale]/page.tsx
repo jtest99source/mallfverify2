@@ -532,7 +532,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           <p className="mt-5 text-sm leading-7 text-white/45">
             {copy.home.bestThisWeekIntro}
           </p>
-          <Link href={`/${safeLocale}/rankings`} className="mt-6 inline-flex min-h-11 items-center justify-center rounded-sm bg-[#00C37A] px-5 text-[11px] font-black uppercase tracking-[0.1em] text-[#0A0A0A] transition hover:bg-white">
+          <Link href={`/${safeLocale}/top/restaurants`} className="mt-6 inline-flex min-h-11 items-center justify-center rounded-sm bg-[#00C37A] px-5 text-[11px] font-black uppercase tracking-[0.1em] text-[#0A0A0A] transition hover:bg-white">
             {safeLocale === "de" ? "Alle Rankings" : safeLocale === "en" ? "All rankings" : "Todos los rankings"} {"\u2192"}
           </Link>
         </div>
