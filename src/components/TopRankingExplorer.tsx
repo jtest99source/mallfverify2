@@ -304,16 +304,16 @@ export function TopRankingExplorer({
 
   return (
     <section className="relative bg-[#07101F] pb-14">
-      <div className="mx-auto -mt-10 max-w-7xl px-4 sm:px-6 lg:px-8">
-      <div className="relative">
-        <IconSearch size={16} stroke={1.8} className="absolute left-4 top-1/2 -translate-y-1/2 text-white/25" />
-        <input
-          value={query}
-          onChange={(event) => updateParam("q", event.target.value)}
-          placeholder={scopedSearchPlaceholder}
-          className="h-12 w-full max-w-[520px] rounded-sm border border-white/[0.14] bg-[#0C1A2E] pl-11 pr-4 text-sm text-white placeholder:text-white/28 shadow-[0_20px_60px_rgba(0,0,0,0.25)] focus:border-[#00C37A] focus:outline-none focus:ring-1 focus:ring-[#00C37A]"
-        />
-      </div>
+      <div className="mx-auto -mt-10 hidden max-w-7xl px-4 sm:block sm:px-6 lg:px-8">
+        <div className="relative">
+          <IconSearch size={16} stroke={1.8} className="absolute left-4 top-1/2 -translate-y-1/2 text-white/25" />
+          <input
+            value={query}
+            onChange={(event) => updateParam("q", event.target.value)}
+            placeholder={scopedSearchPlaceholder}
+            className="h-12 w-full max-w-[520px] rounded-sm border border-white/[0.14] bg-[#0C1A2E] pl-11 pr-4 text-sm text-white placeholder:text-white/28 shadow-[0_20px_60px_rgba(0,0,0,0.25)] focus:border-[#00C37A] focus:outline-none focus:ring-1 focus:ring-[#00C37A]"
+          />
+        </div>
       </div>
       {/* Mobile filters: sort chips + compact 2-col dropdowns */}
       <div className="px-4 py-4 sm:hidden">
