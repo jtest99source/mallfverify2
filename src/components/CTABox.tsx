@@ -31,7 +31,7 @@ export function CTABox({ locale = "es" }: { locale?: Locale }) {
         <div>
           <p className="text-3xl font-black leading-tight">{c.title}</p>
           <p className="mt-3 max-w-2xl text-sm leading-7 text-white/78">{c.text}</p>
-          <p className="mt-3 rounded-md border border-white/15 bg-white/8 px-4 py-2.5 text-[11px] text-white/55">{c.note}</p>
+          <p className="mt-4 text-[11px] text-white/50">{c.note}</p>
         </div>
         <Link
           href={`/${locale}/contact`}

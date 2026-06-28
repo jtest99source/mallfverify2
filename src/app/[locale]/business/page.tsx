@@ -147,7 +147,7 @@ export default async function BusinessPage({ params }: { params: Promise<{ local
           <div>
             <p className="text-[11px] font-black uppercase tracking-[0.18em] text-[#00C37A]">{copy.eyebrow}</p>
             <h1 className="mt-4 max-w-4xl font-display text-4xl font-black leading-[0.96] text-white sm:text-5xl lg:text-7xl">{copy.title}</h1>
-            <p className="mt-6 max-w-2xl text-base leading-8 text-white/60">{copy.intro}</p>
+            <p className="mt-6 max-w-2xl text-base leading-8 text-white/75">{copy.intro}</p>
             <div className="mt-7 max-w-2xl rounded-sm border border-white/[0.10] bg-[#0C1A2E] p-5">
               <p className="text-sm font-bold leading-7 text-white">
                 <span className="rounded-full bg-[#00C37A] px-3 py-1 text-[10px] font-black uppercase tracking-[0.12em] text-[#0A0A0A]">ChatGPT · Perplexity · Google AI</span>
@@ -157,7 +157,7 @@ export default async function BusinessPage({ params }: { params: Promise<{ local
           </div>
           <div className="rounded-sm border border-white/[0.10] bg-[#0C1A2E] p-6">
             <p className="text-[10px] font-black uppercase tracking-[0.14em] text-[#00C37A]">{copy.contactEyebrow}</p>
-            <p className="mt-4 text-sm leading-7 text-white/60">{copy.contactText}</p>
+            <p className="mt-4 text-sm leading-7 text-white/70">{copy.contactText}</p>
             <Link href={`/${safeLocale}/contact`} className="mt-6 block rounded-sm bg-[#00C37A] px-5 py-4 text-center text-[11px] font-black uppercase tracking-[0.1em] text-[#0A0A0A] transition-all duration-150 hover:bg-white">{copy.contactCta}</Link>
           </div>
         </div>
@@ -177,14 +177,14 @@ export default async function BusinessPage({ params }: { params: Promise<{ local
           <div>
             <p className="text-[11px] font-black uppercase tracking-[0.16em] text-[#00C37A]">{copy.workEyebrow}</p>
             <h2 className="mt-3 font-display text-4xl font-black text-white">{copy.workTitle}</h2>
-            <p className="mt-5 text-sm leading-7 text-white/60">{copy.workIntro}</p>
+            <p className="mt-5 text-sm leading-7 text-white/70">{copy.workIntro}</p>
           </div>
           <div className="grid gap-5 sm:grid-cols-2">
             {copy.products.map(([title, text], index) => (
               <article key={title} className="rounded-sm border border-white/[0.10] bg-[#0C1A2E] p-6 transition-all duration-150 hover:-translate-y-0.5 hover:border-white/25">
                 <div className="mb-5 flex h-9 w-9 items-center justify-center rounded-full bg-[#00C37A] text-xs font-black text-[#0A0A0A]">0{index + 1}</div>
                 <h3 className="text-2xl font-black text-white">{title}</h3>
-                <p className="mt-3 text-sm leading-7 text-white/60">{text}</p>
+                <p className="mt-3 text-sm leading-7 text-white/70">{text}</p>
               </article>
             ))}
           </div>
