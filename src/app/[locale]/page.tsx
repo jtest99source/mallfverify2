@@ -443,7 +443,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         <div className="relative z-10 flex w-full max-w-[780px] flex-col items-center">
           <div className="w-full max-w-[780px]">
             <div className="mb-6 inline-flex items-center gap-3 text-[10px] font-semibold uppercase tracking-[0.16em] text-[#00C37A] before:h-px before:w-6 before:bg-[#00C37A] after:h-px after:w-6 after:bg-[#00C37A]">
-              {safeLocale === "de" ? "Echte Daten · Keine bezahlten Platzierungen" : safeLocale === "en" ? "Real data · No paid placements" : "Datos reales · Sin posiciones de pago"}
+              {safeLocale === "de" ? <><span className="sm:hidden">Keine bezahlten Platzierungen</span><span className="hidden sm:inline">Echte Daten · Keine bezahlten Platzierungen</span></> : safeLocale === "en" ? <><span className="sm:hidden">No paid placements</span><span className="hidden sm:inline">Real data · No paid placements</span></> : <><span className="sm:hidden">Sin posiciones de pago</span><span className="hidden sm:inline">Datos reales · Sin posiciones de pago</span></>}
             </div>
             <h1 className="font-display mx-auto max-w-4xl text-balance text-[2.6rem] font-black leading-[0.92] text-white sm:text-7xl lg:text-[88px]">
               {safeLocale === "de" ? (
@@ -532,7 +532,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           <p className="mt-5 text-sm leading-7 text-white/45">
             {copy.home.bestThisWeekIntro}
           </p>
-          <Link href={`/${safeLocale}/top/restaurants`} className="mt-6 inline-flex min-h-11 items-center justify-center rounded-sm bg-[#00C37A] px-5 text-[11px] font-black uppercase tracking-[0.1em] text-[#0A0A0A] transition hover:bg-white">
+          <Link href={`/${safeLocale}/rankings`} className="mt-6 inline-flex min-h-11 items-center justify-center rounded-sm bg-[#00C37A] px-5 text-[11px] font-black uppercase tracking-[0.1em] text-[#0A0A0A] transition hover:bg-white">
             {safeLocale === "de" ? "Alle Rankings" : safeLocale === "en" ? "All rankings" : "Todos los rankings"} {"\u2192"}
           </Link>
         </div>
@@ -551,15 +551,15 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         </div>
       </section>
 
-      <section className="bg-[#0C1A2E] px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
+      <section className="bg-[#0C1A2E] px-4 py-10 sm:px-6 sm:py-20 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <div className="mb-8 flex items-end justify-between gap-6">
           <div>
             <p className="text-[11px] font-black uppercase tracking-[0.18em] text-[#00C37A]">
-              {safeLocale === "de" ? "Methode" : safeLocale === "en" ? "Method" : "Metodo"}
+              {safeLocale === "de" ? "Methode" : safeLocale === "en" ? "Method" : "Método"}
             </p>
-            <h2 className="font-display mt-3 text-4xl font-bold leading-none text-white">
-              {safeLocale === "de" ? "Warum diese Reihenfolge?" : safeLocale === "en" ? "Why this order?" : "Por que este orden?"}
+            <h2 className="font-display mt-3 text-3xl font-bold leading-none text-white sm:text-4xl">
+              {safeLocale === "de" ? "Warum diese Reihenfolge?" : safeLocale === "en" ? "Why this order?" : "¿Por qué este orden?"}
             </h2>
           </div>
             <Link href={methodologyPath(safeLocale)} className="hidden text-[12px] font-semibold tracking-[0.04em] text-white/40 transition-colors hover:text-[#00C37A] sm:inline-flex">
@@ -568,7 +568,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           </div>
           <div className="grid border border-white/[0.08] md:grid-cols-3">
             {methodology.items.map(({ title, text }, index) => (
-              <div key={title} className="border-b border-white/[0.08] p-8 last:border-b-0 md:border-b-0 md:border-r md:last:border-r-0">
+              <div key={title} className="border-b border-white/[0.08] p-5 last:border-b-0 sm:p-8 md:border-b-0 md:border-r md:last:border-r-0">
                 <div className="font-display text-5xl font-black leading-none text-[#00C37A]/30">{String(index + 1).padStart(2, "0")}</div>
                 <h2 className="font-display mt-5 text-2xl font-bold leading-tight text-white">{title}</h2>
                 <p className="mt-3 text-sm font-light leading-7 text-white/42">{text}</p>
@@ -620,7 +620,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
             </h2>
             <p className="mt-1 max-w-xl text-sm leading-7 text-black/55">
               {safeLocale === "de"
-                ? "Anwaelte, Immobilienmakler, Aerzte und mehr - kuratiert nach redaktionellen Kriterien, nicht nach Gebuehren."
+                ? "Anwälte, Immobilienmakler, Ärzte und mehr — kuratiert nach redaktionellen Kriterien, nicht nach Gebühren."
                 : safeLocale === "en"
                   ? "Lawyers, estate agents, doctors and more - curated on editorial criteria, not fees."
                   : "Abogados, agentes inmobiliarios, médicos y más - seleccionados por criterio editorial, no por tarifas."}
@@ -633,28 +633,28 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         </div>
       </section>
 
-      <section className="px-4 py-20 sm:px-6 lg:px-8">
-        <div className="mx-auto grid max-w-7xl gap-12 md:grid-cols-[minmax(0,1fr)_360px] md:items-center">
+      <section className="px-4 py-12 sm:px-6 sm:py-20 lg:px-8">
+        <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-[minmax(0,1fr)_360px] md:items-center md:gap-12">
           <div>
           <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-[#00C37A]">
-            {safeLocale === "de" ? "Fuer Unternehmen" : safeLocale === "en" ? "For businesses" : "Para negocios"}
+            {safeLocale === "de" ? "Für Unternehmen" : safeLocale === "en" ? "For businesses" : "Para negocios"}
           </p>
-          <h2 className="font-display mt-3 max-w-2xl text-4xl font-bold leading-tight text-white sm:text-5xl">{copy.home.businessTitle}</h2>
-          <p className="mt-5 max-w-2xl text-base leading-8 text-white/45">{copy.home.businessIntro}</p>
-          <Link href={`/${safeLocale}/business`} className="mt-8 inline-flex min-h-12 items-center justify-center rounded-sm bg-[#00C37A] px-7 text-[12px] font-bold uppercase tracking-[0.1em] text-[#0A0A0A] hover:bg-white">
+          <h2 className="font-display mt-3 max-w-2xl text-3xl font-bold leading-tight text-white sm:text-4xl md:text-5xl">{copy.home.businessTitle}</h2>
+          <p className="mt-4 max-w-2xl text-sm leading-7 text-white/45 sm:text-base sm:leading-8">{copy.home.businessIntro}</p>
+          <Link href={`/${safeLocale}/business`} className="mt-7 inline-flex min-h-12 items-center justify-center rounded-sm bg-[#00C37A] px-7 text-[12px] font-bold uppercase tracking-[0.1em] text-[#0A0A0A] hover:bg-white">
             {copy.home.businessCta}
           </Link>
           </div>
-          <div className="space-y-5 border-l border-white/[0.08] pl-8">
+          <div className="grid grid-cols-2 gap-px border border-white/[0.08] md:block md:space-y-5 md:border-0 md:border-l md:border-white/[0.08] md:bg-transparent md:pl-8">
             {[
               { value: formatIntegerMetric(stats.publishedBusinesses, safeLocale), label: copy.home.verifiedBusinesses },
               { value: formatMillionMetric(stats.analyzedReviews, safeLocale), label: copy.home.analyzedReviews },
               { value: formatIntegerMetric(publicCategorySlugs.length, safeLocale), label: copy.home.activeCategories },
               { value: formatIntegerMetric(approvedExperts.length, safeLocale), label: expertMetricLabel }
             ].map((stat) => (
-              <div key={stat.label} className="flex items-baseline gap-3">
-                <div className="font-display text-4xl font-black leading-none text-[#00C37A]">{stat.value}</div>
-                <div className="text-sm text-white/35">{stat.label}</div>
+              <div key={stat.label} className="bg-[#0C1A2E] p-4 md:flex md:items-baseline md:gap-3 md:bg-transparent md:p-0">
+                <div className="font-display text-3xl font-black leading-none text-[#00C37A] md:text-4xl">{stat.value}</div>
+                <div className="mt-1 text-xs text-white/35 md:mt-0 md:text-sm">{stat.label}</div>
               </div>
             ))}
           </div>
