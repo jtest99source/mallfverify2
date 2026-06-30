@@ -145,6 +145,26 @@ export const categoryConfigs = {
     faq: "¿Qué gimnasio elegir en Palma de Mallorca?",
     editorialContext: "Los gimnasios se comparan por valoración, reseñas, ubicación, tipo de entrenamiento y señales de servicio. Es una categoría especialmente útil para residentes y estancias largas."
   },
+  casinos: {
+    label: "Casinos y apuestas",
+    singular: "Casino",
+    businessCategory: "casino",
+    icon: "IconCards",
+    title: "Casinos y salas de juego en Mallorca",
+    intro: "Casinos, bingos y salas de juego en Mallorca ordenados con señales públicas: reseñas, ubicación y reputación real.",
+    faq: "¿Dónde hay casinos o salas de juego en Mallorca?",
+    editorialContext: "En casinos y juego conviene separar locales reales de ocio adulto, bares con máquinas y listados ambiguos. Priorizamos negocios con ubicación clara, volumen suficiente y categoría verificable."
+  },
+  vets: {
+    label: "Veterinarios",
+    singular: "ClÃ­nica veterinaria",
+    businessCategory: "veterinarian",
+    icon: "IconPaw",
+    title: "Veterinarios en Mallorca",
+    intro: "ClÃ­nicas veterinarias, hospitales veterinarios y urgencias para mascotas en Mallorca, ordenados con reseÃ±as reales y seÃ±ales pÃºblicas.",
+    faq: "Â¿DÃ³nde encontrar veterinario en Mallorca?",
+    editorialContext: "En veterinarios priorizamos clÃ­nicas y hospitales reales, urgencias, volumen de reseÃ±as, claridad de contacto y ubicaciÃ³n. No mezclamos pet shops o peluquerÃ­as caninas salvo que tengan servicio veterinario claro."
+  },
   healthcare: {
     label: "Salud",
     singular: "Clínica o profesional sanitario",
@@ -195,12 +215,16 @@ export const publicCategorySlugs = [
   "beach-clubs",
   "bars",
   "cafes",
+  "bakeries",
   "nightlife",
   "activities",
   "boats",
   "rent-a-car",
   "car-dealers",
   "spas",
+  "gyms",
+  "casinos",
+  "vets",
   "healthcare",
   "real-estate"
 ] as const satisfies CategorySlug[];
@@ -214,7 +238,7 @@ export function isPublicCategorySlug(value: string): value is PublicCategorySlug
 export const categoryGroups = {
   gastronomia: {
     label: "Gastronomía",
-    categories: ["restaurants", "bars", "cafes"] as CategorySlug[]
+    categories: ["restaurants", "bars", "cafes", "bakeries"] as CategorySlug[]
   },
   alojamiento: {
     label: "Alojamiento",
@@ -226,7 +250,11 @@ export const categoryGroups = {
   },
   bienestar: {
     label: "Bienestar",
-    categories: ["spas", "healthcare"] as CategorySlug[]
+    categories: ["spas", "gyms", "healthcare", "vets"] as CategorySlug[]
+  },
+  ocioAdulto: {
+    label: "Ocio adulto",
+    categories: ["nightlife", "casinos"] as CategorySlug[]
   },
   experiencias: {
     label: "Experiencias",
@@ -270,6 +298,8 @@ const categoryGuideKeywords: Record<CategorySlug, string[]> = {
   "car-dealers": ["compra", "concesionario", "segunda mano", "car"],
   spas: ["spa", "wellness", "bienestar", "masaje"],
   gyms: ["gimnasio", "gym", "fitness", "deporte"],
+  casinos: ["casino", "bingo", "apuestas", "poker", "juego"],
+  vets: ["veterinario", "vet", "veterinary", "mascotas", "animal"],
   healthcare: ["médico", "doctor", "dentista", "salud", "clínica", "health"],
   "real-estate": ["inmobiliaria", "property", "comprar casa", "real estate", "vivienda"],
   routes: ["ruta", "senderismo", "mirador", "trail", "hiking"],

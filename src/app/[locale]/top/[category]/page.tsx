@@ -56,7 +56,7 @@ export default async function TopCategoryPage({ params }: { params: Promise<{ lo
 
   return (
     <main className="bg-[#07101F] text-white">
-      <section className="bg-[#07101F] px-4 py-10 sm:px-6 sm:py-12 lg:px-8">
+      <section className="border-b border-white/[0.08] bg-[#0C1A2E] px-4 py-10 sm:px-6 sm:py-12 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <div className="flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.08em] text-white/25">
             <Link href={`/${safeLocale}`} className="transition-colors hover:text-[#00C37A]">{copy.category.breadcrumbHome}</Link>
@@ -68,7 +68,7 @@ export default async function TopCategoryPage({ params }: { params: Promise<{ lo
           <div className="mt-7 max-w-4xl">
             <p className="inline-flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.16em] text-[#00C37A] before:h-px before:w-4 before:bg-[#00C37A]">{copy.category.rankingByCategory}</p>
             <h1 className="font-display mt-3 text-5xl font-black leading-none text-white sm:text-6xl">{title}</h1>
-            <p className="mt-4 max-w-2xl text-sm leading-7 text-white/42">{copy.category.signalLine}</p>
+            <p className="mt-4 max-w-2xl text-sm leading-7 text-white/60">{copy.category.signalLine}</p>
           </div>
         </div>
       </section>
@@ -92,6 +92,46 @@ export default async function TopCategoryPage({ params }: { params: Promise<{ lo
           </div>
         </div>
       </div>
+
+      {(category === "healthcare" || category === "real-estate") && (
+        <div className="border-b border-white/[0.06] bg-[#07101F] px-4 py-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl">
+            {category === "healthcare" && (
+              <div className="flex flex-wrap items-center gap-x-6 gap-y-2 rounded-sm border border-[#00C37A]/20 bg-[#00C37A]/[0.05] px-4 py-3">
+                <p className="text-sm text-white/70">
+                  {safeLocale === "de"
+                    ? "Suchen Sie einen deutschsprachigen Arzt oder Zahnarzt?"
+                    : safeLocale === "en"
+                      ? "Looking for an English-speaking doctor or dentist?"
+                      : "¿Buscas un médico o dentista que hable inglés o alemán?"}
+                </p>
+                <div className="flex flex-wrap gap-3">
+                  <Link href={`/${safeLocale}/experts/english-speaking-doctors-mallorca`} className="text-xs font-bold text-[#00C37A] hover:text-white">
+                    {safeLocale === "de" ? "Ärzte →" : safeLocale === "en" ? "Doctors →" : "Médicos →"}
+                  </Link>
+                  <Link href={`/${safeLocale}/experts/english-speaking-dentists-mallorca`} className="text-xs font-bold text-[#00C37A] hover:text-white">
+                    {safeLocale === "de" ? "Zahnärzte →" : safeLocale === "en" ? "Dentists →" : "Dentistas →"}
+                  </Link>
+                </div>
+              </div>
+            )}
+            {category === "real-estate" && (
+              <div className="flex flex-wrap items-center gap-x-6 gap-y-2 rounded-sm border border-[#00C37A]/20 bg-[#00C37A]/[0.05] px-4 py-3">
+                <p className="text-sm text-white/70">
+                  {safeLocale === "de"
+                    ? "Suchen Sie einen deutschsprachigen Immobilienmakler?"
+                    : safeLocale === "en"
+                      ? "Looking for an English or German-speaking estate agent?"
+                      : "¿Buscas un agente inmobiliario que hable inglés o alemán?"}
+                </p>
+                <Link href={`/${safeLocale}/experts/estate-agents-mallorca`} className="text-xs font-bold text-[#00C37A] hover:text-white">
+                  {safeLocale === "de" ? "Makler-Profile →" : safeLocale === "en" ? "Agent profiles →" : "Agentes verificados →"}
+                </Link>
+              </div>
+            )}
+          </div>
+        </div>
+      )}
 
       <TopRankingExplorer businesses={businesses} locale={safeLocale} category={category} facets={facets} />
 
