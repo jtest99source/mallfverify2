@@ -18,10 +18,257 @@ const configuredBusinessCategories = new Set<BusinessCategory>(
 const publicBusinessCategories = new Set<BusinessCategory>(
   publicCategorySlugs.map((slug) => categoryConfigs[slug].businessCategory)
 );
+
+const nightlifeRestaurantSignals = [
+  "bar",
+  "beach club",
+  "beachclub",
+  "cocktail",
+  "club",
+  "gastrobeach",
+  "live music",
+  "music",
+  "pub",
+  "rooftop",
+  "skybar"
+];
+
+const restaurantListingSignals = [
+  "arroceria",
+  "bar and grill",
+  "bistro",
+  "brasserie",
+  "brunch",
+  "burger",
+  "cocina",
+  "dining",
+  "food",
+  "gastro",
+  "gastrobar",
+  "grill",
+  "kitchen",
+  "mediterranean",
+  "paella",
+  "pizzeria",
+  "restaurant",
+  "restaurante",
+  "steak",
+  "sushi",
+  "tapas",
+  "trattoria"
+];
+
+const barListingSignals = [
+  "bar",
+  "bar and grill",
+  "beach bar",
+  "beer",
+  "bodega",
+  "chiringuito",
+  "cocktail",
+  "coctel",
+  "cocteleria",
+  "gastrobar",
+  "gastropub",
+  "pub",
+  "rooftop",
+  "skybar",
+  "sports bar",
+  "tapas",
+  "vermut",
+  "vermuteria",
+  "wine",
+  "wine bar",
+  "vinoteca"
+];
+
+const cafeListingSignals = [
+  "bakery",
+  "bistro",
+  "brunch",
+  "cake",
+  "cafe",
+  "cafeteria",
+  "coffee",
+  "croissant",
+  "desayuno",
+  "forn",
+  "gelat",
+  "gelateria",
+  "heladeria",
+  "ice cream",
+  "panaderia",
+  "pasteleria",
+  "pastry",
+  "specialty coffee"
+];
+
+const bakeryListingSignals = [
+  "bakery",
+  "cake",
+  "cannoli",
+  "confectionery",
+  "croissant",
+  "dulce",
+  "forn",
+  "gelat",
+  "gelateria",
+  "heladeria",
+  "horno",
+  "panaderia",
+  "pasteleria",
+  "pastry"
+];
+
+const casinoListingSignals = [
+  "apuestas",
+  "betting",
+  "bingo",
+  "casino",
+  "gaming hall",
+  "juego",
+  "juegos",
+  "merkur",
+  "orenes",
+  "poker",
+  "punt de joc",
+  "salon de juego",
+  "salon de juegos",
+  "spielhalle",
+  "tragaperras"
+];
+
+const activityListingSignals = [
+  "adventure",
+  "aventura",
+  "bike",
+  "boat trip",
+  "boat tour",
+  "bodega",
+  "buggy",
+  "charter",
+  "climbing",
+  "cruise",
+  "cycling",
+  "dive",
+  "diving",
+  "excursion",
+  "experience",
+  "freediving",
+  "guided",
+  "helicopter",
+  "hiking",
+  "horse",
+  "jet ski",
+  "jetski",
+  "kayak",
+  "museum",
+  "nautica",
+  "paddle",
+  "pirates",
+  "sailing",
+  "segway",
+  "snorkel",
+  "snorkeling",
+  "surf",
+  "tour",
+  "tours",
+  "trekking",
+  "trip",
+  "vela",
+  "vino",
+  "walking",
+  "wine"
+];
+
+function getBusinessCategoriesForListing(category: CategorySlug): BusinessCategory[] {
+  if (category === "restaurants") return ["restaurant", "bar", "cafe", "beach-club"];
+  if (category === "nightlife") return ["nightlife", "bar", "beach-club", "restaurant"];
+  if (category === "bars") return ["bar", "nightlife", "beach-club", "restaurant", "hotel", "cafe"];
+  if (category === "cafes") return ["cafe", "bakery", "restaurant", "bar"];
+  if (category === "bakeries") return ["bakery", "cafe", "restaurant"];
+  if (category === "casinos") return ["casino", "bar", "nightlife"];
+  if (category === "activities") return ["activity", "boat-rental", "gym", "nightlife"];
+  return [getBusinessCategoryFromSlug(category)];
+}
+
+function normalizeListingSignal(value: unknown) {
+  return String(value ?? "")
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/_/g, " ")
+    .toLowerCase();
+}
+
+function hasListingSignal(text: string, signals: string[]) {
+  return signals.some((signal) => {
+    const normalizedSignal = normalizeListingSignal(signal).trim();
+    if (!normalizedSignal) return false;
+    if (!normalizedSignal.includes(" ")) return new RegExp(`(^|\\W)${normalizedSignal}(\\W|$)`).test(text);
+    return text.includes(normalizedSignal);
+  });
+}
+
+function businessMatchesListingCategory(row: Pick<BusinessRow, "category" | "name" | "display_name" | "short_description" | "description" | "tags" | "best_for">, category: CategorySlug) {
+  const signalText = normalizeListingSignal(
+    [
+      row.name,
+      row.display_name,
+      row.short_description,
+      row.description,
+      ...(row.tags ?? []),
+      ...(row.best_for ?? [])
+    ].join(" ")
+  );
+
+  if (category === "restaurants") {
+    if (row.category === "restaurant") return true;
+    if (row.category !== "bar" && row.category !== "cafe" && row.category !== "beach-club") return false;
+    return hasListingSignal(signalText, restaurantListingSignals);
+  }
+
+  if (category === "nightlife") {
+    if (row.category === "nightlife" || row.category === "bar" || row.category === "beach-club") return true;
+    if (row.category !== "restaurant") return false;
+    return hasListingSignal(signalText, nightlifeRestaurantSignals);
+  }
+
+  if (category === "bars") {
+    if (row.category === "bar" || row.category === "nightlife" || row.category === "beach-club") return true;
+    if (row.category !== "restaurant" && row.category !== "hotel" && row.category !== "cafe") return false;
+    return hasListingSignal(signalText, barListingSignals);
+  }
+
+  if (category === "cafes") {
+    if (row.category === "cafe") return true;
+    if (row.category !== "bakery" && row.category !== "restaurant" && row.category !== "bar") return false;
+    return hasListingSignal(signalText, cafeListingSignals);
+  }
+
+  if (category === "bakeries") {
+    if (row.category === "bakery") return true;
+    if (row.category !== "cafe" && row.category !== "restaurant") return false;
+    return hasListingSignal(signalText, bakeryListingSignals);
+  }
+
+  if (category === "casinos") {
+    if (row.category === "casino") return true;
+    if (row.category !== "bar" && row.category !== "nightlife") return false;
+    return hasListingSignal(signalText, casinoListingSignals);
+  }
+
+  if (category === "activities") {
+    if (row.category === "activity") return true;
+    if (row.category !== "boat-rental" && row.category !== "gym" && row.category !== "nightlife") return false;
+    return hasListingSignal(signalText, activityListingSignals);
+  }
+
+  return row.category === getBusinessCategoryFromSlug(category);
+}
 const fallbackPublicBusinessStats = {
-  publishedBusinesses: 4791,
-  analyzedReviews: 3423114,
-  activeCategories: 14
+  publishedBusinesses: 6036,
+  analyzedReviews: 3765662,
+  activeCategories: 17
 };
 const businessListSelect = [
   "id",
@@ -456,11 +703,27 @@ export async function getBusinesses(category: CategorySlug): Promise<Business[]>
   if (fallback) return fallback;
 
   const supabase = createSupabaseServerClient();
-  const { data, error } = await publicStatusFilter(
-    supabase.from("businesses").select(businessListSelect).eq("category", getBusinessCategoryFromSlug(category)).order("is_featured", { ascending: false }).order("updated_at", { ascending: false })
-  );
-  if (error) throw error;
-  return mapBusinesses(data as BusinessRow[]);
+  const businessCategories = getBusinessCategoriesForListing(category);
+  const rows: BusinessRow[] = [];
+  const pageSize = 1000;
+
+  for (let from = 0; ; from += pageSize) {
+    const { data, error } = await publicStatusFilter(
+      supabase
+        .from("businesses")
+        .select(businessListSelect)
+        .in("category", businessCategories)
+        .order("is_featured", { ascending: false })
+        .order("updated_at", { ascending: false })
+        .range(from, from + pageSize - 1)
+    );
+    if (error) throw error;
+    const page = (data ?? []) as BusinessRow[];
+    rows.push(...page);
+    if (page.length < pageSize) break;
+  }
+
+  return mapBusinesses(rows.filter((row) => businessMatchesListingCategory(row, category)));
 }
 
 function mapMiniRankingBusiness(row: Pick<BusinessRow, "id" | "slug" | "name" | "display_name" | "category" | "short_description" | "description" | "area" | "city" | "image" | "primary_image_url" | "gallery_image_urls" | "rating" | "reviews_count" | "updated_at">): Business {
@@ -576,14 +839,17 @@ export async function getBusinessesForFacetScan(category: CategorySlug): Promise
   if (fallback) return fallback;
 
   const supabase = createSupabaseServerClient();
+  const businessCategories = getBusinessCategoriesForListing(category);
   const { data, error } = await publicStatusFilter(
     supabase
       .from("businesses")
       .select("id,slug,name,original_name,display_name,category,short_description,description,area,city,municipality,website_type,tags,best_for,ideal_for,updated_at")
-      .eq("category", getBusinessCategoryFromSlug(category))
+      .in("category", businessCategories)
   );
   if (error) throw error;
-  return ((data ?? []) as FacetScanBusinessRow[]).map(mapFacetScanBusiness);
+  return ((data ?? []) as FacetScanBusinessRow[])
+    .filter((row) => businessMatchesListingCategory(row, category))
+    .map(mapFacetScanBusiness);
 }
 
 function sortByAuthority(businesses: Business[]) {
@@ -752,22 +1018,121 @@ export async function getBusinessById(id: string): Promise<Business | undefined>
   return data ? mapBusiness(data as BusinessRow) : undefined;
 }
 
+function relatedCategorySlugs(category: CategorySlug): CategorySlug[] {
+  const groups: Partial<Record<CategorySlug, CategorySlug[]>> = {
+    restaurants: ["bars", "cafes", "nightlife"],
+    bars: ["restaurants", "cafes", "nightlife"],
+    cafes: ["restaurants", "bakeries", "bars"],
+    bakeries: ["cafes", "restaurants"],
+    nightlife: ["bars", "restaurants"],
+    hotels: ["restaurants", "beach-clubs", "spas", "activities"],
+    "beach-clubs": ["restaurants", "beaches", "bars"],
+    beaches: ["beach-clubs", "activities", "boats"],
+    boats: ["activities", "beaches", "beach-clubs"],
+    activities: ["excursions", "routes", "beaches", "boats"],
+    excursions: ["activities", "routes"],
+    routes: ["activities", "excursions", "beaches"],
+    spas: ["hotels", "gyms", "healthcare"],
+    gyms: ["spas", "healthcare"],
+    healthcare: ["spas", "gyms"],
+    "rent-a-car": ["activities", "hotels"],
+    "car-dealers": ["rent-a-car"],
+    "real-estate": []
+  };
+
+  return groups[category] ?? [];
+}
+
+function businessAreaKeys(business: Pick<Business, "area" | "city" | "municipality">) {
+  return new Set([business.city, business.area, business.municipality].filter(Boolean).map((value) => toSlug(value as string)));
+}
+
+function relatedBusinessScore(target: Business, candidate: Business, relatedCategories: Set<BusinessCategory>) {
+  const targetAreas = businessAreaKeys(target);
+  const candidateAreas = businessAreaKeys(candidate);
+  const sameArea = [...candidateAreas].some((area) => targetAreas.has(area));
+  const sameCategory = candidate.category === target.category;
+  const relatedCategory = relatedCategories.has(candidate.category);
+
+  let score = 0;
+  if (sameCategory && sameArea) score += 1000;
+  else if (relatedCategory && sameArea) score += 800;
+  else if (sameArea) score += 650;
+  else if (sameCategory) score += 450;
+  else if (relatedCategory) score += 250;
+
+  if (candidate.isFeatured) score += 25;
+  score += (candidate.authorityScore ?? 0) / 10;
+  score += businessRankingScore(candidate);
+  return score;
+}
+
 export async function getRelatedBusinesses(business: Business, limit = 3): Promise<Business[]> {
   const fallback = emptyWhenUnconfigured<Business[]>([]);
   if (fallback) return fallback;
 
   const supabase = createSupabaseServerClient();
-  const { data, error } = await publicStatusFilter(
+  const category = getCategorySlugFromBusiness(business.category);
+  const relatedCategories = new Set(relatedCategorySlugs(category).map(getBusinessCategoryFromSlug));
+  const areaValues = [business.city, business.area, business.municipality].filter(Boolean) as string[];
+  const categoryValues = [business.category, ...relatedCategories];
+  const candidates = new Map<string, BusinessRow>();
+
+  const addRows = (rows: BusinessRow[] | null) => {
+    for (const row of rows ?? []) {
+      if (row.id !== business.id) candidates.set(row.id, row);
+    }
+  };
+
+  const sameCategoryQuery = publicStatusFilter(
     supabase
       .from("businesses")
       .select("*")
       .neq("id", business.id)
-      .or(`category.eq.${business.category},area.eq.${business.area}`)
+      .eq("category", business.category)
       .order("is_featured", { ascending: false })
-      .limit(limit)
+      .order("authority_score", { ascending: false, nullsFirst: false })
+      .limit(Math.max(limit * 12, 24))
   );
-  if (error) throw error;
-  return mapBusinesses(data as BusinessRow[]);
+
+  const relatedCategoryQuery = categoryValues.length > 1
+    ? publicStatusFilter(
+        supabase
+          .from("businesses")
+          .select("*")
+          .neq("id", business.id)
+          .in("category", categoryValues)
+          .order("is_featured", { ascending: false })
+          .order("authority_score", { ascending: false, nullsFirst: false })
+          .limit(Math.max(limit * 12, 24))
+      )
+    : Promise.resolve({ data: [], error: null });
+
+  const areaQueries = areaValues.flatMap((area) =>
+    (["area", "city", "municipality"] as const).map((field) =>
+      publicStatusFilter(
+        supabase
+          .from("businesses")
+          .select("*")
+          .neq("id", business.id)
+          .eq(field, area)
+          .in("category", categoryValues)
+          .order("is_featured", { ascending: false })
+          .order("authority_score", { ascending: false, nullsFirst: false })
+          .limit(Math.max(limit * 12, 24))
+      )
+    )
+  );
+
+  const results = await Promise.all([sameCategoryQuery, relatedCategoryQuery, ...areaQueries]);
+  for (const result of results) {
+    if (result.error) throw result.error;
+    addRows(result.data as BusinessRow[]);
+  }
+
+  return mapBusinesses(Array.from(candidates.values()))
+    .sort((a, b) => relatedBusinessScore(business, b, relatedCategories) - relatedBusinessScore(business, a, relatedCategories))
+    .slice(0, limit);
 }
 
 export async function getBusinessSlugsByCategory(category: CategorySlug): Promise<{ slug: string }[]> {

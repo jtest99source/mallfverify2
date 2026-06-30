@@ -1,6 +1,6 @@
 import { notFound, redirect } from "next/navigation";
 import Link from "next/link";
-import { IconExternalLink, IconMapPin, IconPhone } from "@tabler/icons-react";
+import { IconArrowLeft, IconExternalLink, IconMapPin, IconPhone } from "@tabler/icons-react";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CategoryFilter } from "@/components/CategoryFilter";
 import { CTABox } from "@/components/CTABox";
@@ -704,6 +704,15 @@ export async function BusinessDetailPage({ category, locale, slug }: { category:
           style={heroImage ? { backgroundImage: `url(${heroImage})` } : undefined}
         >
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_42%,rgba(0,195,122,0.10),transparent_24%),linear-gradient(to_top,rgba(5,5,5,0.98)_0%,rgba(5,5,5,0.66)_42%,rgba(5,5,5,0.30)_100%)]" />
+          <div className="absolute left-4 top-4 z-20 sm:left-8 lg:left-12">
+            <Link
+              href={`/${locale}/${category}`}
+              className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-black/40 px-3 py-1.5 text-[11px] font-bold uppercase tracking-[0.08em] text-white backdrop-blur-sm transition-colors hover:border-white/50 hover:bg-black/60"
+            >
+              <IconArrowLeft size={13} stroke={2.5} />
+              {getCategoryCopy(category, locale).label}
+            </Link>
+          </div>
           <div className="absolute inset-x-0 bottom-0 z-10 px-4 pb-10 sm:px-8 lg:px-12">
             <div className="mx-auto flex max-w-[1440px] flex-col items-start gap-6">
               <div className="max-w-4xl">
@@ -744,7 +753,7 @@ export async function BusinessDetailPage({ category, locale, slug }: { category:
                 </div>
               )}
               <div className="grid gap-2">
-                {business.googleMapsUrl && <a href={business.googleMapsUrl} target="_blank" rel="noreferrer" className="rounded-sm bg-[#00C37A] px-4 py-3 text-center text-[11px] font-black uppercase tracking-[0.1em] text-[#0A0A0A] hover:bg-[#FFD633]">{copy.business.googleMaps}</a>}
+                {business.googleMapsUrl && <a href={business.googleMapsUrl} target="_blank" rel="noreferrer" className="rounded-sm bg-[#00C37A] px-4 py-3 text-center text-[11px] font-black uppercase tracking-[0.1em] text-[#0A0A0A] hover:bg-white">{copy.business.googleMaps}</a>}
                 {publicWebsite && <a href={publicWebsite} target="_blank" rel="noreferrer" className="rounded-sm border border-white/[0.14] px-4 py-3 text-center text-[11px] font-bold uppercase tracking-[0.1em] text-white hover:border-[#00C37A]/70">{business.websiteType === "official_website" ? copy.business.officialWebsite : getWebsiteLabel(business.websiteType)}</a>}
               </div>
             </section>
