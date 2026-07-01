@@ -12,6 +12,8 @@ import { generateSeoMetadata } from "@/lib/seo";
 import { methodologyPath } from "@/lib/methodology";
 import { facetPath, getFacet, getPopularFacetsForBusinesses, type RankingFacet } from "@/lib/taxonomy";
 
+type FacetWithCount = RankingFacet & { count: number };
+
 const pageCopy = {
   es: {
     specificRanking: "Ranking específico",
@@ -72,7 +74,9 @@ export default async function TopFacetPage({ params }: { params: Promise<{ local
   const config = getCategoryCopy(category, safeLocale);
   const copy = t(safeLocale);
   const localCopy = pageCopy[safeLocale];
-  const relatedFacets = getPopularFacetsForBusinesses(category, allCategoryBusinesses, 3).filter((item: RankingFacet & { count: number }) => item.slug !== rankingFacet.slug).slice(0, 8);
+  const relatedFacets: FacetWithCount[] = getPopularFacetsForBusinesses(category, allCategoryBusinesses, 3)
+    .filter((item: FacetWithCount) => item.slug !== rankingFacet.slug)
+    .slice(0, 8);
   const breadcrumbs = [
     { name: copy.category.breadcrumbHome, url: `${siteUrl}/${safeLocale}` },
     { name: "Rankings", url: `${siteUrl}/${safeLocale}/top/restaurants` },

@@ -39,7 +39,7 @@ async function getPublishedSlugs() {
 
 const CATEGORIES = [
   'restaurants','hotels','beach-clubs','bars','cafes','nightlife',
-  'activities','boats','rent-a-car','car-dealers','spas','healthcare','real-estate'
+  'activities','boats','rent-a-car','car-dealers','spas','casinos','vets','healthcare','real-estate'
 ]
 
 function categoryPath(cat) {

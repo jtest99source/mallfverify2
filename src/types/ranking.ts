@@ -16,6 +16,8 @@ export type RankingCategory =
   | "car-dealers"
   | "spas"
   | "gyms"
+  | "casinos"
+  | "vets"
   | "healthcare"
   | "real-estate"
   | "markets"

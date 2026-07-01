@@ -108,6 +108,85 @@ const SEARCHES = [
   "paintball Mallorca"
 ];
 
+const EXTRA_SEARCHES = [
+  "experiences Mallorca",
+  "adventure activities Mallorca",
+  "family activities Mallorca",
+  "outdoor activities Mallorca",
+  "guided activities Mallorca",
+  "activities Inca Mallorca",
+  "activities Manacor Mallorca",
+  "activities Llucmajor Mallorca",
+  "activities Campos Mallorca",
+  "activities Marratxi Mallorca",
+  "activities Binissalem Mallorca",
+  "activities Santa Maria del Cami Mallorca",
+  "SUP Mallorca",
+  "snorkeling tours Mallorca",
+  "surf school Mallorca",
+  "water sports Mallorca",
+  "water sports center Mallorca",
+  "banana boat Mallorca",
+  "sailing school Mallorca",
+  "sea cave tour Mallorca",
+  "guided hiking Mallorca",
+  "mountain guides Mallorca",
+  "rock climbing Mallorca",
+  "caving Mallorca",
+  "via ferrata Mallorca",
+  "zipline Mallorca",
+  "outdoor adventure Mallorca",
+  "nature activities Mallorca",
+  "birdwatching Mallorca",
+  "e-bike tours Mallorca",
+  "e-bike rental Mallorca",
+  "jeep safari Mallorca",
+  "go kart Mallorca",
+  "segway tours Mallorca",
+  "scooter tours Mallorca",
+  "wine tasting Mallorca",
+  "bodega visit Mallorca",
+  "olive oil tasting Mallorca",
+  "olive oil tour Mallorca",
+  "cooking class Mallorca",
+  "food tour Mallorca",
+  "market tour Mallorca",
+  "walking tour Palma Mallorca",
+  "guided tour Palma Mallorca",
+  "photography tour Mallorca",
+  "art workshop Mallorca",
+  "ceramics workshop Mallorca",
+  "escape room Palma Mallorca",
+  "VR Mallorca",
+  "virtual reality Mallorca",
+  "trampoline park Mallorca",
+  "indoor activities Mallorca",
+  "mini golf Mallorca",
+  "theme park Mallorca",
+  "kids activities Mallorca",
+  "family park Mallorca",
+  "alquiler bicicletas Mallorca",
+  "visita bodegas Mallorca",
+  "cata aceite Mallorca",
+  "tour aceite oliva Mallorca",
+  "barranquismo Mallorca",
+  "escape room Palma",
+  "realidad virtual Mallorca",
+  "mini golf Mallorca",
+  "Ausfluge Mallorca",
+  "Aktivitaten Mallorca",
+  "Wassersport Mallorca",
+  "Tauchen Mallorca",
+  "Kajak Mallorca",
+  "Fahrradverleih Mallorca",
+  "Radtouren Mallorca",
+  "Weinprobe Mallorca",
+  "Reiten Mallorca",
+  "Quad Tour Mallorca",
+  "Buggy Tour Mallorca",
+  "Kletterpark Mallorca"
+];
+
 function loadLocalEnv() {
   if (!existsSync(".env.local")) return;
 
@@ -128,6 +207,10 @@ function getPhotoNames(place) {
   const photos = place.photos ?? [];
   if (!Array.isArray(photos)) return [];
   return photos.map((photo) => photo.name).filter(Boolean);
+}
+
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
 function mapPlace(place) {
@@ -167,7 +250,7 @@ function passesFilters(place) {
   );
 }
 
-async function searchPlaces(apiKey, textQuery) {
+async function searchPlaces(apiKey, textQuery, attempt = 1) {
   const response = await fetch("https://places.googleapis.com/v1/places:searchText", {
     method: "POST",
     headers: {
@@ -199,6 +282,12 @@ async function searchPlaces(apiKey, textQuery) {
 
   if (!response.ok) {
     const body = await response.text();
+    if ([429, 500, 502, 503, 504].includes(response.status) && attempt < 4) {
+      const waitMs = 1200 * attempt;
+      console.warn(`Retrying "${textQuery}" after ${response.status} (${waitMs}ms, attempt ${attempt + 1}/4)`);
+      await sleep(waitMs);
+      return searchPlaces(apiKey, textQuery, attempt + 1);
+    }
     throw new Error(`Google Places API error for "${textQuery}" (${response.status}): ${body}`);
   }
 
@@ -218,10 +307,18 @@ async function main() {
   let totalFetched = 0;
   let totalAfterFilters = 0;
 
-  for (const query of SEARCHES) {
+  const searches = [...new Set([...SEARCHES, ...EXTRA_SEARCHES])];
+
+  for (const query of searches) {
     if (unique.size >= MAX_RESULTS) break;
 
-    const places = await searchPlaces(apiKey, query);
+    let places = [];
+    try {
+      places = await searchPlaces(apiKey, query);
+    } catch (error) {
+      console.warn(`${query}: skipped after error: ${error.message}`);
+      continue;
+    }
     totalFetched += places.length;
 
     for (const rawPlace of places) {

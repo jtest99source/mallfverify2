@@ -13,6 +13,8 @@ export type BusinessCategory =
   | "car-dealer"
   | "spa"
   | "gym"
+  | "casino"
+  | "veterinarian"
   | "healthcare"
   | "real-estate"
   | "market"

@@ -103,6 +103,11 @@ export const rankingFacets = {
     facet("crossfit", "Crossfit", "Crossfit en Mallorca", ["crossfit", "functional", "funcional"]),
     facet("yoga-pilates", "Yoga y pilates", "Yoga y pilates en Mallorca", ["yoga", "pilates", "studio"])
   ],
+  casinos: [],
+  vets: [
+    facet("urgencias", "Urgencias", "Urgencias veterinarias en Mallorca", ["emergency", "urgencias", "24h", "24 hour", "hospital"]),
+    facet("hospitales", "Hospitales", "Hospitales veterinarios en Mallorca", ["hospital", "clinic", "clinica", "clínica"])
+  ],
   "rent-a-car": [
     facet("aeropuerto", "Aeropuerto", "Rent a car en el aeropuerto de Mallorca", ["airport", "aeropuerto", "terminal"]),
     facet("sin-franquicia", "Sin franquicia", "Rent a car sin franquicia en Mallorca", ["sin franquicia", "no excess", "full insurance"])
@@ -112,15 +117,12 @@ export const rankingFacets = {
     facet("oficial", "Oficial", "Concesionarios oficiales en Mallorca", ["oficial", "dealer", "concesionario"])
   ],
   healthcare: [
-    facet("doctors", "Medicos", "Medicos y clinicas en Mallorca", ["doctor", "medico", "clinic", "clinica"]),
-    facet("dentists", "Dentistas", "Dentistas en Mallorca", ["dentist", "dentista", "dental"]),
-    facet("english-speaking", "English-speaking", "Atencion en ingles en Mallorca", ["english", "ingles", "british", "international"])
+    facet("dentistas", "Dentistas", "Dentistas en Mallorca", ["dental_clinic", "dentist", "dentista", "dental"]),
+    facet("medicos", "Médicos", "Médicos y doctores en Mallorca", ["doctor", "medico", "médico"]),
+    facet("clinicas", "Clínicas", "Clínicas y hospitales en Mallorca", ["medical_center", "medical_clinic", "hospital", "general_hospital", "clinica", "clínica", "clinic"]),
+    facet("otros", "Otros", "Otros profesionales sanitarios en Mallorca", ["physiotherapist", "physio", "fisioterapia", "fisioteràpia", "podiatrist", "podologo", "podòleg", "podoleg", "orthopaedic", "orthopedic", "orthopadie", "orthopädie", "osteopath", "osteopata", "psicologia", "psicología", "logopedia", "digestiva", "digestive"])
   ],
-  "real-estate": [
-    facet("buying", "Comprar", "Agencias para comprar casa en Mallorca", ["buy", "comprar", "venta", "property", "real estate"]),
-    facet("rentals", "Alquiler", "Agencias de alquiler en Mallorca", ["rent", "rental", "alquiler"]),
-    facet("international", "Internacional", "Inmobiliarias para compradores internacionales", ["international", "english", "german", "deutsch", "expat"])
-  ],
+  "real-estate": [],
   markets: [
     facet("producto-local", "Producto local", "Mercados con producto local en Mallorca", ["local", "mallorca", "gourmet", "artesano"]),
     facet("ecologico", "Ecológico", "Tiendas ecológicas en Mallorca", ["eco", "ecologico", "ecológico", "organic"])
@@ -251,8 +253,12 @@ const facetLabelTranslations: Record<string, { en: string; de: string }> = {
   "senderismo":        { en: "Hiking",             de: "Wandern" },
   "barco":             { en: "Boat",               de: "Boot" },
   "guiadas":           { en: "Guided",             de: "Geführt" },
-  "segunda-mano":      { en: "Used cars",          de: "Gebrauchtwagen" },
-  "oficial":           { en: "Official dealer",    de: "Offizieller Händler" },
+  "dentistas":         { en: "Dentists",            de: "Zahnärzte" },
+  "medicos":           { en: "Doctors",             de: "Ärzte" },
+  "clinicas":          { en: "Clinics",             de: "Kliniken" },
+  "otros":             { en: "Other",               de: "Weitere" },
+  "segunda-mano":      { en: "Used cars",           de: "Gebrauchtwagen" },
+  "oficial":           { en: "Official dealer",     de: "Offizieller Händler" },
   "producto-local":    { en: "Local produce",      de: "Lokale Produkte" },
   "ecologico":         { en: "Organic",            de: "Bio" },
   "artesania":         { en: "Crafts",             de: "Kunsthandwerk" },

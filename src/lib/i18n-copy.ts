@@ -475,6 +475,30 @@ Object.assign(deCategoryCopy, {
   "real-estate": { label: "Immobilien", singular: "Immobilienagentur", title: "Immobilienmakler auf Mallorca", intro: "Immobilienagenturen auf Mallorca für internationale Käufer und Bewohner, die Optionen mit echten Daten statt Marketing vergleichen wollen.", metaDescription: "Immobilienmakler auf Mallorca für internationale Käufer. Echte Bewertungen, Lage-Kontext und verifizierte Signale. Keine Werbung." }
 } satisfies Partial<Record<CategorySlug, CategoryCopy>>);
 
+Object.assign(esCategoryCopy, {
+  casinos: { label: "Casinos y apuestas", singular: "Casino", title: "Casinos y salas de juego en Mallorca", intro: "Casinos, bingos y salas de juego en Mallorca ordenados por reseñas reales, ubicación y señales públicas. Sin posiciones pagadas.", metaDescription: "Casinos, bingos y salas de juego en Mallorca con reseñas reales de Google. Ranking independiente por zona y reputación." }
+} satisfies Partial<Record<CategorySlug, CategoryCopy>>);
+
+Object.assign(esCategoryCopy, {
+  vets: { label: "Veterinarios", singular: "Clínica veterinaria", title: "Veterinarios en Mallorca", intro: "Clínicas veterinarias, hospitales veterinarios y urgencias para mascotas en Mallorca ordenados por reseñas reales y señales públicas.", metaDescription: "Veterinarios en Mallorca con reseñas reales de Google. Clínicas, hospitales veterinarios y urgencias por zona." }
+} satisfies Partial<Record<CategorySlug, CategoryCopy>>);
+
+Object.assign(enCategoryCopy, {
+  casinos: { label: "Casinos and betting", singular: "Casino", title: "Casinos and gaming rooms in Mallorca", intro: "Casinos, bingo halls and gaming rooms in Mallorca ranked by real public signals: reviews, location and reputation. No paid placements.", metaDescription: "Casinos, bingo halls and gaming rooms in Mallorca ranked with real Google reviews. Independent ranking by area and reputation." }
+} satisfies Partial<Record<CategorySlug, CategoryCopy>>);
+
+Object.assign(enCategoryCopy, {
+  vets: { label: "Vets", singular: "Veterinary clinic", title: "Vets in Mallorca", intro: "Veterinary clinics, animal hospitals and emergency vets in Mallorca ranked by real Google reviews and public quality signals.", metaDescription: "Vets in Mallorca with real Google reviews. Veterinary clinics, animal hospitals and emergency care by area." }
+} satisfies Partial<Record<CategorySlug, CategoryCopy>>);
+
+Object.assign(deCategoryCopy, {
+  casinos: { label: "Casinos und Spielhallen", singular: "Casino", title: "Casinos und Spielhallen auf Mallorca", intro: "Casinos, Bingohallen und Spielhallen auf Mallorca, sortiert nach echten öffentlichen Signalen: Bewertungen, Lage und Reputation. Keine bezahlten Plätze.", metaDescription: "Casinos, Bingohallen und Spielhallen auf Mallorca mit echten Google-Bewertungen. Unabhängiges Ranking nach Lage und Reputation." }
+} satisfies Partial<Record<CategorySlug, CategoryCopy>>);
+
+Object.assign(deCategoryCopy, {
+  vets: { label: "Tierärzte", singular: "Tierarztpraxis", title: "Tierärzte auf Mallorca", intro: "Tierarztpraxen, Tierkliniken und Notdienste auf Mallorca, sortiert nach echten Google-Bewertungen und öffentlichen Qualitätssignalen.", metaDescription: "Tierärzte auf Mallorca mit echten Google-Bewertungen. Tierkliniken, Praxen und Notdienste nach Gegend." }
+} satisfies Partial<Record<CategorySlug, CategoryCopy>>);
+
 export const categoryCopy: Record<Locale, Partial<Record<CategorySlug, CategoryCopy>>> = {
   es: esCategoryCopy,
   en: enCategoryCopy,

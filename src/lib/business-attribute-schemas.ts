@@ -129,6 +129,7 @@ export const categoryAttributeSchemas: Partial<Record<BusinessCategory, z.ZodTyp
   excursion: z.object({ ...baseCategoryAttributesSchema, data: activityAttributesDataSchema }),
   "rent-a-car": z.object({ ...baseCategoryAttributesSchema, data: activityAttributesDataSchema }),
   "car-dealer": z.object({ ...baseCategoryAttributesSchema, data: activityAttributesDataSchema }),
+  "real-estate": z.object({ ...baseCategoryAttributesSchema, data: activityAttributesDataSchema }),
   "local-shop": z.object({ ...baseCategoryAttributesSchema, data: activityAttributesDataSchema })
 };
 

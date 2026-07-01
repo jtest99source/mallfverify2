@@ -3,11 +3,11 @@
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
-import { IconArrowUpRight, IconInfoCircle, IconMapPin, IconSearch } from "@tabler/icons-react";
+import { IconArrowUpRight, IconInfoCircle, IconMapPin } from "@tabler/icons-react";
 import type { Business } from "@/types/business";
 import type { Locale } from "@/lib/i18n";
 import type { CategorySlug } from "@/lib/data";
-import { getCategorySlugFromBusiness } from "@/lib/data";
+import { getCategorySlugFromBusiness, publicCategorySlugs } from "@/lib/data";
 import { t, getCategoryCopy } from "@/lib/i18n-copy";
 import { methodologyPath } from "@/lib/methodology";
 import { BusinessImage } from "@/components/BusinessImage";
@@ -22,7 +22,7 @@ type SortKey = "ratio" | "reviews" | "rating" | "hidden";
 const ALL = "all";
 const PAGE_SIZE = 24;
 const CAPPED_RESULT_THRESHOLD = 1000;
-const SHOW_TYPE_FILTER = false;
+const CATEGORIES_WITH_TYPE_FILTER = new Set(["healthcare"]);
 
 const loadMoreCopy = {
   es: {
@@ -229,6 +229,8 @@ export function TopRankingExplorer({
     { value: "hidden", label: copy.filters.sort.hidden }
   ];
 
+  const showTypeFilter = CATEGORIES_WITH_TYPE_FILTER.has(category) && facets.length > 0;
+
   const places = useMemo(() => {
     return Array.from(new Set(businesses.map(businessPlace).filter(Boolean))).sort((a, b) => a.localeCompare(b, locale));
   }, [businesses, locale]);
@@ -304,19 +306,29 @@ export function TopRankingExplorer({
 
   return (
     <section className="relative bg-[#07101F] pb-14">
-      <div className="mx-auto -mt-10 hidden max-w-7xl px-4 sm:block sm:px-6 lg:px-8">
-        <div className="relative">
-          <IconSearch size={16} stroke={1.8} className="absolute left-4 top-1/2 -translate-y-1/2 text-white/25" />
-          <input
-            value={query}
-            onChange={(event) => updateParam("q", event.target.value)}
-            placeholder={scopedSearchPlaceholder}
-            className="h-12 w-full max-w-[520px] rounded-sm border border-white/[0.14] bg-[#0C1A2E] pl-11 pr-4 text-sm text-white placeholder:text-white/28 shadow-[0_20px_60px_rgba(0,0,0,0.25)] focus:border-[#00C37A] focus:outline-none focus:ring-1 focus:ring-[#00C37A]"
-          />
-        </div>
-      </div>
-      {/* Mobile filters: 2 compact selects */}
+      {/* Mobile filters */}
       <div className="px-4 py-4 sm:hidden">
+        <div className="mb-2">
+          <select
+            value={category}
+            onChange={(event) => router.push(`/${locale}/top/${event.target.value}`)}
+            className="h-10 w-full rounded-sm border border-white/[0.12] bg-[#0C1A2E] px-3 text-xs text-white focus:border-[#00C37A] focus:outline-none"
+          >
+            {publicCategorySlugs.map((cat) => (
+              <option key={cat} value={cat}>{getCategoryCopy(cat, locale).label}</option>
+            ))}
+          </select>
+        </div>
+        {showTypeFilter && (
+          <div className="mb-2">
+            <select value={facetSlug} onChange={(event) => updateParam("type", event.target.value)} className="h-10 w-full rounded-sm border border-white/[0.12] bg-[#0C1A2E] px-3 text-xs text-white focus:border-[#00C37A] focus:outline-none">
+              <option value={ALL}>{locale === "de" ? "Alle Typen" : locale === "en" ? "All types" : "Todos los tipos"}</option>
+              {facets.map((facet) => (
+                <option key={facet.slug} value={facet.slug}>{getLocalizedFacetLabel(facet.slug, facet.label, locale)}</option>
+              ))}
+            </select>
+          </div>
+        )}
         <div className="grid grid-cols-2 gap-2">
           <select value={sort} onChange={(event) => updateParam("sort", event.target.value)} className="h-10 rounded-sm border border-white/[0.12] bg-[#0C1A2E] px-3 text-xs text-white focus:border-[#00C37A] focus:outline-none">
             {sortOptions.map((option) => (
@@ -347,6 +359,33 @@ export function TopRankingExplorer({
           </div>
           <div className="h-8 w-px bg-white/[0.08]" />
           <label className="flex items-center gap-3 text-[10px] font-black uppercase tracking-[0.12em] text-white/30">
+            {locale === "de" ? "Kategorie" : locale === "en" ? "Category" : "Categoría"}
+            <select
+              value={category}
+              onChange={(event) => router.push(`/${locale}/top/${event.target.value}`)}
+              className="h-9 rounded-sm border border-white/[0.12] bg-[#0C1A2E] pl-4 pr-8 text-sm font-normal normal-case tracking-normal text-white focus:border-[#00C37A] focus:outline-none focus:ring-1 focus:ring-[#00C37A]"
+            >
+              {publicCategorySlugs.map((cat) => (
+                <option key={cat} value={cat}>{getCategoryCopy(cat, locale).label}</option>
+              ))}
+            </select>
+          </label>
+          {showTypeFilter && (
+            <>
+              <div className="h-8 w-px bg-white/[0.08]" />
+              <label className="flex items-center gap-3 text-[10px] font-black uppercase tracking-[0.12em] text-white/30">
+                {locale === "de" ? "Typ" : locale === "en" ? "Type" : "Tipo"}
+                <select value={facetSlug} onChange={(event) => updateParam("type", event.target.value)} className="h-9 rounded-sm border border-white/[0.12] bg-[#0C1A2E] pl-4 pr-8 text-sm font-normal normal-case tracking-normal text-white focus:border-[#00C37A] focus:outline-none focus:ring-1 focus:ring-[#00C37A]">
+                  <option value={ALL}>{locale === "de" ? "Alle" : locale === "en" ? "All" : "Todos"}</option>
+                  {facets.map((facet) => (
+                    <option key={facet.slug} value={facet.slug}>{getLocalizedFacetLabel(facet.slug, facet.label, locale)}</option>
+                  ))}
+                </select>
+              </label>
+            </>
+          )}
+          <div className="h-8 w-px bg-white/[0.08]" />
+          <label className="flex items-center gap-3 text-[10px] font-black uppercase tracking-[0.12em] text-white/30">
                 {copy.filters.sortBy}
                 <select value={sort} onChange={(event) => updateParam("sort", event.target.value)} className="h-9 rounded-sm border border-white/[0.12] bg-[#0C1A2E] pl-4 pr-8 text-sm font-normal normal-case tracking-normal text-white focus:border-[#00C37A] focus:outline-none focus:ring-1 focus:ring-[#00C37A]">
                   {sortOptions.map((option) => (
@@ -354,17 +393,6 @@ export function TopRankingExplorer({
                   ))}
                 </select>
           </label>
-              {SHOW_TYPE_FILTER && facets.length > 0 && (
-                <label className="flex items-center gap-3 text-[10px] font-black uppercase tracking-[0.12em] text-white/30">
-                  {copy.filters.type}
-                  <select value={facetSlug} onChange={(event) => updateParam("type", event.target.value)} className="h-9 rounded-sm border border-white/[0.12] bg-[#0C1A2E] pl-4 pr-8 text-sm font-normal normal-case tracking-normal text-white focus:border-[#00C37A] focus:outline-none focus:ring-1 focus:ring-[#00C37A]">
-                    <option value={ALL}>{copy.filters.all}</option>
-                    {facets.map((facet) => (
-                      <option key={facet.slug} value={facet.slug}>{getLocalizedFacetLabel(facet.slug, facet.label, locale)} ({facet.count})</option>
-                    ))}
-                  </select>
-                </label>
-              )}
               <label className="flex items-center gap-3 text-[10px] font-black uppercase tracking-[0.12em] text-white/30">
                 {copy.filters.place}
                 <select value={place} onChange={(event) => updateParam("area", event.target.value)} className="h-9 rounded-sm border border-white/[0.12] bg-[#0C1A2E] pl-4 pr-8 text-sm font-normal normal-case tracking-normal text-white focus:border-[#00C37A] focus:outline-none focus:ring-1 focus:ring-[#00C37A]">

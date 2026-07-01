@@ -25,6 +25,29 @@ function argValue(name) {
   return arg ? arg.slice(name.length + 3).trim() : null;
 }
 
+function areaSearches(config, area) {
+  const cleanArea = area.replace(/\s+/g, " ").trim();
+  if (!cleanArea) return config.searches;
+
+  if (config.businessCategory === "real-estate") {
+    return [
+      `real estate agency ${cleanArea} Mallorca`,
+      `estate agents ${cleanArea} Mallorca`,
+      `property agency ${cleanArea} Mallorca`,
+      `inmobiliaria ${cleanArea} Mallorca`,
+      `agencia inmobiliaria ${cleanArea} Mallorca`,
+      `Immobilienmakler ${cleanArea} Mallorca`,
+      `Immobilien ${cleanArea} Mallorca`
+    ];
+  }
+
+  return [
+    `${config.singular} ${cleanArea} Mallorca`,
+    `best ${config.singular} ${cleanArea} Mallorca`,
+    `${cleanArea} Mallorca ${config.singular}`
+  ];
+}
+
 function getPhotoNames(place) {
   const photos = place.photos ?? [];
   if (!Array.isArray(photos)) return [];
@@ -129,14 +152,16 @@ async function main() {
 
   const category = argValue("category");
   if (!category) throw new Error("Missing --category. Example: npm run places:preview:category -- --category=cafes");
+  const area = argValue("area");
 
   const config = getPlaceCategoryConfig(category);
   const apiKey = process.env.GOOGLE_PLACES_API_KEY;
   if (!apiKey) throw new Error("Missing GOOGLE_PLACES_API_KEY. Add it to .env.local.");
 
   const unique = new Map();
+  const searches = areaSearches(config, area ?? "");
 
-  for (const query of config.searches) {
+  for (const query of searches) {
     if (unique.size >= MAX_RESULTS) break;
 
     const places = await searchPlaces(apiKey, query);
@@ -156,7 +181,7 @@ async function main() {
   mkdirSync(path.dirname(config.output), { recursive: true });
   writeFileSync(config.output, `${JSON.stringify(preview, null, 2)}\n`, "utf8");
 
-  console.log(`Wrote ${preview.length} ${category} to ${config.output}`);
+  console.log(`Wrote ${preview.length} ${category}${area ? ` for ${area}` : ""} to ${config.output}`);
 }
 
 main().catch((error) => {

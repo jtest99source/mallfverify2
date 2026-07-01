@@ -16,6 +16,7 @@ type BusinessCategory =
   | "bakery"
   | "rent-a-car"
   | "car-dealer"
+  | "real-estate"
   | "spa"
   | "gym"
   | "market"
@@ -28,7 +29,7 @@ type AttributeContractCategory = "restaurant" | "hotel" | "beach-club" | "boat-r
 
 function attributeContractCategory(category: BusinessCategory): AttributeContractCategory {
   if (category === "bar" || category === "cafe" || category === "bakery" || category === "market") return "restaurant";
-  if (category === "rent-a-car" || category === "car-dealer" || category === "spa" || category === "gym" || category === "local-shop" || category === "museum" || category === "route" || category === "excursion") return "activity";
+  if (category === "rent-a-car" || category === "car-dealer" || category === "real-estate" || category === "spa" || category === "gym" || category === "local-shop" || category === "museum" || category === "route" || category === "excursion") return "activity";
   return category;
 }
 
@@ -464,6 +465,7 @@ function categoryLabel(category: string) {
     bakery: "horno o pasteleria",
     "rent-a-car": "alquiler de coches",
     "car-dealer": "concesionario",
+    "real-estate": "agencia inmobiliaria",
     spa: "spa",
     gym: "gimnasio",
     market: "mercado o tienda gourmet",
@@ -516,6 +518,13 @@ function categoryEditorialGuidance(category: string) {
       avoidFaq: "No preguntes por habitaciones, precio de carta, tumbonas o licencia nautica salvo que sea una actividad nautica y aparezca en los datos.",
       sentimentExample: '{ "experiencia": 0-100, "organizacion": 0-100, "guia": 0-100, "seguridad": 0-100 }',
       serviceExample: '[{ "label": "Guía", "icon": "user-star" }, { "label": "Reserva", "icon": "calendar" }]'
+    },
+    "real-estate": {
+      angle: "Agencia inmobiliaria: describe confianza, trato, profesionalidad, comunicacion, idiomas si aparecen, conocimiento local, acompaniamiento en compraventa o alquiler y para quien encaja: compradores internacionales, vendedores, propietarios o inversores.",
+      faqExamples: ["¿Encaja para compradores internacionales?", "¿Qué destaca del trato y la comunicación?", "¿Trabajan con compraventa, alquiler o ambos?", "¿Qué conviene confirmar antes de contactar?"],
+      avoidFaq: "No preguntes por habitaciones, carta, tumbonas, entradas, licencias nauticas ni precios de menu. No afirmes que hablan ingles o aleman salvo evidencia clara en resenas, web o datos.",
+      sentimentExample: '{ "trato": 0-100, "comunicacion": 0-100, "profesionalidad": 0-100, "conocimiento_local": 0-100 }',
+      serviceExample: '[{ "label": "Compraventa", "icon": "home-dollar" }, { "label": "Clientes internacionales", "icon": "world" }, { "label": "Valoracion de propiedades", "icon": "clipboard-check" }]'
     },
     beach: {
       angle: "Playa o cala: describe paisaje, tipo de acceso, ambiente, servicios, agua, arena/roca, parking si aparece y para quien encaja: familias, snorkel, paseo, fotos o tranquilidad.",
@@ -710,6 +719,22 @@ function isUsefulReviewForEditorial(review: ReturnType<typeof businessReviews>[n
     "playa",
     "parking",
     "reserva",
+    "venta",
+    "compra",
+    "comprar",
+    "vender",
+    "alquiler",
+    "inmobiliaria",
+    "propiedad",
+    "property",
+    "real estate",
+    "house",
+    "home",
+    "apartment",
+    "villa",
+    "wohnung",
+    "immobilien",
+    "makler",
     "precio",
     "paella",
     "tapas",

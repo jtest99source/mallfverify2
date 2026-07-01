@@ -107,14 +107,14 @@ function listSchema(name: string, items: string[]) {
   return items.length ? (
     <ul className="mt-3 grid gap-2">
       {items.map((item) => (
-        <li key={item} className="flex gap-2 text-sm font-semibold leading-6 text-[#0A0A0A]">
-          <IconCircleCheck size={17} stroke={1.8} className="mt-0.5 shrink-0 text-[#0A0A0A]" />
+        <li key={item} className="flex gap-2 text-sm font-semibold leading-6 text-white">
+          <IconCircleCheck size={17} stroke={1.8} className="mt-0.5 shrink-0 text-white" />
           {item}
         </li>
       ))}
     </ul>
   ) : (
-    <p className="mt-3 text-sm leading-7 text-[#6B7280]">{name}</p>
+    <p className="mt-3 text-sm leading-7 text-white/55">{name}</p>
   );
 }
 
@@ -211,19 +211,19 @@ export default async function ExpertProfilePage({
   if (!profile) notFound();
 
   const copy = profilePageCopy[safeLocale];
-  const description = profile.editorialNote?.[safeLocale] ?? profile.shortDescription[safeLocale] ?? profile.shortDescription.es ?? copy.noEditorial;
+  const description = profile.shortDescription[safeLocale] ?? profile.shortDescription.es ?? copy.noEditorial;
   const faqs = profile.faqs?.[safeLocale] ?? profile.faqs?.es ?? [];
   const specialties = localizedList(profile.specialties, safeLocale);
   const clientTypes = localizedList(profile.clientTypes, safeLocale);
   const verificationSignals = localizedList(profile.verificationSignals, safeLocale);
   const VERTICAL_COLORS: Record<string, string> = {
-    "english-speaking-lawyers-mallorca":  "#0A0A0A",
-    "architects-renovation-mallorca":     "#0A0A0A",
-    "property-managers-mallorca":         "#0A0A0A",
-    "english-speaking-dentists-mallorca": "#0A0A0A",
-    "english-speaking-doctors-mallorca":  "#0A0A0A",
-    "estate-agents-mallorca":             "#0A0A0A",
-    "mortgage-brokers-mallorca":          "#0A0A0A",
+    "english-speaking-lawyers-mallorca":  "#00C37A",
+    "architects-renovation-mallorca":     "#00C37A",
+    "property-managers-mallorca":         "#00C37A",
+    "english-speaking-dentists-mallorca": "#00C37A",
+    "english-speaking-doctors-mallorca":  "#00C37A",
+    "estate-agents-mallorca":             "#00C37A",
+    "mortgage-brokers-mallorca":          "#00C37A",
   };
   const verticalAccentColor = VERTICAL_COLORS[slug] ?? "#0A0A0A";
   const pageUrl = `${siteUrl}/${safeLocale}/experts/${slug}/${profile.slug}`;
@@ -239,7 +239,7 @@ export default async function ExpertProfilePage({
   ];
 
   return (
-    <main className="bg-[linear-gradient(180deg,#FFFFFF_0%,#FFFFFF_48%,#FFFFFF_100%)]">
+    <main className="bg-[#07101F] text-white">
       {/* Thin vertical-color accent bar at top */}
       <div className="h-1.5 w-full" style={{ backgroundColor: verticalAccentColor }} />
 
@@ -262,7 +262,7 @@ export default async function ExpertProfilePage({
                 <IconShieldCheck size={15} stroke={2} />
                 {statusLabel(profile, safeLocale)}
               </p>
-              <h1 className="mt-4 max-w-5xl font-display text-4xl font-black leading-[0.98] text-[#0A0A0A] sm:text-5xl lg:text-6xl">
+              <h1 className="mt-4 max-w-5xl font-display text-4xl font-black leading-[0.98] text-white sm:text-5xl lg:text-6xl">
                 {profile.name}
               </h1>
               {typeof profile.rating === "number" ? (
@@ -270,9 +270,9 @@ export default async function ExpertProfilePage({
                   <RatingBadge rating={profile.rating} reviewsCount={profile.reviewsCount} locale={safeLocale} />
                 </div>
               ) : null}
-              <p className="mt-6 max-w-3xl text-base leading-8 text-[#6B7280]">{description}</p>
+              <p className="mt-6 max-w-3xl text-base leading-8 text-white/55">{description}</p>
             </div>
-            <aside className="overflow-hidden rounded-lg border border-[#E5E7EB] bg-white shadow-[0_18px_45px_rgba(10,10,10,0.07)]">
+            <aside className="overflow-hidden rounded-lg border border-white/[0.10] bg-[#0C1A2E] shadow-[0_18px_45px_rgba(10,10,10,0.07)]">
               <div className="h-1 w-full" style={{ backgroundColor: verticalAccentColor }} />
               <div className="p-6">
                 <p className="text-[10px] font-black uppercase tracking-[0.14em]" style={{ color: verticalAccentColor }}>
@@ -280,13 +280,13 @@ export default async function ExpertProfilePage({
                 </p>
                 <div className="mt-4 grid gap-3">
                   <div className="flex items-start gap-3">
-                    <IconMapPin size={16} stroke={1.8} className="mt-0.5 shrink-0 text-[#0A0A0A]" />
-                    <span className="text-sm font-semibold leading-5 text-[#0A0A0A]">{profile.address ?? profile.location}</span>
+                    <IconMapPin size={16} stroke={1.8} className="mt-0.5 shrink-0 text-white" />
+                    <span className="text-sm font-semibold leading-5 text-white">{profile.address ?? profile.location}</span>
                   </div>
                   {profile.phone ? (
                     <div className="flex items-center gap-3">
-                      <IconPhone size={16} stroke={1.8} className="shrink-0 text-[#0A0A0A]" />
-                      <span className="text-sm font-bold text-[#0A0A0A]">{profile.phone}</span>
+                      <IconPhone size={16} stroke={1.8} className="shrink-0 text-white" />
+                      <span className="text-sm font-bold text-white">{profile.phone}</span>
                     </div>
                   ) : null}
                 </div>
@@ -306,7 +306,7 @@ export default async function ExpertProfilePage({
                   {profile.phone ? (
                     <a
                       href={`tel:${profile.phone.replace(/\s+/g, "")}`}
-                      className="flex min-h-[44px] items-center justify-center gap-2 rounded-md border border-[#E5E7EB] bg-white px-4 text-[11px] font-black uppercase tracking-[0.1em] text-[#0A0A0A] transition-colors hover:border-[#0A0A0A]"
+                      className="flex min-h-[44px] items-center justify-center gap-2 rounded-md border border-white/[0.10] bg-[#0C1A2E] px-4 text-[11px] font-black uppercase tracking-[0.1em] text-white transition-colors hover:border-[#07101F]"
                     >
                       <IconPhone size={15} stroke={2} />
                       {copy.call}
@@ -317,7 +317,7 @@ export default async function ExpertProfilePage({
                       href={profile.googleMapsUrl}
                       target="_blank"
                       rel="noreferrer"
-                      className="flex min-h-[44px] items-center justify-center gap-2 rounded-md border border-[#E5E7EB] bg-white px-4 text-[11px] font-black uppercase tracking-[0.1em] text-[#0A0A0A] transition-colors hover:border-[#0A0A0A]"
+                      className="flex min-h-[44px] items-center justify-center gap-2 rounded-md border border-white/[0.10] bg-[#0C1A2E] px-4 text-[11px] font-black uppercase tracking-[0.1em] text-white transition-colors hover:border-[#07101F]"
                     >
                       <IconExternalLink size={15} stroke={2} />
                       {copy.googleMaps}
@@ -333,23 +333,23 @@ export default async function ExpertProfilePage({
       {/* Attributes — contained card */}
       <section className="px-4 py-8 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
-          <div className="rounded-xl border border-[#E5E7EB] bg-white p-6 shadow-sm sm:p-8">
+          <div className="rounded-sm border border-white/[0.10] bg-[#0C1A2E] p-6 sm:p-8">
             <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
             <div>
-              <p className="text-[10px] font-black uppercase tracking-[0.14em] text-[#6B7280]">{copy.languages}</p>
+              <p className="text-[10px] font-black uppercase tracking-[0.14em] text-white/55">{copy.languages}</p>
               <div className="mt-3 flex flex-wrap gap-1.5">
                 {profile.languages.map((l) => (
-                  <span key={l} className="rounded-full border border-[#E5E7EB] bg-[#FFFFFF] px-3 py-1 text-sm font-bold text-[#0A0A0A]">
+                  <span key={l} className="rounded-full border border-white/[0.12] bg-white/[0.06] px-3 py-1 text-sm font-bold text-white">
                     {l}
                   </span>
                 ))}
               </div>
             </div>
             <div>
-              <p className="text-[10px] font-black uppercase tracking-[0.14em] text-[#6B7280]">{copy.specialties}</p>
+              <p className="text-[10px] font-black uppercase tracking-[0.14em] text-white/55">{copy.specialties}</p>
               <ul className="mt-3 grid gap-2">
                 {specialties.map((s) => (
-                  <li key={s} className="flex items-start gap-2 text-sm font-semibold leading-5 text-[#0A0A0A]">
+                  <li key={s} className="flex items-start gap-2 text-sm font-semibold leading-5 text-white">
                     <IconCircleCheck size={15} stroke={1.8} className="mt-0.5 shrink-0" style={{ color: verticalAccentColor }} />
                     {s}
                   </li>
@@ -357,10 +357,10 @@ export default async function ExpertProfilePage({
               </ul>
             </div>
             <div>
-              <p className="text-[10px] font-black uppercase tracking-[0.14em] text-[#6B7280]">{copy.clientTypes}</p>
+              <p className="text-[10px] font-black uppercase tracking-[0.14em] text-white/55">{copy.clientTypes}</p>
               <ul className="mt-3 grid gap-2">
                 {clientTypes.map((c) => (
-                  <li key={c} className="flex items-start gap-2 text-sm font-semibold leading-5 text-[#0A0A0A]">
+                  <li key={c} className="flex items-start gap-2 text-sm font-semibold leading-5 text-white">
                     <IconCircleCheck size={15} stroke={1.8} className="mt-0.5 shrink-0" style={{ color: verticalAccentColor }} />
                     {c}
                   </li>
@@ -368,10 +368,10 @@ export default async function ExpertProfilePage({
               </ul>
             </div>
             <div>
-              <p className="text-[10px] font-black uppercase tracking-[0.14em] text-[#6B7280]">{copy.areas}</p>
+              <p className="text-[10px] font-black uppercase tracking-[0.14em] text-white/55">{copy.areas}</p>
               <ul className="mt-3 grid gap-2">
                 {profile.areasServed.map((a) => (
-                  <li key={a} className="flex items-start gap-2 text-sm font-semibold leading-5 text-[#0A0A0A]">
+                  <li key={a} className="flex items-start gap-2 text-sm font-semibold leading-5 text-white">
                     <IconCircleCheck size={15} stroke={1.8} className="mt-0.5 shrink-0" style={{ color: verticalAccentColor }} />
                     {a}
                   </li>
@@ -395,14 +395,14 @@ export default async function ExpertProfilePage({
           </p>
           <div className="mt-5 grid gap-3 sm:grid-cols-2">
             {verificationSignals.map((signal) => (
-              <div key={signal} className="flex items-start gap-3 text-sm font-semibold leading-6 text-[#0A0A0A]">
+              <div key={signal} className="flex items-start gap-3 text-sm font-semibold leading-6 text-white">
                 <IconCircleCheck size={17} stroke={1.8} className="mt-0.5 shrink-0" style={{ color: verticalAccentColor }} />
                 {signal}
               </div>
             ))}
           </div>
           {profile.lastVerifiedAt ? (
-            <p className="mt-6 text-xs font-bold uppercase tracking-[0.12em] text-[#6B7280]">
+            <p className="mt-6 text-xs font-bold uppercase tracking-[0.12em] text-white/55">
               {copy.lastVerified}: {profile.lastVerifiedAt}
             </p>
           ) : null}
@@ -418,14 +418,14 @@ export default async function ExpertProfilePage({
             </p>
             <div className="mt-6 grid gap-4">
               {faqs.map((item) => (
-                <details key={item.question} className="group rounded-lg border border-[#E5E7EB] bg-white">
-                  <summary className="flex cursor-pointer items-center justify-between gap-4 px-5 py-4 text-sm font-bold text-[#0A0A0A] marker:hidden [&::-webkit-details-marker]:hidden">
+                <details key={item.question} className="group rounded-lg border border-white/[0.10] bg-[#0C1A2E]">
+                  <summary className="flex cursor-pointer items-center justify-between gap-4 px-5 py-4 text-sm font-bold text-white marker:hidden [&::-webkit-details-marker]:hidden">
                     {item.question}
                     <span className="shrink-0 transition-transform duration-200 group-open:rotate-45" style={{ color: verticalAccentColor }}>
                       +
                     </span>
                   </summary>
-                  <p className="border-t border-[#E5E7EB] px-5 py-4 text-sm leading-7 text-[#6B7280]">{item.answer}</p>
+                  <p className="border-t border-white/[0.10] px-5 py-4 text-sm leading-7 text-white/55">{item.answer}</p>
                 </details>
               ))}
             </div>
@@ -435,12 +435,12 @@ export default async function ExpertProfilePage({
 
       {/* CTA */}
       <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-        <div className="rounded-lg border border-[#E5E7EB] bg-[#0A0A0A] p-6 text-white shadow-[0_24px_60px_rgba(10,10,10,0.16)] sm:p-8 lg:p-10">
+        <div className="rounded-sm border border-white/[0.10] bg-[#0C1A2E] p-6 sm:p-8 lg:p-10">
           <h2 className="max-w-3xl font-display text-3xl font-black leading-tight text-white sm:text-5xl">{copy.ctaTitle}</h2>
-          <p className="mt-5 max-w-3xl text-sm leading-7 text-white/75">{copy.ctaText}</p>
+          <p className="mt-5 max-w-3xl text-sm leading-7 text-white/65">{copy.ctaText}</p>
           <Link
             href={`/${safeLocale}/contact`}
-            className="mt-7 inline-flex min-h-12 items-center justify-center rounded-md bg-white px-6 text-[11px] font-black uppercase tracking-[0.1em] text-[#0A0A0A] transition-all duration-150 hover:bg-[#FFFFFF]"
+            className="mt-7 inline-flex min-h-12 items-center justify-center rounded-sm bg-[#00C37A] px-6 text-[11px] font-black uppercase tracking-[0.1em] text-[#0A0A0A] transition-all duration-150 hover:bg-white"
           >
             {copy.ctaButton}
           </Link>

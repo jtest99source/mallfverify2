@@ -114,7 +114,10 @@ type Options = {
   limit: number | null;
   category: string | null;
   slug: string | null;
+  updatedAt: string | null;
   onlyMissing: boolean;
+  missingReviews: boolean;
+  basicOnly: boolean;
   includeDrafts: boolean;
   dryRun: boolean;
   yes: boolean;
@@ -144,7 +147,10 @@ function parseArgs() {
     limit: DEFAULT_LIMIT,
     category: null as string | null,
     slug: null as string | null,
+    updatedAt: null as string | null,
     onlyMissing: false,
+    missingReviews: false,
+    basicOnly: false,
     includeDrafts: false,
     dryRun: false,
     yes: false,
@@ -162,10 +168,16 @@ function parseArgs() {
       options.slug = arg.split("=")[1] || null;
     } else if (arg.startsWith("--only=")) {
       options.slug = arg.split("=")[1] || null;
+    } else if (arg.startsWith("--updated-at=")) {
+      options.updatedAt = arg.split("=")[1] || null;
     } else if (arg === "--all") {
       options.limit = null;
     } else if (arg === "--only-missing") {
       options.onlyMissing = true;
+    } else if (arg === "--missing-reviews") {
+      options.missingReviews = true;
+    } else if (arg === "--basic-only") {
+      options.basicOnly = true;
     } else if (arg === "--include-drafts") {
       options.includeDrafts = true;
     } else if (arg === "--dry-run") {
@@ -289,7 +301,12 @@ function categoryLabel(category: string) {
     route: "ruta o mirador",
     excursion: "excursión",
     "rent-a-car": "alquiler de coches",
-    "car-dealer": "concesionario"
+    "car-dealer": "concesionario",
+    casino: "sala de juego o casino",
+    healthcare: "clínica o servicio sanitario",
+    "real-estate": "agencia inmobiliaria",
+    veterinarian: "clínica veterinaria",
+    vet: "clínica veterinaria"
   }[category] ?? "negocio";
 }
 
@@ -567,7 +584,9 @@ async function fetchBusinesses(supabase: ReturnType<typeof createSupabaseClient>
 
     if (options.category) query = query.eq("category", options.category);
     if (options.slug) query = query.eq("slug", options.slug);
+    if (options.updatedAt) query = query.eq("updated_at", options.updatedAt);
     if (options.onlyMissing) query = query.is("detail_enriched_at", null);
+    if (options.missingReviews) query = query.or("place_reviews.is.null,place_reviews.eq.[]");
 
     const { data, error } = await query;
     if (error) throw error;
@@ -711,6 +730,9 @@ async function main() {
   const runSummary = {
     dry_run: options.dryRun,
     only_missing: options.onlyMissing,
+    missing_reviews: options.missingReviews,
+    basic_only: options.basicOnly,
+    updated_at: options.updatedAt,
     include_drafts: options.includeDrafts,
     selected: businesses.length,
     by_category: categoryBreakdown(businesses),
@@ -784,10 +806,6 @@ async function main() {
         raw_google_place: rawGooglePlace,
         place_photos: placePhotos,
         place_reviews: placeReviews,
-        business_facts: businessFacts,
-        visit_tips: visitTips,
-        highlights,
-        price_estimate: priceEstimate,
         opening_hours: business.opening_hours || openingHours,
         price_level: business.price_level || priceLevel,
         address: business.address || place.formattedAddress || null,
@@ -799,11 +817,18 @@ async function main() {
         detail_enriched_at: new Date().toISOString()
       };
 
-      if (supportsBusinessSelfDescription) {
+      if (!options.basicOnly) {
+        payload.business_facts = businessFacts;
+        payload.visit_tips = visitTips;
+        payload.highlights = highlights;
+        payload.price_estimate = priceEstimate;
+      }
+
+      if (!options.basicOnly && supportsBusinessSelfDescription) {
         payload.business_self_description = businessSelfDescription;
       }
 
-      if (placeAttributes) {
+      if (!options.basicOnly && placeAttributes) {
         payload.place_attributes = placeAttributes;
       }
 

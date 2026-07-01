@@ -18,6 +18,7 @@
     "places:preview:activities": "node scripts/preview-google-activities.mjs",
     "places:preview:beaches": "node scripts/preview-google-beaches.mjs",
     "places:preview:category": "node scripts/preview-google-category.mjs",
+    "places:preview:zone-topup": "node scripts/preview-google-zone-topup.mjs",
     "places:preview:rent-a-car": "node scripts/preview-google-category.mjs --category=rent-a-car",
     "places:preview:car-dealers": "node scripts/preview-google-category.mjs --category=car-dealers",
     "places:preview:spas": "node scripts/preview-google-category.mjs --category=spas",
@@ -25,6 +26,8 @@
     "places:preview:real-estate": "node scripts/preview-google-category.mjs --category=real-estate",
     "places:preview:nightlife": "node scripts/preview-google-category.mjs --category=nightlife",
     "places:preview:gyms": "node scripts/preview-google-category.mjs --category=gyms",
+    "places:preview:casinos": "node scripts/preview-google-category.mjs --category=casinos",
+    "places:preview:vets": "node scripts/preview-google-category.mjs --category=vets",
     "places:preview:aesthetic-medicine": "node scripts/preview-google-category.mjs --category=aesthetic-medicine",
     "experts:preview": "node scripts/preview-google-experts.mjs",
     "experts:preview:aesthetic-medicine": "node scripts/preview-google-experts.mjs --vertical=aesthetic-medicine --search-set=all",
@@ -44,6 +47,8 @@
     "places:import:real-estate": "tsx scripts/import-google-category.mjs --category=real-estate",
     "places:import:nightlife": "tsx scripts/import-google-category.mjs --category=nightlife",
     "places:import:gyms": "tsx scripts/import-google-category.mjs --category=gyms",
+    "places:import:casinos": "tsx scripts/import-google-category.mjs --category=casinos",
+    "places:import:vets": "tsx scripts/import-google-category.mjs --category=vets",
     "businesses:publish-restaurants": "node scripts/publish-restaurants.mjs",
     "businesses:publish-boats": "node scripts/publish-boats.mjs",
     "businesses:publish-priority-batches": "node scripts/publish-priority-batches.mjs",
@@ -82,6 +87,7 @@
     "images:assign-candidates": "tsx scripts/assign-business-image-candidates.ts",
     "images:score-candidates": "tsx scripts/score-business-image-candidates.ts",
     "images:assign-best-candidates": "tsx scripts/assign-best-business-image-candidates.ts",
+    "images:assign-google-place-primary": "node scripts/assign-google-place-primary-images.mjs",
     "images:audit-businesses": "tsx scripts/audit-business-images.ts",
     "images:audit-priority": "tsx scripts/audit-priority-business-images.ts",
     "images:assign-hero": "tsx scripts/assign-hero-images.ts",
@@ -117,6 +123,7 @@
     "postcss": "^8.5.4",
     "tailwindcss": "^3.4.17",
     "tsx": "^4.22.4",
-    "typescript": "^5.8.3"
+    "typescript": "^5.8.3",
+    "xlsx": "^0.18.5"
   }
 }

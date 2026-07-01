@@ -995,7 +995,7 @@ function ProfileCard({
           </p>
         </div>
         {typeof profile.rating === "number" ? (
-          <span className="rounded-full border border-[#E5E7EB] bg-[#FFFFFF] px-3 py-1 text-sm font-black text-[#0A0A0A]">
+          <span className="rounded-full border border-[#E5E7EB] bg-[#0C1A2E] px-3 py-1 text-sm font-black text-[#0A0A0A]">
             ★ {profile.rating.toFixed(1)}
           </span>
         ) : null}
@@ -1019,18 +1019,18 @@ function ProfileCard({
       </dl>
       <div className="mt-5 flex flex-wrap gap-3">
         {profile.website ? (
-          <a href={profile.website} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-md border border-[#E5E7EB] px-4 py-2 text-[10px] font-black uppercase tracking-[0.1em] text-[#0A0A0A] hover:border-[#0A0A0A] hover:text-[#0A0A0A]">
+          <a href={profile.website} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-md border border-[#E5E7EB] px-4 py-2 text-[10px] font-black uppercase tracking-[0.1em] text-[#0A0A0A] hover:border-[#07101F] hover:text-[#0A0A0A]">
             <IconWorld size={15} stroke={1.8} />
             {labels.website}
           </a>
         ) : null}
         {profile.phone ? (
-          <a href={`tel:${profile.phone.replace(/\s+/g, "")}`} className="inline-flex items-center gap-2 rounded-md border border-[#E5E7EB] px-4 py-2 text-[10px] font-black uppercase tracking-[0.1em] text-[#0A0A0A] hover:border-[#0A0A0A] hover:text-[#0A0A0A]">
+          <a href={`tel:${profile.phone.replace(/\s+/g, "")}`} className="inline-flex items-center gap-2 rounded-md border border-[#E5E7EB] px-4 py-2 text-[10px] font-black uppercase tracking-[0.1em] text-[#0A0A0A] hover:border-[#07101F] hover:text-[#0A0A0A]">
             <IconPhone size={15} stroke={1.8} />
             {labels.phone}
           </a>
         ) : null}
-        <Link href={`/${locale}/experts/${verticalSlug}/${profile.slug}`} className="inline-flex items-center gap-2 rounded-md bg-[#0A0A0A] px-4 py-2 text-[10px] font-black uppercase tracking-[0.1em] text-white hover:bg-[#262626]">
+        <Link href={`/${locale}/experts/${verticalSlug}/${profile.slug}`} className="inline-flex items-center gap-2 rounded-md bg-[#07101F] px-4 py-2 text-[10px] font-black uppercase tracking-[0.1em] text-white hover:bg-[#0C1A2E]">
           {labels.details}
           <IconExternalLink size={14} stroke={1.8} />
         </Link>
@@ -1156,7 +1156,7 @@ export default async function ExpertVerticalPage({ params }: { params: Promise<{
           </div>
           <div className="mt-7 flex flex-wrap gap-3">
             {copy.profileFields.map((field, index) => (
-              <span key={field} className="inline-flex items-center gap-2 rounded-full border border-[#E5E7EB] bg-[#FFFFFF] px-4 py-2 text-sm font-bold text-[#0A0A0A]">
+              <span key={field} className="inline-flex items-center gap-2 rounded-full border border-[#E5E7EB] bg-[#0C1A2E] px-4 py-2 text-sm font-bold text-[#0A0A0A]">
                 {index === 1 ? <IconLanguage size={16} stroke={1.8} /> : index === 2 ? <IconMapPin size={16} stroke={1.8} /> : <IconCircleCheck size={16} stroke={1.8} />}
                 {field}
               </span>
@@ -1208,10 +1208,10 @@ export default async function ExpertVerticalPage({ params }: { params: Promise<{
       </section>
 
       <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-        <div className="rounded-lg border border-[#E5E7EB] bg-[#0A0A0A] p-6 text-white shadow-[0_24px_60px_rgba(10,10,10,0.16)] sm:p-8 lg:p-10">
+        <div className="rounded-lg border border-[#E5E7EB] bg-[#07101F] p-6 text-white shadow-[0_24px_60px_rgba(10,10,10,0.16)] sm:p-8 lg:p-10">
           <h2 className="max-w-3xl font-display text-3xl font-black leading-tight text-white sm:text-5xl">{copy.ctaTitle}</h2>
           <p className="mt-5 max-w-3xl text-sm leading-7 text-white/75">{copy.ctaText}</p>
-          <Link href={`/${safeLocale}/contact`} className="mt-7 inline-flex min-h-12 items-center justify-center rounded-md bg-white px-6 text-[11px] font-black uppercase tracking-[0.1em] text-[#0A0A0A] transition-all duration-150 hover:bg-[#FFFFFF]">
+          <Link href={`/${safeLocale}/contact`} className="mt-7 inline-flex min-h-12 items-center justify-center rounded-md bg-white px-6 text-[11px] font-black uppercase tracking-[0.1em] text-[#0A0A0A] transition-all duration-150 hover:bg-[#0C1A2E]">
             {copy.ctaButton}
           </Link>
         </div>
