@@ -10,7 +10,7 @@ import { getBusinesses, getTopBusinessesByFacet } from "@/lib/repository";
 import { createBreadcrumbSchema, createItemListSchema } from "@/lib/schema";
 import { generateSeoMetadata } from "@/lib/seo";
 import { methodologyPath } from "@/lib/methodology";
-import { facetPath, getFacet, getPopularFacetsForBusinesses } from "@/lib/taxonomy";
+import { facetPath, getFacet, getPopularFacetsForBusinesses, type RankingFacet } from "@/lib/taxonomy";
 
 const pageCopy = {
   es: {
@@ -72,7 +72,7 @@ export default async function TopFacetPage({ params }: { params: Promise<{ local
   const config = getCategoryCopy(category, safeLocale);
   const copy = t(safeLocale);
   const localCopy = pageCopy[safeLocale];
-  const relatedFacets = getPopularFacetsForBusinesses(category, allCategoryBusinesses, 3).filter((item: { slug: string }) => item.slug !== rankingFacet.slug).slice(0, 8);
+  const relatedFacets = getPopularFacetsForBusinesses(category, allCategoryBusinesses, 3).filter((item: RankingFacet & { count: number }) => item.slug !== rankingFacet.slug).slice(0, 8);
   const breadcrumbs = [
     { name: copy.category.breadcrumbHome, url: `${siteUrl}/${safeLocale}` },
     { name: "Rankings", url: `${siteUrl}/${safeLocale}/top/restaurants` },
