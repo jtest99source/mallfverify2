@@ -270,7 +270,7 @@ const fallbackPublicBusinessStats = {
   analyzedReviews: 3765662,
   activeCategories: 17
 };
-const businessListSelect = [
+const businessListingSelect = [
   "id",
   "slug",
   "name",
@@ -296,10 +296,6 @@ const businessListSelect = [
   "primary_image_credit",
   "gallery_image_urls",
   "image_status",
-  "gallery",
-  "opening_hours",
-  "faqs",
-  "seo",
   "updated_at",
   "google_place_id",
   "rating",
@@ -316,17 +312,7 @@ const businessListSelect = [
   "ai_description",
   "editorial_description",
   "ideal_for",
-  "what_to_expect",
-  "review_summary",
-  "faq_auto",
-  "editorial_status",
-  "review_pros",
-  "review_cons",
-  "services",
-  "price_estimate",
-  "business_self_description",
-  "editorial_generated_at",
-  "editorial_source"
+  "price_estimate"
 ].join(",");
 
 type SeoJson = { title?: string; description?: string };
@@ -711,7 +697,7 @@ export async function getBusinesses(category: CategorySlug): Promise<Business[]>
     const { data, error } = await publicStatusFilter(
       supabase
         .from("businesses")
-        .select(businessListSelect)
+        .select(businessListingSelect)
         .in("category", businessCategories)
         .order("is_featured", { ascending: false })
         .order("updated_at", { ascending: false })
@@ -1087,7 +1073,7 @@ export async function getRelatedBusinesses(business: Business, limit = 3): Promi
   const sameCategoryQuery = publicStatusFilter(
     supabase
       .from("businesses")
-      .select("*")
+      .select(businessListingSelect)
       .neq("id", business.id)
       .eq("category", business.category)
       .order("is_featured", { ascending: false })
@@ -1099,7 +1085,7 @@ export async function getRelatedBusinesses(business: Business, limit = 3): Promi
     ? publicStatusFilter(
         supabase
           .from("businesses")
-          .select("*")
+          .select(businessListingSelect)
           .neq("id", business.id)
           .in("category", categoryValues)
           .order("is_featured", { ascending: false })
@@ -1113,7 +1099,7 @@ export async function getRelatedBusinesses(business: Business, limit = 3): Promi
       publicStatusFilter(
         supabase
           .from("businesses")
-          .select("*")
+          .select(businessListingSelect)
           .neq("id", business.id)
           .eq(field, area)
           .in("category", categoryValues)
@@ -1294,4 +1280,3 @@ export async function getSitemapEntities() {
     }))
   };
 }
-
