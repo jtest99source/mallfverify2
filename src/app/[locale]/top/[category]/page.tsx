@@ -4,7 +4,7 @@ import { GuideCard } from "@/components/GuideCard";
 import { JsonLd } from "@/components/JsonLd";
 import { TopRankingExplorer } from "@/components/TopRankingExplorer";
 import { getCategoryCopy, t } from "@/lib/i18n-copy";
-import { getCategoryGuideKeywords, getCategorySlugFromBusiness, isCategorySlug, isPublicCategorySlug, publicCategorySlugs, siteUrl, type CategorySlug } from "@/lib/data";
+import { getCategoryGuideKeywords, getCategorySlugFromBusiness, isCategorySlug, isPublicCategorySlug, siteUrl, type CategorySlug } from "@/lib/data";
 import { isLocale, type Locale } from "@/lib/i18n";
 import { getBusinessesForFacetScan, getRelatedGuides, getTopBusinessesByCategory } from "@/lib/repository";
 import { createBreadcrumbSchema, createSimpleItemListSchema } from "@/lib/schema";
@@ -72,26 +72,6 @@ export default async function TopCategoryPage({ params }: { params: Promise<{ lo
           </div>
         </div>
       </section>
-
-      <div className="sticky top-0 z-10 border-b border-white/[0.08] bg-[#07101F]/95 backdrop-blur-sm">
-        <div className="mx-auto max-w-7xl overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-          <div className="flex gap-2 px-4 py-3 sm:px-6 lg:px-8">
-            {publicCategorySlugs.map((cat) => (
-              <Link
-                key={cat}
-                href={`/${safeLocale}/top/${cat}`}
-                className={`shrink-0 whitespace-nowrap rounded-full px-3.5 py-1.5 text-[11px] font-bold uppercase tracking-[0.06em] transition-colors ${
-                  cat === category
-                    ? "bg-[#00C37A] text-[#0A0A0A]"
-                    : "border border-white/[0.12] text-white/50 hover:border-white/30 hover:text-white"
-                }`}
-              >
-                {getCategoryCopy(cat, safeLocale).label}
-              </Link>
-            ))}
-          </div>
-        </div>
-      </div>
 
       {(category === "healthcare" || category === "real-estate") && (
         <div className="border-b border-white/[0.06] bg-[#07101F] px-4 py-4 sm:px-6 lg:px-8">
