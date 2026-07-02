@@ -27,7 +27,6 @@ const nightlifeRestaurantSignals = [
   "club",
   "gastrobeach",
   "live music",
-  "music",
   "pub",
   "rooftop",
   "skybar"
@@ -77,14 +76,12 @@ const barListingSignals = [
   "tapas",
   "vermut",
   "vermuteria",
-  "wine",
   "wine bar",
   "vinoteca"
 ];
 
 const cafeListingSignals = [
   "bakery",
-  "bistro",
   "brunch",
   "cake",
   "cafe",
@@ -141,7 +138,6 @@ const activityListingSignals = [
   "bike",
   "boat trip",
   "boat tour",
-  "bodega",
   "buggy",
   "charter",
   "climbing",
@@ -150,7 +146,6 @@ const activityListingSignals = [
   "dive",
   "diving",
   "excursion",
-  "experience",
   "freediving",
   "guided",
   "helicopter",
@@ -171,11 +166,8 @@ const activityListingSignals = [
   "tour",
   "tours",
   "trekking",
-  "trip",
   "vela",
-  "vino",
-  "walking",
-  "wine"
+  "walking"
 ];
 
 function getBusinessCategoriesForListing(category: CategorySlug): BusinessCategory[] {
