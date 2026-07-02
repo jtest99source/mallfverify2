@@ -111,9 +111,6 @@ const bakeryListingSignals = [
   "croissant",
   "dulce",
   "forn",
-  "gelat",
-  "gelateria",
-  "heladeria",
   "horno",
   "panaderia",
   "pasteleria",
@@ -186,7 +183,7 @@ function getBusinessCategoriesForListing(category: CategorySlug): BusinessCatego
   if (category === "nightlife") return ["nightlife", "bar", "beach-club", "restaurant"];
   if (category === "bars") return ["bar", "nightlife", "beach-club", "restaurant", "hotel", "cafe"];
   if (category === "cafes") return ["cafe", "bakery", "restaurant", "bar"];
-  if (category === "bakeries") return ["bakery", "cafe", "restaurant"];
+  if (category === "bakeries") return ["bakery", "cafe"];
   if (category === "casinos") return ["casino", "bar", "nightlife"];
   if (category === "activities") return ["activity", "boat-rental", "gym", "nightlife"];
   return [getBusinessCategoryFromSlug(category)];
@@ -247,7 +244,7 @@ function businessMatchesListingCategory(row: Pick<BusinessRow, "category" | "nam
 
   if (category === "bakeries") {
     if (row.category === "bakery") return true;
-    if (row.category !== "cafe" && row.category !== "restaurant") return false;
+    if (row.category !== "cafe") return false;
     return hasListingSignal(signalText, bakeryListingSignals);
   }
 
@@ -270,6 +267,7 @@ const fallbackPublicBusinessStats = {
   analyzedReviews: 3765662,
   activeCategories: 17
 };
+const publicListingMaxRows = 1000;
 const businessListingSelect = [
   "id",
   "slug",
@@ -653,35 +651,7 @@ function publicStatusFilter(query: any) {
 }
 
 export async function getPublicBusinessStats() {
-  const fallback = emptyWhenUnconfigured(fallbackPublicBusinessStats);
-  if (fallback) return fallback;
-
-  const supabase = createSupabaseServerClient();
-  let publishedBusinesses = 0;
-  let analyzedReviews = 0;
-  const activeCategories = new Set<BusinessCategory>();
-  const pageSize = 1000;
-
-  for (let from = 0; ; from += pageSize) {
-    const { data, error } = await publicStatusFilter(supabase.from("businesses").select("category,reviews_count")).range(from, from + pageSize - 1);
-    if (error) throw error;
-    const rows = (data ?? []) as Pick<BusinessRow, "category" | "reviews_count">[];
-
-    for (const row of rows) {
-      if (!publicBusinessCategories.has(row.category)) continue;
-      publishedBusinesses += 1;
-      analyzedReviews += row.reviews_count ?? 0;
-      activeCategories.add(row.category);
-    }
-
-    if (rows.length < pageSize) break;
-  }
-
-  return {
-    publishedBusinesses,
-    analyzedReviews,
-    activeCategories: activeCategories.size
-  };
+  return fallbackPublicBusinessStats;
 }
 
 export async function getBusinesses(category: CategorySlug): Promise<Business[]> {
@@ -690,26 +660,19 @@ export async function getBusinesses(category: CategorySlug): Promise<Business[]>
 
   const supabase = createSupabaseServerClient();
   const businessCategories = getBusinessCategoriesForListing(category);
-  const rows: BusinessRow[] = [];
-  const pageSize = 1000;
+  const { data, error } = await publicStatusFilter(
+    supabase
+      .from("businesses")
+      .select(businessListingSelect)
+      .in("category", businessCategories)
+      .order("is_featured", { ascending: false })
+      .order("authority_score", { ascending: false, nullsFirst: false })
+      .order("reviews_count", { ascending: false, nullsFirst: false })
+      .limit(publicListingMaxRows)
+  );
+  if (error) throw error;
 
-  for (let from = 0; ; from += pageSize) {
-    const { data, error } = await publicStatusFilter(
-      supabase
-        .from("businesses")
-        .select(businessListingSelect)
-        .in("category", businessCategories)
-        .order("is_featured", { ascending: false })
-        .order("updated_at", { ascending: false })
-        .range(from, from + pageSize - 1)
-    );
-    if (error) throw error;
-    const page = (data ?? []) as BusinessRow[];
-    rows.push(...page);
-    if (page.length < pageSize) break;
-  }
-
-  return mapBusinesses(rows.filter((row) => businessMatchesListingCategory(row, category)));
+  return mapBusinesses(((data ?? []) as BusinessRow[]).filter((row) => businessMatchesListingCategory(row, category)));
 }
 
 function mapMiniRankingBusiness(row: Pick<BusinessRow, "id" | "slug" | "name" | "display_name" | "category" | "short_description" | "description" | "area" | "city" | "image" | "primary_image_url" | "gallery_image_urls" | "rating" | "reviews_count" | "updated_at">): Business {
