@@ -545,12 +545,54 @@ function MethodologyPage({ locale, canonical, stats }: { locale: Locale; canonic
       <article className="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8">
         <section className="border-b border-white/[0.08] pb-10">
           <p className="mb-2 text-[11px] font-black uppercase tracking-[0.18em] text-[#00C37A]/50">01</p>
+          <h2 className="font-sans text-2xl font-black leading-tight text-white sm:text-3xl">
+            {locale === "en" ? "Who this is for" : locale === "de" ? "Für wen das hier ist" : "Para quién es esto"}
+          </h2>
+          <p className="mt-5 text-base leading-8 text-white/70">
+            {locale === "en"
+              ? "Mallorca Verified is built for people who arrive in Mallorca without a local network: expats, international residents and foreign buyers. Without trusted local contacts, the default outcome is tourist traps, paid rankings and professionals who don't speak your language. This directory exists to fix that — for visitors who want honest recommendations, and for residents who need to make real decisions like finding a doctor, a lawyer or a rental car without being misled."
+              : locale === "de"
+              ? "Mallorca Verified ist für Menschen, die ohne lokale Kontakte nach Mallorca kommen: Expats, internationale Bewohner und ausländische Käufer. Ohne vertrauenswürdige Verbindungen enden viele in Touristenfallen, bezahlten Rankings und bei Profis, die ihre Sprache nicht sprechen. Dieses Verzeichnis soll das ändern — für Besucher, die ehrliche Empfehlungen wollen, und für Bewohner, die echte Entscheidungen treffen müssen."
+              : "Mallorca Verified está construido para personas que llegan a Mallorca sin red local: expats, residentes internacionales y compradores extranjeros. Sin contactos locales de confianza, el resultado por defecto son tourist traps, rankings de pago y profesionales que no hablan tu idioma. Este directorio existe para cambiar eso."}
+          </p>
+          <div className="mt-7 grid gap-3 sm:grid-cols-2">
+            {(locale === "en"
+              ? [
+                  ["Tourists & visitors", "Rankings to find the best restaurants, beach clubs, hotels and activities — without tourist traps or paid placements."],
+                  ["Expats & new residents", "Verified professionals who speak English or German for decisions that matter: healthcare, legal, property, finance."],
+                  ["International buyers", "Estate agents, lawyers and mortgage brokers with real track records with foreign buyers — not the ones with the most advertising."],
+                  ["Long-term residents", "From vets and dentists to car dealers and gyms, ranked by real data from people who actually live here."]
+                ]
+              : locale === "de"
+              ? [
+                  ["Touristen & Besucher", "Rankings für die besten Restaurants, Beachclubs, Hotels und Aktivitäten — ohne Touristenfallen oder bezahlte Platzierungen."],
+                  ["Expats & neue Bewohner", "Verifizierte Profis, die Deutsch oder Englisch sprechen, für wichtige Entscheidungen: Gesundheit, Recht, Immobilien, Finanzen."],
+                  ["Internationale Käufer", "Makler, Anwälte und Hypothekenbroker mit echtem Track Record mit ausländischen Käufern — nicht die mit der meisten Werbung."],
+                  ["Langzeit-Residenten", "Von Tierärzten und Zahnärzten bis zu Autohändlern und Fitnessstudios — nach echten Daten von Menschen, die hier leben."]
+                ]
+              : [
+                  ["Turistas y visitantes", "Rankings para los mejores restaurantes, beach clubs, hoteles y actividades — sin tourist traps ni posiciones de pago."],
+                  ["Expats y nuevos residentes", "Profesionales verificados que hablan inglés o alemán para las decisiones que importan: salud, legal, propiedad, finanzas."],
+                  ["Compradores internacionales", "Agentes, abogados y brokers con track record real con compradores extranjeros — no los que más publicidad tienen."],
+                  ["Residentes de larga duración", "Desde veterinarios y dentistas hasta concesionarios y gimnasios, ordenados por datos reales de gente que vive aquí."]
+                ]
+            ).map(([title, text]) => (
+              <div key={title} className="rounded-lg border border-white/[0.08] bg-[#0C1A2E] p-5">
+                <h3 className="font-sans text-base font-bold text-white">{title}</h3>
+                <p className="mt-2 text-sm leading-7 text-white/60">{text}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="border-b border-white/[0.08] py-10">
+          <p className="mb-2 text-[11px] font-black uppercase tracking-[0.18em] text-[#00C37A]/50">02</p>
           <h2 className="font-sans text-2xl font-black leading-tight text-white sm:text-3xl">{c.whyTitle}</h2>
           <p className="mt-5 text-base leading-8 text-white/70">{c.whyText}</p>
         </section>
 
         <section className="border-b border-white/[0.08] py-10">
-          <p className="mb-2 text-[11px] font-black uppercase tracking-[0.18em] text-[#00C37A]/50">02</p>
+          <p className="mb-2 text-[11px] font-black uppercase tracking-[0.18em] text-[#00C37A]/50">03</p>
           <h2 className="font-sans text-2xl font-black leading-tight text-white sm:text-3xl">{c.factorsTitle}</h2>
           <p className="mt-5 text-base leading-8 text-white/70">{c.factorsIntro}</p>
           <div className="mt-7 grid gap-4">
@@ -573,7 +615,7 @@ function MethodologyPage({ locale, canonical, stats }: { locale: Locale; canonic
         </section>
 
         <section className="border-b border-white/[0.08] py-10">
-          <p className="mb-2 text-[11px] font-black uppercase tracking-[0.18em] text-[#00C37A]/50">03</p>
+          <p className="mb-2 text-[11px] font-black uppercase tracking-[0.18em] text-[#00C37A]/50">04</p>
           <h2 className="font-sans text-2xl font-black leading-tight text-white sm:text-3xl">{c.neverTitle}</h2>
           <div className="mt-6 grid gap-4">
             {c.never.map(([title, text]) => (
@@ -589,7 +631,7 @@ function MethodologyPage({ locale, canonical, stats }: { locale: Locale; canonic
         </section>
 
         <section className="border-b border-white/[0.08] py-10">
-          <p className="mb-2 text-[11px] font-black uppercase tracking-[0.18em] text-[#00C37A]/50">04</p>
+          <p className="mb-2 text-[11px] font-black uppercase tracking-[0.18em] text-[#00C37A]/50">05</p>
           <h2 className="font-sans text-2xl font-black leading-tight text-white sm:text-3xl">{c.dataTitle}</h2>
           <p className="mt-5 text-base leading-8 text-white/70">{c.dataText}</p>
           <div className="mt-8 grid gap-4 sm:grid-cols-3">
@@ -607,7 +649,7 @@ function MethodologyPage({ locale, canonical, stats }: { locale: Locale; canonic
         </section>
 
         <section className="border-b border-white/[0.08] py-10">
-          <p className="mb-2 text-[11px] font-black uppercase tracking-[0.18em] text-[#00C37A]/50">05</p>
+          <p className="mb-2 text-[11px] font-black uppercase tracking-[0.18em] text-[#00C37A]/50">06</p>
           <h2 className="font-sans text-2xl font-black leading-tight text-white sm:text-3xl">
             {locale === "en" ? "How each page works" : locale === "de" ? "Wie jede Seite funktioniert" : "Cómo funciona cada página"}
           </h2>
@@ -626,7 +668,7 @@ function MethodologyPage({ locale, canonical, stats }: { locale: Locale; canonic
         </section>
 
         <section className="pt-10">
-          <p className="mb-2 text-[11px] font-black uppercase tracking-[0.18em] text-[#00C37A]/50">06</p>
+          <p className="mb-2 text-[11px] font-black uppercase tracking-[0.18em] text-[#00C37A]/50">07</p>
           <h2 className="font-sans text-2xl font-black leading-tight text-white sm:text-3xl">{c.faqTitle}</h2>
           <div className="mt-6 divide-y divide-white/[0.08] overflow-hidden rounded-lg border border-white/[0.08] bg-[#0C1A2E]">
             {c.faqs.map(([question, answer]) => (

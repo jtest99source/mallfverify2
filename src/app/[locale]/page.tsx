@@ -453,23 +453,27 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         <div className="relative z-10 flex w-full max-w-[780px] flex-col items-center">
           <div className="w-full max-w-[780px]">
             <div className="mb-6 inline-flex items-center gap-3 text-[10px] font-semibold uppercase tracking-[0.16em] text-[#00C37A] before:h-px before:w-6 before:bg-[#00C37A] after:h-px after:w-6 after:bg-[#00C37A]">
-              {safeLocale === "de" ? <><span className="sm:hidden">Keine bezahlten Platzierungen</span><span className="hidden sm:inline">Echte Daten · Keine bezahlten Platzierungen</span></> : safeLocale === "en" ? <><span className="sm:hidden">No paid placements</span><span className="hidden sm:inline">Real data · No paid placements</span></> : <><span className="sm:hidden">Sin posiciones de pago</span><span className="hidden sm:inline">Datos reales · Sin posiciones de pago</span></>}
+              {safeLocale === "de"
+                ? <><span className="sm:hidden">Für Expats &amp; internationale Bewohner</span><span className="hidden sm:inline">Für Expats &amp; internationale Bewohner auf Mallorca</span></>
+                : safeLocale === "en"
+                ? <><span className="sm:hidden">For expats &amp; international residents</span><span className="hidden sm:inline">For expats &amp; international residents in Mallorca</span></>
+                : <><span className="sm:hidden">Para expats y residentes internacionales</span><span className="hidden sm:inline">Para expats y residentes internacionales en Mallorca</span></>}
             </div>
             <h1 className="font-display mx-auto max-w-4xl text-balance text-[2.6rem] font-black leading-[0.92] text-white sm:text-7xl lg:text-[88px]">
               {safeLocale === "de" ? (
-                <>Finde das <em className="italic text-[#00C37A]">Beste</em><br className="hidden sm:block" /> auf Mallorca.</>
+                <>Mallorca ohne<br className="hidden sm:block" /> <em className="italic text-[#00C37A]">Touristenfallen.</em></>
               ) : safeLocale === "en" ? (
-                <>Find the <em className="italic text-[#00C37A]">best</em><br className="hidden sm:block" /> in Mallorca.</>
+                <>Mallorca without<br className="hidden sm:block" /> <em className="italic text-[#00C37A]">tourist traps.</em></>
               ) : (
-                <>Encuentra lo <em className="italic text-[#00C37A]">mejor</em><br className="hidden sm:block" /> en Mallorca.</>
+                <>Mallorca sin<br className="hidden sm:block" /> <em className="italic text-[#00C37A]">tourist traps.</em></>
               )}
             </h1>
             <p className="mx-auto mt-6 max-w-[480px] text-base font-light leading-8 text-white/60 sm:text-[17px]">
               {safeLocale === "de"
-                ? "Jedes Unternehmen hat eine echte Google-Bewertungsschwelle überschritten. Rankings basieren auf Daten — keine Werbung, keine Gebühren."
+                ? "Rankings aus echten Google-Bewertungen — damit du die besten Orte findest, nicht die bestbezahlten. Plus verifizierte Profis, die Deutsch oder Englisch sprechen."
                 : safeLocale === "en"
-                ? "Every business cleared a real Google review threshold. Rankings built on data — not ads, not fees."
-                : "Cada negocio supera un umbral real de reseñas de Google. Rankings basados en datos — sin anuncios, sin cuotas."}
+                ? "Rankings from real Google reviews so you find the best places, not the best-paid ones. Plus verified professionals who actually speak your language."
+                : "Rankings basados en reseñas reales de Google para encontrar los mejores sitios, no los que más pagan. Más profesionales verificados que hablan inglés y alemán."}
             </p>
             <HomePlaceSearch locale={safeLocale} categories={[...publicCategorySlugs]} locations={homepageSearchLocations} />
           </div>
