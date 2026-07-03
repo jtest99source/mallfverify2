@@ -90,14 +90,19 @@ const cafeListingSignals = [
   "croissant",
   "desayuno",
   "forn",
-  "gelat",
-  "gelateria",
-  "heladeria",
-  "ice cream",
   "panaderia",
   "pasteleria",
   "pastry",
   "specialty coffee"
+];
+
+const iceCreamExclusionSignals = [
+  "gelateria",
+  "gelat",
+  "heladeria",
+  "helado",
+  "ice cream",
+  "sorbet"
 ];
 
 const bakeryListingSignals = [
@@ -211,7 +216,10 @@ function businessMatchesListingCategory(row: Pick<BusinessRow, "category" | "nam
   );
 
   if (category === "restaurants") {
-    if (row.category === "restaurant") return true;
+    if (row.category === "restaurant") {
+      if (hasListingSignal(signalText, iceCreamExclusionSignals)) return false;
+      return true;
+    }
     if (row.category !== "bar" && row.category !== "cafe" && row.category !== "beach-club") return false;
     return hasListingSignal(signalText, restaurantListingSignals);
   }
