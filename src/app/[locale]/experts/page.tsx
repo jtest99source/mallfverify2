@@ -388,7 +388,7 @@ export default async function ExpertsPage({ params }: { params: Promise<{ locale
   return (
     <main className="bg-[#040D1A] text-white">
       {/* ── HERO ── */}
-      <section className="border-b border-white/[0.08] bg-[#07101F] px-4 pb-14 pt-14 sm:px-6 sm:pt-20 lg:px-8">
+      <section className="px-4 pb-14 pt-14 sm:px-6 sm:pt-20 lg:px-8">
         <div className="mx-auto max-w-4xl text-center">
           <p className="inline-flex items-center gap-2 text-[11px] font-black uppercase tracking-[0.18em] text-[#00C37A]">
             <IconShieldCheck size={13} stroke={2} />
@@ -404,7 +404,7 @@ export default async function ExpertsPage({ params }: { params: Promise<{ locale
       </section>
 
       {/* ── BUILDING STATE ── */}
-      <section className="border-b border-white/[0.08] px-4 py-14 sm:px-6 lg:px-8">
+      <section className="px-4 pb-14 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
           <span className="inline-flex items-center gap-2 rounded-full border border-[#00C37A]/30 bg-[#00C37A]/[0.07] px-3.5 py-1.5 text-[10px] font-black uppercase tracking-[0.15em] text-[#00C37A]">
             <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-[#00C37A]" />
@@ -451,7 +451,7 @@ export default async function ExpertsPage({ params }: { params: Promise<{ locale
       </section>
 
       {/* ── CRITERIA ── */}
-      <section className="border-t border-white/[0.08] px-4 py-14 sm:px-6 lg:px-8">
+      <section className="px-4 py-14 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
           <div>
             <p className="text-[11px] font-black uppercase tracking-[0.16em] text-[#00C37A]">{copy.criteriaEyebrow}</p>
@@ -470,7 +470,7 @@ export default async function ExpertsPage({ params }: { params: Promise<{ locale
       </section>
 
       {/* ── FAQ ── */}
-      <section className="border-t border-white/[0.08] px-4 py-14 sm:px-6 lg:px-8">
+      <section className="px-4 py-14 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl">
           <p className="text-center text-[11px] font-black uppercase tracking-[0.16em] text-[#00C37A]">FAQ</p>
           <h2 className="mt-2 text-center font-display text-3xl font-black leading-tight text-white sm:text-4xl">
