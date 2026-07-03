@@ -2,32 +2,16 @@ import Link from "next/link";
 import {
   IconBuildingEstate,
   IconChecklist,
-  IconExternalLink,
   IconHomeCheck,
-  IconLanguage,
-  IconMapPin,
-  IconPhone,
   IconScale,
   IconShieldCheck,
   IconSparkles,
-  IconTools,
-  IconWorld
 } from "@tabler/icons-react";
-import { ExpertHeroSearch } from "@/components/ExpertHeroSearch";
-import { ExpertsFilters } from "@/components/ExpertsFilters";
 import { JsonLd } from "@/components/JsonLd";
-import { RatingBadge } from "@/components/RatingBadge";
 import { generateSeoMetadata } from "@/lib/seo";
-import {
-  expertProfiles,
-  isExpertVerticalSlug,
-  type ExpertProfile,
-  type ExpertVerticalSlug
-} from "@/data/expertProfiles";
-import { LoadMoreExpertGrid } from "@/components/LoadMoreExpertGrid";
 import { isLocale, type Locale } from "@/lib/i18n";
 import { siteUrl } from "@/lib/data";
-import { createBreadcrumbSchema, createFAQSchema } from "@/lib/schema";
+import { createBreadcrumbSchema } from "@/lib/schema";
 
 const expertCopy = {
   es: {
@@ -35,84 +19,22 @@ const expertCopy = {
     metaDescription:
       "Abogados, estate agents, dentistas, médicos y profesionales en inglés y alemán para compradores, expats y residentes internacionales en Mallorca. Selección editorial, no pago por aparecer.",
     eyebrow: "Mallorca Verified Experts",
-    title: "Los profesionales que necesitas para vivir en Mallorca.",
+    title: "¿Buscas un profesional en Mallorca que hable tu idioma?",
     intro:
-      "Google Maps no te dice si un abogado ha cerrado 200 transacciones con compradores extranjeros, si habla inglés de verdad o si cubre tu zona. Cada perfil aquí va más allá del nombre y el teléfono: especialidades reales, idiomas confirmados y señales públicas verificables. Selección editorial, no pago por aparecer.",
-    primaryCta: "Buscar experto",
-    secondaryCta: "Cómo verificamos",
-    trustLine: "Sin posiciones de pago. Una ficha premium añade detalle — fotos, servicios, FAQ — pero nunca cambia la posición en el ranking.",
-    pillarsEyebrow: "Primeras verticales",
-    pillarsTitle: "Dónde empezamos",
-    pillarsIntro:
-      "Empezamos por los servicios donde hay más en juego: decisiones económicas importantes con mucha incertidumbre para residentes internacionales y compradores de vivienda.",
+      "Encontrar un médico, abogado o agente inmobiliario que hable inglés o alemán en Mallorca no debería ser tan difícil. Estamos construyendo el directorio de profesionales verificados más completo de la isla.",
+    buildingBadge: "En construcción",
+    buildingTitle: "Estamos verificando cada perfil",
+    buildingText:
+      "Contactamos directamente con cada profesional para confirmar idiomas, especialidades y experiencia con clientes internacionales. Sin perfiles de pago, sin listados genéricos. Si necesitas una recomendación ahora, escríbenos.",
+    buildingCta: "Escríbenos y te orientamos",
+    buildingCtaHref: "mailto:hola@mallorcaverified.com",
+    categoriesEyebrow: "Verticales en construcción",
+    categoriesTitle: "Qué estamos verificando",
+    comingSoonBadge: "Próximamente",
     criteriaEyebrow: "Cómo verificamos",
     criteriaTitle: "Qué incluye un perfil verificado",
     criteriaIntro:
       "Cada perfil va más allá de un nombre y un teléfono. Comprobamos qué hace realmente el profesional, a quién atiende y qué información pública lo respalda.",
-    ctaTitle: "¿Tienes un despacho, estudio o servicio profesional en Mallorca?",
-    ctaText:
-      "Podemos revisar cómo aparece tu negocio online y qué te falta para que clientes internacionales te encuentren más fácilmente.",
-    ctaButton: "Escríbenos",
-    viewVertical: "Ver vertical",
-    methodologyPath: "/es/metodologia",
-    categories: [
-      {
-        slug: "english-speaking-lawyers-mallorca",
-        icon: IconScale,
-        title: "Abogados y fiscalistas",
-        description:
-          "Si compras, vendes, heredas o tienes un conflicto legal en Mallorca, necesitas a alguien que entienda el sistema español y te lo explique sin tecnicismos. Estos tienen historial real con clientes internacionales."
-      },
-      {
-        slug: "architects-renovation-mallorca",
-        icon: IconBuildingEstate,
-        title: "Arquitectos y reformas",
-        description:
-          "Para reformar o construir en Mallorca sin las sorpresas habituales: licencias, vecinos, presupuestos que no se disparan. Estudios con experiencia demostrable en la isla."
-      },
-      {
-        slug: "property-managers-mallorca",
-        icon: IconHomeCheck,
-        title: "Property managers y relocation",
-        description:
-          "Alguien que gestione lo que no puedes gestionar desde lejos — mantenimiento, proveedores, incidencias, coordinación. Para propiedades en Mallorca sin presencia constante."
-      },
-      {
-        slug: "english-speaking-dentists-mallorca",
-        icon: IconShieldCheck,
-        title: "Dentistas",
-        description:
-          "Clínicas donde puedas describir el dolor en inglés, entender el presupuesto y no tener que traer traductor. Con pacientes internacionales habituales."
-      },
-      {
-        slug: "english-speaking-doctors-mallorca",
-        icon: IconShieldCheck,
-        title: "Médicos y clínicas privadas",
-        description:
-          "Médicos y centros privados donde el diagnóstico se explica en inglés y los tiempos de espera no son los de la sanidad pública. Orientados a pacientes internacionales y familias expat."
-      },
-      {
-        slug: "estate-agents-mallorca",
-        icon: IconBuildingEstate,
-        title: "Estate agents",
-        description:
-          "Agentes con track record demostrable en compradores extranjeros. No los que más publicidad tienen — los que más transacciones reales han cerrado con clientes internacionales."
-      },
-      {
-        slug: "mortgage-brokers-mallorca",
-        icon: IconChecklist,
-        title: "Mortgage brokers",
-        description:
-          "Brokers con experiencia real en hipotecas para no residentes en España — una categoría con requisitos, plazos y bancos distintos a los de cualquier otro país europeo."
-      },
-      {
-        slug: "aesthetic-medicine-mallorca",
-        icon: IconSparkles,
-        title: "Medicina estética",
-        description:
-          "Clínicas donde puedas discutir el tratamiento en inglés o alemán, entender exactamente qué se va a hacer y no tener que adivinar precios ni resultados."
-      }
-    ],
     criteria: [
       "Idiomas: inglés, alemán, español u otros — confirmados, no asumidos.",
       "Especialidades: qué hace realmente el profesional, no una descripción genérica.",
@@ -135,107 +57,93 @@ const expertCopy = {
         question: "¿Se puede pagar para aparecer o subir posiciones?",
         answer:
           "No. Las posiciones no se compran. Una ficha premium puede añadir fotos, servicios, FAQ y datos prácticos — pero nunca cambia la posición en rankings ni en selecciones editoriales."
+      },
+      {
+        question: "¿Cuándo estará disponible?",
+        answer:
+          "Estamos verificando perfiles activamente. Si necesitas una recomendación ahora, escríbenos directamente a hola@mallorcaverified.com y te orientamos."
       }
     ],
-    allFilter: "Todos",
-    directoryEyebrow: "Directorio de profesionales",
-    resultsLabel: "profesionales verificados",
-    sortLabel: "Ordenar:",
-    sortByReviews: "Más reseñas",
-    sortByRating: "Mejor valoración",
-    sortByName: "A-Z",
-    languageLabel: "Idioma",
-    labels: {
-      languages: "Idiomas",
-      specialties: "Especialidades",
-      website: "Web",
-      phone: "Teléfono",
-      details: "Ver ficha"
-    }
-  },
-  en: {
-    metaTitle: "Experts in Mallorca for buyers, expats and international residents | Mallorca Verified",
-    metaDescription:
-      "Lawyers, estate agents, dentists, doctors and English and German-speaking professionals for buyers, expats and international residents in Mallorca. Editorial selection, not paid placement.",
-    eyebrow: "Mallorca Verified Experts",
-    title: "The professionals you need for life in Mallorca.",
-    intro:
-      "Google Maps won't tell you if a lawyer has closed 200 transactions for foreign buyers, whether they genuinely speak English, or if they cover your area. Every profile here goes beyond a name and phone number: real specialisms, confirmed languages and verifiable public signals. Editorial selection, not paid placement.",
-    primaryCta: "Find an expert",
-    secondaryCta: "How we verify",
-    trustLine: "No paid placements. A premium profile adds detail — photos, services, FAQ — but never changes ranking position.",
-    pillarsEyebrow: "First verticals",
-    pillarsTitle: "Where we start",
-    pillarsIntro:
-      "We start with the services where the stakes are highest: important financial decisions with a lot of uncertainty for international residents and property buyers.",
-    criteriaEyebrow: "How we verify",
-    criteriaTitle: "What a verified expert profile includes",
-    criteriaIntro:
-      "Each profile goes beyond a name and a phone number. We check what the professional actually does, who they serve and what public information supports them.",
-    ctaTitle: "Do you run a law firm, architecture studio or professional service in Mallorca?",
-    ctaText:
-      "We can review how your business appears online and what would make it easier for international clients to find and trust you.",
-    ctaButton: "Get in touch",
-    viewVertical: "Explore vertical",
-    methodologyPath: "/en/methodology",
     categories: [
       {
         slug: "english-speaking-lawyers-mallorca",
         icon: IconScale,
-        title: "Lawyers and tax advisors",
+        title: "Abogados y fiscalistas",
         description:
-          "If you're buying, selling, inheriting or dealing with a legal issue in Mallorca, you need someone who understands Spanish law and explains it without jargon. These have a real track record with international clients."
+          "Si compras, vendes, heredas o tienes un conflicto legal en Mallorca, necesitas a alguien que entienda el sistema español y te lo explique sin tecnicismos."
       },
       {
         slug: "architects-renovation-mallorca",
         icon: IconBuildingEstate,
-        title: "Architects and renovation",
+        title: "Arquitectos y reformas",
         description:
-          "For renovating or building in Mallorca without the usual surprises: permits, neighbours, budgets that don't spiral. Studios with demonstrable experience on the island."
+          "Para reformar o construir en Mallorca sin las sorpresas habituales: licencias, vecinos, presupuestos que no se disparan."
       },
       {
         slug: "property-managers-mallorca",
         icon: IconHomeCheck,
-        title: "Property managers and relocation",
+        title: "Property managers y relocation",
         description:
-          "Someone to handle what you can't manage from a distance — maintenance, contractors, incidents, coordination. For Mallorca properties without constant presence."
+          "Alguien que gestione lo que no puedes gestionar desde lejos — mantenimiento, proveedores, incidencias, coordinación."
       },
       {
         slug: "english-speaking-dentists-mallorca",
         icon: IconShieldCheck,
-        title: "Dentists",
+        title: "Dentistas",
         description:
-          "Clinics where you can describe your symptoms in English, understand the quote and not need a translator. With verifiable records of international patients."
+          "Clínicas donde puedas describir el dolor en inglés, entender el presupuesto y no tener que traer traductor."
       },
       {
         slug: "english-speaking-doctors-mallorca",
         icon: IconShieldCheck,
-        title: "Doctors and private clinics",
+        title: "Médicos y clínicas privadas",
         description:
-          "Private doctors and clinics where the diagnosis is explained in English and waiting times are not those of the public system. Focused on international patients and expat families."
+          "Médicos y centros privados donde el diagnóstico se explica en inglés y los tiempos de espera no son los de la sanidad pública."
       },
       {
         slug: "estate-agents-mallorca",
         icon: IconBuildingEstate,
         title: "Estate agents",
         description:
-          "Agents with demonstrable track records with foreign buyers. Not the ones with the most advertising — the ones who have closed the most real transactions with international clients."
+          "Agentes con track record demostrable en compradores extranjeros. No los que más publicidad tienen — los que más transacciones reales han cerrado."
       },
       {
         slug: "mortgage-brokers-mallorca",
         icon: IconChecklist,
         title: "Mortgage brokers",
         description:
-          "Brokers with real experience in non-resident mortgages in Spain — a category with different requirements, timelines and banks from anywhere else in Europe."
+          "Brokers con experiencia real en hipotecas para no residentes en España — requisitos, plazos y bancos distintos a cualquier otro país europeo."
       },
       {
         slug: "aesthetic-medicine-mallorca",
         icon: IconSparkles,
-        title: "Aesthetic medicine",
+        title: "Medicina estética",
         description:
-          "Clinics where you can discuss treatment in English or German, understand exactly what will be done and not have to guess at prices or results."
+          "Clínicas donde puedas discutir el tratamiento en inglés o alemán y entender exactamente qué se va a hacer."
       }
-    ],
+    ]
+  },
+  en: {
+    metaTitle: "Experts in Mallorca for buyers, expats and international residents | Mallorca Verified",
+    metaDescription:
+      "Lawyers, estate agents, dentists, doctors and English and German-speaking professionals for buyers, expats and international residents in Mallorca. Editorial selection, not paid placement.",
+    eyebrow: "Mallorca Verified Experts",
+    title: "Looking for a professional in Mallorca who speaks your language?",
+    intro:
+      "Finding a doctor, lawyer or estate agent who speaks English or German in Mallorca shouldn't be this hard. We're building the most complete directory of verified professionals on the island.",
+    buildingBadge: "Coming soon",
+    buildingTitle: "We're verifying every profile",
+    buildingText:
+      "We contact each professional directly to confirm languages, specialisms and track record with international clients. No paid listings, no generic directories. If you need a recommendation now, get in touch.",
+    buildingCta: "Get in touch",
+    buildingCtaHref: "mailto:hola@mallorcaverified.com",
+    categoriesEyebrow: "Verticals in progress",
+    categoriesTitle: "What we're verifying",
+    comingSoonBadge: "Coming soon",
+    criteriaEyebrow: "How we verify",
+    criteriaTitle: "What a verified expert profile includes",
+    criteriaIntro:
+      "Each profile goes beyond a name and a phone number. We check what the professional actually does, who they serve and what public information supports them.",
     criteria: [
       "Languages: English, German, Spanish or others — confirmed, not assumed.",
       "Specialisms: what the professional actually does, not a generic description.",
@@ -258,107 +166,93 @@ const expertCopy = {
         question: "Can professionals pay to appear or move up?",
         answer:
           "No. Positions cannot be bought. A premium profile can add photos, services, FAQ and practical details — but it never changes ranking position or editorial selection."
+      },
+      {
+        question: "When will profiles be available?",
+        answer:
+          "We're actively verifying profiles. If you need a recommendation now, write to us directly at hola@mallorcaverified.com and we'll point you in the right direction."
       }
     ],
-    allFilter: "All",
-    directoryEyebrow: "Expert directory",
-    resultsLabel: "verified professionals",
-    sortLabel: "Sort:",
-    sortByReviews: "Most reviewed",
-    sortByRating: "Highest rated",
-    sortByName: "A-Z",
-    languageLabel: "Language",
-    labels: {
-      languages: "Languages",
-      specialties: "Specialisms",
-      website: "Website",
-      phone: "Phone",
-      details: "View profile"
-    }
+    categories: [
+      {
+        slug: "english-speaking-lawyers-mallorca",
+        icon: IconScale,
+        title: "Lawyers and tax advisors",
+        description:
+          "If you're buying, selling, inheriting or dealing with a legal issue in Mallorca, you need someone who understands Spanish law and explains it without jargon."
+      },
+      {
+        slug: "architects-renovation-mallorca",
+        icon: IconBuildingEstate,
+        title: "Architects and renovation",
+        description:
+          "For renovating or building in Mallorca without the usual surprises: permits, neighbours, budgets that don't spiral."
+      },
+      {
+        slug: "property-managers-mallorca",
+        icon: IconHomeCheck,
+        title: "Property managers and relocation",
+        description:
+          "Someone to handle what you can't manage from a distance — maintenance, contractors, incidents, coordination."
+      },
+      {
+        slug: "english-speaking-dentists-mallorca",
+        icon: IconShieldCheck,
+        title: "Dentists",
+        description:
+          "Clinics where you can describe your symptoms in English, understand the quote and not need a translator."
+      },
+      {
+        slug: "english-speaking-doctors-mallorca",
+        icon: IconShieldCheck,
+        title: "Doctors and private clinics",
+        description:
+          "Private doctors and clinics where the diagnosis is explained in English and waiting times are not those of the public system."
+      },
+      {
+        slug: "estate-agents-mallorca",
+        icon: IconBuildingEstate,
+        title: "Estate agents",
+        description:
+          "Agents with demonstrable track records with foreign buyers. Not the ones with the most advertising — the ones who have closed the most real transactions."
+      },
+      {
+        slug: "mortgage-brokers-mallorca",
+        icon: IconChecklist,
+        title: "Mortgage brokers",
+        description:
+          "Brokers with real experience in non-resident mortgages in Spain — different requirements, timelines and banks from anywhere else in Europe."
+      },
+      {
+        slug: "aesthetic-medicine-mallorca",
+        icon: IconSparkles,
+        title: "Aesthetic medicine",
+        description:
+          "Clinics where you can discuss treatment in English or German and understand exactly what will be done."
+      }
+    ]
   },
   de: {
     metaTitle: "Experten auf Mallorca für Käufer, Expats und internationale Bewohner | Mallorca Verified",
     metaDescription:
       "Anwälte, Immobilienmakler, Zahnärzte, Ärzte und deutsch- und englischsprachige Profis für Käufer, Expats und internationale Bewohner auf Mallorca. Redaktionelle Auswahl, kein bezahltes Listing.",
     eyebrow: "Mallorca Verified Experts",
-    title: "Die Profis, die du für das Leben auf Mallorca brauchst.",
+    title: "Suchen Sie einen Fachmann auf Mallorca, der Ihre Sprache spricht?",
     intro:
-      "Google Maps sagt dir nicht, ob ein Anwalt 200 Transaktionen für ausländische Käufer abgeschlossen hat, ob er wirklich Englisch spricht oder ob er deine Region abdeckt. Jedes Profil hier geht über Name und Telefonnummer hinaus: echte Spezialisierungen, bestätigte Sprachen und überprüfbare öffentliche Signale. Redaktionelle Auswahl, kein Bezahlen für Sichtbarkeit.",
-    primaryCta: "Experten finden",
-    secondaryCta: "Wie wir prüfen",
-    trustLine: "Positionen können nicht gekauft werden. Premium-Profile verbessern die Information, nicht das Ranking.",
-    pillarsEyebrow: "Erste Bereiche",
-    pillarsTitle: "Womit wir starten",
-    pillarsIntro:
-      "Wir beginnen mit den Bereichen, bei denen am meisten auf dem Spiel steht: wichtige finanzielle Entscheidungen mit viel Unsicherheit für internationale Residenten und Immobilienkäufer.",
+      "Einen Arzt, Anwalt oder Immobilienmakler zu finden, der auf Mallorca Deutsch oder Englisch spricht, sollte nicht so schwer sein. Wir bauen das vollständigste Verzeichnis verifizierter Profis auf der Insel.",
+    buildingBadge: "Im Aufbau",
+    buildingTitle: "Wir verifizieren jedes Profil",
+    buildingText:
+      "Wir kontaktieren jeden Fachmann direkt, um Sprachen, Spezialisierungen und Erfahrung mit internationalen Kunden zu bestätigen. Keine bezahlten Listings, keine generischen Verzeichnisse. Wenn Sie jetzt eine Empfehlung brauchen, schreiben Sie uns.",
+    buildingCta: "Schreib uns",
+    buildingCtaHref: "mailto:hola@mallorcaverified.com",
+    categoriesEyebrow: "Bereiche im Aufbau",
+    categoriesTitle: "Was wir verifizieren",
+    comingSoonBadge: "Demnächst",
     criteriaEyebrow: "Wie wir prüfen",
     criteriaTitle: "Was ein verifiziertes Expertenprofil enthält",
     criteriaIntro:
       "Jedes Profil geht über Name und Telefonnummer hinaus. Wir prüfen, was der Experte wirklich macht, wem er hilft und welche öffentlichen Informationen ihn stützen.",
-    ctaTitle: "Führst du eine Kanzlei, ein Studio oder einen professionellen Service auf Mallorca?",
-    ctaText:
-      "Wir können prüfen, wie dein Unternehmen online erscheint und was fehlt, damit internationale Kunden dich leichter finden und kontaktieren.",
-    ctaButton: "Schreib uns",
-    viewVertical: "Bereich ansehen",
-    methodologyPath: "/de/methodik",
-    categories: [
-      {
-        slug: "english-speaking-lawyers-mallorca",
-        icon: IconScale,
-        title: "Anwälte und Steuerberater",
-        description:
-          "Spezialisten für Immobilienkauf, Due Diligence, Steuern für Nicht-Residenten, Erbschaften, Verträge und Beratung für internationale Kunden."
-      },
-      {
-        slug: "architects-renovation-mallorca",
-        icon: IconBuildingEstate,
-        title: "Architekten und Renovierung",
-        description:
-          "Architekturbüros, Interior Designer, Bauunternehmen und technische Experten für Renovierung, Legalisierung oder Verbesserung einer Immobilie."
-      },
-      {
-        slug: "property-managers-mallorca",
-        icon: IconHomeCheck,
-        title: "Property Manager und Relocation",
-        description:
-          "Services für den Umzug nach Mallorca, Immobilienverwaltung, Villenpflege, Koordination von Dienstleistern und den Alltag auf der Insel."
-      },
-      {
-        slug: "english-speaking-dentists-mallorca",
-        icon: IconShieldCheck,
-        title: "Zahnärzte",
-        description:
-          "Zahnkliniken, Kieferorthopädie und Notfall-Zahnärzte für Expats, Familien und internationale Residenten."
-      },
-      {
-        slug: "english-speaking-doctors-mallorca",
-        icon: IconShieldCheck,
-        title: "Ärzte und Privatkliniken",
-        description:
-          "Ärztezentren, GP-Praxen und private Kliniken für internationale Patienten auf Mallorca."
-      },
-      {
-        slug: "estate-agents-mallorca",
-        icon: IconBuildingEstate,
-        title: "Estate Agents",
-        description:
-          "Immobilienagenturen mit soliden öffentlichen Signalen für ausländische Käufer, Verkäufer und Investoren."
-      },
-      {
-        slug: "mortgage-brokers-mallorca",
-        icon: IconChecklist,
-        title: "Mortgage Broker",
-        description:
-          "Hypothekenbroker und Finanzierungsberater für internationale Käufer und Nicht-Residenten auf Mallorca."
-      },
-      {
-        slug: "aesthetic-medicine-mallorca",
-        icon: IconSparkles,
-        title: "Ästhetische Medizin",
-        description:
-          "Kliniken für ästhetische Medizin, Dermatologie und Schönheitschirurgie mit Betreuung auf Englisch und/oder Deutsch auf Mallorca."
-      }
-    ],
     criteria: [
       "Echte Servicesprachen: Deutsch, Englisch, Spanisch oder weitere — bestätigt, nicht angenommen.",
       "Konkrete Spezialisierungen statt allgemeiner Beschreibungen.",
@@ -381,76 +275,73 @@ const expertCopy = {
         question: "Kann man für bessere Positionen bezahlen?",
         answer:
           "Nein. Positionen können nicht gekauft werden. Ein Premium-Profil kann Fotos, Services, FAQ und praktische Details ergänzen — ändert aber nie die Ranking-Position oder redaktionelle Auswahl."
+      },
+      {
+        question: "Wann sind die Profile verfügbar?",
+        answer:
+          "Wir verifizieren aktiv Profile. Wenn Sie jetzt eine Empfehlung brauchen, schreiben Sie uns direkt an hola@mallorcaverified.com."
       }
     ],
-    allFilter: "Alle",
-    directoryEyebrow: "Expertenverzeichnis",
-    resultsLabel: "verifizierte Profis",
-    sortLabel: "Sortieren:",
-    sortByReviews: "Meistbewertet",
-    sortByRating: "Bestbewertet",
-    sortByName: "A-Z",
-    languageLabel: "Sprache",
-    labels: {
-      languages: "Sprachen",
-      specialties: "Spezialisierungen",
-      website: "Website",
-      phone: "Telefon",
-      details: "Profil ansehen"
-    }
+    categories: [
+      {
+        slug: "english-speaking-lawyers-mallorca",
+        icon: IconScale,
+        title: "Anwälte und Steuerberater",
+        description:
+          "Spezialisten für Immobilienkauf, Due Diligence, Steuern für Nicht-Residenten, Erbschaften und internationale Kunden."
+      },
+      {
+        slug: "architects-renovation-mallorca",
+        icon: IconBuildingEstate,
+        title: "Architekten und Renovierung",
+        description:
+          "Architekturbüros und Bauunternehmen für Renovierung oder Neubau auf Mallorca ohne die üblichen Überraschungen."
+      },
+      {
+        slug: "property-managers-mallorca",
+        icon: IconHomeCheck,
+        title: "Property Manager und Relocation",
+        description:
+          "Services für den Umzug nach Mallorca, Immobilienverwaltung und Koordination von Dienstleistern."
+      },
+      {
+        slug: "english-speaking-dentists-mallorca",
+        icon: IconShieldCheck,
+        title: "Zahnärzte",
+        description:
+          "Zahnkliniken für Expats und internationale Residenten, die auf Deutsch oder Englisch betreuen."
+      },
+      {
+        slug: "english-speaking-doctors-mallorca",
+        icon: IconShieldCheck,
+        title: "Ärzte und Privatkliniken",
+        description:
+          "Private Ärztezentren und Kliniken für internationale Patienten auf Mallorca."
+      },
+      {
+        slug: "estate-agents-mallorca",
+        icon: IconBuildingEstate,
+        title: "Estate Agents",
+        description:
+          "Immobilienagenturen mit nachweisbarer Erfahrung mit ausländischen Käufern, Verkäufern und Investoren."
+      },
+      {
+        slug: "mortgage-brokers-mallorca",
+        icon: IconChecklist,
+        title: "Mortgage Broker",
+        description:
+          "Hypothekenbroker für internationale Käufer und Nicht-Residenten — mit Erfahrung in den besonderen Anforderungen Spaniens."
+      },
+      {
+        slug: "aesthetic-medicine-mallorca",
+        icon: IconSparkles,
+        title: "Ästhetische Medizin",
+        description:
+          "Kliniken für ästhetische Medizin mit Betreuung auf Englisch und/oder Deutsch auf Mallorca."
+      }
+    ]
   }
 } as const;
-
-function localizedList(list: Partial<Record<Locale, string[]>>, locale: Locale): string[] {
-  return list[locale] ?? list.es ?? list.en ?? list.de ?? [];
-}
-
-function ExpertCarouselCard({
-  profile,
-  position,
-  locale,
-  labels
-}: {
-  profile: ExpertProfile;
-  position: number;
-  locale: Locale;
-  labels: { languages: string; specialties: string; website: string; phone: string; details: string };
-}) {
-  const specialties = localizedList(profile.specialties ?? {}, locale).slice(0, 2);
-  return (
-    <Link
-      href={`/${locale}/experts/${profile.verticalSlug}/${profile.slug}`}
-      className="group flex w-[68vw] max-w-[240px] shrink-0 snap-start flex-col rounded-sm border border-white/[0.10] bg-[#0C1A2E] p-4 transition-all hover:border-[#00C37A]/40 sm:w-[220px]"
-    >
-      <div className="flex items-center justify-between gap-2">
-        <span className="inline-flex h-6 items-center justify-center rounded-sm border border-white/[0.10] bg-[#040D1A] px-2 text-[10px] font-black text-[#00C37A]">
-          #{position}
-        </span>
-        <RatingBadge rating={profile.rating} reviewsCount={profile.reviewsCount} locale={locale} compact />
-      </div>
-      <h3 className="mt-3 text-sm font-black leading-tight text-white">{profile.name}</h3>
-      <div className="mt-2 flex flex-wrap gap-1">
-        {profile.languages.map((lang) => (
-          <span key={lang} className="rounded-full border border-white/[0.12] px-2 py-0.5 text-[10px] font-bold text-white/70">
-            {lang}
-          </span>
-        ))}
-      </div>
-      {specialties.length > 0 && (
-        <div className="mt-1.5 flex flex-wrap gap-1">
-          {specialties.map((s) => (
-            <span key={s} className="rounded-full border border-white/[0.06] bg-white/[0.03] px-2 py-0.5 text-[10px] text-white/50">
-              {s}
-            </span>
-          ))}
-        </div>
-      )}
-      <span className="mt-auto pt-3 text-[10px] font-black uppercase tracking-[0.1em] text-[#00C37A]">
-        {labels.details} →
-      </span>
-    </Link>
-  );
-}
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -464,68 +355,17 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   });
 }
 
-export default async function ExpertsPage({
-  params,
-  searchParams
-}: {
-  params: Promise<{ locale: string }>;
-  searchParams: Promise<{ v?: string; s?: string; l?: string; q?: string }>;
-}) {
-  const [{ locale }, { v, s, l, q }] = await Promise.all([params, searchParams]);
+export default async function ExpertsPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
   const safeLocale = (isLocale(locale) ? locale : "es") as Locale;
   const copy = expertCopy[safeLocale];
   const pageUrl = `${siteUrl}/${safeLocale}/experts`;
-  const activeVertical = isExpertVerticalSlug(v ?? "") ? (v as ExpertVerticalSlug) : null;
-  const sortKey = s === "rating" ? "rating" : s === "name" ? "name" : "reviews";
-  const langFilter = l === "English" || l === "Deutsch" ? l : null;
-  const query = (q ?? "").trim();
-  const normalizedQuery = query
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "")
-    .toLowerCase();
-  const allApproved = expertProfiles.filter((p) => p.status !== "hidden");
-  const displayedProfiles = (
-    activeVertical ? allApproved.filter((p) => p.verticalSlug === activeVertical) : allApproved
-  )
-    .filter((p) => !langFilter || p.languages.includes(langFilter))
-    .filter((p) => {
-      if (!normalizedQuery) return true;
-      const category = copy.categories.find((item) => item.slug === p.verticalSlug);
-      const haystack = [
-        p.name,
-        p.location,
-        category?.title,
-        p.languages.join(" "),
-        localizedList(p.specialties, safeLocale).join(" "),
-        p.editorialNote?.[safeLocale]
-      ]
-        .filter(Boolean)
-        .join(" ")
-        .normalize("NFD")
-        .replace(/[\u0300-\u036f]/g, "")
-        .toLowerCase();
-      return haystack.includes(normalizedQuery);
-    })
-    .sort((a, b) => {
-      if (sortKey === "rating") return (b.rating ?? 0) - (a.rating ?? 0);
-      if (sortKey === "name") return a.name.localeCompare(b.name);
-      return (b.reviewsCount ?? 0) - (a.reviewsCount ?? 0);
-    });
-  const VERTICAL_COLORS: Record<string, string> = {
-    "english-speaking-lawyers-mallorca":  "#00C37A",
-    "architects-renovation-mallorca":     "#00C37A",
-    "property-managers-mallorca":         "#00C37A",
-    "english-speaking-dentists-mallorca": "#00C37A",
-    "english-speaking-doctors-mallorca":  "#00C37A",
-    "estate-agents-mallorca":             "#00C37A",
-    "mortgage-brokers-mallorca":          "#00C37A",
-    "aesthetic-medicine-mallorca":        "#00C37A",
-  };
-  const verticalColor = (slug: string) => VERTICAL_COLORS[slug] ?? "#0A0A0A";
+
   const breadcrumbs = createBreadcrumbSchema([
     { name: "Mallorca Verified", url: `${siteUrl}/${safeLocale}` },
     { name: "Experts", url: pageUrl }
   ]);
+
   const collectionSchema = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
@@ -534,7 +374,6 @@ export default async function ExpertsPage({
     description: copy.metaDescription,
     url: pageUrl,
     inLanguage: safeLocale,
-    about: copy.categories.map((category) => category.title),
     mainEntity: {
       "@type": "ItemList",
       itemListElement: copy.categories.map((category, index) => ({
@@ -546,137 +385,75 @@ export default async function ExpertsPage({
     }
   };
 
-  const hasActiveSearch = !!(query || activeVertical || langFilter);
-
   return (
     <main className="bg-[#040D1A] text-white">
       {/* ── HERO ── */}
-      <section className="border-b border-white/[0.08] bg-[#07101F] px-4 pb-12 pt-14 sm:px-6 sm:pt-20 lg:px-8">
+      <section className="border-b border-white/[0.08] bg-[#07101F] px-4 pb-14 pt-14 sm:px-6 sm:pt-20 lg:px-8">
         <div className="mx-auto max-w-4xl text-center">
           <p className="inline-flex items-center gap-2 text-[11px] font-black uppercase tracking-[0.18em] text-[#00C37A]">
             <IconShieldCheck size={13} stroke={2} />
             {copy.eyebrow}
           </p>
-          <h1 className="mt-4 font-display text-4xl font-black leading-[0.96] text-white sm:text-6xl lg:text-7xl">
-            {safeLocale === "de"
-              ? "Die richtigen Experten für dein Leben auf Mallorca."
-              : safeLocale === "en"
-              ? "The right experts for life in Mallorca."
-              : "Los expertos que necesitas para vivir en Mallorca."}
+          <h1 className="mt-4 font-display text-4xl font-black leading-[1.05] text-white sm:text-6xl lg:text-7xl">
+            {copy.title}
           </h1>
           <p className="mx-auto mt-5 max-w-xl text-base leading-8 text-white/55">
-            {safeLocale === "de"
-              ? "Anwälte, Zahnärzte, Estate Agents und mehr — ausgewählt nach Daten, nicht nach Zahlung."
-              : safeLocale === "en"
-              ? "Lawyers, dentists, estate agents and more — selected on data, not payment."
-              : "Abogados, dentistas, estate agents y más — seleccionados por datos, no por pago."}
+            {copy.intro}
           </p>
-          <div className="mx-auto mt-8 max-w-2xl">
-            <ExpertHeroSearch
-              locale={safeLocale}
-              categories={copy.categories.map(({ slug, title }) => ({ slug, title }))}
-              initialQuery={query}
-              initialVertical={activeVertical}
-              initialLanguage={langFilter}
-            />
+        </div>
+      </section>
+
+      {/* ── BUILDING STATE ── */}
+      <section className="border-b border-white/[0.08] px-4 py-14 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-3xl text-center">
+          <span className="inline-flex items-center gap-2 rounded-full border border-[#00C37A]/30 bg-[#00C37A]/[0.07] px-3.5 py-1.5 text-[10px] font-black uppercase tracking-[0.15em] text-[#00C37A]">
+            <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-[#00C37A]" />
+            {copy.buildingBadge}
+          </span>
+          <h2 className="mt-5 text-2xl font-black leading-tight text-white sm:text-3xl">
+            {copy.buildingTitle}
+          </h2>
+          <p className="mx-auto mt-4 max-w-lg text-sm leading-7 text-white/55">
+            {copy.buildingText}
+          </p>
+          <Link
+            href={copy.buildingCtaHref}
+            className="mt-7 inline-flex items-center gap-2 rounded-sm bg-[#00C37A] px-6 py-3 text-[11px] font-black uppercase tracking-[0.1em] text-[#0A0A0A] transition-colors hover:bg-[#00a866]"
+          >
+            {copy.buildingCta} →
+          </Link>
+        </div>
+      </section>
+
+      {/* ── CATEGORIES GRID ── */}
+      <section className="px-4 py-14 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl">
+          <p className="text-[11px] font-black uppercase tracking-[0.16em] text-[#00C37A]">{copy.categoriesEyebrow}</p>
+          <h2 className="mt-2 text-3xl font-black text-white sm:text-4xl">{copy.categoriesTitle}</h2>
+          <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            {copy.categories.map((cat) => (
+              <div
+                key={cat.slug}
+                className="flex flex-col rounded-sm border border-white/[0.08] bg-[#0C1A2E] p-5"
+              >
+                <div className="flex items-center justify-between gap-2">
+                  <cat.icon size={18} stroke={1.5} className="text-[#00C37A]" />
+                  <span className="rounded-full border border-white/[0.10] px-2 py-0.5 text-[9px] font-black uppercase tracking-[0.1em] text-white/30">
+                    {copy.comingSoonBadge}
+                  </span>
+                </div>
+                <h3 className="mt-3 text-sm font-black leading-tight text-white">{cat.title}</h3>
+                <p className="mt-2 text-[12px] leading-5 text-white/45">{cat.description}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* ── DIRECTORY ── */}
-      <section className="px-4 pb-10 pt-8 sm:px-6 sm:pt-10 lg:px-8 lg:py-12">
-        <div className="mx-auto max-w-7xl">
-          {hasActiveSearch ? (
-            <>
-              <ExpertsFilters
-                locale={safeLocale}
-                sortKey={sortKey}
-                langFilter={langFilter}
-                activeVertical={activeVertical}
-                query={query}
-                count={displayedProfiles.length}
-                categories={copy.categories.map(({ slug, title }) => ({ slug, title }))}
-                copy={{
-                  sortLabel: copy.sortLabel,
-                  sortByReviews: copy.sortByReviews,
-                  sortByRating: copy.sortByRating,
-                  sortByName: copy.sortByName,
-                  languageLabel: copy.languageLabel,
-                  allFilter: copy.allFilter,
-                  resultsLabel: copy.resultsLabel,
-                  searchLabel: safeLocale === "de" ? "Suche" : safeLocale === "en" ? "Search" : "Buscar",
-                  searchPlaceholder: safeLocale === "de" ? "Name, Ort oder Spezialgebiet..." : safeLocale === "en" ? "Name, area or specialism..." : "Nombre, zona o especialidad...",
-                  categoryLabel: safeLocale === "de" ? "Bereich" : safeLocale === "en" ? "Vertical" : "Vertical",
-                  clearFilters: safeLocale === "de" ? "Filter loeschen" : safeLocale === "en" ? "Clear filters" : "Limpiar filtros",
-                }}
-              />
-              <LoadMoreExpertGrid
-                profiles={displayedProfiles}
-                locale={safeLocale}
-                categories={copy.categories.map(({ slug, title }) => ({ slug, title }))}
-                verticalColors={VERTICAL_COLORS}
-                activeVertical={activeVertical}
-                labels={copy.labels as { languages: string; specialties: string; website: string; phone: string; details: string }}
-              />
-            </>
-          ) : (
-            <div className="space-y-0 py-2">
-              {copy.categories.map((cat) => {
-                const catProfiles = allApproved
-                  .filter((p) => p.verticalSlug === cat.slug)
-                  .sort((a, b) => (b.reviewsCount ?? 0) - (a.reviewsCount ?? 0))
-                  .slice(0, 5);
-                if (!catProfiles.length) return null;
-                return (
-                  <section key={cat.slug} className="border-t border-white/[0.08] py-6 first:border-t-0 first:pt-0">
-                    <div className="mb-4 flex items-end justify-between gap-4">
-                      <div>
-                        <p className="inline-flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.16em] text-[#00C37A] before:h-px before:w-4 before:bg-[#00C37A]">
-                          {cat.title}
-                        </p>
-                        <p className="mt-1 line-clamp-1 max-w-[46ch] text-[13px] text-white/40">{cat.description}</p>
-                      </div>
-                      <a
-                        href={`/${safeLocale}/experts?v=${cat.slug}`}
-                        className="hidden shrink-0 text-[12px] font-semibold tracking-[0.04em] text-white/40 transition-colors hover:text-[#00C37A] sm:inline-flex"
-                      >
-                        {safeLocale === "de" ? "Alle ansehen" : safeLocale === "en" ? "View all" : "Ver todos"} →
-                      </a>
-                    </div>
-                    <div className="-mx-4 overflow-x-auto px-4 pb-4 [scrollbar-width:none] sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8 [&::-webkit-scrollbar]:hidden">
-                      <div className="flex snap-x gap-3 pr-6">
-                        {catProfiles.map((profile, index) => (
-                          <ExpertCarouselCard
-                            key={profile.slug}
-                            profile={profile}
-                            position={index + 1}
-                            locale={safeLocale}
-                            labels={copy.labels as { languages: string; specialties: string; website: string; phone: string; details: string }}
-                          />
-                        ))}
-                        <a
-                          href={`/${safeLocale}/experts?v=${cat.slug}`}
-                          className="group flex w-[90px] shrink-0 snap-start flex-col items-center justify-center gap-2 rounded-sm border border-white/[0.08] bg-white/[0.02] text-center transition-all hover:border-[#00C37A]/40 hover:bg-white/[0.05]"
-                        >
-                          <span className="text-xl text-[#00C37A] transition-transform duration-200 group-hover:translate-x-1">→</span>
-                          <span className="text-[9px] font-black uppercase tracking-[0.1em] text-white/40 group-hover:text-[#00C37A]">
-                            {safeLocale === "de" ? "Alle" : safeLocale === "en" ? "All" : "Todos"}
-                          </span>
-                        </a>
-                      </div>
-                    </div>
-                  </section>
-                );
-              })}
-            </div>
-          )}
-        </div>
-      </section>
-
-      {/* ── CRITERIA + FAQ — no alternating backgrounds ── */}
-      <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-        <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
-          <div className="text-center lg:text-left">
+      {/* ── CRITERIA ── */}
+      <section className="border-t border-white/[0.08] px-4 py-14 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+          <div>
             <p className="text-[11px] font-black uppercase tracking-[0.16em] text-[#00C37A]">{copy.criteriaEyebrow}</p>
             <h2 className="mt-2 font-display text-3xl font-black leading-tight text-white sm:text-4xl">{copy.criteriaTitle}</h2>
             <p className="mt-5 text-sm leading-7 text-white/60">{copy.criteriaIntro}</p>
@@ -690,10 +467,15 @@ export default async function ExpertsPage({
             ))}
           </div>
         </div>
+      </section>
 
-        <div className="mx-auto mt-16 max-w-3xl">
+      {/* ── FAQ ── */}
+      <section className="border-t border-white/[0.08] px-4 py-14 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-3xl">
           <p className="text-center text-[11px] font-black uppercase tracking-[0.16em] text-[#00C37A]">FAQ</p>
-          <h2 className="mt-2 text-center font-display text-3xl font-black leading-tight text-white sm:text-4xl">{copy.faqs[0] ? (safeLocale === "de" ? "Häufige Fragen" : safeLocale === "en" ? "Frequently asked questions" : "Preguntas frecuentes") : ""}</h2>
+          <h2 className="mt-2 text-center font-display text-3xl font-black leading-tight text-white sm:text-4xl">
+            {safeLocale === "de" ? "Häufige Fragen" : safeLocale === "en" ? "Frequently asked questions" : "Preguntas frecuentes"}
+          </h2>
           <div className="mt-8 grid gap-3">
             {copy.faqs.map((item) => (
               <details key={item.question} className="group rounded-sm border border-white/[0.08]">
