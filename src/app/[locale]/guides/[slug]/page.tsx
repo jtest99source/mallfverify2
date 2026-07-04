@@ -8,7 +8,7 @@ import { getBusinessById, getGuideBySlug, getGuides } from "@/lib/repository";
 import { isLocale, type Locale } from "@/lib/i18n";
 import { createArticleSchema, createBreadcrumbSchema, createFAQSchema, createSimpleItemListSchema } from "@/lib/schema";
 import { generateSeoMetadata } from "@/lib/seo";
-import { t } from "@/lib/i18n-copy";
+import { categoryLabelForBusiness, t } from "@/lib/i18n-copy";
 import { getBusinessPublicName } from "@/lib/business-name-normalizer";
 import type { Business } from "@/types/business";
 import type { Guide } from "@/types/guide";
@@ -74,7 +74,7 @@ function HotelCard({ business, locale }: { business: Business; locale: Locale })
       />
       <div className="p-4">
         <p className="text-[9px] font-bold uppercase tracking-[0.14em] text-[#00C37A]">
-          {categoryConfigs[getCategorySlugFromBusiness(business.category)]?.singular}
+          {categoryLabelForBusiness(business.category, locale)}
         </p>
         <h3 className="mt-2 line-clamp-2 text-[15px] font-black leading-tight text-white">{getBusinessPublicName(business)}</h3>
         <p className="mt-1.5 text-[10px] font-semibold uppercase tracking-[0.08em] text-white/45">{business.city || business.area || "Mallorca"}</p>
@@ -232,10 +232,10 @@ export default async function GuideDetailPage({ params }: { params: Promise<{ lo
                 {sectionHotels.length > 0 && (
                   <div className="mt-7">
                     <p className="text-[9px] font-bold uppercase tracking-[0.14em] text-[#00C37A]">
-                      {categoryConfigs[getCategorySlugFromBusiness(sectionHotels[0].category)]?.label ?? copy.guides.recommended}
+                      {copy.guides.recommended}
                     </p>
                     <div className="mt-3 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                      {sectionHotels.slice(0, 3).map((business) => (
+                      {sectionHotels.slice(0, 6).map((business) => (
                         <HotelCard key={business.id} business={business} locale={safeLocale} />
                       ))}
                     </div>

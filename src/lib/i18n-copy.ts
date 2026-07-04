@@ -223,7 +223,7 @@ export const uiCopy = {
       allPlaces: "All",
       results: "results",
       noResults: "No results with these filters. Try another location or type.",
-      sort: { ratio: "Best overall", rating: "Best rating", reviews: "Most reviews", hidden: "Hidden gems" }
+      sort: { ratio: "Best overall", rating: "Highest rating", reviews: "Most reviews", hidden: "Hidden gems" }
     },
     business: {
       hiddenGem: "Hidden gem",

@@ -44,19 +44,22 @@ const loadMoreCopy = {
 
 const sortHelpCopy = {
   es: {
-    title: "Por qué este orden",
-    text: "Mejor equilibrio combina valoración y volumen de reseñas para que un 5,0 con muy pocas opiniones no pase por delante de un sitio más probado.",
-    link: "Ver metodología"
+    ratio:   { text: "Equilibra valoración y reseñas de Google. Un 4,3★ con 1.700 reseñas puede superar a un 5,0★ con 30.", link: "Ver metodología" },
+    rating:  { text: "Ordenado por estrella media de Google, de mayor a menor.", link: null },
+    reviews: { text: "Ordenado por número de reseñas de Google, de más a menos.", link: null },
+    hidden:  { text: "Alta valoración pero pocas reseñas — negocios por descubrir.", link: null }
   },
   en: {
-    title: "Why this order",
-    text: "Best overall balances rating and review volume, so a tiny 5.0 does not outrank a broadly trusted place by default.",
-    link: "Read methodology"
+    ratio:   { text: "Balances Google rating and review volume. A 4.3★ with 1,700 reviews can outrank a 5.0★ with only 30.", link: "Read methodology" },
+    rating:  { text: "Sorted by Google star rating, highest first.", link: null },
+    reviews: { text: "Sorted by number of Google reviews, most reviewed first.", link: null },
+    hidden:  { text: "Highly rated but not yet widely reviewed — hidden gems worth exploring.", link: null }
   },
   de: {
-    title: "Warum diese Reihenfolge",
-    text: "Beste Gesamtwertung kombiniert Bewertung und Anzahl der Rezensionen, damit kleine 5,0-Profile nicht automatisch vor bewährten Orten stehen.",
-    link: "Methodik lesen"
+    ratio:   { text: "Wägt Google-Bewertung und Rezensionsanzahl ab. Ein 4,3★ mit 1.700 kann einen 5,0★ mit 30 übertreffen.", link: "Methodik lesen" },
+    rating:  { text: "Nach Google-Sternebewertung sortiert, höchste zuerst.", link: null },
+    reviews: { text: "Nach Anzahl der Google-Rezensionen sortiert, meiste zuerst.", link: null },
+    hidden:  { text: "Hoch bewertet, aber noch wenig bekannt — Geheimtipps.", link: null }
   }
 } as const;
 
@@ -292,7 +295,7 @@ export function TopRankingExplorer({
   const isCappedResultSet = businesses.length >= CAPPED_RESULT_THRESHOLD && filtered.length >= CAPPED_RESULT_THRESHOLD;
   const totalCount = `${filtered.length.toLocaleString(numberLocale(locale))}${isCappedResultSet ? "+" : ""}`;
   const loadCopy = loadMoreCopy[locale];
-  const sortHelp = sortHelpCopy[locale];
+  const sortHelp = sortHelpCopy[locale][sort];
   const scopedSearchPlaceholder =
     locale === "de"
       ? `${getCategoryCopy(category, locale).label} nach Name oder Ort suchen...`
@@ -344,10 +347,16 @@ export function TopRankingExplorer({
         </div>
         <div className="mt-2 flex items-center justify-between">
           <p className="text-[11px] font-black uppercase tracking-[0.1em] text-white/55">{totalCount} {copy.filters.results}</p>
-          <Link href={methodologyPath(locale)} className="inline-flex items-center gap-1 text-[10px] font-black uppercase tracking-[0.1em] text-[#00C37A]">
-            <IconInfoCircle size={13} stroke={2} />
-            {sortHelp.link}
-          </Link>
+          {sortHelp.link && (
+            <Link href={methodologyPath(locale)} className="inline-flex items-center gap-1 text-[10px] font-black uppercase tracking-[0.1em] text-[#00C37A]">
+              <IconInfoCircle size={13} stroke={2} />
+              {sortHelp.link}
+            </Link>
+          )}
+        </div>
+        <div className="mt-2 flex items-start gap-1.5 rounded-sm border border-white/[0.07] bg-white/[0.03] px-3 py-2">
+          <IconInfoCircle size={12} stroke={2} className="mt-0.5 shrink-0 text-white/30" />
+          <p className="text-[11px] leading-4 text-white/40">{sortHelp.text}</p>
         </div>
       </div>
 
@@ -403,10 +412,13 @@ export function TopRankingExplorer({
                 </select>
               </label>
               <div className="ml-auto flex items-center gap-2 text-[11px] text-white/30">
+                <IconInfoCircle size={13} stroke={2} className="shrink-0 text-white/25" />
                 <span>{sortHelp.text}</span>
-                <Link href={methodologyPath(locale)} className="text-white/45 underline underline-offset-2 hover:text-[#00C37A]">
-                  {sortHelp.link}
-                </Link>
+                {sortHelp.link && (
+                  <Link href={methodologyPath(locale)} className="shrink-0 text-white/45 underline underline-offset-2 hover:text-[#00C37A]">
+                    {sortHelp.link}
+                  </Link>
+                )}
               </div>
         </div>
       </div>
@@ -424,18 +436,7 @@ export function TopRankingExplorer({
         </ol>
       </div>
 
-      <div className="hidden">
-              <details className="rounded-md border border-[#E5E7EB] bg-[#F9FAFB] p-3 text-xs leading-5 text-[#6B7280]">
-                <summary className="flex cursor-pointer list-none items-center gap-1.5 text-[10px] font-black uppercase tracking-[0.1em] text-[#0A0A0A]">
-                  <IconInfoCircle size={13} stroke={2} />
-                  {sortHelp.title}
-                </summary>
-                <p className="mt-2">{sortHelp.text}</p>
-                <Link href={methodologyPath(locale)} className="mt-2 inline-flex text-[10px] font-black uppercase tracking-[0.1em] text-[#0A0A0A] hover:opacity-65">
-                  {sortHelp.link}
-                </Link>
-              </details>
-      </div>
+
 
       {filtered.length > PAGE_SIZE && (
         <div className="mt-8 flex flex-col items-center gap-3">
