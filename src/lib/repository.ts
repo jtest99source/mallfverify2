@@ -1147,6 +1147,21 @@ export async function getRankingSlugs(): Promise<{ slug: string }[]> {
   return data ?? [];
 }
 
+export async function getBusinessImagesMap(ids: string[]): Promise<Map<string, string>> {
+  if (!ids.length || !hasSupabaseConfig()) return new Map();
+  const supabase = createSupabaseServerClient();
+  const { data } = await supabase
+    .from("businesses")
+    .select("id,primary_image_url,gallery_image_urls,image")
+    .in("id", ids);
+  const map = new Map<string, string>();
+  for (const row of (data ?? []) as { id: string; primary_image_url: string | null; gallery_image_urls: string[] | null; image: string | null }[]) {
+    const url = row.primary_image_url || row.gallery_image_urls?.[0] || row.image;
+    if (url) map.set(row.id, url);
+  }
+  return map;
+}
+
 export async function getGuides(locale?: Locale, limit?: number, excludeSource?: string): Promise<Guide[]> {
   const fallback = emptyWhenUnconfigured<Guide[]>([]);
   if (fallback) return fallback;

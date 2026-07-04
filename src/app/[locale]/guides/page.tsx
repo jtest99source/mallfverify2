@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { GuideCard } from "@/components/GuideCard";
-import { getGuides } from "@/lib/repository";
+import { getBusinessImagesMap, getGuides } from "@/lib/repository";
 import { generateSeoMetadata } from "@/lib/seo";
 import { isLocale, type Locale } from "@/lib/i18n";
 import { t } from "@/lib/i18n-copy";
@@ -24,16 +24,37 @@ export default async function GuidesPage({ params }: { params: Promise<{ locale:
   const safeLocale = (isLocale(locale) ? locale : "es") as Locale;
   const copy = t(safeLocale).guides;
   const guides = await getGuides(safeLocale);
-  const rawGuideImages = await Promise.all(guides.map((guide) => (guide.heroImageUrl ? Promise.resolve(null) : getEditorialImageForGuide(guide.title))));
 
-  // Never show the same photo twice in the listing
+  // Batch-fetch business images for all guides in one query
+  const allBusinessIds = [...new Set(guides.flatMap((g) => g.sections.flatMap((s) => s.business_ids ?? [])))];
+  const businessImagesMap = await getBusinessImagesMap(allBusinessIds);
+
+  // Pick cover image per guide: heroImageUrl → first business photo → editorial fallback
+  // Track used URLs to guarantee no two cards share the same photo
   const seenImageUrls = new Set(guides.map((g) => g.heroImageUrl).filter(Boolean) as string[]);
-  const guideImages = rawGuideImages.map((img) => {
-    if (!img) return null;
-    if (seenImageUrls.has(img.imageUrl)) return null;
-    seenImageUrls.add(img.imageUrl);
-    return img;
-  });
+
+  const guideImages = await Promise.all(guides.map(async (guide) => {
+    if (guide.heroImageUrl) return null; // GuideCard uses guide.heroImageUrl directly
+
+    // Try business photos first
+    for (const section of guide.sections) {
+      for (const id of section.business_ids ?? []) {
+        const url = businessImagesMap.get(id);
+        if (url && !seenImageUrls.has(url)) {
+          seenImageUrls.add(url);
+          return { imageUrl: url };
+        }
+      }
+    }
+
+    // Fall back to editorial image
+    const editorial = await getEditorialImageForGuide(guide.title);
+    if (editorial && !seenImageUrls.has(editorial.imageUrl)) {
+      seenImageUrls.add(editorial.imageUrl);
+      return editorial;
+    }
+    return null;
+  }));
 
   return (
     <main className="bg-[#07101F]">
