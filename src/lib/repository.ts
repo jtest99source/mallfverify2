@@ -98,7 +98,9 @@ const cafeListingSignals = [
 
 const iceCreamExclusionSignals = [
   "gelateria",
+  "gelato",
   "gelat",
+  "helados",
   "heladeria",
   "helado",
   "ice cream",

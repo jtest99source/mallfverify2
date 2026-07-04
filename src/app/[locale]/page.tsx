@@ -8,7 +8,6 @@ import {
   IconChartBar,
   IconCircleCheckFilled,
   IconCoffee,
-  IconDiamond,
   IconGlass,
   IconHeartRateMonitor,
   IconHomeDollar,
@@ -38,7 +37,6 @@ import { JsonLd } from "@/components/JsonLd";
 import { siteConfig } from "@/config/site";
 import { siteUrl } from "@/lib/data";
 import type { Business } from "@/types/business";
-import { expertProfiles } from "@/data/expertProfiles";
 
 const categoryIcons: Partial<Record<CategorySlug, typeof IconToolsKitchen2>> = {
   restaurants: IconToolsKitchen2,
@@ -97,11 +95,6 @@ const methodologyCopy = {
         Icon: IconChartBar,
         title: "Posiciones que no se compran",
         text: "El ranking refleja valoración, volumen y consistencia — no quién paga más. Una ficha premium mejora la información disponible, no el puesto."
-      },
-      {
-        Icon: IconDiamond,
-        title: "Experts en tu idioma",
-        text: "Para las decisiones que importan — comprar, mudarse, encontrar médico — nuestros Experts son profesionales seleccionados en inglés y alemán por criterio editorial, no por honorarios."
       }
     ]
   },
@@ -117,11 +110,6 @@ const methodologyCopy = {
         Icon: IconChartBar,
         title: "Positions you can't buy",
         text: "Rankings reflect rating, volume and consistency — not who pays the most. A premium profile improves the information available, not the position."
-      },
-      {
-        Icon: IconDiamond,
-        title: "Experts in your language",
-        text: "For the decisions that matter — buying, moving, finding a doctor — our Experts are English and German-speaking professionals selected on editorial criteria, not fees."
       }
     ]
   },
@@ -137,11 +125,6 @@ const methodologyCopy = {
         Icon: IconChartBar,
         title: "Positionen, die man nicht kaufen kann",
         text: "Rankings basieren auf Bewertung, Volumen und Konsistenz — nicht darauf, wer am meisten zahlt. Ein Premium-Profil verbessert die verfügbaren Informationen, nicht die Position."
-      },
-      {
-        Icon: IconDiamond,
-        title: "Experts in deiner Sprache",
-        text: "Für wichtige Entscheidungen — kaufen, umziehen, Arzt finden — sind unsere Experts deutsch- und englischsprachige Profis, ausgewählt nach redaktionellen Kriterien, nicht nach Gebühren."
       }
     ]
   }
@@ -290,11 +273,6 @@ function EditorialRankingCarousel({
   );
 }
 
-function expertHeroNudge(locale: Locale) {
-  if (locale === "de") return "Brauchst du Anwalt, Arzt oder Immobilienmakler auf Deutsch?";
-  if (locale === "en") return "Need a lawyer, doctor or estate agent in English?";
-  return "¿Buscas abogado, médico o inmobiliaria en inglés?";
-}
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -392,9 +370,6 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
       businesses: realEstate
     }
   ].filter((module) => module.businesses.length > 0);
-  const approvedExperts = expertProfiles.filter((profile) => profile.status !== "hidden");
-  const expertMetricLabel =
-    safeLocale === "de" ? "gepruefte Experten" : safeLocale === "en" ? "verified experts" : "expertos verificados";
   const seenHeroBusinessIds = new Set<string>();
   const heroBusinesses = [
     ...restaurantsPalma,
@@ -514,12 +489,11 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
             </aside>
           )}
 
-          <div className="mt-12 grid w-full max-w-[640px] grid-cols-2 border-t border-white/10 pt-8 sm:grid-cols-4">
+          <div className="mt-12 grid w-full max-w-[480px] grid-cols-3 border-t border-white/10 pt-8">
             {[
               { value: formatIntegerMetric(stats.publishedBusinesses, safeLocale), label: copy.home.verifiedBusinesses },
               { value: formatMillionMetric(stats.analyzedReviews, safeLocale), label: copy.home.analyzedReviews },
-              { value: formatIntegerMetric(publicCategorySlugs.length, safeLocale), label: copy.home.activeCategories },
-              { value: formatIntegerMetric(approvedExperts.length, safeLocale), label: expertMetricLabel }
+              { value: formatIntegerMetric(publicCategorySlugs.length, safeLocale), label: copy.home.activeCategories }
             ].map((stat) => (
               <div key={stat.label} className="border-white/10 px-3 py-2 sm:border-r last:border-r-0">
                 <div className="font-display text-3xl font-black leading-none text-[#00C37A]">{stat.value}</div>
@@ -623,30 +597,6 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         }
       ]} />
 
-      <section className="bg-[#00C37A] px-4 py-8 text-[#0A0A0A] sm:px-6 lg:px-8">
-        <div className="mx-auto flex max-w-7xl flex-col items-center gap-6 text-center sm:flex-row sm:items-center sm:justify-between sm:text-left">
-          <div>
-            <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-black/55">
-              {safeLocale === "de" ? "Experten-Verzeichnis" : safeLocale === "en" ? "Expert Directory" : "Directorio de Expertos"}
-            </p>
-            <h2 className="font-display mt-1 text-3xl font-black text-[#0A0A0A] sm:text-4xl">
-              {safeLocale === "de" ? "Profis in deiner Sprache" : safeLocale === "en" ? "Professionals in your language" : "Profesionales en tu idioma"}
-            </h2>
-            <p className="mt-1 max-w-xl text-sm leading-7 text-black/55">
-              {safeLocale === "de"
-                ? "Anwälte, Immobilienmakler, Ärzte und mehr — kuratiert nach redaktionellen Kriterien, nicht nach Gebühren."
-                : safeLocale === "en"
-                  ? "Lawyers, estate agents, doctors and more — curated on editorial criteria, not fees."
-                  : "Abogados, inmobiliarias, médicos y más — seleccionados por criterio editorial, no por tarifas."}
-            </p>
-          </div>
-          <Link href={`/${safeLocale}/experts`} className="group inline-flex min-h-12 shrink-0 items-center gap-3 rounded-sm bg-[#07101F] px-7 text-[12px] font-black uppercase tracking-[0.1em] text-[#00C37A] transition-all duration-200 hover:bg-white hover:text-[#0A0A0A]">
-            {safeLocale === "de" ? "Experten ansehen" : safeLocale === "en" ? "View experts" : "Ver expertos"}
-            <span className="text-xl leading-none transition-transform duration-200 group-hover:translate-x-1">→</span>
-          </Link>
-        </div>
-      </section>
-
       <section className="px-4 py-12 sm:px-6 sm:py-20 lg:px-8">
         <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-[minmax(0,1fr)_360px] md:items-center md:gap-12">
           <div className="text-center md:text-left">
@@ -663,8 +613,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
             {[
               { value: formatIntegerMetric(stats.publishedBusinesses, safeLocale), label: copy.home.verifiedBusinesses },
               { value: formatMillionMetric(stats.analyzedReviews, safeLocale), label: copy.home.analyzedReviews },
-              { value: formatIntegerMetric(publicCategorySlugs.length, safeLocale), label: copy.home.activeCategories },
-              { value: formatIntegerMetric(approvedExperts.length, safeLocale), label: expertMetricLabel }
+              { value: formatIntegerMetric(publicCategorySlugs.length, safeLocale), label: copy.home.activeCategories }
             ].map((stat) => (
               <div key={stat.label} className="bg-[#0C1A2E] p-4 md:flex md:items-baseline md:gap-3 md:bg-transparent md:p-0">
                 <div className="font-display text-3xl font-black leading-none text-[#00C37A] md:text-4xl">{stat.value}</div>
