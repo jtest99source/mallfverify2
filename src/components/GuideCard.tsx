@@ -19,8 +19,9 @@ function formatGuideDate(dateStr: string, locale: Locale): string {
   }
 }
 
-export function GuideCard({ guide, locale, editorialImage }: { guide: Guide; locale: Locale; editorialImage?: CardEditorialImage }) {
-  const imageUrl = guide.heroImageUrl || editorialImage?.imageUrl;
+export function GuideCard({ guide, locale, editorialImage, coverImageUrl }: { guide: Guide; locale: Locale; editorialImage?: CardEditorialImage; coverImageUrl?: string | null }) {
+  // coverImageUrl (explicit, deduplicated) takes priority when provided; otherwise heroImageUrl → editorialImage
+  const imageUrl = coverImageUrl !== undefined ? (coverImageUrl ?? undefined) : (guide.heroImageUrl || editorialImage?.imageUrl);
   const copy = t(locale).guides;
 
   return (

@@ -29,32 +29,43 @@ export default async function GuidesPage({ params }: { params: Promise<{ locale:
   const allBusinessIds = [...new Set(guides.flatMap((g) => g.sections.flatMap((s) => s.business_ids ?? [])))];
   const businessImagesMap = await getBusinessImagesMap(allBusinessIds);
 
-  // Pick cover image per guide: heroImageUrl → first business photo → editorial fallback
-  // Track used URLs to guarantee no two cards share the same photo
-  const seenImageUrls = new Set(guides.map((g) => g.heroImageUrl).filter(Boolean) as string[]);
+  // Assign a unique cover URL to each guide — sequential to avoid race conditions.
+  // heroImageUrl is treated as a candidate too so duplicate DB images don't repeat.
+  const seenUrls = new Set<string>();
+  const coverUrls: (string | null)[] = [];
 
-  const guideImages = await Promise.all(guides.map(async (guide) => {
-    if (guide.heroImageUrl) return null; // GuideCard uses guide.heroImageUrl directly
-
-    // Try business photos first
+  for (const guide of guides) {
+    // Build candidate list: DB hero → business photos
+    const candidates: string[] = [];
+    if (guide.heroImageUrl) candidates.push(guide.heroImageUrl);
     for (const section of guide.sections) {
       for (const id of section.business_ids ?? []) {
         const url = businessImagesMap.get(id);
-        if (url && !seenImageUrls.has(url)) {
-          seenImageUrls.add(url);
-          return { imageUrl: url };
-        }
+        if (url) candidates.push(url);
       }
     }
 
-    // Fall back to editorial image
-    const editorial = await getEditorialImageForGuide(guide.title);
-    if (editorial && !seenImageUrls.has(editorial.imageUrl)) {
-      seenImageUrls.add(editorial.imageUrl);
-      return editorial;
+    // Pick first unseen candidate
+    let chosen: string | null = null;
+    for (const url of candidates) {
+      if (!seenUrls.has(url)) {
+        seenUrls.add(url);
+        chosen = url;
+        break;
+      }
     }
-    return null;
-  }));
+
+    // Nothing from DB/businesses — try editorial fallback
+    if (!chosen) {
+      const editorial = await getEditorialImageForGuide(guide.title);
+      if (editorial && !seenUrls.has(editorial.imageUrl)) {
+        seenUrls.add(editorial.imageUrl);
+        chosen = editorial.imageUrl;
+      }
+    }
+
+    coverUrls.push(chosen);
+  }
 
   return (
     <main className="bg-[#07101F]">
@@ -79,7 +90,7 @@ export default async function GuidesPage({ params }: { params: Promise<{ locale:
       <section className="mx-auto max-w-7xl px-4 pb-14 sm:px-6 lg:px-8">
         {guides.length > 0 ? (
           <div className="grid items-stretch gap-5 md:grid-cols-2 lg:grid-cols-3">
-            {guides.map((guide, index) => <GuideCard key={guide.id} guide={guide} locale={safeLocale} editorialImage={guideImages[index]} />)}
+            {guides.map((guide, index) => <GuideCard key={guide.id} guide={guide} locale={safeLocale} coverImageUrl={coverUrls[index]} />)}
           </div>
         ) : (
           <div className="rounded-lg border border-white/[0.10] bg-white/[0.04] p-5 text-sm leading-7 text-white/50">
