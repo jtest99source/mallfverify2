@@ -217,12 +217,15 @@ export async function getEditorialImageForGuide(title: string, category?: string
   if (specific) return specific;
 
   const normalized = (category || title).toLowerCase();
-  if (normalized.includes("hotel")) return getEditorialImage("category_hotel");
-  if (normalized.includes("barco") || normalized.includes("boat")) return getEditorialImage("category_boat_rental");
+  if (normalized.includes("hotel") || normalized.includes("boutique")) return getEditorialImage("category_hotel");
+  if (normalized.includes("barco") || normalized.includes("boat rental") || normalized.includes("alquiler de barco")) return getEditorialImage("category_boat_rental");
+  if (normalized.includes("sailing") || normalized.includes("charter") || normalized.includes("velero")) return getEditorialImage("category_beach");
   if (normalized.includes("beach club")) return getEditorialImage("category_beach_club");
   if (normalized.includes("playa") || normalized.includes("cala") || normalized.includes("beach")) return getEditorialImage("category_beach");
-  if (normalized.includes("actividad") || normalized.includes("activity")) return getEditorialImage("category_activity");
-  if (normalized.includes("restaurante") || normalized.includes("restaurant")) return getEditorialImage("category_restaurant");
+  if (normalized.includes("actividad") || normalized.includes("activity") || normalized.includes("senderismo") || normalized.includes("hiking")) return getEditorialImage("category_activity");
+  if (normalized.includes("restaurante") || normalized.includes("restaurant") || normalized.includes("comer") || normalized.includes("cenar")) return getEditorialImage("category_restaurant");
+  if (normalized.includes("rent") || normalized.includes("coche") || normalized.includes("car")) return getEditorialImage("category_activity");
+  if (normalized.includes("gym") || normalized.includes("fitness") || normalized.includes("spa") || normalized.includes("wellness")) return getEditorialImage("category_hotel");
   return getEditorialImage("guide_default");
 }
 

@@ -24,7 +24,16 @@ export default async function GuidesPage({ params }: { params: Promise<{ locale:
   const safeLocale = (isLocale(locale) ? locale : "es") as Locale;
   const copy = t(safeLocale).guides;
   const guides = await getGuides(safeLocale);
-  const guideImages = await Promise.all(guides.map((guide) => (guide.heroImageUrl ? Promise.resolve(null) : getEditorialImageForGuide(guide.title))));
+  const rawGuideImages = await Promise.all(guides.map((guide) => (guide.heroImageUrl ? Promise.resolve(null) : getEditorialImageForGuide(guide.title))));
+
+  // Never show the same photo twice in the listing
+  const seenImageUrls = new Set(guides.map((g) => g.heroImageUrl).filter(Boolean) as string[]);
+  const guideImages = rawGuideImages.map((img) => {
+    if (!img) return null;
+    if (seenImageUrls.has(img.imageUrl)) return null;
+    seenImageUrls.add(img.imageUrl);
+    return img;
+  });
 
   return (
     <main className="bg-[#07101F]">
