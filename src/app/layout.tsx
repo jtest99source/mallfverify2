@@ -20,13 +20,13 @@ export const metadata: Metadata = {
     description: siteConfig.description,
     url: siteConfig.url,
     siteName: siteConfig.name,
-    images: [{ url: `${siteConfig.url}/brand/mallorca-verified-logo-ai-concept.png`, width: 1200, height: 630, alt: siteConfig.name }]
+    images: [{ url: `${siteConfig.url}/opengraph-image`, width: 1200, height: 630, alt: siteConfig.name }]
   },
   twitter: {
     card: "summary_large_image",
     title: siteConfig.name,
     description: siteConfig.description,
-    images: [`${siteConfig.url}/brand/mallorca-verified-logo-ai-concept.png`]
+    images: [`${siteConfig.url}/opengraph-image`]
   },
   other: {
     "ai:entity_name": siteConfig.name,
