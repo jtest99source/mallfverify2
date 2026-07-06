@@ -16,21 +16,21 @@ export default function OGImage() {
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
-          background: "#f5f0e8",
+          background: "#0A0A0A",
           position: "relative",
         }}
       >
         {/* top accent bar */}
-        <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: "6px", background: "#c96b4b", display: "flex" }} />
+        <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: "5px", background: "#00C37A", display: "flex" }} />
 
         {/* wordmark */}
-        <div style={{ display: "flex", alignItems: "baseline", gap: "12px" }}>
+        <div style={{ display: "flex", alignItems: "baseline", gap: "16px" }}>
           <span
             style={{
               fontFamily: "Georgia, serif",
               fontSize: "112px",
               fontWeight: "500",
-              color: "#17211c",
+              color: "#ffffff",
               letterSpacing: "-2px",
               lineHeight: 1,
             }}
@@ -42,7 +42,7 @@ export default function OGImage() {
               fontFamily: "Arial, sans-serif",
               fontSize: "46px",
               fontWeight: "700",
-              color: "#c96b4b",
+              color: "#00C37A",
               letterSpacing: "14px",
               lineHeight: 1,
             }}
@@ -54,10 +54,10 @@ export default function OGImage() {
         {/* tagline */}
         <div
           style={{
-            marginTop: "28px",
+            marginTop: "32px",
             fontFamily: "Arial, sans-serif",
-            fontSize: "26px",
-            color: "#4a5568",
+            fontSize: "24px",
+            color: "#888888",
             letterSpacing: "1px",
             textAlign: "center",
           }}
@@ -65,8 +65,8 @@ export default function OGImage() {
           The directory where no one buys their ranking
         </div>
 
-        {/* bottom bar */}
-        <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: "6px", background: "#17211c", display: "flex" }} />
+        {/* bottom accent */}
+        <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: "5px", background: "#00C37A", display: "flex" }} />
       </div>
     ),
     { ...size }
