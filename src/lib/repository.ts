@@ -1167,7 +1167,7 @@ export async function getGuides(locale?: Locale, limit?: number, excludeSource?:
   if (fallback) return fallback;
 
   const supabase = createSupabaseServerClient();
-  let query = publicStatusFilter(supabase.from("guides").select("*").order("is_featured", { ascending: false }).order("updated_at", { ascending: false }));
+  let query = publicStatusFilter(supabase.from("guides").select("*").order("updated_at", { ascending: false }).order("is_featured", { ascending: false }));
   if (locale) query = query.eq("locale", locale);
   if (excludeSource) query = query.neq("source", excludeSource);
   if (limit) query = query.limit(limit);

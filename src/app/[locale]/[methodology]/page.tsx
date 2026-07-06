@@ -32,7 +32,7 @@ const methodologyCopy = {
     intro: "La mayoría de portales mezclan publicidad, estancias invitadas y opinión personal con los rankings. Mallorca Verified los separa completamente. Los rankings se construyen sobre datos públicos de Google: ninguna posición se compra.",
     businessEyebrow: "Para negocios",
     businessTitle: "Mejora la ficha, no el ranking",
-    businessText: "Una colaboración puede completar fotos, servicios, carta, horarios y datos útiles. No modifica valoraciones, reseñas ni posiciones.",
+    businessText: "Cualquier negocio que cumpla nuestros criterios puede añadir fotos, servicios, carta, horarios e información útil de forma gratuita. No aceptamos ningún pago. Las posiciones las determina únicamente el algoritmo con datos públicos de Google.",
     businessCta: "Escríbenos →",
     whyTitle: "Por qué las reseñas de Google son la base",
     whyText: "Las reseñas de Google de miles de personas reales a lo largo de años son la señal más difícil de manipular. Un restaurante con 4,8 de 600 personas en tres años no se puede fabricar. Ese es el punto de partida — y filtramos todo lo que no supera un umbral mínimo de señal real y consistente.",
@@ -54,10 +54,16 @@ const methodologyCopy = {
     published: "negocios publicados",
     reviews: "reseñas verificadas",
     categories: "categorías activas",
+    verifiedTitle: "Qué significa 'verificado' en la práctica",
+    verifiedText: "No hacemos visitas físicas a los negocios. 'Verificado' significa que hemos comprobado que el perfil en Google Maps es consistente, que el negocio está activo en el momento de publicación, que la categoría es correcta y que el volumen de señal supera el umbral mínimo para su tipo. Los datos de fondo — valoraciones y reseñas — vienen íntegramente de usuarios de Google, no de nosotros.",
+    thresholdNote: "El umbral mínimo varía por categoría. Un restaurante necesita muchas más reseñas para rankear con confianza que un veterinario o una inmobiliaria — la razón es simple: la gente reseña restaurantes con mucha más frecuencia que servicios profesionales. Un negocio con buenas métricas pero pocas reseñas no queda excluido para siempre: entra en el ranking en cuanto supera el umbral de su categoría.",
+    coverageTitle: "Cobertura actual y limitaciones conocidas",
+    coverageText: "Mallorca tiene más de 50 municipios. Todavía no los cubrimos todos, y lo decimos con transparencia. La prioridad actual son las zonas con mayor concentración de turistas internacionales, expats y compradores: Palma, el noroeste, el noreste y las principales zonas de costa. Los pueblos del interior y los municipios menos visitados tienen menor volumen de señal — menos reseñas, negocios más inestables — lo que hace más difícil un ranking fiable. Estamos ampliando la cobertura activamente. El objetivo es convertirnos en el directorio más completo de Mallorca para una audiencia internacional, lo que implica cubrir toda la isla, no solo las partes más obvias.",
+    seasonalNote: "Algunos negocios cierran en invierno o solo operan en verano. Mantenemos sus fichas en el ranking con el estado de temporada indicado. No desaparecen — su señal histórica sigue siendo válida y el perfil permanece accesible.",
     faqTitle: "Preguntas frecuentes",
     faqs: [
       ["¿No es esto básicamente lo mismo que Google Maps?", "Google Maps te muestra todo lo que existe. Nosotros filtramos lo que supera un umbral real de señal y lo ordenamos por categoría. La pregunta que contesta Google Maps es '¿existe este sitio?'. La que respondemos nosotros es '¿cuál es el mejor de su categoría en Mallorca?'"],
-      ["¿Puede un negocio pagar para subir posiciones?", "No. Una colaboración puede completar la ficha — fotos, servicios, horarios — pero la posición la determina el algoritmo con datos públicos de Google. Una ficha más completa puede aparecer más en búsquedas de IA, pero eso no cambia el ranking de categoría."],
+      ["¿Puede un negocio pagar para subir posiciones?", "No. Aparecer en Mallorca Verified es completamente gratuito y no aceptamos ningún pago por parte de los negocios — ni para incluirlos, ni para mejorar posiciones. Los rankings los determina únicamente el algoritmo con datos públicos de Google: valoración media, volumen de reseñas y consistencia. Una ficha más completa mejora la experiencia del usuario y puede aparecer más en búsquedas de IA, pero no mueve posiciones en el ranking de categoría."],
       ["¿Por qué debería fiarme de esto y no de TripAdvisor?", "TripAdvisor es global y generalista. Nosotros cubrimos solo Mallorca, con más profundidad por zona y categoría, y orientados específicamente a residentes internacionales y compradores. La metodología está publicada — si un ranking te parece incorrecto, puedes consultar los datos de Google que lo sustentan."],
       ["¿Mallorca Verified ayuda a aparecer en ChatGPT o Google AI?", "Sí. La estructura clara, la metodología transparente y los datos verificables hacen que el sitio sea más fácil de citar para sistemas de IA. Varios negocios ya aparecen mencionados cuando alguien pregunta en ChatGPT por su categoría en Mallorca."]
     ]
@@ -72,7 +78,7 @@ const methodologyCopy = {
     intro: "Most travel sites mix advertising, invited stays and personal opinion into their rankings. Mallorca Verified separates them completely. Rankings are built on public Google data — nothing buys a position.",
     businessEyebrow: "For businesses",
     businessTitle: "Improve the profile, not the ranking",
-    businessText: "A collaboration can complete photos, services, menus, opening hours and useful data. It never changes ratings, reviews or ranking positions.",
+    businessText: "Any business meeting our criteria can add photos, services, menus, opening hours and useful info to their profile at no cost. We accept no payment from businesses for any reason. Positions are determined entirely by public Google data.",
     businessCta: "Contact us →",
     whyTitle: "Why Google reviews are the foundation",
     whyText: "Google reviews from thousands of real visitors over years are the hardest signal to fake. A restaurant with 4.8★ from 600 people over three years can't be manufactured. That's the foundation — and we filter out anything that hasn't cleared a minimum threshold of real, consistent signal.",
@@ -94,10 +100,16 @@ const methodologyCopy = {
     published: "published businesses",
     reviews: "verified reviews",
     categories: "active categories",
+    verifiedTitle: "What 'verified' actually means",
+    verifiedText: "We don't make physical visits to businesses. 'Verified' means we have confirmed that the Google Maps profile is consistent, the business is currently active, the category is correct and the signal volume meets the minimum threshold for its type. The underlying data — ratings and reviews — comes entirely from Google users, not from us.",
+    thresholdNote: "Minimum thresholds vary by category. A restaurant needs significantly more reviews before it can be ranked reliably than a vet or a real estate agency — the reason is simple: more people review restaurants than professional services. A business with strong metrics but few reviews is not excluded permanently; it joins the ranking once it crosses the threshold for its category.",
+    coverageTitle: "Current coverage and known gaps",
+    coverageText: "Mallorca has over 50 municipalities. We don't cover all of them yet, and we're transparent about it. Current priority is areas with the highest concentration of international tourists, expats and buyers: Palma, the northwest coast, the northeast coast and the main resort belts. Interior villages and less-visited municipalities have lower signal volume — fewer reviews, less stable businesses — which makes reliable ranking harder. We're actively expanding coverage. The goal is to become the most complete Mallorca directory for an international audience, which means covering the whole island, not just the obvious parts.",
+    seasonalNote: "Some businesses close for winter or only operate in summer. We keep their profiles in the ranking with a seasonal status marked. They don't disappear — their past signal is still valid and the profile stays accessible.",
     faqTitle: "FAQ",
     faqs: [
       ["Isn't this basically the same as Google Maps?", "Google Maps shows you everything that exists. We filter what clears a real signal threshold and rank it by category. The question Google Maps answers is 'does this place exist?' The question we answer is 'which is actually the best in its category in Mallorca?'"],
-      ["Can a business pay to rank higher?", "No. A collaboration can complete the profile — photos, services, hours — but position is determined by the algorithm using public Google data. A more complete profile may surface more in AI searches, but that doesn't change the category ranking."],
+      ["Can a business pay to rank higher?", "No. Listing on Mallorca Verified is completely free and we do not accept payment from businesses for any reason — not for being included, not for better positions. Rankings are determined entirely by public Google data: average rating, review volume and consistency. A complete profile is better for users and may appear more in AI searches, but it does not move a position in the category ranking."],
       ["Why should I trust this over TripAdvisor?", "TripAdvisor is global and generic. We cover only Mallorca, with more depth per area and category, aimed specifically at international residents and buyers. The methodology is published — if a ranking seems wrong to you, you can check the underlying Google data that supports it."],
       ["Does Mallorca Verified help with ChatGPT or Google AI?", "Yes. Clear structure, transparent methodology and verifiable data make the site easier for AI systems to cite. Several businesses already appear when someone asks ChatGPT about their category in Mallorca."]
     ]
@@ -112,7 +124,7 @@ const methodologyCopy = {
     intro: "Die meisten Reiseportale mischen Werbung, eingeladene Aufenthalte und persönliche Meinungen in ihre Rankings. Mallorca Verified trennt das vollständig. Rankings basieren auf öffentlichen Google-Daten — keine Position wird gekauft.",
     businessEyebrow: "Für Betriebe",
     businessTitle: "Profil verbessern, nicht das Ranking",
-    businessText: "Eine Zusammenarbeit kann Fotos, Services, Speisekarten, Öffnungszeiten und nuetzliche Daten ergaenzen. Bewertungen, Rezensionen und Positionen bleiben unverändert.",
+    businessText: "Jeder Betrieb, der unsere Kriterien erfüllt, kann Fotos, Services, Speisekarte, Öffnungszeiten und nützliche Informationen kostenlos ergänzen. Wir akzeptieren keinerlei Zahlungen von Betrieben. Positionen werden ausschließlich durch öffentliche Google-Daten bestimmt.",
     businessCta: "Kontakt aufnehmen →",
     whyTitle: "Warum Google-Bewertungen die Grundlage sind",
     whyText: "Google-Bewertungen von tausenden echten Besuchern über Jahre sind das schwierigste Signal zu fälschen. Ein Restaurant mit 4,8 von 600 Personen über drei Jahre lässt sich nicht fabricieren. Das ist die Grundlage — und wir filtern alles heraus, das keine minimale Schwelle echter, konsistenter Signale erreicht.",
@@ -134,10 +146,16 @@ const methodologyCopy = {
     published: "veroeffentlichte Betriebe",
     reviews: "verifizierte Bewertungen",
     categories: "aktive Kategorien",
+    verifiedTitle: "Was 'verifiziert' in der Praxis bedeutet",
+    verifiedText: "Wir machen keine physischen Besuche bei Betrieben. 'Verifiziert' bedeutet, dass wir bestätigt haben: das Google Maps-Profil ist konsistent, der Betrieb ist zum Zeitpunkt der Veröffentlichung aktiv, die Kategorie ist korrekt und das Signalvolumen erreicht den Mindestschwellenwert für seinen Typ. Die zugrundeliegenden Daten — Bewertungen und Rezensionen — kommen ausschließlich von Google-Nutzern, nicht von uns.",
+    thresholdNote: "Die Mindestschwelle variiert je nach Kategorie. Ein Restaurant braucht deutlich mehr Bewertungen, bevor es zuverlässig gerankt werden kann, als ein Tierarzt oder eine Immobilienagentur — der Grund ist einfach: mehr Menschen bewerten Restaurants als professionelle Dienstleistungen. Ein Betrieb mit guten Kennzahlen, aber wenigen Bewertungen wird nicht dauerhaft ausgeschlossen; er tritt ins Ranking ein, sobald er die Schwelle seiner Kategorie überschreitet.",
+    coverageTitle: "Aktuelle Abdeckung und bekannte Lücken",
+    coverageText: "Mallorca hat über 50 Gemeinden. Wir decken noch nicht alle ab, und wir sind transparent darüber. Aktuelle Priorität sind die Gebiete mit der höchsten Konzentration internationaler Touristen, Expats und Käufer: Palma, die Nordwestküste, die Nordostküste und die wichtigsten Urlaubsregionen. Dörfer im Landesinneren und weniger besuchte Gemeinden haben ein geringeres Signalvolumen — weniger Bewertungen, instabilere Betriebe — was ein zuverlässiges Ranking schwieriger macht. Wir erweitern die Abdeckung aktiv. Das Ziel ist es, das vollständigste Mallorca-Verzeichnis für ein internationales Publikum zu werden, was bedeutet, die gesamte Insel abzudecken, nicht nur die naheliegenden Teile.",
+    seasonalNote: "Einige Betriebe schließen im Winter oder sind nur im Sommer geöffnet. Wir halten ihre Profile im Ranking mit einem Saisonstatus versehen. Sie verschwinden nicht — ihr historisches Signal ist weiterhin gültig und das Profil bleibt zugänglich.",
     faqTitle: "Häufige Fragen",
     faqs: [
       ["Ist das nicht im Grunde dasselbe wie Google Maps?", "Google Maps zeigt alles, was existiert. Wir filtern, was eine echte Signalschwelle überschreitet, und ordnen es nach Kategorie. Die Frage, die Google Maps beantwortet: 'Gibt es diesen Ort?' Die Frage, die wir beantworten: 'Welcher ist der beste seiner Kategorie auf Mallorca?'"],
-      ["Kann ein Betrieb für eine bessere Position bezahlen?", "Nein. Eine Zusammenarbeit kann das Profil ergänzen — Fotos, Services, Öffnungszeiten — aber die Position bestimmt der Algorithmus mit öffentlichen Google-Daten. Ein vollständigeres Profil kann in KI-Suchen häufiger erscheinen, ändert aber das Kategorie-Ranking nicht."],
+      ["Kann ein Betrieb für eine bessere Position bezahlen?", "Nein. Die Aufnahme bei Mallorca Verified ist vollständig kostenlos, und wir akzeptieren keinerlei Zahlungen von Betrieben — weder für die Aufnahme noch für bessere Positionen. Rankings werden ausschließlich durch öffentliche Google-Daten bestimmt: Durchschnittsbewertung, Bewertungsvolumen und Konsistenz. Ein vollständiges Profil verbessert die Nutzererfahrung und kann in KI-Suchen häufiger erscheinen, ändert aber keine Position im Kategorie-Ranking."],
       ["Warum sollte ich diesem Verzeichnis und nicht TripAdvisor vertrauen?", "TripAdvisor ist global und generalistisch. Wir decken nur Mallorca ab, mit mehr Tiefe pro Gebiet und Kategorie, speziell für internationale Bewohner und Käufer. Die Methodik ist veröffentlicht — wenn ein Ranking dir falsch erscheint, kannst du die zugrunde liegenden Google-Daten prüfen."],
       ["Hilft Mallorca Verified dabei, bei ChatGPT oder Google AI zu erscheinen?", "Ja. Klare Struktur, transparente Methodik und überprüfbare Daten machen das Portal für KI-Systeme leichter zitierbar. Einige Betriebe erscheinen bereits, wenn jemand ChatGPT nach ihrer Kategorie auf Mallorca fragt."]
     ]
@@ -156,7 +174,7 @@ const aboutCopy = {
     title: "La gente detrás de Mallorca Verified",
     intro: "Un equipo pequeño con raíces en Mallorca que construyó el directorio de referencia para residentes internacionales, compradores y expats. Sin publicidad, sin posiciones de pago.",
     whyTitle: "Por qué lo construimos",
-    whyText: "Cada año millones de personas llegan a Mallorca sin red local y acaban en tourist traps, listas patrocinadas o rankings donde el primero pagó más. Para expats y compradores internacionales el problema es doble: además de los tourist traps, necesitan profesionales en su idioma para las decisiones importantes. Quisimos construir algo diferente: un directorio basado en datos reales de Google, con profesionales seleccionados por criterio editorial.",
+    whyText: "Cada año millones de personas llegan a Mallorca sin contactos locales y acaban confiando en listas patrocinadas, rankings de pago o webs de viajes genéricas que no conocen la isla. Para expats y compradores internacionales el problema es doble: también necesitan profesionales de confianza en su idioma para las decisiones que realmente importan. Quisimos construir algo diferente: un directorio ordenado por datos públicos de Google, con cada posición ganada y ninguna comprada.",
     teamTitle: "Cómo trabajamos",
     teamText: "Combinamos conocimiento local con análisis de datos. Conocemos la isla en temporada alta y en invierno, en el centro y en los pueblos del interior. Esa perspectiva local nos ayuda a separar los sitios que de verdad funcionan de los que solo tienen buena campaña de marketing — y a entender qué necesita alguien que acaba de llegar a la isla.",
     principlesTitle: "Nuestros principios",
@@ -183,7 +201,7 @@ const aboutCopy = {
     title: "The people behind Mallorca Verified",
     intro: "A small team with roots in Mallorca that built the reference directory for international residents, buyers and expats. No advertising, no paid placements.",
     whyTitle: "Why we built this",
-    whyText: "Every year millions of people arrive in Mallorca without a local network and end up in tourist traps, sponsored lists or rankings where the top result paid the most. For expats and international buyers the problem is compounded: on top of tourist traps, they need professionals in their language for the decisions that matter. We wanted to build something different: a directory based on real Google data, with professionals selected on editorial criteria.",
+    whyText: "Every year millions of people come to Mallorca without local contacts and end up relying on sponsored lists, paid rankings or generic travel sites that don't know the island. For expats and international buyers the problem compounds: they also need trusted professionals in their language for the decisions that really matter. We built something different — a directory ranked purely on public Google data, with every position earned and none bought.",
     teamTitle: "How we work",
     teamText: "We combine local knowledge with data analysis. We know the island in high season and in winter, in the centre and in the inland villages. That local perspective helps us separate places that genuinely deliver from those with a good marketing campaign — and understand what someone needs when they've just arrived on the island.",
     principlesTitle: "Our principles",
@@ -210,7 +228,7 @@ const aboutCopy = {
     title: "Die Menschen hinter Mallorca Verified",
     intro: "Ein kleines Team mit Wurzeln auf Mallorca, das das Referenzverzeichnis für internationale Bewohner, Käufer und Expats aufgebaut hat. Keine Werbung, keine bezahlten Platzierungen.",
     whyTitle: "Warum wir das aufgebaut haben",
-    whyText: "Jedes Jahr kommen Millionen Menschen ohne lokales Netzwerk nach Mallorca und landen in Touristenfallen, gesponserten Listen oder Rankings, bei denen der Erste am meisten bezahlt hat. Für Expats und internationale Käufer ist das Problem doppelt: Neben den Touristenfallen brauchen sie Profis in ihrer Sprache für wichtige Entscheidungen. Wir wollten etwas anderes aufbauen: ein Verzeichnis auf Basis echter Google-Daten, mit Profis, die nach redaktionellen Kriterien ausgewählt werden.",
+    whyText: "Jedes Jahr kommen Millionen Menschen ohne lokale Kontakte nach Mallorca und verlassen sich auf gesponserte Listen, bezahlte Rankings oder generische Reiseseiten, die die Insel nicht kennen. Für Expats und internationale Käufer ist das Problem doppelt: Sie brauchen auch vertrauenswürdige Profis in ihrer Sprache für die Entscheidungen, die wirklich zählen. Wir wollten etwas anderes bauen — ein Verzeichnis, das ausschließlich nach öffentlichen Google-Daten gerankt wird, jede Position verdient und keine gekauft.",
     teamTitle: "Wie wir arbeiten",
     teamText: "Wir kombinieren lokales Wissen mit Datenanalyse. Wir kennen die Insel in der Hochsaison und im Winter, im Zentrum und in den Dörfern im Inland. Diese lokale Perspektive hilft uns, Orte, die wirklich funktionieren, von solchen zu unterscheiden, die nur eine gute Marketingkampagne haben — und zu verstehen, was jemand braucht, der gerade auf die Insel gezogen ist.",
     principlesTitle: "Unsere Grundsaetze",
@@ -246,7 +264,7 @@ const editorialCopy = {
       ["Verificable en Google", "Solo publicamos negocios con perfil verificable en Google Maps. Es la base que permite comparar valoraciones con una metodología consistente."],
       ["Volumen mínimo de reseñas", "Necesitamos suficiente señal estadística para clasificar un negocio con confianza. Un negocio con 3 reseñas no es comparable a uno con 300."],
       ["Activo en el momento de publicación", "Los negocios cerrados o con actividad dudosa no se publican. Los que cierran después de la publicación se marcan o eliminan."],
-      ["Categoría correcta", "El negocio debe encajar en una de nuestras 14 categorías activas. No incluimos negocios que no encajan claramente en ninguna."]
+      ["Categoría correcta", "El negocio debe encajar en una de nuestras 17 categorías activas. No incluimos negocios que no encajan claramente en ninguna."]
     ],
     sourcesTitle: "Fuentes de datos",
     sourcesText: "Todos los datos que usamos son públicamente verificables. No aceptamos información de los propios negocios como única fuente.",
@@ -287,7 +305,7 @@ const editorialCopy = {
       ["Verifiable on Google", "We only publish businesses with a verifiable profile on Google Maps. This is the foundation that allows consistent rating comparisons."],
       ["Minimum review volume", "We need enough statistical signal to classify a business with confidence. A business with 3 reviews is not comparable to one with 300."],
       ["Active at time of publication", "Closed or questionable businesses are not published. Those that close after publication are flagged or removed."],
-      ["Correct category", "The business must fit one of our 14 active categories. We do not include businesses that do not clearly fit any of them."]
+      ["Correct category", "The business must fit one of our 17 active categories. We do not include businesses that do not clearly fit any of them."]
     ],
     sourcesTitle: "Data sources",
     sourcesText: "All data we use is publicly verifiable. We do not accept information from businesses themselves as the sole source.",
@@ -328,7 +346,7 @@ const editorialCopy = {
       ["Auf Google pruefbar", "Wir veröffentlichen nur Betriebe mit einem prüfbaren Profil auf Google Maps. Das ist die Grundlage für konsistente Bewertungsvergleiche."],
       ["Mindestbewertungsvolumen", "Wir benoetigen genuegend statistisches Signal, um einen Betrieb zuverlaessig einzustufen. Ein Betrieb mit 3 Bewertungen ist nicht mit einem mit 300 vergleichbar."],
       ["Aktiv zum Zeitpunkt der Veroeffentlichung", "Geschlossene oder zweifelhafte Betriebe werden nicht veroeffentlicht. Solche, die nach der Veroeffentlichung schliessen, werden markiert oder entfernt."],
-      ["Richtige Kategorie", "Der Betrieb muss in eine unserer 14 aktiven Kategorien passen. Wir nehmen keine Betriebe auf, die in keine davon passen."]
+      ["Richtige Kategorie", "Der Betrieb muss in eine unserer 17 aktiven Kategorien passen. Wir nehmen keine Betriebe auf, die in keine davon passen."]
     ],
     sourcesTitle: "Datenquellen",
     sourcesText: "Alle Daten, die wir verwenden, sind oeffentlich pruefbar. Wir akzeptieren keine Informationen von den Betrieben selbst als einzige Quelle.",
@@ -392,10 +410,6 @@ function methodologyPageSections(locale: Locale) {
         text: "Profile pages organise the public facts people need before deciding: address, opening hours, price guidance, Google rating, selected review signals and what the place offers."
       },
       {
-        title: "Experts",
-        text: "Expert pages focus on professionals for expats, buyers and residents. Language, specialty, area served and public credibility signals are made explicit."
-      },
-      {
         title: "Guides",
         text: "Guides add editorial context when a pure ranking is not enough: how to choose an area, what to compare and which trade-offs matter."
       }
@@ -412,10 +426,6 @@ function methodologyPageSections(locale: Locale) {
         text: "Profilseiten ordnen die öffentlichen Fakten, die Nutzer vor einer Entscheidung brauchen: Adresse, Öffnungszeiten, Preisorientierung, Google-Bewertung, Bewertungssignale und Angebot."
       },
       {
-        title: "Experten",
-        text: "Expertenseiten konzentrieren sich auf Profis für Expats, Käufer und Residenten. Sprache, Spezialisierung, Gebiet und öffentliche Vertrauenssignale werden klar gemacht."
-      },
-      {
         title: "Guides",
         text: "Guides ergänzen redaktionellen Kontext, wenn ein reines Ranking nicht reicht: Gebietswahl, Vergleichskriterien und wichtige Kompromisse."
       }
@@ -429,10 +439,6 @@ function methodologyPageSections(locale: Locale) {
     {
       title: "Fichas de negocios",
       text: "Las fichas ordenan los datos públicos que una persona necesita antes de decidir: dirección, horarios, precio orientativo, valoración de Google, señales de reseñas y qué ofrece."
-    },
-    {
-      title: "Experts",
-      text: "Las páginas de expertos se centran en profesionales para expats, compradores y residentes. Idioma, especialidad, zona y señales públicas de confianza aparecen de forma explícita."
     },
     {
       title: "Guías",
@@ -550,10 +556,10 @@ function MethodologyPage({ locale, canonical, stats }: { locale: Locale; canonic
           </h2>
           <p className="mt-5 text-base leading-8 text-white/70">
             {locale === "en"
-              ? "Mallorca Verified is built for people who arrive in Mallorca without a local network: expats, international residents and foreign buyers. Without trusted local contacts, the default outcome is tourist traps, paid rankings and professionals who don't speak your language. This directory exists to fix that — for visitors who want honest recommendations, and for residents who need to make real decisions like finding a doctor, a lawyer or a rental car without being misled."
+              ? "Mallorca Verified is built for people who arrive on the island without local contacts: tourists who want the best places to eat and stay, expats and international residents who need reliable professionals, and foreign buyers making decisions that matter. Without a trusted reference, the default outcome is paid rankings and sponsored lists."
               : locale === "de"
-              ? "Mallorca Verified ist für Menschen, die ohne lokale Kontakte nach Mallorca kommen: Expats, internationale Bewohner und ausländische Käufer. Ohne vertrauenswürdige Verbindungen enden viele in Touristenfallen, bezahlten Rankings und bei Profis, die ihre Sprache nicht sprechen. Dieses Verzeichnis soll das ändern — für Besucher, die ehrliche Empfehlungen wollen, und für Bewohner, die echte Entscheidungen treffen müssen."
-              : "Mallorca Verified está construido para personas que llegan a Mallorca sin red local: expats, residentes internacionales y compradores extranjeros. Sin contactos locales de confianza, el resultado por defecto son tourist traps, rankings de pago y profesionales que no hablan tu idioma. Este directorio existe para cambiar eso."}
+              ? "Mallorca Verified ist für Menschen, die ohne lokale Kontakte auf die Insel kommen: Touristen, die die besten Orte zum Essen und Übernachten finden wollen, Expats und internationale Bewohner, die zuverlässige Profis brauchen, und ausländische Käufer, die wichtige Entscheidungen treffen. Ohne eine vertrauenswürdige Referenz landen sie in bezahlten Rankings und gesponserten Listen."
+              : "Mallorca Verified está construido para personas que llegan a la isla sin contactos locales: turistas que quieren los mejores sitios para comer y dormir, expats y residentes internacionales que necesitan profesionales fiables, y compradores extranjeros que toman decisiones importantes. Sin una referencia de confianza, el resultado son rankings de pago y listas patrocinadas."}
           </p>
           <div className="mt-7 grid gap-3 sm:grid-cols-2">
             {(locale === "en"
@@ -650,12 +656,30 @@ function MethodologyPage({ locale, canonical, stats }: { locale: Locale; canonic
 
         <section className="border-b border-white/[0.08] py-10">
           <p className="mb-2 text-[11px] font-black uppercase tracking-[0.18em] text-[#00C37A]/50">06</p>
+          <h2 className="font-sans text-2xl font-black leading-tight text-white sm:text-3xl">{c.verifiedTitle}</h2>
+          <p className="mt-5 text-base leading-8 text-white/70">{c.verifiedText}</p>
+          <div className="mt-6 rounded-lg border border-white/[0.08] bg-[#0C1A2E] p-5">
+            <p className="text-sm leading-7 text-white/70">{c.thresholdNote}</p>
+          </div>
+        </section>
+
+        <section className="border-b border-white/[0.08] py-10">
+          <p className="mb-2 text-[11px] font-black uppercase tracking-[0.18em] text-[#00C37A]/50">07</p>
+          <h2 className="font-sans text-2xl font-black leading-tight text-white sm:text-3xl">{c.coverageTitle}</h2>
+          <p className="mt-5 text-base leading-8 text-white/70">{c.coverageText}</p>
+          <div className="mt-6 rounded-lg border border-white/[0.08] bg-[#0C1A2E] p-5">
+            <p className="text-sm leading-7 text-white/70">{c.seasonalNote}</p>
+          </div>
+        </section>
+
+        <section className="border-b border-white/[0.08] py-10">
+          <p className="mb-2 text-[11px] font-black uppercase tracking-[0.18em] text-[#00C37A]/50">08</p>
           <h2 className="font-sans text-2xl font-black leading-tight text-white sm:text-3xl">
             {locale === "en" ? "How each page works" : locale === "de" ? "Wie jede Seite funktioniert" : "Cómo funciona cada página"}
           </h2>
-          <div className="mt-6 grid gap-4 sm:grid-cols-2">
+          <div className="mt-6 grid gap-4 sm:grid-cols-3">
             {pageSections.map((item, index) => {
-              const PageIcon = index === 0 ? IconChartBar : index === 1 ? IconStar : index === 2 ? IconUsers : IconDiamond;
+              const PageIcon = index === 0 ? IconChartBar : index === 1 ? IconStar : IconDiamond;
               return (
               <div key={item.title} className="rounded-lg border border-white/[0.10] border-t-2 border-t-[#00C37A]/50 bg-[#0C1A2E] p-5 shadow-none">
                 <PageIcon size={22} stroke={1.8} className="text-[#00C37A]" />
@@ -668,7 +692,7 @@ function MethodologyPage({ locale, canonical, stats }: { locale: Locale; canonic
         </section>
 
         <section className="pt-10">
-          <p className="mb-2 text-[11px] font-black uppercase tracking-[0.18em] text-[#00C37A]/50">07</p>
+          <p className="mb-2 text-[11px] font-black uppercase tracking-[0.18em] text-[#00C37A]/50">09</p>
           <h2 className="font-sans text-2xl font-black leading-tight text-white sm:text-3xl">{c.faqTitle}</h2>
           <div className="mt-6 divide-y divide-white/[0.08] overflow-hidden rounded-lg border border-white/[0.08] bg-[#0C1A2E]">
             {c.faqs.map(([question, answer]) => (

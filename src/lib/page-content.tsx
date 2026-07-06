@@ -799,6 +799,29 @@ export async function BusinessDetailPage({ category, locale, slug }: { category:
           </div>
         </aside>
       </div>
+      <section className="mx-auto max-w-[1440px] px-4 pb-8 sm:px-8 lg:px-12">
+        <div className="flex flex-col gap-3 rounded-sm border border-white/[0.08] bg-[#0C1A2E] px-5 py-4 sm:flex-row sm:items-center sm:justify-between">
+          <div>
+            <p className="text-[11px] font-black uppercase tracking-[0.14em] text-[#00C37A]">
+              {locale === "de" ? "Ihr Betrieb?" : locale === "en" ? "Your business?" : "¿Tu negocio?"}
+            </p>
+            <p className="mt-1 text-sm leading-6 text-white/55">
+              {locale === "de"
+                ? "Sind Sie der Inhaber? Vervollständigen Sie Ihr Profil kostenlos — mehr Infos, mehr Sichtbarkeit."
+                : locale === "en"
+                ? "Do you own this business? Complete your listing for free — more info, better visibility."
+                : "¿Eres el dueño? Completa tu ficha de forma totalmente gratuita — más información, más visibilidad."}
+            </p>
+          </div>
+          <Link
+            href={`/${locale}/contact`}
+            className="shrink-0 rounded-sm border border-white/[0.14] px-5 py-3 text-center text-[11px] font-bold uppercase tracking-[0.1em] text-white transition-all hover:border-[#00C37A]/70 hover:text-[#00C37A]"
+          >
+            {locale === "de" ? "Kostenlos registrieren →" : locale === "en" ? "Get listed for free →" : "Contactar →"}
+          </Link>
+        </div>
+      </section>
+
       <JsonLd data={[createLocalBusinessSchema(business, locale), createBreadcrumbSchema(breadcrumbs)]} />
     </main>
   );

@@ -8,93 +8,96 @@ import { isPublicCategorySlug, publicCategorySlugs } from "@/lib/data";
 
 const pageCopy = {
   es: {
-    metaTitle: "Visibilidad en Google y en IA para negocios en Mallorca | Mallorca Verified",
-    metaDescription: "Auditamos tu visibilidad en Google, ChatGPT y Google AI sin coste. Somos los creadores de Mallorca Verified — sabemos qué funciona para negocios locales en la isla.",
+    metaTitle: "Visibilidad para negocios en Mallorca | Mallorca Verified",
+    metaDescription: "Turistas, expats y compradores internacionales usan Mallorca Verified para decidir dónde van en la isla. Más visibilidad para tu negocio — ficha gratuita disponible.",
     eyebrow: "Para negocios en Mallorca",
-    title: "Sé el primero que citan cuando alguien busca",
-    intro: "Cada vez más expats, compradores internacionales y viajeros usan ChatGPT, Perplexity o Google AI para decidir dónde ir en Mallorca. Nosotros construimos el directorio de referencia para residentes internacionales en la isla — y sabemos exactamente qué hace que un negocio aparezca primero.",
-    proofLine: "Google, ChatGPT y Perplexity ya no leen una web como antes: buscan datos claros, confianza y contexto local.",
-    contactEyebrow: "Auditoría gratuita",
-    contactText: "Analizamos tu visibilidad en Google y en los sistemas de IA sin coste ni compromiso. Cuéntanos tu negocio.",
-    contactCta: "Solicitar auditoría →",
-    subject: "Solicitar auditoría de visibilidad",
+    title: "Llega a los turistas, expats y compradores que deciden dónde ir",
+    intro: "Turistas, expats y compradores internacionales usan Mallorca Verified para decidir dónde comer, dormir, explorar y gastar dinero en la isla. Nuestros rankings se construyen sobre datos públicos de Google y nuestras guías las leen personas que están planificando activamente su tiempo aquí. Mallorca Verified también trabaja directamente con negocios para ayudarles a ganar más visibilidad en la isla.",
+    proofLine: "Miles de personas usan nuestros rankings cada mes para decidir dónde gastan dinero en la isla.",
+    contactEyebrow: "Contacto",
+    contactText: "Cuéntanos tu negocio y vemos cómo podemos ayudarte.",
+    contactCta: "Contactar →",
+    subject: "Consulta de negocio",
     stats: {
       published: "Fichas publicadas",
       categories: "Categorías",
       reviews: "Reseñas analizadas",
       pages: "Páginas locales"
     },
-    workEyebrow: "Cómo trabajamos",
-    workTitle: "Desde la auditoría hasta la visibilidad",
-    workIntro: "Empezamos analizando cómo apareces ahora — en Google, en ChatGPT y en Perplexity. A partir de ahí trabajamos lo que tiene más impacto.",
+    workEyebrow: "Cómo trabajamos con negocios",
+    workTitle: "Visibilidad para la audiencia que importa",
+    workIntro: "Empezamos revisando cómo apareces en el directorio y qué mejoraría tu visibilidad ante la audiencia correcta.",
     products: [
-      ["Auditoría de visibilidad", "Empezamos siempre aquí. Analizamos cómo apareces en Google, ChatGPT y Perplexity, qué dice la IA de ti cuando alguien pregunta, y qué frena tu visibilidad ahora mismo."],
-      ["Posicionamiento en IA", "Estructuramos tu información para que ChatGPT, Perplexity y Google AI te citen — no a un competidor — cuando alguien busca tu categoría en Mallorca."],
-      ["Ficha verificada", "Fotos reales, servicios, carta, horarios y descripción editorial en Mallorca Verified. Una ficha completa es más fácil de citar para una IA y más convincente para un humano."],
-      ["SEO local", "Páginas de zona, guías y textos que conectan tu negocio con búsquedas geográficas. Para que te encuentren compradores e internacionales en Google, no solo turistas de paso."]
+      ["Presencia en el directorio", "Tu negocio probablemente ya está listado. Revisamos cómo aparece, qué datos faltan y qué mejoraría su visibilidad."],
+      ["Ficha completa", "Fotos, descripción, horarios, servicios. Una ficha completa aparece más en guías y resultados de IA. Actualizar es gratis."],
+      ["Guías editoriales", "Nuestras guías llegan a turistas y expats en el momento que deciden. Aparecer en una guía es editorial, no de pago."],
+      ["Visibilidad más amplia", "Para negocios que quieren ir más lejos: mayor presencia en Google, SEO local y ser citados por herramientas de IA cuando alguien busca tu categoría en Mallorca."]
     ],
+    freeNote: "Cualquier negocio que cumpla nuestros criterios mínimos puede aparecer en Mallorca Verified de forma totalmente gratuita. ¿Ya estás en el directorio y quieres completar tu ficha? Escríbenos — no cuesta nada.",
     localContext: "Contexto local",
     areaTitle: "Páginas donde tu negocio puede aparecer",
     areaNote: "Cada una recibe búsquedas orgánicas de viajeros. Estar bien posicionado aquí multiplica tu visibilidad.",
     profiles: "fichas"
   },
   en: {
-    metaTitle: "Google and AI visibility for businesses in Mallorca | Mallorca Verified",
-    metaDescription: "Free visibility audit for your business on Google, ChatGPT and Google AI. We built Mallorca Verified — we know what works for local businesses on the island.",
+    metaTitle: "Visibility for businesses in Mallorca | Mallorca Verified",
+    metaDescription: "Tourists, expats and international buyers use Mallorca Verified to decide where to go on the island. More visibility for your business — free listing available.",
     eyebrow: "For businesses in Mallorca",
-    title: "Be the first one cited when someone searches",
-    intro: "More and more expats, international buyers and travellers use ChatGPT, Perplexity or Google AI to decide where to go in Mallorca. We built the reference directory for international residents on the island — and we know exactly what makes a business show up first.",
-    proofLine: "Google, ChatGPT and Perplexity no longer read a website like before: they look for clear data, trust and local context.",
-    contactEyebrow: "Free audit",
-    contactText: "We analyse your visibility on Google and AI systems at no cost, no commitment. Tell us about your business.",
-    contactCta: "Request a free audit →",
-    subject: "Request a visibility audit",
+    title: "Reach the tourists, expats and buyers who choose where to go",
+    intro: "Tourists, expats and international buyers use Mallorca Verified when deciding where to eat, stay, explore and spend money on the island. Our rankings are built on public Google data and our guides are read by people actively planning their time here. Mallorca Verified also works directly with businesses to help them gain more visibility across the island.",
+    proofLine: "Thousands of people use our rankings every month to decide where to spend money on the island.",
+    contactEyebrow: "Get in touch",
+    contactText: "Tell us about your business and we'll look at how we can help.",
+    contactCta: "Contact us →",
+    subject: "Business enquiry",
     stats: {
       published: "Published profiles",
       categories: "Categories",
       reviews: "Reviews analysed",
       pages: "Local pages"
     },
-    workEyebrow: "How we work",
-    workTitle: "From audit to visibility",
-    workIntro: "We start by analysing how you appear right now — on Google, ChatGPT and Perplexity. From there we work on what has the most impact.",
+    workEyebrow: "How we work with businesses",
+    workTitle: "Visibility for the audience that matters",
+    workIntro: "We start by looking at how you appear in the directory and what would improve your visibility with the right audience.",
     products: [
-      ["Visibility audit", "We always start here. We analyse how you appear on Google, ChatGPT and Perplexity, what AI says about you when someone asks, and what's limiting your visibility right now."],
-      ["AI positioning", "We structure your information so ChatGPT, Perplexity and Google AI cite you — not a competitor — when someone searches for your category in Mallorca."],
-      ["Verified listing", "Real photos, services, menu, hours and editorial description on Mallorca Verified. A complete listing is easier for an AI to cite and more convincing for a human."],
-      ["Local SEO", "Area pages, guides and copy that connect your business to geographic searches. To be found by buyers and international residents on Google, not just passing tourists."]
+      ["Listing presence", "Your business is likely already in the directory. We look at how it appears, what data is missing and what would improve its visibility."],
+      ["Complete profile", "Photos, description, opening hours, services. A complete profile appears more in guides and AI results — and it's free to update."],
+      ["Editorial guides", "Our guides reach tourists and expats when they're deciding. Being mentioned in a guide is editorial, not paid."],
+      ["Broader visibility", "For businesses that want to go further: a stronger Google presence, local SEO and being cited by AI tools when someone searches for your category in Mallorca."]
     ],
+    freeNote: "Any business meeting our minimum criteria can be listed on Mallorca Verified for free. Already in the directory and want to complete your profile? Get in touch — it costs nothing.",
     localContext: "Local context",
     areaTitle: "Pages where your business can appear",
     areaNote: "Each receives organic searches from travellers. Appearing here multiplies your visibility.",
     profiles: "profiles"
   },
   de: {
-    metaTitle: "Google- und KI-Sichtbarkeit für Betriebe auf Mallorca | Mallorca Verified",
-    metaDescription: "Kostenloses Sichtbarkeits-Audit für deinen Betrieb auf Google, ChatGPT und Google AI. Wir haben Mallorca Verified aufgebaut — wir wissen, was für lokale Betriebe funktioniert.",
+    metaTitle: "Sichtbarkeit für Betriebe auf Mallorca | Mallorca Verified",
+    metaDescription: "Touristen, Expats und internationale Käufer nutzen Mallorca Verified, um zu entscheiden, wohin sie auf der Insel gehen. Mehr Sichtbarkeit für deinen Betrieb — kostenloses Profil verfügbar.",
     eyebrow: "Für Betriebe auf Mallorca",
-    title: "Sei der Erste, der zitiert wird, wenn jemand sucht",
-    intro: "Immer mehr Expats, internationale Käufer und Reisende nutzen ChatGPT, Perplexity oder Google AI, um zu entscheiden, wohin sie auf Mallorca gehen. Wir haben das Referenzverzeichnis für internationale Bewohner auf der Insel aufgebaut — und wissen genau, was einen Betrieb an die erste Stelle bringt.",
-    proofLine: "Google, ChatGPT und Perplexity lesen Websites nicht mehr wie früher: Sie suchen klare Daten, Vertrauen und lokalen Kontext.",
-    contactEyebrow: "Kostenloses Audit",
-    contactText: "Wir analysieren deine Sichtbarkeit auf Google und in KI-Systemen kostenlos und ohne Verpflichtung. Erzähl uns von deinem Betrieb.",
-    contactCta: "Audit anfordern →",
-    subject: "Sichtbarkeits-Audit anfordern",
+    title: "Reach the tourists, Expats and buyers who choose where to go",
+    intro: "Touristen, Expats und internationale Käufer nutzen Mallorca Verified, wenn sie entscheiden, wo sie auf der Insel essen, schlafen, erkunden und Geld ausgeben. Unsere Rankings basieren auf öffentlichen Google-Daten und unsere Guides werden von Menschen gelesen, die ihren Aufenthalt aktiv planen. Mallorca Verified arbeitet auch direkt mit Betrieben zusammen, um ihnen mehr Sichtbarkeit auf der Insel zu verschaffen.",
+    proofLine: "Tausende Menschen nutzen unsere Rankings jeden Monat, um zu entscheiden, wo sie ihr Geld auf der Insel ausgeben.",
+    contactEyebrow: "Kontakt",
+    contactText: "Erzähl uns von deinem Betrieb und wir schauen, wie wir helfen können.",
+    contactCta: "Kontakt aufnehmen →",
+    subject: "Betriebsanfrage",
     stats: {
       published: "Veröffentlichte Profile",
       categories: "Kategorien",
       reviews: "Analysierte Bewertungen",
       pages: "Lokale Seiten"
     },
-    workEyebrow: "Wie wir arbeiten",
-    workTitle: "Vom Audit zur Sichtbarkeit",
-    workIntro: "Wir beginnen damit zu analysieren, wie du aktuell erscheinst — auf Google, ChatGPT und Perplexity. Dann arbeiten wir an dem, was den größten Einfluss hat.",
+    workEyebrow: "Wie wir mit Betrieben arbeiten",
+    workTitle: "Sichtbarkeit für die richtige Zielgruppe",
+    workIntro: "Wir beginnen damit, zu schauen, wie du im Verzeichnis erscheinst und was deine Sichtbarkeit bei der richtigen Zielgruppe verbessern würde.",
     products: [
-      ["Sichtbarkeits-Audit", "Wir fangen immer hier an. Wir analysieren, wie du auf Google, ChatGPT und Perplexity erscheinst, was KI über dich sagt, wenn jemand fragt, und was deine Sichtbarkeit gerade bremst."],
-      ["KI-Positionierung", "Wir strukturieren deine Informationen, damit ChatGPT, Perplexity und Google AI dich — und nicht einen Mitbewerber — zitieren, wenn jemand nach deiner Kategorie auf Mallorca sucht."],
-      ["Verifiziertes Profil", "Echte Fotos, Services, Speisekarte, Öffnungszeiten und redaktionelle Beschreibung auf Mallorca Verified. Ein vollständiges Profil ist für eine KI leichter zitierbar und für einen Menschen überzeugender."],
-      ["Lokales SEO", "Gebietsseiten, Guides und Texte, die deinen Betrieb mit geografischen Suchanfragen verbinden. Damit dich Käufer und internationale Bewohner auf Google finden — nicht nur Durchgangstouristen."]
+      ["Verzeichnispräsenz", "Dein Betrieb ist wahrscheinlich bereits gelistet. Wir schauen, wie er erscheint, was fehlt und was die Sichtbarkeit verbessern würde."],
+      ["Vollständiges Profil", "Fotos, Beschreibung, Öffnungszeiten, Services. Ein vollständiges Profil erscheint mehr in Guides und KI-Ergebnissen — und das Update ist kostenlos."],
+      ["Redaktionelle Guides", "Unsere Guides erreichen Touristen und Expats im Moment ihrer Entscheidung. In einem Guide erwähnt zu werden ist redaktionell, nicht bezahlt."],
+      ["Breitere Sichtbarkeit", "Für Betriebe, die weiter gehen wollen: stärkere Google-Präsenz, lokales SEO und von KI-Tools zitiert werden, wenn jemand nach deiner Kategorie auf Mallorca sucht."]
     ],
+    freeNote: "Jeder Betrieb, der unsere Mindestkriterien erfüllt, kann kostenlos auf Mallorca Verified gelistet werden. Bereits im Verzeichnis und Profil vervollständigen? Schreib uns — kostenlos.",
     localContext: "Lokaler Kontext",
     areaTitle: "Seiten, auf denen dein Betrieb erscheinen kann",
     areaNote: "Jede erhält organische Suchen von Reisenden. Gut positioniert zu sein multipliziert deine Sichtbarkeit.",
@@ -149,8 +152,7 @@ export default async function BusinessPage({ params }: { params: Promise<{ local
             <h1 className="mt-4 max-w-4xl font-display text-4xl font-black leading-[0.96] text-white sm:text-5xl lg:text-7xl">{copy.title}</h1>
             <p className="mt-6 max-w-2xl text-base leading-8 text-white/75">{copy.intro}</p>
             <div className="mx-auto mt-7 max-w-2xl rounded-sm border border-white/[0.10] bg-[#0C1A2E] p-5 sm:mx-0">
-              <span className="inline-block rounded-full bg-[#00C37A] px-3 py-1 text-[10px] font-black uppercase tracking-[0.12em] text-[#0A0A0A]">ChatGPT · Perplexity · Google AI</span>
-              <p className="mt-3 text-sm font-bold leading-7 text-white">{copy.proofLine}</p>
+              <p className="text-sm font-bold leading-7 text-white">{copy.proofLine}</p>
             </div>
           </div>
           <div className="rounded-sm border border-white/[0.10] bg-[#0C1A2E] p-6">
@@ -188,7 +190,11 @@ export default async function BusinessPage({ params }: { params: Promise<{ local
           </div>
         </div>
 
-        <section className="mt-12 rounded-sm border border-white/[0.10] bg-[#0C1A2E] p-6">
+        <div className="mt-8 rounded-sm border border-white/[0.06] bg-[#0C1A2E]/60 px-6 py-4">
+          <p className="text-sm leading-7 text-white/50">{copy.freeNote}</p>
+        </div>
+
+        <section className="mt-8 rounded-sm border border-white/[0.10] bg-[#0C1A2E] p-6">
           <div className="flex flex-wrap items-end justify-between gap-4 border-b border-white/[0.08] pb-4">
             <div>
               <p className="text-[11px] font-black uppercase tracking-[0.16em] text-[#00C37A]">{copy.localContext}</p>

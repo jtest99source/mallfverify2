@@ -1348,4 +1348,83 @@ export const BLOG_CATALOG = [
       de: 'Internet Mallorca Ausländer, SIM-Karte Mallorca 2026, Handyvertrag Mallorca, Glasfaser Palma',
     },
   },
+
+  // ══════════════════════════════════════════════════════════════════════════════
+  // TIER 1 — Business interest + GEO gap (added jul 2026)
+  // Inmobiliarias + authentic local content missing from original catalog
+  // ══════════════════════════════════════════════════════════════════════════════
+
+  {
+    tier: 1,
+    slug: 'comprar-propiedad-mallorca-extranjero',
+    category: 'real-estate',
+    minRating: 3.9,
+    minReviews: 8,
+    limit: 6,
+    minBusinesses: 0,
+    titles: {
+      es: 'Comprar propiedad en Mallorca siendo extranjero — Guía paso a paso 2026',
+      en: 'Buying Property in Mallorca as a Foreigner — Step by Step Guide 2026',
+      de: 'Immobilien kaufen auf Mallorca als Ausländer — Schritt für Schritt 2026',
+    },
+    intent: {
+      es: 'comprar piso mallorca extranjero, comprar casa mallorca no residente, proceso compra propiedad mallorca 2026, impuestos compra mallorca',
+      en: 'buying property in mallorca as a foreigner 2026, how to buy a house in mallorca non resident, property purchase process mallorca, taxes buying mallorca',
+      de: 'Immobilien kaufen Mallorca als Ausländer 2026, Haus kaufen Mallorca Nicht-Residenten, Kaufprozess Mallorca',
+    },
+  },
+  {
+    tier: 1,
+    slug: 'impuestos-compra-propiedad-mallorca',
+    limit: 0,
+    minBusinesses: 0,
+    titles: {
+      es: 'Impuestos y gastos al comprar propiedad en Mallorca 2026 — Lo que nadie te dice',
+      en: 'Property Taxes and Costs When Buying in Mallorca 2026 — What Foreigners Need to Know',
+      de: 'Steuern und Kosten beim Immobilienkauf auf Mallorca 2026 — Was Ausländer wissen müssen',
+    },
+    intent: {
+      es: 'impuestos compra propiedad mallorca, gastos compraventa mallorca 2026, ITP mallorca extranjero, notario gestor mallorca compra',
+      en: 'property taxes mallorca foreigner 2026, buying costs mallorca, ITP tax mallorca, notary fees mallorca property purchase',
+      de: 'Steuern Immobilienkauf Mallorca 2026, Kaufnebenkosten Mallorca, ITP Mallorca Ausländer, Notarkosten Mallorca',
+    },
+  },
+  {
+    tier: 1,
+    slug: 'restaurantes-autenticos-palma-locales',
+    category: 'restaurant',
+    city: 'Palma',
+    minRating: 4.3,
+    minReviews: 50,
+    limit: 10,
+    titles: {
+      es: 'Dónde comen los mallorquines de verdad en Palma — Sin trampas turísticas',
+      en: 'Where Locals Actually Eat in Palma Mallorca — No Tourist Traps',
+      de: 'Wo die Einheimischen in Palma wirklich essen — Keine Touristenfallen',
+    },
+    intent: {
+      es: 'donde comen los mallorquines palma, restaurantes locales palma mallorca, sin trampa turistica palma, autentico palma mallorca',
+      en: 'where locals eat palma mallorca, authentic restaurants palma no tourist traps, local food palma mallorca 2026',
+      de: 'wo essen Einheimische Palma Mallorca, authentische Restaurants Palma, keine Touristenfallen Palma',
+    },
+  },
+  {
+    tier: 1,
+    slug: 'charter-barco-sin-patron-requisitos',
+    category: 'boat-rental',
+    minRating: 4.3,
+    minReviews: 20,
+    limit: 8,
+    minBusinesses: 0,
+    titles: {
+      es: 'Alquilar barco sin patrón en Mallorca — Requisitos legales 2026',
+      en: 'Renting a Boat Without a Skipper in Mallorca — Legal Requirements 2026',
+      de: 'Boot ohne Skipper mieten auf Mallorca — Rechtliche Anforderungen 2026',
+    },
+    intent: {
+      es: 'alquilar barco sin patron mallorca, requisitos alquiler barco sin licencia mallorca, que licencia necesito alquilar barco mallorca 2026',
+      en: 'renting a boat without skipper mallorca 2026, boat hire no licence mallorca legal, what licence do i need to rent a boat mallorca',
+      de: 'Boot mieten ohne Skipper Mallorca 2026, Bootsverleih ohne Lizenz Mallorca legal, welchen Führerschein brauche ich Mallorca Boot',
+    },
+  },
 ]

@@ -436,19 +436,19 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
             </div>
             <h1 className="font-display mx-auto max-w-4xl text-balance text-[2.6rem] font-black leading-[0.92] text-white sm:text-7xl lg:text-[88px]">
               {safeLocale === "de" ? (
-                <>Mallorca ohne<br className="hidden sm:block" /> <em className="italic text-[#00C37A]">Touristenfallen.</em></>
+                <>Mallorca,<br className="hidden sm:block" /> <em className="italic text-[#00C37A]">nach echten Bewertungen gerankt.</em></>
               ) : safeLocale === "en" ? (
-                <>Mallorca without<br className="hidden sm:block" /> <em className="italic text-[#00C37A]">tourist traps.</em></>
+                <>Mallorca,<br className="hidden sm:block" /> <em className="italic text-[#00C37A]">ranked by real reviews.</em></>
               ) : (
-                <>Mallorca sin<br className="hidden sm:block" /> <em className="italic text-[#00C37A]">tourist traps.</em></>
+                <>Mallorca,<br className="hidden sm:block" /> <em className="italic text-[#00C37A]">clasificada con datos reales.</em></>
               )}
             </h1>
             <p className="mx-auto mt-6 max-w-[480px] text-base font-light leading-8 text-white/60 sm:text-[17px]">
               {safeLocale === "de"
-                ? "Rankings aus echten Google-Bewertungen — damit du die besten Orte findest, nicht die bestbezahlten. Plus verifizierte Profis, die Deutsch oder Englisch sprechen."
+                ? "Rankings aus öffentlichen Google-Bewertungen — keine bezahlten Positionen, keine gesponserten Ergebnisse."
                 : safeLocale === "en"
-                ? "Rankings from real Google reviews so you find the best places, not the best-paid ones. Plus verified professionals who actually speak your language."
-                : "Rankings basados en reseñas reales de Google para encontrar los mejores sitios, no los que más pagan. Más profesionales verificados que hablan inglés y alemán."}
+                ? "Rankings built on public Google Reviews — no paid positions, no sponsored results."
+                : "Rankings construidos sobre Google Reviews públicas — sin posiciones de pago, sin resultados patrocinados."}
             </p>
             <HomePlaceSearch locale={safeLocale} categories={[...publicCategorySlugs]} locations={homepageSearchLocations} />
           </div>
@@ -554,7 +554,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
               {methodology.link}
             </Link>
           </div>
-          <div className="grid border border-white/[0.08] md:grid-cols-3">
+          <div className="grid border border-white/[0.08] md:grid-cols-2">
             {methodology.items.map(({ title, text }, index) => (
               <div key={title} className="border-b border-white/[0.08] p-5 text-center last:border-b-0 sm:p-8 md:border-b-0 md:border-r md:text-left md:last:border-r-0">
                 <div className="font-display text-5xl font-black leading-none text-[#00C37A]/30">{String(index + 1).padStart(2, "0")}</div>

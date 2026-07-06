@@ -254,7 +254,7 @@ CRITICAL:
 
   const response = await anthropic.messages.create({
     model: 'claude-sonnet-4-6',
-    max_tokens: 4500,
+    max_tokens: 8000,
     tools: [{ type: 'web_search_20250305', name: 'web_search' }],
     system: systemPrompt,
     messages: [{ role: 'user', content: userPrompt }],
@@ -272,7 +272,15 @@ CRITICAL:
   const jsonMatch = textContent.match(/\{[\s\S]*\}/)
   if (!jsonMatch) throw new Error(`No JSON in Claude response for: ${title} [${locale}]`)
 
-  const data = JSON.parse(jsonMatch[0])
+  let data
+  try {
+    data = JSON.parse(jsonMatch[0])
+  } catch (e) {
+    // Dump raw JSON to scratchpad for inspection
+    const debugPath = `reports/debug-json-${locale}-${Date.now()}.txt`
+    writeFileSync(debugPath, jsonMatch[0])
+    throw new Error(`JSON parse failed for ${title} [${locale}]: ${e.message} — raw saved to ${debugPath}`)
+  }
 
   return {
     guideData: data,
@@ -408,7 +416,7 @@ async function main() {
   const tierArg = args.find(a => a.startsWith('--tier='))?.split('=')[1]
   const titleArg = args.find(a => a.startsWith('--title='))?.split('=')[1]
 
-  const locales = localeArg ? [localeArg] : ['es', 'en']
+  const locales = localeArg ? localeArg.split(',').map(l => l.trim()) : ['es', 'en']
 
   // Build work queue
   let queue = []

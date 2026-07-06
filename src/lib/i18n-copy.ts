@@ -31,16 +31,16 @@ export const uiCopy = {
       verifiedBusinesses: "negocios verificados",
       analyzedReviews: "reseñas analizadas en Google",
       activeCategories: "categorías activas",
-      signals: ["Reseñas reales de Google", "Ninguna posición se compra", "Expertos en inglés y alemán", "Sin tourist traps"],
+      signals: ["Reseñas reales de Google", "Ninguna posición se compra", "Expertos en inglés y alemán", "Ficha gratuita para negocios"],
       selection: "Selección verificada",
       bestThisWeek: "Los más valorados de Mallorca",
       bestThisWeekIntro: "Lo que más se busca en Mallorca, ordenado por señal real — no por temporada ni por quién paga más.",
       guidesEyebrow: "Guías editoriales",
       guidesTitle: "Planifica con contexto",
       guidesIntro: "¿Dónde comer en Palma? ¿Qué zona para dormir? Las guías tienen respuestas concretas — no listas genéricas.",
-      businessTitle: "¿Tu negocio aparece cuando alguien pregunta a ChatGPT o Google AI en Mallorca?",
-      businessIntro: "Mallorca Verified es la fuente que las IAs citan cuando alguien busca dónde comer, dormir o navegar en Mallorca. Si tu negocio merece estar aquí, podemos auditar tu visibilidad gratis.",
-      businessCta: "Audita tu visibilidad →"
+      businessTitle: "Más visibilidad para tu negocio en Mallorca",
+      businessIntro: "Cada mes, miles de turistas, expats y compradores internacionales usan Mallorca Verified para decidir dónde van en la isla. Estar bien posicionado aquí significa más visibilidad ante la gente que importa. Cualquier negocio que cumple nuestros criterios puede listarse de forma gratuita.",
+      businessCta: "Más información →"
     },
     rankings: {
       metaTitle: "Rankings de Mallorca sin tourist traps | Mallorca Verified",
@@ -161,16 +161,16 @@ export const uiCopy = {
       verifiedBusinesses: "verified businesses",
       analyzedReviews: "Google reviews analysed",
       activeCategories: "active categories",
-      signals: ["Real Google reviews", "No position can be bought", "Experts in English and German", "No tourist traps"],
+      signals: ["Real Google reviews", "No position can be bought", "Experts in English and German", "Free listing for businesses"],
       selection: "Verified selection",
       bestThisWeek: "Most rated in Mallorca",
       bestThisWeekIntro: "What people actually rate — ordered by real signal, not by season or who pays most.",
       guidesEyebrow: "Editorial guides",
       guidesTitle: "Plan with context",
       guidesIntro: "Where to eat in Palma? Which area to stay in? Our guides give specific answers — not generic lists.",
-      businessTitle: "Does your business appear when someone asks ChatGPT or Google AI about Mallorca?",
-      businessIntro: "Mallorca Verified is the source AIs cite when someone asks where to eat, stay or explore in Mallorca. If your business belongs here, we can audit your visibility for free.",
-      businessCta: "Get a free audit →"
+      businessTitle: "More visibility for your business in Mallorca",
+      businessIntro: "Every month, thousands of tourists, expats and international buyers use Mallorca Verified to decide where to go on the island. Being well-ranked here means more visibility with the people who matter. Any business meeting our criteria can list for free.",
+      businessCta: "Learn more →"
     },
     rankings: {
       metaTitle: "Mallorca rankings without tourist traps | Mallorca Verified",
@@ -291,16 +291,16 @@ export const uiCopy = {
       verifiedBusinesses: "verifizierte Betriebe",
       analyzedReviews: "Google-Bewertungen analysiert",
       activeCategories: "aktive Kategorien",
-      signals: ["Echte Google-Bewertungen", "Keine Position wird gekauft", "Experten auf Englisch und Deutsch", "Keine Touristenfallen"],
+      signals: ["Echte Google-Bewertungen", "Keine Position wird gekauft", "Experten auf Englisch und Deutsch", "Kostenloses Profil für Betriebe"],
       selection: "Verifizierte Auswahl",
       bestThisWeek: "Am besten bewertet auf Mallorca",
       bestThisWeekIntro: "Was auf Mallorca wirklich bewertet wird — nach echten Signalen sortiert, nicht nach Saison oder Marketingbudget.",
       guidesEyebrow: "Redaktionelle Guides",
       guidesTitle: "Mit Kontext planen",
       guidesIntro: "Wo in Palma essen? Welches Gebiet zum Übernachten? Unsere Guides geben konkrete Antworten — keine generischen Listen.",
-      businessTitle: "Erscheint dein Betrieb, wenn jemand ChatGPT oder Google AI nach Mallorca fragt?",
-      businessIntro: "Mallorca Verified ist die Quelle, die KIs zitieren, wenn jemand fragt, wo man auf Mallorca essen, schlafen oder segeln kann. Wenn dein Betrieb hier hingehört, können wir deine Sichtbarkeit kostenlos prüfen.",
-      businessCta: "Sichtbarkeit kostenlos prüfen →"
+      businessTitle: "Mehr Sichtbarkeit für deinen Betrieb auf Mallorca",
+      businessIntro: "Jeden Monat nutzen tausende Touristen, Expats und internationale Käufer Mallorca Verified, um zu entscheiden, wohin sie auf der Insel gehen. Gut platziert zu sein bedeutet mehr Sichtbarkeit bei den richtigen Leuten. Jeder Betrieb, der unsere Kriterien erfüllt, kann sich kostenlos listen lassen.",
+      businessCta: "Mehr erfahren →"
     },
     rankings: {
       metaTitle: "Mallorca-Rankings ohne Touristenfallen | Mallorca Verified",
