@@ -4,7 +4,7 @@ import { getBusinessImagesMap, getGuides } from "@/lib/repository";
 import { generateSeoMetadata } from "@/lib/seo";
 import { isLocale, type Locale } from "@/lib/i18n";
 import { t } from "@/lib/i18n-copy";
-import { getEditorialImageForGuide } from "@/lib/unsplash";
+import { getEditorialImage, getPrimaryEditorialKeyForGuide, EDITORIAL_CATEGORY_POOL } from "@/lib/unsplash";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -29,13 +29,18 @@ export default async function GuidesPage({ params }: { params: Promise<{ locale:
   const allBusinessIds = [...new Set(guides.flatMap((g) => g.sections.flatMap((s) => s.business_ids ?? [])))];
   const businessImagesMap = await getBusinessImagesMap(allBusinessIds);
 
-  // Assign a unique cover URL to each guide — sequential to avoid race conditions.
-  // heroImageUrl is treated as a candidate too so duplicate DB images don't repeat.
+  // Preload all editorial category images in one shot (avoids per-guide DB calls)
+  const editorialImagesRaw = await Promise.all(EDITORIAL_CATEGORY_POOL.map(k => getEditorialImage(k)));
+  const editorialPool = EDITORIAL_CATEGORY_POOL
+    .map((key, i) => ({ key, url: editorialImagesRaw[i]?.imageUrl ?? null }))
+    .filter((e): e is { key: string; url: string } => e.url !== null);
+
+  // Assign a unique cover URL to each guide — sequential, fully deduplicated.
   const seenUrls = new Set<string>();
   const coverUrls: (string | null)[] = [];
 
   for (const guide of guides) {
-    // Build candidate list: DB hero → business real photos (skip placeholders)
+    // 1. Guide-specific hero or real business photo (http only — skip placeholders)
     const candidates: string[] = [];
     if (guide.heroImageUrl) candidates.push(guide.heroImageUrl);
     for (const section of guide.sections) {
@@ -45,20 +50,21 @@ export default async function GuidesPage({ params }: { params: Promise<{ locale:
       }
     }
 
-    // Pick first unseen real business/hero photo
     let chosen: string | null = null;
     for (const url of candidates) {
-      if (!seenUrls.has(url)) {
-        seenUrls.add(url);
-        chosen = url;
-        break;
-      }
+      if (!seenUrls.has(url)) { seenUrls.add(url); chosen = url; break; }
     }
 
-    // No real photo — use editorial fallback (editorial images may repeat across cards)
+    // 2. No real photo — rotate through editorial pool, primary key first
     if (!chosen) {
-      const editorial = await getEditorialImageForGuide(guide.title);
-      if (editorial) chosen = editorial.imageUrl;
+      const primaryKey = getPrimaryEditorialKeyForGuide(guide.title);
+      const ordered = [
+        ...editorialPool.filter(e => e.key === primaryKey),
+        ...editorialPool.filter(e => e.key !== primaryKey),
+      ];
+      for (const { url } of ordered) {
+        if (!seenUrls.has(url)) { seenUrls.add(url); chosen = url; break; }
+      }
     }
 
     coverUrls.push(chosen);
