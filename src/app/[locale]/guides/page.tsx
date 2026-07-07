@@ -35,17 +35,17 @@ export default async function GuidesPage({ params }: { params: Promise<{ locale:
   const coverUrls: (string | null)[] = [];
 
   for (const guide of guides) {
-    // Build candidate list: DB hero → business photos
+    // Build candidate list: DB hero → business real photos (skip placeholders)
     const candidates: string[] = [];
     if (guide.heroImageUrl) candidates.push(guide.heroImageUrl);
     for (const section of guide.sections) {
       for (const id of section.business_ids ?? []) {
         const url = businessImagesMap.get(id);
-        if (url) candidates.push(url);
+        if (url && url.startsWith("http")) candidates.push(url);
       }
     }
 
-    // Pick first unseen candidate
+    // Pick first unseen real business/hero photo
     let chosen: string | null = null;
     for (const url of candidates) {
       if (!seenUrls.has(url)) {
@@ -55,13 +55,10 @@ export default async function GuidesPage({ params }: { params: Promise<{ locale:
       }
     }
 
-    // Nothing from DB/businesses — try editorial fallback
+    // No real photo — use editorial fallback (editorial images may repeat across cards)
     if (!chosen) {
       const editorial = await getEditorialImageForGuide(guide.title);
-      if (editorial && !seenUrls.has(editorial.imageUrl)) {
-        seenUrls.add(editorial.imageUrl);
-        chosen = editorial.imageUrl;
-      }
+      if (editorial) chosen = editorial.imageUrl;
     }
 
     coverUrls.push(chosen);
