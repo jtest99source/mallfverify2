@@ -217,16 +217,21 @@ export async function getEditorialImageForGuide(title: string, category?: string
   if (specific) return specific;
 
   const normalized = (category || title).toLowerCase();
-  if (normalized.includes("hotel") || normalized.includes("boutique")) return getEditorialImage("category_hotel");
+  if (normalized.includes("hotel") || normalized.includes("boutique") || normalized.includes("alojarse") || normalized.includes("stay") || normalized.includes("areas to stay") || normalized.includes("where to stay")) return getEditorialImage("category_hotel");
   if (normalized.includes("barco") || normalized.includes("boat rental") || normalized.includes("alquiler de barco")) return getEditorialImage("category_boat_rental");
   if (normalized.includes("sailing") || normalized.includes("charter") || normalized.includes("velero")) return getEditorialImage("category_beach");
   if (normalized.includes("beach club")) return getEditorialImage("category_beach_club");
   if (normalized.includes("playa") || normalized.includes("cala") || normalized.includes("beach")) return getEditorialImage("category_beach");
+  if (normalized.includes("day trip") || normalized.includes("tagesausflug") || normalized.includes("excursion") || normalized.includes("ausflug") || normalized.includes("cave") || normalized.includes("höhle")) return getEditorialImage("category_activity");
   if (normalized.includes("actividad") || normalized.includes("activity") || normalized.includes("senderismo") || normalized.includes("hiking")) return getEditorialImage("category_activity");
-  if (normalized.includes("restaurante") || normalized.includes("restaurant") || normalized.includes("comer") || normalized.includes("cenar")) return getEditorialImage("category_restaurant");
+  if (normalized.includes("gym") || normalized.includes("fitness") || normalized.includes("fitnessstudio") || normalized.includes("pilates") || normalized.includes("yoga")) return getEditorialImage("category_activity");
+  if (normalized.includes("spa") || normalized.includes("wellness")) return getEditorialImage("category_hotel");
+  if (normalized.includes("restaurante") || normalized.includes("restaurant") || normalized.includes("restaurants") || normalized.includes("comer") || normalized.includes("cenar") || normalized.includes("bakery") || normalized.includes("café") || normalized.includes("cafe")) return getEditorialImage("category_restaurant");
   if (normalized.includes("rent") || normalized.includes("coche") || normalized.includes("car")) return getEditorialImage("category_activity");
-  if (normalized.includes("gym") || normalized.includes("fitness") || normalized.includes("spa") || normalized.includes("wellness")) return getEditorialImage("category_hotel");
-  return getEditorialImage("guide_default");
+  // village/tramuntana guides → restaurant image as scenic food destination
+  if (normalized.includes("valldemossa") || normalized.includes("fornalutx") || normalized.includes("deià") || normalized.includes("deia") || normalized.includes("sóller") || normalized.includes("soller") || normalized.includes("alaró") || normalized.includes("alaro")) return getEditorialImage("category_restaurant");
+  // final guaranteed fallback — category_activity always exists
+  return getEditorialImage("category_activity");
 }
 
 export async function getEditorialImageForRanking(title: string, category: RankingCategory) {
