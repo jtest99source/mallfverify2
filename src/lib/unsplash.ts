@@ -57,21 +57,21 @@ const categoryImageKeys: Record<BusinessCategory, string> = {
   "boat-rental": "category_boat_rental",
   activity: "category_activity",
   beach: "category_beach",
-  bar: "category_restaurant",
+  bar: "category_bar",
   cafe: "category_restaurant",
-  nightlife: "category_activity",
-  bakery: "category_restaurant",
+  nightlife: "category_nightlife",
+  bakery: "category_bakery",
   "rent-a-car": "category_activity",
   "car-dealer": "category_activity",
-  spa: "category_hotel",
-  gym: "category_activity",
-  casino: "category_activity",
+  spa: "category_spa",
+  gym: "category_gym",
+  casino: "category_nightlife",
   veterinarian: "category_activity",
   healthcare: "category_hotel",
   "real-estate": "category_activity",
   market: "category_restaurant",
   "local-shop": "category_activity",
-  museum: "category_activity",
+  museum: "category_museum",
   route: "category_beach",
   excursion: "category_activity"
 };
@@ -224,8 +224,8 @@ export async function getEditorialImageForGuide(title: string, category?: string
   if (normalized.includes("playa") || normalized.includes("cala") || normalized.includes("beach")) return getEditorialImage("category_beach");
   if (normalized.includes("day trip") || normalized.includes("tagesausflug") || normalized.includes("excursion") || normalized.includes("ausflug") || normalized.includes("cave") || normalized.includes("höhle")) return getEditorialImage("category_activity");
   if (normalized.includes("actividad") || normalized.includes("activity") || normalized.includes("senderismo") || normalized.includes("hiking")) return getEditorialImage("category_activity");
-  if (normalized.includes("gym") || normalized.includes("fitness") || normalized.includes("fitnessstudio") || normalized.includes("pilates") || normalized.includes("yoga")) return getEditorialImage("category_activity");
-  if (normalized.includes("spa") || normalized.includes("wellness")) return getEditorialImage("category_hotel");
+  if (normalized.includes("gym") || normalized.includes("fitness") || normalized.includes("fitnessstudio") || normalized.includes("pilates") || normalized.includes("yoga")) return getEditorialImage("category_gym");
+  if (normalized.includes("spa") || normalized.includes("wellness")) return getEditorialImage("category_spa");
   if (normalized.includes("restaurante") || normalized.includes("restaurant") || normalized.includes("restaurants") || normalized.includes("comer") || normalized.includes("cenar") || normalized.includes("bakery") || normalized.includes("café") || normalized.includes("cafe")) return getEditorialImage("category_restaurant");
   if (normalized.includes("rent") || normalized.includes("coche") || normalized.includes("car")) return getEditorialImage("category_activity");
   // village/tramuntana guides → restaurant image as scenic food destination
