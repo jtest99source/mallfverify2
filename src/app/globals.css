@@ -395,6 +395,29 @@ body {
   color: rgba(255,255,255,0.78);
 }
 
+.rv-more {
+  appearance: none;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  color: #00C37A;
+  font: inherit;
+  font-weight: 800;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.rv-more:hover {
+  opacity: 0.7;
+}
+
+.rv-more:focus-visible {
+  outline: 2px solid #00C37A;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
 .rv-review-translation {
   color: rgba(255,255,255,0.42);
   font-size: 9px;
@@ -419,7 +442,7 @@ body {
   display: flex;
   font-size: 11px;
   font-weight: 800;
-  justify-content: flex-end;
+  justify-content: center;
   letter-spacing: 0.08em;
   margin-top: 0.9rem;
   text-decoration: none;

@@ -1,6 +1,7 @@
 import type { Business, FeaturedReview, GoogleReview } from "@/types/business";
 import type { Locale } from "@/lib/i18n";
 import { t } from "@/lib/i18n-copy";
+import { ReviewText } from "@/components/ReviewText";
 
 function numberLocale(locale: Locale) {
   return locale === "de" ? "de-DE" : locale === "en" ? "en-US" : "es-ES";
@@ -34,14 +35,13 @@ function ReviewCard({ review, index, locale }: { review: FeaturedReview; index: 
         </div>
         <div className="rv-review-stars">{stars(review.rating)}</div>
       </div>
-      <p>{review.text}</p>
+      <ReviewText text={review.text} locale={locale} />
     </article>
   );
 }
 
 function googleReviewText(review: GoogleReview) {
-  const text = review.text?.replace(/\s+/g, " ").trim() ?? "";
-  return text.length > 360 ? `${text.slice(0, 357).trim()}...` : text;
+  return review.text?.replace(/\s+/g, " ").trim() ?? "";
 }
 
 function googleReviewsAsFeatured(reviews?: GoogleReview[]): FeaturedReview[] {
