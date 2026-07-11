@@ -567,10 +567,6 @@ body {
     padding: 0.85rem;
   }
 
-  .rv-review:nth-of-type(n+3) {
-    display: none;
-  }
-
   .rv-review p {
     font-size: 12px;
     line-height: 1.55;
