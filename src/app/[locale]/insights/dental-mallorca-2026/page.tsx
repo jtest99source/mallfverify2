@@ -2,6 +2,8 @@ import Link from "next/link";
 import { generateSeoMetadata } from "@/lib/seo";
 import { isLocale, type Locale } from "@/lib/i18n";
 
+const HERO = "https://wpavlaukshgdzqycmmrc.supabase.co/storage/v1/object/public/guide-heroes/report-dental-hero.jpg";
+
 // Static snapshot — Mallorca dental sector, July 2026 (179 published clinics, public Google data).
 const DATA = {
   total: 179,
@@ -181,11 +183,18 @@ export default async function DentalReportPage({ params }: { params: Promise<{ l
       <article className="mx-auto max-w-3xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
         {/* header */}
         <header>
-          <p className="text-[11px] font-black uppercase tracking-[0.2em] text-[#00C37A]">{c.eyebrow}</p>
-          <h1 className="mt-4 font-display text-3xl font-black leading-[1.05] tracking-tight text-white text-balance sm:text-5xl">{c.title}</h1>
-          <p className="mt-5 max-w-2xl text-base leading-8 text-white/60">{c.dek}</p>
+          <div className="relative overflow-hidden rounded-lg border border-white/[0.10]">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={HERO} alt="" aria-hidden="true" className="h-[320px] w-full object-cover object-center sm:h-[440px]" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#07101F] via-[#07101F]/75 to-[#07101F]/15" />
+            <div className="absolute inset-x-0 bottom-0 p-6 sm:p-9">
+              <p className="text-[11px] font-black uppercase tracking-[0.2em] text-[#00C37A]">{c.eyebrow}</p>
+              <h1 className="mt-3 max-w-2xl font-display text-3xl font-black leading-[1.04] tracking-tight text-white text-balance sm:text-[2.85rem]">{c.title}</h1>
+            </div>
+          </div>
+          <p className="mt-6 max-w-2xl text-base leading-8 text-white/60">{c.dek}</p>
 
-          <div className="mt-9 grid overflow-hidden rounded-md border border-white/[0.10] sm:grid-cols-3">
+          <div className="mt-8 grid overflow-hidden rounded-md border border-white/[0.10] sm:grid-cols-3">
             {[nf(DATA.total), `${rating}★`, nf(DATA.medReviews)].map((n, i) => (
               <div key={i} className="border-b border-white/[0.10] bg-[#0C1A2E] p-5 last:border-b-0 sm:border-b-0 sm:border-r sm:last:border-r-0">
                 <p className="font-display text-3xl font-black tabular-nums text-[#00C37A]">{n}</p>
