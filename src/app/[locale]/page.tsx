@@ -221,7 +221,7 @@ function CarouselBusinessCard({ business, index, locale }: { business: Business;
           <RatingBadge rating={business.rating} reviewsCount={business.reviewsCount} locale={locale} compact />
         </div>
         <h3 className="font-display line-clamp-2 text-xl font-bold leading-tight text-white">{getBusinessPublicName(business)}</h3>
-        <div className="mt-4 border-t border-white/[0.08] pt-3 text-[10px] font-bold uppercase tracking-[0.1em] text-white/35 transition-colors group-hover:text-[#00C37A]">
+        <div className="mt-4 border-t border-white/[0.08] pt-3 text-[10px] font-bold uppercase tracking-[0.1em] text-[#00C37A]/75 transition-colors group-hover:text-[#00C37A]">
           {locale === "de" ? "Ansehen" : locale === "en" ? "View details" : "Ver ficha"}
           <IconArrowUpRight size={13} stroke={2} className="ml-1 inline" />
         </div>
@@ -493,7 +493,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
             {[
               { value: formatIntegerMetric(stats.publishedBusinesses, safeLocale), label: copy.home.verifiedBusinesses },
               { value: formatMillionMetric(stats.analyzedReviews, safeLocale), label: copy.home.analyzedReviews },
-              { value: formatIntegerMetric(publicCategorySlugs.length, safeLocale), label: copy.home.activeCategories }
+              { value: "56", label: safeLocale === "de" ? "Orte abgedeckt" : safeLocale === "en" ? "towns covered" : "municipios cubiertos" }
             ].map((stat) => (
               <div key={stat.label} className="border-white/10 px-3 py-2 sm:border-r last:border-r-0">
                 <div className="font-display text-3xl font-black leading-none text-[#00C37A]">{stat.value}</div>
@@ -547,7 +547,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
               {safeLocale === "de" ? "Methode" : safeLocale === "en" ? "Method" : "Método"}
             </p>
             <h2 className="font-display mt-3 text-3xl font-bold leading-none text-white sm:text-4xl">
-              {safeLocale === "de" ? "Warum diese Reihenfolge?" : safeLocale === "en" ? "Why this order?" : "¿Por qué este orden?"}
+              {safeLocale === "de" ? "Wie unsere Rankings funktionieren" : safeLocale === "en" ? "How our rankings work" : "Cómo funcionan nuestros rankings"}
             </h2>
           </div>
             <Link href={methodologyPath(safeLocale)} className="hidden text-[12px] font-semibold tracking-[0.04em] text-white/40 transition-colors hover:text-[#00C37A] sm:inline-flex">
@@ -557,7 +557,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           <div className="grid border border-white/[0.08] md:grid-cols-2">
             {methodology.items.map(({ title, text }, index) => (
               <div key={title} className="border-b border-white/[0.08] p-5 text-center last:border-b-0 sm:p-8 md:border-b-0 md:border-r md:text-left md:last:border-r-0">
-                <div className="font-display text-5xl font-black leading-none text-[#00C37A]/30">{String(index + 1).padStart(2, "0")}</div>
+                <div className="font-display text-5xl font-black leading-none text-[#00C37A]/60">{String(index + 1).padStart(2, "0")}</div>
                 <h2 className="font-display mt-5 text-2xl font-bold leading-tight text-white">{title}</h2>
                 <p className="mt-3 text-sm font-light leading-7 text-white/42">{text}</p>
               </div>
@@ -612,8 +612,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           <div className="grid grid-cols-2 gap-px border border-white/[0.08] md:block md:space-y-5 md:border-0 md:border-l md:border-white/[0.08] md:bg-transparent md:pl-8">
             {[
               { value: formatIntegerMetric(stats.publishedBusinesses, safeLocale), label: copy.home.verifiedBusinesses },
-              { value: formatMillionMetric(stats.analyzedReviews, safeLocale), label: copy.home.analyzedReviews },
-              { value: formatIntegerMetric(publicCategorySlugs.length, safeLocale), label: copy.home.activeCategories }
+              { value: formatMillionMetric(stats.analyzedReviews, safeLocale), label: copy.home.analyzedReviews }
             ].map((stat) => (
               <div key={stat.label} className="bg-[#0C1A2E] p-4 md:flex md:items-baseline md:gap-3 md:bg-transparent md:p-0">
                 <div className="font-display text-3xl font-black leading-none text-[#00C37A] md:text-4xl">{stat.value}</div>
