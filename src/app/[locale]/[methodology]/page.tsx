@@ -604,12 +604,27 @@ function MethodologyPage({ locale, canonical, stats }: { locale: Locale; canonic
           <div className="mt-7 grid gap-4">
             {c.factors.map(([eyebrow, title, text], index) => {
               const Icon = index === 0 ? IconStar : index === 1 ? IconMessages : IconDiamond;
+              const isProprietary = index === c.factors.length - 1;
               return (
-                <div key={title} className="rounded-lg border border-white/[0.08] bg-[#0C1A2E] p-5 shadow-none">
+                <div
+                  key={title}
+                  className={
+                    isProprietary
+                      ? "rounded-lg border border-[#00C37A]/55 bg-[linear-gradient(135deg,#07101F_0%,#0F2035_60%,#07101F_100%)] p-5 shadow-[0_0_0_1px_rgba(0,195,122,0.12)]"
+                      : "rounded-lg border border-white/[0.08] bg-[#0C1A2E] p-5 shadow-none"
+                  }
+                >
                   <div className="flex gap-4">
                     <Icon size={26} stroke={1.8} className="mt-1 shrink-0 text-[#00C37A]" />
                     <div>
-                      <p className="text-[10px] font-bold uppercase tracking-[0.12em] text-[#00C37A]">{eyebrow}</p>
+                      <div className="flex flex-wrap items-center gap-2">
+                        <p className="text-[10px] font-bold uppercase tracking-[0.12em] text-[#00C37A]">{eyebrow}</p>
+                        {isProprietary && (
+                          <span className="rounded-full bg-[#00C37A]/15 px-2 py-0.5 text-[9px] font-black uppercase tracking-[0.1em] text-[#00C37A]">
+                            {locale === "en" ? "Our own signal" : locale === "de" ? "Eigenes Signal" : "Señal propia"}
+                          </span>
+                        )}
+                      </div>
                       <h3 className="mt-1 font-sans text-xl font-bold text-white">{title}</h3>
                       <p className="mt-3 text-sm leading-7 text-white/70">{text}</p>
                     </div>
