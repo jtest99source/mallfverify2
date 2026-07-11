@@ -93,7 +93,7 @@ export const uiCopy = {
       allPlaces: "Todas",
       results: "resultados",
       noResults: "No hay resultados con esos filtros. Prueba con otra localidad o cambia el tipo.",
-      sort: { ratio: "Mejor equilibrio", rating: "Mejor valoración", reviews: "Más reseñas", hidden: "Joyas ocultas" }
+      sort: { ratio: "MV Score", rating: "Mejor valoración", reviews: "Más reseñas", hidden: "Joyas ocultas" }
     },
     business: {
       hiddenGem: "Joya oculta",
@@ -223,7 +223,7 @@ export const uiCopy = {
       allPlaces: "All",
       results: "results",
       noResults: "No results with these filters. Try another location or type.",
-      sort: { ratio: "Best overall", rating: "Highest rating", reviews: "Most reviews", hidden: "Hidden gems" }
+      sort: { ratio: "MV Score", rating: "Highest rating", reviews: "Most reviews", hidden: "Hidden gems" }
     },
     business: {
       hiddenGem: "Hidden gem",
@@ -353,7 +353,7 @@ export const uiCopy = {
       allPlaces: "Alle",
       results: "Ergebnisse",
       noResults: "Keine Ergebnisse mit diesen Filtern. Probiere einen anderen Ort oder Typ.",
-      sort: { ratio: "Beste Gesamtwertung", rating: "Beste Bewertung", reviews: "Meiste Bewertungen", hidden: "Geheimtipps" }
+      sort: { ratio: "MV Score", rating: "Beste Bewertung", reviews: "Meiste Bewertungen", hidden: "Geheimtipps" }
     },
     business: {
       hiddenGem: "Geheimtipp",

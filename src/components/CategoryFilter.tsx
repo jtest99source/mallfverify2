@@ -11,6 +11,7 @@ import { getBusinessPublicName } from "@/lib/business-name-normalizer";
 import { getCategorySlugFromBusiness } from "@/lib/data";
 import type { Locale } from "@/lib/i18n";
 import { isUntapped } from "@/lib/untapped-score";
+import { compareByMvScore } from "@/lib/mv-score";
 import type { Business } from "@/types/business";
 
 type SortKey = "ratio" | "rating" | "reviews" | "untapped";
@@ -36,7 +37,7 @@ const copy = {
     noResults: "No hay resultados con esos filtros.",
     loadMore: "Cargar más",
     showing: (shown: string, total: string) => `Mostrando ${shown} de ${total}`,
-    sort: { ratio: "Recomendado", rating: "Mejor valoración", reviews: "Más reseñas", untapped: "Joyas ocultas" }
+    sort: { ratio: "MV Score", rating: "Mejor valoración", reviews: "Más reseñas", untapped: "Joyas ocultas" }
   },
   en: {
     orderedBy: "Sorted by",
@@ -54,7 +55,7 @@ const copy = {
     noResults: "No results with these filters.",
     loadMore: "Load more",
     showing: (shown: string, total: string) => `Showing ${shown} of ${total}`,
-    sort: { ratio: "Recommended", rating: "Best rating", reviews: "Most reviews", untapped: "Hidden gems" }
+    sort: { ratio: "MV Score", rating: "Best rating", reviews: "Most reviews", untapped: "Hidden gems" }
   },
   de: {
     orderedBy: "Sortiert nach",
@@ -72,7 +73,7 @@ const copy = {
     noResults: "Keine Ergebnisse mit diesen Filtern.",
     loadMore: "Mehr laden",
     showing: (shown: string, total: string) => `${shown} von ${total} angezeigt`,
-    sort: { ratio: "Empfohlen", rating: "Beste Bewertung", reviews: "Meiste Rezensionen", untapped: "Geheimtipps" }
+    sort: { ratio: "MV Score", rating: "Beste Bewertung", reviews: "Meiste Rezensionen", untapped: "Geheimtipps" }
   }
 } as const;
 
@@ -137,9 +138,7 @@ function sortBusinesses(businesses: Business[], sort: SortKey) {
       return ratioScore(b) - ratioScore(a);
     }
 
-    const ratioDiff = ratioScore(b) - ratioScore(a);
-    if (ratioDiff !== 0) return ratioDiff;
-    return (b.reviewsCount ?? 0) - (a.reviewsCount ?? 0);
+    return compareByMvScore(a, b);
   });
 }
 

@@ -37,7 +37,7 @@ const methodologyCopy = {
     whyTitle: "Por qué las reseñas de Google son la base",
     whyText: "Las reseñas de Google de miles de personas reales a lo largo de años son la señal más difícil de manipular. Un restaurante con 4,8 de 600 personas en tres años no se puede fabricar. Ese es el punto de partida — y filtramos todo lo que no supera un umbral mínimo de señal real y consistente.",
     factorsTitle: "Cómo construimos los rankings",
-    factorsIntro: "Cada categoría se analiza de forma independiente, ponderando el volumen de señal disponible en Google para ese tipo de negocio específico.",
+    factorsIntro: "Cada categoría se analiza de forma independiente, ponderando el volumen de señal disponible en Google para ese tipo de negocio específico. El orden por defecto usa el MV Score: nuestra señal 0–100 que combina valoración media (Factor 1) y volumen de reseñas (Factor 2) en un solo número — por eso un 4,7 con cientos de reseñas puede ir por delante de un 5,0 con muy pocas.",
     factors: [
       ["Factor 1", "Valoración media", "La nota que los clientes han dado en Google. Una valoración alta es una señal fuerte, pero por sí sola no basta."],
       ["Factor 2", "Volumen de reseñas", "No pesa igual un 4,9 con 8 reseñas que un 4,7 con cientos de opiniones. El volumen ayuda a distinguir señales sólidas."],
@@ -83,7 +83,7 @@ const methodologyCopy = {
     whyTitle: "Why Google reviews are the foundation",
     whyText: "Google reviews from thousands of real visitors over years are the hardest signal to fake. A restaurant with 4.8★ from 600 people over three years can't be manufactured. That's the foundation — and we filter out anything that hasn't cleared a minimum threshold of real, consistent signal.",
     factorsTitle: "How rankings are built",
-    factorsIntro: "Each category is analysed independently, weighted according to the signal volume available on Google for that specific type of business.",
+    factorsIntro: "Each category is analysed independently, weighted according to the signal volume available on Google for that specific type of business. The default order uses the MV Score: our 0–100 signal that combines average rating (Factor 1) and review volume (Factor 2) into a single number — which is why a 4.7 with hundreds of reviews can rank ahead of a 5.0 with very few.",
     factors: [
       ["Factor 1", "Average rating", "The rating customers gave on Google. A high rating is a strong signal, but it is not enough on its own."],
       ["Factor 2", "Review volume", "A 4.9 with 8 reviews is not the same as a 4.7 with hundreds of opinions. Volume helps separate solid signals from isolated cases."],
@@ -129,7 +129,7 @@ const methodologyCopy = {
     whyTitle: "Warum Google-Bewertungen die Grundlage sind",
     whyText: "Google-Bewertungen von tausenden echten Besuchern über Jahre sind das schwierigste Signal zu fälschen. Ein Restaurant mit 4,8 von 600 Personen über drei Jahre lässt sich nicht fabricieren. Das ist die Grundlage — und wir filtern alles heraus, das keine minimale Schwelle echter, konsistenter Signale erreicht.",
     factorsTitle: "Wie Rankings entstehen",
-    factorsIntro: "Jede Kategorie wird unabhängig analysiert und nach dem verfügbaren Signalvolumen auf Google für diesen spezifischen Betriebstyp gewichtet.",
+    factorsIntro: "Jede Kategorie wird unabhängig analysiert und nach dem verfügbaren Signalvolumen auf Google für diesen spezifischen Betriebstyp gewichtet. Die Standardsortierung nutzt den MV Score: unser 0–100-Signal, das Durchschnittsbewertung (Faktor 1) und Rezensionsvolumen (Faktor 2) zu einer einzigen Zahl kombiniert — deshalb kann ein 4,7 mit Hunderten Rezensionen vor einem 5,0 mit sehr wenigen liegen.",
     factors: [
       ["Faktor 1", "Durchschnittsbewertung", "Die Bewertung, die Kunden auf Google abgegeben haben. Eine hohe Note ist ein starkes Signal, reicht allein aber nicht aus."],
       ["Faktor 2", "Bewertungsvolumen", "Ein 4,9 mit 8 Bewertungen ist nicht dasselbe wie ein 4,7 mit Hunderten Meinungen. Volumen macht Signale belastbarer."],

@@ -33,6 +33,7 @@ import { getEditorialImageForGuide } from "@/lib/unsplash";
 import { HomePlaceSearch } from "@/components/HomePlaceSearch";
 import { BusinessImage, getBusinessImageUrl } from "@/components/BusinessImage";
 import { RatingBadge } from "@/components/RatingBadge";
+import { MvScoreBadge } from "@/components/MvScoreBadge";
 import { JsonLd } from "@/components/JsonLd";
 import { siteConfig } from "@/config/site";
 import { siteUrl } from "@/lib/data";
@@ -217,7 +218,8 @@ function CarouselBusinessCard({ business, index, locale }: { business: Business;
         </div>
       </BusinessImage>
       <div className="p-4">
-        <div className="mb-3 flex min-h-6 items-center justify-between gap-2">
+        <div className="mb-3 flex min-h-6 items-center gap-2">
+          <MvScoreBadge rating={business.rating} reviewsCount={business.reviewsCount} locale={locale} />
           <RatingBadge rating={business.rating} reviewsCount={business.reviewsCount} locale={locale} compact />
         </div>
         <h3 className="font-display line-clamp-2 text-xl font-bold leading-tight text-white">{getBusinessPublicName(business)}</h3>

@@ -12,6 +12,8 @@ import { t, getCategoryCopy } from "@/lib/i18n-copy";
 import { methodologyPath } from "@/lib/methodology";
 import { BusinessImage } from "@/components/BusinessImage";
 import { RatingBadge } from "@/components/RatingBadge";
+import { MvScoreBadge } from "@/components/MvScoreBadge";
+import { compareByMvScore } from "@/lib/mv-score";
 import { businessMatchesFacet, getLocalizedFacetLabel, type RankingFacet } from "@/lib/taxonomy";
 import { getBusinessPublicName } from "@/lib/business-name-normalizer";
 
@@ -111,7 +113,7 @@ function sortBusinesses(businesses: Business[], sort: SortKey) {
       const hiddenDiff = (b.untappedScore ?? 0) - (a.untappedScore ?? 0);
       return hiddenDiff || ratioScore(b) - ratioScore(a);
     }
-    return ratioScore(b) - ratioScore(a) || (b.reviewsCount ?? 0) - (a.reviewsCount ?? 0);
+    return compareByMvScore(a, b);
   });
 }
 
@@ -168,13 +170,17 @@ function RankingBusinessRow({
             </p>
           )}
 
-          <div className="mt-3 sm:hidden">
+          <div className="mt-3 flex items-center gap-2 sm:hidden">
+            <MvScoreBadge rating={business.rating} reviewsCount={business.reviewsCount} locale={locale} />
             <RatingBadge rating={business.rating} reviewsCount={business.reviewsCount} locale={locale} compact />
           </div>
         </div>
 
         <div className="hidden items-center justify-center p-4 text-center sm:flex">
           <div>
+            <div className="mb-2 flex justify-center">
+              <MvScoreBadge rating={business.rating} reviewsCount={business.reviewsCount} locale={locale} />
+            </div>
             {typeof business.rating === "number" && (
               <div className="font-display text-4xl font-black leading-none text-[#00C37A]">
                 {business.rating.toLocaleString(numberLocale(locale), { minimumFractionDigits: 1, maximumFractionDigits: 1 })}

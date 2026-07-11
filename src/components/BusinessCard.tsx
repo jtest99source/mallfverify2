@@ -6,6 +6,7 @@ import type { Locale } from "@/lib/i18n";
 import { categoryLabelForBusiness, t } from "@/lib/i18n-copy";
 import { getBusinessPublicName } from "@/lib/business-name-normalizer";
 import { RatingBadge } from "@/components/RatingBadge";
+import { MvScoreBadge } from "@/components/MvScoreBadge";
 import { BusinessImage } from "@/components/BusinessImage";
 import { isUntapped } from "@/lib/untapped-score";
 
@@ -134,7 +135,10 @@ export function BusinessCard({ business, locale }: { business: Business; locale:
         <div className="flex flex-1 flex-col p-4 pb-4">
           <div className="flex flex-wrap items-center justify-between gap-3">
             <p className="text-[10px] font-black uppercase tracking-[0.12em] text-[#00C37A]">{categoryLabel}</p>
-            <RatingBadge rating={business.rating} reviewsCount={business.reviewsCount} locale={locale} compact />
+            <div className="flex min-w-0 items-center gap-2">
+              <MvScoreBadge rating={business.rating} reviewsCount={business.reviewsCount} locale={locale} />
+              <RatingBadge rating={business.rating} reviewsCount={business.reviewsCount} locale={locale} compact />
+            </div>
           </div>
 
           {isUntapped(business.untappedScore) && (

@@ -13,6 +13,7 @@ import { categoryConfigs, getCategorySlugFromBusiness, isPublicCategorySlug, sit
 import { categoryLabelForBusiness, getCategoryCopy, t } from "@/lib/i18n-copy";
 import { getBusinessAreaCategoryPages, getBusinessBySlug, getBusinessRankingContext, getBusinesses, getBusinessSlugsByCategory, getRelatedBusinesses, getRelatedRankings, type BusinessRankingPlacement } from "@/lib/repository";
 import { createBreadcrumbSchema, createCollectionPageSchema, createFAQSchema, createLocalBusinessSchema } from "@/lib/schema";
+import { MvScoreBadge } from "@/components/MvScoreBadge";
 import { generateSeoMetadata } from "@/lib/seo";
 import { isLocale, type Locale } from "@/lib/i18n";
 import { getBusinessPublicName } from "@/lib/business-name-normalizer";
@@ -251,12 +252,6 @@ function rankingSecondaryLine(placement: BusinessRankingPlacement, category: Cat
   return locale === "es" ? `también #${placement.position} en ${label}` : locale === "de" ? `auch #${placement.position} in ${label}` : `also #${placement.position} in ${label}`;
 }
 
-function renderStars(rating?: number) {
-  if (typeof rating !== "number") return "Google";
-  const filled = Math.max(0, Math.min(5, Math.round(rating)));
-  return "\u2605".repeat(filled) + "\u2606".repeat(5 - filled);
-}
-
 function priceLabelForUnit(unit: NonNullable<Business["priceEstimate"]>["unit"] | null | undefined, locale: Locale) {
   const labels: Record<Locale, Record<string, string>> = {
     es: {
@@ -437,23 +432,6 @@ function MobileBusinessActions({
         </div>
       </div>
     </section>
-  );
-}
-
-function QuickScore({ business, locale }: { business: Business; locale: Locale }) {
-  const copy = t(locale);
-  if (typeof business.rating !== "number" && typeof business.reviewsCount !== "number") return null;
-
-  return (
-    <div className="rating-summary flex items-center gap-3 rounded-lg border border-[#00C37A]/60 bg-[linear-gradient(135deg,#0A0A0A_0%,#191919_100%)] p-4 shadow-[0_14px_28px_rgba(10,10,10,0.18)]">
-      {typeof business.rating === "number" && <div className="text-4xl font-black leading-none text-[#00C37A]">{formatLocalizedRating(business.rating, locale)}</div>}
-      <div>
-        <div className="text-xs text-[#00C37A]">{renderStars(business.rating)}</div>
-        <div className="mt-1 text-[11px] text-white/75">
-          {typeof business.reviewsCount === "number" ? `${business.reviewsCount.toLocaleString(numberLocale(locale))} ${copy.business.reviewsOnGoogle}` : "Google"}
-        </div>
-      </div>
-    </div>
   );
 }
 
@@ -720,7 +698,10 @@ export async function BusinessDetailPage({ category, locale, slug }: { category:
                   {primaryRanking ? rankingEyebrow(primaryRanking, category, locale) : `${localizedCategoryLabel(business.category, locale)} · ${location}`}
                 </p>
                 <h1 className="mt-3 max-w-5xl font-display text-5xl font-black leading-[0.92] text-white [text-shadow:_0_2px_22px_rgba(0,0,0,0.65)] sm:text-7xl lg:text-8xl">{publicName}</h1>
-                {heroMeta.length > 0 && <p className="mt-5 max-w-4xl text-base font-semibold leading-7 text-white/78">{heroMeta.join(" · ")}</p>}
+                <div className="mt-5 flex flex-wrap items-center gap-x-3 gap-y-2">
+                  <MvScoreBadge rating={business.rating} reviewsCount={business.reviewsCount} locale={locale} className="px-2.5 py-1.5 text-[13px]" />
+                  {heroMeta.length > 0 && <p className="max-w-4xl text-base font-semibold leading-7 text-white/78">{heroMeta.join(" · ")}</p>}
+                </div>
               </div>
             </div>
           </div>
