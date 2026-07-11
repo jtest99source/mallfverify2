@@ -207,7 +207,7 @@ function CarouselBusinessCard({ business, index, locale }: { business: Business;
     <Link href={businessHref(locale, business)} className="group block w-[78vw] max-w-[330px] shrink-0 snap-start overflow-hidden bg-[#0C1A2E] ring-1 ring-white/[0.08] transition-all duration-200 hover:bg-[#0C1A2E] sm:w-[310px]">
       <BusinessImage business={business} category={business.category} variant="card" className="h-[200px] min-h-[200px] rounded-none p-3">
         <div className="flex h-full flex-col justify-between">
-          <span className="font-display inline-flex text-xl font-black leading-none text-[#00C37A]">#{index + 1}</span>
+          <span className="inline-flex self-start items-center bg-[#00C37A] px-2 py-1 text-[9px] font-black uppercase tracking-[0.12em] text-[#0A0A0A]">{locale === "de" ? "Empfohlen" : locale === "en" ? "Featured" : "Destacado"}</span>
           <div>
             <p className="inline-flex items-center gap-1 bg-[#07101F]/70 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.08em] text-white/75 backdrop-blur">
               <IconMapPin size={12} stroke={2} />
@@ -398,7 +398,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
   const heroPanels = Array.from({ length: 4 }, (_, index) => heroBusinesses[index] ?? null);
   return (
     <main className="bg-[#07101F] text-white">
-      <section className="relative z-20 flex min-h-[96vh] items-center justify-center overflow-visible bg-[#07101F] px-4 py-20 text-center text-white sm:px-6 lg:px-8">
+      <section className="relative z-20 flex min-h-[68vh] items-center justify-center overflow-visible bg-[#07101F] px-4 py-12 text-center text-white sm:min-h-[96vh] sm:px-6 sm:py-20 lg:px-8">
         <div className="absolute inset-0 grid grid-cols-2 gap-px opacity-95 md:grid-cols-4">
           {heroPanels.map((business, index) => (
             <div
@@ -415,7 +415,6 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
               <div className="absolute inset-0 bg-[#07101F]/10" />
               {business && (
                 <>
-                  <div className="absolute left-4 top-4 font-display text-xl font-black text-[#00C37A]">#{index + 1}</div>
                   <div className="absolute bottom-4 left-1/2 -translate-x-1/2 whitespace-nowrap bg-[#07101F]/68 px-2.5 py-1 text-[9px] font-bold uppercase tracking-[0.1em] text-white/45 backdrop-blur">
                     {businessLocation(business)}
                   </div>
@@ -489,7 +488,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
             </aside>
           )}
 
-          <div className="mt-12 grid w-full max-w-[480px] grid-cols-3 border-t border-white/10 pt-8">
+          <div className="mt-8 grid w-full max-w-[480px] grid-cols-3 border-t border-white/10 pt-6 sm:mt-12 sm:pt-8">
             {[
               { value: formatIntegerMetric(stats.publishedBusinesses, safeLocale), label: copy.home.verifiedBusinesses },
               { value: formatMillionMetric(stats.analyzedReviews, safeLocale), label: copy.home.analyzedReviews },

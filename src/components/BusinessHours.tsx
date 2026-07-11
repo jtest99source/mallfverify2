@@ -123,6 +123,19 @@ function displayTime(minutes: number) {
   return `${hours.toString().padStart(2, "0")}:${mins.toString().padStart(2, "0")}`;
 }
 
+// Locale-consistent clock: English uses 12-hour AM/PM, Spanish and German use 24-hour.
+function formatClock(minutes: number, locale: Locale) {
+  if (locale === "en") {
+    if (minutes >= 24 * 60) return "12:00 AM";
+    const hours = Math.floor(minutes / 60);
+    const mins = minutes % 60;
+    const period = hours >= 12 ? "PM" : "AM";
+    const hour12 = hours % 12 === 0 ? 12 : hours % 12;
+    return `${hour12}:${mins.toString().padStart(2, "0")} ${period}`;
+  }
+  return displayTime(minutes);
+}
+
 function parseRanges(time: string) {
   if (/closed|cerrado|geschlossen/i.test(time)) return [];
   if (isOpen24h(time)) return [{ start: 0, end: 24 * 60, closeLabel: "24:00" }];
@@ -145,7 +158,9 @@ function formatDisplayTime(time: string, locale: Locale) {
   const copy = COPY[locale];
   if (/closed|cerrado|geschlossen/i.test(time)) return copy.closed;
   if (isOpen24h(time)) return copy.open24h;
-  return time.replace(/\s*[-–]\s*/g, "–");
+  const ranges = parseRanges(time);
+  if (!ranges.length) return time.replace(/\s*[-–]\s*/g, "–");
+  return ranges.map((range) => `${formatClock(range.start, locale)}–${formatClock(range.end, locale)}`).join(", ");
 }
 
 function parseRows(openingHours: string, locale: Locale): HoursRow[] {
@@ -207,13 +222,13 @@ function getOpenState(rows: HoursRow[], todayIndex: number, nowMinutes: number, 
       const start = dayOffset * 24 * 60 + range.start;
       const end = dayOffset * 24 * 60 + range.end;
       if (dayOffset === 0 && nowMinutes >= start && nowMinutes < end) {
-        return { open: true, text: `${copy.open} · ${copy.closes} ${range.closeLabel}` };
+        return { open: true, text: `${copy.open} · ${copy.closes} ${formatClock(range.end, locale)}` };
       }
       if (dayOffset === 0 && nowMinutes < start) {
-        return { open: false, text: `${copy.closed} · ${copy.opens} ${copy.at} ${displayTime(range.start)}` };
+        return { open: false, text: `${copy.closed} · ${copy.opens} ${copy.at} ${formatClock(range.start, locale)}` };
       }
       if (dayOffset > 0) {
-        return { open: false, text: `${copy.closed} · ${copy.opens} ${row.day} ${copy.at} ${displayTime(range.start)}` };
+        return { open: false, text: `${copy.closed} · ${copy.opens} ${row.day} ${copy.at} ${formatClock(range.start, locale)}` };
       }
     }
   }

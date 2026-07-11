@@ -11,7 +11,7 @@ const pageCopy = {
     metaTitle: "Visibilidad para negocios en Mallorca | Mallorca Verified",
     metaDescription: "Turistas, expats y compradores internacionales usan Mallorca Verified para decidir dónde van en la isla. Más visibilidad para tu negocio — ficha gratuita disponible.",
     eyebrow: "Para negocios en Mallorca",
-    title: "Llega a los turistas, expats y compradores que deciden dónde ir",
+    title: "Llega a las personas que deciden dónde gastar en Mallorca",
     intro: "Turistas, expats y compradores internacionales usan Mallorca Verified para decidir dónde comer, dormir, explorar y gastar dinero en la isla. Nuestros rankings se construyen sobre datos públicos de Google y nuestras guías las leen personas que están planificando activamente su tiempo aquí. Mallorca Verified también trabaja directamente con negocios para ayudarles a ganar más visibilidad en la isla.",
     proofLine: "Miles de personas usan nuestros rankings cada mes para decidir dónde gastan dinero en la isla.",
     contactEyebrow: "Contacto",
@@ -22,7 +22,7 @@ const pageCopy = {
       published: "Fichas publicadas",
       categories: "Categorías",
       reviews: "Reseñas analizadas",
-      pages: "Páginas locales"
+      towns: "Municipios cubiertos"
     },
     workEyebrow: "Cómo trabajamos con negocios",
     workTitle: "Visibilidad para la audiencia que importa",
@@ -43,7 +43,7 @@ const pageCopy = {
     metaTitle: "Visibility for businesses in Mallorca | Mallorca Verified",
     metaDescription: "Tourists, expats and international buyers use Mallorca Verified to decide where to go on the island. More visibility for your business — free listing available.",
     eyebrow: "For businesses in Mallorca",
-    title: "Reach the tourists, expats and buyers who choose where to go",
+    title: "Reach the people deciding where to spend in Mallorca",
     intro: "Tourists, expats and international buyers use Mallorca Verified when deciding where to eat, stay, explore and spend money on the island. Our rankings are built on public Google data and our guides are read by people actively planning their time here. Mallorca Verified also works directly with businesses to help them gain more visibility across the island.",
     proofLine: "Thousands of people use our rankings every month to decide where to spend money on the island.",
     contactEyebrow: "Get in touch",
@@ -54,7 +54,7 @@ const pageCopy = {
       published: "Published profiles",
       categories: "Categories",
       reviews: "Reviews analysed",
-      pages: "Local pages"
+      towns: "Towns covered"
     },
     workEyebrow: "How we work with businesses",
     workTitle: "Visibility for the audience that matters",
@@ -75,7 +75,7 @@ const pageCopy = {
     metaTitle: "Sichtbarkeit für Betriebe auf Mallorca | Mallorca Verified",
     metaDescription: "Touristen, Expats und internationale Käufer nutzen Mallorca Verified, um zu entscheiden, wohin sie auf der Insel gehen. Mehr Sichtbarkeit für deinen Betrieb — kostenloses Profil verfügbar.",
     eyebrow: "Für Betriebe auf Mallorca",
-    title: "Reach the tourists, Expats and buyers who choose where to go",
+    title: "Erreiche die Menschen, die entscheiden, wo sie auf Mallorca Geld ausgeben",
     intro: "Touristen, Expats und internationale Käufer nutzen Mallorca Verified, wenn sie entscheiden, wo sie auf der Insel essen, schlafen, erkunden und Geld ausgeben. Unsere Rankings basieren auf öffentlichen Google-Daten und unsere Guides werden von Menschen gelesen, die ihren Aufenthalt aktiv planen. Mallorca Verified arbeitet auch direkt mit Betrieben zusammen, um ihnen mehr Sichtbarkeit auf der Insel zu verschaffen.",
     proofLine: "Tausende Menschen nutzen unsere Rankings jeden Monat, um zu entscheiden, wo sie ihr Geld auf der Insel ausgeben.",
     contactEyebrow: "Kontakt",
@@ -86,7 +86,7 @@ const pageCopy = {
       published: "Veröffentlichte Profile",
       categories: "Kategorien",
       reviews: "Analysierte Bewertungen",
-      pages: "Lokale Seiten"
+      towns: "Orte abgedeckt"
     },
     workEyebrow: "Wie wir mit Betrieben arbeiten",
     workTitle: "Sichtbarkeit für die richtige Zielgruppe",
@@ -140,7 +140,7 @@ export default async function BusinessPage({ params }: { params: Promise<{ local
     { label: copy.stats.published, value: formatIntegerMetric(publicStats.publishedBusinesses, safeLocale) },
     { label: copy.stats.categories, value: formatIntegerMetric(publicCategorySlugs.length, safeLocale) },
     { label: copy.stats.reviews, value: formatMillionMetric(publicStats.analyzedReviews, safeLocale) },
-    { label: copy.stats.pages, value: `${areaPages.length}+` }
+    { label: copy.stats.towns, value: "56" }
   ];
 
   return (
@@ -208,7 +208,6 @@ export default async function BusinessPage({ params }: { params: Promise<{ local
               <a key={`${page.areaSlug}-${page.category}`} href={`/${safeLocale}/areas/${page.areaSlug}/${page.category}`} className="group flex items-center justify-between rounded-sm border border-white/[0.10] bg-[#07101F] p-4 transition-all duration-150 hover:border-[#00C37A]/40">
                 <div>
                   <p className="text-sm font-bold text-white group-hover:text-[#00C37A]">{getCategoryCopy(page.category, safeLocale).label} · {page.area}</p>
-                  <p className="mt-0.5 text-xs font-semibold text-white/50">{page.count} {copy.profiles}</p>
                 </div>
                 <span className="text-[#00C37A] opacity-0 transition-opacity group-hover:opacity-100">→</span>
               </a>
