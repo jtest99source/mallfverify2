@@ -40,6 +40,7 @@ export function Footer({ locale }: { locale: Locale }) {
               <Link href={aboutPath(locale)} className="hover:text-white">{copy.footer.about}</Link>
               <Link href={editorialPath(locale)} className="hover:text-white">{copy.footer.editorial}</Link>
               <Link href={`/${locale}/business`} className="hover:text-white">{copy.nav.forBusinesses}</Link>
+              <Link href={`/${locale}/insights`} className="hover:text-white">{locale === "es" ? "Informes" : locale === "de" ? "Reports" : "Reports"}</Link>
               <Link href={`/${locale}/privacy`} className="hover:text-white">{copy.footer.privacy}</Link>
               <Link href={`/${locale}/cookies`} className="hover:text-white">{copy.footer.cookies}</Link>
             </div>

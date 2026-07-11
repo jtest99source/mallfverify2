@@ -216,6 +216,46 @@ export default async function BusinessPage({ params }: { params: Promise<{ local
           </div>
         </section>
 
+        <section className="mt-8 rounded-sm border border-white/[0.10] bg-[#0C1A2E] p-6">
+          <div className="flex flex-wrap items-end justify-between gap-4 border-b border-white/[0.08] pb-4">
+            <div>
+              <p className="text-[11px] font-black uppercase tracking-[0.16em] text-[#00C37A]">
+                {safeLocale === "es" ? "Datos e informes" : safeLocale === "de" ? "Daten & Reports" : "Data & reports"}
+              </p>
+              <h2 className="mt-2 text-3xl font-black text-white">
+                {safeLocale === "es" ? "Informes de sector" : safeLocale === "de" ? "Branchenreports" : "Sector reports"}
+              </h2>
+              <p className="mt-1.5 max-w-2xl text-sm text-white/55">
+                {safeLocale === "es"
+                  ? "Analizamos sectores enteros de Mallorca con datos reales de reseñas. Mira cómo está tu categoría — y dónde está tu hueco."
+                  : safeLocale === "de"
+                  ? "Wir analysieren ganze Branchen Mallorcas mit echten Bewertungsdaten. Sehen Sie, wie Ihre Kategorie dasteht — und wo Ihre Lücke ist."
+                  : "We analyse whole Mallorca sectors with real review data. See how your category stands — and where your gap is."}
+              </p>
+            </div>
+            <Link href={`/${safeLocale}/insights`} className="rounded-sm border border-white/20 px-4 py-3 text-[11px] font-black uppercase tracking-[0.1em] text-white/70 transition-all duration-150 hover:border-[#00C37A]/50 hover:text-white">
+              {safeLocale === "es" ? "Ver informes →" : safeLocale === "de" ? "Reports ansehen →" : "View reports →"}
+            </Link>
+          </div>
+          <div className="mt-5">
+            <Link href={`/${safeLocale}/insights/dental-mallorca-2026`} className="group flex flex-col rounded-sm border border-white/[0.10] bg-[#07101F] p-5 transition-all duration-150 hover:border-[#00C37A]/40 sm:max-w-md">
+              <span className="text-[10px] font-black uppercase tracking-[0.14em] text-[#00C37A]">
+                {safeLocale === "de" ? "Gesundheit · 2026" : safeLocale === "en" ? "Health · 2026" : "Salud · 2026"}
+              </span>
+              <span className="mt-2 text-lg font-black text-white group-hover:text-[#00C37A]">
+                {safeLocale === "de" ? "Zahnkliniken auf Mallorca 2026" : safeLocale === "en" ? "Mallorca Dental Clinics 2026" : "Clínicas dentales de Mallorca 2026"}
+              </span>
+              <span className="mt-1.5 text-xs leading-6 text-white/55">
+                {safeLocale === "de"
+                  ? "179 Kliniken: Qualität unterscheidet nicht mehr — Sichtbarkeit schon."
+                  : safeLocale === "en"
+                  ? "179 clinics: quality no longer sets them apart — visibility does."
+                  : "179 clínicas: la calidad ya no distingue, la visibilidad sí."}
+              </span>
+            </Link>
+          </div>
+        </section>
+
         <div className="mt-12"><CTABox locale={safeLocale} /></div>
       </section>
     </main>

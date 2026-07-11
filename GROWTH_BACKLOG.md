@@ -3,7 +3,7 @@
 Documento vivo de estrategia. Captura objetivos actuales, ideas de nuevas
 secciones/verticales, y el backlog de contenido editorial B2B (Tramuntana Digital).
 
-Última actualización: 2026-07-09
+Última actualización: 2026-07-11
 
 ---
 
@@ -38,9 +38,41 @@ Activos de datos que ya tenemos:
 ## ESTADO ACTUAL (funcional)
 
 - ✅ **Rankings por categoría** ordenados por reseñas reales — base del sitio
-- ✅ **Guías editoriales** (EN/DE/ES) — SEO, pero compite con gigantes y aporta
-  poco valor de negocio. No quitar, pero no es la palanca de crecimiento.
+- ✅ **Guías editoriales** (EN/DE/ES) — **funcionan, se mantienen** (ver evidencia
+  abajo). No son la palanca del objetivo B2B/prestigio, pero sí traen tráfico
+  turístico orgánico y citas de IA. Se quedan como base; se inclina la balanza
+  hacia las guías **transaccionales**.
 - 🔜 **Experts** — vertical prevista, alto valor para PR, pero semanas de trabajo
+
+---
+
+## Evidencia (analytics, jul 2026) — corrige la postura
+
+Datos reales (últimos 7 días): **439 visitantes (+318%)**, 2.149 páginas vistas,
+bounce 82%. Referrers: **google.com 205 (~47% orgánico)**, **chatgpt.com 11**
+(¡la GEO funciona, las IAs citan!), bing 10, instagram 12. Países: **USA 48%,
+España 16%**. Top páginas incluyen varias guías: barco (45), rent-a-car (36),
+románticos (17), cash-or-card (14), qué-hacer (9).
+
+Lecturas clave:
+- **Los blogs NO van mal** para el tiempo que llevan — orgánico + citas de IA.
+  Rectificado: no se paran, se mantienen como capa base.
+- **Las guías que ganan son las transaccionales** (barco, rent-a-car = intención
+  con dinero). Las de opinión turística pura traen tráfico pero no monetizan.
+  → Priorizar transaccionales (rent-a-car, charter, dentista, spa) sobre opinión.
+- **El tráfico es turista (USA/planificación), no local.** Bounce 82% = awareness,
+  no conversión. Los blogs sirven al objetivo turístico/SEO, NO al B2B local ni
+  al prestigio mediático. Por eso los activos de datos NO sustituyen a los blogs:
+  son la **capa que falta** para los objetivos que los blogs no cubren.
+
+## Modelo de dos capas (postura acordada)
+
+| Capa | Qué | Objetivo que cubre | Estado |
+|---|---|---|---|
+| **Guías** (base) | Mantener, favoreciendo transaccionales | Tráfico turístico + citas IA | ✅ funciona |
+| **Activos de datos** (nueva) | Informes de sector, índices, awards | Prestigio (links) + B2B (Tramuntana) | 🔜 construir |
+
+Corren en paralelo, no se excluyen.
 
 ---
 
@@ -124,10 +156,21 @@ Datos del prototipo: Espíritu Libre, #1 de 58 restaurantes en Sóller (★4.9, 
 
 ---
 
-## Recomendación de secuencia (propuesta, a discutir)
+## Recomendación de secuencia (acordada)
 
-1. **Informe por vertical (Tier 3)** primero — sirve a AMBOS objetivos: es
-   contenido link-worthy Y material de venta de Tramuntana. Empezar por dental.
-2. **Awards 2026 (Tier 1)** — rápido de generar sobre el ranking, gancho de PR.
-3. **Índice de precios / Data Report (Tier 1)** — el activo mediático a medio plazo.
-4. **Badge** cuando ya haya tráfico/autoridad que enseñar.
+Las dos capas en paralelo:
+- **Capa base (guías):** seguir, pero solo las que cumplen un Job (A/B/C).
+  Favorecer transaccionales (rent-a-car, charter, dentista, spa). Parar la
+  opinión turística pura ("románticos", etc.).
+- **Capa nueva (activos de datos), por orden:**
+  1. **Informe por vertical (Tier 3)** — primero DENTAL. Sirve a AMBOS objetivos:
+     link-worthy Y material de venta de Tramuntana (refuerza el outreach ya en marcha).
+  2. **Awards 2026 (Tier 1)** — rápido sobre el ranking, gancho de PR.
+  3. **Índice de precios / Data Report (Tier 1)** — activo mediático a medio plazo.
+  4. **Badge** cuando haya tráfico/autoridad que enseñar.
+
+### Filtro para cualquier contenido nuevo (no volver a "publicar por publicar")
+Cada pieza debe hacer UNA de estas, o no se hace:
+- **Job A** — ganar un link de prestigio (historia de datos angulada a un medio)
+- **Job B** — captar un cliente B2B (contenido que el dueño necesita → lead Tramuntana)
+- **Job C** — rankear query transaccional con valor (no "best restaurants")
