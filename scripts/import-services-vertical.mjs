@@ -12,9 +12,21 @@ import { createClient } from "@supabase/supabase-js";
 import { existsSync, readFileSync } from "node:fs";
 import { calculateAuthorityScore, createSocialProfiles, detectWebsiteType, inferLocationFromAddress, isWithinMallorca } from "../src/lib/business-geo.ts";
 
+// Google text-search results are noisy (unrelated POIs, adjacent professions).
+// `keep` = must match a real signal for the vertical; `noise` = hard exclude even
+// if it weakly matched. A strong-legal firm that also does tax still counts as a
+// lawyer (tax excludes lawyers to avoid duplicates).
 const CATS = {
-  lawyers: { bc: "lawyer", singular: "Despacho de abogados" },
-  "tax-advisors": { bc: "tax-advisor", singular: "Gestoría o asesor fiscal" }
+  lawyers: {
+    bc: "lawyer", singular: "Despacho de abogados",
+    keep: /abogad|despacho|bufete|letrad[oa]|abogacia|law firm|rechtsanwalt|advocat|solicitor|servicios juridic|asesoria juridic|\bjuridic/,
+    noise: /notari|inmobiliaria|administra.*finca|correduri|\bseguros\b|\bbanco\b|arquitect|ingenier|restaurant|\bcafe\b|peluqu|taller|autoescuela|hospital|veterinari|\bdental\b|\bclinica\b|\bhotel\b|museo|castell|\bcueva|rastro|\bfish\b|bauhaus|supermercado|farmacia|oficina de extranjeria|gobierno/
+  },
+  "tax-advisors": {
+    bc: "tax-advisor", singular: "Gestoría o asesor fiscal",
+    keep: /gestoria|gestoría|asesor(ia|es|amiento)? fiscal|asesor(ia|es)? tributari|asesoria contable|tax advis|steuerberat|\bgestor\b|\bcontable|graduad[oa] social|asesoria de empresa|asesoria laboral|asesoria integral|consultoria fiscal|asesores y consult/,
+    noise: /abogad|despacho|bufete|notari|inmobiliaria|administra.*finca|correduri|\bseguros\b|\bbanco\b|arquitect|ingenier|restaurant|\bcafe\b|peluqu|taller|autoescuela|hospital|veterinari|\bdental\b|\bclinica\b|\bhotel\b|museo|castell|\bcueva|rastro|\bfish\b|bauhaus|supermercado|farmacia/
+  }
 };
 
 const arg = (n) => { const a = process.argv.find((x) => x.startsWith(`--${n}=`)); return a ? a.slice(n.length + 3) : null; };
@@ -82,10 +94,14 @@ async function main() {
     seen.add(pid);
     const lat = r.lat ?? r.latitude, lng = r.lng ?? r.longitude;
     if (!isWithinMallorca(lat, lng)) continue;
+    if (cfg.keep) {
+      const t = `${r.name} ${r.address ?? ""}`.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
+      if (!cfg.keep.test(t) || (cfg.noise && cfg.noise.test(t))) continue;
+    }
     rows.push({ ...r, pid, lat, lng });
   }
   if (LIMIT) rows = rows.slice(0, LIMIT);
-  console.log(`[${CATEGORY}] in-Mallorca candidates: ${rows.length} | apply=${APPLY}`);
+  console.log(`[${CATEGORY}] kept after filter: ${rows.length} | apply=${APPLY}`);
 
   let inserted = 0, skipped = 0, outOfMallorca = data.length - rows.length;
   for (const [idx, r] of rows.entries()) {
