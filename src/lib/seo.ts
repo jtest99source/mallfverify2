@@ -3,7 +3,10 @@ import { locales, type Locale } from "@/lib/i18n";
 import { siteUrl } from "@/lib/data";
 import { siteConfig } from "@/config/site";
 
-const defaultOgImage = `${siteUrl}/brand/mallorca-verified-logo-ai-concept.png`;
+// NOTE: mallorca-verified-logo-ai-concept.png / -transparent.png still show the
+// OLD "Mallorca Insider" branding (renamed file, art never updated). Use the
+// generated 1200x630 "Mallorca Verified" card instead.
+const defaultOgImage = `${siteUrl}/brand/og-mallorca-verified.png`;
 
 type SeoInput = {
   title: string;
