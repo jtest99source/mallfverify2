@@ -13,13 +13,18 @@ import type { CategorySlug } from "@/lib/data";
 // rating + MV Score), reusing the shared carousel. The verified English/German
 // language layer is announced as "coming soon" — it lands once outreach fills the data.
 
-const SERVICE_CATEGORIES: CategorySlug[] = ["healthcare", "real-estate", "vets", "rent-a-car", "car-dealers"];
+const SERVICE_CATEGORIES: CategorySlug[] = ["dentists", "healthcare", "real-estate", "vets", "rent-a-car", "car-dealers"];
 
 const serviceLocations = ["Palma", "Alcúdia", "Pollença", "Sóller", "Manacor", "Inca", "Santanyí", "Andratx", "Calvià", "Llucmajor"].map((location) => ({ label: location, value: location }));
 
 type LocaleText = Record<Locale, string>;
 
 const serviceModules: Array<{ category: CategorySlug; eyebrow: LocaleText; title: LocaleText; minReviews?: number }> = [
+  {
+    category: "dentists",
+    eyebrow: { es: "Dentistas", en: "Dentists", de: "Zahnärzte" },
+    title: { es: "Dentistas en Mallorca", en: "Dentists in Mallorca", de: "Zahnärzte auf Mallorca" }
+  },
   {
     category: "healthcare",
     eyebrow: { es: "Salud", en: "Health", de: "Gesundheit" },

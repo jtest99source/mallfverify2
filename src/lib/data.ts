@@ -175,6 +175,16 @@ export const categoryConfigs = {
     faq: "¿Dónde encontrar médico o dentista que atienda a extranjeros en Mallorca?",
     editorialContext: "En salud miramos reseñas, volumen, especialidad, ubicación, claridad de contacto y señales de atención internacional. No sustituye consejo médico, pero ayuda a encontrar opciones verificables."
   },
+  dentists: {
+    label: "Dentistas",
+    singular: "Clínica dental",
+    businessCategory: "healthcare",
+    icon: "IconDental",
+    title: "Dentistas y clínicas dentales en Mallorca",
+    intro: "Dentistas y clínicas dentales en Mallorca orientados a extranjeros, expats y residentes internacionales. Ordenados por reseñas reales de Google y señales públicas verificables.",
+    faq: "¿Dónde encontrar un dentista que atienda a extranjeros en Mallorca?",
+    editorialContext: "En clínicas dentales miramos reseñas, volumen, ubicación, claridad de contacto y señales de atención internacional. La verificación de idiomas (inglés/alemán) llegará por confirmación directa con cada clínica."
+  },
   "real-estate": {
     label: "Inmobiliarias",
     singular: "Agencia inmobiliaria",
@@ -226,6 +236,7 @@ export const publicCategorySlugs = [
   "casinos",
   "vets",
   "healthcare",
+  "dentists",
   "real-estate"
 ] as const satisfies CategorySlug[];
 
@@ -301,6 +312,7 @@ const categoryGuideKeywords: Record<CategorySlug, string[]> = {
   casinos: ["casino", "bingo", "apuestas", "poker", "juego"],
   vets: ["veterinario", "vet", "veterinary", "mascotas", "animal"],
   healthcare: ["médico", "doctor", "dentista", "salud", "clínica", "health"],
+  dentists: ["dentista", "dental", "clínica dental", "dentist", "zahnarzt", "odontolog"],
   "real-estate": ["inmobiliaria", "property", "comprar casa", "real estate", "vivienda"],
   routes: ["ruta", "senderismo", "mirador", "trail", "hiking"],
   excursions: ["excursión", "tour", "visita", "excursion"]

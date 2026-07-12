@@ -21,7 +21,7 @@ function facet(slug: string, label: string, title: string, keywords: string[]): 
   };
 }
 
-export const rankingFacets = {
+export const rankingFacets: Record<string, RankingFacet[]> = {
   restaurants: [
     facet("mediterraneo", "Mediterráneo", "Restaurantes mediterráneos en Mallorca", ["mediterranean", "mediterraneo", "mediterráneo", "mallorquin", "mallorquín"]),
     facet("tapas", "Tapas", "Restaurantes de tapas en Mallorca", ["tapas", "pinchos", "vermuteria", "vermutería", "taberna"]),

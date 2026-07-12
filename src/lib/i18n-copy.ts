@@ -499,6 +499,18 @@ Object.assign(deCategoryCopy, {
   vets: { label: "Tierärzte", singular: "Tierarztpraxis", title: "Tierärzte auf Mallorca", intro: "Tierarztpraxen, Tierkliniken und Notdienste auf Mallorca, sortiert nach echten Google-Bewertungen und öffentlichen Qualitätssignalen.", metaDescription: "Tierärzte auf Mallorca mit echten Google-Bewertungen. Tierkliniken, Praxen und Notdienste nach Gegend." }
 } satisfies Partial<Record<CategorySlug, CategoryCopy>>);
 
+Object.assign(esCategoryCopy, {
+  dentists: { label: "Dentistas", singular: "Clínica dental", title: "Dentistas y clínicas dentales en Mallorca", intro: "Dentistas y clínicas dentales en Mallorca para expats y residentes internacionales, ordenados por reseñas reales de Google. La verificación de idioma (inglés/alemán) llegará próximamente.", metaDescription: "Dentistas y clínicas dentales en Mallorca ordenados por reseñas reales de Google. Para residentes internacionales. Verificación de idioma próximamente." }
+} satisfies Partial<Record<CategorySlug, CategoryCopy>>);
+
+Object.assign(enCategoryCopy, {
+  dentists: { label: "Dentists", singular: "Dental clinic", title: "Dentists in Mallorca", intro: "Dentists and dental clinics in Mallorca for expats and international residents, ranked by real Google reviews. English/German language verification coming soon.", metaDescription: "English-speaking dentists and dental clinics in Mallorca ranked by real Google reviews. For international residents. Language verification coming soon." }
+} satisfies Partial<Record<CategorySlug, CategoryCopy>>);
+
+Object.assign(deCategoryCopy, {
+  dentists: { label: "Zahnärzte", singular: "Zahnarztpraxis", title: "Zahnärzte auf Mallorca", intro: "Zahnärzte und Zahnkliniken auf Mallorca für Expats und internationale Bewohner, nach echten Google-Bewertungen sortiert. Sprachverifizierung (Englisch/Deutsch) demnächst.", metaDescription: "Zahnärzte und Zahnkliniken auf Mallorca nach echten Google-Bewertungen. Für internationale Bewohner. Sprachverifizierung in Kürze." }
+} satisfies Partial<Record<CategorySlug, CategoryCopy>>);
+
 export const categoryCopy: Record<Locale, Partial<Record<CategorySlug, CategoryCopy>>> = {
   es: esCategoryCopy,
   en: enCategoryCopy,

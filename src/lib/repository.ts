@@ -108,6 +108,12 @@ const iceCreamExclusionSignals = [
   "sorbet"
 ];
 
+// Dental signal (used to carve the "dentists" listing out of the healthcare
+// category, and to exclude dentists from the general healthcare listing).
+// signalText is already normalized (lowercased, accents stripped), so a leading
+// non-letter boundary + open suffix catches dentista/dentistas/odontologia/etc.
+const dentalSignalRegex = /(^|[^a-z])(dental|dentist|dentista|odontolog|ortodon|endodon|dentaire|zahnarzt)/;
+
 const bakeryListingSignals = [
   "bakery",
   "cake",
@@ -261,6 +267,14 @@ function businessMatchesListingCategory(row: Pick<BusinessRow, "category" | "nam
     if (row.category === "activity") return true;
     if (row.category !== "boat-rental" && row.category !== "gym" && row.category !== "nightlife") return false;
     return hasListingSignal(signalText, activityListingSignals);
+  }
+
+  // "dentists" is a virtual carve-out of healthcare; general healthcare excludes them.
+  if (category === "dentists") {
+    return row.category === "healthcare" && dentalSignalRegex.test(signalText);
+  }
+  if (category === "healthcare") {
+    return row.category === "healthcare" && !dentalSignalRegex.test(signalText);
   }
 
   return row.category === getBusinessCategoryFromSlug(category);
