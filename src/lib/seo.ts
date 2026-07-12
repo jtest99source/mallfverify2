@@ -28,7 +28,10 @@ export function generateSeoMetadata({ title, description, path, locale, type = "
   return {
     title,
     description,
-    robots,
+    // Only emit robots when explicitly provided — otherwise leave it unset so a
+    // parent layout's robots (e.g. the noindexed /experts subtree) is inherited
+    // instead of being clobbered by an explicit `undefined`.
+    ...(robots ? { robots } : {}),
     alternates: {
       canonical,
       languages

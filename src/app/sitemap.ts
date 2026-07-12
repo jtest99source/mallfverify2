@@ -3,7 +3,6 @@ import { getCategorySlugFromBusiness, isPublicCategorySlug, publicCategorySlugs,
 import { locales } from "@/lib/i18n";
 import { aboutPath, editorialPath, methodologyPath } from "@/lib/methodology";
 import { getBusinessAreaCategoryPages, getSitemapEntities } from "@/lib/repository";
-import { expertProfiles, expertVerticalSlugs } from "@/data/expertProfiles";
 
 export const revalidate = 3600;
 
@@ -17,11 +16,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     urls.push({ url: `${siteUrl}/${locale}/business`, lastModified: now, changeFrequency: "monthly", priority: 0.6 });
     urls.push({ url: `${siteUrl}/${locale}/privacy`, lastModified: now, changeFrequency: "yearly", priority: 0.2 });
     urls.push({ url: `${siteUrl}/${locale}/cookies`, lastModified: now, changeFrequency: "yearly", priority: 0.2 });
-    urls.push({ url: `${siteUrl}/${locale}/experts`, lastModified: now, changeFrequency: "weekly", priority: 0.8 });
-    for (const expertSlug of expertVerticalSlugs) urls.push({ url: `${siteUrl}/${locale}/experts/${expertSlug}`, lastModified: now, changeFrequency: "weekly", priority: 0.75 });
-    for (const profile of expertProfiles.filter((item) => item.status !== "hidden")) {
-      urls.push({ url: `${siteUrl}/${locale}/experts/${profile.verticalSlug}/${profile.slug}`, lastModified: now, changeFrequency: "monthly", priority: 0.65 });
-    }
+    // Experts is still under construction — intentionally excluded from the sitemap
+    // and noindexed (see src/app/[locale]/experts/layout.tsx) until it's ready.
     if (locale === "es" || locale === "en") urls.push({ url: `${siteUrl}/${locale}/guides`, lastModified: now, changeFrequency: "weekly", priority: 0.7 });
     urls.push({ url: `${siteUrl}${methodologyPath(locale)}`, lastModified: now, changeFrequency: "monthly", priority: 0.8 });
     urls.push({ url: `${siteUrl}${aboutPath(locale)}`, lastModified: now, changeFrequency: "monthly", priority: 0.7 });
