@@ -18,8 +18,8 @@ function NavLogo({ locale }: { locale: Locale }) {
   );
 }
 
-function expertsLabel(locale: Locale) {
-  return locale === "de" ? "Experten" : "Experts";
+function servicesLabel(locale: Locale) {
+  return locale === "de" ? "Dienstleistungen" : locale === "en" ? "Services" : "Servicios";
 }
 
 function homeSearchHint(locale: Locale) {
@@ -51,8 +51,8 @@ export function Header({ locale }: { locale: Locale }) {
             <Link href={`/${locale}`} className="inline-flex h-9 items-center gap-1.5 text-[11px] font-semibold uppercase tracking-[0.1em] text-white/45 transition-colors duration-150 hover:text-white">
               {locale === "de" ? "Start" : locale === "en" ? "Home" : "Inicio"}
             </Link>
-            <Link href={`/${locale}/experts`} className="inline-flex h-9 items-center gap-1.5 text-[11px] font-semibold uppercase tracking-[0.1em] text-white/45 transition-colors duration-150 hover:text-white">
-              {expertsLabel(locale)}
+            <Link href={`/${locale}/services`} className="inline-flex h-9 items-center gap-1.5 text-[11px] font-semibold uppercase tracking-[0.1em] text-white/45 transition-colors duration-150 hover:text-white">
+              {servicesLabel(locale)}
             </Link>
             {locale !== "de" && (
               <Link href={`/${locale}/guides`} className="inline-flex h-9 items-center gap-1.5 text-[11px] font-semibold uppercase tracking-[0.1em] text-white/45 transition-colors duration-150 hover:text-white">
@@ -109,9 +109,9 @@ export function Header({ locale }: { locale: Locale }) {
               <IconMenu2 size={15} stroke={1.8} className="shrink-0 text-[#00C37A]" />
               {locale === "de" ? "Start" : locale === "en" ? "Home" : "Inicio"}
             </Link>
-            <Link href={`/${locale}/experts`} onClick={() => setMobileOpen(false)} className="group flex min-h-[44px] items-center gap-3 rounded-sm px-3 text-sm font-bold text-white/75 hover:bg-white/[0.08] hover:text-white">
+            <Link href={`/${locale}/services`} onClick={() => setMobileOpen(false)} className="group flex min-h-[44px] items-center gap-3 rounded-sm px-3 text-sm font-bold text-white/75 hover:bg-white/[0.08] hover:text-white">
               <IconShieldCheck size={15} stroke={1.8} className="shrink-0 text-[#00C37A]" />
-              {expertsLabel(locale)}
+              {servicesLabel(locale)}
             </Link>
             {locale !== "de" && (
               <Link href={`/${locale}/guides`} onClick={() => setMobileOpen(false)} className="group flex min-h-[44px] items-center gap-3 rounded-sm px-3 text-sm font-bold text-white/75 hover:bg-white/[0.08] hover:text-white">
