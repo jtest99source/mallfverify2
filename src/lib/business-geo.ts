@@ -227,6 +227,25 @@ export function createSocialProfiles(website?: string | null, websiteType?: Webs
   return { [websiteType]: website };
 }
 
+// Mallorca bounding box. Google Places text search returns identically-named
+// places elsewhere (the Mallorcan village "Lloret" pulls in Lloret de Mar in
+// Girona, "Petra" pulls in Petra/Jordan, "Manacor" pulled a place in Andorra…).
+// Anything whose coordinates fall outside these bounds is not on the island and
+// must never be imported or listed. Bounds are generous and cover all of
+// Mallorca while excluding Ibiza (lng < 2.2), Menorca (lng > 3.6) and the
+// mainland. Rows without coordinates are treated as valid (legacy tolerance).
+export const MALLORCA_BOUNDS = { minLat: 39.2, maxLat: 40.0, minLng: 2.2, maxLng: 3.6 } as const;
+
+export function isWithinMallorca(latitude?: number | null, longitude?: number | null): boolean {
+  if (typeof latitude !== "number" || typeof longitude !== "number") return true;
+  return (
+    latitude >= MALLORCA_BOUNDS.minLat &&
+    latitude <= MALLORCA_BOUNDS.maxLat &&
+    longitude >= MALLORCA_BOUNDS.minLng &&
+    longitude <= MALLORCA_BOUNDS.maxLng
+  );
+}
+
 export function inferLocationFromAddress(address?: string | null): LocationInference {
   return inferFromText(address) ?? inferFromPostalCode(address) ?? { area: "Mallorca" };
 }

@@ -5,6 +5,7 @@ import { createSupabaseServerClient, hasSupabaseConfig } from "@/lib/supabase";
 import { toSlug } from "@/lib/slugs";
 import { siteConfig } from "@/config/site";
 import { calculateUntappedScore } from "@/lib/untapped-score";
+import { isWithinMallorca } from "@/lib/business-geo";
 import { filterBusinessesByFacet, getFacet } from "@/lib/taxonomy";
 import type { AnyCategoryAttributes, Business, BusinessCategory, BusinessFact, ContentStatus, EditorialService, EditorialSource, FAQ, FeaturedReview, GoogleReview, ImageCandidate, ImageStatus, PlacePhoto, PriceEstimate, PriceLevel, PriorityLevel, ReviewSentiment, ReviewTheme, SocialProfiles, VisitTip } from "@/types/business";
 import type { Guide } from "@/types/guide";
@@ -284,6 +285,8 @@ const businessListingSelect = [
   "city",
   "municipality",
   "address",
+  "latitude",
+  "longitude",
   "website",
   "instagram",
   "phone",
@@ -674,7 +677,11 @@ export async function getBusinesses(category: CategorySlug): Promise<Business[]>
   );
   if (error) throw error;
 
-  return mapBusinesses(((data ?? []) as BusinessRow[]).filter((row) => businessMatchesListingCategory(row, category)));
+  return mapBusinesses(
+    ((data ?? []) as BusinessRow[])
+      .filter((row) => isWithinMallorca(row.latitude, row.longitude))
+      .filter((row) => businessMatchesListingCategory(row, category))
+  );
 }
 
 function mapMiniRankingBusiness(row: Pick<BusinessRow, "id" | "slug" | "name" | "display_name" | "category" | "short_description" | "description" | "area" | "city" | "image" | "primary_image_url" | "gallery_image_urls" | "rating" | "reviews_count" | "updated_at">): Business {
@@ -757,7 +764,7 @@ export async function getHomepageMiniRankingBusinesses(category: CategorySlug, l
   let query = publicStatusFilter(
     supabase
       .from("businesses")
-      .select("id,slug,name,display_name,category,short_description,description,area,city,image,primary_image_url,gallery_image_urls,tags,best_for,rating,reviews_count,updated_at")
+      .select("id,slug,name,display_name,category,short_description,description,area,city,latitude,longitude,image,primary_image_url,gallery_image_urls,tags,best_for,rating,reviews_count,updated_at")
       .in("category", getBusinessCategoriesForListing(category))
       .not("rating", "is", null)
       .not("reviews_count", "is", null)
@@ -771,9 +778,10 @@ export async function getHomepageMiniRankingBusinesses(category: CategorySlug, l
   const { data, error } = await query;
   if (error) throw error;
 
-  return ((data ?? []) as Array<Pick<BusinessRow, "id" | "slug" | "name" | "display_name" | "category" | "short_description" | "description" | "area" | "city" | "image" | "primary_image_url" | "gallery_image_urls" | "tags" | "best_for" | "rating" | "reviews_count" | "updated_at">>)
+  return ((data ?? []) as Array<Pick<BusinessRow, "id" | "slug" | "name" | "display_name" | "category" | "short_description" | "description" | "area" | "city" | "latitude" | "longitude" | "image" | "primary_image_url" | "gallery_image_urls" | "tags" | "best_for" | "rating" | "reviews_count" | "updated_at">>)
     // Same listing rules as the /top ranking (excludes gelato parlours, keeps the
     // right adjacent categories) so the homepage matches the full category page.
+    .filter((row) => isWithinMallorca(row.latitude, row.longitude))
     .filter((row) => businessMatchesListingCategory(row, category))
     .sort((a, b) => (b.reviews_count ?? 0) - (a.reviews_count ?? 0))
     .slice(0, limit)

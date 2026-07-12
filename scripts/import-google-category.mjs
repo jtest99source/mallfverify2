@@ -1,6 +1,6 @@
 import { createClient } from "@supabase/supabase-js";
 import { existsSync, readFileSync } from "node:fs";
-import { calculateAuthorityScore, createSocialProfiles, detectWebsiteType, inferLocationFromAddress } from "../src/lib/business-geo.ts";
+import { calculateAuthorityScore, createSocialProfiles, detectWebsiteType, inferLocationFromAddress, isWithinMallorca } from "../src/lib/business-geo.ts";
 import { getPlaceCategoryConfig } from "./place-category-config.mjs";
 
 function loadLocalEnv() {
@@ -166,10 +166,19 @@ async function main() {
 
   let inserted = 0;
   let updated = 0;
+  let skippedOutsideMallorca = 0;
 
   const placesToImport = Array.from(unique.values()).slice(offset, limit ? offset + limit : undefined);
 
   for (const place of placesToImport) {
+    // Geo-fence: Google text search returns same-named places off the island
+    // (Lloret de Mar, Petra/Jordan, Manacor/Andorra…). Never import them.
+    if (!isWithinMallorca(place.latitude, place.longitude)) {
+      skippedOutsideMallorca += 1;
+      console.log(`  ⨯ skipped (outside Mallorca): ${place.name} — ${place.address ?? "no address"}`);
+      continue;
+    }
+
     const enrichment = buildEnrichment(place);
     const { data: existing, error: existingError } = await supabase
       .from("businesses")
@@ -261,6 +270,7 @@ async function main() {
     attempted_this_run: placesToImport.length,
     inserted,
     updated,
+    skipped_outside_mallorca: skippedOutsideMallorca,
     duplicate_rows_ignored: duplicateRowsIgnored,
     closed_rows_ignored: closedRowsIgnored,
     total_businesses_category: count
