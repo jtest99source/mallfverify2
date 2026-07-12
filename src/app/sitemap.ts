@@ -27,7 +27,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     urls.push({ url: `${siteUrl}${aboutPath(locale)}`, lastModified: now, changeFrequency: "monthly", priority: 0.7 });
     urls.push({ url: `${siteUrl}${editorialPath(locale)}`, lastModified: now, changeFrequency: "monthly", priority: 0.7 });
     for (const category of publicCategorySlugs) {
-      urls.push({ url: `${siteUrl}/${locale}/${category}`, lastModified: now, changeFrequency: "daily", priority: 0.85 });
+      // Old /{locale}/{category} index now 308-redirects to /top; only the live ranking URL is advertised.
       urls.push({ url: `${siteUrl}/${locale}/top/${category}`, lastModified: now, changeFrequency: "daily", priority: 0.85 });
     }
     for (const page of areaPages.filter((page) => isPublicCategorySlug(page.category))) urls.push({ url: `${siteUrl}/${locale}/areas/${page.areaSlug}/${page.category}`, lastModified: now, changeFrequency: "weekly", priority: 0.75 });

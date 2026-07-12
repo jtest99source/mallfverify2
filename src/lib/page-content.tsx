@@ -670,7 +670,7 @@ export async function BusinessDetailPage({ category, locale, slug }: { category:
   ].filter(Boolean);
   const breadcrumbs = [
     { name: copy.category.breadcrumbHome, url: `${siteUrl}/${locale}` },
-    { name: getCategoryCopy(category, locale).label, url: `${siteUrl}/${locale}/${category}` },
+    { name: getCategoryCopy(category, locale).label, url: `${siteUrl}/${locale}/top/${category}` },
     { name: publicName, url: `${siteUrl}/${locale}/${category}/${business.slug}` }
   ];
 
@@ -684,7 +684,7 @@ export async function BusinessDetailPage({ category, locale, slug }: { category:
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_42%,rgba(0,195,122,0.10),transparent_24%),linear-gradient(to_top,rgba(5,5,5,0.98)_0%,rgba(5,5,5,0.66)_42%,rgba(5,5,5,0.30)_100%)]" />
           <div className="absolute left-4 top-4 z-20 sm:left-8 lg:left-12">
             <Link
-              href={`/${locale}/${category}`}
+              href={`/${locale}/top/${category}`}
               className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-black/40 px-3 py-1.5 text-[11px] font-bold uppercase tracking-[0.08em] text-white backdrop-blur-sm transition-colors hover:border-white/50 hover:bg-black/60"
             >
               <IconArrowLeft size={13} stroke={2.5} />
