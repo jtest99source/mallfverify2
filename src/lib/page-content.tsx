@@ -697,10 +697,10 @@ export async function BusinessDetailPage({ category, locale, slug }: { category:
                 <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-gold">
                   {primaryRanking ? rankingEyebrow(primaryRanking, category, locale) : `${localizedCategoryLabel(business.category, locale)} · ${location}`}
                 </p>
-                <h1 className="mt-3 max-w-5xl font-display text-5xl font-black leading-[0.92] text-white [text-shadow:_0_2px_22px_rgba(0,0,0,0.65)] sm:text-7xl lg:text-8xl">{publicName}</h1>
+                <h1 className="mt-3 max-w-5xl [overflow-wrap:anywhere] font-display text-5xl font-black leading-[0.92] text-white [text-shadow:_0_2px_22px_rgba(0,0,0,0.65)] sm:text-7xl lg:text-8xl">{publicName}</h1>
                 <div className="mt-5 flex flex-wrap items-center gap-x-3 gap-y-2">
                   <MvScoreBadge rating={business.rating} reviewsCount={business.reviewsCount} locale={locale} className="px-2.5 py-1.5 text-[13px]" />
-                  {heroMeta.length > 0 && <p className="max-w-4xl text-base font-semibold leading-7 text-white/78">{heroMeta.join(" · ")}</p>}
+                  {heroMeta.length > 0 && <p className="min-w-0 max-w-4xl break-words text-base font-semibold leading-7 text-white/78">{heroMeta.join(" · ")}</p>}
                 </div>
               </div>
             </div>
