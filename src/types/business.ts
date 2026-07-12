@@ -17,6 +17,8 @@ export type BusinessCategory =
   | "veterinarian"
   | "healthcare"
   | "real-estate"
+  | "lawyer"
+  | "tax-advisor"
   | "market"
   | "local-shop"
   | "museum"

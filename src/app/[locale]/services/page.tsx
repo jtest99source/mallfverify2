@@ -14,7 +14,7 @@ import type { CategorySlug } from "@/lib/data";
 // rating + MV Score), reusing the shared carousel. The verified English/German
 // language layer is announced as "coming soon" — it lands once outreach fills the data.
 
-const SERVICE_CATEGORIES: CategorySlug[] = ["dentists", "aesthetic-clinics", "healthcare", "real-estate", "vets", "rent-a-car", "car-dealers"];
+const SERVICE_CATEGORIES: CategorySlug[] = ["dentists", "aesthetic-clinics", "healthcare", "real-estate", "lawyers", "tax-advisors", "vets", "rent-a-car", "car-dealers"];
 
 const serviceLocations = ["Palma", "Alcúdia", "Pollença", "Sóller", "Manacor", "Inca", "Santanyí", "Andratx", "Calvià", "Llucmajor"].map((location) => ({ label: location, value: location }));
 
@@ -40,6 +40,16 @@ const serviceModules: Array<{ category: CategorySlug; eyebrow: LocaleText; title
     category: "real-estate",
     eyebrow: { es: "Vivienda", en: "Property", de: "Immobilien" },
     title: { es: "Inmobiliarias en Mallorca", en: "Real estate agencies in Mallorca", de: "Immobilienagenturen auf Mallorca" }
+  },
+  {
+    category: "lawyers",
+    eyebrow: { es: "Legal", en: "Legal", de: "Recht" },
+    title: { es: "Abogados en Mallorca", en: "Lawyers in Mallorca", de: "Anwälte auf Mallorca" }
+  },
+  {
+    category: "tax-advisors",
+    eyebrow: { es: "Fiscal", en: "Tax & admin", de: "Steuer" },
+    title: { es: "Gestorías y asesores en Mallorca", en: "Tax advisors & gestorías in Mallorca", de: "Steuerberater auf Mallorca" }
   },
   {
     category: "vets",

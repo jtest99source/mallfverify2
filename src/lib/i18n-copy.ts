@@ -523,6 +523,21 @@ Object.assign(deCategoryCopy, {
   "aesthetic-clinics": { label: "Ästhetische Medizin", singular: "Klinik für ästhetische Medizin", title: "Kliniken für ästhetische Medizin auf Mallorca", intro: "Kliniken für ästhetische Medizin auf Mallorca —Botox, Laser, ästhetische Dermatologie und Chirurgie— für Expats und internationale Bewohner, nach echten Google-Bewertungen sortiert. Sprachverifizierung (Englisch/Deutsch) demnächst.", metaDescription: "Kliniken für ästhetische Medizin auf Mallorca nach echten Google-Bewertungen. Für internationale Bewohner. Sprachverifizierung in Kürze." }
 } satisfies Partial<Record<CategorySlug, CategoryCopy>>);
 
+Object.assign(esCategoryCopy, {
+  lawyers: { label: "Abogados", singular: "Despacho de abogados", title: "Abogados en Mallorca", intro: "Despachos de abogados en Mallorca para compra de vivienda, NIE, residencia y herencias, orientados a expats y residentes internacionales. Ordenados por reseñas reales de Google. Verificación de idioma (inglés/alemán) próximamente.", metaDescription: "Abogados en Mallorca para compradores y residentes internacionales, ordenados por reseñas reales de Google. Verificación de idioma próximamente." },
+  "tax-advisors": { label: "Gestorías y asesores", singular: "Gestoría o asesor fiscal", title: "Gestorías y asesores fiscales en Mallorca", intro: "Gestorías y asesores fiscales en Mallorca para autónomos, empresas y residentes internacionales, ordenados por reseñas reales de Google. Verificación de idioma (inglés/alemán) próximamente.", metaDescription: "Gestorías y asesores fiscales en Mallorca ordenados por reseñas reales de Google. Para residentes internacionales. Verificación de idioma próximamente." }
+} satisfies Partial<Record<CategorySlug, CategoryCopy>>);
+
+Object.assign(enCategoryCopy, {
+  lawyers: { label: "Lawyers", singular: "Law firm", title: "Lawyers in Mallorca", intro: "Law firms in Mallorca for property purchase, NIE, residency and inheritance, for expats and international residents. Ranked by real Google reviews. English/German language verification coming soon.", metaDescription: "English-speaking lawyers in Mallorca for buyers and international residents, ranked by real Google reviews. Language verification coming soon." },
+  "tax-advisors": { label: "Tax advisors", singular: "Tax advisor / gestoría", title: "Tax advisors & gestorías in Mallorca", intro: "Tax advisors and gestorías in Mallorca for freelancers, companies and international residents, ranked by real Google reviews. English/German language verification coming soon.", metaDescription: "Tax advisors and gestorías in Mallorca ranked by real Google reviews. For international residents. Language verification coming soon." }
+} satisfies Partial<Record<CategorySlug, CategoryCopy>>);
+
+Object.assign(deCategoryCopy, {
+  lawyers: { label: "Anwälte", singular: "Anwaltskanzlei", title: "Anwälte auf Mallorca", intro: "Anwaltskanzleien auf Mallorca für Immobilienkauf, NIE, Aufenthalt und Erbschaften, für Expats und internationale Bewohner. Nach echten Google-Bewertungen sortiert. Sprachverifizierung (Englisch/Deutsch) demnächst.", metaDescription: "Anwälte auf Mallorca für Käufer und internationale Bewohner, nach echten Google-Bewertungen. Sprachverifizierung in Kürze." },
+  "tax-advisors": { label: "Steuerberater", singular: "Steuerberater / Gestoría", title: "Steuerberater & Gestorías auf Mallorca", intro: "Steuerberater und Gestorías auf Mallorca für Selbstständige, Unternehmen und internationale Bewohner, nach echten Google-Bewertungen sortiert. Sprachverifizierung (Englisch/Deutsch) demnächst.", metaDescription: "Steuerberater und Gestorías auf Mallorca nach echten Google-Bewertungen. Für internationale Bewohner. Sprachverifizierung in Kürze." }
+} satisfies Partial<Record<CategorySlug, CategoryCopy>>);
+
 export const categoryCopy: Record<Locale, Partial<Record<CategorySlug, CategoryCopy>>> = {
   es: esCategoryCopy,
   en: enCategoryCopy,

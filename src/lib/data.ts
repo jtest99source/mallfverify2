@@ -205,6 +205,26 @@ export const categoryConfigs = {
     faq: "¿Qué agencia inmobiliaria elegir en Mallorca si soy extranjero?",
     editorialContext: "En real estate valoramos reseñas, volumen, zona, claridad de servicio y orientación a compradores o residentes internacionales. La posición nunca depende de acuerdos comerciales."
   },
+  lawyers: {
+    label: "Abogados",
+    singular: "Despacho de abogados",
+    businessCategory: "lawyer",
+    icon: "IconScale",
+    title: "Abogados en Mallorca",
+    intro: "Despachos de abogados en Mallorca para compra de vivienda, NIE, residencia, herencias y asuntos de no residentes. Orientados a extranjeros, expats y residentes internacionales, ordenados por reseñas reales de Google.",
+    faq: "¿Dónde encontrar un abogado que atienda a extranjeros en Mallorca?",
+    editorialContext: "En abogados miramos reseñas, volumen, especialidad (propiedad, extranjería, fiscal, herencias), ubicación y señales de atención internacional. La verificación de idiomas (inglés/alemán) llegará por confirmación directa con cada despacho."
+  },
+  "tax-advisors": {
+    label: "Gestorías y asesores",
+    singular: "Gestoría o asesor fiscal",
+    businessCategory: "tax-advisor",
+    icon: "IconReceipt",
+    title: "Gestorías y asesores fiscales en Mallorca",
+    intro: "Gestorías y asesores fiscales en Mallorca para autónomos, empresas y residentes internacionales: impuestos, altas, contabilidad y trámites. Ordenados por reseñas reales de Google.",
+    faq: "¿Dónde encontrar una gestoría o asesor fiscal que atienda a extranjeros en Mallorca?",
+    editorialContext: "En gestorías y asesoría fiscal miramos reseñas, volumen, especialidad (autónomos, empresas, no residentes), ubicación y señales de atención internacional. La verificación de idiomas (inglés/alemán) llegará por confirmación directa con cada asesoría."
+  },
   routes: {
     label: "Rutas y miradores",
     singular: "Ruta o mirador",
@@ -248,7 +268,9 @@ export const publicCategorySlugs = [
   "healthcare",
   "dentists",
   "aesthetic-clinics",
-  "real-estate"
+  "real-estate",
+  "lawyers",
+  "tax-advisors"
 ] as const satisfies CategorySlug[];
 
 export type PublicCategorySlug = (typeof publicCategorySlugs)[number];
@@ -326,6 +348,8 @@ const categoryGuideKeywords: Record<CategorySlug, string[]> = {
   dentists: ["dentista", "dental", "clínica dental", "dentist", "zahnarzt", "odontolog"],
   "aesthetic-clinics": ["medicina estética", "estética", "aesthetic", "botox", "láser", "dermatología", "clínica estética"],
   "real-estate": ["inmobiliaria", "property", "comprar casa", "real estate", "vivienda"],
+  lawyers: ["abogado", "lawyer", "despacho", "legal", "extranjería", "herencia"],
+  "tax-advisors": ["gestoría", "asesor fiscal", "tax advisor", "gestor", "impuestos", "contable"],
   routes: ["ruta", "senderismo", "mirador", "trail", "hiking"],
   excursions: ["excursión", "tour", "visita", "excursion"]
 };
