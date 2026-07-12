@@ -185,6 +185,16 @@ export const categoryConfigs = {
     faq: "¿Dónde encontrar un dentista que atienda a extranjeros en Mallorca?",
     editorialContext: "En clínicas dentales miramos reseñas, volumen, ubicación, claridad de contacto y señales de atención internacional. La verificación de idiomas (inglés/alemán) llegará por confirmación directa con cada clínica."
   },
+  "aesthetic-clinics": {
+    label: "Medicina estética",
+    singular: "Clínica de medicina estética",
+    businessCategory: "healthcare",
+    icon: "IconSparkles",
+    title: "Clínicas de medicina estética en Mallorca",
+    intro: "Clínicas de medicina estética en Mallorca —bótox, láser, dermatología estética y cirugía— orientadas a extranjeros, expats y residentes internacionales. Ordenadas por reseñas reales de Google.",
+    faq: "¿Dónde encontrar una clínica de medicina estética que atienda a extranjeros en Mallorca?",
+    editorialContext: "En medicina estética miramos reseñas, volumen, especialidad (dermatología, láser, cirugía), ubicación y señales de atención internacional. La verificación de idiomas (inglés/alemán) llegará por confirmación directa con cada clínica."
+  },
   "real-estate": {
     label: "Inmobiliarias",
     singular: "Agencia inmobiliaria",
@@ -237,6 +247,7 @@ export const publicCategorySlugs = [
   "vets",
   "healthcare",
   "dentists",
+  "aesthetic-clinics",
   "real-estate"
 ] as const satisfies CategorySlug[];
 
@@ -313,6 +324,7 @@ const categoryGuideKeywords: Record<CategorySlug, string[]> = {
   vets: ["veterinario", "vet", "veterinary", "mascotas", "animal"],
   healthcare: ["médico", "doctor", "dentista", "salud", "clínica", "health"],
   dentists: ["dentista", "dental", "clínica dental", "dentist", "zahnarzt", "odontolog"],
+  "aesthetic-clinics": ["medicina estética", "estética", "aesthetic", "botox", "láser", "dermatología", "clínica estética"],
   "real-estate": ["inmobiliaria", "property", "comprar casa", "real estate", "vivienda"],
   routes: ["ruta", "senderismo", "mirador", "trail", "hiking"],
   excursions: ["excursión", "tour", "visita", "excursion"]

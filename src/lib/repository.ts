@@ -269,12 +269,18 @@ function businessMatchesListingCategory(row: Pick<BusinessRow, "category" | "nam
     return hasListingSignal(signalText, activityListingSignals);
   }
 
-  // "dentists" is a virtual carve-out of healthcare; general healthcare excludes them.
+  // "dentists" and "aesthetic-clinics" are virtual carve-outs of healthcare;
+  // general healthcare excludes both. Aesthetic clinics are marked at import time
+  // with the "medicina-estetica" tag (curated), dentists are detected by signal.
+  const hasAestheticTag = (row.tags ?? []).includes("medicina-estetica");
+  if (category === "aesthetic-clinics") {
+    return row.category === "healthcare" && hasAestheticTag;
+  }
   if (category === "dentists") {
     return row.category === "healthcare" && dentalSignalRegex.test(signalText);
   }
   if (category === "healthcare") {
-    return row.category === "healthcare" && !dentalSignalRegex.test(signalText);
+    return row.category === "healthcare" && !dentalSignalRegex.test(signalText) && !hasAestheticTag;
   }
 
   return row.category === getBusinessCategoryFromSlug(category);
@@ -783,7 +789,10 @@ export async function getHomepageMiniRankingBusinesses(category: CategorySlug, l
       .not("rating", "is", null)
       .not("reviews_count", "is", null)
       .order("reviews_count", { ascending: false })
-      .limit(Math.max(limit * 8, limit))
+      // Fetch generously before the listing filter: virtual carve-outs (dentists,
+      // aesthetic-clinics) are a small slice of a big category and can rank below a
+      // tight top-N by reviews, so a small cap would drop them from the mini-ranking.
+      .limit(Math.max(limit * 8, 400))
   );
 
   if (area) query = query.or(`city.ilike.%${area}%,area.ilike.%${area}%`);

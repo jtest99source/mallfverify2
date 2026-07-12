@@ -511,6 +511,18 @@ Object.assign(deCategoryCopy, {
   dentists: { label: "Zahnärzte", singular: "Zahnarztpraxis", title: "Zahnärzte auf Mallorca", intro: "Zahnärzte und Zahnkliniken auf Mallorca für Expats und internationale Bewohner, nach echten Google-Bewertungen sortiert. Sprachverifizierung (Englisch/Deutsch) demnächst.", metaDescription: "Zahnärzte und Zahnkliniken auf Mallorca nach echten Google-Bewertungen. Für internationale Bewohner. Sprachverifizierung in Kürze." }
 } satisfies Partial<Record<CategorySlug, CategoryCopy>>);
 
+Object.assign(esCategoryCopy, {
+  "aesthetic-clinics": { label: "Medicina estética", singular: "Clínica de medicina estética", title: "Clínicas de medicina estética en Mallorca", intro: "Clínicas de medicina estética en Mallorca —bótox, láser, dermatología estética y cirugía— para expats y residentes internacionales, ordenadas por reseñas reales de Google. Verificación de idioma (inglés/alemán) próximamente.", metaDescription: "Clínicas de medicina estética en Mallorca ordenadas por reseñas reales de Google. Para residentes internacionales. Verificación de idioma próximamente." }
+} satisfies Partial<Record<CategorySlug, CategoryCopy>>);
+
+Object.assign(enCategoryCopy, {
+  "aesthetic-clinics": { label: "Aesthetic clinics", singular: "Aesthetic medicine clinic", title: "Aesthetic medicine clinics in Mallorca", intro: "Aesthetic medicine clinics in Mallorca —botox, laser, aesthetic dermatology and surgery— for expats and international residents, ranked by real Google reviews. English/German language verification coming soon.", metaDescription: "Aesthetic medicine clinics in Mallorca ranked by real Google reviews. For international residents. Language verification coming soon." }
+} satisfies Partial<Record<CategorySlug, CategoryCopy>>);
+
+Object.assign(deCategoryCopy, {
+  "aesthetic-clinics": { label: "Ästhetische Medizin", singular: "Klinik für ästhetische Medizin", title: "Kliniken für ästhetische Medizin auf Mallorca", intro: "Kliniken für ästhetische Medizin auf Mallorca —Botox, Laser, ästhetische Dermatologie und Chirurgie— für Expats und internationale Bewohner, nach echten Google-Bewertungen sortiert. Sprachverifizierung (Englisch/Deutsch) demnächst.", metaDescription: "Kliniken für ästhetische Medizin auf Mallorca nach echten Google-Bewertungen. Für internationale Bewohner. Sprachverifizierung in Kürze." }
+} satisfies Partial<Record<CategorySlug, CategoryCopy>>);
+
 export const categoryCopy: Record<Locale, Partial<Record<CategorySlug, CategoryCopy>>> = {
   es: esCategoryCopy,
   en: enCategoryCopy,
