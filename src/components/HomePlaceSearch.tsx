@@ -88,7 +88,7 @@ export function HomePlaceSearch({ locale, categories, locations }: HomePlaceSear
     >
       <div className="grid sm:grid-cols-2 sm:items-stretch">
         {/* WHAT */}
-        <div className="relative z-40 px-5 py-4 sm:border-r sm:border-white/10">
+        <div className={`relative px-5 py-4 sm:border-r sm:border-white/10 ${openMenu === "category" ? "z-50" : "z-40"}`}>
           <button
             type="button"
             onPointerDown={(event) => {
@@ -113,9 +113,7 @@ export function HomePlaceSearch({ locale, categories, locations }: HomePlaceSear
                 <button
                   key={option.slug}
                   type="button"
-                  onPointerDown={(event) => {
-                    event.preventDefault();
-                    event.stopPropagation();
+                  onClick={() => {
                     setCategory(option.slug);
                     setOpenMenu(null);
                   }}
@@ -131,7 +129,7 @@ export function HomePlaceSearch({ locale, categories, locations }: HomePlaceSear
         </div>
 
         {/* WHERE */}
-        <div className="relative z-40 border-t border-white/10 px-5 py-4 sm:border-t-0">
+        <div className={`relative border-t border-white/10 px-5 py-4 sm:border-t-0 ${openMenu === "location" ? "z-50" : "z-40"}`}>
           <button
             type="button"
             onPointerDown={(event) => {
@@ -154,9 +152,7 @@ export function HomePlaceSearch({ locale, categories, locations }: HomePlaceSear
             <div className="absolute left-0 top-[calc(100%+8px)] z-[90] max-h-80 w-full min-w-64 overflow-y-auto rounded-md border border-[#E5E7EB] bg-[#FFFFFF] p-1 shadow-[0_22px_60px_rgba(0,0,0,0.35)]">
               <button
                 type="button"
-                onPointerDown={(event) => {
-                  event.preventDefault();
-                  event.stopPropagation();
+                onClick={() => {
                   setLocation("");
                   setOpenMenu(null);
                 }}
@@ -170,9 +166,7 @@ export function HomePlaceSearch({ locale, categories, locations }: HomePlaceSear
                 <button
                   key={item.value}
                   type="button"
-                  onPointerDown={(event) => {
-                    event.preventDefault();
-                    event.stopPropagation();
+                  onClick={() => {
                     setLocation(item.value);
                     setOpenMenu(null);
                   }}
