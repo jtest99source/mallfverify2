@@ -12,8 +12,14 @@
 // rating with few reviews scores lower than a slightly lower rating backed by
 // hundreds of reviews — which is exactly why a 4.7 (800 reviews) outranks a
 // 5.0 (12 reviews).
+//
+// REF is 6000 (not 1500): at 1500 the whole head of busy categories like Palma
+// restaurants saturated at 96–100, so the badge stopped discriminating. Raising
+// it lets review volume keep separating proven places from merely-good ones up
+// into the low thousands, which spreads the top of the ranking again. It is the
+// single dial for head dispersion — raise it for more spread, lower it for less.
 
-const VOLUME_REFERENCE = 1500;
+const VOLUME_REFERENCE = 6000;
 
 export function calculateMvScore(rating?: number | null, reviewsCount?: number | null): number | null {
   if (typeof rating !== "number" || typeof reviewsCount !== "number") return null;

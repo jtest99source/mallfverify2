@@ -218,10 +218,10 @@ function businessMatchesListingCategory(row: Pick<BusinessRow, "category" | "nam
   );
 
   if (category === "restaurants") {
-    if (row.category === "restaurant") {
-      if (hasListingSignal(signalText, iceCreamExclusionSignals)) return false;
-      return true;
-    }
+    // Ice-cream / gelato parlours are excluded from restaurants regardless of the
+    // DB category they were imported under (some land as `cafe`, not `restaurant`).
+    if (hasListingSignal(signalText, iceCreamExclusionSignals)) return false;
+    if (row.category === "restaurant") return true;
     if (row.category !== "bar" && row.category !== "cafe" && row.category !== "beach-club") return false;
     return hasListingSignal(signalText, restaurantListingSignals);
   }
@@ -748,9 +748,6 @@ function mapFacetScanBusiness(row: FacetScanBusinessRow): Business {
   };
 }
 
-function ratioScore(row: Pick<BusinessRow, "rating" | "reviews_count">) {
-  return (row.rating ?? 0) * Math.log((row.reviews_count ?? 0) + 1);
-}
 
 export async function getHomepageMiniRankingBusinesses(category: CategorySlug, limit = 5, area?: string, minReviews?: number): Promise<Business[]> {
   const fallback = emptyWhenUnconfigured<Business[]>([]);
@@ -760,13 +757,12 @@ export async function getHomepageMiniRankingBusinesses(category: CategorySlug, l
   let query = publicStatusFilter(
     supabase
       .from("businesses")
-      .select("id,slug,name,display_name,category,short_description,description,area,city,image,primary_image_url,gallery_image_urls,rating,reviews_count,updated_at")
-      .eq("category", getBusinessCategoryFromSlug(category))
+      .select("id,slug,name,display_name,category,short_description,description,area,city,image,primary_image_url,gallery_image_urls,tags,best_for,rating,reviews_count,updated_at")
+      .in("category", getBusinessCategoriesForListing(category))
       .not("rating", "is", null)
       .not("reviews_count", "is", null)
-      .order("rating", { ascending: false })
       .order("reviews_count", { ascending: false })
-      .limit(Math.max(limit * 6, limit))
+      .limit(Math.max(limit * 8, limit))
   );
 
   if (area) query = query.or(`city.ilike.%${area}%,area.ilike.%${area}%`);
@@ -775,12 +771,11 @@ export async function getHomepageMiniRankingBusinesses(category: CategorySlug, l
   const { data, error } = await query;
   if (error) throw error;
 
-  return ((data ?? []) as Array<Pick<BusinessRow, "id" | "slug" | "name" | "display_name" | "category" | "short_description" | "description" | "area" | "city" | "image" | "primary_image_url" | "gallery_image_urls" | "rating" | "reviews_count" | "updated_at">>)
-    .sort((a, b) => {
-      const ratioDiff = ratioScore(b) - ratioScore(a);
-      if (ratioDiff !== 0) return ratioDiff;
-      return (b.reviews_count ?? 0) - (a.reviews_count ?? 0);
-    })
+  return ((data ?? []) as Array<Pick<BusinessRow, "id" | "slug" | "name" | "display_name" | "category" | "short_description" | "description" | "area" | "city" | "image" | "primary_image_url" | "gallery_image_urls" | "tags" | "best_for" | "rating" | "reviews_count" | "updated_at">>)
+    // Same listing rules as the /top ranking (excludes gelato parlours, keeps the
+    // right adjacent categories) so the homepage matches the full category page.
+    .filter((row) => businessMatchesListingCategory(row, category))
+    .sort((a, b) => (b.reviews_count ?? 0) - (a.reviews_count ?? 0))
     .slice(0, limit)
     .map(mapMiniRankingBusiness);
 }

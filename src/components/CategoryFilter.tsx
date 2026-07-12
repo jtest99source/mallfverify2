@@ -169,7 +169,7 @@ export function CategoryFilter({ businesses, locale }: { businesses: Business[];
   const area = searchParams.get("area") || ALL_AREAS;
   const tag = searchParams.get("tag") || ALL_TAGS;
   const query = searchParams.get("q") || "";
-  const sort = (searchParams.get("sort") || "ratio") as SortKey;
+  const sort = (searchParams.get("sort") || "reviews") as SortKey;
 
   const areas = useMemo(
     () => Array.from(new Set(businesses.map(businessArea).filter(Boolean))).sort((a, b) => a.localeCompare(b, numberLocale(locale))),
@@ -179,7 +179,7 @@ export function CategoryFilter({ businesses, locale }: { businesses: Business[];
 
   function updateParam(key: string, value: string) {
     const params = new URLSearchParams(searchParams.toString());
-    if (!value || value === ALL_AREAS || value === ALL_TAGS || (key === "sort" && value === "ratio")) {
+    if (!value || value === ALL_AREAS || value === ALL_TAGS || (key === "sort" && value === "reviews")) {
       params.delete(key);
     } else {
       params.set(key, value);

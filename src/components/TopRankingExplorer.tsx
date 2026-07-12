@@ -227,14 +227,14 @@ export function TopRankingExplorer({
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const [query, setQuery] = useState(searchParams.get("q") ?? "");
-  const [sort, setSort] = useState<SortKey>((searchParams.get("sort") as SortKey) || "ratio");
+  const [sort, setSort] = useState<SortKey>((searchParams.get("sort") as SortKey) || "reviews");
   const [facetSlug, setFacetSlug] = useState(searchParams.get("type") ?? ALL);
   const [place, setPlace] = useState(searchParams.get("area") ?? ALL);
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
   const sortOptions: Array<{ value: SortKey; label: string }> = [
+    { value: "reviews", label: copy.filters.sort.reviews },
     { value: "ratio", label: copy.filters.sort.ratio },
     { value: "rating", label: copy.filters.sort.rating },
-    { value: "reviews", label: copy.filters.sort.reviews },
     { value: "hidden", label: copy.filters.sort.hidden }
   ];
 
@@ -248,14 +248,14 @@ export function TopRankingExplorer({
 
   useEffect(() => {
     setQuery(searchParams.get("q") ?? "");
-    setSort((searchParams.get("sort") as SortKey) || "ratio");
+    setSort((searchParams.get("sort") as SortKey) || "reviews");
     setFacetSlug(searchParams.get("type") ?? ALL);
     setPlace(searchParams.get("area") ?? ALL);
   }, [searchParams]);
 
   function updateParam(key: string, value: string) {
     const params = new URLSearchParams(searchParams.toString());
-    const isDefault = value === ALL || (key === "sort" && value === "ratio") || !value.trim();
+    const isDefault = value === ALL || (key === "sort" && value === "reviews") || !value.trim();
     if (isDefault) {
       params.delete(key);
     } else {

@@ -359,15 +359,15 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
     },
     {
       key: "healthcare",
-      title: safeLocale === "de" ? "Ärzte und Kliniken für internationale Bewohner" : safeLocale === "en" ? "Doctors and clinics for international residents" : "Médicos y clínicas para residentes internacionales",
+      title: safeLocale === "de" ? "Ärzte und Kliniken auf Mallorca" : safeLocale === "en" ? "Doctors and clinics in Mallorca" : "Médicos y clínicas en Mallorca",
       eyebrow: safeLocale === "de" ? "Praktisch" : safeLocale === "en" ? "Practical" : "Práctico",
       href: `/${safeLocale}/top/healthcare`,
       businesses: healthcare
     },
     {
       key: "real-estate",
-      title: safeLocale === "de" ? "Immobilienagenturen für Käufer aus dem Ausland" : safeLocale === "en" ? "Real estate agencies for overseas buyers" : "Inmobiliarias para compradores extranjeros",
-      eyebrow: safeLocale === "de" ? "Umziehen & kaufen" : safeLocale === "en" ? "Move & buy" : "Mudarse y comprar",
+      title: safeLocale === "de" ? "Die besten Immobilienagenturen auf Mallorca" : safeLocale === "en" ? "Best real estate agencies in Mallorca" : "Mejores inmobiliarias de Mallorca",
+      eyebrow: safeLocale === "de" ? "Immobilien" : safeLocale === "en" ? "Real estate" : "Inmobiliarias",
       href: `/${safeLocale}/top/real-estate`,
       businesses: realEstate
     }
