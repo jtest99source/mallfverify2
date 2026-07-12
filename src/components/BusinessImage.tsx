@@ -57,7 +57,11 @@ const DIRECT_IMAGE_OVERRIDES: Record<string, string> = {
   "centauro-alquiler-de-coches":
     "https://lh3.googleusercontent.com/place-photos/AJRVUZPUEAUSlvnGZheBfUvK7-38YnC-nNr6WgqWQGfoojxUt5yg05e3_mOzYC2LtjZC8YkxmYvOeWkpurVLXa2Y-5S2pPLoWDtYSeqOSZxzrxEHhzKRfWmo8sjZUMp9EAxqGMKAh8Z76jryac2pAA=s4800-w1536",
   "europcar-mallorca-palma-aeropuerto":
-    "https://lh3.googleusercontent.com/place-photos/AJRVUZNdviz0Is1RiHp8tE9J6I7OiAoet_CbXjRFpHWX-kTQYe1WsVj-2sylprCI0lzjOXnM-ZaGi5Z1wFO5mknoAXYoR0x5BoUlZHT_f-YC5S8M5SVplRPoepEAjNzRP9Z-q1XpFgj1m7a7nOTj2vDzw9TU=s4800-w480"
+    "https://lh3.googleusercontent.com/place-photos/AJRVUZNdviz0Is1RiHp8tE9J6I7OiAoet_CbXjRFpHWX-kTQYe1WsVj-2sylprCI0lzjOXnM-ZaGi5Z1wFO5mknoAXYoR0x5BoUlZHT_f-YC5S8M5SVplRPoepEAjNzRP9Z-q1XpFgj1m7a7nOTj2vDzw9TU=s4800-w480",
+  "compramostucoche-es-palma-de-mallorca":
+    "https://lh3.googleusercontent.com/place-photos/AJRVUZO7aGXJAEYg8wEWOAdyh_4HR73FIrRSgMzGCgXInvknMZjsPnkFlXJxn68pNRy9QBCZMPDbbzqrUsCgPoADhPX9gYc_EIcTFl8271iLtWc6JPvXvnbM6kPJsB1ow6kpWzzM04nkfENswxeY0g=s4800-w1600",
+  "compramostucoche-es-manacor":
+    "https://lh3.googleusercontent.com/place-photos/AJRVUZP_PbsH3LTA_6h5dx75PfumNg433E2FY6Nu9BG7XOwq9-lBtSttNoDGBjX3bpYCpzAAjPjg1vN-XqB5cXKtiHbtwj9xT1kaNElDxkttGu0jjCSt7J7dvlN5Q_l5BK9kvIRD_bgirVblFIJEvAY=s4800-w1600"
 };
 
 const GALLERY_INDEX_OVERRIDES: Record<string, number[]> = {

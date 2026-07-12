@@ -2,6 +2,7 @@ import Link from "next/link";
 import { IconCircleCheckFilled, IconClock, IconShieldCheck } from "@tabler/icons-react";
 import { HomePlaceSearch } from "@/components/HomePlaceSearch";
 import { EditorialRankingCarousel } from "@/components/EditorialRankingCarousel";
+import { getBusinessImageUrl } from "@/components/BusinessImage";
 import { getHomepageMiniRankingBusinesses } from "@/lib/repository";
 import { generateSeoMetadata } from "@/lib/seo";
 import { methodologyPath } from "@/lib/methodology";
@@ -106,10 +107,52 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
     .map((module, index) => ({ ...module, businesses: moduleBusinesses[index] }))
     .filter((module) => module.businesses.length > 0);
 
+  const heroSeen = new Set<string>();
+  const heroBusinesses = modules
+    .flatMap((module) => module.businesses)
+    .filter((business) => {
+      if (!getBusinessImageUrl(business)) return false;
+      const id = String(business.id);
+      if (heroSeen.has(id)) return false;
+      heroSeen.add(id);
+      return true;
+    })
+    .slice(0, 4);
+  const heroFallbacks = [
+    "linear-gradient(160deg,#202020,#080808)",
+    "linear-gradient(160deg,#101b1f,#070707)",
+    "linear-gradient(160deg,#1f241f,#090909)",
+    "linear-gradient(160deg,#231b14,#080808)"
+  ];
+  const heroPanels = Array.from({ length: 4 }, (_, index) => heroBusinesses[index] ?? null);
+
   return (
     <main className="bg-[#07101F] text-white">
-      <section className="relative border-b border-white/[0.08] bg-[#07101F] px-4 py-14 text-center sm:px-6 sm:py-20 lg:px-8">
-        <div className="mx-auto flex w-full max-w-[780px] flex-col items-center">
+      <section className="relative overflow-hidden border-b border-white/[0.08] bg-[#07101F] px-4 py-14 text-center sm:px-6 sm:py-20 lg:px-8">
+        <div className="absolute inset-0 grid grid-cols-2 gap-px opacity-95 md:grid-cols-4">
+          {heroPanels.map((business, index) => (
+            <div
+              key={business?.id ?? `fallback-${index}`}
+              className="relative h-full min-h-full overflow-hidden bg-[#0C1A2E]"
+              style={{
+                backgroundImage: business
+                  ? `linear-gradient(180deg,rgba(10,10,10,0.1),rgba(10,10,10,0.34)), url(${getBusinessImageUrl(business)})`
+                  : heroFallbacks[index],
+                backgroundSize: "cover",
+                backgroundPosition: "center"
+              }}
+            >
+              <div className="absolute inset-0 bg-[#07101F]/10" />
+              {business && (
+                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 whitespace-nowrap bg-[#07101F]/68 px-2.5 py-1 text-[9px] font-bold uppercase tracking-[0.1em] text-white/45 backdrop-blur">
+                  {business.city || business.area || "Mallorca"}
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_72%_72%_at_50%_43%,rgba(10,10,10,0.9)_0%,rgba(10,10,10,0.76)_48%,rgba(10,10,10,0.88)_100%),linear-gradient(to_bottom,rgba(10,10,10,0.78)_0%,rgba(10,10,10,0.42)_42%,rgba(10,10,10,0.95)_100%)]" />
+        <div className="relative z-10 mx-auto flex w-full max-w-[780px] flex-col items-center">
           <div className="mb-6 inline-flex items-center gap-3 text-[10px] font-semibold uppercase tracking-[0.16em] text-[#00C37A] before:h-px before:w-6 before:bg-[#00C37A] after:h-px after:w-6 after:bg-[#00C37A]">
             {c.eyebrow}
           </div>
