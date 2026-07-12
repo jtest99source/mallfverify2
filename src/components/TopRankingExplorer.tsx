@@ -46,19 +46,19 @@ const loadMoreCopy = {
 
 const sortHelpCopy = {
   es: {
-    ratio:   { text: "Equilibra valoración y reseñas de Google. Un 4,3★ con 1.700 reseñas puede superar a un 5,0★ con 30.", link: "Ver metodología" },
+    ratio:   { text: "El MV Score (0–100) es nuestra señal propia: combina la valoración de Google con el volumen de reseñas. Por eso un 4,3★ con 1.700 reseñas puede superar a un 5,0★ con 30.", link: "Ver metodología" },
     rating:  { text: "Ordenado por estrella media de Google, de mayor a menor.", link: null },
     reviews: { text: "Ordenado por número de reseñas de Google, de más a menos.", link: null },
     hidden:  { text: "Alta valoración pero pocas reseñas — negocios por descubrir.", link: null }
   },
   en: {
-    ratio:   { text: "Balances Google rating and review volume. A 4.3★ with 1,700 reviews can outrank a 5.0★ with only 30.", link: "Read methodology" },
+    ratio:   { text: "The MV Score (0–100) is our own signal: Google rating combined with review volume. It's why a 4.3★ with 1,700 reviews can outrank a 5.0★ with only 30.", link: "Read methodology" },
     rating:  { text: "Sorted by Google star rating, highest first.", link: null },
     reviews: { text: "Sorted by number of Google reviews, most reviewed first.", link: null },
     hidden:  { text: "Highly rated but not yet widely reviewed — hidden gems worth exploring.", link: null }
   },
   de: {
-    ratio:   { text: "Wägt Google-Bewertung und Rezensionsanzahl ab. Ein 4,3★ mit 1.700 kann einen 5,0★ mit 30 übertreffen.", link: "Methodik lesen" },
+    ratio:   { text: "Der MV Score (0–100) ist unser eigenes Signal: Google-Bewertung kombiniert mit Rezensionsvolumen. Deshalb kann ein 4,3★ mit 1.700 einen 5,0★ mit 30 übertreffen.", link: "Methodik lesen" },
     rating:  { text: "Nach Google-Sternebewertung sortiert, höchste zuerst.", link: null },
     reviews: { text: "Nach Anzahl der Google-Rezensionen sortiert, meiste zuerst.", link: null },
     hidden:  { text: "Hoch bewertet, aber noch wenig bekannt — Geheimtipps.", link: null }
@@ -360,9 +360,9 @@ export function TopRankingExplorer({
             </Link>
           )}
         </div>
-        <div className="mt-2 flex items-start gap-1.5 rounded-sm border border-white/[0.07] bg-white/[0.03] px-3 py-2">
-          <IconInfoCircle size={12} stroke={2} className="mt-0.5 shrink-0 text-white/30" />
-          <p className="text-[11px] leading-4 text-white/40">{sortHelp.text}</p>
+        <div className="mt-2 flex items-start gap-1.5 rounded-sm border border-[#00C37A]/20 bg-[#00C37A]/[0.06] px-3 py-2">
+          <IconInfoCircle size={12} stroke={2} className="mt-0.5 shrink-0 text-[#00C37A]/70" />
+          <p className="text-[11px] leading-4 text-[#00C37A]/85">{sortHelp.text}</p>
         </div>
       </div>
 
@@ -417,11 +417,11 @@ export function TopRankingExplorer({
                   ))}
                 </select>
               </label>
-              <div className="ml-auto flex items-center gap-2 text-[11px] text-white/30">
-                <IconInfoCircle size={13} stroke={2} className="shrink-0 text-white/25" />
+              <div className="ml-auto flex max-w-md items-center gap-2 text-[11px] text-[#00C37A]/85">
+                <IconInfoCircle size={13} stroke={2} className="shrink-0 text-[#00C37A]/70" />
                 <span>{sortHelp.text}</span>
                 {sortHelp.link && (
-                  <Link href={methodologyPath(locale)} className="shrink-0 text-white/45 underline underline-offset-2 hover:text-[#00C37A]">
+                  <Link href={methodologyPath(locale)} className="shrink-0 text-[#00C37A] underline underline-offset-2 hover:text-white">
                     {sortHelp.link}
                   </Link>
                 )}
