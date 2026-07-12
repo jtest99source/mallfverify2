@@ -17,6 +17,7 @@ import {
   createSocialProfiles,
   detectWebsiteType,
   inferLocationFromAddress,
+  isWithinMallorca,
 } from "../src/lib/business-geo.ts";
 
 function loadEnv() {
@@ -279,6 +280,11 @@ async function main() {
     const phone = placeData.nationalPhoneNumber ?? null;
     const lat = placeData.location?.latitude ?? null;
     const lng = placeData.location?.longitude ?? null;
+    // Geo-fence: never import a place whose coordinates fall outside Mallorca.
+    if (!isWithinMallorca(lat, lng)) {
+      console.log(`  ${progress} ⨯ skipped (outside Mallorca): ${name} — ${address}`);
+      continue;
+    }
     const mapsUrl = placeData.googleMapsUri ?? null;
     const primaryType = placeData.primaryType ?? null;
     const types = placeData.types ?? [];

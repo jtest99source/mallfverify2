@@ -16,6 +16,7 @@ import {
   createSocialProfiles,
   detectWebsiteType,
   inferLocationFromAddress,
+  isWithinMallorca,
 } from "../src/lib/business-geo.ts";
 
 function loadEnv() {
@@ -150,6 +151,8 @@ async function main() {
 
     for (const place of places) {
       if (!place.google_place_id || !place.name) { skipped++; continue; }
+      // Geo-fence: never publish places whose coordinates fall outside Mallorca.
+      if (!isWithinMallorca(place.latitude, place.longitude)) { skipped++; continue; }
 
       // Check if already in DB
       const { data: existing } = await sb

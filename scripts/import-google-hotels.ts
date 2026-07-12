@@ -1,7 +1,7 @@
 ﻿import { createClient } from "@supabase/supabase-js";
 import { existsSync, readFileSync } from "node:fs";
 import { cleanBusinessDisplayName, normalizeBusinessName } from "../src/lib/business-name-normalizer";
-import { calculateAuthorityScore, createSocialProfiles, detectWebsiteType, inferLocationFromAddress } from "../src/lib/business-geo";
+import { calculateAuthorityScore, createSocialProfiles, detectWebsiteType, inferLocationFromAddress, isWithinMallorca } from "../src/lib/business-geo";
 
 const PREVIEW_PATH = "data/import-previews/hotels-preview.json";
 
@@ -248,6 +248,12 @@ async function main() {
   let updated = 0;
 
   for (const place of unique.values()) {
+    // Geo-fence: never import places whose coordinates fall outside Mallorca.
+    if (!isWithinMallorca(place.latitude, place.longitude)) {
+      console.log(`  ⨯ skipped (outside Mallorca): ${place.name} — ${place.address ?? "no address"}`);
+      continue;
+    }
+
     const enrichment = buildEnrichment(place);
     const nameFields = normalizeBusinessName({ name: place.name });
     const aiContent = buildAiContent(place);
