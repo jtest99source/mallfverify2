@@ -279,6 +279,58 @@ export function isPublicCategorySlug(value: string): value is PublicCategorySlug
   return (publicCategorySlugs as readonly string[]).includes(value);
 }
 
+// The "money" side of the site: professional services internationals in Mallorca
+// actually search for. Single source of truth shared by the /services hub and the
+// ranking category switcher. Order is intentional (used to render both).
+export const serviceCategorySlugs = [
+  "dentists",
+  "aesthetic-clinics",
+  "healthcare",
+  "real-estate",
+  "lawyers",
+  "tax-advisors",
+  "vets",
+  "rent-a-car",
+  "car-dealers"
+] as const satisfies readonly CategorySlug[];
+
+// Wellness verticals — spas & gyms. Still leisure (not professional services),
+// but shown under their own "Bienestar" heading in the category switcher.
+export const wellnessCategorySlugs = ["spas", "gyms"] as const satisfies readonly CategorySlug[];
+
+// Leisure ("Ocio"): everything that is neither a service nor a wellness vertical
+// (casinos stays here). Derived so new public categories fall into leisure unless
+// added to services or wellness above.
+export const leisureCategorySlugs = publicCategorySlugs.filter(
+  (slug) =>
+    !(serviceCategorySlugs as readonly string[]).includes(slug) &&
+    !(wellnessCategorySlugs as readonly string[]).includes(slug)
+) as CategorySlug[];
+
+export function isServiceCategorySlug(slug: CategorySlug): boolean {
+  return (serviceCategorySlugs as readonly string[]).includes(slug);
+}
+
+export function isWellnessCategorySlug(slug: CategorySlug): boolean {
+  return (wellnessCategorySlugs as readonly string[]).includes(slug);
+}
+
+export type CategorySwitcherGroupId = "servicios" | "ocio" | "bienestar";
+export type CategorySwitcherGroup = { id: CategorySwitcherGroupId; categories: readonly CategorySlug[] };
+
+// Three-section category switcher (Servicios / Ocio / Bienestar). Bienestar is part
+// of the leisure side, so when the current category is leisure or wellness the two
+// leisure groups lead and services come last; the group matching the current
+// category is always returned first so it sits at the top of the dropdown.
+export function getCategorySwitcherGroups(current: CategorySlug): CategorySwitcherGroup[] {
+  const servicios: CategorySwitcherGroup = { id: "servicios", categories: serviceCategorySlugs };
+  const ocio: CategorySwitcherGroup = { id: "ocio", categories: leisureCategorySlugs };
+  const bienestar: CategorySwitcherGroup = { id: "bienestar", categories: wellnessCategorySlugs };
+  if (isServiceCategorySlug(current)) return [servicios, ocio, bienestar];
+  if (isWellnessCategorySlug(current)) return [bienestar, ocio, servicios];
+  return [ocio, bienestar, servicios];
+}
+
 export const categoryGroups = {
   gastronomia: {
     label: "Gastronomía",

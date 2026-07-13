@@ -7,14 +7,14 @@ import { getHomepageMiniRankingBusinesses } from "@/lib/repository";
 import { generateSeoMetadata } from "@/lib/seo";
 import { methodologyPath } from "@/lib/methodology";
 import { isLocale, type Locale } from "@/lib/i18n";
-import type { CategorySlug } from "@/lib/data";
+import { serviceCategorySlugs, type CategorySlug } from "@/lib/data";
 
 // The money side of the site: non-leisure, professional services that internationals
 // in Mallorca actually search for. Same ranking format as the homepage (Google
 // rating + MV Score), reusing the shared carousel. The verified English/German
 // language layer is announced as "coming soon" — it lands once outreach fills the data.
 
-const SERVICE_CATEGORIES: CategorySlug[] = ["dentists", "aesthetic-clinics", "healthcare", "real-estate", "lawyers", "tax-advisors", "vets", "rent-a-car", "car-dealers"];
+const SERVICE_CATEGORIES: CategorySlug[] = [...serviceCategorySlugs];
 
 const serviceLocations = ["Palma", "Alcúdia", "Pollença", "Sóller", "Manacor", "Inca", "Santanyí", "Andratx", "Calvià", "Llucmajor"].map((location) => ({ label: location, value: location }));
 

@@ -7,7 +7,7 @@ import { IconArrowUpRight, IconInfoCircle, IconMapPin } from "@tabler/icons-reac
 import type { Business } from "@/types/business";
 import type { Locale } from "@/lib/i18n";
 import type { CategorySlug } from "@/lib/data";
-import { getCategorySlugFromBusiness, publicCategorySlugs } from "@/lib/data";
+import { getCategorySlugFromBusiness, getCategorySwitcherGroups } from "@/lib/data";
 import { t, getCategoryCopy } from "@/lib/i18n-copy";
 import { methodologyPath } from "@/lib/methodology";
 import { BusinessImage } from "@/components/BusinessImage";
@@ -25,6 +25,12 @@ const ALL = "all";
 const PAGE_SIZE = 24;
 const CAPPED_RESULT_THRESHOLD = 1000;
 const CATEGORIES_WITH_TYPE_FILTER = new Set(["healthcare"]);
+
+const categoryGroupLabels = {
+  es: { servicios: "Servicios", ocio: "Ocio", bienestar: "Bienestar" },
+  en: { servicios: "Services", ocio: "Leisure", bienestar: "Wellness" },
+  de: { servicios: "Dienstleistungen", ocio: "Freizeit", bienestar: "Wellness" }
+} as const;
 
 const loadMoreCopy = {
   es: {
@@ -240,6 +246,15 @@ export function TopRankingExplorer({
 
   const showTypeFilter = CATEGORIES_WITH_TYPE_FILTER.has(category) && facets.length > 0;
 
+  const renderCategoryOptions = () =>
+    getCategorySwitcherGroups(category).map((group) => (
+      <optgroup key={group.id} label={categoryGroupLabels[locale][group.id]}>
+        {group.categories.map((cat) => (
+          <option key={cat} value={cat}>{getCategoryCopy(cat, locale).label}</option>
+        ))}
+      </optgroup>
+    ));
+
   const places = useMemo(() => {
     return Array.from(new Set(businesses.map(businessPlace).filter(Boolean))).sort((a, b) => a.localeCompare(b, locale));
   }, [businesses, locale]);
@@ -323,9 +338,7 @@ export function TopRankingExplorer({
             onChange={(event) => router.push(`/${locale}/top/${event.target.value}`)}
             className="h-10 w-full rounded-sm border border-white/[0.12] bg-[#0C1A2E] px-3 text-xs text-white focus:border-[#00C37A] focus:outline-none"
           >
-            {publicCategorySlugs.map((cat) => (
-              <option key={cat} value={cat}>{getCategoryCopy(cat, locale).label}</option>
-            ))}
+            {renderCategoryOptions()}
           </select>
         </div>
         {showTypeFilter && (
@@ -380,9 +393,7 @@ export function TopRankingExplorer({
               onChange={(event) => router.push(`/${locale}/top/${event.target.value}`)}
               className="h-9 rounded-sm border border-white/[0.12] bg-[#0C1A2E] pl-4 pr-8 text-sm font-normal normal-case tracking-normal text-white focus:border-[#00C37A] focus:outline-none focus:ring-1 focus:ring-[#00C37A]"
             >
-              {publicCategorySlugs.map((cat) => (
-                <option key={cat} value={cat}>{getCategoryCopy(cat, locale).label}</option>
-              ))}
+              {renderCategoryOptions()}
             </select>
           </label>
           {showTypeFilter && (
