@@ -1098,6 +1098,166 @@ export const PLACE_CATEGORY_CONFIGS = {
       "veterinario Cala Millor Mallorca",
       "veterinario Santanyi Mallorca"
     ]
+  },
+
+  // ---- Carve-outs of healthcare (detected later by name/type signal, no enum) ----
+
+  physiotherapy: {
+    businessCategory: "healthcare",
+    singular: "clinica de fisioterapia",
+    output: "data/import-previews/physiotherapy-preview.json",
+    image: "/images/placeholder.svg",
+    minRating: 4.2,
+    minReviews: 5,
+    // Keep the net wide: the carve regex re-filters by name/type signal afterwards.
+    // Only block things that are clearly a different vertical.
+    blockedTypes: [
+      "dentist",
+      "dental_clinic",
+      "beauty_salon",
+      "nail_salon",
+      "hair_salon"
+    ],
+    searches: [
+      // Español — tipo
+      "fisioterapia Palma Mallorca",
+      "clinica de fisioterapia Mallorca",
+      "fisioterapeuta Palma Mallorca",
+      "centro de fisioterapia Mallorca",
+      "fisioterapia deportiva Mallorca",
+      "fisioterapia y rehabilitacion Mallorca",
+      "osteopatia Palma Mallorca",
+      "osteopata Mallorca",
+      "quiropractico Mallorca",
+      "quiropractica Palma Mallorca",
+      "rehabilitacion fisica Mallorca",
+      "fisioterapia suelo pelvico Mallorca",
+      // Inglés / Alemán (amplían el hallazgo, no filtran)
+      "physiotherapy Palma Mallorca",
+      "physiotherapist Mallorca",
+      "physio clinic Mallorca",
+      "osteopathy Mallorca",
+      "chiropractor Mallorca",
+      "Physiotherapie Mallorca",
+      "Physiotherapeut Mallorca",
+      "Osteopathie Mallorca",
+      // Por zona
+      "fisioterapia Alcudia Mallorca",
+      "fisioterapia Manacor Mallorca",
+      "fisioterapia Inca Mallorca",
+      "fisioterapia Calvia Mallorca",
+      "fisioterapia Santa Ponsa Mallorca",
+      "fisioterapia Andratx Mallorca",
+      "fisioterapia Soller Mallorca",
+      "fisioterapia Pollenca Mallorca",
+      "fisioterapia Llucmajor Mallorca",
+      "fisioterapia Felanitx Mallorca",
+      "fisioterapia Cala d'Or Mallorca",
+      "fisioterapia Santanyi Mallorca",
+      "fisioterapia Marratxi Mallorca",
+      "fisioterapia Capdepera Mallorca"
+    ]
+  },
+
+  psychology: {
+    businessCategory: "healthcare",
+    singular: "psicologo o centro de psicologia",
+    output: "data/import-previews/psychology-preview.json",
+    image: "/images/placeholder.svg",
+    minRating: 4.3,
+    minReviews: 3,
+    // Exclude driving-licence psychotechnical centres & medical-certificate mills,
+    // which Google returns under "psicólogo" but are not therapy practices.
+    blockedNameKeywords: [
+      "psicotecnic",
+      "psicotécnic",
+      "reconocimiento",
+      "reconocimientos medicos",
+      "autoescuela",
+      "certificado medico",
+      "centro medico psicotecnico"
+    ],
+    searches: [
+      // Español — tipo
+      "psicologo Palma Mallorca",
+      "psicologa Mallorca",
+      "centro de psicologia Mallorca",
+      "psicologia clinica Mallorca",
+      "psicoterapia Palma Mallorca",
+      "gabinete de psicologia Mallorca",
+      "terapia psicologica Mallorca",
+      "terapia de pareja Mallorca",
+      "psicologo infantil Mallorca",
+      "psicologia infantil y juvenil Mallorca",
+      "psiquiatra Palma Mallorca",
+      "psicologo ansiedad depresion Mallorca",
+      // Inglés / Alemán (amplían el hallazgo)
+      "psychologist Palma Mallorca",
+      "english speaking psychologist Mallorca",
+      "psychotherapist Mallorca",
+      "counselling Mallorca",
+      "Psychologe Mallorca",
+      "Psychotherapie Mallorca",
+      "deutscher Psychologe Mallorca",
+      "psychiatrist Mallorca",
+      // Por zona
+      "psicologo Alcudia Mallorca",
+      "psicologo Manacor Mallorca",
+      "psicologo Inca Mallorca",
+      "psicologo Calvia Mallorca",
+      "psicologo Santa Ponsa Mallorca",
+      "psicologo Andratx Mallorca",
+      "psicologo Soller Mallorca",
+      "psicologo Pollenca Mallorca",
+      "psicologo Llucmajor Mallorca",
+      "psicologo Felanitx Mallorca",
+      "psicologo Santanyi Mallorca",
+      "psicologo Marratxi Mallorca"
+    ]
+  },
+
+  opticians: {
+    businessCategory: "healthcare",
+    singular: "optica u oftalmologia",
+    output: "data/import-previews/opticians-preview.json",
+    image: "/images/placeholder.svg",
+    minRating: 4.2,
+    minReviews: 6,
+    searches: [
+      // Español — tipo
+      "optica Palma Mallorca",
+      "opticas Mallorca",
+      "optico optometrista Mallorca",
+      "optometrista Palma Mallorca",
+      "centro optico Mallorca",
+      "oftalmologo Palma Mallorca",
+      "clinica oftalmologica Mallorca",
+      "cirugia ocular Mallorca",
+      "operacion de vista laser Mallorca",
+      "revision de la vista Mallorca",
+      // Inglés / Alemán
+      "optician Palma Mallorca",
+      "optometrist Mallorca",
+      "ophthalmologist Mallorca",
+      "eye clinic Mallorca",
+      "laser eye surgery Mallorca",
+      "Optiker Mallorca",
+      "Augenarzt Mallorca",
+      "Augenklinik Mallorca",
+      // Por zona
+      "optica Alcudia Mallorca",
+      "optica Manacor Mallorca",
+      "optica Inca Mallorca",
+      "optica Calvia Mallorca",
+      "optica Santa Ponsa Mallorca",
+      "optica Andratx Mallorca",
+      "optica Soller Mallorca",
+      "optica Pollenca Mallorca",
+      "optica Llucmajor Mallorca",
+      "optica Felanitx Mallorca",
+      "optica Santanyi Mallorca",
+      "optica Cala d'Or Mallorca"
+    ]
   }
 };
 

@@ -3,6 +3,7 @@ import path from "node:path";
 import { getPlaceCategoryConfig } from "./place-category-config.mjs";
 
 const MAX_RESULTS = 2000;
+const MAX_PAGES = 3; // Google Text Search: 20 results/page, up to 3 pages = 60/query
 
 function loadLocalEnv() {
   if (!existsSync(".env.local")) return;
@@ -108,13 +109,14 @@ function passesFilters(place, config) {
   return true;
 }
 
-async function searchPlaces(apiKey, textQuery) {
+async function searchPlaces(apiKey, textQuery, pageToken) {
   const response = await fetch("https://places.googleapis.com/v1/places:searchText", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
       "X-Goog-Api-Key": apiKey,
       "X-Goog-FieldMask": [
+        "nextPageToken",
         "places.id",
         "places.displayName",
         "places.rating",
@@ -134,7 +136,8 @@ async function searchPlaces(apiKey, textQuery) {
       textQuery,
       languageCode: "es",
       regionCode: "ES",
-      maxResultCount: 20
+      maxResultCount: 20,
+      ...(pageToken ? { pageToken } : {})
     })
   });
 
@@ -144,7 +147,7 @@ async function searchPlaces(apiKey, textQuery) {
   }
 
   const data = await response.json();
-  return data.places ?? [];
+  return { places: data.places ?? [], nextPageToken: data.nextPageToken ?? null };
 }
 
 async function main() {
@@ -164,17 +167,28 @@ async function main() {
   for (const query of searches) {
     if (unique.size >= MAX_RESULTS) break;
 
-    const places = await searchPlaces(apiKey, query);
+    let pageToken = null;
+    let pages = 0;
+    let fetched = 0;
     let acceptedForQuery = 0;
-    for (const rawPlace of places) {
-      const place = mapPlace(rawPlace, config.businessCategory);
-      if (!passesFilters(place, config)) continue;
-      acceptedForQuery += 1;
-      if (!unique.has(place.google_place_id)) unique.set(place.google_place_id, place);
-      if (unique.size >= MAX_RESULTS) break;
-    }
 
-    console.log(`${query}: ${places.length} fetched, ${acceptedForQuery} accepted, ${unique.size} unique`);
+    do {
+      const { places, nextPageToken } = await searchPlaces(apiKey, query, pageToken);
+      fetched += places.length;
+      for (const rawPlace of places) {
+        const place = mapPlace(rawPlace, config.businessCategory);
+        if (!passesFilters(place, config)) continue;
+        acceptedForQuery += 1;
+        if (!unique.has(place.google_place_id)) unique.set(place.google_place_id, place);
+        if (unique.size >= MAX_RESULTS) break;
+      }
+      pageToken = nextPageToken;
+      pages += 1;
+      // next-page token needs a brief moment to become valid on Google's side
+      if (pageToken && pages < MAX_PAGES) await new Promise((resolve) => setTimeout(resolve, 400));
+    } while (pageToken && pages < MAX_PAGES && unique.size < MAX_RESULTS);
+
+    console.log(`${query}: ${fetched} fetched (${pages}p), ${acceptedForQuery} accepted, ${unique.size} unique`);
   }
 
   const preview = Array.from(unique.values()).slice(0, MAX_RESULTS);

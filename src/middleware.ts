@@ -10,7 +10,8 @@ const LOCALES = ["es", "en", "de"];
 const RANKING_CATEGORIES = new Set([
   "restaurants", "hotels", "beach-clubs", "bars", "cafes", "bakeries", "nightlife",
   "activities", "boats", "rent-a-car", "car-dealers", "spas", "gyms", "casinos",
-  "vets", "healthcare", "dentists", "aesthetic-clinics", "real-estate", "lawyers", "tax-advisors"
+  "vets", "healthcare", "dentists", "aesthetic-clinics", "physiotherapists", "psychologists",
+  "opticians", "real-estate", "lawyers", "tax-advisors"
 ]);
 
 export function middleware(request: NextRequest) {

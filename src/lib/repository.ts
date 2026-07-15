@@ -113,6 +113,10 @@ const iceCreamExclusionSignals = [
 // signalText is already normalized (lowercased, accents stripped), so a leading
 // non-letter boundary + open suffix catches dentista/dentistas/odontologia/etc.
 const dentalSignalRegex = /(^|[^a-z])(dental|dentist|dentista|odontolog|ortodon|endodon|dentaire|zahnarzt)/;
+// Further healthcare carve-outs, same mechanism as dentists (name/type signal, no enum).
+const opticiansSignalRegex = /(^|[^a-z])(optic|oftalmolog|ophthalmolog|optometr|augenarzt|augenklinik|augenoptik)/;
+const physioSignalRegex = /(^|[^a-z])(fisioterap|physiother|physio|kinesiolog|osteopat|quiropract|chiroprac)/;
+const mentalHealthSignalRegex = /(^|[^a-z])(psicolog|psiquiatr|psycholog|psychiatr|psicoterap|psychotherap|salud mental|mental health)/;
 
 const bakeryListingSignals = [
   "bakery",
@@ -269,18 +273,29 @@ function businessMatchesListingCategory(row: Pick<BusinessRow, "category" | "nam
     return hasListingSignal(signalText, activityListingSignals);
   }
 
-  // "dentists" and "aesthetic-clinics" are virtual carve-outs of healthcare;
-  // general healthcare excludes both. Aesthetic clinics are marked at import time
-  // with the "medicina-estetica" tag (curated), dentists are detected by signal.
-  const hasAestheticTag = (row.tags ?? []).includes("medicina-estetica");
-  if (category === "aesthetic-clinics") {
-    return row.category === "healthcare" && hasAestheticTag;
+  // Virtual carve-outs of healthcare (no enum). Aesthetic clinics are tagged at
+  // import time ("medicina-estetica"); the rest are detected by name/type signal.
+  // Priority (mutually exclusive): aesthetic → dental → opticians → physio →
+  // psychology → general. General healthcare excludes every carve.
+  if (row.category === "healthcare") {
+    const hasAestheticTag = (row.tags ?? []).includes("medicina-estetica");
+    const isDental = dentalSignalRegex.test(signalText);
+    const isOptician = opticiansSignalRegex.test(signalText);
+    const isPhysio = physioSignalRegex.test(signalText);
+    const isMentalHealth = mentalHealthSignalRegex.test(signalText);
+    if (category === "aesthetic-clinics") return hasAestheticTag;
+    if (category === "dentists") return !hasAestheticTag && isDental;
+    if (category === "opticians") return !hasAestheticTag && !isDental && isOptician;
+    if (category === "physiotherapists") return !hasAestheticTag && !isDental && !isOptician && isPhysio;
+    if (category === "psychologists") return !hasAestheticTag && !isDental && !isOptician && !isPhysio && isMentalHealth;
+    if (category === "healthcare") {
+      return !hasAestheticTag && !isDental && !isOptician && !isPhysio && !isMentalHealth;
+    }
   }
-  if (category === "dentists") {
-    return row.category === "healthcare" && dentalSignalRegex.test(signalText);
-  }
-  if (category === "healthcare") {
-    return row.category === "healthcare" && !dentalSignalRegex.test(signalText) && !hasAestheticTag;
+  // A non-healthcare row can never satisfy a healthcare carve category.
+  if (category === "aesthetic-clinics" || category === "dentists" || category === "opticians" ||
+      category === "physiotherapists" || category === "psychologists" || category === "healthcare") {
+    return false;
   }
 
   return row.category === getBusinessCategoryFromSlug(category);

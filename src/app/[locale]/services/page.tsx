@@ -32,6 +32,21 @@ const serviceModules: Array<{ category: CategorySlug; eyebrow: LocaleText; title
     title: { es: "Medicina estética en Mallorca", en: "Aesthetic clinics in Mallorca", de: "Ästhetische Medizin auf Mallorca" }
   },
   {
+    category: "physiotherapists",
+    eyebrow: { es: "Fisioterapia", en: "Physiotherapy", de: "Physiotherapie" },
+    title: { es: "Fisioterapeutas en Mallorca", en: "Physiotherapists in Mallorca", de: "Physiotherapeuten auf Mallorca" }
+  },
+  {
+    category: "psychologists",
+    eyebrow: { es: "Psicología", en: "Psychology", de: "Psychologie" },
+    title: { es: "Psicólogos en Mallorca", en: "Psychologists in Mallorca", de: "Psychologen auf Mallorca" }
+  },
+  {
+    category: "opticians",
+    eyebrow: { es: "Óptica", en: "Opticians", de: "Optiker" },
+    title: { es: "Ópticas y oftalmólogos en Mallorca", en: "Opticians in Mallorca", de: "Optiker auf Mallorca" }
+  },
+  {
     category: "healthcare",
     eyebrow: { es: "Salud", en: "Health", de: "Gesundheit" },
     title: { es: "Médicos y clínicas en Mallorca", en: "Doctors & clinics in Mallorca", de: "Ärzte & Kliniken auf Mallorca" }
