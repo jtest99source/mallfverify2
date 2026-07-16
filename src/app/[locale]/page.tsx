@@ -21,7 +21,7 @@ import {
   IconUmbrella
 } from "@tabler/icons-react";
 import { GuideCard } from "@/components/GuideCard";
-import { getCategorySlugFromBusiness, publicCategorySlugs, type CategorySlug } from "@/lib/data";
+import { getCategorySlugFromBusiness, leisureCategorySlugs, wellnessCategorySlugs, type CategorySlug } from "@/lib/data";
 import { getCategoryCopy, t } from "@/lib/i18n-copy";
 import { getGuides, getHomepageMiniRankingBusinesses, getPublicBusinessStats } from "@/lib/repository";
 import { generateSeoMetadata } from "@/lib/seo";
@@ -376,7 +376,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
                 ? "Rankings built on public Google Reviews — no paid positions, no sponsored results."
                 : "Rankings construidos sobre Google Reviews públicas — sin posiciones de pago, sin resultados patrocinados."}
             </p>
-            <HomePlaceSearch locale={safeLocale} categories={[...publicCategorySlugs]} locations={homepageSearchLocations} />
+            <HomePlaceSearch locale={safeLocale} categories={[...leisureCategorySlugs, ...wellnessCategorySlugs]} locations={homepageSearchLocations} />
           </div>
 
           {restaurantsPalma.length > 0 && (
