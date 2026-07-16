@@ -285,6 +285,36 @@ export const categoryConfigs = {
     faq: "¿Dónde encontrar una gestoría o asesor fiscal que atienda a extranjeros en Mallorca?",
     editorialContext: "En gestorías y asesoría fiscal miramos reseñas, volumen, especialidad (autónomos, empresas, no residentes), ubicación y señales de atención internacional. La verificación de idiomas (inglés/alemán) llegará por confirmación directa con cada asesoría."
   },
+  "property-management": {
+    label: "Gestión de propiedades",
+    singular: "Empresa de gestión de propiedades",
+    businessCategory: "property-management",
+    icon: "IconKey",
+    title: "Gestión de propiedades y alquiler vacacional en Mallorca",
+    intro: "Empresas de property management y gestión de alquiler vacacional en Mallorca para propietarios internacionales que administran su vivienda o villa a distancia. Ordenadas por reseñas reales de Google.",
+    faq: "¿Qué empresa de gestión de propiedades elegir en Mallorca si vivo fuera?",
+    editorialContext: "En gestión de propiedades valoramos reseñas, volumen, servicios (alquiler vacacional, mantenimiento, licencia turística, administración), zona y orientación a propietarios internacionales. La verificación de idiomas (inglés/alemán) llegará por confirmación directa con cada empresa."
+  },
+  renovations: {
+    label: "Reformas y arquitectura",
+    singular: "Empresa de reformas o arquitectura",
+    businessCategory: "renovations",
+    icon: "IconTools",
+    title: "Reformas, constructoras y arquitectos en Mallorca",
+    intro: "Empresas de reformas, constructoras, arquitectos e interioristas en Mallorca orientados a propietarios internacionales que reforman o construyen su casa. Ordenados por reseñas reales de Google.",
+    faq: "¿Qué empresa de reformas o arquitecto elegir en Mallorca si soy extranjero?",
+    editorialContext: "En reformas y arquitectura valoramos reseñas, volumen, especialidad (reforma integral, obra nueva, interiorismo, arquitectura), zona y orientación a clientes internacionales. La verificación de idiomas (inglés/alemán) llegará por confirmación directa con cada empresa."
+  },
+  "pool-garden": {
+    label: "Piscinas y jardinería",
+    singular: "Empresa de piscinas o jardinería",
+    businessCategory: "pool-garden",
+    icon: "IconPlant",
+    title: "Mantenimiento de piscinas y jardinería en Mallorca",
+    intro: "Empresas de mantenimiento de piscinas, jardinería y paisajismo en Mallorca para propietarios de villas y segundas residencias. Ordenadas por reseñas reales de Google.",
+    faq: "¿Qué empresa de mantenimiento de piscinas o jardinería elegir en Mallorca?",
+    editorialContext: "En piscinas y jardinería valoramos reseñas, volumen, servicios (mantenimiento de piscina, jardinería, paisajismo, riego), zona y orientación a propietarios internacionales. La verificación de idiomas (inglés/alemán) llegará por confirmación directa con cada empresa."
+  },
   routes: {
     label: "Rutas y miradores",
     singular: "Ruta o mirador",
@@ -336,7 +366,10 @@ export const publicCategorySlugs = [
   "gynecologists",
   "real-estate",
   "lawyers",
-  "tax-advisors"
+  "tax-advisors",
+  "property-management",
+  "renovations",
+  "pool-garden"
 ] as const satisfies CategorySlug[];
 
 export type PublicCategorySlug = (typeof publicCategorySlugs)[number];
@@ -359,6 +392,9 @@ export const serviceCategorySlugs = [
   "gynecologists",
   "healthcare",
   "real-estate",
+  "property-management",
+  "renovations",
+  "pool-garden",
   "lawyers",
   "tax-advisors",
   "vets",
@@ -480,6 +516,9 @@ const categoryGuideKeywords: Record<CategorySlug, string[]> = {
   "real-estate": ["inmobiliaria", "property", "comprar casa", "real estate", "vivienda"],
   lawyers: ["abogado", "lawyer", "despacho", "legal", "extranjería", "herencia"],
   "tax-advisors": ["gestoría", "asesor fiscal", "tax advisor", "gestor", "impuestos", "contable"],
+  "property-management": ["gestión de propiedades", "property management", "alquiler vacacional", "administración de fincas", "holiday rental", "gestión de alquiler"],
+  renovations: ["reformas", "reforma integral", "constructora", "arquitecto", "interiorismo", "renovation", "builder", "architect"],
+  "pool-garden": ["piscinas", "mantenimiento de piscinas", "jardinería", "paisajismo", "pool service", "gardening", "landscaping"],
   routes: ["ruta", "senderismo", "mirador", "trail", "hiking"],
   excursions: ["excursión", "tour", "visita", "excursion"]
 };

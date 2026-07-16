@@ -72,6 +72,21 @@ const serviceModules: Array<{ category: CategorySlug; eyebrow: LocaleText; title
     title: { es: "Inmobiliarias en Mallorca", en: "Real estate agencies in Mallorca", de: "Immobilienagenturen auf Mallorca" }
   },
   {
+    category: "property-management",
+    eyebrow: { es: "Propiedades", en: "Property", de: "Immobilien" },
+    title: { es: "Gestión de propiedades en Mallorca", en: "Property management in Mallorca", de: "Immobilienverwaltung auf Mallorca" }
+  },
+  {
+    category: "renovations",
+    eyebrow: { es: "Reformas", en: "Renovation", de: "Renovierung" },
+    title: { es: "Reformas y arquitectura en Mallorca", en: "Renovations & architects in Mallorca", de: "Renovierung & Architekten auf Mallorca" }
+  },
+  {
+    category: "pool-garden",
+    eyebrow: { es: "Exteriores", en: "Outdoors", de: "Außenbereich" },
+    title: { es: "Piscinas y jardinería en Mallorca", en: "Pools & gardening in Mallorca", de: "Pools & Gartenpflege auf Mallorca" }
+  },
+  {
     category: "lawyers",
     eyebrow: { es: "Legal", en: "Legal", de: "Recht" },
     title: { es: "Abogados en Mallorca", en: "Lawyers in Mallorca", de: "Anwälte auf Mallorca" }

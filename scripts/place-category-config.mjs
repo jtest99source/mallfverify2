@@ -1370,6 +1370,125 @@ export const PLACE_CATEGORY_CONFIGS = {
       "pediatra Santa Ponsa Mallorca",
       "pediatra Llucmajor Mallorca"
     ]
+  },
+
+  // ---- Bloque B: villa-owner economy (real enums, migration 021) ----
+
+  "property-management": {
+    businessCategory: "property-management",
+    singular: "empresa de gestion de propiedades",
+    output: "data/import-previews/property-management-preview.json",
+    image: "/images/placeholder.svg",
+    minRating: 4.0,
+    minReviews: 5,
+    searches: [
+      "property management Mallorca",
+      "property management company Mallorca",
+      "holiday rental management Mallorca",
+      "vacation rental management Mallorca",
+      "villa management Mallorca",
+      "gestion de alquiler vacacional Mallorca",
+      "gestion de propiedades Mallorca",
+      "administracion de fincas Mallorca",
+      "gestion integral de propiedades Mallorca",
+      "alquiler vacacional gestion Mallorca",
+      "Immobilienverwaltung Mallorca",
+      "Ferienvermietung Verwaltung Mallorca",
+      "Hausverwaltung Mallorca",
+      "property management Palma Mallorca",
+      "property management Andratx Mallorca",
+      "property management Santa Ponsa Mallorca",
+      "property management Pollensa Mallorca",
+      "property management Alcudia Mallorca",
+      "property management Calvia Mallorca",
+      "property management Santanyi Mallorca"
+    ]
+  },
+
+  renovations: {
+    businessCategory: "renovations",
+    singular: "empresa de reformas o arquitectura",
+    output: "data/import-previews/renovations-preview.json",
+    image: "/images/placeholder.svg",
+    minRating: 4.0,
+    minReviews: 4,
+    blockedTypes: [
+      "hardware_store",
+      "home_goods_store",
+      "furniture_store",
+      "real_estate_agency",
+      "store"
+    ],
+    searches: [
+      "empresa de reformas Mallorca",
+      "reformas integrales Mallorca",
+      "reformas de viviendas Mallorca",
+      "constructora Mallorca",
+      "construccion y reformas Mallorca",
+      "arquitecto Mallorca",
+      "estudio de arquitectura Mallorca",
+      "interiorismo Mallorca",
+      "interiorista Mallorca",
+      "reformas de lujo Mallorca",
+      "construction company Mallorca",
+      "home renovation Mallorca",
+      "builder Mallorca",
+      "architect Mallorca",
+      "interior design Mallorca",
+      "Bauunternehmen Mallorca",
+      "Renovierung Mallorca",
+      "Architekt Mallorca",
+      "reformas Palma Mallorca",
+      "reformas Andratx Mallorca",
+      "reformas Calvia Mallorca",
+      "reformas Manacor Mallorca",
+      "reformas Alcudia Mallorca",
+      "reformas Santanyi Mallorca",
+      "arquitecto Palma Mallorca"
+    ]
+  },
+
+  "pool-garden": {
+    businessCategory: "pool-garden",
+    singular: "empresa de piscinas o jardineria",
+    output: "data/import-previews/pool-garden-preview.json",
+    image: "/images/placeholder.svg",
+    minRating: 4.0,
+    minReviews: 4,
+    blockedTypes: [
+      "store",
+      "home_goods_store",
+      "florist",
+      "hardware_store"
+    ],
+    searches: [
+      "mantenimiento de piscinas Mallorca",
+      "pool maintenance Mallorca",
+      "pool service Mallorca",
+      "Poolservice Mallorca",
+      "Poolreinigung Mallorca",
+      "construccion de piscinas Mallorca",
+      "empresa de piscinas Mallorca",
+      "limpieza de piscinas Mallorca",
+      "jardineria Mallorca",
+      "empresa de jardineria Mallorca",
+      "mantenimiento de jardines Mallorca",
+      "paisajismo Mallorca",
+      "diseno de jardines Mallorca",
+      "gardening Mallorca",
+      "garden maintenance Mallorca",
+      "landscaping Mallorca",
+      "gardener Mallorca",
+      "Gartenpflege Mallorca",
+      "Gartenbau Mallorca",
+      "Gartner Mallorca",
+      "jardineria Andratx Mallorca",
+      "jardineria Calvia Mallorca",
+      "jardineria Santa Ponsa Mallorca",
+      "jardineria Pollensa Mallorca",
+      "mantenimiento piscinas Alcudia Mallorca",
+      "mantenimiento piscinas Manacor Mallorca"
+    ]
   }
 };
 

@@ -3,6 +3,22 @@ import { readFileSync, writeFileSync } from "node:fs";
 // Conservative keep/noise pass over the three healthcare-carve previews.
 // Drops only clear non-vertical rows; leaves anything ambiguous for the carve regex.
 const RULES = {
+  "property-management": {
+    file: "data/import-previews/property-management-preview.json",
+    drop: (r) => ["lodging", "hotel", "restaurant", "supermarket", "grocery_store"].includes(r.primary_type ?? ""),
+  },
+  renovations: {
+    file: "data/import-previews/renovations-preview.json",
+    drop: (r) => /(inmobiliaria|real estate|tienda|leroy merlin|bauhaus)/i.test(`${r.name} ${r.primary_type ?? ""}`),
+  },
+  "pool-garden": {
+    file: "data/import-previews/pool-garden-preview.json",
+    drop: (r) => {
+      const t = r.primary_type ?? "";
+      if (["farm", "wholesaler", "store", "home_goods_store", "garden_center"].includes(t)) return true;
+      return /(vivero|garden center|ferreteria)/i.test(r.name ?? "");
+    },
+  },
   gynecology: {
     file: "data/import-previews/gynecology-preview.json",
     drop: (r) => {
