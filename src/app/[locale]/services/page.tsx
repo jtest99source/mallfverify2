@@ -3,7 +3,7 @@ import { IconCircleCheckFilled, IconClock, IconShieldCheck } from "@tabler/icons
 import { HomePlaceSearch } from "@/components/HomePlaceSearch";
 import { EditorialRankingCarousel } from "@/components/EditorialRankingCarousel";
 import { getBusinessImageUrl } from "@/components/BusinessImage";
-import { getHomepageMiniRankingBusinesses } from "@/lib/repository";
+import { getHomepageMiniRankingBusinesses, getSearchAreas } from "@/lib/repository";
 import { generateSeoMetadata } from "@/lib/seo";
 import { methodologyPath } from "@/lib/methodology";
 import { isLocale, type Locale } from "@/lib/i18n";
@@ -15,8 +15,6 @@ import { serviceCategorySlugs, type CategorySlug } from "@/lib/data";
 // language layer is announced as "coming soon" — it lands once outreach fills the data.
 
 const SERVICE_CATEGORIES: CategorySlug[] = [...serviceCategorySlugs];
-
-const serviceLocations = ["Palma", "Alcúdia", "Pollença", "Sóller", "Manacor", "Inca", "Santanyí", "Andratx", "Calvià", "Llucmajor"].map((location) => ({ label: location, value: location }));
 
 type LocaleText = Record<Locale, string>;
 
@@ -160,9 +158,10 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
   const safeLocale = (isLocale(locale) ? locale : "es") as Locale;
   const c = copy[safeLocale];
 
-  const moduleBusinesses = await Promise.all(
-    serviceModules.map((module) => getHomepageMiniRankingBusinesses(module.category, 5, undefined, module.minReviews))
-  );
+  const [moduleBusinesses, searchAreas] = await Promise.all([
+    Promise.all(serviceModules.map((module) => getHomepageMiniRankingBusinesses(module.category, 5, undefined, module.minReviews))),
+    getSearchAreas()
+  ]);
   const modules = serviceModules
     .map((module, index) => ({ ...module, businesses: moduleBusinesses[index] }))
     .filter((module) => module.businesses.length > 0);
@@ -226,7 +225,7 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
             {c.comingSoon}
           </div>
 
-          <HomePlaceSearch locale={safeLocale} categories={SERVICE_CATEGORIES} locations={serviceLocations} />
+          <HomePlaceSearch locale={safeLocale} categories={SERVICE_CATEGORIES} locations={searchAreas} />
 
           <div className="mt-6 flex flex-wrap justify-center gap-x-5 gap-y-2 text-[11px] font-bold uppercase tracking-[0.08em] text-white/45">
             {c.signals.map((item) => (

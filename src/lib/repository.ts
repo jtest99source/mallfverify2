@@ -839,6 +839,37 @@ export async function getHomepageMiniRankingBusinesses(category: CategorySlug, l
     .map(mapMiniRankingBusiness);
 }
 
+// Towns/areas we actually have published coverage in, for the search location
+// pickers. Derived from the live `area` values (which the ranking filter matches
+// with ILIKE) so the list never goes stale as coverage grows. Sorted by coverage
+// so the busiest towns lead. A floor drops one-off hamlets and noise.
+export async function getSearchAreas(minBusinesses = 12): Promise<Array<{ label: string; value: string }>> {
+  const fallback = emptyWhenUnconfigured<Array<{ label: string; value: string }>>([]);
+  if (fallback) return fallback;
+
+  const supabase = createSupabaseServerClient();
+  const counts = new Map<string, number>();
+  const pageSize = 1000;
+  for (let from = 0; ; from += pageSize) {
+    const { data, error } = await publicStatusFilter(
+      supabase.from("businesses").select("area").not("area", "is", null)
+    ).range(from, from + pageSize - 1);
+    if (error) throw error;
+    const page = (data ?? []) as Array<{ area: string | null }>;
+    for (const row of page) {
+      const area = (row.area ?? "").trim();
+      if (!area || area === "Mallorca") continue;
+      counts.set(area, (counts.get(area) ?? 0) + 1);
+    }
+    if (page.length < pageSize) break;
+  }
+
+  return [...counts.entries()]
+    .filter(([, count]) => count >= minBusinesses)
+    .sort((a, b) => b[1] - a[1])
+    .map(([area]) => ({ label: area, value: area }));
+}
+
 export async function getBusinessesForFacetScan(category: CategorySlug): Promise<Business[]> {
   const fallback = emptyWhenUnconfigured<Business[]>([]);
   if (fallback) return fallback;

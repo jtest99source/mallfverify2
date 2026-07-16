@@ -23,7 +23,7 @@ import {
 import { GuideCard } from "@/components/GuideCard";
 import { getCategorySlugFromBusiness, leisureCategorySlugs, wellnessCategorySlugs, type CategorySlug } from "@/lib/data";
 import { getCategoryCopy, t } from "@/lib/i18n-copy";
-import { getGuides, getHomepageMiniRankingBusinesses, getPublicBusinessStats } from "@/lib/repository";
+import { getGuides, getHomepageMiniRankingBusinesses, getPublicBusinessStats, getSearchAreas } from "@/lib/repository";
 import { generateSeoMetadata } from "@/lib/seo";
 import { isLocale, type Locale } from "@/lib/i18n";
 import { getBusinessPublicName } from "@/lib/business-name-normalizer";
@@ -54,32 +54,6 @@ const categoryIcons: Partial<Record<CategorySlug, typeof IconToolsKitchen2>> = {
   healthcare: IconHeartRateMonitor,
   "real-estate": IconHomeDollar
 } as const;
-
-const homepageSearchLocations = [
-  "Palma",
-  "Alcúdia",
-  "Pollença",
-  "Cala Millor",
-  "Sóller",
-  "Can Picafort",
-  "Cala d'Or",
-  "Santa Ponça",
-  "Peguera",
-  "Cala Ratjada",
-  "Andratx",
-  "Manacor",
-  "Inca",
-  "Santanyí",
-  "Llucmajor",
-  "Palmanova",
-  "Colonia de Sant Jordi",
-  "Porto Cristo",
-  "Magaluf",
-  "Portocolom",
-  "Cala Bona",
-  "Portals Nous",
-  "Playa de Muro"
-].map((location) => ({ label: location, value: location }));
 
 const methodologyCopy = {
   es: {
@@ -218,7 +192,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
   const safeLocale = (isLocale(locale) ? locale : "es") as Locale;
   const copy = t(safeLocale);
   const methodology = methodologyCopy[safeLocale];
-  const [latestGuides, restaurantsPalma, restaurantsSoller, hotels, beachClubs, bars, cafes, nightlife, boats, activities, rentACar, carDealers, spas, healthcare, realEstate, stats] = await Promise.all([
+  const [latestGuides, restaurantsPalma, restaurantsSoller, hotels, beachClubs, bars, cafes, nightlife, boats, activities, rentACar, carDealers, spas, healthcare, realEstate, stats, searchAreas] = await Promise.all([
     getGuides(safeLocale, 4),
     getHomepageMiniRankingBusinesses("restaurants", 5, "Palma", 200),
     getHomepageMiniRankingBusinesses("restaurants", 5, "S\u00f3ller", 50),
@@ -234,7 +208,8 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
     getHomepageMiniRankingBusinesses("spas", 5, undefined, 20),
     getHomepageMiniRankingBusinesses("healthcare", 5, undefined, 15),
     getHomepageMiniRankingBusinesses("real-estate", 5, undefined, 15),
-    getPublicBusinessStats()
+    getPublicBusinessStats(),
+    getSearchAreas()
   ]);
   const guideImages = await Promise.all(latestGuides.map((guide) => (guide.heroImageUrl ? Promise.resolve(null) : getEditorialImageForGuide(guide.title))));
 
@@ -376,7 +351,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
                 ? "Rankings built on public Google Reviews — no paid positions, no sponsored results."
                 : "Rankings construidos sobre Google Reviews públicas — sin posiciones de pago, sin resultados patrocinados."}
             </p>
-            <HomePlaceSearch locale={safeLocale} categories={[...leisureCategorySlugs, ...wellnessCategorySlugs]} locations={homepageSearchLocations} />
+            <HomePlaceSearch locale={safeLocale} categories={[...leisureCategorySlugs, ...wellnessCategorySlugs]} locations={searchAreas} />
           </div>
 
           {restaurantsPalma.length > 0 && (
