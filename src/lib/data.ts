@@ -245,6 +245,16 @@ export const categoryConfigs = {
     faq: "¿Dónde encontrar un pediatra que atienda en inglés o alemán en Mallorca?",
     editorialContext: "En pediatría miramos reseñas, volumen, especialidad, ubicación y señales de atención internacional. La verificación de idiomas (inglés/alemán) llegará por confirmación directa con cada consulta."
   },
+  gynecologists: {
+    label: "Ginecología y fertilidad",
+    singular: "Ginecología o clínica de fertilidad",
+    businessCategory: "healthcare",
+    icon: "IconGenderFemale",
+    title: "Ginecología y clínicas de fertilidad en Mallorca",
+    intro: "Ginecólogos y clínicas de fertilidad/reproducción asistida en Mallorca orientados a extranjeras, expats y residentes internacionales que buscan salud de la mujer en su idioma. Ordenados por reseñas reales de Google.",
+    faq: "¿Dónde encontrar un ginecólogo o clínica de fertilidad que atienda en inglés o alemán en Mallorca?",
+    editorialContext: "En ginecología y fertilidad miramos reseñas, volumen, especialidad (obstetricia, reproducción asistida, salud de la mujer), ubicación y señales de atención internacional. La verificación de idiomas (inglés/alemán) llegará por confirmación directa con cada consulta."
+  },
   "real-estate": {
     label: "Inmobiliarias",
     singular: "Agencia inmobiliaria",
@@ -323,6 +333,7 @@ export const publicCategorySlugs = [
   "opticians",
   "nutritionists",
   "pediatricians",
+  "gynecologists",
   "real-estate",
   "lawyers",
   "tax-advisors"
@@ -345,6 +356,7 @@ export const serviceCategorySlugs = [
   "opticians",
   "nutritionists",
   "pediatricians",
+  "gynecologists",
   "healthcare",
   "real-estate",
   "lawyers",
@@ -464,6 +476,7 @@ const categoryGuideKeywords: Record<CategorySlug, string[]> = {
   opticians: ["óptica", "optometrista", "optician", "oftalmólogo", "ophthalmologist", "gafas", "revisión de la vista"],
   nutritionists: ["nutricionista", "dietista", "nutrición", "dietética", "nutritionist", "dietitian", "endocrino"],
   pediatricians: ["pediatra", "pediatría", "pediatrician", "kinderarzt", "clínica pediátrica", "pediátrico"],
+  gynecologists: ["ginecólogo", "ginecología", "fertilidad", "reproducción asistida", "gynecologist", "fertility", "obstetricia", "salud de la mujer"],
   "real-estate": ["inmobiliaria", "property", "comprar casa", "real estate", "vivienda"],
   lawyers: ["abogado", "lawyer", "despacho", "legal", "extranjería", "herencia"],
   "tax-advisors": ["gestoría", "asesor fiscal", "tax advisor", "gestor", "impuestos", "contable"],

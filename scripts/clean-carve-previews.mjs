@@ -3,9 +3,13 @@ import { readFileSync, writeFileSync } from "node:fs";
 // Conservative keep/noise pass over the three healthcare-carve previews.
 // Drops only clear non-vertical rows; leaves anything ambiguous for the carve regex.
 const RULES = {
-  fertility: {
-    file: "data/import-previews/fertility-preview.json",
-    drop: (r) => /(veterinar|animal)/i.test(`${r.name} ${r.primary_type ?? ""}`),
+  gynecology: {
+    file: "data/import-previews/gynecology-preview.json",
+    drop: (r) => {
+      const t = r.primary_type ?? "";
+      if (["store", "shopping_mall", "department_store", "jewelry_store", "general_hospital"].includes(t)) return true;
+      return /(veterinar|clinica dental|dental clinic|zahnarzt)/i.test(`${r.name} ${t}`);
+    },
   },
   nutrition: {
     file: "data/import-previews/nutrition-preview.json",

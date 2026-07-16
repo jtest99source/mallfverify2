@@ -1260,36 +1260,48 @@ export const PLACE_CATEGORY_CONFIGS = {
     ]
   },
 
-  fertility: {
+  gynecology: {
     businessCategory: "healthcare",
-    singular: "clinica de fertilidad",
-    output: "data/import-previews/fertility-preview.json",
+    singular: "ginecologia y fertilidad",
+    output: "data/import-previews/gynecology-preview.json",
     image: "/images/placeholder.svg",
     minRating: 4.0,
-    minReviews: 3,
+    minReviews: 4,
     blockedNameKeywords: ["veterinar", "banco de semen animal"],
     searches: [
-      // Español
+      // Fertilidad / reproducción
       "clinica de fertilidad Mallorca",
       "reproduccion asistida Mallorca",
       "clinica de reproduccion Mallorca",
       "fecundacion in vitro Mallorca",
       "tratamiento de fertilidad Palma Mallorca",
-      "ginecologia y reproduccion Mallorca",
       "inseminacion artificial Mallorca",
       "ovodonacion Mallorca",
-      // Inglés / Alemán
       "fertility clinic Mallorca",
       "IVF clinic Mallorca",
       "reproductive medicine Mallorca",
-      "assisted reproduction Mallorca",
       "Kinderwunschklinik Mallorca",
-      "Kinderwunsch Mallorca",
-      "kunstliche Befruchtung Mallorca",
-      // Zona (casi todo en Palma, pero por si acaso)
-      "clinica fertilidad Palma Mallorca",
-      "reproduccion asistida Palma Mallorca",
-      "fertility Palma de Mallorca"
+      // Ginecología / obstetricia — español
+      "ginecologo Palma Mallorca",
+      "ginecologa Mallorca",
+      "clinica ginecologica Mallorca",
+      "ginecologia y obstetricia Mallorca",
+      "consulta de ginecologia Palma Mallorca",
+      "ginecologo privado Mallorca",
+      "salud de la mujer Mallorca",
+      // Ginecología — inglés / alemán
+      "gynecologist Palma Mallorca",
+      "gynaecologist Mallorca",
+      "womens health clinic Mallorca",
+      "Frauenarzt Mallorca",
+      "Frauenarzt Palma Mallorca",
+      "Gynakologe Mallorca",
+      // Por zona
+      "ginecologo Manacor Mallorca",
+      "ginecologo Inca Mallorca",
+      "ginecologo Alcudia Mallorca",
+      "ginecologo Calvia Mallorca",
+      "ginecologo Santa Ponsa Mallorca"
     ]
   },
 

@@ -16,7 +16,7 @@ const dental = /(^|[^a-z])(dental|dentist|dentista|odontolog|ortodon|endodon|den
 const optica = /(^|[^a-z])(optic|oftalmolog|ophthalmolog|optometr|augenarzt|augenklinik|augenoptik)/;
 const physio = /(^|[^a-z])(fisioterap|physiother|physio|kinesiolog|osteopat|quiropract|chiroprac)/;
 const mental = /(^|[^a-z])(psicolog|psiquiatr|psycholog|psychiatr|psicoterap|psychotherap|salud mental|mental health)/;
-const fertility = /(^|[^a-z])(fertil|reproduccion asistida|reproduccion humana|reproductiv|fecundacion|ivf|kinderwunsch|inseminacion|ovodona)/;
+const gynecology = /(^|[^a-z])(fertil|reproduccion asistida|reproduccion humana|reproductiv|fecundacion|ivf|kinderwunsch|inseminacion|ovodona|ginecolog|gynecolog|gynaecolog|gynakolog|frauenarzt|obstetric)/;
 const pediatrics = /(^|[^a-z])(pediatr|paediatr|kinderarzt|pediatric)/;
 const nutrition = /(^|[^a-z])(nutricion|nutricionist|dietetic|dietist|nutrition|ernahrungsberat)/;
 function carve(b) {
@@ -26,7 +26,7 @@ function carve(b) {
   if (optica.test(s)) return "opticians";
   if (physio.test(s)) return "physiotherapists";
   if (mental.test(s)) return "psychologists";
-  if (fertility.test(s)) return "fertility";
+  if (gynecology.test(s)) return "gynecologists";
   if (pediatrics.test(s)) return "pediatricians";
   if (nutrition.test(s)) return "nutritionists";
   return "healthcare";
@@ -48,11 +48,9 @@ async function main() {
     if ((data ?? []).length < 1000) break;
   }
   const files = {
-    fertility: "reports/outreach-fertilidad.xlsx",
-    pediatricians: "reports/outreach-pediatria.xlsx",
-    nutritionists: "reports/outreach-nutricion.xlsx",
+    gynecologists: "reports/outreach-ginecologia.xlsx",
   };
-  const buckets = { fertility: [], pediatricians: [], nutritionists: [] };
+  const buckets = { gynecologists: [] };
   for (const b of rows) { const v = carve(b); if (buckets[v]) buckets[v].push(b); }
   for (const [v, file] of Object.entries(files)) {
     const sorted = buckets[v].sort((a, b) => (b.reviews_count ?? 0) - (a.reviews_count ?? 0));

@@ -18,7 +18,7 @@ const dental = /(^|[^a-z])(dental|dentist|dentista|odontolog|ortodon|endodon|den
 const optica = /(^|[^a-z])(optic|oftalmolog|ophthalmolog|optometr|augenarzt|augenklinik|augenoptik)/;
 const physio = /(^|[^a-z])(fisioterap|physiother|physio|kinesiolog|osteopat|quiropract|chiroprac)/;
 const mental = /(^|[^a-z])(psicolog|psiquiatr|psycholog|psychiatr|psicoterap|psychotherap|salud mental|mental health)/;
-const fertility = /(^|[^a-z])(fertil|reproduccion asistida|reproduccion humana|reproductiv|fecundacion|ivf|kinderwunsch|inseminacion|ovodona)/;
+const gynecology = /(^|[^a-z])(fertil|reproduccion asistida|reproduccion humana|reproductiv|fecundacion|ivf|kinderwunsch|inseminacion|ovodona|ginecolog|gynecolog|gynaecolog|gynakolog|frauenarzt|obstetric)/;
 const pediatrics = /(^|[^a-z])(pediatr|paediatr|kinderarzt|pediatric)/;
 const nutrition = /(^|[^a-z])(nutricion|nutricionist|dietetic|dietist|nutrition|ernahrungsberat)/;
 
@@ -29,7 +29,7 @@ function carve(b) {
   if (optica.test(sig)) return "opticians";
   if (physio.test(sig)) return "physiotherapists";
   if (mental.test(sig)) return "psychologists";
-  if (fertility.test(sig)) return "fertility";
+  if (gynecology.test(sig)) return "gynecologists";
   if (pediatrics.test(sig)) return "pediatricians";
   if (nutrition.test(sig)) return "nutritionists";
   return "healthcare";
@@ -46,9 +46,9 @@ async function main() {
     rows.push(...(data ?? []));
     if ((data ?? []).length < 1000) break;
   }
-  const targets = new Set(["fertility", "pediatricians", "nutritionists"]);
-  const toPublish = { fertility: [], pediatricians: [], nutritionists: [] };
-  const skipped = { fertility: 0, pediatricians: 0, nutritionists: 0 };
+  const targets = new Set(["gynecologists"]);
+  const toPublish = { gynecologists: [] };
+  const skipped = { gynecologists: 0 };
   for (const b of rows) {
     const v = carve(b);
     if (!targets.has(v)) continue;

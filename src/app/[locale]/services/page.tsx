@@ -57,6 +57,11 @@ const serviceModules: Array<{ category: CategorySlug; eyebrow: LocaleText; title
     title: { es: "Pediatras en Mallorca", en: "Pediatricians in Mallorca", de: "Kinderärzte auf Mallorca" }
   },
   {
+    category: "gynecologists",
+    eyebrow: { es: "Ginecología", en: "Gynecology", de: "Gynäkologie" },
+    title: { es: "Ginecología y fertilidad en Mallorca", en: "Gynecology & fertility in Mallorca", de: "Gynäkologie & Kinderwunsch auf Mallorca" }
+  },
+  {
     category: "healthcare",
     eyebrow: { es: "Salud", en: "Health", de: "Gesundheit" },
     title: { es: "Médicos y clínicas en Mallorca", en: "Doctors & clinics in Mallorca", de: "Ärzte & Kliniken auf Mallorca" }

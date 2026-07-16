@@ -119,6 +119,7 @@ const physioSignalRegex = /(^|[^a-z])(fisioterap|physiother|physio|kinesiolog|os
 const mentalHealthSignalRegex = /(^|[^a-z])(psicolog|psiquiatr|psycholog|psychiatr|psicoterap|psychotherap|salud mental|mental health)/;
 const pediatricsSignalRegex = /(^|[^a-z])(pediatr|paediatr|kinderarzt|pediatric)/;
 const nutritionSignalRegex = /(^|[^a-z])(nutricion|nutricionist|dietetic|dietist|nutrition|ernahrungsberat)/;
+const gynecologySignalRegex = /(^|[^a-z])(fertil|reproduccion asistida|reproduccion humana|reproductiv|fecundacion|ivf|kinderwunsch|inseminacion|ovodona|ginecolog|gynecolog|gynaecolog|gynakolog|frauenarzt|obstetric)/;
 
 const bakeryListingSignals = [
   "bakery",
@@ -287,24 +288,26 @@ function businessMatchesListingCategory(row: Pick<BusinessRow, "category" | "nam
     const isMentalHealth = mentalHealthSignalRegex.test(signalText);
     const isPediatric = pediatricsSignalRegex.test(signalText);
     const isNutrition = nutritionSignalRegex.test(signalText);
+    const isGynecology = gynecologySignalRegex.test(signalText);
     // Priority (mutually exclusive): aesthetic → dental → opticians → physio →
-    // psychology → pediatrics → nutrition → general.
-    const higherThanPediatrics = hasAestheticTag || isDental || isOptician || isPhysio || isMentalHealth;
+    // psychology → gynecology → pediatrics → nutrition → general.
+    const higherThanGyn = hasAestheticTag || isDental || isOptician || isPhysio || isMentalHealth;
     if (category === "aesthetic-clinics") return hasAestheticTag;
     if (category === "dentists") return !hasAestheticTag && isDental;
     if (category === "opticians") return !hasAestheticTag && !isDental && isOptician;
     if (category === "physiotherapists") return !hasAestheticTag && !isDental && !isOptician && isPhysio;
     if (category === "psychologists") return !hasAestheticTag && !isDental && !isOptician && !isPhysio && isMentalHealth;
-    if (category === "pediatricians") return !higherThanPediatrics && isPediatric;
-    if (category === "nutritionists") return !higherThanPediatrics && !isPediatric && isNutrition;
+    if (category === "gynecologists") return !higherThanGyn && isGynecology;
+    if (category === "pediatricians") return !higherThanGyn && !isGynecology && isPediatric;
+    if (category === "nutritionists") return !higherThanGyn && !isGynecology && !isPediatric && isNutrition;
     if (category === "healthcare") {
-      return !higherThanPediatrics && !isPediatric && !isNutrition;
+      return !higherThanGyn && !isGynecology && !isPediatric && !isNutrition;
     }
   }
   // A non-healthcare row can never satisfy a healthcare carve category.
   if (category === "aesthetic-clinics" || category === "dentists" || category === "opticians" ||
-      category === "physiotherapists" || category === "psychologists" || category === "pediatricians" ||
-      category === "nutritionists" || category === "healthcare") {
+      category === "physiotherapists" || category === "psychologists" || category === "gynecologists" ||
+      category === "pediatricians" || category === "nutritionists" || category === "healthcare") {
     return false;
   }
 
