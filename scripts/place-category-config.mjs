@@ -1258,6 +1258,106 @@ export const PLACE_CATEGORY_CONFIGS = {
       "optica Santanyi Mallorca",
       "optica Cala d'Or Mallorca"
     ]
+  },
+
+  fertility: {
+    businessCategory: "healthcare",
+    singular: "clinica de fertilidad",
+    output: "data/import-previews/fertility-preview.json",
+    image: "/images/placeholder.svg",
+    minRating: 4.0,
+    minReviews: 3,
+    blockedNameKeywords: ["veterinar", "banco de semen animal"],
+    searches: [
+      // Español
+      "clinica de fertilidad Mallorca",
+      "reproduccion asistida Mallorca",
+      "clinica de reproduccion Mallorca",
+      "fecundacion in vitro Mallorca",
+      "tratamiento de fertilidad Palma Mallorca",
+      "ginecologia y reproduccion Mallorca",
+      "inseminacion artificial Mallorca",
+      "ovodonacion Mallorca",
+      // Inglés / Alemán
+      "fertility clinic Mallorca",
+      "IVF clinic Mallorca",
+      "reproductive medicine Mallorca",
+      "assisted reproduction Mallorca",
+      "Kinderwunschklinik Mallorca",
+      "Kinderwunsch Mallorca",
+      "kunstliche Befruchtung Mallorca",
+      // Zona (casi todo en Palma, pero por si acaso)
+      "clinica fertilidad Palma Mallorca",
+      "reproduccion asistida Palma Mallorca",
+      "fertility Palma de Mallorca"
+    ]
+  },
+
+  nutrition: {
+    businessCategory: "healthcare",
+    singular: "nutricionista o dietista",
+    output: "data/import-previews/nutrition-preview.json",
+    image: "/images/placeholder.svg",
+    minRating: 4.3,
+    minReviews: 5,
+    blockedNameKeywords: ["herbolario", "herbalife", "herbalist", "supplement store", "tienda de suplementos", "gimnasio", "veterinar"],
+    searches: [
+      // Español
+      "nutricionista Palma Mallorca",
+      "dietista Mallorca",
+      "clinica de nutricion Mallorca",
+      "nutricion y dietetica Mallorca",
+      "dietista nutricionista Palma Mallorca",
+      "nutricion clinica Mallorca",
+      "nutricion deportiva Mallorca",
+      "endocrino nutricion Mallorca",
+      // Inglés / Alemán
+      "nutritionist Palma Mallorca",
+      "dietitian Mallorca",
+      "nutrition clinic Mallorca",
+      "Ernahrungsberatung Mallorca",
+      "Ernahrungsberater Mallorca",
+      // Zona
+      "nutricionista Manacor Mallorca",
+      "nutricionista Inca Mallorca",
+      "nutricionista Calvia Mallorca",
+      "nutricionista Alcudia Mallorca",
+      "nutricionista Llucmajor Mallorca",
+      "dietista Santa Ponsa Mallorca"
+    ]
+  },
+
+  pediatrics: {
+    businessCategory: "healthcare",
+    singular: "pediatra o clinica pediatrica",
+    output: "data/import-previews/pediatrics-preview.json",
+    image: "/images/placeholder.svg",
+    minRating: 4.0,
+    minReviews: 5,
+    blockedNameKeywords: ["dental", "dentist", "veterinar", "guarderia", "escuela infantil"],
+    searches: [
+      // Español
+      "pediatra Palma Mallorca",
+      "clinica pediatrica Mallorca",
+      "centro pediatrico Mallorca",
+      "pediatria Palma Mallorca",
+      "pediatra privado Mallorca",
+      "consulta pediatrica Mallorca",
+      // Inglés / Alemán
+      "pediatrician Palma Mallorca",
+      "paediatrician Mallorca",
+      "pediatric clinic Mallorca",
+      "Kinderarzt Mallorca",
+      "Kinderarzt Palma Mallorca",
+      "deutscher Kinderarzt Mallorca",
+      // Zona
+      "pediatra Manacor Mallorca",
+      "pediatra Inca Mallorca",
+      "pediatra Calvia Mallorca",
+      "pediatra Alcudia Mallorca",
+      "pediatra Santa Ponsa Mallorca",
+      "pediatra Llucmajor Mallorca"
+    ]
   }
 };
 

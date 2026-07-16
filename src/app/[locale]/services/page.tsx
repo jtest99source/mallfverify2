@@ -47,6 +47,16 @@ const serviceModules: Array<{ category: CategorySlug; eyebrow: LocaleText; title
     title: { es: "Ópticas y oftalmólogos en Mallorca", en: "Opticians in Mallorca", de: "Optiker auf Mallorca" }
   },
   {
+    category: "nutritionists",
+    eyebrow: { es: "Nutrición", en: "Nutrition", de: "Ernährung" },
+    title: { es: "Nutricionistas en Mallorca", en: "Nutritionists in Mallorca", de: "Ernährungsberater auf Mallorca" }
+  },
+  {
+    category: "pediatricians",
+    eyebrow: { es: "Pediatría", en: "Pediatrics", de: "Kinderärzte" },
+    title: { es: "Pediatras en Mallorca", en: "Pediatricians in Mallorca", de: "Kinderärzte auf Mallorca" }
+  },
+  {
     category: "healthcare",
     eyebrow: { es: "Salud", en: "Health", de: "Gesundheit" },
     title: { es: "Médicos y clínicas en Mallorca", en: "Doctors & clinics in Mallorca", de: "Ärzte & Kliniken auf Mallorca" }

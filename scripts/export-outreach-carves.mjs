@@ -16,6 +16,9 @@ const dental = /(^|[^a-z])(dental|dentist|dentista|odontolog|ortodon|endodon|den
 const optica = /(^|[^a-z])(optic|oftalmolog|ophthalmolog|optometr|augenarzt|augenklinik|augenoptik)/;
 const physio = /(^|[^a-z])(fisioterap|physiother|physio|kinesiolog|osteopat|quiropract|chiroprac)/;
 const mental = /(^|[^a-z])(psicolog|psiquiatr|psycholog|psychiatr|psicoterap|psychotherap|salud mental|mental health)/;
+const fertility = /(^|[^a-z])(fertil|reproduccion asistida|reproduccion humana|reproductiv|fecundacion|ivf|kinderwunsch|inseminacion|ovodona)/;
+const pediatrics = /(^|[^a-z])(pediatr|paediatr|kinderarzt|pediatric)/;
+const nutrition = /(^|[^a-z])(nutricion|nutricionist|dietetic|dietist|nutrition|ernahrungsberat)/;
 function carve(b) {
   const s = norm([b.name, b.display_name, b.short_description, b.description, ...(b.tags ?? []), ...(b.best_for ?? [])].join(" "));
   if ((b.tags ?? []).includes("medicina-estetica")) return "aesthetic";
@@ -23,6 +26,9 @@ function carve(b) {
   if (optica.test(s)) return "opticians";
   if (physio.test(s)) return "physiotherapists";
   if (mental.test(s)) return "psychologists";
+  if (fertility.test(s)) return "fertility";
+  if (pediatrics.test(s)) return "pediatricians";
+  if (nutrition.test(s)) return "nutritionists";
   return "healthcare";
 }
 function mapsUrl(b) {
@@ -42,11 +48,11 @@ async function main() {
     if ((data ?? []).length < 1000) break;
   }
   const files = {
-    physiotherapists: "reports/outreach-fisioterapia.xlsx",
-    psychologists: "reports/outreach-psicologia.xlsx",
-    opticians: "reports/outreach-opticas.xlsx",
+    fertility: "reports/outreach-fertilidad.xlsx",
+    pediatricians: "reports/outreach-pediatria.xlsx",
+    nutritionists: "reports/outreach-nutricion.xlsx",
   };
-  const buckets = { physiotherapists: [], psychologists: [], opticians: [] };
+  const buckets = { fertility: [], pediatricians: [], nutritionists: [] };
   for (const b of rows) { const v = carve(b); if (buckets[v]) buckets[v].push(b); }
   for (const [v, file] of Object.entries(files)) {
     const sorted = buckets[v].sort((a, b) => (b.reviews_count ?? 0) - (a.reviews_count ?? 0));

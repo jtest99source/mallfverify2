@@ -3,32 +3,23 @@ import { readFileSync, writeFileSync } from "node:fs";
 // Conservative keep/noise pass over the three healthcare-carve previews.
 // Drops only clear non-vertical rows; leaves anything ambiguous for the carve regex.
 const RULES = {
-  physiotherapy: {
-    file: "data/import-previews/physiotherapy-preview.json",
-    drop: (r) => {
-      const t = r.primary_type ?? "";
-      return ["spa", "beauty_salon", "hair_salon", "nail_salon", "gym", "fitness_center"].includes(t);
-    },
+  fertility: {
+    file: "data/import-previews/fertility-preview.json",
+    drop: (r) => /(veterinar|animal)/i.test(`${r.name} ${r.primary_type ?? ""}`),
   },
-  psychology: {
-    file: "data/import-previews/psychology-preview.json",
-    drop: (r) => {
-      const name = (r.name ?? "").toLowerCase();
-      const isPsy = /(psicolog|psiquiatr|psicoter|psycholog|psychiatr|psychother|psicólog|psicólog)/i.test(name);
-      const isCoach = /(coach|coaching)/i.test(name);
-      const isNutri = /(nutric|nutrition|dietist|dietética|metabolismo|hormonal)/i.test(name);
-      // Drop coaches / nutrition practices that are NOT also a psychology practice.
-      return (isCoach || isNutri) && !isPsy;
-    },
-  },
-  opticians: {
-    file: "data/import-previews/opticians-preview.json",
+  nutrition: {
+    file: "data/import-previews/nutrition-preview.json",
     drop: (r) => {
       const name = (r.name ?? "").toLowerCase();
       const t = r.primary_type ?? "";
-      if (["shopping_mall", "jewelry_store", "department_store", "general_hospital"].includes(t)) return true;
-      return /(sunglass|gafas de sol|shopping|joyer|jewel)/i.test(name);
+      if (["food_store", "grocery_store", "supermarket", "supplement_store", "store", "gym", "fitness_center"].includes(t)) return true;
+      return /(tienda|suplement|fabrica|fábrica|herbolario|herbalife|gimnasio|entrenamiento|training center)/i.test(name);
     },
+  },
+  pediatrics: {
+    file: "data/import-previews/pediatrics-preview.json",
+    // Dental practices carve to dentists anyway; drop them + non-medical child services.
+    drop: (r) => /(dental|dentist|ortodon|dentofacial|guarderia|guardería|escuela infantil|logopeda)/i.test(`${r.name} ${r.primary_type ?? ""}`),
   },
 };
 

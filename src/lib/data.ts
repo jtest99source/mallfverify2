@@ -225,6 +225,26 @@ export const categoryConfigs = {
     faq: "¿Dónde encontrar una óptica u oftalmólogo que atienda a extranjeros en Mallorca?",
     editorialContext: "En óptica y oftalmología miramos reseñas, volumen, servicios (optometría, cirugía ocular, revisiones de vista), ubicación y señales de atención internacional. La verificación de idiomas (inglés/alemán) llegará por confirmación directa con cada centro."
   },
+  nutritionists: {
+    label: "Nutrición",
+    singular: "Nutricionista o dietista",
+    businessCategory: "healthcare",
+    icon: "IconSalad",
+    title: "Nutricionistas y dietistas en Mallorca",
+    intro: "Nutricionistas y dietistas-nutricionistas en Mallorca orientados a extranjeros, expats y residentes internacionales. Ordenados por reseñas reales de Google y señales públicas verificables.",
+    faq: "¿Dónde encontrar un nutricionista que atienda a extranjeros en Mallorca?",
+    editorialContext: "En nutrición miramos reseñas, volumen, especialidad (clínica, deportiva, endocrino-nutrición), ubicación y señales de atención internacional. La verificación de idiomas (inglés/alemán) llegará por confirmación directa con cada profesional."
+  },
+  pediatricians: {
+    label: "Pediatría",
+    singular: "Pediatra o clínica pediátrica",
+    businessCategory: "healthcare",
+    icon: "IconMoodKid",
+    title: "Pediatras y clínicas pediátricas en Mallorca",
+    intro: "Pediatras y clínicas pediátricas en Mallorca orientados a familias extranjeras, expats y residentes internacionales que buscan atención en su idioma. Ordenados por reseñas reales de Google.",
+    faq: "¿Dónde encontrar un pediatra que atienda en inglés o alemán en Mallorca?",
+    editorialContext: "En pediatría miramos reseñas, volumen, especialidad, ubicación y señales de atención internacional. La verificación de idiomas (inglés/alemán) llegará por confirmación directa con cada consulta."
+  },
   "real-estate": {
     label: "Inmobiliarias",
     singular: "Agencia inmobiliaria",
@@ -301,6 +321,8 @@ export const publicCategorySlugs = [
   "physiotherapists",
   "psychologists",
   "opticians",
+  "nutritionists",
+  "pediatricians",
   "real-estate",
   "lawyers",
   "tax-advisors"
@@ -321,6 +343,8 @@ export const serviceCategorySlugs = [
   "physiotherapists",
   "psychologists",
   "opticians",
+  "nutritionists",
+  "pediatricians",
   "healthcare",
   "real-estate",
   "lawyers",
@@ -438,6 +462,8 @@ const categoryGuideKeywords: Record<CategorySlug, string[]> = {
   physiotherapists: ["fisioterapia", "fisioterapeuta", "physiotherapy", "physio", "osteopatía", "osteopath", "quiropráctico", "rehabilitación"],
   psychologists: ["psicólogo", "psicología", "psicoterapia", "psychologist", "psychotherapy", "psiquiatra", "terapia", "salud mental"],
   opticians: ["óptica", "optometrista", "optician", "oftalmólogo", "ophthalmologist", "gafas", "revisión de la vista"],
+  nutritionists: ["nutricionista", "dietista", "nutrición", "dietética", "nutritionist", "dietitian", "endocrino"],
+  pediatricians: ["pediatra", "pediatría", "pediatrician", "kinderarzt", "clínica pediátrica", "pediátrico"],
   "real-estate": ["inmobiliaria", "property", "comprar casa", "real estate", "vivienda"],
   lawyers: ["abogado", "lawyer", "despacho", "legal", "extranjería", "herencia"],
   "tax-advisors": ["gestoría", "asesor fiscal", "tax advisor", "gestor", "impuestos", "contable"],
