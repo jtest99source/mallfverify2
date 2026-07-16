@@ -108,7 +108,7 @@ export function HomePlaceSearch({ locale, categories, locations }: HomePlaceSear
             />
           </button>
           {openMenu === "category" && (
-            <div className="absolute left-0 top-[calc(100%+8px)] z-[90] max-h-[80vh] w-full min-w-64 overflow-y-auto rounded-md border border-[#E5E7EB] bg-[#FFFFFF] p-1 shadow-[0_22px_60px_rgba(0,0,0,0.35)]">
+            <div className="absolute left-0 top-[calc(100%+8px)] z-[90] max-h-96 w-full min-w-64 overflow-y-auto rounded-md border border-[#E5E7EB] bg-[#FFFFFF] p-1 shadow-[0_22px_60px_rgba(0,0,0,0.35)]">
               {categoryOptions.map((option) => (
                 <button
                   key={option.slug}
@@ -149,7 +149,7 @@ export function HomePlaceSearch({ locale, categories, locations }: HomePlaceSear
             />
           </button>
           {openMenu === "location" && (
-            <div className="absolute left-0 top-[calc(100%+8px)] z-[90] max-h-[80vh] w-full min-w-64 overflow-y-auto rounded-md border border-[#E5E7EB] bg-[#FFFFFF] p-1 shadow-[0_22px_60px_rgba(0,0,0,0.35)]">
+            <div className="absolute left-0 top-[calc(100%+8px)] z-[90] max-h-96 w-full min-w-64 overflow-y-auto rounded-md border border-[#E5E7EB] bg-[#FFFFFF] p-1 shadow-[0_22px_60px_rgba(0,0,0,0.35)]">
               <button
                 type="button"
                 onClick={() => {
