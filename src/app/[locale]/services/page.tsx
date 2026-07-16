@@ -188,7 +188,7 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
 
   return (
     <main className="bg-[#07101F] text-white">
-      <section className="relative overflow-hidden border-b border-white/[0.08] bg-[#07101F] px-4 py-14 text-center sm:px-6 sm:py-20 lg:px-8">
+      <section className="relative overflow-visible border-b border-white/[0.08] bg-[#07101F] px-4 py-14 text-center sm:px-6 sm:py-20 lg:px-8">
         <div className="absolute inset-0 grid grid-cols-2 gap-px opacity-95 md:grid-cols-4">
           {heroPanels.map((business, index) => (
             <div
