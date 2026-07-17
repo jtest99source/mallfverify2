@@ -60,7 +60,7 @@ for(let i=0;i<work.length;i++){
   if(!buf){ failed++; console.log(`  ✗ ${b.name.slice(0,40)}`); continue; }
 
   const path=`${b.id}.jpg`;
-  const up=await sb.storage.from(BUCKET).upload(path,buf,{contentType:"image/jpeg",upsert:true});
+  const up=await sb.storage.from(BUCKET).upload(path,buf,{contentType:"image/jpeg",upsert:true,cacheControl:"31536000"});
   if(up.error){ failed++; console.log(`  ✗ upload ${b.name.slice(0,30)}: ${up.error.message}`); continue; }
   const pub=sb.storage.from(BUCKET).getPublicUrl(path).data.publicUrl;
   const { error:updErr }=await sb.from("businesses").update({primary_image_url:pub}).eq("id",b.id);
