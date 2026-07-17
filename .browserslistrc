@@ -1,0 +1,8 @@
+# Modern targets so the build stops shipping polyfills for baseline ES2022
+# features (Array.prototype.at, Object.hasOwn, etc.). Still ~99% reach.
+chrome >= 93
+edge >= 93
+firefox >= 93
+safari >= 15.4
+ios_saf >= 15.4
+not dead

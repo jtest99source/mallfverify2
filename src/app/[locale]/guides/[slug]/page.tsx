@@ -202,7 +202,7 @@ export default async function GuideDetailPage({ params }: { params: Promise<{ lo
     <main className="bg-[#07101F] text-white">
       <article className="mx-auto max-w-4xl px-4 pb-10 pt-8 sm:px-6 sm:pt-12 lg:px-8">
         <Breadcrumbs items={[{ label: copy.category.breadcrumbHome, href: `/${safeLocale}` }, { label: copy.nav.guides, href: `/${safeLocale}/guides` }, { label: guide.title, href: `/${safeLocale}/guides/${guide.slug}` }]} />
-        <p className="mt-6 text-[11px] font-semibold uppercase tracking-[0.2em] text-white/40">{copy.guides.updatedLabel} {formatDate(guide.updatedAt, safeLocale)}</p>
+        <p className="mt-6 text-[11px] font-semibold uppercase tracking-[0.2em] text-white/60">{copy.guides.updatedLabel} {formatDate(guide.updatedAt, safeLocale)}</p>
         <h1 className="mt-3 font-display text-3xl font-black leading-tight text-white sm:text-5xl">{guide.title}</h1>
         <p className="mt-4 max-w-3xl text-base leading-7 text-white/60 sm:text-lg sm:leading-8">{guide.intro}</p>
 

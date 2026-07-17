@@ -18,7 +18,7 @@ export function Footer({ locale }: { locale: Locale }) {
           <p className="font-display text-lg font-bold tracking-tight text-[#00C37A] sm:text-2xl">{siteConfig.name}</p>
           <p className="mt-3 text-sm leading-6 text-white/60 sm:mt-4 sm:leading-7">{copy.footer.description}</p>
           <a href={`mailto:${siteConfig.contactEmail}`} className="mt-3 inline-block text-sm text-[#00C37A]/80 hover:text-[#00C37A] sm:mt-4">{siteConfig.contactEmail}</a>
-          <p className="mt-2 text-xs text-white/35 sm:mt-5">© {new Date().getFullYear()} Mallorca Verified</p>
+          <p className="mt-2 text-xs text-white/60 sm:mt-5">© {new Date().getFullYear()} Mallorca Verified</p>
         </div>
 
         <div className="grid grid-cols-2 gap-5 sm:gap-8">
