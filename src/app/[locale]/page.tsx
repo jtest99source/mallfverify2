@@ -544,7 +544,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
             ].map((stat) => (
               <div key={stat.label} className="bg-[#0C1A2E] p-4 md:flex md:items-baseline md:gap-3 md:bg-transparent md:p-0">
                 <div className="font-display text-3xl font-black leading-none text-[#00C37A] md:text-4xl">{stat.value}</div>
-                <div className="mt-1 text-xs text-white/35 md:mt-0 md:text-sm">{stat.label}</div>
+                <div className="mt-1 text-xs text-white/60 md:mt-0 md:text-sm">{stat.label}</div>
               </div>
             ))}
           </div>

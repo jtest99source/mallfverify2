@@ -70,7 +70,7 @@ export function Header({ locale }: { locale: Locale }) {
             </Link>
             <div className="flex items-center gap-1 text-[10px]">
               {locales.map((item) => (
-                <Link key={item} href={`/${item}`} className={`rounded-sm border px-2 py-1 uppercase tracking-[0.08em] transition-all duration-150 ${item === locale ? "border-white/15 bg-white/[0.08] text-white" : "border-white/[0.08] text-white/35 hover:border-white/25 hover:text-white"}`}>
+                <Link key={item} href={`/${item}`} className={`rounded-sm border px-2 py-1 uppercase tracking-[0.08em] transition-all duration-150 ${item === locale ? "border-white/15 bg-white/[0.08] text-white" : "border-white/[0.08] text-white/60 hover:border-white/25 hover:text-white"}`}>
                   {localeLabel(item)}
                 </Link>
               ))}
@@ -133,7 +133,7 @@ export function Header({ locale }: { locale: Locale }) {
             </Link>
             <div className="mt-3 flex gap-2">
               {locales.map((item) => (
-                <Link key={item} href={`/${item}`} onClick={() => setMobileOpen(false)} className={`rounded-sm border px-3 py-2 text-[11px] uppercase tracking-[0.08em] transition-all duration-150 ${item === locale ? "border-white/15 bg-white/[0.08] text-white" : "border-white/[0.08] text-white/35 hover:border-white/25 hover:text-white"}`}>
+                <Link key={item} href={`/${item}`} onClick={() => setMobileOpen(false)} className={`rounded-sm border px-3 py-2 text-[11px] uppercase tracking-[0.08em] transition-all duration-150 ${item === locale ? "border-white/15 bg-white/[0.08] text-white" : "border-white/[0.08] text-white/60 hover:border-white/25 hover:text-white"}`}>
                   {localeLabel(item)}
                 </Link>
               ))}

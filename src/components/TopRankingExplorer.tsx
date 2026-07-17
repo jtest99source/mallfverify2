@@ -161,7 +161,7 @@ function RankingBusinessRow({
                 {categoryLabel}
               </span>
             )}
-            <span className="inline-flex min-w-0 items-center gap-1 text-[11px] font-semibold text-white/35">
+            <span className="inline-flex min-w-0 items-center gap-1 text-[11px] font-semibold text-white/60">
               <IconMapPin size={13} stroke={2} />
               <span className="truncate">{businessPlace(business)}</span>
             </span>
@@ -170,7 +170,7 @@ function RankingBusinessRow({
           <h2 className="font-display mt-2 line-clamp-2 text-xl font-bold leading-tight text-white">{getBusinessPublicName(business)}</h2>
           {summary && <p className="mt-1.5 hidden max-w-2xl text-sm font-light leading-6 text-white/40 lg:line-clamp-1">{summary}</p>}
           {address && (
-            <p className="mt-2 flex max-w-2xl gap-1.5 text-xs leading-5 text-white/35 sm:text-sm">
+            <p className="mt-2 flex max-w-2xl gap-1.5 text-xs leading-5 text-white/60 sm:text-sm">
               <IconMapPin size={14} stroke={2} className="mt-0.5 shrink-0 text-white/28" />
               <span className="line-clamp-1">{address}</span>
             </p>
@@ -206,7 +206,7 @@ function RankingBusinessRow({
                 {business.reviewsCount.toLocaleString(numberLocale(locale))} {locale === "es" ? "reseñas" : locale === "de" ? "Rezensionen" : "reviews"}
               </div>
             )}
-            <span className="mt-3 inline-flex items-center gap-1 rounded-sm border border-white/[0.12] px-3 py-1.5 text-[10px] font-black uppercase tracking-[0.08em] text-white/35 transition-colors group-hover:border-[#00C37A] group-hover:text-[#00C37A]">
+            <span className="mt-3 inline-flex items-center gap-1 rounded-sm border border-white/[0.12] px-3 py-1.5 text-[10px] font-black uppercase tracking-[0.08em] text-white/60 transition-colors group-hover:border-[#00C37A] group-hover:text-[#00C37A]">
               {locale === "de" ? "Details" : locale === "en" ? "Details" : "Ficha"}
               <IconArrowUpRight size={13} stroke={2} />
             </span>
@@ -457,7 +457,7 @@ export function TopRankingExplorer({
 
       {filtered.length > PAGE_SIZE && (
         <div className="mt-8 flex flex-col items-center gap-3">
-          <p className="text-[11px] font-black uppercase tracking-[0.1em] text-white/35">{loadCopy.showing(shownCount, totalCount)}</p>
+          <p className="text-[11px] font-black uppercase tracking-[0.1em] text-white/60">{loadCopy.showing(shownCount, totalCount)}</p>
           {hasMore && (
             <button
               type="button"

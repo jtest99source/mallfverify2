@@ -79,7 +79,7 @@ export function ExpertsFilters({ locale, sortKey, langFilter, activeVertical, qu
             <button
               type="button"
               onClick={() => { setSearch(""); navigate({ nextQuery: "" }); }}
-              className="pl-2 text-base text-white/35 hover:text-white"
+              className="pl-2 text-base text-white/60 hover:text-white"
             >
               ×
             </button>

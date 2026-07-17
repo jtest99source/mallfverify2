@@ -33,7 +33,7 @@ export function RatingBadge({
     return (
       <div className="inline-flex min-w-0 items-center gap-1.5 rounded-full bg-[#07101F] px-2.5 py-1 text-[10px] leading-none shadow-[0_8px_18px_rgba(0,0,0,0.22)] sm:whitespace-nowrap sm:text-[11px]">
         {typeof rating === "number" && <span className="font-extrabold text-[#FFCC00]">★ {formatRating(rating, locale)}</span>}
-        {typeof rating === "number" && typeof reviewsCount === "number" && <span className="text-white/35">/</span>}
+        {typeof rating === "number" && typeof reviewsCount === "number" && <span className="text-white/60">/</span>}
         <span className="truncate text-white/75">{typeof reviewsCount === "number" ? formatReviews(reviewsCount, locale) : "Google"}</span>
       </div>
     );
