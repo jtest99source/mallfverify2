@@ -54,11 +54,9 @@ export function Header({ locale }: { locale: Locale }) {
             <Link href={`/${locale}/services`} className="inline-flex h-9 items-center gap-1.5 text-[11px] font-semibold uppercase tracking-[0.1em] text-white/45 transition-colors duration-150 hover:text-white">
               {servicesLabel(locale)}
             </Link>
-            {locale !== "de" && (
-              <Link href={`/${locale}/guides`} className="inline-flex h-9 items-center gap-1.5 text-[11px] font-semibold uppercase tracking-[0.1em] text-white/45 transition-colors duration-150 hover:text-white">
-                {copy.nav.guides}
-              </Link>
-            )}
+            <Link href={`/${locale}/guides`} className="inline-flex h-9 items-center gap-1.5 text-[11px] font-semibold uppercase tracking-[0.1em] text-white/45 transition-colors duration-150 hover:text-white">
+              {copy.nav.guides}
+            </Link>
             <Link href={methodologyPath(locale)} className="inline-flex h-9 items-center gap-1.5 text-[11px] font-semibold uppercase tracking-[0.1em] text-white/45 transition-colors duration-150 hover:text-white">
               {copy.nav.methodology}
             </Link>
@@ -113,12 +111,10 @@ export function Header({ locale }: { locale: Locale }) {
               <IconShieldCheck size={15} stroke={1.8} className="shrink-0 text-[#00C37A]" />
               {servicesLabel(locale)}
             </Link>
-            {locale !== "de" && (
-              <Link href={`/${locale}/guides`} onClick={() => setMobileOpen(false)} className="group flex min-h-[44px] items-center gap-3 rounded-sm px-3 text-sm font-bold text-white/75 hover:bg-white/[0.08] hover:text-white">
-                <IconBook2 size={15} stroke={1.8} className="shrink-0 text-[#00C37A]" />
-                {copy.nav.guides}
-              </Link>
-            )}
+            <Link href={`/${locale}/guides`} onClick={() => setMobileOpen(false)} className="group flex min-h-[44px] items-center gap-3 rounded-sm px-3 text-sm font-bold text-white/75 hover:bg-white/[0.08] hover:text-white">
+              <IconBook2 size={15} stroke={1.8} className="shrink-0 text-[#00C37A]" />
+              {copy.nav.guides}
+            </Link>
             <Link href={methodologyPath(locale)} onClick={() => setMobileOpen(false)} className="group flex min-h-[44px] items-center gap-3 rounded-sm px-3 text-sm font-bold text-white/75 hover:bg-white/[0.08] hover:text-white">
               <IconInfoCircle size={15} stroke={1.8} className="shrink-0 text-[#00C37A]" />
               {copy.nav.methodology}
