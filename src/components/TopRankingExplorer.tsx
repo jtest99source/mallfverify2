@@ -13,6 +13,8 @@ import { methodologyPath } from "@/lib/methodology";
 import { BusinessImage } from "@/components/BusinessImage";
 import { RatingBadge } from "@/components/RatingBadge";
 import { MvScoreBadge } from "@/components/MvScoreBadge";
+import { LanguageBadge } from "@/components/LanguageBadge";
+import { isLanguageVerified, speaksEnglish, speaksGerman } from "@/lib/language-verification";
 import { compareByMvScore } from "@/lib/mv-score";
 import { businessMatchesFacet, getLocalizedFacetLabel, type RankingFacet } from "@/lib/taxonomy";
 import { getBusinessPublicName } from "@/lib/business-name-normalizer";
@@ -30,6 +32,12 @@ const categoryGroupLabels = {
   es: { servicios: "Servicios", ocio: "Ocio", bienestar: "Bienestar" },
   en: { servicios: "Services", ocio: "Leisure", bienestar: "Wellness" },
   de: { servicios: "Dienstleistungen", ocio: "Freizeit", bienestar: "Wellness" }
+} as const;
+
+const langFilterCopy = {
+  es: { label: "Idioma", all: "Cualquier idioma", en: "Habla inglés", de: "Habla alemán" },
+  en: { label: "Language", all: "Any language", en: "Speaks English", de: "Speaks German" },
+  de: { label: "Sprache", all: "Beliebige Sprache", en: "Spricht Englisch", de: "Spricht Deutsch" }
 } as const;
 
 const loadMoreCopy = {
@@ -168,6 +176,11 @@ function RankingBusinessRow({
           </div>
 
           <h2 className="font-display mt-2 line-clamp-2 text-xl font-bold leading-tight text-white">{getBusinessPublicName(business)}</h2>
+          {business.languageVerification && (
+            <div className="mt-2">
+              <LanguageBadge business={business} locale={locale} variant="compact" tone="dark" />
+            </div>
+          )}
           {summary && <p className="mt-1.5 hidden max-w-2xl text-sm font-light leading-6 text-white/40 lg:line-clamp-1">{summary}</p>}
           {address && (
             <p className="mt-2 flex max-w-2xl gap-1.5 text-xs leading-5 text-white/60 sm:text-sm">
@@ -236,7 +249,10 @@ export function TopRankingExplorer({
   const [sort, setSort] = useState<SortKey>((searchParams.get("sort") as SortKey) || "reviews");
   const [facetSlug, setFacetSlug] = useState(searchParams.get("type") ?? ALL);
   const [place, setPlace] = useState(searchParams.get("area") ?? ALL);
+  const [lang, setLang] = useState(searchParams.get("lang") ?? ALL);
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
+  const hasLangData = useMemo(() => businesses.some(isLanguageVerified), [businesses]);
+  const langCopy = langFilterCopy[locale];
   const sortOptions: Array<{ value: SortKey; label: string }> = [
     { value: "reviews", label: copy.filters.sort.reviews },
     { value: "ratio", label: copy.filters.sort.ratio },
@@ -266,6 +282,7 @@ export function TopRankingExplorer({
     setSort((searchParams.get("sort") as SortKey) || "reviews");
     setFacetSlug(searchParams.get("type") ?? ALL);
     setPlace(searchParams.get("area") ?? ALL);
+    setLang(searchParams.get("lang") ?? ALL);
   }, [searchParams]);
 
   function updateParam(key: string, value: string) {
@@ -303,13 +320,14 @@ export function TopRankingExplorer({
 
       return (
         (place === ALL || businessPlace(business) === place) &&
+        (lang === ALL || (lang === "en" && speaksEnglish(business)) || (lang === "de" && speaksGerman(business))) &&
         (!selectedFacet || businessMatchesFacet(business, selectedFacet)) &&
         (!normalizedQuery || searchable.includes(normalizedQuery))
       );
     });
 
     return sortBusinesses(matches, sort);
-  }, [businesses, place, query, selectedFacet, sort]);
+  }, [businesses, place, lang, query, selectedFacet, sort]);
   const visibleBusinesses = filtered.slice(0, visibleCount);
   const hasMore = visibleCount < filtered.length;
   const shownCount = Math.min(visibleCount, filtered.length).toLocaleString(numberLocale(locale));
@@ -326,7 +344,7 @@ export function TopRankingExplorer({
 
   useEffect(() => {
     setVisibleCount(PAGE_SIZE);
-  }, [facetSlug, place, query, sort]);
+  }, [facetSlug, place, lang, query, sort]);
 
   return (
     <section className="relative bg-[#07101F] pb-14">
@@ -348,6 +366,15 @@ export function TopRankingExplorer({
               {facets.map((facet) => (
                 <option key={facet.slug} value={facet.slug}>{getLocalizedFacetLabel(facet.slug, facet.label, locale)}</option>
               ))}
+            </select>
+          </div>
+        )}
+        {hasLangData && (
+          <div className="mb-2">
+            <select value={lang} onChange={(event) => updateParam("lang", event.target.value)} className="h-10 w-full rounded-sm border border-[#00C37A]/30 bg-[#0C1A2E] px-3 text-xs text-white focus:border-[#00C37A] focus:outline-none">
+              <option value={ALL}>{langCopy.all}</option>
+              <option value="en">{langCopy.en}</option>
+              <option value="de">{langCopy.de}</option>
             </select>
           </div>
         )}
@@ -428,6 +455,16 @@ export function TopRankingExplorer({
                   ))}
                 </select>
               </label>
+              {hasLangData && (
+                <label className="flex items-center gap-3 text-[10px] font-black uppercase tracking-[0.12em] text-white/30">
+                  {langCopy.label}
+                  <select value={lang} onChange={(event) => updateParam("lang", event.target.value)} className="h-9 rounded-sm border border-[#00C37A]/30 bg-[#0C1A2E] pl-4 pr-8 text-sm font-normal normal-case tracking-normal text-white focus:border-[#00C37A] focus:outline-none focus:ring-1 focus:ring-[#00C37A]">
+                    <option value={ALL}>{langCopy.all}</option>
+                    <option value="en">{langCopy.en}</option>
+                    <option value="de">{langCopy.de}</option>
+                  </select>
+                </label>
+              )}
               <div className="ml-auto flex max-w-md items-center gap-2 text-[11px] text-[#00C37A]/85">
                 <IconInfoCircle size={13} stroke={2} className="shrink-0 text-[#00C37A]/70" />
                 <span>{sortHelp.text}</span>

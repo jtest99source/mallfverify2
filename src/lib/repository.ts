@@ -7,7 +7,7 @@ import { siteConfig } from "@/config/site";
 import { calculateUntappedScore } from "@/lib/untapped-score";
 import { isWithinMallorca } from "@/lib/business-geo";
 import { filterBusinessesByFacet, getFacet } from "@/lib/taxonomy";
-import type { AnyCategoryAttributes, Business, BusinessCategory, BusinessFact, ContentStatus, EditorialService, EditorialSource, FAQ, FeaturedReview, GoogleReview, ImageCandidate, ImageStatus, PlacePhoto, PriceEstimate, PriceLevel, PriorityLevel, ReviewSentiment, ReviewTheme, SocialProfiles, VisitTip } from "@/types/business";
+import type { AnyCategoryAttributes, Business, BusinessCategory, BusinessFact, ContentStatus, EditorialService, EditorialSource, FAQ, FeaturedReview, GoogleReview, ImageCandidate, ImageStatus, LanguageVerification, PlacePhoto, PriceEstimate, PriceLevel, PriorityLevel, ReviewSentiment, ReviewTheme, SocialProfiles, VisitTip } from "@/types/business";
 import type { Guide } from "@/types/guide";
 import type { Ranking, RankingCategory } from "@/types/ranking";
 import type { Locale } from "@/lib/i18n";
@@ -363,7 +363,8 @@ const businessListingSelect = [
   "ai_description",
   "editorial_description",
   "ideal_for",
-  "price_estimate"
+  "price_estimate",
+  "language_verification"
 ].join(",");
 
 type SeoJson = { title?: string; description?: string };
@@ -445,6 +446,7 @@ type BusinessRow = {
   business_self_description?: string | null;
   editorial_generated_at?: string | null;
   editorial_source?: EditorialSource | null;
+  language_verification?: LanguageVerification | null;
 };
 
 type RankingItemRow = {
@@ -632,7 +634,8 @@ function mapBusiness(row: BusinessRow, maxReviewsInCategory?: number): Business 
     featuredReviews: row.featured_reviews ?? undefined,
     businessSelfDescription: row.business_self_description ?? undefined,
     editorialGeneratedAt: row.editorial_generated_at ?? undefined,
-    editorialSource: row.editorial_source ?? undefined
+    editorialSource: row.editorial_source ?? undefined,
+    languageVerification: row.language_verification ?? undefined
   };
 }
 
@@ -732,7 +735,7 @@ export async function getBusinesses(category: CategorySlug): Promise<Business[]>
   );
 }
 
-function mapMiniRankingBusiness(row: Pick<BusinessRow, "id" | "slug" | "name" | "display_name" | "category" | "short_description" | "description" | "area" | "city" | "image" | "primary_image_url" | "gallery_image_urls" | "rating" | "reviews_count" | "updated_at">): Business {
+function mapMiniRankingBusiness(row: Pick<BusinessRow, "id" | "slug" | "name" | "display_name" | "category" | "short_description" | "description" | "area" | "city" | "image" | "primary_image_url" | "gallery_image_urls" | "rating" | "reviews_count" | "updated_at" | "language_verification">): Business {
   return {
     id: row.id,
     slug: row.slug,
@@ -752,7 +755,8 @@ function mapMiniRankingBusiness(row: Pick<BusinessRow, "id" | "slug" | "name" | 
     seo: normalizeSeo(null, `${row.display_name || row.name} | ${siteConfig.name}`, row.short_description),
     updatedAt: row.updated_at,
     rating: row.rating ?? undefined,
-    reviewsCount: row.reviews_count ?? undefined
+    reviewsCount: row.reviews_count ?? undefined,
+    languageVerification: row.language_verification ?? undefined
   };
 }
 
@@ -812,7 +816,7 @@ export async function getHomepageMiniRankingBusinesses(category: CategorySlug, l
   let query = publicStatusFilter(
     supabase
       .from("businesses")
-      .select("id,slug,name,display_name,category,short_description,description,area,city,latitude,longitude,image,primary_image_url,gallery_image_urls,tags,best_for,rating,reviews_count,updated_at")
+      .select("id,slug,name,display_name,category,short_description,description,area,city,latitude,longitude,image,primary_image_url,gallery_image_urls,tags,best_for,rating,reviews_count,updated_at,language_verification")
       .in("category", getBusinessCategoriesForListing(category))
       .not("rating", "is", null)
       .not("reviews_count", "is", null)
@@ -868,6 +872,25 @@ export async function getSearchAreas(minBusinesses = 12): Promise<Array<{ label:
     .filter(([, count]) => count >= minBusinesses)
     .sort((a, b) => b[1] - a[1])
     .map(([area]) => ({ label: area, value: area }));
+}
+
+// Businesses that confirmed they serve clients in English/German (self-reported),
+// for the homepage "verified languages" strip. Ordered by review volume.
+export async function getLanguageVerifiedBusinesses(limit = 8): Promise<Business[]> {
+  const fallback = emptyWhenUnconfigured<Business[]>([]);
+  if (fallback) return fallback;
+
+  const supabase = createSupabaseServerClient();
+  const { data, error } = await publicStatusFilter(
+    supabase
+      .from("businesses")
+      .select("id,slug,name,display_name,category,short_description,description,area,city,image,primary_image_url,gallery_image_urls,rating,reviews_count,updated_at,language_verification")
+      .not("language_verification", "is", null)
+      .order("reviews_count", { ascending: false })
+      .limit(limit)
+  );
+  if (error) throw error;
+  return ((data ?? []) as Array<Parameters<typeof mapMiniRankingBusiness>[0]>).map(mapMiniRankingBusiness);
 }
 
 export async function getBusinessesForFacetScan(category: CategorySlug): Promise<Business[]> {

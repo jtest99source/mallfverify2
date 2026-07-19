@@ -14,6 +14,7 @@ import { categoryLabelForBusiness, getCategoryCopy, t } from "@/lib/i18n-copy";
 import { getBusinessAreaCategoryPages, getBusinessBySlug, getBusinessRankingContext, getBusinesses, getBusinessSlugsByCategory, getRelatedBusinesses, getRelatedRankings, type BusinessRankingPlacement } from "@/lib/repository";
 import { createBreadcrumbSchema, createCollectionPageSchema, createFAQSchema, createLocalBusinessSchema } from "@/lib/schema";
 import { MvScoreBadge } from "@/components/MvScoreBadge";
+import { LanguageBadge } from "@/components/LanguageBadge";
 import { generateSeoMetadata } from "@/lib/seo";
 import { isLocale, type Locale } from "@/lib/i18n";
 import { getBusinessPublicName } from "@/lib/business-name-normalizer";
@@ -720,6 +721,11 @@ export async function BusinessDetailPage({ category, locale, slug }: { category:
 
       <div className="mx-auto grid max-w-[1440px] items-start gap-8 px-4 py-8 sm:px-8 sm:py-12 lg:grid-cols-[minmax(0,1fr)_360px] lg:gap-12 lg:px-12">
         <article className="min-w-0">
+          {business.languageVerification && (
+            <div className="mb-6">
+              <LanguageBadge business={business} locale={locale} variant="full" tone="dark" />
+            </div>
+          )}
           <BusinessReviewPanel business={business} locale={locale} />
         </article>
 

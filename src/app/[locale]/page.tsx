@@ -23,13 +23,14 @@ import {
 import { GuideCard } from "@/components/GuideCard";
 import { getCategorySlugFromBusiness, leisureCategorySlugs, wellnessCategorySlugs, type CategorySlug } from "@/lib/data";
 import { getCategoryCopy, t } from "@/lib/i18n-copy";
-import { getGuides, getHomepageMiniRankingBusinesses, getPublicBusinessStats, getSearchAreas } from "@/lib/repository";
+import { getGuides, getHomepageMiniRankingBusinesses, getLanguageVerifiedBusinesses, getPublicBusinessStats, getSearchAreas } from "@/lib/repository";
 import { generateSeoMetadata } from "@/lib/seo";
 import { isLocale, type Locale } from "@/lib/i18n";
 import { getBusinessPublicName } from "@/lib/business-name-normalizer";
 import { methodologyPath } from "@/lib/methodology";
 import { getEditorialImageForGuide } from "@/lib/unsplash";
 import { HomePlaceSearch } from "@/components/HomePlaceSearch";
+import { HomeVerifiedLanguages } from "@/components/HomeVerifiedLanguages";
 import { getBusinessImageUrl } from "@/components/BusinessImage";
 import { EditorialRankingCarousel } from "@/components/EditorialRankingCarousel";
 import { JsonLd } from "@/components/JsonLd";
@@ -192,7 +193,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
   const safeLocale = (isLocale(locale) ? locale : "es") as Locale;
   const copy = t(safeLocale);
   const methodology = methodologyCopy[safeLocale];
-  const [latestGuides, restaurantsPalma, restaurantsSoller, hotels, beachClubs, bars, cafes, nightlife, boats, activities, rentACar, carDealers, spas, healthcare, realEstate, stats, searchAreas] = await Promise.all([
+  const [latestGuides, restaurantsPalma, restaurantsSoller, hotels, beachClubs, bars, cafes, nightlife, boats, activities, rentACar, carDealers, spas, healthcare, realEstate, stats, searchAreas, verifiedLangBusinesses] = await Promise.all([
     getGuides(safeLocale, 4),
     getHomepageMiniRankingBusinesses("restaurants", 5, "Palma", 200),
     getHomepageMiniRankingBusinesses("restaurants", 5, "S\u00f3ller", 50),
@@ -209,7 +210,8 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
     getHomepageMiniRankingBusinesses("healthcare", 5, undefined, 15),
     getHomepageMiniRankingBusinesses("real-estate", 5, undefined, 15),
     getPublicBusinessStats(),
-    getSearchAreas()
+    getSearchAreas(),
+    getLanguageVerifiedBusinesses(8)
   ]);
   const guideImages = await Promise.all(latestGuides.map((guide) => (guide.heroImageUrl ? Promise.resolve(null) : getEditorialImageForGuide(guide.title))));
 
@@ -439,6 +441,8 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         </div>
         </div>
       </section>
+
+      <HomeVerifiedLanguages businesses={verifiedLangBusinesses} locale={safeLocale} />
 
       <section className="border-b border-white/[0.08] bg-[#07101F] px-4 py-14 sm:px-6 sm:py-16 lg:px-8">
         <div className="mx-auto flex max-w-[1360px] flex-col items-start gap-6 rounded-lg border border-[#00C37A]/25 bg-[#00C37A]/[0.05] p-6 sm:flex-row sm:items-center sm:justify-between sm:p-9">

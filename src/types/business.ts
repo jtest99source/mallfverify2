@@ -249,6 +249,19 @@ export type AnyCategoryAttributes =
   | CategoryAttributes<"activity">
   | CategoryAttributes<"beach">;
 
+export type LanguageLevel = "fluent" | "basic";
+
+// Languages a business confirmed it serves clients in (self-reported, gathered by
+// direct outreach). "en"/"de" carry a level; "other" is a free list of extra
+// languages. It is the business's own word, not a certification by us.
+export type LanguageVerification = {
+  en?: LanguageLevel;
+  de?: LanguageLevel;
+  other?: string[];
+  confirmedAt?: string;
+  source?: "business_direct";
+};
+
 export type Business = {
   id: string;
   slug: string;
@@ -334,4 +347,5 @@ export type Business = {
   businessSelfDescription?: string;
   editorialGeneratedAt?: string;
   editorialSource?: EditorialSource;
+  languageVerification?: LanguageVerification;
 };
