@@ -35,13 +35,64 @@ async function firstGuideBusinessImage(guide: Guide) {
   return undefined;
 }
 
+// Inline markdown: **bold** and [text](url) (internal → Link, external → a).
+function renderInline(text: string) {
+  const nodes: React.ReactNode[] = [];
+  const re = /\*\*(.+?)\*\*|\[([^\]]+)\]\(([^)]+)\)/g;
+  let last = 0, key = 0, m: RegExpExecArray | null;
+  while ((m = re.exec(text)) !== null) {
+    if (m.index > last) nodes.push(text.slice(last, m.index));
+    if (m[1] !== undefined) {
+      nodes.push(<strong key={key++} className="font-bold text-[#00C37A]">{m[1]}</strong>);
+    } else {
+      const label = m[2], href = m[3];
+      nodes.push(href.startsWith("/")
+        ? <Link key={key++} href={href} className="font-semibold text-[#00C37A] underline underline-offset-2 hover:text-white">{label}</Link>
+        : <a key={key++} href={href} target="_blank" rel="noreferrer" className="font-semibold text-[#00C37A] underline underline-offset-2 hover:text-white">{label}</a>);
+    }
+    last = re.lastIndex;
+  }
+  if (last < text.length) nodes.push(text.slice(last));
+  return nodes;
+}
+
 function renderBody(text: string) {
-  return text.split(/\n\n+/).map((para, i) => {
-    const parts = para.split(/\*\*(.+?)\*\*/g);
+  return text.split(/\n\n+/).map((block, i) => {
+    const lines = block.split("\n");
+    // Markdown table
+    if (lines.length >= 2 && lines[0].trim().startsWith("|") && /^\s*\|[\s:|-]+\|\s*$/.test(lines[1])) {
+      const cells = (row: string) => row.split("|").slice(1, -1).map((c) => c.trim());
+      const header = cells(lines[0]);
+      const rows = lines.slice(2).filter((l) => l.trim().startsWith("|")).map(cells);
+      return (
+        <div key={i} className="mt-5 overflow-x-auto">
+          <table className="w-full border-collapse text-sm">
+            <thead>
+              <tr>{header.map((h, hi) => <th key={hi} className="border-b border-white/20 px-3 py-2 text-left font-black text-white">{renderInline(h)}</th>)}</tr>
+            </thead>
+            <tbody>
+              {rows.map((r, ri) => <tr key={ri}>{r.map((c, ci) => <td key={ci} className="border-b border-white/[0.07] px-3 py-2 align-top text-white/70">{renderInline(c)}</td>)}</tr>)}
+            </tbody>
+          </table>
+        </div>
+      );
+    }
+    // Bullet list
+    if (lines.length > 0 && lines.every((l) => l.trim().startsWith("- "))) {
+      return (
+        <ul key={i} className="mt-4 grid gap-2">
+          {lines.map((l, li) => (
+            <li key={li} className="flex gap-2.5 text-[15px] leading-7 text-white/68 sm:text-base">
+              <span className="mt-0.5 shrink-0 text-[#00C37A]">·</span>
+              <span>{renderInline(l.trim().slice(2))}</span>
+            </li>
+          ))}
+        </ul>
+      );
+    }
+    // Paragraph
     return (
-      <p key={i} className="mt-4 text-[15px] leading-7 text-white/68 sm:text-base sm:leading-8">
-        {parts.map((part, j) => j % 2 === 1 ? <strong key={j} className="font-bold text-[#00C37A]">{part}</strong> : part)}
-      </p>
+      <p key={i} className="mt-4 text-[15px] leading-7 text-white/68 sm:text-base sm:leading-8">{renderInline(block)}</p>
     );
   });
 }
@@ -204,7 +255,7 @@ export default async function GuideDetailPage({ params }: { params: Promise<{ lo
         <Breadcrumbs items={[{ label: copy.category.breadcrumbHome, href: `/${safeLocale}` }, { label: copy.nav.guides, href: `/${safeLocale}/guides` }, { label: guide.title, href: `/${safeLocale}/guides/${guide.slug}` }]} />
         <p className="mt-6 text-[11px] font-semibold uppercase tracking-[0.2em] text-white/60">{copy.guides.updatedLabel} {formatDate(guide.updatedAt, safeLocale)}</p>
         <h1 className="mt-3 font-display text-3xl font-black leading-tight text-white sm:text-5xl">{guide.title}</h1>
-        <p className="mt-4 max-w-3xl text-base leading-7 text-white/60 sm:text-lg sm:leading-8">{guide.intro}</p>
+        <div className="mt-4 max-w-3xl">{renderBody(guide.intro)}</div>
 
         <blockquote className="mt-6 border-l-2 border-[#00C37A] py-1 pl-5 text-[15px] leading-7 text-white/60 sm:mt-8 sm:text-base sm:leading-8">
           {guide.excerpt}
