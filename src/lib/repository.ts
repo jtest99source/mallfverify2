@@ -706,7 +706,26 @@ function publicStatusFilter(query: any) {
 }
 
 export async function getPublicBusinessStats() {
-  return fallbackPublicBusinessStats;
+  const fallback = emptyWhenUnconfigured(fallbackPublicBusinessStats);
+  if (fallback) return fallback;
+
+  try {
+    const supabase = createSupabaseServerClient();
+    const rows = await fetchAllPublicBusinessRows<{ category: BusinessCategory; reviews_count: number | null }>(supabase, "category,reviews_count");
+    if (!rows.length) return fallbackPublicBusinessStats;
+
+    const categories = new Set<string>();
+    let analyzedReviews = 0;
+    for (const row of rows) {
+      analyzedReviews += row.reviews_count ?? 0;
+      const slug = getCategorySlugFromBusiness(row.category);
+      if (isPublicCategorySlug(slug)) categories.add(slug);
+    }
+    return { publishedBusinesses: rows.length, analyzedReviews, activeCategories: categories.size };
+  } catch {
+    // Stats are decorative — never take a page down over them.
+    return fallbackPublicBusinessStats;
+  }
 }
 
 // Supabase caps every response at 1000 rows. Categories like restaurants (~2k)
