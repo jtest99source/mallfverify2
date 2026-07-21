@@ -318,7 +318,6 @@ const fallbackPublicBusinessStats = {
   analyzedReviews: 3765662,
   activeCategories: 17
 };
-const publicListingMaxRows = 1000;
 const businessListingSelect = [
   "id",
   "slug",
@@ -710,26 +709,43 @@ export async function getPublicBusinessStats() {
   return fallbackPublicBusinessStats;
 }
 
+// Supabase caps every response at 1000 rows. Categories like restaurants (~2k)
+// and healthcare (~1.2k) exceed that, so any un-paged "all businesses in
+// category" select silently drops rows — which broke area pages, healthcare
+// carve-outs and facet counts. Page with a stable id tiebreaker.
+async function fetchAllRows<T>(buildQuery: (from: number, to: number) => PromiseLike<{ data: unknown; error: unknown }>): Promise<T[]> {
+  const rows: T[] = [];
+  for (let from = 0; ; from += 1000) {
+    const { data, error } = await buildQuery(from, from + 999);
+    if (error) throw error;
+    const page = (data ?? []) as T[];
+    rows.push(...page);
+    if (page.length < 1000) break;
+  }
+  return rows;
+}
+
 export async function getBusinesses(category: CategorySlug): Promise<Business[]> {
   const fallback = emptyWhenUnconfigured<Business[]>([]);
   if (fallback) return fallback;
 
   const supabase = createSupabaseServerClient();
   const businessCategories = getBusinessCategoriesForListing(category);
-  const { data, error } = await publicStatusFilter(
-    supabase
-      .from("businesses")
-      .select(businessListingSelect)
-      .in("category", businessCategories)
-      .order("is_featured", { ascending: false })
-      .order("authority_score", { ascending: false, nullsFirst: false })
-      .order("reviews_count", { ascending: false, nullsFirst: false })
-      .limit(publicListingMaxRows)
+  const rows = await fetchAllRows<BusinessRow>((from, to) =>
+    publicStatusFilter(
+      supabase
+        .from("businesses")
+        .select(businessListingSelect)
+        .in("category", businessCategories)
+        .order("is_featured", { ascending: false })
+        .order("authority_score", { ascending: false, nullsFirst: false })
+        .order("reviews_count", { ascending: false, nullsFirst: false })
+        .order("id")
+    ).range(from, to)
   );
-  if (error) throw error;
 
   return mapBusinesses(
-    ((data ?? []) as BusinessRow[])
+    rows
       .filter((row) => isWithinMallorca(row.latitude, row.longitude))
       .filter((row) => businessMatchesListingCategory(row, category))
   );
@@ -899,14 +915,16 @@ export async function getBusinessesForFacetScan(category: CategorySlug): Promise
 
   const supabase = createSupabaseServerClient();
   const businessCategories = getBusinessCategoriesForListing(category);
-  const { data, error } = await publicStatusFilter(
-    supabase
-      .from("businesses")
-      .select("id,slug,name,original_name,display_name,category,short_description,description,area,city,municipality,website_type,tags,best_for,ideal_for,updated_at")
-      .in("category", businessCategories)
+  const rows = await fetchAllRows<FacetScanBusinessRow>((from, to) =>
+    publicStatusFilter(
+      supabase
+        .from("businesses")
+        .select("id,slug,name,original_name,display_name,category,short_description,description,area,city,municipality,website_type,tags,best_for,ideal_for,updated_at")
+        .in("category", businessCategories)
+        .order("id")
+    ).range(from, to)
   );
-  if (error) throw error;
-  return ((data ?? []) as FacetScanBusinessRow[])
+  return rows
     .filter((row) => businessMatchesListingCategory(row, category))
     .map(mapFacetScanBusiness);
 }
@@ -1019,17 +1037,8 @@ export async function getBusinessesByAreaAndCategory(areaSlug: string, category:
   };
 }
 
-// Supabase caps every response at 1000 rows; with ~6k+ published businesses any
-// "fetch all businesses" select silently truncates. Always page through here.
-async function fetchAllPublicBusinessRows<T>(supabase: ReturnType<typeof createSupabaseServerClient>, columns: string): Promise<T[]> {
-  const rows: T[] = [];
-  for (let from = 0; ; from += 1000) {
-    const { data, error } = await publicStatusFilter(supabase.from("businesses").select(columns).order("id")).range(from, from + 999);
-    if (error) throw error;
-    rows.push(...((data ?? []) as T[]));
-    if (!data || data.length < 1000) break;
-  }
-  return rows;
+function fetchAllPublicBusinessRows<T>(supabase: ReturnType<typeof createSupabaseServerClient>, columns: string): Promise<T[]> {
+  return fetchAllRows<T>((from, to) => publicStatusFilter(supabase.from("businesses").select(columns).order("id")).range(from, to));
 }
 
 export async function getBusinessAreaCategoryPages(minBusinesses = 3): Promise<Array<{ area: string; areaSlug: string; category: CategorySlug; count: number }>> {
