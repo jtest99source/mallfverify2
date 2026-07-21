@@ -1,90 +1,25 @@
 // scripts/submit-indexnow.mjs
 // Submits all site URLs to IndexNow (Bing, Yandex, etc.)
+// URL source: the live sitemap.xml, so submissions always match what we
+// actually advertise (previous version built URLs by hand and drifted:
+// wrong business category slugs, missing DE guides).
 // Usage: node scripts/submit-indexnow.mjs
-
-import { existsSync, readFileSync } from 'node:fs'
 
 const INDEXNOW_KEY = '23af42b5d954480b9e13878f5a908988'
 const SITE_URL = 'https://www.mallorcaverified.com'
-const LOCALES = ['es', 'en', 'de']
-const GUIDE_LOCALES = ['es', 'en']
 
-function loadLocalEnv() {
-  if (!existsSync('.env.local')) return
-  for (const line of readFileSync('.env.local', 'utf8').split(/\r?\n/)) {
-    const t = line.trim()
-    if (!t || t.startsWith('#')) continue
-    const i = t.indexOf('=')
-    if (i === -1) continue
-    const k = t.slice(0, i).trim()
-    const v = t.slice(i + 1).trim().replace(/^["']|["']$/g, '')
-    if (!process.env[k]) process.env[k] = v
-  }
-}
-
-async function getPublishedSlugs() {
-  const { createClient } = await import('@supabase/supabase-js')
-  const sb = createClient(process.env.NEXT_PUBLIC_SUPABASE_URL, process.env.SUPABASE_SERVICE_ROLE_KEY)
-
-  const [businesses, guides] = await Promise.all([
-    sb.from('businesses').select('slug,category').eq('status', 'published'),
-    sb.from('guides').select('slug').eq('status', 'published').eq('source', 'editorial').eq('locale', 'es')
-  ])
-
-  return {
-    businesses: businesses.data ?? [],
-    guideSlugs: [...new Set((guides.data ?? []).map(g => g.slug))]
-  }
-}
-
-const CATEGORIES = [
-  'restaurants','hotels','beach-clubs','bars','cafes','nightlife',
-  'activities','boats','rent-a-car','car-dealers','spas','casinos','vets','healthcare','real-estate'
-]
-
-function categoryPath(cat) {
-  return cat
+async function getSitemapUrls() {
+  const res = await fetch(`${SITE_URL}/sitemap.xml`)
+  if (!res.ok) throw new Error(`sitemap.xml HTTP ${res.status}`)
+  const xml = await res.text()
+  const urls = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1].trim())
+  if (!urls.length) throw new Error('No <loc> entries found in sitemap.xml')
+  return [...new Set(urls)]
 }
 
 async function main() {
-  loadLocalEnv()
-  const { businesses, guideSlugs } = await getPublishedSlugs()
-
-  const urls = new Set()
-
-  // Core pages per locale
-  for (const locale of LOCALES) {
-    urls.add(`${SITE_URL}/${locale}`)
-    urls.add(`${SITE_URL}/${locale}/rankings`)
-    urls.add(`${SITE_URL}/${locale}/business`)
-    for (const cat of CATEGORIES) {
-      urls.add(`${SITE_URL}/${locale}/${categoryPath(cat)}`)
-      urls.add(`${SITE_URL}/${locale}/top/${cat}`)
-    }
-  }
-
-  // Methodology pages
-  urls.add(`${SITE_URL}/es/metodologia`)
-  urls.add(`${SITE_URL}/en/methodology`)
-  urls.add(`${SITE_URL}/de/methodik`)
-
-  // Guide pages (ES + EN)
-  for (const locale of GUIDE_LOCALES) {
-    urls.add(`${SITE_URL}/${locale}/guides`)
-    for (const slug of guideSlugs) {
-      urls.add(`${SITE_URL}/${locale}/guides/${slug}`)
-    }
-  }
-
-  // Business pages per locale
-  for (const b of businesses) {
-    for (const locale of LOCALES) {
-      urls.add(`${SITE_URL}/${locale}/${b.category}/${b.slug}`)
-    }
-  }
-
-  const urlList = [...urls]
-  console.log(`Submitting ${urlList.length} URLs to IndexNow...`)
+  const urlList = await getSitemapUrls()
+  console.log(`Submitting ${urlList.length} URLs from sitemap.xml to IndexNow...`)
 
   const payload = (chunk) => JSON.stringify({
     host: 'www.mallorcaverified.com',
@@ -112,7 +47,6 @@ async function main() {
       })
       if (res.ok || res.status === 202) {
         sent += chunk.length
-        console.log(`  ✓ Chunk ${Math.ceil(i / 100) + 1}: ${chunk.length} URLs (HTTP ${res.status})`)
       } else {
         const body = await res.text().catch(() => '')
         console.error(`  ✗ Chunk ${Math.ceil(i / 100) + 1}: HTTP ${res.status} ${body.slice(0, 120)}`)
@@ -123,4 +57,4 @@ async function main() {
   }
 }
 
-main().catch(console.error)
+main().catch((err) => { console.error(err); process.exit(1) })
