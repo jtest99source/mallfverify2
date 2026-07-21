@@ -286,7 +286,7 @@ export default async function GuideDetailPage({ params }: { params: Promise<{ lo
                       {copy.guides.recommended}
                     </p>
                     <div className="mt-3 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                      {sectionHotels.slice(0, 6).map((business) => (
+                      {sectionHotels.slice(0, 12).map((business) => (
                         <HotelCard key={business.id} business={business} locale={safeLocale} />
                       ))}
                     </div>
