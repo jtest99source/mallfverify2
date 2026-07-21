@@ -14,8 +14,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     title: `${copy.title} | Mallorca Verified`,
     description: copy.description,
     path: `/${safeLocale}/guides`,
-    locale: safeLocale,
-    alternateLocales: ["es", "en"]
+    locale: safeLocale
   });
 }
 

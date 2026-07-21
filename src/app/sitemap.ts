@@ -18,7 +18,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     urls.push({ url: `${siteUrl}/${locale}/cookies`, lastModified: now, changeFrequency: "yearly", priority: 0.2 });
     // Experts is still under construction — intentionally excluded from the sitemap
     // and noindexed (see src/app/[locale]/experts/layout.tsx) until it's ready.
-    if (locale === "es" || locale === "en") urls.push({ url: `${siteUrl}/${locale}/guides`, lastModified: now, changeFrequency: "weekly", priority: 0.7 });
+    urls.push({ url: `${siteUrl}/${locale}/guides`, lastModified: now, changeFrequency: "weekly", priority: 0.7 });
+    urls.push({ url: `${siteUrl}/${locale}/services`, lastModified: now, changeFrequency: "weekly", priority: 0.8 });
+    urls.push({ url: `${siteUrl}/${locale}/insights`, lastModified: now, changeFrequency: "monthly", priority: 0.7 });
+    urls.push({ url: `${siteUrl}/${locale}/insights/dental-mallorca-2026`, lastModified: now, changeFrequency: "monthly", priority: 0.7 });
     urls.push({ url: `${siteUrl}${methodologyPath(locale)}`, lastModified: now, changeFrequency: "monthly", priority: 0.8 });
     urls.push({ url: `${siteUrl}${aboutPath(locale)}`, lastModified: now, changeFrequency: "monthly", priority: 0.7 });
     urls.push({ url: `${siteUrl}${editorialPath(locale)}`, lastModified: now, changeFrequency: "monthly", priority: 0.7 });
@@ -32,13 +35,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       urls.push({ url: `${siteUrl}/${locale}/rankings/${ranking.slug}`, lastModified: new Date(ranking.updatedAt), changeFrequency: "weekly", priority: 0.75 });
     }
   }
-  const seenGuideSlugs = new Set<string>();
+  // One URL per guide version that actually exists in the DB (slug × locale) —
+  // never advertise locale versions that would 404 or duplicate.
   for (const guide of guides) {
-    if (seenGuideSlugs.has(guide.slug)) continue;
-    seenGuideSlugs.add(guide.slug);
-    for (const guideLocale of ["es", "en"] as const) {
-      urls.push({ url: `${siteUrl}/${guideLocale}/guides/${guide.slug}`, lastModified: new Date(guide.updatedAt), changeFrequency: "weekly", priority: 0.7 });
-    }
+    urls.push({ url: `${siteUrl}/${guide.locale}/guides/${guide.slug}`, lastModified: new Date(guide.updatedAt), changeFrequency: "weekly", priority: 0.7 });
   }
   return urls;
 }

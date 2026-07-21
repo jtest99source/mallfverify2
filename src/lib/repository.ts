@@ -1319,6 +1319,19 @@ export async function getRelatedGuides(areaSlug: string | null, categoryKeywords
   return (data as GuideRow[]).map(mapGuide);
 }
 
+// Which (slug, locale) versions actually exist among the given slugs — used to
+// build accurate hreflang alternates (incl. translated-slug EN↔DE pairs).
+export async function getGuideSlugLocalePairs(slugs: string[]): Promise<Array<{ slug: string; locale: Locale }>> {
+  const fallback = emptyWhenUnconfigured<Array<{ slug: string; locale: Locale }>>([]);
+  if (fallback) return fallback;
+  if (!slugs.length) return [];
+
+  const supabase = createSupabaseServerClient();
+  const { data, error } = await publicStatusFilter(supabase.from("guides").select("slug,locale").in("slug", slugs));
+  if (error) throw error;
+  return (data ?? []) as Array<{ slug: string; locale: Locale }>;
+}
+
 export async function getGuideSlugs(): Promise<{ slug: string }[]> {
   const fallback = emptyWhenUnconfigured<{ slug: string }[]>([]);
   if (fallback) return fallback;
@@ -1333,7 +1346,7 @@ export async function getSitemapEntities() {
   const fallback = emptyWhenUnconfigured<{
     businesses: Array<{ slug: string; category: BusinessCategory; updatedAt: string }>;
     rankings: Array<{ slug: string; locale: Locale; category: RankingCategory; updatedAt: string }>;
-    guides: Array<{ slug: string; updatedAt: string }>;
+    guides: Array<{ slug: string; locale: Locale; updatedAt: string }>;
   }>({ businesses: [], rankings: [], guides: [] });
   if (fallback) return fallback;
 
@@ -1341,7 +1354,7 @@ export async function getSitemapEntities() {
   const [businessesResult, rankingsResult, guidesResult] = await Promise.all([
     publicStatusFilter(supabase.from("businesses").select("slug,category,updated_at")),
     publicStatusFilter(supabase.from("rankings").select("slug,locale,category,updated_at")),
-    publicStatusFilter(supabase.from("guides").select("slug,updated_at"))
+    publicStatusFilter(supabase.from("guides").select("slug,locale,updated_at"))
   ]);
 
   if (businessesResult.error) throw businessesResult.error;
@@ -1362,8 +1375,9 @@ export async function getSitemapEntities() {
       category: row.category,
       updatedAt: row.updated_at
     })),
-    guides: ((guidesResult.data ?? []) as Array<{ slug: string; updated_at: string }>).map((row) => ({
+    guides: ((guidesResult.data ?? []) as Array<{ slug: string; locale: Locale; updated_at: string }>).map((row) => ({
       slug: row.slug,
+      locale: row.locale,
       updatedAt: row.updated_at
     }))
   };

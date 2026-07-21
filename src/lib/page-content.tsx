@@ -727,6 +727,7 @@ export async function BusinessDetailPage({ category, locale, slug }: { category:
             </div>
           )}
           <BusinessReviewPanel business={business} locale={locale} />
+          <FAQ faqs={faqs} locale={locale} />
         </article>
 
         <aside className="hidden rounded-sm border border-white/[0.10] bg-[#0C1A2E] p-5 shadow-[0_24px_70px_rgba(0,0,0,0.38)] lg:block">
@@ -809,7 +810,7 @@ export async function BusinessDetailPage({ category, locale, slug }: { category:
         </div>
       </section>
 
-      <JsonLd data={[createLocalBusinessSchema(business, locale), createBreadcrumbSchema(breadcrumbs)]} />
+      <JsonLd data={[createLocalBusinessSchema(business, locale), ...(faqs.length ? [createFAQSchema(faqs)] : []), createBreadcrumbSchema(breadcrumbs)]} />
     </main>
   );
 }

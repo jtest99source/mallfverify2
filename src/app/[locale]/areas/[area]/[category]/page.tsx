@@ -8,8 +8,10 @@ import { getCategoryCopy, t } from "@/lib/i18n-copy";
 import { getCategoryGuideKeywords, isCategorySlug, isPublicCategorySlug, siteUrl, type CategorySlug } from "@/lib/data";
 import { isLocale, type Locale } from "@/lib/i18n";
 import { getBusinessesByAreaAndCategory, getRelatedGuides } from "@/lib/repository";
-import { createBreadcrumbSchema } from "@/lib/schema";
+import { createBreadcrumbSchema, createCollectionPageSchema, createSimpleItemListSchema } from "@/lib/schema";
 import { generateSeoMetadata } from "@/lib/seo";
+import { getCategorySlugFromBusiness } from "@/lib/data";
+import { getBusinessPublicName } from "@/lib/business-name-normalizer";
 
 function titleFor(areaName: string, category: CategorySlug, locale: Locale) {
   const label = getCategoryCopy(category, locale).label;
@@ -99,7 +101,27 @@ export default async function AreaCategoryPage({ params }: { params: Promise<{ l
         </section>
       )}
 
-      <JsonLd data={[createBreadcrumbSchema(breadcrumbs)]} />
+      <JsonLd
+        data={[
+          createCollectionPageSchema({
+            name: title,
+            description: `${title}: ${config.metaDescription}`,
+            url: `${siteUrl}/${safeLocale}/areas/${area}/${category}`,
+            inLanguage: safeLocale
+          }),
+          createSimpleItemListSchema({
+            name: title,
+            description: config.metaDescription,
+            items: businesses.slice(0, 20).map((business, index) => ({
+              position: index + 1,
+              name: getBusinessPublicName(business),
+              url: `${siteUrl}/${safeLocale}/${getCategorySlugFromBusiness(business.category)}/${business.slug}`,
+              description: business.shortDescription || business.description
+            }))
+          }),
+          createBreadcrumbSchema(breadcrumbs)
+        ]}
+      />
     </main>
   );
 }

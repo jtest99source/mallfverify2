@@ -120,6 +120,30 @@ function openingHoursSpecification(openingHours?: string) {
   return specs.length ? specs : undefined;
 }
 
+// Same selection criteria as BusinessReviewPanel so the markup matches what is
+// visible on the page (Google policy for review snippets).
+function reviewSchemaEntries(business: Business) {
+  const reviews = (business.googleReviews ?? [])
+    .map((review) => ({
+      author: review.authorName,
+      rating: review.rating,
+      text: review.text?.replace(/\s+/g, " ").trim() ?? ""
+    }))
+    .filter((review) => review.text.length >= 40)
+    .slice(0, 3);
+  if (!reviews.length) return undefined;
+
+  return reviews.map((review) => ({
+    "@type": "Review",
+    author: { "@type": "Person", name: review.author || "Google user" },
+    reviewBody: review.text,
+    reviewRating:
+      typeof review.rating === "number"
+        ? { "@type": "Rating", ratingValue: review.rating, bestRating: 5, worstRating: 1 }
+        : undefined
+  }));
+}
+
 export function createLocalBusinessSchema(business: Business, locale = "es") {
   const typeByCategory: Partial<Record<BusinessCategory, string>> = {
     restaurant: "Restaurant",
@@ -176,6 +200,7 @@ export function createLocalBusinessSchema(business: Business, locale = "es") {
             worstRating: 1
           }
         : undefined,
+    review: reviewSchemaEntries(business),
     geo:
       business.latitude && business.longitude
         ? {

@@ -186,7 +186,7 @@ export default async function RankingDetailPage({ params }: { params: Promise<{ 
             );
           })}
         </ol>
-        <FAQ faqs={cleanFaqs} />
+        <FAQ faqs={cleanFaqs} locale={safeLocale} />
       </article>
 
       <JsonLd data={[createItemListSchema(itemListRanking as Ranking), createArticleSchema({ headline: ranking.title, description: rankingDescription(ranking), dateModified: ranking.updatedAt, image: rankingImage }), createFAQSchema(cleanFaqs), createBreadcrumbSchema(breadcrumbs)]} />

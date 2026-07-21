@@ -4,8 +4,9 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { FAQ } from "@/components/FAQ";
 import { JsonLd } from "@/components/JsonLd";
 import { categoryConfigs, getCategorySlugFromBusiness, siteUrl } from "@/lib/data";
-import { getBusinessById, getGuideBySlug, getGuides } from "@/lib/repository";
-import { isLocale, type Locale } from "@/lib/i18n";
+import { getBusinessById, getGuideBySlug, getGuides, getGuideSlugLocalePairs } from "@/lib/repository";
+import { getGuideSlugForLocale } from "@/lib/guide-alternates";
+import { isLocale, locales, type Locale } from "@/lib/i18n";
 import { createArticleSchema, createBreadcrumbSchema, createFAQSchema, createSimpleItemListSchema } from "@/lib/schema";
 import { generateSeoMetadata } from "@/lib/seo";
 import { categoryLabelForBusiness, t } from "@/lib/i18n-copy";
@@ -43,7 +44,7 @@ function renderInline(text: string) {
   while ((m = re.exec(text)) !== null) {
     if (m.index > last) nodes.push(text.slice(last, m.index));
     if (m[1] !== undefined) {
-      nodes.push(<strong key={key++} className="font-bold text-[#00C37A]">{m[1]}</strong>);
+      nodes.push(<strong key={key++} className="font-semibold text-white">{m[1]}</strong>);
     } else {
       const label = m[2], href = m[3];
       nodes.push(href.startsWith("/")
@@ -200,6 +201,20 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const guide = await getGuideBySlug(slug, safeLocale);
   if (!guide) return {};
   const image = guide.heroImageUrl || (await firstGuideBusinessImage(guide));
+
+  // hreflang: only the locale versions that actually exist, resolving
+  // translated-slug EN↔DE pairs to each locale's own slug.
+  const candidateSlugs = Array.from(new Set(locales.map((item) => getGuideSlugForLocale(slug, item))));
+  const existingPairs = await getGuideSlugLocalePairs(candidateSlugs);
+  const localePaths: Partial<Record<Locale, string>> = {};
+  for (const item of locales) {
+    const localeSlug = getGuideSlugForLocale(slug, item);
+    if (existingPairs.some((pair) => pair.slug === localeSlug && pair.locale === item)) {
+      localePaths[item] = `/${item}/guides/${localeSlug}`;
+    }
+  }
+  localePaths[safeLocale] = `/${safeLocale}/guides/${slug}`;
+
   return generateSeoMetadata({
     title: guide.seo.title,
     description: guide.excerpt,
@@ -207,7 +222,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     locale: safeLocale,
     type: "article",
     image,
-    alternateLocales: ["es", "en"]
+    localePaths
   });
 }
 
@@ -296,7 +311,7 @@ export default async function GuideDetailPage({ params }: { params: Promise<{ lo
             );
           })}
         </div>
-        <FAQ faqs={guide.faqs} />
+        <FAQ faqs={guide.faqs} locale={safeLocale} />
       </article>
 
       <RelatedGuides

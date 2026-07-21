@@ -16,17 +16,25 @@ type SeoInput = {
   type?: "website" | "article";
   image?: string;
   alternateLocales?: readonly Locale[];
+  // Explicit locale → path map for pages whose alternates only exist in some
+  // locales or live under a different (translated) slug. Overrides alternateLocales.
+  localePaths?: Partial<Record<Locale, string>>;
   robots?: Metadata["robots"];
 };
 
-export function generateSeoMetadata({ title, description, path, locale, type = "website", image, alternateLocales = locales, robots }: SeoInput): Metadata {
+export function generateSeoMetadata({ title, description, path, locale, type = "website", image, alternateLocales = locales, localePaths, robots }: SeoInput): Metadata {
   const canonical = `${siteUrl}${path}`;
   const pathWithoutLocale = path.replace(new RegExp(`^/${locale}(?=/|$)`), "");
   const ogImage = image || defaultOgImage;
-  const languages = Object.fromEntries([
-    ...alternateLocales.map((item) => [item, `${siteUrl}/${item}${pathWithoutLocale}`]),
-    ["x-default", `${siteUrl}/es${pathWithoutLocale}`]
-  ]);
+  const languages = localePaths
+    ? Object.fromEntries([
+        ...locales.filter((item) => localePaths[item]).map((item) => [item, `${siteUrl}${localePaths[item]}`]),
+        ["x-default", `${siteUrl}${localePaths.es ?? localePaths.en ?? path}`]
+      ])
+    : Object.fromEntries([
+        ...alternateLocales.map((item) => [item, `${siteUrl}/${item}${pathWithoutLocale}`]),
+        ["x-default", `${siteUrl}/es${pathWithoutLocale}`]
+      ]);
 
   return {
     title,

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { FAQ } from "@/components/FAQ";
 import { GuideCard } from "@/components/GuideCard";
 import { JsonLd } from "@/components/JsonLd";
 import { TopRankingExplorer } from "@/components/TopRankingExplorer";
@@ -7,7 +8,7 @@ import { getCategoryCopy, t } from "@/lib/i18n-copy";
 import { getCategoryGuideKeywords, getCategorySlugFromBusiness, isCategorySlug, isPublicCategorySlug, siteUrl, type CategorySlug } from "@/lib/data";
 import { isLocale, type Locale } from "@/lib/i18n";
 import { getBusinessesForFacetScan, getRelatedGuides, getTopBusinessesByCategory } from "@/lib/repository";
-import { createBreadcrumbSchema, createSimpleItemListSchema } from "@/lib/schema";
+import { createBreadcrumbSchema, createCollectionPageSchema, createFAQSchema, createSimpleItemListSchema } from "@/lib/schema";
 import { generateSeoMetadata } from "@/lib/seo";
 import { getPopularFacetsForBusinesses } from "@/lib/taxonomy";
 import { getBusinessPublicName } from "@/lib/business-name-normalizer";
@@ -48,6 +49,10 @@ export default async function TopCategoryPage({ params }: { params: Promise<{ lo
   const config = getCategoryCopy(category, safeLocale);
   const title = getTitle(category, safeLocale);
   const facets = getPopularFacetsForBusinesses(category, allCategoryBusinesses, category === "beach-clubs" || category === "boats" ? 3 : 5).slice(0, 12);
+  const faqs = [
+    { question: copy.category.faqSort(config.label), answer: copy.category.faqSortAnswer },
+    { question: copy.category.faqFresh, answer: copy.category.faqFreshAnswer }
+  ];
   const breadcrumbs = [
     { name: copy.category.breadcrumbHome, url: `${siteUrl}/${safeLocale}` },
     { name: "Rankings", url: `${siteUrl}/${safeLocale}/top/restaurants` },
@@ -134,8 +139,19 @@ export default async function TopCategoryPage({ params }: { params: Promise<{ lo
         </section>
       )}
 
+      <section className="mx-auto max-w-7xl px-4 pb-14 sm:px-6 lg:px-8">
+        <FAQ faqs={faqs} locale={safeLocale} />
+      </section>
+
       <JsonLd
         data={[
+          createCollectionPageSchema({
+            name: title,
+            description: config.intro,
+            url: `${siteUrl}/${safeLocale}/top/${category}`,
+            inLanguage: safeLocale
+          }),
+          createFAQSchema(faqs),
           createBreadcrumbSchema(breadcrumbs),
           createSimpleItemListSchema({
             name: title,
