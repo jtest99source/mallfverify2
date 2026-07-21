@@ -1019,16 +1019,28 @@ export async function getBusinessesByAreaAndCategory(areaSlug: string, category:
   };
 }
 
+// Supabase caps every response at 1000 rows; with ~6k+ published businesses any
+// "fetch all businesses" select silently truncates. Always page through here.
+async function fetchAllPublicBusinessRows<T>(supabase: ReturnType<typeof createSupabaseServerClient>, columns: string): Promise<T[]> {
+  const rows: T[] = [];
+  for (let from = 0; ; from += 1000) {
+    const { data, error } = await publicStatusFilter(supabase.from("businesses").select(columns).order("id")).range(from, from + 999);
+    if (error) throw error;
+    rows.push(...((data ?? []) as T[]));
+    if (!data || data.length < 1000) break;
+  }
+  return rows;
+}
+
 export async function getBusinessAreaCategoryPages(minBusinesses = 3): Promise<Array<{ area: string; areaSlug: string; category: CategorySlug; count: number }>> {
   const fallback = emptyWhenUnconfigured<Array<{ area: string; areaSlug: string; category: CategorySlug; count: number }>>([]);
   if (fallback) return fallback;
 
   const supabase = createSupabaseServerClient();
-  const { data, error } = await publicStatusFilter(supabase.from("businesses").select("area,city,category"));
-  if (error) throw error;
+  const data = await fetchAllPublicBusinessRows<Pick<BusinessRow, "area" | "city" | "category">>(supabase, "area,city,category");
 
   const counts = new Map<string, { area: string; areaSlug: string; category: CategorySlug; count: number }>();
-  for (const row of data as Pick<BusinessRow, "area" | "city" | "category">[]) {
+  for (const row of data) {
     const area = row.city || row.area || "Mallorca";
     const category = getCategorySlugFromBusiness(row.category);
     const areaSlug = toSlug(area);
@@ -1363,18 +1375,19 @@ export async function getSitemapEntities() {
   if (fallback) return fallback;
 
   const supabase = createSupabaseServerClient();
-  const [businessesResult, rankingsResult, guidesResult] = await Promise.all([
-    publicStatusFilter(supabase.from("businesses").select("slug,category,updated_at")),
+
+  const businessRows = await fetchAllPublicBusinessRows<{ slug: string; category: BusinessCategory; updated_at: string }>(supabase, "slug,category,updated_at");
+
+  const [rankingsResult, guidesResult] = await Promise.all([
     publicStatusFilter(supabase.from("rankings").select("slug,locale,category,updated_at")),
     publicStatusFilter(supabase.from("guides").select("slug,locale,updated_at"))
   ]);
 
-  if (businessesResult.error) throw businessesResult.error;
   if (rankingsResult.error) throw rankingsResult.error;
   if (guidesResult.error) throw guidesResult.error;
 
   return {
-    businesses: ((businessesResult.data ?? []) as Array<{ slug: string; category: BusinessCategory; updated_at: string }>).map((row) => ({
+    businesses: businessRows.map((row) => ({
       slug: row.slug,
       category: row.category,
       updatedAt: row.updated_at
