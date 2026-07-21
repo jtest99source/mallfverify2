@@ -1067,6 +1067,18 @@ export async function getBusinessBySlug(category: CategorySlug, slug: string): P
   return data ? mapBusiness(data as BusinessRow) : undefined;
 }
 
+// Where a slug actually lives now — used to 308 old URLs when a business was
+// recategorized (e.g. /bars/x after the business moved to nightlife).
+export async function getBusinessCategoryBySlug(slug: string): Promise<BusinessCategory | undefined> {
+  const fallback = emptyWhenUnconfigured<undefined>(undefined);
+  if (fallback === undefined && !hasSupabaseConfig()) return undefined;
+
+  const supabase = createSupabaseServerClient();
+  const { data, error } = await publicStatusFilter(supabase.from("businesses").select("category").eq("slug", slug).limit(1)).maybeSingle();
+  if (error) throw error;
+  return (data as { category: BusinessCategory } | null)?.category;
+}
+
 export async function getBusinessById(id: string): Promise<Business | undefined> {
   const fallback = emptyWhenUnconfigured<undefined>(undefined);
   if (fallback === undefined && !hasSupabaseConfig()) return undefined;

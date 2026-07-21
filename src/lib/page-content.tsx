@@ -1,4 +1,4 @@
-import { notFound, redirect } from "next/navigation";
+import { notFound, permanentRedirect, redirect } from "next/navigation";
 import Link from "next/link";
 import { IconArrowLeft, IconExternalLink, IconMapPin, IconPhone } from "@tabler/icons-react";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
@@ -11,7 +11,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { BusinessImage, getBusinessImageUrl } from "@/components/BusinessImage";
 import { categoryConfigs, getCategorySlugFromBusiness, isPublicCategorySlug, siteUrl, type CategorySlug } from "@/lib/data";
 import { categoryLabelForBusiness, getCategoryCopy, t } from "@/lib/i18n-copy";
-import { getBusinessAreaCategoryPages, getBusinessBySlug, getBusinessRankingContext, getBusinesses, getBusinessSlugsByCategory, getRelatedBusinesses, getRelatedRankings, type BusinessRankingPlacement } from "@/lib/repository";
+import { getBusinessAreaCategoryPages, getBusinessBySlug, getBusinessCategoryBySlug, getBusinessRankingContext, getBusinesses, getBusinessSlugsByCategory, getRelatedBusinesses, getRelatedRankings, type BusinessRankingPlacement } from "@/lib/repository";
 import { createBreadcrumbSchema, createCollectionPageSchema, createFAQSchema, createLocalBusinessSchema } from "@/lib/schema";
 import { MvScoreBadge } from "@/components/MvScoreBadge";
 import { LanguageBadge } from "@/components/LanguageBadge";
@@ -650,7 +650,16 @@ export async function BusinessDetailPage({ category, locale, slug }: { category:
   if (alias) redirect(`/${locale}/${category}/${alias}`);
 
   const business = await getBusinessBySlug(category, slug);
-  if (!business) notFound();
+  if (!business) {
+    // Recategorized business: the slug still exists under another category —
+    // 308 to its canonical URL instead of 404ing the old one.
+    const actualCategory = await getBusinessCategoryBySlug(slug);
+    if (actualCategory) {
+      const actualSlug = getCategorySlugFromBusiness(actualCategory);
+      if (actualSlug !== category && isPublicCategorySlug(actualSlug)) permanentRedirect(`/${locale}/${actualSlug}/${slug}`);
+    }
+    notFound();
+  }
 
   const [related, rankingContext] = await Promise.all([getRelatedBusinesses(business), getBusinessRankingContext(business, category)]);
   const publicName = getBusinessPublicName(business);
