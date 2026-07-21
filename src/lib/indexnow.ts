@@ -12,7 +12,7 @@ export async function submitToIndexNow(urls: string[]): Promise<void> {
       method: "POST",
       headers: { "Content-Type": "application/json; charset=utf-8" },
       body: JSON.stringify({
-        host: "mallorcaverified.com",
+        host: "www.mallorcaverified.com",
         key: INDEXNOW_KEY,
         keyLocation: `${SITE_URL}/${INDEXNOW_KEY}.txt`,
         urlList: chunk
