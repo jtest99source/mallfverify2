@@ -705,6 +705,28 @@ function publicStatusFilter(query: any) {
   return query.in("status", publicStatuses);
 }
 
+// Every businesses column EXCEPT raw_google_place: that raw Google payload is
+// ~70MB of TOAST across the table (70% of its weight) and its only consumer was
+// the reviews fallback for rows without place_reviews (exactly 1 published
+// business at time of writing). Selecting * dragged it from disk on every
+// business detail render — the hottest path under crawler traffic.
+// When adding a column to businesses, add it here too.
+const businessDetailSelect = [
+  "id", "slug", "name", "category", "short_description", "description", "area", "address", "latitude", "longitude",
+  "website", "instagram", "phone", "price_level", "tags", "best_for", "image", "gallery", "opening_hours", "faqs",
+  "seo", "updated_at", "google_place_id", "rating", "reviews_count", "google_maps_url", "source", "status",
+  "commercial_priority", "client_potential", "is_featured", "is_claimed", "created_at", "imported_at", "primary_type",
+  "primary_photo_name", "photo_names", "authority_score", "city", "municipality", "island", "website_type",
+  "social_profiles", "geo_score", "editorial_status", "ai_description", "editorial_description", "review_summary",
+  "ideal_for", "what_to_expect", "faq_auto", "original_name", "display_name", "name_quality_status",
+  "primary_image_url", "primary_image_source", "primary_image_credit", "gallery_image_urls", "image_status",
+  "image_candidate_urls", "place_photos", "place_reviews", "business_facts", "visit_tips", "editorial_opinion",
+  "highlights", "reservation_hint", "parking_hint", "season_hint", "detail_enriched_at", "review_sentiment",
+  "review_pros", "review_cons", "services", "price_estimate", "featured_reviews", "editorial_generated_at",
+  "editorial_source", "review_themes", "business_self_description", "category_attributes", "place_attributes",
+  "language_verification"
+].join(",");
+
 export async function getPublicBusinessStats() {
   const fallback = emptyWhenUnconfigured(fallbackPublicBusinessStats);
   if (fallback) return fallback;
@@ -1089,7 +1111,7 @@ export async function getFeaturedBusinesses(limit = 6): Promise<Business[]> {
 
   const supabase = createSupabaseServerClient();
   const { data, error } = await publicStatusFilter(
-    supabase.from("businesses").select("*").order("is_featured", { ascending: false }).order("commercial_priority", { ascending: false }).order("updated_at", { ascending: false }).limit(limit)
+    supabase.from("businesses").select(businessDetailSelect).order("is_featured", { ascending: false }).order("commercial_priority", { ascending: false }).order("updated_at", { ascending: false }).limit(limit)
   );
   if (error) throw error;
   return mapBusinesses(data as BusinessRow[]);
@@ -1101,7 +1123,7 @@ export async function getBusinessBySlug(category: CategorySlug, slug: string): P
 
   const supabase = createSupabaseServerClient();
   const { data, error } = await publicStatusFilter(
-    supabase.from("businesses").select("*").eq("category", getBusinessCategoryFromSlug(category)).eq("slug", slug).limit(1)
+    supabase.from("businesses").select(businessDetailSelect).eq("category", getBusinessCategoryFromSlug(category)).eq("slug", slug).limit(1)
   ).maybeSingle();
   if (error) throw error;
   return data ? mapBusiness(data as BusinessRow) : undefined;
@@ -1124,7 +1146,7 @@ export async function getBusinessById(id: string): Promise<Business | undefined>
   if (fallback === undefined && !hasSupabaseConfig()) return undefined;
 
   const supabase = createSupabaseServerClient();
-  const { data, error } = await publicStatusFilter(supabase.from("businesses").select("*").eq("id", id).limit(1)).maybeSingle();
+  const { data, error } = await publicStatusFilter(supabase.from("businesses").select(businessDetailSelect).eq("id", id).limit(1)).maybeSingle();
   if (error) throw error;
   return data ? mapBusiness(data as BusinessRow) : undefined;
 }
