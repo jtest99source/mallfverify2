@@ -8,16 +8,22 @@ export function hasSupabaseConfig() {
 // is aborted"). A failed read during an ISR regeneration turns the whole page
 // into a 500 for crawlers, so retry idempotent requests a couple of times.
 const RETRYABLE_STATUS = new Set([500, 502, 503, 504]);
+// When the DB is saturated, requests hang ~90s until Cloudflare 522s. Fail each
+// attempt fast so a page 500s in seconds instead of hanging for minutes and
+// piling more load on the pooler.
+const ATTEMPT_TIMEOUT_MS = 10_000;
 
 async function fetchWithRetry(input: RequestInfo | URL, init?: RequestInit): Promise<Response> {
   const method = (init?.method ?? "GET").toUpperCase();
   const idempotent = method === "GET" || method === "HEAD";
-  const attempts = idempotent ? 3 : 1;
+  const attempts = idempotent ? 2 : 1;
 
   let lastError: unknown;
   for (let attempt = 1; attempt <= attempts; attempt++) {
     try {
-      const response = await fetch(input, init);
+      const signals = [AbortSignal.timeout(ATTEMPT_TIMEOUT_MS)];
+      if (init?.signal) signals.push(init.signal as AbortSignal);
+      const response = await fetch(input, { ...init, signal: AbortSignal.any(signals) });
       if (attempt === attempts) return response;
       let retryable = RETRYABLE_STATUS.has(response.status);
       if (!retryable && response.status >= 400) {
