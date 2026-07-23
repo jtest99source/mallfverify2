@@ -1,5 +1,7 @@
 # Plan de contenidos — Dentistas (desde keyword research jul 2026)
 
+> **⚠️ PIVOTE ESTRATÉGICO (23 jul, decisión de Benten tras verificar SERPs):** los blogs "solo con datos verificables online" ya existen (agregadores tipo Bookimed/WhatClinic + webs de clínicas) — serían refritos. Regla nueva: **cada blog debe anclarse en al menos un elemento propietario** — (a) datos primarios de negocios verificados (encuesta de precios/horarios reales vía outreach), o (b) datos propios de la DB (4,1M reseñas, MV Score, verificación de idioma). Menos blogs, hiper-específicos, incopiables. Lo [MV]-web-verificable pasa a ser andamiaje de apoyo, no pieza standalone. Consecuencia: los "publicable v1 solo con MV" de abajo quedan EN ESPERA del dato propietario (encuesta a clínicas) salvo las FAQs de coste cero.
+
 > Origen: `keyword-research/dentists.md`. Regla de marcaje por sección:
 > **[MV]** = podemos hacerlo nosotros (dato verificable online con fuente 2026, o dato propio de la DB)
 > **[🦷]** = necesita respuesta real de clínica (outreach) — NUNCA inventar contenido médico/clínico

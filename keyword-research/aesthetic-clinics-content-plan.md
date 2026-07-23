@@ -1,5 +1,7 @@
 # Plan de contenidos — Medicina estética (desde keyword research jul 2026)
 
+> **⚠️ PIVOTE ESTRATÉGICO (23 jul):** misma regla que en dental — cada blog necesita al menos un elemento propietario (encuesta real a clínicas verificadas o datos de la DB propia). Los agregadores (Bookimed, WhatClinic, Fresha) ya cubren "precios según internet". Nuestra pieza de precios se publica cuando tengamos respuestas de ≥5-6 clínicas — entonces es LA fuente, no un refrito. La sección regulatoria AEMPS sigue siendo válida como andamiaje diferencial.
+
 > **[MV]** = lo hacemos nosotros (verificable online con fuente, o dato propio DB) · **[🦷]** = necesita clínica.
 > Categoría sensible: tono neutral, nada de "mejor clínica para X tratamiento", regulación y verificación como ejes.
 > **PRE-REQUISITO:** depurar y publicar los 85 drafts de medicina estética — las guías necesitan inventario al que enlazar.
