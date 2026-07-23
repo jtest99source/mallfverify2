@@ -1087,17 +1087,26 @@ export async function getBusinessAreaCategoryPages(minBusinesses = 3): Promise<A
   if (fallback) return fallback;
 
   const supabase = createSupabaseServerClient();
-  const data = await fetchAllPublicBusinessRows<Pick<BusinessRow, "area" | "city" | "category">>(supabase, "area,city,category");
+  // Count with the SAME per-category logic the area page uses
+  // (businessMatchesListingCategory + Mallorca bounds). Counting by raw DB
+  // category advertised /areas/x/healthcare pages that 404ed (all their rows
+  // belong to carve-outs like dentists) and never advertised the carve pages.
+  const data = await fetchAllPublicBusinessRows<
+    Pick<BusinessRow, "area" | "city" | "category" | "name" | "display_name" | "short_description" | "description" | "tags" | "best_for" | "latitude" | "longitude">
+  >(supabase, "area,city,category,name,display_name,short_description,description,tags,best_for,latitude,longitude");
 
   const counts = new Map<string, { area: string; areaSlug: string; category: CategorySlug; count: number }>();
   for (const row of data) {
+    if (!isWithinMallorca(row.latitude, row.longitude)) continue;
     const area = row.city || row.area || "Mallorca";
-    const category = getCategorySlugFromBusiness(row.category);
     const areaSlug = toSlug(area);
-    const key = `${areaSlug}:${category}`;
-    const current = counts.get(key) ?? { area, areaSlug, category, count: 0 };
-    current.count += 1;
-    counts.set(key, current);
+    for (const category of publicCategorySlugs) {
+      if (!businessMatchesListingCategory(row, category)) continue;
+      const key = `${areaSlug}:${category}`;
+      const current = counts.get(key) ?? { area, areaSlug, category, count: 0 };
+      current.count += 1;
+      counts.set(key, current);
+    }
   }
 
   return Array.from(counts.values())
