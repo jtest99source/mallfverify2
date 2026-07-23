@@ -22,7 +22,7 @@ const pageCopy = {
       published: "Fichas publicadas",
       categories: "Categorías",
       reviews: "Reseñas analizadas",
-      towns: "Municipios cubiertos"
+      towns: "Zonas cubiertas"
     },
     workEyebrow: "Cómo trabajamos con negocios",
     workTitle: "Visibilidad para la audiencia que importa",
@@ -140,7 +140,7 @@ export default async function BusinessPage({ params }: { params: Promise<{ local
     { label: copy.stats.published, value: formatIntegerMetric(publicStats.publishedBusinesses, safeLocale) },
     { label: copy.stats.categories, value: formatIntegerMetric(publicCategorySlugs.length, safeLocale) },
     { label: copy.stats.reviews, value: formatMillionMetric(publicStats.analyzedReviews, safeLocale) },
-    { label: copy.stats.towns, value: "56" }
+    { label: copy.stats.towns, value: formatIntegerMetric(publicStats.townsCovered, safeLocale) }
   ];
 
   return (

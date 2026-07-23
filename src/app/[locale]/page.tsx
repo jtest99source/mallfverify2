@@ -396,7 +396,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
             {[
               { value: formatIntegerMetric(stats.publishedBusinesses, safeLocale), label: copy.home.verifiedBusinesses },
               { value: formatMillionMetric(stats.analyzedReviews, safeLocale), label: copy.home.analyzedReviews },
-              { value: "56", label: safeLocale === "de" ? "Orte abgedeckt" : safeLocale === "en" ? "towns covered" : "municipios cubiertos" }
+              { value: formatIntegerMetric(stats.townsCovered, safeLocale), label: safeLocale === "de" ? "Orte abgedeckt" : safeLocale === "en" ? "towns covered" : "zonas cubiertas" }
             ].map((stat) => (
               <div key={stat.label} className="border-white/10 px-3 py-2 sm:border-r last:border-r-0">
                 <div className="font-display text-3xl font-black leading-none text-[#00C37A]">{stat.value}</div>

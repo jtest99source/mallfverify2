@@ -316,7 +316,8 @@ function businessMatchesListingCategory(row: Pick<BusinessRow, "category" | "nam
 const fallbackPublicBusinessStats = {
   publishedBusinesses: 6036,
   analyzedReviews: 3765662,
-  activeCategories: 17
+  activeCategories: 17,
+  townsCovered: 56
 };
 const businessListingSelect = [
   "id",
@@ -733,17 +734,22 @@ export async function getPublicBusinessStats() {
 
   try {
     const supabase = createSupabaseServerClient();
-    const rows = await fetchAllPublicBusinessRows<{ category: BusinessCategory; reviews_count: number | null }>(supabase, "category,reviews_count");
+    const rows = await fetchAllPublicBusinessRows<{ category: BusinessCategory; reviews_count: number | null; area: string | null; city: string | null }>(supabase, "category,reviews_count,area,city");
     if (!rows.length) return fallbackPublicBusinessStats;
 
     const categories = new Set<string>();
+    const townCounts = new Map<string, number>();
     let analyzedReviews = 0;
     for (const row of rows) {
       analyzedReviews += row.reviews_count ?? 0;
       const slug = getCategorySlugFromBusiness(row.category);
       if (isPublicCategorySlug(slug)) categories.add(slug);
+      const town = (row.city || row.area || "").trim();
+      if (town && town !== "Mallorca") townCounts.set(town, (townCounts.get(town) ?? 0) + 1);
     }
-    return { publishedBusinesses: rows.length, analyzedReviews, activeCategories: categories.size };
+    // "Covered" = enough inventory for a zone page (same >= 3 floor as /areas).
+    const townsCovered = [...townCounts.values()].filter((count) => count >= 3).length;
+    return { publishedBusinesses: rows.length, analyzedReviews, activeCategories: categories.size, townsCovered };
   } catch {
     // Stats are decorative — never take a page down over them.
     return fallbackPublicBusinessStats;
