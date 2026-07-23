@@ -56,6 +56,18 @@
 Clínicas que Google asocia al vertical (candidatas a estar publicadas y verificadas en la DB — cruzar con los 85 drafts):
 My Skin Mallorca (×4!) · CLINIC ZURICH Mallorca (×2) · MD Aesthetics Santa Ponsa (×2) · Mallorca Aesthetic Clinic (Palma y Cala Millor) · Mesomedic (Palma) · Medisans (Palma) · The Skin Koncept (Palma) · Mara Aesthetics (Palma) · Eudermia · Instituto Rubí · Clínica Tufet · Clínica Áureo (Fraxel €60 publicado) · Clínicas CRES · Dr. Morano Ventayol · Dra. Sastre Janer · Dermatólogo Ibargoyen
 
+## Adenda (2ª tanda de SERPs, sin personalizar — 23 jul)
+
+- **Lip filler Mallorca** · wrinkle injections / anti-wrinkle treatment cost → refuerzan el Blog 1 (Botox ampliable a "injectables": botox + fillers, mismo marco regulatorio AEMPS). Dato citable visto: Mara Aesthetics publica "desde €300/ml" ácido hialurónico.
+- **Tattoo removal Palma** → segmento aparte (láser Q-switched, mezcla clínicas/estudios de tatuaje); apuntado, sin inventario — misma situación que depilación.
+- **CO2 laser resurfacing mallorca** → variante de Fraxel/resurfacing, mismo tratamiento del cluster 3.
+- **Mallorca acne treatment** / "How to get rid of Mallorca acne" / "Is my skin bad enough to see a dermatologist?" / "How much does it cost to see a dermatologist in Spain?" → todo refuerza el cluster 4 (dermatología = vertical aparte con demanda propia).
+- **Is plastic surgery cheaper in Spain?** → cirugía plástica queda FUERA del alcance (quirúrgico ≠ medicina estética; riesgo editorial alto).
+- Microneedling PAAs: how much in Spain / expect to pay / downside 🦷 → ya cubierto por Blog 2 (tabla precios).
+- Marcas nuevas para la lista de import: My Skin **Bendinat** (2ª ubicación) · Clínica Rotger (hospital privado, unidad dermato) · Derma Clinic Palma · Dra. Ana Bauzá · Clínica Mediben (única con depilación en DB) · Face2Face Mallorca (IPL) · Mallorca Medical Group.
+
+**⛔ Verificado contra DB (23 jul): depilación láser sin inventario real** (1 clínica) — el mercado es de franquicias/centros de belleza no importados. Guía aparcada; detalle en el content plan.
+
 ## Descartadas
 
-fotos · laser hair removal Machine (compra de aparato) · what celebrities use Fraxel · which country is best for laser/whitening (genérico sin ángulo local) · Adeslas (seguro concreto) · explainers genéricos de tratamiento (regla IA)
+fotos · laser hair removal Machine (compra de aparato) · what celebrities use Fraxel · which country is best for laser/whitening (genérico sin ángulo local) · Adeslas (seguro concreto) · explainers genéricos de tratamiento (regla IA) · "Tiger mosquito Mallorca" (PASF random 😄) · cirugía plástica (fuera de alcance) · how much do dermatologists make in Spain
