@@ -494,9 +494,17 @@ export async function generateBusinessMetadata(category: CategorySlug, locale: s
     typeof business.rating === "number" && typeof business.reviewsCount === "number"
       ? ` ${formatLocalizedRating(business.rating, safeLocale)}/5, ${business.reviewsCount.toLocaleString(numberLocale(safeLocale))} ${copy.business.reviewsOnGoogle}.`
       : "";
+  // Keep metas near the 150-160 char SERP sweet spot — the bare template sat at
+  // ~95 chars and Bing WMT flagged it as too short across business pages.
+  const metaTail =
+    safeLocale === "de"
+      ? "Öffnungszeiten, Fotos, Karte und geprüfte Details auf Mallorca Verified."
+      : safeLocale === "en"
+        ? "Opening hours, photos, map and verified details on Mallorca Verified."
+        : "Horarios, fotos, mapa y datos verificados en Mallorca Verified.";
   return generateSeoMetadata({
     title: business.seo.title,
-    description: truncateMetaDescription(`${publicName} - ${localizedCategoryLabel(business.category, safeLocale)}, ${location}, Mallorca.${ratingText} Mallorca Verified.`),
+    description: truncateMetaDescription(`${publicName} - ${localizedCategoryLabel(business.category, safeLocale)}, ${location}, Mallorca.${ratingText} ${metaTail}`),
     path: `/${safeLocale}/${category}/${business.slug}`,
     locale: safeLocale,
     image: getBusinessImageUrl(business) || business.primaryImageUrl || business.galleryImageUrls?.[0] || business.image
