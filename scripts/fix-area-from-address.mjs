@@ -43,6 +43,10 @@ function extractLocality(address) {
   return m[2].trim();
 }
 
+// Named-beach exception: a beach named after its resort keeps the resort's area
+// even when Google's address locality points at the municipality town.
+const slugExceptions = new Set(["platja-de-cala-millor", "platja-de-cala-bona"]);
+
 const rows = [];
 for (let from = 0; ; from += 1000) {
   const { data, error } = await sb.from("businesses")
@@ -58,6 +62,7 @@ for (let from = 0; ; from += 1000) {
 const byTarget = new Map();
 let fixed = 0, failed = 0;
 for (const b of rows) {
+  if (slugExceptions.has(b.slug)) continue;
   const locality = extractLocality(b.address);
   if (!locality || !localityToArea.has(locality)) continue;
   const target = localityToArea.get(locality);
