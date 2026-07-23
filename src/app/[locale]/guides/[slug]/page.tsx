@@ -44,7 +44,7 @@ function renderInline(text: string) {
   while ((m = re.exec(text)) !== null) {
     if (m.index > last) nodes.push(text.slice(last, m.index));
     if (m[1] !== undefined) {
-      nodes.push(<strong key={key++} className="font-semibold text-white">{m[1]}</strong>);
+      nodes.push(<strong key={key++} className="font-bold text-[#00C37A]">{m[1]}</strong>);
     } else {
       const label = m[2], href = m[3];
       nodes.push(href.startsWith("/")
