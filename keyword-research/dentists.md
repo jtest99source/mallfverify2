@@ -60,12 +60,13 @@ Zonas pedidas por Google: **palma** (×4 formatos), **santa ponsa** (×3), **alc
 
 ## FAQs sueltas aprovechables en guías generales
 
-- "Are Magaluf and Mallorca the same?" (PAA real 😄) y "mallorca or majorca which is correct" (autocomplete) → FAQs perfectas para `things-to-know-about-mallorca`
 - "What is the 3 2 rule for implants?" / "What is the 80/20 rule in dentistry?" → técnicas; solo si una clínica las responde bien 🦷
 
 ## Descartadas (basura/irrelevante)
 
 dentist near me · dentist ibiza · dentist appointment/office · orthodontist salary in spain · how to become a dentist in spain
+
+**Descartadas por trivialidad (regla "Confianza IA alta = no tocar")**: "Are Magaluf and Mallorca the same?" y "mallorca or majorca which is correct" — geografía básica que las IAs responden de memoria sin citar a nadie; ponerlas como FAQ baja el nivel percibido. La *intención* de fondo ("¿toda la isla es como Magaluf?") sí vale, pero se sirve dentro de las guías ya planificadas `mallorca-nightlife-not-magaluf-30s-40s` y `palmanova-magaluf-couples-worth-it`, nunca como pregunta literal.
 
 ## Competencia observada en estas SERPs
 
