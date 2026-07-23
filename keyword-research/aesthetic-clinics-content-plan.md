@@ -59,8 +59,8 @@
 
 ## SOLO CON NEGOCIO (no publicar sin input)
 
-### Blog 4 — Laser Hair Removal in Mallorca (candidata si una clínica colabora)
-Sesiones necesarias, diodo vs alejandrita, "can I shave 2 hours before", permanencia real — TODO clínico. Con una clínica respondiendo es diferencial; sin ella, copy genérico prohibido.
+### Blog 4 — Laser Hair Removal in Mallorca — ⛔ BLOQUEADA POR INVENTARIO (verificado 23 jul)
+Barrido de DB con señal láser/depilación: solo 1 clínica real (Mediben) — el mercado lo dominan franquicias (Pelostop, No+Vello, Ideal) y centros de belleza que NO están en la DB. Los 85 drafts de estética son medicina estética médica (otro segmento). Decisión: APARCADA — tratamiento comoditizado, ticket bajo, franquicias = mal objetivo de outreach. Si se retoma: primero import Places "depilación láser Mallorca" (tarde de trabajo), después contenido. Además de inventario, requeriría clínica para lo clínico (sesiones, diodo vs alejandrita, permanencia real).
 
 ### Blog 5 — Skin treatments (Hydrafacial/microneedling/Fraxel) comparados
 Solo si 1-2 clínicas explican indicaciones y contraindicaciones. Los explainers genéricos NO (regla confianza-IA-alta).
