@@ -8,7 +8,8 @@ const guideSlugPairs: Array<Partial<Record<Locale, string>>> = [
   { en: "english-speaking-dentists-mallorca", de: "deutschsprachige-zahnaerzte-mallorca" },
   { en: "things-to-do-palma-mallorca", de: "sehenswuerdigkeiten-palma-mallorca" },
   { en: "things-to-know-about-mallorca", de: "mallorca-wissenswertes" },
-  { en: "best-events-mallorca-summer-2026", de: "beste-events-mallorca-sommer-2026" }
+  { en: "best-events-mallorca-summer-2026", de: "beste-events-mallorca-sommer-2026" },
+  { es: "que-hacer-en-mallorca", en: "que-hacer-en-mallorca", de: "was-tun-auf-mallorca" }
 ];
 
 export function getGuideSlugForLocale(slug: string, locale: Locale): string {
