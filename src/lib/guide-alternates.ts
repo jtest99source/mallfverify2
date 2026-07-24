@@ -9,7 +9,9 @@ const guideSlugPairs: Array<Partial<Record<Locale, string>>> = [
   { en: "things-to-do-palma-mallorca", de: "sehenswuerdigkeiten-palma-mallorca" },
   { en: "things-to-know-about-mallorca", de: "mallorca-wissenswertes" },
   { en: "best-events-mallorca-summer-2026", de: "beste-events-mallorca-sommer-2026" },
-  { es: "que-hacer-en-mallorca", en: "que-hacer-en-mallorca", de: "was-tun-auf-mallorca" }
+  { es: "que-hacer-en-mallorca", en: "que-hacer-en-mallorca", de: "was-tun-auf-mallorca" },
+  { en: "mallorca-prices-2026", de: "mallorca-preise-2026" },
+  { en: "palmanova-magaluf-couples-worth-it", de: "palmanova-magaluf-fuer-paare" }
 ];
 
 export function getGuideSlugForLocale(slug: string, locale: Locale): string {
