@@ -43,19 +43,10 @@ function snippet(variant) {
   return `<a href="${fichaUrl}" target="_blank" rel="noopener"><img src="${SITE}/badge/mallorca-verified-2026-${variant}.svg" alt="${name} — Verified on Mallorca Verified 2026" width="220" height="56" loading="lazy" style="border:0"></a>`;
 }
 
-const infoLink = `${SITE}/${locale}/badge`;
-
 console.log(`Negocio: ${name} [${b.status}]`);
-console.log(`Ficha:   ${fichaUrl}\n`);
-console.log(`── MENSAJE DE WHATSAPP (${locale}) — enviar, y el código a continuación ──`);
-if (locale === "de") {
-  console.log(`Hallo! 👋 Ihr Verifizierungssiegel von Mallorca Verified ist fertig — kostenlos für geprüfte Betriebe. Es verlinkt direkt auf Ihr Profil und hilft, dass Google und unsere Leser Sie leichter finden. Einfach die folgende Code-Zeile in die Fußzeile Ihrer Website einfügen (oder an Ihren Webentwickler weiterleiten). Was das Siegel bedeutet: ${infoLink} — Und wenn Sie möchten, richten wir es kostenlos für Sie ein. Kurze Antwort hier genügt 🙂`);
-} else if (locale === "en") {
-  console.log(`Hi! 👋 Your Mallorca Verified badge is ready — free for verified businesses. It links straight to your profile and helps Google and our readers find you. Just paste the code line below into your website footer (or forward it to your web developer). What the badge means: ${infoLink} — And if you'd rather we set it up for you, it's free — just reply here 🙂`);
-} else {
-  console.log(`¡Hola! 👋 Ya está listo vuestro sello de verificación de Mallorca Verified — gratuito para negocios verificados. Enlaza directo a vuestra ficha y ayuda a que Google y nuestros lectores os encuentren mejor. Solo hay que pegar la línea de código que os paso a continuación en el pie de vuestra web (o reenviársela a quien os lleve la página). Qué significa el sello: ${infoLink} — Y si preferís, os lo instalamos nosotros gratis: me decís por aquí y listo 🙂`);
-}
-console.log(`\n── CÓDIGO (enviar como segundo mensaje) ── web de fondo oscuro:`);
+console.log(`Ficha:   ${fichaUrl}`);
+console.log(`Explicación del sello (por si quieres incluirla): ${SITE}/${locale}/badge\n`);
+console.log(`── CÓDIGO · web de fondo oscuro ──`);
 console.log(snippet("dark"));
-console.log(`\n── o si su web es de fondo claro:`);
+console.log(`\n── CÓDIGO · web de fondo claro ──`);
 console.log(snippet("light"));
