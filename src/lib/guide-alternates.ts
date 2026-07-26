@@ -12,7 +12,8 @@ const guideSlugPairs: Array<Partial<Record<Locale, string>>> = [
   { es: "que-hacer-en-mallorca", en: "que-hacer-en-mallorca", de: "was-tun-auf-mallorca" },
   { en: "mallorca-prices-2026", de: "mallorca-preise-2026" },
   { en: "palmanova-magaluf-couples-worth-it", de: "palmanova-magaluf-fuer-paare" },
-  { en: "botox-mallorca-prices-safety", de: "botox-mallorca-kosten-sicherheit" }
+  { en: "botox-mallorca-prices-safety", de: "botox-mallorca-kosten-sicherheit" },
+  { en: "english-speaking-aesthetic-clinics-mallorca", de: "deutschsprachige-schoenheitskliniken-mallorca" }
 ];
 
 export function getGuideSlugForLocale(slug: string, locale: Locale): string {

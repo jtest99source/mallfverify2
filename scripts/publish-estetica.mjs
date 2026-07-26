@@ -19,7 +19,9 @@ const sb = createClient(process.env.NEXT_PUBLIC_SUPABASE_URL, process.env.SUPABA
 
 const targets = [
   ["botox-mallorca-prices-safety", "en"],
-  ["botox-mallorca-kosten-sicherheit", "de"]
+  ["botox-mallorca-kosten-sicherheit", "de"],
+  ["english-speaking-aesthetic-clinics-mallorca", "en"],
+  ["deutschsprachige-schoenheitskliniken-mallorca", "de"]
 ];
 for (const [slug, locale] of targets) {
   const { data, error } = await sb.from("guides")
