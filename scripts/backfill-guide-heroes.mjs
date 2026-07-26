@@ -14,9 +14,11 @@ const UNSPLASH_TOPIC = {
   "coste-vida-mallorca-2026": "palma mallorca old town street",
 };
 
-// Only these hosts render reliably in a browser (self-contained, no API key needed)
+// Only these hosts render reliably in a browser (self-contained, no API key needed).
+// Our own Supabase Storage is the primary source since the image-caching migration.
 function renderablePhoto(url){
   return typeof url === "string" && (
+    url.startsWith(`${process.env.NEXT_PUBLIC_SUPABASE_URL}/storage/`) ||
     url.startsWith("https://lh3.googleusercontent.com") ||
     url.startsWith("https://images.unsplash.com")
   );
