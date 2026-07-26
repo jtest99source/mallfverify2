@@ -1,162 +1,116 @@
-import { CopyButton } from "@/components/CopyButton";
 import { generateSeoMetadata } from "@/lib/seo";
 import { isLocale, type Locale } from "@/lib/i18n";
-import { getCategorySlugFromBusiness, siteUrl } from "@/lib/data";
-import { getBusinessPublicName } from "@/lib/business-name-normalizer";
-import { createSupabaseServerClient, hasSupabaseConfig } from "@/lib/supabase";
 
-// Badge delivery page, WhatsApp-outreach-first: each business gets ONE link
-// (/badge?b=<slug>) that shows THEIR badge, THEIR one-line snippet with a copy
-// button, and the "we install it for you" fallback. The generic page (no ?b=)
-// just explains the program. Utility page for the backlink flow — not in nav.
+// Reader-facing explainer for the "Verified on Mallorca Verified" badge:
+// what it means when a business displays it and how to check it's genuine.
+// The embed code is NOT public — it's delivered privately (WhatsApp) to
+// verified businesses only, personalised with a link to their own listing.
 
 const copy = {
   es: {
-    eyebrow: "Para negocios verificados",
-    title: "Tu sello de Mallorca Verified",
-    titleGeneric: "El sello de verificación de Mallorca Verified",
+    eyebrow: "El sello de verificación",
+    title: "Qué significa el sello de Mallorca Verified",
     intro:
-      "Este sello enlaza directamente a tu ficha verificada: tus clientes pueden comprobar tus valoraciones reales y ayuda a que Google y los asistentes de IA te encuentren.",
-    yourCode: "Tu código — una sola línea, lista para pegar en el pie de tu web:",
-    copy: "Copiar código",
-    copied: "¡Copiado!",
-    variantNote: "¿Tu web es de fondo claro? Usa esta variante:",
-    stepsTitle: "Dónde pegarlo (2 minutos)",
-    steps: [
-      "WordPress: Apariencia → Widgets → HTML personalizado (zona del pie de página).",
-      "Wix: Añadir → Insertar código → pegar en el pie.",
-      "Squarespace: bloque de código en el footer.",
-      "Cualquier otra web: pásale esta página a tu desarrollador — con esto le basta."
+      "Si ves este sello en la web de un negocio, significa que hemos contactado con él directamente, que nos ha confirmado sus datos, y que mantiene una ficha verificada activa en Mallorca Verified — con sus valoraciones reales de Google a la vista.",
+    howTitle: "Cómo verificamos un negocio",
+    how: [
+      "Contactamos con cada negocio directamente (por WhatsApp) — no es un registro automático ni un directorio de pago.",
+      "El negocio confirma sus datos: los idiomas en los que atiende, y la información de su ficha.",
+      "Cada confirmación queda fechada. El año del sello se actualiza anualmente con la revisión de datos.",
+      "Las valoraciones que mostramos son las públicas de Google — nosotros no las editamos ni las filtramos."
     ],
-    helpTitle: "¿Prefieres que lo hagamos nosotros? Gratis.",
-    helpText: "Respóndenos por WhatsApp al mensaje de verificación y nuestro equipo lo deja instalado por ti.",
+    checkTitle: "Cómo saber que un sello es auténtico",
+    checkText:
+      "Cada sello legítimo enlaza a la ficha verificada del propio negocio en mallorcaverified.com. Haz clic: si llegas a su ficha, con su nombre y sus valoraciones, es auténtico. Un sello que no enlaza a la ficha del negocio que lo muestra, no es válido.",
+    bizTitle: "¿Tienes un negocio verificado?",
+    bizText:
+      "Si tu negocio ya está verificado, el sello es gratuito: respóndenos al mensaje de verificación por WhatsApp o escribe a hola@mallorcaverified.com y te enviamos tu código personalizado (una línea para el pie de tu web — y si lo prefieres, te lo instalamos nosotros).",
+    bizCta: "Escribir a hola@mallorcaverified.com",
     fineprint:
-      "El sello está reservado a negocios con ficha verificada activa en Mallorca Verified. El año se actualiza anualmente junto con la revisión de datos.",
-    genericNote: "¿Tu negocio está verificado y quieres el sello? Escríbenos por WhatsApp o a hola@mallorcaverified.com y te mandamos tu enlace personalizado."
+      "El sello está reservado a negocios con ficha verificada activa. La confirmación de idiomas es una autodeclaración del negocio obtenida por contacto directo, con fecha. Que un negocio no muestre el sello no significa nada negativo: puede simplemente no haberlo instalado aún."
   },
   en: {
-    eyebrow: "For verified businesses",
-    title: "Your Mallorca Verified badge",
-    titleGeneric: "The Mallorca Verified badge",
+    eyebrow: "The verification badge",
+    title: "What the Mallorca Verified badge means",
     intro:
-      "This badge links straight to your verified listing: your customers can check your real ratings, and it helps Google and AI assistants find you.",
-    yourCode: "Your code — a single line, ready to paste into your website footer:",
-    copy: "Copy code",
-    copied: "Copied!",
-    variantNote: "Light-background website? Use this variant:",
-    stepsTitle: "Where to paste it (2 minutes)",
-    steps: [
-      "WordPress: Appearance → Widgets → Custom HTML (footer area).",
-      "Wix: Add → Embed code → paste in the footer.",
-      "Squarespace: code block in the footer.",
-      "Any other site: send this page to your developer — it's all they need."
+      "If you see this badge on a business's website, it means we contacted them directly, they confirmed their details to us, and they hold an active verified listing on Mallorca Verified — with their real Google ratings in plain view.",
+    howTitle: "How we verify a business",
+    how: [
+      "We contact every business directly (via WhatsApp) — it's not an automatic registration or a paid directory.",
+      "The business confirms its details: the languages it serves clients in, and the information on its listing.",
+      "Every confirmation is dated. The badge year updates annually with the data review.",
+      "The ratings we show are the public Google ones — we don't edit or filter them."
     ],
-    helpTitle: "Rather we do it for you? Free.",
-    helpText: "Reply to our WhatsApp verification message and our team will set it up for you.",
+    checkTitle: "How to tell a badge is genuine",
+    checkText:
+      "Every legitimate badge links to that business's own verified listing on mallorcaverified.com. Click it: if you land on their listing, with their name and their ratings, it's genuine. A badge that doesn't link to the listing of the business displaying it is not valid.",
+    bizTitle: "Run a verified business?",
+    bizText:
+      "If your business is already verified, the badge is free: reply to our WhatsApp verification message or write to hola@mallorcaverified.com and we'll send your personalised code (one line for your website footer — or we'll install it for you).",
+    bizCta: "Email hola@mallorcaverified.com",
     fineprint:
-      "The badge is reserved for businesses with an active verified listing on Mallorca Verified. The year updates annually together with the data review.",
-    genericNote: "Verified business without your badge link yet? Message us on WhatsApp or at hola@mallorcaverified.com and we'll send your personalised link."
+      "The badge is reserved for businesses with an active verified listing. Language confirmations are self-reported by each business via direct contact, and dated. A business not displaying the badge means nothing negative — it may simply not have installed it yet."
   },
   de: {
-    eyebrow: "Für geprüfte Betriebe",
-    title: "Ihr Mallorca-Verified-Siegel",
-    titleGeneric: "Das Mallorca-Verified-Siegel",
+    eyebrow: "Das Verifizierungssiegel",
+    title: "Was das Mallorca-Verified-Siegel bedeutet",
     intro:
-      "Dieses Siegel verlinkt direkt auf Ihr geprüftes Profil: Ihre Kunden können Ihre echten Bewertungen prüfen, und Google sowie KI-Assistenten finden Sie leichter.",
-    yourCode: "Ihr Code — eine einzige Zeile, bereit für die Fußzeile Ihrer Website:",
-    copy: "Code kopieren",
-    copied: "Kopiert!",
-    variantNote: "Website mit hellem Hintergrund? Nutzen Sie diese Variante:",
-    stepsTitle: "Wo einfügen (2 Minuten)",
-    steps: [
-      "WordPress: Design → Widgets → Individuelles HTML (Fußzeile).",
-      "Wix: Hinzufügen → Code einbetten → in der Fußzeile einfügen.",
-      "Squarespace: Code-Block im Footer.",
-      "Andere Website: Schicken Sie diese Seite Ihrem Entwickler — mehr braucht er nicht."
+      "Wenn Sie dieses Siegel auf der Website eines Betriebs sehen, heißt das: Wir haben ihn direkt kontaktiert, er hat uns seine Daten bestätigt, und er führt ein aktives geprüftes Profil auf Mallorca Verified — mit seinen echten Google-Bewertungen offen einsehbar.",
+    howTitle: "Wie wir einen Betrieb prüfen",
+    how: [
+      "Wir kontaktieren jeden Betrieb direkt (per WhatsApp) — keine automatische Registrierung, kein bezahltes Verzeichnis.",
+      "Der Betrieb bestätigt seine Daten: die Sprachen, in denen er Kunden betreut, und die Angaben seines Profils.",
+      "Jede Bestätigung ist datiert. Die Jahreszahl des Siegels wird jährlich mit der Datenprüfung aktualisiert.",
+      "Die angezeigten Bewertungen sind die öffentlichen von Google — wir bearbeiten und filtern sie nicht."
     ],
-    helpTitle: "Sollen wir das übernehmen? Kostenlos.",
-    helpText: "Antworten Sie auf unsere WhatsApp-Nachricht und unser Team richtet es für Sie ein.",
+    checkTitle: "Woran Sie ein echtes Siegel erkennen",
+    checkText:
+      "Jedes legitime Siegel verlinkt auf das geprüfte Profil des jeweiligen Betriebs auf mallorcaverified.com. Klicken Sie darauf: Landen Sie auf dessen Profil — mit Name und Bewertungen — ist es echt. Ein Siegel, das nicht auf das Profil des Betriebs verlinkt, der es zeigt, ist ungültig.",
+    bizTitle: "Sie führen einen geprüften Betrieb?",
+    bizText:
+      "Ist Ihr Betrieb bereits verifiziert, ist das Siegel kostenlos: Antworten Sie auf unsere WhatsApp-Nachricht oder schreiben Sie an hola@mallorcaverified.com — wir senden Ihnen Ihren personalisierten Code (eine Zeile für die Fußzeile Ihrer Website, auf Wunsch richten wir es ein).",
+    bizCta: "E-Mail an hola@mallorcaverified.com",
     fineprint:
-      "Das Siegel ist Betrieben mit aktivem geprüftem Eintrag vorbehalten. Die Jahreszahl wird jährlich mit der Datenprüfung aktualisiert.",
-    genericNote: "Geprüfter Betrieb ohne persönlichen Badge-Link? Schreiben Sie uns per WhatsApp oder an hola@mallorcaverified.com."
+      "Das Siegel ist Betrieben mit aktivem geprüftem Eintrag vorbehalten. Sprachbestätigungen sind datierte Selbstauskünfte per Direktkontakt. Kein Siegel zu zeigen bedeutet nichts Negatives — der Betrieb hat es womöglich nur noch nicht eingebunden."
   }
 } as const;
-
-async function findBusiness(slug: string) {
-  if (!hasSupabaseConfig()) return null;
-  const sb = createSupabaseServerClient();
-  const { data } = await sb
-    .from("businesses")
-    .select("slug,name,display_name,category,status")
-    .eq("slug", slug)
-    .in("status", ["published", "premium"])
-    .maybeSingle();
-  return data ?? null;
-}
-
-function snippetFor(fichaUrl: string, name: string, variant: "dark" | "light") {
-  return `<a href="${fichaUrl}" target="_blank" rel="noopener"><img src="${siteUrl}/badge/mallorca-verified-2026-${variant}.svg" alt="${name} — Verified on Mallorca Verified 2026" width="220" height="56" loading="lazy" style="border:0"></a>`;
-}
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const safeLocale = isLocale(locale) ? locale : "es";
   const c = copy[safeLocale];
   return generateSeoMetadata({
-    title: `${c.titleGeneric} | Mallorca Verified`,
+    title: `${c.title} | Mallorca Verified`,
     description: c.intro.slice(0, 158),
     path: `/${safeLocale}/badge`,
     locale: safeLocale
   });
 }
 
-export default async function BadgePage({ params, searchParams }: { params: Promise<{ locale: string }>; searchParams: Promise<{ b?: string }> }) {
+export default async function BadgePage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
-  const { b } = await searchParams;
   const safeLocale = (isLocale(locale) ? locale : "es") as Locale;
   const c = copy[safeLocale];
-
-  const business = b ? await findBusiness(b) : null;
-  const name = business ? getBusinessPublicName(business as never) || business.display_name || business.name : null;
-  const fichaUrl = business ? `${siteUrl}/${safeLocale}/${getCategorySlugFromBusiness(business.category)}/${business.slug}` : null;
-  const dark = business && fichaUrl && name ? snippetFor(fichaUrl, name, "dark") : null;
-  const light = business && fichaUrl && name ? snippetFor(fichaUrl, name, "light") : null;
 
   return (
     <main className="bg-[#07101F] text-white">
       <section className="mx-auto max-w-3xl px-4 py-12 sm:px-6 sm:py-16">
         <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-[#00C37A]">{c.eyebrow}</p>
-        <h1 className="font-display mt-3 text-4xl font-black leading-tight sm:text-5xl">
-          {name ? `${c.title} — ${name}` : c.titleGeneric}
-        </h1>
+        <h1 className="font-display mt-3 text-4xl font-black leading-tight sm:text-5xl">{c.title}</h1>
         <p className="mt-5 text-base leading-8 text-white/65">{c.intro}</p>
 
         <div className="mt-8 flex flex-wrap items-center gap-6 rounded-sm border border-white/[0.10] bg-[#0C1A2E] p-6">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/badge/mallorca-verified-2026-dark.svg" alt="Verified on Mallorca Verified 2026 (dark)" width={220} height={56} />
+          <img src="/badge/mallorca-verified-2026-dark.svg" alt="Verified on Mallorca Verified 2026" width={224} height={58} />
           <span className="rounded-sm bg-white p-3">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/badge/mallorca-verified-2026-light.svg" alt="Verified on Mallorca Verified 2026 (light)" width={220} height={56} />
+            <img src="/badge/mallorca-verified-2026-light.svg" alt="Verified on Mallorca Verified 2026" width={224} height={58} />
           </span>
         </div>
 
-        {dark && light ? (
-          <>
-            <h2 className="font-display mt-12 text-2xl font-bold">{c.yourCode}</h2>
-            <pre className="mt-4 overflow-x-auto rounded-sm border border-white/[0.10] bg-[#040D1A] p-4 text-xs leading-6 text-[#00C37A]">{dark}</pre>
-            <div className="mt-3"><CopyButton text={dark} label={c.copy} copiedLabel={c.copied} /></div>
-
-            <p className="mt-8 text-sm font-bold uppercase tracking-[0.1em] text-white/50">{c.variantNote}</p>
-            <pre className="mt-3 overflow-x-auto rounded-sm border border-white/[0.10] bg-[#040D1A] p-4 text-xs leading-6 text-[#00C37A]">{light}</pre>
-            <div className="mt-3"><CopyButton text={light} label={c.copy} copiedLabel={c.copied} /></div>
-          </>
-        ) : (
-          <p className="mt-10 rounded-sm border border-[#00C37A]/25 bg-[#00C37A]/[0.06] p-5 text-[15px] leading-7 text-white/75">{c.genericNote}</p>
-        )}
-
-        <h2 className="font-display mt-12 text-2xl font-bold">{c.stepsTitle}</h2>
+        <h2 className="font-display mt-12 text-2xl font-bold">{c.howTitle}</h2>
         <ol className="mt-4 grid gap-3">
-          {c.steps.map((step, index) => (
+          {c.how.map((step, index) => (
             <li key={index} className="flex gap-3 text-[15px] leading-7 text-white/70">
               <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#00C37A] text-xs font-black text-[#07101F]">{index + 1}</span>
               <span>{step}</span>
@@ -164,9 +118,18 @@ export default async function BadgePage({ params, searchParams }: { params: Prom
           ))}
         </ol>
 
+        <h2 className="font-display mt-12 text-2xl font-bold">{c.checkTitle}</h2>
+        <p className="mt-3 text-[15px] leading-7 text-white/70">{c.checkText}</p>
+
         <div className="mt-12 rounded-sm border border-[#00C37A]/25 bg-[#00C37A]/[0.06] p-6">
-          <h2 className="font-display text-2xl font-bold">{c.helpTitle}</h2>
-          <p className="mt-3 text-[15px] leading-7 text-white/70">{c.helpText}</p>
+          <h2 className="font-display text-2xl font-bold">{c.bizTitle}</h2>
+          <p className="mt-3 text-[15px] leading-7 text-white/70">{c.bizText}</p>
+          <a
+            href="mailto:hola@mallorcaverified.com?subject=Badge Mallorca Verified"
+            className="mt-5 inline-flex min-h-11 items-center justify-center rounded-sm bg-[#00C37A] px-5 text-[11px] font-bold uppercase tracking-[0.1em] text-[#0A0A0A] hover:bg-white"
+          >
+            {c.bizCta}
+          </a>
         </div>
 
         <p className="mt-10 text-xs leading-6 text-white/40">{c.fineprint}</p>
