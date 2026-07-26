@@ -1,96 +1,134 @@
+import { CopyButton } from "@/components/CopyButton";
 import { generateSeoMetadata } from "@/lib/seo";
 import { isLocale, type Locale } from "@/lib/i18n";
+import { getCategorySlugFromBusiness, siteUrl } from "@/lib/data";
+import { getBusinessPublicName } from "@/lib/business-name-normalizer";
+import { createSupabaseServerClient, hasSupabaseConfig } from "@/lib/supabase";
 
-// Instructions page for the "Verified on Mallorca Verified" badge — written for
-// non-technical business owners: one line of HTML, or we install it for them.
+// Badge delivery page, WhatsApp-outreach-first: each business gets ONE link
+// (/badge?b=<slug>) that shows THEIR badge, THEIR one-line snippet with a copy
+// button, and the "we install it for you" fallback. The generic page (no ?b=)
+// just explains the program. Utility page for the backlink flow — not in nav.
 
 const copy = {
   es: {
     eyebrow: "Para negocios verificados",
-    title: "El sello de verificación de Mallorca Verified",
+    title: "Tu sello de Mallorca Verified",
+    titleGeneric: "El sello de verificación de Mallorca Verified",
     intro:
-      "Si tu negocio está verificado en Mallorca Verified, puedes mostrar el sello en tu web. Enlaza directamente a tu ficha, ayuda a tus clientes a comprobar tus valoraciones reales y mejora cómo te encuentran Google y los asistentes de IA.",
-    stepsTitle: "Cómo añadirlo (2 minutos)",
+      "Este sello enlaza directamente a tu ficha verificada: tus clientes pueden comprobar tus valoraciones reales y ayuda a que Google y los asistentes de IA te encuentren.",
+    yourCode: "Tu código — una sola línea, lista para pegar en el pie de tu web:",
+    copy: "Copiar código",
+    copied: "¡Copiado!",
+    variantNote: "¿Tu web es de fondo claro? Usa esta variante:",
+    stepsTitle: "Dónde pegarlo (2 minutos)",
     steps: [
-      "Copia el código personalizado que te hemos enviado (una sola línea; si no lo tienes, escríbenos y te lo mandamos).",
-      "Pégalo en el pie de página de tu web. En WordPress: Apariencia → Widgets → HTML personalizado. En Wix: Añadir → Insertar código. En Squarespace: bloque de código.",
-      "Guarda y listo — el sello aparece y enlaza a tu ficha verificada."
+      "WordPress: Apariencia → Widgets → HTML personalizado (zona del pie de página).",
+      "Wix: Añadir → Insertar código → pegar en el pie.",
+      "Squarespace: bloque de código en el footer.",
+      "Cualquier otra web: pásale esta página a tu desarrollador — con esto le basta."
     ],
-    exampleTitle: "Así se ve el código (el tuyo llega personalizado):",
-    helpTitle: "¿Prefieres que lo hagamos nosotros?",
-    helpText:
-      "Sin problema y sin coste: respóndenos al mensaje de verificación o escribe a hola@mallorcaverified.com y nuestro equipo lo deja instalado por ti.",
-    helpCta: "Escribir a hola@mallorcaverified.com",
+    helpTitle: "¿Prefieres que lo hagamos nosotros? Gratis.",
+    helpText: "Respóndenos por WhatsApp al mensaje de verificación y nuestro equipo lo deja instalado por ti.",
     fineprint:
-      "El sello está reservado a negocios con ficha verificada activa en Mallorca Verified. El año se actualiza anualmente junto con la revisión de datos."
+      "El sello está reservado a negocios con ficha verificada activa en Mallorca Verified. El año se actualiza anualmente junto con la revisión de datos.",
+    genericNote: "¿Tu negocio está verificado y quieres el sello? Escríbenos por WhatsApp o a hola@mallorcaverified.com y te mandamos tu enlace personalizado."
   },
   en: {
     eyebrow: "For verified businesses",
-    title: "The Mallorca Verified badge",
+    title: "Your Mallorca Verified badge",
+    titleGeneric: "The Mallorca Verified badge",
     intro:
-      "If your business is verified on Mallorca Verified, you can display the badge on your website. It links straight to your listing, lets your customers check your real ratings, and improves how Google and AI assistants find you.",
-    stepsTitle: "How to add it (2 minutes)",
+      "This badge links straight to your verified listing: your customers can check your real ratings, and it helps Google and AI assistants find you.",
+    yourCode: "Your code — a single line, ready to paste into your website footer:",
+    copy: "Copy code",
+    copied: "Copied!",
+    variantNote: "Light-background website? Use this variant:",
+    stepsTitle: "Where to paste it (2 minutes)",
     steps: [
-      "Copy the personalised code we sent you (a single line; if you don't have it, message us and we'll send it).",
-      "Paste it into your website footer. WordPress: Appearance → Widgets → Custom HTML. Wix: Add → Embed code. Squarespace: code block.",
-      "Save — the badge appears and links to your verified listing."
+      "WordPress: Appearance → Widgets → Custom HTML (footer area).",
+      "Wix: Add → Embed code → paste in the footer.",
+      "Squarespace: code block in the footer.",
+      "Any other site: send this page to your developer — it's all they need."
     ],
-    exampleTitle: "What the code looks like (yours arrives personalised):",
-    helpTitle: "Rather we do it for you?",
-    helpText:
-      "No problem and no cost: reply to our verification message or write to hola@mallorcaverified.com and our team will set it up for you.",
-    helpCta: "Email hola@mallorcaverified.com",
+    helpTitle: "Rather we do it for you? Free.",
+    helpText: "Reply to our WhatsApp verification message and our team will set it up for you.",
     fineprint:
-      "The badge is reserved for businesses with an active verified listing on Mallorca Verified. The year updates annually together with the data review."
+      "The badge is reserved for businesses with an active verified listing on Mallorca Verified. The year updates annually together with the data review.",
+    genericNote: "Verified business without your badge link yet? Message us on WhatsApp or at hola@mallorcaverified.com and we'll send your personalised link."
   },
   de: {
     eyebrow: "Für geprüfte Betriebe",
-    title: "Das Mallorca-Verified-Siegel",
+    title: "Ihr Mallorca-Verified-Siegel",
+    titleGeneric: "Das Mallorca-Verified-Siegel",
     intro:
-      "Wenn Ihr Betrieb auf Mallorca Verified geprüft ist, können Sie das Siegel auf Ihrer Website zeigen. Es verlinkt direkt auf Ihr Profil, lässt Ihre Kunden Ihre echten Bewertungen prüfen und verbessert, wie Google und KI-Assistenten Sie finden.",
-    stepsTitle: "So fügen Sie es ein (2 Minuten)",
+      "Dieses Siegel verlinkt direkt auf Ihr geprüftes Profil: Ihre Kunden können Ihre echten Bewertungen prüfen, und Google sowie KI-Assistenten finden Sie leichter.",
+    yourCode: "Ihr Code — eine einzige Zeile, bereit für die Fußzeile Ihrer Website:",
+    copy: "Code kopieren",
+    copied: "Kopiert!",
+    variantNote: "Website mit hellem Hintergrund? Nutzen Sie diese Variante:",
+    stepsTitle: "Wo einfügen (2 Minuten)",
     steps: [
-      "Kopieren Sie den personalisierten Code aus unserer Nachricht (eine einzige Zeile; falls er fehlt, schreiben Sie uns kurz).",
-      "Fügen Sie ihn in die Fußzeile Ihrer Website ein. WordPress: Design → Widgets → Individuelles HTML. Wix: Hinzufügen → Code einbetten. Squarespace: Code-Block.",
-      "Speichern — das Siegel erscheint und verlinkt auf Ihr geprüftes Profil."
+      "WordPress: Design → Widgets → Individuelles HTML (Fußzeile).",
+      "Wix: Hinzufügen → Code einbetten → in der Fußzeile einfügen.",
+      "Squarespace: Code-Block im Footer.",
+      "Andere Website: Schicken Sie diese Seite Ihrem Entwickler — mehr braucht er nicht."
     ],
-    exampleTitle: "So sieht der Code aus (Ihrer kommt personalisiert):",
-    helpTitle: "Sollen wir das übernehmen?",
-    helpText:
-      "Kein Problem und kostenlos: Antworten Sie auf unsere Verifizierungs-Nachricht oder schreiben Sie an hola@mallorcaverified.com — unser Team richtet es für Sie ein.",
-    helpCta: "E-Mail an hola@mallorcaverified.com",
+    helpTitle: "Sollen wir das übernehmen? Kostenlos.",
+    helpText: "Antworten Sie auf unsere WhatsApp-Nachricht und unser Team richtet es für Sie ein.",
     fineprint:
-      "Das Siegel ist Betrieben mit aktivem geprüftem Eintrag auf Mallorca Verified vorbehalten. Die Jahreszahl wird jährlich mit der Datenprüfung aktualisiert."
+      "Das Siegel ist Betrieben mit aktivem geprüftem Eintrag vorbehalten. Die Jahreszahl wird jährlich mit der Datenprüfung aktualisiert.",
+    genericNote: "Geprüfter Betrieb ohne persönlichen Badge-Link? Schreiben Sie uns per WhatsApp oder an hola@mallorcaverified.com."
   }
 } as const;
 
-const EXAMPLE_SNIPPET = `<a href="https://www.mallorcaverified.com/es/healthcare/tu-negocio">
-  <img src="https://www.mallorcaverified.com/badge/mallorca-verified-2026-dark.svg"
-       alt="Verified on Mallorca Verified 2026" width="220" height="56">
-</a>`;
+async function findBusiness(slug: string) {
+  if (!hasSupabaseConfig()) return null;
+  const sb = createSupabaseServerClient();
+  const { data } = await sb
+    .from("businesses")
+    .select("slug,name,display_name,category,status")
+    .eq("slug", slug)
+    .in("status", ["published", "premium"])
+    .maybeSingle();
+  return data ?? null;
+}
+
+function snippetFor(fichaUrl: string, name: string, variant: "dark" | "light") {
+  return `<a href="${fichaUrl}" target="_blank" rel="noopener"><img src="${siteUrl}/badge/mallorca-verified-2026-${variant}.svg" alt="${name} — Verified on Mallorca Verified 2026" width="220" height="56" loading="lazy" style="border:0"></a>`;
+}
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const safeLocale = isLocale(locale) ? locale : "es";
   const c = copy[safeLocale];
   return generateSeoMetadata({
-    title: `${c.title} | Mallorca Verified`,
+    title: `${c.titleGeneric} | Mallorca Verified`,
     description: c.intro.slice(0, 158),
     path: `/${safeLocale}/badge`,
     locale: safeLocale
   });
 }
 
-export default async function BadgePage({ params }: { params: Promise<{ locale: string }> }) {
+export default async function BadgePage({ params, searchParams }: { params: Promise<{ locale: string }>; searchParams: Promise<{ b?: string }> }) {
   const { locale } = await params;
+  const { b } = await searchParams;
   const safeLocale = (isLocale(locale) ? locale : "es") as Locale;
   const c = copy[safeLocale];
+
+  const business = b ? await findBusiness(b) : null;
+  const name = business ? getBusinessPublicName(business as never) || business.display_name || business.name : null;
+  const fichaUrl = business ? `${siteUrl}/${safeLocale}/${getCategorySlugFromBusiness(business.category)}/${business.slug}` : null;
+  const dark = business && fichaUrl && name ? snippetFor(fichaUrl, name, "dark") : null;
+  const light = business && fichaUrl && name ? snippetFor(fichaUrl, name, "light") : null;
 
   return (
     <main className="bg-[#07101F] text-white">
       <section className="mx-auto max-w-3xl px-4 py-12 sm:px-6 sm:py-16">
         <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-[#00C37A]">{c.eyebrow}</p>
-        <h1 className="font-display mt-3 text-4xl font-black leading-tight sm:text-5xl">{c.title}</h1>
+        <h1 className="font-display mt-3 text-4xl font-black leading-tight sm:text-5xl">
+          {name ? `${c.title} — ${name}` : c.titleGeneric}
+        </h1>
         <p className="mt-5 text-base leading-8 text-white/65">{c.intro}</p>
 
         <div className="mt-8 flex flex-wrap items-center gap-6 rounded-sm border border-white/[0.10] bg-[#0C1A2E] p-6">
@@ -102,6 +140,20 @@ export default async function BadgePage({ params }: { params: Promise<{ locale: 
           </span>
         </div>
 
+        {dark && light ? (
+          <>
+            <h2 className="font-display mt-12 text-2xl font-bold">{c.yourCode}</h2>
+            <pre className="mt-4 overflow-x-auto rounded-sm border border-white/[0.10] bg-[#040D1A] p-4 text-xs leading-6 text-[#00C37A]">{dark}</pre>
+            <div className="mt-3"><CopyButton text={dark} label={c.copy} copiedLabel={c.copied} /></div>
+
+            <p className="mt-8 text-sm font-bold uppercase tracking-[0.1em] text-white/50">{c.variantNote}</p>
+            <pre className="mt-3 overflow-x-auto rounded-sm border border-white/[0.10] bg-[#040D1A] p-4 text-xs leading-6 text-[#00C37A]">{light}</pre>
+            <div className="mt-3"><CopyButton text={light} label={c.copy} copiedLabel={c.copied} /></div>
+          </>
+        ) : (
+          <p className="mt-10 rounded-sm border border-[#00C37A]/25 bg-[#00C37A]/[0.06] p-5 text-[15px] leading-7 text-white/75">{c.genericNote}</p>
+        )}
+
         <h2 className="font-display mt-12 text-2xl font-bold">{c.stepsTitle}</h2>
         <ol className="mt-4 grid gap-3">
           {c.steps.map((step, index) => (
@@ -112,18 +164,9 @@ export default async function BadgePage({ params }: { params: Promise<{ locale: 
           ))}
         </ol>
 
-        <p className="mt-8 text-sm font-bold uppercase tracking-[0.1em] text-white/50">{c.exampleTitle}</p>
-        <pre className="mt-3 overflow-x-auto rounded-sm border border-white/[0.10] bg-[#040D1A] p-4 text-xs leading-6 text-[#00C37A]">{EXAMPLE_SNIPPET}</pre>
-
         <div className="mt-12 rounded-sm border border-[#00C37A]/25 bg-[#00C37A]/[0.06] p-6">
           <h2 className="font-display text-2xl font-bold">{c.helpTitle}</h2>
           <p className="mt-3 text-[15px] leading-7 text-white/70">{c.helpText}</p>
-          <a
-            href="mailto:hola@mallorcaverified.com?subject=Badge Mallorca Verified"
-            className="mt-5 inline-flex min-h-11 items-center justify-center rounded-sm bg-[#00C37A] px-5 text-[11px] font-bold uppercase tracking-[0.1em] text-[#0A0A0A] hover:bg-white"
-          >
-            {c.helpCta}
-          </a>
         </div>
 
         <p className="mt-10 text-xs leading-6 text-white/40">{c.fineprint}</p>
