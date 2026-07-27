@@ -29,7 +29,9 @@ const locationRules: Array<LocationInference & { patterns: string[] }> = [
   { area: "Bendinat", municipality: "Calvià", patterns: ["Bendinat"] },
   { area: "Peguera", municipality: "Calvià", patterns: ["Peguera", "Paguera"] },
   { area: "Camp de Mar", municipality: "Andratx", patterns: ["Camp de Mar"] },
-  { area: "Sa Dragonera", municipality: "Andratx", patterns: ["Sa Dragonera", "dragonera"] },
+  // Only the island itself — a bare "dragonera" pattern also matched street
+  // addresses (Carrer Dragonera in Palma/Llucmajor/Cala Figuera).
+  { area: "Sa Dragonera", municipality: "Andratx", patterns: ["Sa Dragonera, Illes"] },
   { area: "Cala d'Or", municipality: "Santanyí", patterns: ["Cala d'Or", "Cala d Or", "Cala Dor"] },
   { area: "Cala Figuera", municipality: "Santanyí", patterns: ["Cala Figuera"] },
   { area: "Colonia de Sant Jordi", municipality: "Ses Salines", patterns: ["Colonia de Sant Jordi", "Colònia de Sant Jordi", "Colonia Sant Jordi"] },
