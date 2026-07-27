@@ -4,8 +4,12 @@
       <rect x="48" y="67" width="40" height="33" fill="#FFFFFF"/>
       <circle cx="68" cy="83" r="4" fill="#000000"/>
     </mask>
+    <mask id="shieldcut">
+      <rect width="512" height="132" fill="#FFFFFF"/>
+      <path d="M452 15 c14 8 26 11 38 12 v42 c0 24 -16 38 -38 48 c-22 -10 -38 -24 -38 -48 v-42 c12 -1 24 -4 38 -12 z" fill="#000000" stroke="#000000" stroke-width="16" stroke-linejoin="round"/>
+    </mask>
   </defs>
-  <rect x="6" y="17" width="414" height="98" rx="49" fill="none" stroke="#00C37A" stroke-width="3.5"/>
+  <rect x="6" y="17" width="414" height="98" rx="49" fill="none" stroke="#00C37A" stroke-width="3.5" mask="url(#shieldcut)"/>
   <g fill="#00C37A">
     <circle cx="50" cy="42" r="4.5"/><circle cx="68" cy="42" r="4.5"/><circle cx="86" cy="42" r="4.5"/>
     <path d="M56 71 v-6 a12 12 0 0 1 24 0 v6 h-6 v-6 a6 6 0 0 0 -12 0 v6 z"/>
