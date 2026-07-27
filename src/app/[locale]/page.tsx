@@ -471,30 +471,20 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         </div>
       </section>
 
-      <section className="bg-[#0C1A2E] px-4 py-10 sm:px-6 sm:py-20 lg:px-8">
-        <div className="mx-auto max-w-7xl">
-          <div className="mb-8 flex items-end justify-between gap-6">
-          <div className="text-center lg:text-left">
-            <p className="text-[11px] font-black uppercase tracking-[0.18em] text-[#00C37A]">
-              {safeLocale === "de" ? "Methode" : safeLocale === "en" ? "Method" : "Método"}
-            </p>
-            <h2 className="font-display mt-3 text-3xl font-bold leading-none text-white sm:text-4xl">
-              {safeLocale === "de" ? "Wie unsere Rankings funktionieren" : safeLocale === "en" ? "How our rankings work" : "Cómo funcionan nuestros rankings"}
-            </h2>
-          </div>
-            <Link href={methodologyPath(safeLocale)} className="hidden text-[12px] font-semibold tracking-[0.04em] text-white/40 transition-colors hover:text-[#00C37A] sm:inline-flex">
-              {methodology.link}
-            </Link>
-          </div>
-          <div className="grid border border-white/[0.08] md:grid-cols-2">
-            {methodology.items.map(({ title, text }, index) => (
-              <div key={title} className="border-b border-white/[0.08] p-5 text-center last:border-b-0 sm:p-8 md:border-b-0 md:border-r md:text-left md:last:border-r-0">
-                <div className="font-display text-5xl font-black leading-none text-[#00C37A]/60">{String(index + 1).padStart(2, "0")}</div>
-                <h2 className="font-display mt-5 text-2xl font-bold leading-tight text-white">{title}</h2>
-                <p className="mt-3 text-sm font-light leading-7 text-white/42">{text}</p>
-              </div>
-            ))}
-          </div>
+      <section className="px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
+        <div className="mx-auto grid max-w-7xl gap-6 border-y border-white/[0.08] py-7 sm:py-8 md:grid-cols-[auto_1fr_1fr_auto] md:items-center md:gap-10">
+          <p className="text-[11px] font-black uppercase tracking-[0.18em] text-[#00C37A] md:[writing-mode:vertical-rl] md:rotate-180">
+            {safeLocale === "de" ? "Methode" : safeLocale === "en" ? "Method" : "Método"}
+          </p>
+          {methodology.items.map(({ title, text }) => (
+            <div key={title}>
+              <h2 className="font-display text-base font-bold leading-tight text-white sm:text-lg">{title}</h2>
+              <p className="mt-1.5 text-[13px] font-light leading-6 text-white/42">{text}</p>
+            </div>
+          ))}
+          <Link href={methodologyPath(safeLocale)} className="whitespace-nowrap text-[12px] font-semibold tracking-[0.04em] text-white/40 transition-colors hover:text-[#00C37A]">
+            {methodology.link}
+          </Link>
         </div>
       </section>
 
