@@ -28,16 +28,16 @@ const DE_FLUENT_IDS = [
   "google-ChIJ83SRLldBlhIRcPUji5fnPes", // Mallorca Aesthetic Clinic - Cala Millor
   "google-ChIJ9y4jTURBlhIROvrv1TAsN2o"  // RB Centro Médico Estético
 ];
+// GB Clinic y Luis Fogued NO llevan tarjeta en esta guía: sus webs no listan
+// neuromoduladores (barrido 2026-07-27); sus cards viven en la guía de idiomas.
 const EN_ONLY_IDS = [
   "google-ChIJB1o4NLaTlxIROkTorodZp_M", // The Skin Koncept
   "google-ChIJlQqWVFiSlxIRGrkPlk1Hvtw", // Soma Clinic
   "google-ChIJO1T1RADFlxIRG4MmfpWzC4Y", // OLIVA Inca
-  "google-ChIJfbxy79aTlxIRkFkeOlrGcwg", // Luis Fogued
   "google-ChIJzepquNYtlhIR8KKFA28cuvU"  // Lumina - Dra. Noeli Utges
 ];
 const DE_BASIC_IDS = [
   "google-ChIJ-brUyGHLlxIRP83YuV3HXTk", // Clínica Font
-  "google-ChIJAUwnCwiTlxIRS9IEzYnYBWw", // GB Clinic
   "google-ChIJoURp8p6JlxIRlGyj9XQMCt8"  // MD AESTHETICS
 ];
 
