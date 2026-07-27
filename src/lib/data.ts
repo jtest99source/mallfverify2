@@ -157,13 +157,13 @@ export const categoryConfigs = {
   },
   vets: {
     label: "Veterinarios",
-    singular: "ClÃ­nica veterinaria",
+    singular: "Clínica veterinaria",
     businessCategory: "veterinarian",
     icon: "IconPaw",
     title: "Veterinarios en Mallorca",
-    intro: "ClÃ­nicas veterinarias, hospitales veterinarios y urgencias para mascotas en Mallorca, ordenados con reseÃ±as reales y seÃ±ales pÃºblicas.",
-    faq: "Â¿DÃ³nde encontrar veterinario en Mallorca?",
-    editorialContext: "En veterinarios priorizamos clÃ­nicas y hospitales reales, urgencias, volumen de reseÃ±as, claridad de contacto y ubicaciÃ³n. No mezclamos pet shops o peluquerÃ­as caninas salvo que tengan servicio veterinario claro."
+    intro: "Clínicas veterinarias, hospitales veterinarios y urgencias para mascotas en Mallorca, ordenados con reseñas reales y señales públicas.",
+    faq: "¿Dónde encontrar veterinario en Mallorca?",
+    editorialContext: "En veterinarios priorizamos clínicas y hospitales reales, urgencias, volumen de reseñas, claridad de contacto y ubicación. No mezclamos pet shops o peluquerías caninas salvo que tengan servicio veterinario claro."
   },
   healthcare: {
     label: "Salud",
