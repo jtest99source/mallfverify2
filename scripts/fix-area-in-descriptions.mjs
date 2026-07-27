@@ -32,7 +32,9 @@ const staleByArea = new Map([
   ["Port de Sóller", ["Sóller", "Soller"]],
   ["Port d'Andratx", ["Andratx"]],
   ["Can Pastilla", ["Palma"]],
-  ["S'Arenal", ["Palma", "Artà", "Arta", "Sa Dragonera"]]
+  ["S'Arenal", ["Palma", "Artà", "Arta", "Sa Dragonera"]],
+  ["Palma", ["Sa Dragonera"]],
+  ["Cala Figuera", ["Sa Dragonera"]]
 ]);
 
 const templateMarker = /(importad[oa] desde Google Places|pendiente de revisi[oó]n editorial|imported from Google Places)/i;
